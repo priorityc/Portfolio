@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleCopy.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- Navbar on small screens -->
+    <!-- Section MOBILE MENU -->
+
+    <nav class="mobile-header">
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="features-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+          />
+        </svg>
+      </div>
+
+      <div class="hamburger" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+
+    <div class="topnav">
+      <div id="myLinks">
+        <a href="#services-box">About me</a>
+        <a href="#services-box">Skills</a>
+        <a href="#form-box">Portfolio</a>
+        <a href="#form-box">Contact</a>
+      </div>
+    </div>
+
+    <!-- Desktop navigation -->
+    <!-- Desktop navigation on larger screens -->
+    <nav class="desktop-header">
+      <div class="sidenav">
+        <!-- first container -->
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="features-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+            />
+          </svg>
+        </div>
+        <!-- Second container menus -->
+        <div class="arrange-manu">
+          <a href="#about">About</a>
+          <a href="#services">Skills</a>
+          <a href="#services">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <!-- Third container serch bar -->
+        <div>
+          <input id="search-bar" type="text" placeholder="Search.." />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="features-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="header-box" style="padding: 128px 16px">
+      <img class="hero-img" src="./myself.png" alt="Photo of myself" />
+      <div>
+        <h1 class="H1-style">Hi. I'm <span class="bold">Petya.</span></h1>
+        <p class="header-p">
+          A Website developer and this is My, Portfolio. Learn more what I can
+          do.
+        </p>
+        <button class="btn-big btn-style">Get Started</button>
+      </div>
+    </header>
+    <main>
+      <!-- About me section-->
+      <section class="Aboutme-box">
+        <h1>About me</h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="features-icon-blue"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
+          />
+        </svg>
+
+        <p>
+          I have started my journey in Web development three years ago enrolling
+          to a Purple Beard Bootscam I was able to discover what challanges are
+          involved and the starting point of transition to Tech career. Learning
+          the way and the structure of seting up myself goals I received
+          unforgetfull experiance and passion for continuing learning new
+          skills.
+        </p>
+      </section>
+      <!-- The Portfolio  -->
+      <h1>Here are some stuff I made recently.</h1>
+      <section class="Portfolio-box">
+        <div class="portfolio-comp flex-left">
+          <h2>Agro weather forecast</h2>
+          <img
+            class="portfolio-img"
+            src="./Agro-Weather-App.png"
+            alt="Project"
+          />
+          <p>
+            This application was builded with API -Open weather and it represent
+            the current weather forecast for the particular location of the
+            user, together with the UV index warning and soil moisture data.
+          </p>
+          <p>Click the Live demo button to preview functionality.</p>
+          <button class="portfolio-btn">Live Demo</button>
+        </div>
+        <div class="portfolio-comp flex-middle">
+          <h2>Home decoration furniture shop</h2>
+          <img class="portfolio-img" src="./Furniture-Shop.png" alt="Project" />
+          <p>
+            Buissiness website for young furniture manifacturer on the
+            market.They offer home decoration designers bookings as additional
+            service to their clients. The buissines provide new technology for
+            manifacturing office and home furniture, showcaseing their product
+            at the show room to atract customers.Their goal is to
+          </p>
+          <ul>
+            <li>Providing values</li>
+            <li>Selling products and services.</li>
+          </ul>
+          <button class="portfolio-btn">Live Demo</button>
+        </div>
+        <div class="portfolio-comp flex-right">
+          <h2>British Meteorite Society</h2>
+          <img class="portfolio-img" src="./meteor. png.png" alt="Project" />
+          <p>
+            British meteor society is educational website with a potential to
+            use Softwere that group reports of fireballs into Events. If more
+            than three events are occured at same area they are grouped as an
+            event. The number of events are displayed in a table. This site also
+            share information about different types of meteorites so the users
+            are easy to identify them.
+          </p>
+          <button class="portfolio-btn">Live Demo</button>
+        </div>
+      </section>
+      <!-- The skills section -->
+      <h1>Here are some of my technical skills.</h1>
+      <section class="skills-box">
+        <!-- Row-1 -->
+
+        <div class="skills-cont">
+          <h3>HTML</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+        <div class="skills-cont">
+          <h3>CSS</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+        <div class="skills-cont">
+          <h3 class="skills-cont">JavaScript</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+
+        <!-- Row 2 -->
+
+        <div class="skills-cont">
+          <h3>Java</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+        <div class="skills-cont">
+          <h3>Managing IT</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+        <div class="skills-cont">
+          <h2>SQL</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </div>
+        <!-- </div> -->
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-box">
+      <div class="form-heading">
+        <h2>Have me make stuff for you.</h2>
+        <p>Please live your details and will get back to you.</p>
+      </div>
+      <div class="form-box">
+        <form action="/action_page.php">
+          <div class="name-email-box">
+            <div class="name-email">
+              <label for="fname">First Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your name.."
+              />
+            </div>
+
+            <div class="name-email">
+              <label for="email">Enter your email:</label>
+              <input type="email" id="email" name="email" />
+            </div>
+          </div>
+
+          <label for="subject">First Name</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            placeholder="Subject.."
+          />
+          <textarea name="message" rows="10" cols="30">
+Write your message here.
+</textarea
+          >
+
+          <input class="submit btn" type="submit" value="Submit" />
+          <input class="clear btn" type="submit" value="Submit" />
+        </form>
+      </div>
+      <div class="form-heading">
+        <i
+          class="fa fa-github-square"
+          style="font-size: 48px; color: rgb(193, 43, 118)"
+        ></i>
+
+        <i
+          class="fa fa-linkedin-square"
+          style="font-size: 48px; color: rgb(193, 43, 118)"
+        ></i>
+        <i
+          class="fa fa-facebook-square"
+          style="font-size: 48px; color: rgb(193, 43, 118)"
+        ></i>
+      </div>
+      <ul id="copyright">
+        <li>&copy; Petya Dimitrova. All rights reserved.</li>
+        <!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
+      </ul>
+    </footer>
+    <script src="appCopy.js"></script>
+  </body>
+</html>

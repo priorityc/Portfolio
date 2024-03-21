@@ -1,0 +1,426 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* COLOURS-Gray-#4b4b4b; White-whitesmoke*/
+/* Main colour buttons Blue-#3A9BC2; */
+/* Borders grey-#E9E9E9 */
+/* SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #4b4b4b;
+}
+main {
+  background-color: whitesmoke;
+}
+
+/* Mobile navigation */
+/* NAVIGATION */
+.mobile-header {
+  background-color: #4b4b4b;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px;
+}
+
+/* the HAMBURGER MENU styling */
+.hamburger {
+  cursor: pointer;
+  margin: 6px;
+}
+.features-icon {
+  stroke: whitesmoke;
+  width: 32px;
+  height: 32px;
+  margin-bottom: 24px;
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: whitesmoke;
+  margin: 7px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* The hidden hamburg menu */
+.topnav {
+  overflow: hidden;
+  background-color: #ddd;
+  position: relative;
+  background-color: #3a9bc2;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #f0eeee;
+}
+
+.desktop-header {
+  display: none;
+}
+/* end */
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the content */
+.content {
+  background-color: whitesmoke;
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
+}
+
+.hero-img {
+  max-width: 260px;
+  border-radius: 50%;
+}
+.bold {
+  color: rgba(70, 142, 187, 0.957);
+}
+.header-p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #4b4b4b;
+  font-style: italic;
+}
+.btn-big {
+  width: 160px;
+  height: 45px;
+  background-color: #3a9bc2;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 8px;
+}
+
+.btn-big:hover,
+.btn-big:active {
+  background-color: #3a9bc2;
+  transform: scale(1.2);
+  border-radius: 1px solid #398294;
+}
+
+/* about me section */
+.Aboutme-box {
+  padding: 16px;
+}
+.features-icon-blue {
+  stroke: #3a9bc2;
+  width: 22px;
+}
+
+/* Portfolio */
+
+.portfolio-comp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #e9e9e9;
+  background-color: #fff;
+}
+.portfolio-img {
+  max-width: 286px;
+}
+.portfolio-btn {
+  width: 120px;
+  height: 35px;
+  background-color: #3a9bc2;
+  border: 2px solid #6d6c6c;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 8px;
+}
+/* skills */
+.skills-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid #e9e9e9;
+  background-color: #fff;
+}
+
+/* Style the footer */
+.footer-box {
+  background-color: #4b4b4b;
+  color: whitesmoke;
+  padding: 10px;
+}
+.form {
+  width: 80%;
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  background-color: #747373;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+}
+[type="email"] {
+  width: 100%;
+  background-color: #747373;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: none;
+}
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #747373;
+  border: none;
+}
+
+.btn {
+  width: 40%;
+
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+}
+.submit {
+  background-color: #3a9bc2;
+  color: white;
+}
+.clear {
+  background-color: whitesmoke;
+  color: #4b4b4b;
+}
+
+.submit:hover {
+  background-color: #6ca5bc;
+}
+.clear:hover {
+  background-color: rgb(252, 238, 238);
+}
+
+.name-email-cont {
+  display: flex;
+  flex-direction: column;
+}
+#copyright {
+  color: #666666;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .header-box {
+    display: flex;
+    gap: 26px;
+    max-width: 80%;
+    margin: 0 auto;
+    border-bottom: 2px solid #6d6c6c;
+  }
+  .Aboutme-box {
+    margin-bottom: 80px;
+  }
+  .Portfolio-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .flex-left {
+    padding: 10px;
+    flex: 33%;
+  }
+  .flex-middle {
+    padding: 10px;
+    flex: 33%;
+  }
+  .flex-right {
+    padding: 10px;
+    flex: 33%;
+  }
+
+  .portfolio-img {
+    max-width: 186px;
+  }
+  .skills-box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    text-align: center;
+    gap: 16px;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .skills-cont {
+    padding: 10px;
+    flex: 25%;
+  }
+  .name-email-box {
+    display: flex;
+    gap: 16px;
+  }
+  .name-email {
+    display: felx;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mobile-header {
+    display: none;
+  }
+  .desktop-header {
+    display: block;
+  }
+  .header-box {
+    margin-bottom: 120px;
+  }
+  .sidenav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-right: 48px;
+    background-color: #4b4b4b;
+    line-height: 1.4;
+  }
+  .features-icon {
+    margin-top: 9px;
+  }
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: whitesmoke;
+  }
+  .sidenav a:hover {
+    color: #064579;
+    background-color: #fff;
+  }
+  #search-bar {
+    float: right;
+    padding: 6px;
+    margin-top: 8px;
+    margin-left: 14px;
+    border: none;
+    font-size: 18px;
+    width: 180px;
+    border: none;
+  }
+  .Aboutme-box {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 120px;
+    margin-top: 120px;
+    justify-content: center;
+    padding-top: 120px;
+  }
+
+  .header-p {
+    font-size: 24px;
+  }
+  .H1-style {
+    font-size: 3em;
+  }
+  .Portfolio-box {
+    margin-bottom: 120px;
+  }
+  .portfolio-img {
+    max-width: 456px;
+  }
+  .skills-box {
+    padding-bottom: 120px;
+  }
+  main h1 {
+    text-align: center;
+    margin-bottom: 120px;
+  }
+  .form-box {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .form-heading {
+    text-align: center;
+    padding: 64px;
+  }
+}
