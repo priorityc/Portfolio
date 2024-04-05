@@ -136,6 +136,25 @@
           unforgetfull experiance and passion for continuing learning new
           skills.
         </p>
+        <div class="timeline">
+          <div class="container left">
+            <div class="content">
+              <h2>2024</h2>
+              <p>Study at Open University</p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="content">
+              <h2>2023</h2>
+              <p>The Complete JavaScript course</p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="content">
+              <h2>2022</h2>
+              <p>Purple Beards Bootscamp</p>
+            </div>
+        </div>
       </section>
       <!-- The Portfolio  -->
       <div class="Aboutme-box">
@@ -232,30 +251,37 @@
 
         <div class="skills-cont">
           <h3>HTML</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <p>
+            HTML provides the basic structure for every design. It is the
+            building block, an essential skill I learned takeing part of
+            Introduction to Web Development course from Rasbery P foundation.
+          </p>
+          <!-- <div class="container">
+            <div class="skills html">90%</div>
+          </div> -->
         </div>
         <div class="skills-cont">
           <h3>CSS</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <p>CSS specify how interface is presented to users, how all the ellements and section are styled. It also implement font styles, colours even animations.</p>
         </div>
         <div class="skills-cont">
           <h3 class="skills-cont">JavaScript</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <p>JavaScript is the browser functional language that can make website dinamic. It also implement complex features on the website. JavaScript display timely content updates, interactive maps, animated 2D/3D graphics, scrolling video and more...</p>
         </div>
 
         <!-- Row 2 -->
 
         <div class="skills-cont">
           <h3>Java</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.  compiled Java code can run on all platforms that support Java without the need to recompile.</p>
         </div>
         <div class="skills-cont">
           <h3>Managing IT</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <p>Managing an IT is complex process of establishing requirements. explore the principles, concepts and techniques of IT service management, capturing and understanding requirements, and managing projects that deliver IT services and realise requirements. </p>
         </div>
         <div class="skills-cont">
           <h2>SQL</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+          <p>SQL Data Manipulation Language, which allows data to be entered into, and retrieved from, an SQL database.</p>
         </div>
         <!-- </div> -->
       </section>
@@ -268,7 +294,7 @@
         <p>Please live your details and will get back to you.</p>
       </div>
       <div class="form-box">
-        <form action="/action_page.php">
+        <form >
           <div class="name-email-box">
             <div class="name-email">
               <label for="fname">First Name</label>
@@ -276,27 +302,36 @@
                 type="text"
                 id="fname"
                 name="firstname"
+                
                 placeholder="Your name.."
+                onchange="validate(event.target)"
               />
+              <small id="feedback_fname"></small>
             </div>
 
             <div class="name-email">
               <label for="email">Enter your email:</label>
-              <input type="email" id="email" name="email" />
+              <input type="email" id="email" name="email" onchange="validate(event.target)" />
+      
+              <small id="feedback_email"></small>
             </div>
           </div>
 
-          <label for="subject">First Name</label>
+          <label for="lname">Last Name</label>
           <input
             type="text"
-            id="subject"
-            name="subject"
-            placeholder="Subject.."
+            id="lname"
+            name="lname"
+            placeholder="Last Name"
+            
+            onchange="validate(event.target)"
           />
-          <textarea name="message" rows="10" cols="30">
+          <!-- text area -->
+          <textarea name="message" rows="10" cols="30" onchange="validate(event.target)">
 Write your message here.
 </textarea
-          >
+           >
+          <small id="feedback_email"></small>
 
           <input class="submit btn" type="submit" value="Submit" />
           <input class="clear btn" type="submit" value="Submit" />
