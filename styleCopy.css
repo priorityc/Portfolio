@@ -460,10 +460,9 @@ textarea {
     text-align: center;
     width: 50%;
     margin: 0 auto;
-    margin-bottom: 120px;
-    margin-top: 120px;
+    font-size: 12px;
+    font-style: italic;
     justify-content: center;
-    padding-top: 120px;
   }
 
   .header-p {
@@ -471,6 +470,19 @@ textarea {
   }
   .H1-style {
     font-size: 3em;
+  }
+
+  /* The portfolio section */
+  .Portfolio-box {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 26px;
+    margin-bottom: 90px;
+  }
+
+  .portfolio-comp {
+    flex: 30%;
   }
 
   /* Timeline */
@@ -566,9 +578,9 @@ textarea {
     border-radius: 6px;
   }
 
-  .Portfolio-box {
-    margin-bottom: 120px;
-  }
+  /* .Portfolio-box {
+    margin-bottom: 50px;
+  } */
   .portfolio-img {
     max-width: 456px;
   }
