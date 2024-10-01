@@ -110,3 +110,23 @@ function validateForm() {
 
   return valid;
 }
+
+// The count down feature
+const countdown = document.querySelector(".countdown");
+const deadline = new Date(2025, 11, 30, 12, 0o0, 0o0);
+
+const current = new Date();
+const diff = deadline - current;
+// To get the num of remaining days
+// Devide diff from num of mil sec which we have in 24 hours
+// Mili seconds seconds minutes 24 hours
+const days = diff / Math.floor(1000 * 60 * 60 * 24);
+// Define hours min and sec in the same way
+//devide the diff by the product of miliseconds and seconds and min
+const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+const minutes = Math.floor((diff / (1000 * 60)) % 60);
+const seconds = Math.floor((diff / 1000) % 60);
+console.log(seconds);
+
+//pass few divs to count element
+countdown.innerHTML;
