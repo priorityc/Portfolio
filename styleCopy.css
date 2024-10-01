@@ -182,7 +182,10 @@ a.one:visited {
 a.one:hover {
   color: #ffcc00;
 }
-
+.project-heading {
+  text-transform: uppercase;
+  color: #ff9f55;
+}
 .portfolio-comp {
   display: flex;
   flex-direction: column;
@@ -373,7 +376,6 @@ textarea {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 80px;
-    text-align: center;
   }
   .flex-left {
     padding: 10px;
