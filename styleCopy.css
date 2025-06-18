@@ -11,7 +11,9 @@
 FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
+
 body {
+  
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -129,10 +131,66 @@ main {
   height: 200px; /* Should be removed. Only for demonstration */
 }
 
-.hero-img {
+/*  */
+.hero-header {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 40px;
+   background: linear-gradient(to right, #fefefe, #e3f2fd);
+  /* background-color: #fefefe; */
+  margin-left: 150px;
+}
+
+.hero-text {
+  flex: 1 1 100%;
+ 
+}
+.hero-text h1 {
+  font-size: clamp(28px, 4vw, 48px); /* Dynamically adjusts */
+    color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.6;
+}
+
+
+.hero-text .highlight {
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.hero-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  padding: 12px 24px;
+  background-color: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #005fa3;
+}
+
+
+
+/* .hero-img {
   max-width: 260px;
   border-radius: 50%;
-}
+} */
 .bold {
   color: rgba(70, 142, 187, 0.957);
 }
@@ -163,17 +221,62 @@ main {
 }
 
 /* about me section */
-.Aboutme-box {
-  padding: 16px;
+.about-section {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 100px 40px;
+  background-color: #fefefe;
+margin: 0 auto;
+
+}
+.about-image {
+  flex: 1 1 40%;
   text-align: center;
 }
+
+.about-image img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+  /* max-width: 40%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); */
+}
+.about-text {
+flex: 1 1 50%;
+  max-width: 500px;
+  padding-right: 40px;
+
+
+}
+.Aboutme-box {
+  padding: 16px;
+  /* text-align: center; */
+}
+.about-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+
+}
+.about-text p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
 .features-icon-blue {
   stroke: #3a9bc2;
   width: 22px;
 }
 
 /* Portfolio */
-a.one:link {
+/* a.one:link {
   color: #ff0000;
 }
 a.one:visited {
@@ -209,10 +312,10 @@ a.one:hover {
   font-size: 16px;
   font-weight: bold;
   padding: 6px 8px;
-}
+} */
 /* skills */
-.skills-cont {
-  display: flex;
+/* .skills-cont { */
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -220,23 +323,286 @@ a.one:hover {
   border: 2px solid #e9e9e9;
   background-color: #fff;
   padding: 16px 10px;
-}
-.container {
+} */
+/* .container {
   width: 100%;
   background-color: #ddd;
-}
+} */
 
-.skills {
+/* .skills {
   text-align: right;
   padding-top: 10px;
   padding-bottom: 10px;
   color: white;
+} */
+
+/* SKILLS SECTION */
+.skills-section {
+  text-align: center;
+  padding: 80px 40px;
+
 }
+
+.skills-section h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.skills-intro {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.skills-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.skill-card {
+  width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.skill-card img {
+  width: 48px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.skill-card h3 {
+  font-size: 22px;
+  color: #0077cc;
+}
+
+.skill-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+/* SKILLS */
+
+  /* background: linear-gradient(to right, #fefefe, #e3f2fd); */
+
+
+o
+/* Phone Mockup
+.phone-frame {
+  width: 290px;
+  height: 600px;
+  background: #222;
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.phone-frame .video-demo {
+  width: 100;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.screen img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+} */
+
+
+/* Video Demo */
+/* .video-demo {
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+.video-demo h3 {
+  font-size: 22px;
+  color: #0077cc;
+} */
+
+
+/* The phone frame styling */
+/* Phone  */
+ /* .phone-frame {
+  width: 280px;
+  height: 500px;
+  background: #222;
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+} */
+
+/* .app-screen {
+  position: absolute;
+  top: 12%;
+  left: 10%;
+  width: 80%;
+  height: auto;
+  border-radius: 8px;
+} */
+
+/* .project-details {
+  display: flex;
+  flex: 1 1 50%;
+  text-align: left;
+}
+
+.project-details h3 {
+  font-size: 24px;
+  color: #0077cc;
+}
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #0077cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #005fa3;
+} */
+/*  */
+
+.portfolio-section {
+    margin: 64px 40px;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(to right, #fefefe, #e3f2fd);
+    padding: 62px 0;
+}
+
+.text-section {
+    flex: 1 1 45%;
+    max-width: 600px;
+}
+
+.text-section h1 {
+    font-size: 36px;
+    color: #232d4e;
+    margin-bottom: 15px;
+}
+
+.text-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.text-section h3 {
+    font-size: 24px;
+    color: #0077cc;
+    margin-bottom: 15px;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.feature-list img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Phone Mockup */
+.phone-frame {
+    width: 280px;
+    height: 600px;
+    background: #222;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.screen img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+.desktop-frame {
+  width: 100%;
+  max-width: 330px;
+  height: 200px;
+  background-color: #222;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.video-demo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #eae9e9;
+  border-radius: 10px;
+  padding: 20px;
+}
+video {
+  max-width: 300px;
+  height: auto;
+}
+
+
+
+
+
+
+
+
 
 .html {
   width: 90%;
   background-color: #04aa6d;
-}
+} */
 
 /* Style the footer */
 .footer-box {
@@ -329,6 +695,18 @@ textarea {
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 600px) {
+  .portfolio-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-section {
+        max-width: 100%;
+    }
+
+    .phone-frame {
+        margin-top: 30px;
+    }
   /* Place the timelime to the left */
   .timeline::after {
     left: 31px;
@@ -359,6 +737,51 @@ textarea {
   .right {
     left: 0%;
   }
+  /* Portfolio */
+  .portfolio-section {
+    flex-direction: column;
+    padding: 40px 20px;
+    align-items: center;
+  }
+  /* Adjust layout for small screens
+.portfolio-section {
+  flex-direction: column;
+  padding: 40px 20px;
+  align-items: center;
+} */
+
+.portfolio-desc-left,
+.portfolio-flex,
+.project-details,
+.phone-frame {
+  flex: 1 1 100%;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+}
+/* Stack features vertically */
+.feature-list {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feature-list li {
+  justify-content: flex-start;
+  max-width: 90%;
+  margin: 8px 0;
+}
+
+/* Center phone mockup and video */
+.phone-frame {
+  margin: 30px auto;
+}
+
+.video-demo {
+  margin-top: 20px;
+  
+}
+
 }
 
 @media screen and (min-width: 768px) {
@@ -369,9 +792,9 @@ textarea {
     margin: 0 auto;
     border-bottom: 2px solid #6d6c6c;
   }
-  .Aboutme-box {
+  /* .Aboutme-box {
     margin-bottom: 80px;
-  }
+  } */
   .Portfolio-box {
     display: flex;
     flex-wrap: wrap;
@@ -458,14 +881,13 @@ textarea {
     width: 180px;
     border: none;
   }
-  .Aboutme-box {
-    text-align: center;
+  /* .Aboutme-box {
+   text-align: center; 
     width: 50%;
     margin: 0 auto;
     font-size: 16px;
-    font-style: italic;
     justify-content: center;
-  }
+  } */
 
   .header-p {
     font-size: 24px;
@@ -473,7 +895,9 @@ textarea {
   .H1-style {
     font-size: 3em;
   }
-
+  .about-section {
+    flex-direction: row;
+  }
   /* The portfolio section */
   .Portfolio-box {
     width: 1000px;
@@ -602,3 +1026,4 @@ textarea {
     padding: 64px;
   }
 }
+

@@ -96,23 +96,23 @@
         </div>
       </div>
     </nav>
-
     <!-- Header -->
-    <header class="header-box" style="padding: 128px 16px">
-      <img class="hero-img" src="./myself.png" alt="Photo of myself" />
-      <div>
-        <h1 class="H1-style">Hi. I'm <span class="bold">Petya.</span></h1>
-        <p class="header-p">
-          A Website developer and this is My, Portfolio. Learn more what I can
-          do.
-        </p>
-        <button class="btn-big btn-style">Get Started</button>
+    <header class="hero-header">
+      <div class="hero-text">
+     <h1>Hi, I'm <span class="highlight">Petya.</span></h1>
+    <p>A web developer passionate about creating clean, responsive experiences. Explore my portfolio and see what I can build.</p>
       </div>
-    </header>
-    <main>
-      <!-- About me section-->
-      <section id="about-me" class="Aboutme-box">
-        <h1>About me</h1>
+  </header>
+    <!-- Header -->
+ <main>
+       <!-- About me section-->
+    <section class="about-section">
+       <div class="about-image">
+    <img src="./myself.png" alt="Photo of Petya">
+  </div>
+  <div class="about-text">
+    <!-- <section id="about-me" class="Aboutme-box"> -->
+        <h2>About me</h2>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -127,15 +127,158 @@
             d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10"
           />
         </svg>
-        <p>Hi there! I’m Petya, a passionate web developer with three years of hands-on experience. My journey into web development began at the Purple Beard Bootcamp, where I fell in love with the challenges and creativity of coding.
+        <p>Hi there! I’m Petya, a web-developer passionate about building responsive, user-focused applications.I specialize in React and React Native, cloud-integrated solutions, and Software development, crafting intuitive -UI experiences.I  thrive on solving redi-world problems with using cuancellable code.</p>
 
-          I thrive on learning new technologies and constantly push myself to stay ahead of industry trends. My projects range from dynamic web applications to intuitive user interfaces, showcasing my skills in HTML, CSS, JavaScript, and React. 
+    <a href="#portfolio" class="btn-primary">View My Work</a>
+  </div>
+ 
+</section>
+<!-- About me section-->
+   
+      <!-- Skills section -->
+       <section id="skills" class="skills-section">
+  <h2>Technical Skills</h2>
+  <p class="skills-intro">Here are some of my core technical skills, shaped through hands-on projects and continuous learning.</p>
+
+  <div class="skills-flex">
+    <div class="skill-card">
+      <img src="./media/367627_html_html5_icon.png" alt="HTML Icon">
+      <h3>HTML</h3>
+      <p>Structured markup for accessible designs, refined through my Web Development course at Raspberry Pi Foundation.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="media/9055543_bxs_file_css_icon.png" alt="CSS Icon">
+      <h3>CSS</h3>
+      <p>Expert in styling, layout structures (Flexbox & Grid), and animations for modern, visually engaging interfaces.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="media/9035061_logo_javascript_icon.png" alt="JavaScript Icon">
+      <h3>JavaScript</h3>
+      <p>Interactive scripting for dynamic features like animations, APIs, and event-driven user interactions.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="media/8546893_java_icon.png" alt="Java Icon">
+      <h3>Java</h3>
+      <p>Object-oriented programming for scalable applications, ensuring cross-platform compatibility.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="media/8666372_react_icon.png" alt="Management Icon">
+      <h3>IT Management</h3>
+      <p>Strategic planning, service management, and execution of IT projects to enhance operational efficiency.</p>
+    </div>
+
+    <div class="skill-card">
+      <img src="media/10384000_digital_architecture_cloud_mes_manufacturing_icon.png" alt="SQL Icon">
+      <h3>SQL</h3>
+      <p>Database querying, relational data management, and optimization for seamless data processing.</p>
+    </div>
+  </div>
+</section>
+       <!-- skills section -->
+
+       <!-- Portfolio -->
+        <!-- <section id="portfolio" class="portfolio-section">
+  <h2>My Projects</h2>
+  <p class="portfolio-intro">A selection of projects showcasing my skills in React Native, UI design, and cloud-integrated solutions.</p>
+
+  <div class="portfolio-flex">
+
+    <div class="project-card">
+      <img src="assets/projects/yorvik-app.jpg" alt="Yorvik Parking App Screenshot">
+      <div class="project-info">
+        <h3>Yorvik Parking App</h3>
+        <p>Designed an intuitive mobile app for real-time parking space tracking using React Native & Firebase.</p>
+        <video controls width="100%">
+          <source src="assets/videos/yorvik-demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/projects/qr-scanner.jpg" alt="QR Code Scanner Screenshot">
+      <div class="project-info">
+        <div class="phone">
+  <img src="assets/projects/qr-scanner.jpg" alt="QR Code Scanner Screenshot" class="app-screen">
+</div>
+        <h3>QR Code Scanner</h3>
+    
+
+        <p>Developed a fast, cloud-integrated QR scanner with Expo and Firebase backend.</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="assets/projects/calendar-ui.jpg" alt="Calendar UI Screenshot">
+      <div class="project-info">
+        <div class="phone">
+  <img src="assets/projects/qr-scanner.jpg" alt="QR Code Scanner Screenshot" class="app-screen">
+</div>
+        <h3>Calendar UI Component</h3>
+        <p>Custom date picker UI using `react-native-ui-datepicker`, styled for smooth interaction.</p>
+      </div>
+    </div>
+
+  </div>
+</section> -->
+        <!-- Portfolio -->
+
+    <section id="portfolio" class="portfolio-section">
+    <div class="portfolio-content">
+        <!-- Left Side: Text Content -->
+        <div class="text-section">
+            <h1>Yorvik Parking App</h1>
+            <p>A mobile-first parking solution Prototype built with React Native.</p>
+            <p>Designed an intuitive prototype for real-time longboat parking space tracking using React Native and Express.js.</p>
+            <p>
+          Designed initialy with Vite tooling the prototype has been adjusted to use Expo Go whilist remain that the application communicates with custom-build Express.js backend to simulate the booking marine experience.
+          Captain can register check availible berths for specific time periods and generate permit confirmation with QR code. The intuitive interface ensures fluid interaction flow. The main purpose of the prototype is to showcase the features without needing the live beckend -perfect for organisations or buissiness that require visual representation of their service or exploration of technology tools for integrating services.
+        </p>
+        <h3>Key Features</h3>
+        <div class="video-demo">
           
-          I believe in the power of technology to transform ideas into reality, and I’m dedicated to building responsive and user-friendly web experiences. When I’m not coding, you’ll find me exploring new design trends, contributing to open-source projects, or hiking in the great outdoors.
-          
-          Feel free to check out my projects and get in touch if you'd like to collaborate or just chat about the latest in tech!</p>
-        
-        <div class="timeline">
+        <div>
+            
+            <h2>Technologies used:</h2>
+            <p>React Native, Express.js, Vite, OBS video</p>
+            <ul class="feature-list">
+                <li><img src="media/2216335_location_map_map pin_marker_pin_icon.png" alt="Marker Icon"> <strong>Real-time Parking Availability</strong></li>
+                <li><img src="media/3844432_magnifier_search_zoom_icon.png" alt="Search Icon"> <strong>Location-Based Search</strong></li>
+                <li><img src="media/326657_https_lock_secure_icon.png" alt="Secure Icon"> <strong>Secure Booking System</strong></li>
+            </ul>
+            </div>
+
+            <div class="desktop-frame">
+  <div class="screen">
+    <video controls>
+      <source src="media/Yorvik-demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+</div>
+        </div>
+
+        <!-- Right Side: Mobile Mockup -->
+        <div class="phone-frame">
+            <div class="screen">
+                <img src="media/parking-qr.png" alt="Yorvik Parking App UI">
+            </div>
+        </div>
+    </div>
+     
+   
+</section>
+
+<!--    
+</section> -->
+<!-- Portfolio -->
+<!--     
+             <div class="timeline">
           <div class="container left">
             <div class="content">
               <h2>2024</h2>
@@ -154,10 +297,10 @@
               <p>Purple Beards Bootscamp</p>
             </div>
         </div>
-      </section>
-      <!-- The Portfolio  -->
-      <div class="Aboutme-box">
-        <h1>Here are some stuff I made recently.</h1>
+      </section> -->
+     
+      <!-- <div class="Aboutme-box">
+        <h1>Here are some stuff I made recently.</h1> -->
        
 
       <!-- <a
@@ -168,8 +311,8 @@
            
      
         
-      </div>
-
+      <!-- </div> -->
+<!-- 
 
       <section id="portfolio" class="Portfolio-box">
         
@@ -295,22 +438,22 @@
         </div>
       </section>
 
-      <!-- The skills section -->
-      <h1>Here are some of my technical skills.</h1>
+      The skills section -->
+      <!-- <h1>Here are some of my technical skills.</h1>
       <section id="skills" class="skills-box">
-        <!-- Row-1 -->
+         Row-1 -->
 
-        <div class="skills-cont">
+        <!-- <div class="skills-cont">
           <h3>HTML</h3>
           <p>
             HTML provides the basic structure for every design. It is the
             building block, an essential skill I learned takeing part of
             Introduction to Web Development course from Rasbery P foundation.
           </p>
-          <!-- <div class="container">
+           <div class="container">
             <div class="skills html">90%</div>
           </div> -->
-        </div>
+        <!-- </div>
         <div class="skills-cont">
           <h3>CSS</h3>
           <p>CSS specify how interface is presented to users, how all the ellements and section are styled. It also implement font styles, colours even animations.</p>
@@ -318,11 +461,11 @@
         <div class="skills-cont">
           <h3 class="skills-cont">JavaScript</h3>
           <p>JavaScript is the browser functional language that can make website dinamic. It also implement complex features on the website. JavaScript display timely content updates, interactive maps, animated 2D/3D graphics, scrolling video and more...</p>
-        </div>
+        </div> -->
 
         <!-- Row 2 -->
 
-        <div class="skills-cont">
+        <!-- <div class="skills-cont">
           <h3>Java</h3>
           <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.  compiled Java code can run on all platforms that support Java without the need to recompile.</p>
         </div>
@@ -333,11 +476,11 @@
         <div class="skills-cont">
           <h2>SQL</h2>
           <p>SQL Data Manipulation Language, which allows data to be entered into, and retrieved from, an SQL database.</p>
-        </div>
+        </div> -->
         <!-- </div> -->
-      </section>
+      <!-- </section> -->
 
-      <section class="Aboutme-box">
+      <!-- <section class="Aboutme-box">
         <h2>Comming up</h3>
       <h3>React projects</h2>
       <p><q>      In the following year, I focused on learning about frameworks, especially React as it is a widely used trendy framework. It simplifies the development process significantly. Also in the next two years, I will learn how Mobile and cloud technology can be used for building applications.</q></p>
@@ -356,9 +499,9 @@
         >
           Live Demo
         </button>
-      </div>
+      </div> -->
 
-       <div class="portfolio-comp flex-middle">
+       <!-- <div class="portfolio-comp flex-middle">
         <h3 class="project-heading">Yorvik Perking application-Prototype</h3>
         <h4>Techology used: React Native, TypeScript, Express.js,Expo Router, OBS studio</h4>
         
@@ -385,9 +528,9 @@
         >
           Live Demo
         </button>
-      </div>
-    </section>
-    </main>
+      </div> -->
+    <!-- </section> -->
+    </main> 
 
     <!-- Footer -->
     <footer id="contact" class="footer-box">
