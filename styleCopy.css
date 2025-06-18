@@ -592,8 +592,93 @@ video {
 }
 
 
+/* Coud architecture styling  */
+.architecture-section {
+  display: flex;
+  padding: 80px 40px;
+  background-color: #fefefe;
+  text-align: center;
+}
+.architecture-text{
+    text-align: center;
+    padding: 34 0;
+}
+.architecture-text h2 {
+  font-size: 32px;
+      color: #232d4e;
 
+  margin-bottom: 10px;
+}
 
+.architecture-text p {
+  font-size: 18px;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.diagram-wrapper img {
+  max-width: 400px;
+  height: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.caption {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #888;
+}
+
+.project-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex: 1 1 45%;
+    padding: 80px 40px;
+    background-color: #f9f9f9;
+}
+
+.content-wrapper {
+  flex: 1 1 45%;
+    max-width: 600px;
+    margin-left: 46px;
+}
+
+.overview, .challenges {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p, ul {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 8px 0;
+    font-weight: 500;
+    position: relative;
+}
+
+ul li::before {
+    content: "✔";
+    color: #0077cc;
+    font-weight: bold;
+    margin-right: 8px;
+}
 
 
 
