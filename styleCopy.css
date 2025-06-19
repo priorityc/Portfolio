@@ -11,7 +11,10 @@
 FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
 */
-
+body, html {
+  width: 100%;
+  height: 100%;
+}
 body {
   
   margin: 0;
@@ -133,14 +136,10 @@ main {
 
 /*  */
 .hero-header {
-  display: flex;
-  flex-wrap: wrap; 
-  align-items: center;
-  justify-content: space-between;
   padding: 100px 40px;
    background: linear-gradient(to right, #fefefe, #e3f2fd);
   /* background-color: #fefefe; */
-  margin-left: 150px;
+  
 }
 
 .hero-text {
@@ -397,7 +396,7 @@ a.one:hover {
   /* background: linear-gradient(to right, #fefefe, #e3f2fd); */
 
 
-o
+
 /* Phone Mockup
 .phone-frame {
   width: 290px;
@@ -547,8 +546,8 @@ o
 
 /* Phone Mockup */
 .phone-frame {
-    width: 280px;
-    height: 600px;
+    max-width: 290px;
+    height: auto;
     background: #222;
     border-radius: 40px;
     padding: 20px;
@@ -832,8 +831,67 @@ textarea {
   font-size: 12px;
 }
 
+
 /* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 641px) {
+
+  /* Header */
+   .hero-header {
+     flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+    padding: 60px 20px;
+    text-align: left;
+
+  }
+   .hero-text {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+
+  .hero-text h1 {
+    font-size: 22px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+
+   .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+/*  */
+/* About */
+.about-section {
+  flex-direction: column;
+  text-align: center;
+}
+/*  */
+/* Video */
+.video-demo {
+  flex-direction: column;
+}
+video {
+  width: 100%;
+  
+}
+.desktop-frame {
+  width: 100%;
+  height: auto;
+}
+.screen img {
+  width: 100%;
+}
+.project-intro {
+  flex-direction: column;
+}
+.diagram-wrapper {
+  text-align: center;
+}
+
+  .bt
   .portfolio-content {
         flex-direction: column;
         text-align: center;
@@ -891,8 +949,8 @@ textarea {
 
 .portfolio-desc-left,
 .portfolio-flex,
-.project-details,
-.phone-frame {
+.project-details {
+
   flex: 1 1 100%;
   width: 100%;
   text-align: center;
