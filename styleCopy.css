@@ -507,7 +507,7 @@ a.one:hover {
     max-width: 600px;
 }
 
-.text-section h1 {
+.text-section h2 {
     font-size: 36px;
     color: #232d4e;
     margin-bottom: 15px;
@@ -733,6 +733,8 @@ ul li::before {
   transform: scale(0.98);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
+
 
 
 

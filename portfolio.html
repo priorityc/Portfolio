@@ -1,0 +1,249 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleCopy.css" />
+    <link rel="stylesheet" href="projects.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <!-- Navbar on small screens -->
+    <!-- Section MOBILE MENU -->
+
+    <nav class="mobile-header">
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="features-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+          />
+        </svg>
+      </div>
+
+      <div class="hamburger" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+
+    <div class="topnav">
+      <div id="myLinks">
+        <a href="#services-box">About me</a>
+        <a href="#services-box">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <!-- Desktop navigation -->
+    <!-- Desktop navigation on larger screens -->
+    <nav class="desktop-header">
+      <div class="sidenav">
+        <!-- first container -->
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="features-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+            />
+          </svg>
+        </div>
+        <!-- Second container menus -->
+        <div class="arrange-manu">
+          <a href="#about-me">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#services">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <!-- Third container serch bar -->
+        <div>
+          <input id="search-bar" type="text" placeholder="Search.." />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="features-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+        </div>
+      </div>
+    </nav>
+    <!-- Header -->
+    <header class="hero-header">
+      <div class="hero-text">
+     <h1>Hi, I'm <span class="highlight">Petya.</span></h1>
+    <p>A web developer passionate about creating clean, responsive experiences. Explore my portfolio and see what I can build.</p>
+      </div>
+  </header>
+    <!-- Header -->
+ <main>
+      
+
+      <!-- Portfolio -->
+    <section class="text-section-academic">
+         <h1>Academic Projects</h1>
+    </section>
+
+    <section id="portfolio" class="portfolio-section">
+    <div class="portfolio-content">
+        <!-- Left Side: Text Content -->
+        <div class="text-section">
+            <h1>Yorvik Parking App</h1>
+            <p>A mobile-first parking solution Prototype built with React Native.</p>
+            <p>Designed an intuitive prototype for real-time longboat parking space tracking using React Native and Express.js.</p>
+            <p>
+          Designed initialy with Vite tooling the prototype has been adjusted to use Expo Go whilist remain that the application communicates with custom-build Express.js backend to simulate the booking marine experience.
+          Captain can register check availible berths for specific time periods and generate permit confirmation with QR code. The intuitive interface ensures fluid interaction flow. The main purpose of the prototype is to showcase the features without needing the live beckend -perfect for organisations or buissiness that require visual representation of their service or exploration of technology tools for integrating services.
+        </p>
+        <h3>Key Features</h3>
+        <div class="video-demo">
+          
+        <div>
+            
+            <h2>Technologies used:</h2>
+            <p>React Native, Express.js, Vite, OBS video</p>
+            <ul class="feature-list">
+                <li><img src="media/2216335_location_map_map pin_marker_pin_icon.png" alt="Marker Icon"> <strong>Real-time Parking Availability</strong></li>
+                <li><img src="media/3844432_magnifier_search_zoom_icon.png" alt="Search Icon"> <strong>Location-Based Search</strong></li>
+                <li><img src="media/326657_https_lock_secure_icon.png" alt="Secure Icon"> <strong>Secure Booking System</strong></li>
+            </ul>
+            </div>
+
+            <div class="desktop-frame">
+  <div class="screen">
+    <video controls>
+      <source src="media/Yorvik-demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+</div>
+        </div>
+
+        <!-- Right Side: Mobile Mockup -->
+        <div class="phone-frame">
+            <div class="screen">
+                <img src="media/parking-qr.png" alt="Yorvik Parking App UI">
+            </div>
+        </div>
+    </div>
+     
+   
+</section>
+<!-- CLOUD architecture diagram -->
+ <div class="architecture-text">
+    <h2>Cloud Architecture Design – YPC Integration Project</h2>
+    <p>
+      As part of my cloud architecture training, I designed a scalable hybrid solution using AWS and OpenStack to unify YPC’s mobile and web-based systems. 
+      The system supports authentication, payments, photo storage, and admin/frontend hosting.
+    </p>
+  </div>
+ <!-- <section class="architecture-section"> -->
+  <section class="project-intro">
+    <div class="content-wrapper">
+        <!-- Overview Section -->
+        <div class="overview">
+            <h2>Overview</h2>
+            <p>The YPC parking management system needed a unified cloud-based architecture to integrate its web and mobile applications. My solution ensured seamless service expansion while supporting key functionalities such as user accounts, payment handling, and API-driven interactions.</p>
+        </div>
+
+        <!-- Challenges Section -->
+        <div class="challenges">
+            <h2>Challenges</h2>
+            <ul>
+                <li>Existing applications were independent, requiring a shared backend.</li>
+                <li>Secure cloud-based payment processing with scalability.</li>
+                <li>Optimized storage for photos and user data.</li>
+                <li>Ensuring future service expansion without disrupting current operations.</li>
+            </ul>
+        </div>
+    </div>
+<!-- </section> -->
+
+  <div class="diagram-wrapper">
+    <img src="media/Arch-cloudYPC.png" alt="Cloud Architecture Diagram for YPC Solution">
+    <p class="caption">System integration architecture using AWS services, OpenStack, and a centralized backend.</p>
+  </div>
+</section>
+
+<!-- Food app -->
+ <!-- <section class="architecture-section"> -->
+  <div class="architecture-text">
+    <h2>Food Web application -platform</h2>
+    <p>
+     Recipe exploration platform that allow users to explore receipts ideas.
+
+    </p>
+  </div>
+  <section class="project-intro">
+    <div class="content-wrapper">
+        <!-- Overview Section -->
+        <div class="overview">
+            <h2>Overview</h2>
+            <p>Food App is a recipe exploration platform that allows users to:
+- Search for recipes using an API (e.g., Spoonacular)
+- View detailed ingredients and cooking steps
+- Save favorite recipes for easy access
+- Filter recipes based on dietary preferences
+.</p>
+<h3>How it works</h3>
+<p>Uses fetch to retrieve data from the Spoonacular API.
+</p>
+<p> React manages UI state (e.g., selected recipes, search history).</p>
+        </div>
+
+        <!-- Challenges Section -->
+        <div class="challenges">
+            <h2>Challenges</h2>
+            <ul>
+                <li>API request limits causing slow searches</li>
+                <li>Implemented debouncing with useEffect to optimize requests</li>
+                <li>Ensuring seamless UI interaction</li>
+                <li>Used React hooks & conditional rendering to improve responsiveness</li>
+            </ul>
+        </div>
+    </div>
+<!-- </section> -->
+
+
+  <div class="screen-foodapp">
+    <img src="FoodApp.PNG" alt="food app image screenshot"/>
+      
+  
+<button
+            class="portfolio-btn"
+            onclick='window.location.href = "https://github.com/priorityc/FoodApp"'
+          >
+            Preview Source code
+          </button>
+          </div>
+</section>
+ 

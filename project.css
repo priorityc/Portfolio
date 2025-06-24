@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
+.text-section-academic {
+    text-align: center;
+   font-size: 36px;
+   color: #232d4e;
+   margin: 20px;
+}
