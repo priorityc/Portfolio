@@ -279,26 +279,24 @@
         <!-- Overview Section -->
         <div class="overview">
             <h2>Overview</h2>
-            <p>Food App is a recipe exploration platform that allows users to:
-- Search for recipes using an API (e.g., Spoonacular)
-- View detailed ingredients and cooking steps
-- Save favorite recipes for easy access
-- Filter recipes based on dietary preferences
-.</p>
+            <p>FoodApp is a calorie-conscious meal planner designed to reduce weekly food stress by offering personalized recipes and a downloadable shopping list—making nutrition planning easier, faster, and more sustainable.
+
+</p>
 <h3>How it works</h3>
 <p>Uses fetch to retrieve data from the Spoonacular API.
 </p>
-<p> React manages UI state (e.g., selected recipes, search history).</p>
+<p> React manages UI state (e.g., selected recipes, search history, weekly meal plan).</p>
         </div>
 
         <!-- Challenges Section -->
         <div class="challenges">
             <h2>Challenges</h2>
             <ul>
-                <li>API request limits causing slow searches</li>
-                <li>Implemented debouncing with useEffect to optimize requests</li>
-                <li>Ensuring seamless UI interaction</li>
-                <li>Used React hooks & conditional rendering to improve responsiveness</li>
+                <li><b>Planning Overwhelm:</b>  Users often struggle to organize diverse, balanced meals across the week. FoodApp auto-generates structured plans for breakfast, lunch, and dinner using real-time recipe data.</li>
+                <li><b>Nutritional Awareness:</b>It brings transparency to calorie intake, helping users manage fitness goals or dietary restrictions while avoiding guesswork.</li>
+                <li><b>Ingredient Shopping Efficiency: </b>By aggregating ingredients across the week and removing duplicates, it creates a clean, downloadable shopping list—saving time and reducing food waste.</li>
+                <li><b>Responsive, Accessible UI: </b>The app offers a responsive, semantic layout that adapts across devices while ensuring meals are clearly labeled, organized, and accessible.
+</li>
             </ul>
         </div>
     </div>
@@ -307,15 +305,16 @@
 
   <div class="screen-foodapp">
     <img src="FoodApp.PNG" alt="food app image screenshot"/>
+    <img src="media/Mobile.png" class="phone-frame" alt="Mobile view image screenshot"/>
       
-  
+  <div class="buttons-container">
 <button
             class="portfolio-btn"
             onclick='window.location.href = "https://github.com/priorityc/FoodApp"'
           >
             Preview Source code
           </button>
-          </div>
+          
 
           <button
             class="portfolio-btn"
@@ -323,6 +322,7 @@
           >
             Live demo
           </button>
+          </div>
           </div>
 </section>
 
