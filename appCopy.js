@@ -11,6 +11,15 @@ function myFunction() {
   }
 }
 
+// Scrolling to view my work
+const btnScrollTo = document.querySelector('.btn-primary');
+const portfolio= document.querySelector('#portfolio');
+
+btnScrollTo.addEventListener('click', function(e) {
+  portfolio.scrollIntoView({behavior: 'smooth'})
+});
+
+
 // Footer form validation
 //1
 function preventSubmit(e) {
