@@ -26,7 +26,7 @@ FONT SIZE SYSTEM (px)
 */
 body, html {
   width: 100%;
-  height: 100%;
+  height: 100ch;
 }
 body {
   
@@ -169,7 +169,7 @@ main {
 }
 
 /* New header */
-.header__title {
+/* .header__title {
   flex: 1;
 
   max-width: 115rem;
@@ -195,31 +195,16 @@ h4 {
 .hero-header h1 {
   font-family: 'Segoe UI', 'Roboto', sans-serif;
   letter-spacing: 0.03em;
-}
-
-
-
-
-/* .highlight::after {
-  display: block;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: 0.7;
-  transform: scale(1.07, 1.05) skewX(-15deg);
-  background-image: var(--gradient-primary);
 } */
+
+
 
 /*  */
 .hero-header {
  display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 2rem 4rem;
+  justify-content: space-evenly;
+  padding: 4rem;
   background: linear-gradient(to right, #fefefe, #e6e6ff);
  margin-left: 100px;
   /* max-width: 150rem; */
@@ -232,53 +217,40 @@ h4 {
   max-width: 600px;
 }
 
-.hero-header img {
-  flex: 1;
-  max-width: 390px;
-  height: auto;
-  border-radius: 12px;
-  border-width: 12px;
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);*/
-} 
-
-.rectangle-bg {
-  position: absolute;
-  width: 20%;
-  height: auto;
-  background: #e3f6e379; /* Soft green, matching your theme */
-  border-radius: 20px;
-  top: 30%;
-  left: 70%;
-  z-index: 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+.hero-text h4 {
+  font-size: clamp(18px, 2.5vw, 24px);
+  font-weight: 400;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
-
-.image-frame {
-  display: inline-block;
-  padding: 12px;
-  /* */
-  border-radius: 50%;        /* gives smooth rounded corners */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* light elevation */
-  max-width: 390px;           /* or adapt as needed */
-  margin: 2rem auto;
-  transition: transform 0.3s ease;
-  background-color: #2d2d2d;
+.hero-header img {
+  flex: 1;
+  
+  border-radius: 50%;
+  width: 270px;         /* Equal width and height */
+  height: 270px;
+  border-radius: 50%;   /* Makes it a perfect circle */
+  object-fit: cover;    /* Ensures the image fills the circle without distortion */
+  display: block;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .image-frame img {
-  width: 100%;
+  
   height: auto;
   border-radius: 16px;        /* matches container*/
   display: block;
-  width: 350px;
-  height: 350px;
+  width: 250px;
+  height: auto;
   border-radius: 50%;
   object-fit: cover; /
 } 
 
 .hero-text h1 {
-  /* font-size: clamp(28px, 4vw, 48px);  */
+ font-size: clamp(32px, 6vw, 64px);
+
     color: #333;
   margin-bottom: 20px;
 }
@@ -288,31 +260,23 @@ h4 {
   line-height: 1.6;
 }
 
-
- .highlight {
-  
-  background: linear-gradient(90deg, #e3f6e3, #8dc587); 
- padding: 0.2em 0.4em;
+  .highlight {
+   display: inline-block;
+  position: relative;
+  /* padding: 0.3em 0.6em; */
+  background: linear-gradient(90deg, #e3f6e3, #8dc587);
+  transform: skewX(-15deg);         /* Skew the shape */
   border-radius: 6px;
-  font-weight: bold;
-  color: #1a1a1a; /* Keep the text crisp */
-  display: inline-block;
-  /* transform: scale(1.07, 1.05) skewX(-15deg); */
- 
+  overflow: hidden;
+
 }
-.highlight::after {
-  display: block;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: 0.7;
-  transform: scale(1.07, 1.05) skewX(-15deg);
-  /* background-image: var(--gradient-primary); */
-} 
+.highlight span {
+  display: inline-block;
+  transform: skewX(15deg);          /* Unskew the text */
+  font-weight: bold;
+  color: #1a1a1a;
+}
+
 
 .hero-text p {
   font-size: 18px;
@@ -321,15 +285,6 @@ h4 {
   margin-bottom: 30px;
 }
 
-/* .btn-primary {
-  padding: 12px 24px;
-  background-color: var(--color-secondary-darker);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-} */
 
 .btn-primary {
 display: inline-block;
@@ -346,7 +301,7 @@ display: inline-block;
 }
 
 .btn-primary:hover {
-  background-color: #005fa3;
+  background-color: var( --color-primary);
 }
 
 .bold {
@@ -690,18 +645,18 @@ a.one:hover {
 }
 
 .portfolio-grid {
+  width: 90%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
   
-  padding: 2rem;
-  margin: auto 100px;
+  /* gap: 1rem; */
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  margin-left: 100px;
 }
 
 .text-section {
-  flex: 1 1 50%;
-  max-width: 600px;
+  max-width: 700px;
 }
 
 .show-more {
@@ -735,14 +690,15 @@ a.one:hover {
 
 .phone-img{
   width: 100%;
-  max-width: 300px;
+  max-width: 250px;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   background: #333;
 }
 
 /* Hidden section styles */
-.section-hidden {
+.hidden {
+  display: none;
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
@@ -750,6 +706,7 @@ a.one:hover {
 }
 
 .section-visible {
+  display: block;
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
@@ -1105,8 +1062,13 @@ textarea {
   /* Header */
     .hero-header {
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-left: 0;
     text-align: center;
   }
+
 
   .hero-header img {
     max-width: 100%;
@@ -1120,24 +1082,46 @@ textarea {
     text-align: left;
 
   } */
-   .hero-text {
-    flex: 1 1 auto;
-    width: 100%;
+ .hero-text {
+    max-width: 100%;
+    padding: 0 1rem;
   }
 
 
+
   .hero-text h1 {
-    font-size: 22px;
+    font-size: 2rem;
+  }
+
+  .hero-text h4,
+  .hero-text h5 {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    font-size: 1.2rem;
+    margin-top: 1rem;
   }
 
   .hero-text p {
     font-size: 16px;
   }
 
-   .btn-primary {
+  /* .image-frame {
+    max-width: 280px;
+    margin-top: 2rem;
+  } */
+
+  .image-frame img {
     width: 100%;
-    text-align: center;
+    height: auto;
+    border-radius: 50%;
   }
+
+  .rectangle-bg {
+    display: none; /* Optional: hide decorative background on small screens */
+  }
+
 /*  */
 /* About */
 .about-section {

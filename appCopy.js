@@ -77,13 +77,16 @@ const headerObserver =  new IntersectionObserver(stickyNav, {
 //observe for the header
 headerObserver.observe(header);
 
-
-// Revealing fey features after lern more clicked
-document.querySelector(".show-more").addEventListener("click", () => {
-  const section = document.getElementById("keyFeatures");
-  section.classList.remove("section-hidden");
-  section.classList.add("section-visible");
+document.querySelector('.toggle-btn').addEventListener('click', function(e) {
+  e.preventDefault(); // Prevent link from jumping
+  const content = document.querySelector('.extra-content');
+  content.classList.add('hidden');
+  content.classList.remove('hidden');
+  content.classList.add('section-visible');
+  // Optional: change button text
+  this.textContent = content.classList.contains('hidden') ? 'Learn More' : 'Show Less';
 });
+
 
 
 
