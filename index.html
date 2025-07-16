@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styleCopy.css" />
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -41,10 +43,10 @@
 
     <div class="topnav">
       <div id="myLinks">
-        <a href="#services-box">About me</a>
-        <a href="#services-box">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+        <a class=nav__link href="#services-box">About me</a>
+        <a class=nav__link href="#services-box">Skills</a>
+        <a class=nav__link href="#portfolio">Portfolio</a>
+        <a class=nav__link href="#contact">Contact</a>
       </div>
     </div>
 
@@ -54,27 +56,14 @@
       <div class="sidenav">
         <!-- first container -->
         <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="features-icon"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-            />
-          </svg>
+          <img id="logo" src="./media/logo.png" alt="logo image"/>
         </div>
         <!-- Second container menus -->
         <div class="arrange-manu">
-          <a href="#about-me">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#services">Portfolio</a>
-          <a href="#contact">Contact</a>
+          <a class=nav__link href="#about-me">About</a>
+          <a class=nav__link href="#skills">Skills</a>
+          <a class=nav__link href="#services">Portfolio</a>
+          <a class=nav__link href="#contact">Contact</a>
         </div>
         <!-- Third container serch bar -->
         <div>
@@ -96,24 +85,49 @@
         </div>
       </div>
     </nav>
+    <!-- NEW HEADER -->
+      <!-- <div class="header__title">
+        <h1>
+          Hi, I`m
+        
+          <span class="highlight">Petya</span>
+          <br />
+          <span class="highlight">minimalist</span>
+        </h1>
+        <h4>A web developer passionate about creating clean, responsive experiences.</h4>
+        <button class="btn--text btn--scroll-to">Learn more &DownArrow;</button>
+        <img
+          src="img/hero.png"
+          class="header__img"
+          alt="Minimalist bank items"
+        />
+      </div> -->
+     <!--  -->
     <!-- Header -->
     <header class="hero-header">
       <div class="hero-text">
      <h1>Hi, I'm <span class="highlight">Petya.</span></h1>
-    <p>A web developer passionate about creating clean, responsive experiences. Explore my portfolio and see what I can build.</p>
-      <a class="btn-primary">View My Work</a>
+    <h4>I craft elegant front-end solutions that balance design precision with user needs - from concept to code.</h4>
+    <h5>"Passioned about code that adapts effortlessly across devices.</h5>
+  
+    <a class="btn-primary">See My projects</a>
+      </div>
+       <div class="image-frame">
+        <div class="rectangle-bg"></div>
+
+    <img src="./media/me.jpg" alt="Photo of Petya">
+  
   </div>
   </header>
     <!-- Header -->
+
  <main>
        <!-- About me section-->
     <section class="about-section">
-       <div class="about-image">
-    <img src="./myself.png" alt="Photo of Petya">
-  </div>
+      
   <div class="about-text">
     <!-- <section id="about-me" class="Aboutme-box"> -->
-        <h2>About me</h2>
+        <h2 class = "about__header">About me</h2>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -129,15 +143,92 @@
           />
         </svg>
         <p>Hi there! I’m Petya, a web-developer passionate about building responsive, user-focused applications.I specialize in React and React Native, cloud-integrated solutions, and Software development, crafting intuitive -UI experiences.I  thrive on solving redi-world problems with using cuancellable code.</p>
-
     
   </div>
  
 </section>
-<!-- About me section-->
+<!-- The new skills section -->
+ <!-- Thie is the TAB component -->
+ <!-- Here data tab added to the buttons as atribute -->
+  <div class="skills-header">
+      <h2  class = "about__header">Technical Skills</h2>
+  <p class="skills-intro">Here are some of my core technical skills, shaped through hands-on projects and continuous learning.</p>
+ </div>
+  <div class="operations">
+        <div class="operations__tab-container">
+          <button
+            class="btn operations__tab operations__tab--1 operations__tab--active"
+          
+            data-tab="1"
+          >
+            <span><img src="./media/monitor_icon.png" alt="HTML Icon"></span>Frontend techologies
+          </button>
+          <button class="btn operations__tab operations__tab--2" data-tab="2">
+            <span><img src="media/multimedia_options_setting_settings_gear_icon.png" alt="CSS Icon"></span>Tooling & Development
+          </button>
+          <button class="btn operations__tab operations__tab--3" data-tab="3">
+            <span><img src="media/9310097stars_sparkle_icon.png" alt="JavaScript Icon"></span>Creative Techniques
+          </button>
+        </div>
+
+        <div
+          class="operations__content operations__content--1 operations__content--active"
+        >
+          <div class="badges-container">
+            <span class = "frontend-skills">HTML</span>
+            <span class = "frontend-skills">CSS</span>
+            <span class = "frontend-skills">JavaScript</span>
+            <span class = "frontend-skills">React</span>
+            <span class = "frontend-skills">React Native</span>
+            <span class = "frontend-skills">API</span>
+          </div>
+          <!-- <img src="./media/367627_html_html5_icon.png" alt="HTML Icon"> -->
+          <h5>Frontend Strenght</h5>
+          <p>
+          Precision-driven HTML markup that forms the backbone of dynamic, user-friendly designs.
+          Expert in building polished interfaces with clean CSS, Flexbox, and Grid—combining structure and creativity for immersive web experiences.
+          Interactive scripting for dynamic features like animations, APIs, and event-driven user interactions.
+          Building dynamic, component-driven web interfaces with React—focused on reusable architecture, state management.
+        </p>
+          
+        </div>
+
+        <div class="operations__content operations__content--2">
+         <div class="badges-container">
+            <span class = "frontend-skills">GIT</span>
+            <span class = "frontend-skills">VITE</span>
+            <span class = "frontend-skills">npm</span>
+            <span class = "frontend-skills">Expo</span>
+          </div>
+           <h5>Tooling and development mastery</h5>
+          <p>
+          Using Vite to accelerate prototyping and streamline frontend builds with minimal config and blazing-fast performance.
+          Version control mastery using Git to track changes, collaborate across branches, and maintain clean commit history for professional-grade projects
+          Managing dependencies and scripts with npm—installing, organizing, and running packages to power scalable JavaScript ecosystems.
+          Building mobile-first React Native applications prototype using Expo for streamlined deployment, device previews, and modular development.
+        </p>
+ </div>
+
+        <div class="operations__content operations__content--3">
+           <div class="badges-container">
+            <span class = "frontend-skills">Responsive</span>
+            <span class = "frontend-skills">CSS Animations</span>
+            <span class = "frontend-skills">Figma</span>
+            <span class = "frontend-skills">Wareframes</span>
+          </div>
+           <h5>Design</h5>
+          <p>Designing pixel-perfect UI mockups and interactive prototypes with Figma—streamlining handoff between design and development.
+            Confident in translating wireframes into functional interfaces using layered components
+            Creating cohesive user flows and visual hierarchies that inform responsive builds.
+            Balancing performance with creativity to deliver immersive yet lightweight animations.
+          </p>
+        </div>
+      </div>
+    </section>
+ <!--  -->
    
       <!-- Skills section -->
-       <section id="skills" class="skills-section">
+       <!-- <section id="skills" class="skills-section">
   <h2>Technical Skills</h2>
   <p class="skills-intro">Here are some of my core technical skills, shaped through hands-on projects and continuous learning.</p>
 
@@ -179,55 +270,58 @@
       <p>Knowlidge on database querying, relational data management, and optimization for seamless data processing.</p>
     </div>
   </div>
-</section>
+</section> -->
 
 
         <!-- Portfolio -->
 
     <section id="portfolio" class="portfolio-section">
-    <div class="portfolio-content">
-        <!-- Left Side: Text Content -->
-        <div class="text-section">
-            <h2>Yorvik Parking App</h2>
-            <p>A mobile-first parking solution Prototype built with React Native.</p>
-            <p>Designed an intuitive prototype for real-time longboat parking space tracking using React Native and Express.js.</p>
-            <p>
-          Designed initialy by Open university the tamplate was build with Vite tooling then adjusted to use Expo Go whilist remain that the application communicates with custom-build Express.js backend to simulate the booking marine experience.
-          Captain can register check availible berths for specific time periods and generate permit confirmation with QR code. The intuitive interface ensures fluid interaction flow. The main purpose of the prototype is to showcase the features without needing the live beckend -perfect for organisations or buissiness that require visual representation of their service or exploration of technology tools for integrating services.
-        </p>
-        <h3>Key Features</h3>
-        <div class="video-demo">
-          
-        <div>
-            
-            <h2>Technologies used:</h2>
-            <p>React Native, Express.js, Vite, OBS video</p>
-            <ul class="feature-list">
-                <li><img src="media/marker.png" alt="Marker Icon"> <strong>Real-time Parking Availability</strong></li>
-                <li><img src="media/3844432_magnifier_search_zoom_icon.png" alt="Search Icon"> <strong>Location-Based Search</strong></li>
-                <li><img src="media/326657_https_lock_secure_icon.png" alt="Secure Icon"> <strong>Secure Booking System</strong></li>
-            </ul>
-            </div>
+  <div class="portfolio-grid">
+    <!-- Left Side: Text -->
+    <div class="text-section">
+      <h2>Yorvik Parking App</h2>
+      <p>A mobile-first parking solution Prototype built with React Native.</p>
+      <p>Designed an intuitive prototype for real-time longboat parking space tracking using React Native and Express.js.</p>
+      <p>
+        Initially designed by the Open University, the template was built with Vite tooling and later adapted to use Expo Go.
+        The app communicates with a custom Express.js backend to simulate booking. Captains can register, check available berths,
+        and generate permits with QR codes. Perfect for organizations needing visual feature representation.
+      </p>
+      <button class="show-more">Learn more</button>
+    </div>
 
-            <div class="desktop-frame">
-  <div class="screen">
-    <video controls>
-      <source src="media/Yorvik-demo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+    <!-- Right Side: Phone Image -->
+    <div class="phone-frame">
+      <div class="screen">
+        <img class=phone-img src="media/parking-qr.png" alt="Yorvik Parking App UI">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hidden Key Features Section -->
+<div id="keyFeatures" class="section-hidden">
+  <h3>Key Features</h3>
+  <div class="video-demo">
+    <div>
+      <h2>Technologies used:</h2>
+      <p>React Native, Express.js, Vite, OBS video</p>
+      <ul class="feature-list">
+        <li><strong>Real-time Parking Availability</strong></li>
+        <li><strong>Location-Based Search</strong></li>
+        <li><strong>Secure Booking System</strong></li>
+      </ul>
+    </div>
+    <div class="desktop-frame">
+      <div class="screen">
+        <video controls>
+          <source src="media/Yorvik-demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
   </div>
 </div>
-</div>
-        </div>
-
-        <!-- Right Side: Mobile Mockup -->
-        <div class="phone-frame">
-            <div class="screen">
-                <img src="media/parking-qr.png" alt="Yorvik Parking App UI">
-            </div>
-        </div>
-    </div>
-     
    
 </section>
 <!-- CLOUD architecture diagram -->

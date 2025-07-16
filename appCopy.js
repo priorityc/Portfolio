@@ -1,5 +1,9 @@
 "use strict";
 
+const nav = document.querySelector('.sidenav');
+const header = document.querySelector('.hero-header');
+
+
 // the hamburger icon show
 function myFunction() {
   var x = document.getElementById("myLinks");
@@ -11,6 +15,81 @@ function myFunction() {
   }
 }
 
+// FADING navigation
+const handleHover = function (e) {
+  // console.log(this, e.target);
+
+// 1. Ensures the function only runs when a user hovers over a navigation link.
+  //we dont need to use closest method here  becouse there is no children elements
+  if(e.target.classList.contains('nav__link')) {
+
+  //Identify Elements to Fade
+
+  const link = e.target;
+  // console.log(link)
+
+  // 2. siblings finds all other .nav__link elements in the nav
+  //select the sibling elements(links) by going to the parent and select a children from there
+  const siblings = link.closest('.arrange-manu').querySelectorAll('.nav__link');
+    console.log(link)
+  //select the logo-move  to the closest which is nav and search for the image
+  const logo = link.closest('.sidenav').querySelector('#logo');
+    console.log(logo);
+  //change the opasity of the siblings of the selected link like first
+  //check if the element are not the original link change opacity
+  siblings.forEach(el=> {
+    if (el !== link) el.style.opacity = this;
+  });
+  logo.style.opacity = this;
+  }
+};
+
+// Passing an argument into handler
+//select the parent el. of all the links and logo navigation
+//atach the event listener (mouse enter event does not buble)
+nav.addEventListener('mouseover', handleHover.bind(0.5));
+//oposite of mouseover(remove the opacity)
+nav.addEventListener('mouseout', handleHover.bind(1));
+
+
+// STICKY NAVIGATION
+// 1.select the header-already selected
+// 2. calc the height of the nav 
+const navHeight = nav.getBoundingClientRect().height;
+console.log(navHeight);
+
+//3.create the func
+const stickyNav = function(entries) {
+  const [entry] = entries;//get the first entry
+
+  if (!entry.isIntersecting)
+    nav.classList.add('sticky');
+
+  else nav.classList.remove('sticky');
+}
+
+//4.create the header observer when header will enter the viewport
+const headerObserver =  new IntersectionObserver(stickyNav, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+})
+//observe for the header
+headerObserver.observe(header);
+
+
+// Revealing fey features after lern more clicked
+document.querySelector(".show-more").addEventListener("click", () => {
+  const section = document.getElementById("keyFeatures");
+  section.classList.remove("section-hidden");
+  section.classList.add("section-visible");
+});
+
+
+
+
+
+
 // Scrolling to view my work
 const btnScrollTo = document.querySelector('.btn-primary');
 const portfolio= document.querySelector('#portfolio');
@@ -19,6 +98,38 @@ btnScrollTo.addEventListener('click', function(e) {
   portfolio.scrollIntoView({behavior: 'smooth'})
 });
 
+// const btnLearnMore=document.querySelector('.show-more');
+// const divHidden= document.querySelector('hidden');
+// btnLearnMore.addEventListener('click', function() {
+//   divHidden.toggle(true);
+// })
+
+// SKILLS section
+//1.selecting elements
+const tabs = document.querySelectorAll('.operations__tab');
+const tabContainer = document.querySelector('.operations__tab-container');
+const operationContainer = document.querySelectorAll('.operations__content');
+
+//attach eventlistener
+tabContainer.addEventListener('click', function(e) {
+  const clicked = event.target.closest('.operations__tab');
+  console.log(clicked);
+
+  if (!clicked) return;
+
+  //remove the active classes from tabs
+  tabs.forEach(t => t.classList.remove('operations__tab--active'))
+  //remove active classes from content
+operationContainer.forEach(c => c.classList.remove('operations__content--active'))
+  
+  //add the active class to the clicked tab
+  clicked.classList.add('operations__tab--active');
+
+  //show the content on each click
+  document.querySelector(`.operations__content--${clicked.dataset.tab}`)
+  .classList.add('operations__content--active');
+
+});
 
 // Footer form validation
 //1
