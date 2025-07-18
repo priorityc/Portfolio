@@ -140,6 +140,26 @@ operationContainer.forEach(c => c.classList.remove('operations__content--active'
 
 });
 
+// MODAL
+const hireBtn = document.querySelector('.hire-btn');
+const modal = document.getElementById('hireModal');
+const closeBtn = document.querySelector('.close-modal');
+
+hireBtn.addEventListener('click', () => {
+  modal.classList.remove('hidden');
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.add('hidden');
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.add('hidden');
+  }
+});
+// ////////
+
 // Footer form validation
 //1
 function preventSubmit(e) {

@@ -298,6 +298,25 @@ display: inline-block;
   transform: scale(1.2);
   border-radius: 1px solid #398294;
 }
+.hire-btn {
+   width: 160px;
+  height: 45px;
+  background-color: var(--color-tertiary-darker);
+  letter-spacing: 1.5px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 6px 8px;
+}
+.hire-btn:hover {
+  background-color: var( --color-tertiary);
+  transform: scale(1.1);
+  border-radius: 1px solid var(--color-tertiary-darker);
+  border-radius: 5px;
+}
 
 /* ABOUT ME */
 .sections-header {
@@ -682,17 +701,10 @@ display: inline-block;
   transform: translateY(0);
 }
 
-ul li:first-child {
+.list-style-purple {
   background-color:  #e6e6ff;;
 }
-ul li:nth-child(2) {
 
-  background-color: #e6e6ff;;
-}
-ul li:nth-child(3) {
-
-  background-color: #e6e6ff;;
-}
 
 /* Coud architecture styling  */
 .architecture-section {
@@ -968,7 +980,45 @@ textarea {
   font-size: 12px;
 }
 
+/* THE MODAL */
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
 
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #444;
+  cursor: pointer;
+}
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 641px) {
     

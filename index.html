@@ -65,8 +65,28 @@
           <a class=nav__link href="#services">Portfolio</a>
           <a class=nav__link href="#contact">Contact</a>
         </div>
+
+             <div class="form-heading">
+        <a href="https://github.com/priorityc?tab=repositories">
+          <i
+            class="fa fa-github-square"
+            style="font-size: 48px; color: var(--color-secondary-darker)"
+          ></i
+        ></a>
+        <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/">
+          <i
+            class="fa fa-linkedin-square"
+            style="font-size: 48px; color: var(--color-primary-darker)"
+          ></i>
+        </a>
+        <i
+          class="fa fa-facebook-square"
+          style="font-size: 48px; color: var(--color-tertiary-darker)"
+        ></i>
+      </div>
+
         <!-- Third container serch bar -->
-        <div>
+        <!-- <div>
           <input id="search-bar" type="text" placeholder="Search.." />
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +102,7 @@
               d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
             />
           </svg>
-        </div>
+        </div> -->
       </div>
     </nav>
    
@@ -94,6 +114,8 @@
     <h5>"Passioned about code that adapts effortlessly across devices.</h5>
   
     <a class="btn-primary">See My projects</a>
+    <button class="hire-btn">Hire Me</button>
+
       </div>
        <div >
 
@@ -249,9 +271,9 @@
       <h3>Technologies Used</h3>
       <p>React Native, Express.js, Vite, OBS video</p>
       <ul class="feature-list">
-        <li><strong>Real-time Parking Availability</strong></li>
-        <li><strong>Location-Based Search</strong></li>
-        <li><strong>Secure Booking System</strong></li>
+        <li class="list-style-purple"><strong>Real-time Parking Availability</strong></li>
+        <li class="list-style-purple"><strong>Location-Based Search</strong></li>
+        <li class="list-style-purple"><strong>Secure Booking System</strong></li>
       </ul>
     </div>
   </div>
@@ -687,6 +709,42 @@ Write your message here.
         <!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
       </ul>
     </footer>
+    <div class="modal-overlay hidden" id="hireModal">
+  <div class="modal-content">
+    <button class="close-modal">&times;</button>
+    <h2>Let’s Work Together</h2>
+    <form class="hire-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Your email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+
+      <input type="submit" value="Send Request" class="btn-primary">
+       <div class="form-heading">
+        <a href="https://github.com/priorityc?tab=repositories">
+          <i
+            class="fa fa-github-square"
+            style="font-size: 48px; color: var(--color-secondary-darker)"
+          ></i
+        ></a>
+        <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/">
+          <i
+            class="fa fa-linkedin-square"
+            style="font-size: 48px; color: var(--color-primary-darker)"
+          ></i>
+        </a>
+        <i
+          class="fa fa-facebook-square"
+          style="font-size: 48px; color: var(--color-tertiary-darker)"
+        ></i>
+      </div>
+    </form>
+  </div>
+</div>
     <script src="appCopy.js"></script>
   </body>
 </html>
