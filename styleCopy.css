@@ -37,9 +37,7 @@ main {
   background-color: whitesmoke;
   padding: 1rem;
 }
-.hiiden {
-  display: none;
-}
+
 /* Mobile navigation */
 /* NAVIGATION */
 .mobile-header {
@@ -573,7 +571,7 @@ display: inline-block;
 
 /* Hidden section styles */
 .hidden {
-  display: none;
+  display: none !important;
   opacity: 0;
   transform: translateY(20px);
   pointer-events: none;
@@ -582,43 +580,52 @@ display: inline-block;
 
 .section-visible {
   display: block;
+  
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
+/* Key Features Section */
 #keyFeatures {
-  
-  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
   padding: 2.5rem;
- margin-bottom: 150px;
+  border-radius: 12px;
+  margin-bottom: 150px;
+  background-color: #fff;
 }
 
-#keyFeatures h3 {
-  font-size: 1.8rem;
+/* Text Column */
+.feature-text {
+  flex: 1;
+}
+
+#keyFeatures h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 600;
   color: #222;
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.5rem;
 }
-#keyFeatures li {
-  background-color: #e6e6ff;;
-}
 
-.video-demo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-.video-demo h2 {
+.video-demo h3 {
   font-size: 1.2rem;
   font-weight: 500;
   color: #333;
   margin-bottom: 0.5rem;
 }
 
+.video-demo p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Feature List */
 .feature-list {
   list-style: none;
   margin: 1rem 0;
@@ -640,42 +647,51 @@ display: inline-block;
   background-color: #f0f0f0;
 }
 
-.feature-list img {
-  width: 22px;
-  height: 22px;
-  margin-right: 0.75rem;
-}
-
 .feature-list strong {
   font-weight: 500;
   color: #444;
 }
 
-/* Mockup styling */
-.desktop-frame {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
-  overflow: hidden;
-  border: 1px solid #ddd;
+/* Video Column */
+.feature-video {
+  flex: 1;
+  
 }
 
-.screen video {
-  display: block;
+.feature-video video {
   width: 100%;
-  border-radius: 0;
-}
-
-.screen video {
+  height: auto;
+  border-radius: 8px;
+  
+  display: block;
   opacity: 0;
   transform: translateY(10px);
   transition: opacity 1s ease, transform 0.6s ease;
+}
+
+/* Reveal animation */
+.section-visible .feature-video video {
+  opacity: 1;
+  transform: translateY(0);
+  background-color: #e6e6ff;
 }
 
 /* When key features become visible */
 .section-visible .screen video {
   opacity: 1;
   transform: translateY(0);
+}
+
+ul li:first-child {
+  background-color:  #e6e6ff;;
+}
+ul li:nth-child(2) {
+
+  background-color: #e6e6ff;;
+}
+ul li:nth-child(3) {
+
+  background-color: #e6e6ff;;
 }
 
 /* Coud architecture styling  */
@@ -1222,6 +1238,48 @@ video {
   margin-top: 20px;
   
 }
+/* The hidden section */
+ #keyFeatures {
+    flex-direction: column;
+    padding: 1.5rem;
+    margin-bottom: 80px;
+  }
+
+  .left-colum-video {
+    width: 100%;
+    display: block;
+  }
+
+  .video-demo {
+    display: block;
+  }
+
+  .video-demo h2 {
+    font-size: 1rem;
+  }
+
+  .feature-list li {
+    font-size: 0.95rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .desktop-frame {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  .screen video {
+    width: 100%;
+    height: auto;
+  }
+
+  #keyFeatures h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+
+/*  */
 .architecture-section {
   flex-direction: column;
 }
@@ -1239,51 +1297,8 @@ video {
   .sections-header {
     margin: 0;
   }
+
 }
-
-/* @media screen and (min-width: 768px) {
-  .header-box {
-    display: flex;
-    gap: 26px;
-    max-width: 80%;
-    margin: 0 auto;
-    border-bottom: 2px solid #6d6c6c;
-  }
-  /* .Aboutme-box {
-    margin-bottom: 80px;
-  } 
-  .Portfolio-box {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 80px;
-  }
-  .flex-left {
-    padding: 10px;
-    flex: 33%;
-  }
-  .flex-middle {
-    padding: 10px;
-    flex: 33%;
-  }
-  .flex-right {
-    padding: 10px;
-    flex: 33%;
-  }
-
-  .portfolio-img {
-    max-width: 186px;
-  }
-
-  .name-email-box {
-    display: flex;
-    gap: 16px;
-  }
-  .name-email {
-    display: felx;
-    flex-direction: column;
-    gap: 16px;
-  }
-} */
 @media screen and (min-width: 1024px) {
   .mobile-header {
     display: none;

@@ -77,15 +77,21 @@ const headerObserver =  new IntersectionObserver(stickyNav, {
 //observe for the header
 headerObserver.observe(header);
 
-document.querySelector('.toggle-btn').addEventListener('click', function(e) {
+document.querySelector('.toggle-btn').addEventListener('click', function (e) {
   e.preventDefault(); // Prevent link from jumping
+
   const content = document.querySelector('.extra-content');
-  content.classList.add('hidden');
-  content.classList.remove('hidden');
-  content.classList.add('section-visible');
-  // Optional: change button text
+
+  // Toggle visibility
+  content.classList.toggle('hidden');
+
+  // Toggle animation class
+  content.classList.toggle('section-visible');
+
+  // Update button text
   this.textContent = content.classList.contains('hidden') ? 'Learn More' : 'Show Less';
 });
+
 
 
 
