@@ -105,7 +105,7 @@
 
  <main>
        <!-- About me section-->
-    <section class="about-section">
+    <section class="sections-header">
       
   <div class="about-text">
     <!-- <section id="about-me" class="Aboutme-box"> -->
@@ -132,7 +132,7 @@
 <!-- The new skills section -->
  <!-- Thie is the TAB component -->
  <!-- Here data tab added to the buttons as atribute -->
-  <div class="skills-header">
+  <div class="sections-header">
       <h2  class = "about__header">Technical Skills</h2>
   <p class="skills-intro">Here are some of my core technical skills, shaped through hands-on projects and continuous learning.</p>
  </div>
@@ -214,8 +214,8 @@
         <!-- Portfolio -->
 
     <section id="portfolio" class="portfolio-section">
-      <div class="skills-header">
-      <h2 class = "about__header">Porfolio</h2>
+      <div class="portfolio-header">
+      <h3 class ="portfolio-text">Porfolio</h3>
       </div>
   <div class="portfolio-grid">
     <!-- Left Side: Text -->
@@ -266,16 +266,26 @@
    
 </section>
 <!-- CLOUD architecture diagram -->
- <div class="architecture-text">
-    <h2>Cloud Architecture Design – YPC Integration Project</h2>
-    <p>
-      As part of my cloud architecture training, I designed a scalable hybrid solution using AWS and OpenStack to unify YPC’s mobile and web-based solutions. 
-      The system supports authentication, payments, photo storage, and admin/frontend hosting.
-    </p>
-  </div>
+
+ 
  <!-- <section class="architecture-section"> -->
-  <section class="project-intro">
-    <div class="content-wrapper">
+  <section class="architecture-section">
+    <!-- Left -->
+  <div class="diagram-wrapper">
+    <img src="media/Arch-cloudYPC.png" alt="Cloud Architecture Diagram for YPC Solution">
+    <p class="caption">System integration architecture using AWS services, OpenStack, and a centralized backend.</p>
+  </div>
+
+ 
+    <!-- Right -->
+     <div class="text-section">
+    <h2>Cloud Architecture Design – YPC Integration Project</h2>
+    <!-- <h3>
+      Designed a scalable hybrid solution using AWS and OpenStack to unify YPC’s mobile and web-based solutions. 
+      The system supports authentication, payments, photo storage, and admin/frontend hosting.
+    </h3> -->
+ 
+    <!-- <div class="content-wrapper"> -->
         <!-- Overview Section -->
         <div class="overview">
             <h2>Overview</h2>
@@ -283,7 +293,7 @@
         </div>
 
         <!-- Challenges Section -->
-        <div class="challenges">
+        <!-- <div class="challenges">
             <h2>Challenges</h2>
             <ul>
                 <li>Existing applications were independent, requiring a shared backend.</li>
@@ -291,27 +301,27 @@
                 <li>Optimized storage for photos and user data.</li>
                 <li>Ensuring future service expansion without disrupting current operations.</li>
             </ul>
-        </div>
+        </div> -->
+         <!-- </div> -->
+    <!-- </div> -->
     </div>
+
+</section>
 <!-- </section> -->
 
-  <div class="diagram-wrapper">
-    <img src="media/Arch-cloudYPC.png" alt="Cloud Architecture Diagram for YPC Solution">
-    <p class="caption">System integration architecture using AWS services, OpenStack, and a centralized backend.</p>
-  </div>
-</section>
-
 <!-- Food app -->
- <!-- <section class="architecture-section"> -->
-  <div class="architecture-text">
-    <h2>Food Web application -platform</h2>
+ <div class="architecture-text">
+   
+  </div>
+ <section class="architecture-section">
+  
+  <section class="project-intro">
+    <div class="content-wrapper">
+       <h2>Food Web application -platform</h2>
     <p>
      Recipe exploration platform that allow users to explore receipts ideas.
 
     </p>
-  </div>
-  <section class="project-intro">
-    <div class="content-wrapper">
         <!-- Overview Section -->
         <div class="overview">
             <h2>Overview</h2>
@@ -336,7 +346,7 @@
             </ul>
         </div>
     </div>
-<!-- </section> -->
+</section>
 
 
   <div class="screen-foodapp">
@@ -345,15 +355,15 @@
       
   <div class="buttons-container">
 <button
-            class="portfolio-btn"
+            class="show-more"
             onclick='window.location.href = "https://github.com/priorityc/FoodApp"'
           >
-            Preview Source code
+            Source code
           </button>
           
 
           <button
-            class="portfolio-btn"
+            class="show-more"
             onclick='window.location.href = "https://priorityc.github.io/FoodApp/"'
           >
             Live demo
@@ -658,18 +668,18 @@ Write your message here.
         <a href="https://github.com/priorityc?tab=repositories">
           <i
             class="fa fa-github-square"
-            style="font-size: 48px; color: rgb(193, 43, 118)"
+            style="font-size: 48px; color: var(--color-secondary-darker)"
           ></i
         ></a>
         <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/">
           <i
             class="fa fa-linkedin-square"
-            style="font-size: 48px; color: rgb(193, 43, 118)"
+            style="font-size: 48px; color: var(--color-primary-darker)"
           ></i>
         </a>
         <i
           class="fa fa-facebook-square"
-          style="font-size: 48px; color: rgb(193, 43, 118)"
+          style="font-size: 48px; color: var(--color-tertiary-darker)"
         ></i>
       </div>
       <ul id="copyright">
