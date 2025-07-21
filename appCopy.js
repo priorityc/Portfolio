@@ -160,6 +160,62 @@ modal.addEventListener('click', (e) => {
 });
 // ////////
 
+// STARGAZING REVEAL more
+  const toggleBtns = document.querySelector('.toggle-btn');
+  const hiddenEl = document.querySelector('.project-description');
+
+  
+document.addEventListener('click', () => {
+
+  // toggleBtns.forEach(btn => {
+  //   btn.addEventListener('click', () => {
+  //     const description = btn.secondElementSibling;
+
+      // Toggle classes
+      hiddenEl.classList.remove('hidden');
+      const isVisible = hiddenEl.classList.contains('visible');
+      hiddenEl.classList.toggle('visible');
+      toggleBtns.textContent = isVisible ? 'Learn More' : 'Learn Less';
+    });
+ 
+
+
+
+
+//////////
+
+// Lazy loading img
+// select the imges
+const imgTargets = document.querySelectorAll('img[data-src]');
+console.log(imgTargets);
+
+// The call back func.
+const loadImg = function(entries, observer){
+  const [entry]=entries;
+  console.log(entry);
+  if(!entry.isIntersecting) return;
+//replace the src
+  entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener('load', function(){
+    entry.target.classList.remove('lazy-img');
+  // entry.target.classList.add('loaded');
+
+  });
+}
+
+// Create the observer
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: '200px',
+});
+
+imgTargets.forEach(img=>imgObserver.observe(img));
+///////////
+
+
+
 // Footer form validation
 //1
 function preventSubmit(e) {

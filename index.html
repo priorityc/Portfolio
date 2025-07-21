@@ -256,7 +256,7 @@
     <!-- Right Side: Phone Image -->
     <div class="phone-frame">
       <div class="screen">
-        <img class=phone-img src="media/parking-qr.png" alt="Yorvik Parking App UI">
+        <img class="phone-img lazy-img" src="media/parking-qr-low.png" data-src="./media/parking-qr.png" alt="Yorvik Parking App UI">
       </div>
     </div>
   </div>
@@ -294,7 +294,7 @@
   <section class="architecture-section">
     <!-- Left -->
   <div class="diagram-wrapper">
-    <img src="media/Arch-cloudYPC.png" alt="Cloud Architecture Diagram for YPC Solution">
+    <img class="lazy-img" src="media/Arch-cloudYPC.low.jpg" data-src="media/Arch-cloudYPC.png" alt="Cloud Architecture Diagram for YPC Solution">
     <p class="caption">System integration architecture using AWS services, OpenStack, and a centralized backend.</p>
   </div>
 
@@ -367,15 +367,7 @@
 </li>
             </ul>
         </div>
-    </div>
-</section>
-
-
-  <div class="screen-foodapp">
-    <img src="FoodApp.PNG" alt="food app image screenshot"/>
-    <img src="media/Mobile.png" class="phone-frame" alt="Mobile view image screenshot"/>
-      
-  <div class="buttons-container">
+         <div class="buttons-container">
 <button
             class="show-more"
             onclick='window.location.href = "https://github.com/priorityc/FoodApp"'
@@ -391,6 +383,15 @@
             Live demo
           </button>
           </div>
+    </div>
+</section>
+
+
+  <div class="screen-foodapp">
+    <img cass="lazy-img" src="./media/FoodApp.low.jpg" data-src="./media/FoodApp.PNG" alt="food app image screenshot"/>
+    <img src="./media/Mobile.low.jpg" data-src="./media/Mobile.png" class="phone-frame lazy-img" alt="Mobile view image screenshot"/>
+      
+ 
           </div>
 </section>
 
@@ -405,7 +406,7 @@
     <div class="content-wrapper">
        <h2>Cosmic Black Holes event-CSS animations/Landing page</h2>
     <p>
-    Landing page animatin
+    Landing page animation
 
     </p>
         <!-- Overview Section -->
@@ -421,6 +422,35 @@
 
 </p>
 <p>Subtle motion guides the user’s attention while maintaining a clean, uncluttered interface.</p>
+ <section class="project">
+
+
+ 
+  <div class="buttons-container">
+     <button class="show-more toggle-btn">Learn More</button>
+<button
+            class="show-more"
+            onclick='window.location.href = "https://github.com/priorityc/stargazing-landing-page"'
+          >
+            Source code
+          </button>
+          
+
+          <button
+            class="show-more"
+            onclick='window.location.href = "https://priorityc.github.io/stargazing-landing-page/"'
+          >
+            Live demo
+          </button>
+          </div>
+
+  <div class="project-description hidden">
+    <p><strong>Goal:</strong> Create a CSS-based animation simulating gravitational lensing.</p>
+    <p><strong>Challenges:</strong> Achieved distortion effects using gradients and keyframes. Ensured performance and accessibility.</p>
+    <p><strong>Outcome:</strong> Demonstrated creative use of CSS to convey complex astrophysical concepts.</p>
+  </div>
+</section>
+
         </div>
 
         <!-- Challenges Section -->
@@ -441,25 +471,10 @@
 
 
   <div class="screen-foodapp">
-    <img src="./media/Black-hole.png" alt="food app image screenshot"/>
-    <!-- <img src="media/Mobile.png" class="phone-frame" alt="Mobile view image screenshot"/> --> 
+    <img class="lazy-img" src="./media/blackHole.low.png" data-src="./media/blackHole.png" alt="food app image screenshot"/>
+    <img src="media/secondImage.low.png" data-src="media/secondImage.png" class="phone-frame lazy-img" alt="Mobile view image screenshot"/> 
       
-  <div class="buttons-container">
-<button
-            class="show-more"
-            onclick='window.location.href = "https://github.com/priorityc/stargazing-landing-page"'
-          >
-            Source code
-          </button>
-          
-
-          <button
-            class="show-more"
-            onclick='window.location.href = "https://priorityc.github.io/stargazing-landing-page/"'
-          >
-            Live demo
-          </button>
-          </div>
+  
           </div>
 </section>
 
@@ -772,8 +787,15 @@ Write your message here.
           class="fa fa-facebook-square"
           style="font-size: 48px; color: var(--color-tertiary-darker)"
         ></i>
+        
+
       </div>
+      <div class="footer-img">
+         <img class="footer-img" id="logo" src="./media/logo.png" alt="logo image"/>
+
+        </div>
       <ul id="copyright">
+
         <li>&copy; Petya Dimitrova. All rights reserved.</li>
         <!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
       </ul>
@@ -811,6 +833,8 @@ Write your message here.
           style="font-size: 48px; color: var(--color-tertiary-darker)"
         ></i>
       </div>
+      
+        
     </form>
   </div>
 </div>

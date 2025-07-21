@@ -196,7 +196,8 @@ main {
   border-radius: 50%;
   width: 270px;         /* Equal width and height */
   height: 270px;
-  border-radius: 50%;   /* Makes it a perfect circle */
+  border-radius: 50%; 
+  border: 6px double black;  /* Makes it a perfect circle */
   object-fit: cover;    /* Ensures the image fills the circle without distortion */
   display: block;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -499,7 +500,8 @@ display: inline-block;
 /* Portfolio */
 
 .portfolio-section {
-    margin: 64px 40px;
+    margin: 0 auto;
+    width: 80%;
 }
 .portfolio-header {
   margin-left: 100px;
@@ -520,15 +522,10 @@ display: inline-block;
 }
 
 .portfolio-grid {
-  
   display: flex;
-  
-  
   align-items: center;
   justify-content: space-evenly;
-  background: #fff;
-  border-radius: 12px;
-  
+  background: #fff; 
   padding: 2rem;
 
  
@@ -542,7 +539,7 @@ display: inline-block;
 
 .show-more {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 8px 12px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   font-weight: bold;
@@ -551,7 +548,7 @@ display: inline-block;
   color: #ffffff;
   background-color: #4bbb7d;/* A confident blue – modern and trustworthy */
   border: none;
-  border-radius: 6px;
+  border-radius: 2px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -572,20 +569,15 @@ display: inline-block;
   display: flex;
   justify-content: center;
   border-radius: 8px;
-  
-  
-  
- 
-
 }
 
 .phone-img{
   max-width: 220px;
   width: 100%;
   border-radius: 12px;
-  background: #e6e6ff;
+  
   padding: 20px 30px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  
 }
 
 /* Hidden section styles */
@@ -714,13 +706,13 @@ display: inline-block;
   align-items: center;
   justify-content: space-evenly;
  gap: 50px;
-  border-radius: 12px;
+  
   /* margin: auto 150px; */
   padding: 2rem;
+  max-width: 90%;
   
-  
-  margin-top: 90px;
-  margin-bottom: 120px;
+   margin: 64px auto;
+    width: 80%;
 }
 
 .architecture-text h2 {
@@ -812,11 +804,11 @@ ul li::before {
   border-radius: 16px;
 }
 .screen-foodapp img {
-  max-width: 450px;
+  max-width: 550px;
   width: 100%;
+  height: auto;
    border-radius: 16px;
-   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        background:  #e6e6ff;
+   
         padding: 20px 30px;
 }
 .screen-foodapp .phone-frame {
@@ -826,10 +818,9 @@ ul li::before {
 
 .buttons-container {
   display: flex;
-  padding: 10px 20px;
-  gap: 25;
+ 
   align-items: center;
-  justify-items: space-evenly;
+  
 }
 
  .portfolio-btn {
@@ -864,6 +855,35 @@ ul li::before {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Learn more startgazing */
+.project-description {
+  margin-top: 0.5rem;
+  color: #ccc;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.project-description.visible {
+  max-height: 200px; /* adjust based on content */
+  opacity: 1;
+}
+
+.hidden {
+  display: none; /* only used if you prefer instant toggle */
+}
+/* Lazy img */
+.lazy-img {
+  filter: blur(20px);
+  transition: filter 0.5s ease;
+}
+
+.loaded {
+  filter: blur(0);
+}
+
+
 
 
 
@@ -885,6 +905,11 @@ ul li::before {
 }
 .form-heading p{
   color:white;
+}
+.footer-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 input[type="text"],
