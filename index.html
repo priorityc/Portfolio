@@ -66,7 +66,7 @@
           <a class=nav__link href="#contact">Contact</a>
         </div>
 
-             <div class="form-heading">
+             <!-- <div class="form-heading">
         <a href="https://github.com/priorityc?tab=repositories">
           <i
             class="fa fa-github-square"
@@ -83,7 +83,7 @@
           class="fa fa-facebook-square"
           style="font-size: 48px; color: var(--color-tertiary-darker)"
         ></i>
-      </div>
+      </div> -->
 
         <!-- Third container serch bar -->
         <!-- <div>
@@ -147,7 +147,28 @@
           />
         </svg>
         <p>Hi there! I’m Petya, a web-developer passionate about building responsive, user-focused applications.I specialize in React and React Native, cloud-integrated solutions, and Software development, crafting intuitive -UI experiences.I  thrive on solving redi-world problems with using cuancellable code.</p>
-    
+    <section class="stellar-slider">
+  <div class="slider-track">
+    <div class="card">
+      <span class="date">Aug 2022</span>
+      <h3>Started learning with Rasbery Pi</h3>
+    </div>
+    <div class="card">
+      <span class="date">Feb 2023</span>
+      <h3>Purple Beard Bootscamp</h3>
+    </div>
+    <div class="card">
+      <span class="date">Oct 2023</span>
+      <h3>Started BSc Honors Computing and IT with Open university</h3>
+    </div>
+    <div class="card">
+      <span class="date">July 2023</span>
+      <h3>Freecodecamp Front-end development certificate</h3>
+    </div>
+  </div>
+  <!-- <div class="nav-arrow left">&#8678;</div>
+  <div class="nav-arrow right">&#8680;</div> -->
+</section>
   </div>
  
 </section>
@@ -230,79 +251,97 @@
       </div>
     </section>
  <!--  -->
-   
-
-
-        <!-- Portfolio -->
-
-    <section id="portfolio" class="portfolio-section">
-      <div class="portfolio-header">
-      <h3 class ="portfolio-text">Porfolio</h3>
-      </div>
-  <div class="portfolio-grid">
-    <!-- Left Side: Text -->
-    <div class="text-section">
-      <h2>Yorvik Parking App</h2>
-      <p>A mobile-first parking solution Prototype built with React Native.</p>
-      <h3>Overview</h3>
-      <p>Designed an intuitive prototype for real-time longboat parking space tracking using React Native and Express.js.</p>
-      <p>
-        Initially designed by the Open University, the template was built with Vite tooling and later adapted to use Expo Go.
+    <!-- New Portfolio section -->
+    <section class="projects">
+  <h2 class="section-title">Featured Projects</h2>
+       <div class="project-overview">
+        <div>
+       <h2 class="project-title">Yorvik Parking App</h2>
+    <p class="project-summary">A mobile-first parking solution Prototype built with React Native.</p>
+     <h3>Overview</h3>
+   <p>Initially designed by the Open University, the template was built with Vite tooling and later adapted to use Expo Go.
         The app communicates with a custom Express.js backend to simulate booking. Captains can register, check available berths,
-        and generate permits with QR codes. Perfect for organizations needing visual feature representation.
-      </p>
-      <button class="show-more toggle-btn">Learn more</button>
-    </div>
+        and generate permits with QR codes. Perfect for organizations needing visual feature representation.</p>
+       </div>
+      
+        
+         <div>
+        <h3>Problem Statement & Goals</h3>
+        <ul>
+          <li>Visualize full service</li>
+          <li>Easy to follow interaction flow-registration, date selection, QR code generation</li>
+        </ul>
+       </div>
+       </div>
+       
+        <div class="components-cont">
 
-    <!-- Right Side: Phone Image -->
+        <div class="project-card">
+ 
+     <!-- Right Side: Phone Image -->
+    <div class="phone-frame">
+      <!-- <div class="screen"> -->
+        <img class="phone-img lazy-img" src="./media/parking-qr-low.png" data-src="./media/parking-qr.png" alt="Yorvik Parking App UI">
+      </div>
+       <div>
+   <h3>QR code component</h3>
+   <p>Build with React Native and Express.js</p>
+     
+    <button class="expand-btn">Learn More</button>
+   
+ </div>
+
+    
+    </div>
+      <div class="project-card">
     <div class="phone-frame">
       <div class="screen">
-        <img class="phone-img lazy-img" src="media/parking-qr-low.png" data-src="./media/parking-qr.png" alt="Yorvik Parking App UI">
+        <img class="phone-img lazy-img" src="./media/calendar-low.jpg" data-src="./media/calendar.png" alt="Calendar component App UI">
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Hidden Key Features Section -->
-<section id="keyFeatures" class="extra-content hidden" aria-labelledby="features-heading">
-  <div class="feature-text">
-    <h2 id="features-heading">Key Features</h2>
-
-    <div class="video-demo">
-      <h3>Technologies Used</h3>
-      <p>React Native, Express.js, Vite, OBS video</p>
-      <ul class="feature-list">
-        <li class="list-style-purple"><strong>Real-time Parking Availability</strong></li>
-        <li class="list-style-purple"><strong>Location-Based Search</strong></li>
-        <li class="list-style-purple"><strong>Secure Booking System</strong></li>
-      </ul>
+    <div>
+   <h3>Calendar component</h3>
+   <p>Custom date picker using "React-native ui-datepicker.</p>
+     
+    <button class="expand-btn">Learn More</button>
     </div>
-  </div>
+    
+    </div>
 
-  <div class="feature-video">
+    
+    </div>
+
+<div class="components-cont">
+  <!-- <div class="video-demo-cont"> -->
+     
+     <div>
+       <div class="feature-video">
     <video controls aria-label="Demo of Yorvik app features">
-      <source src="media/Yorvik-demo.mp4" type="video/mp4">
+      <source src="./media/Yorvik-demo.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
   </div>
-</section>
-   
-
-<!-- CLOUD architecture diagram -->
-
- 
- <!-- <section class="architecture-section"> -->
-  <section class="architecture-section">
-    <!-- Left -->
-  <div class="diagram-wrapper">
+   <h3>Calendar component</h3>
+   <p>Custom date picker using "React-native ui-datepicker.</p>
+     
+    <button class="expand-btn">Learn More</button>
+    </div>
+<!-- Right -->
+      <div class="diagram-wrapper">
+        <div>
     <img class="lazy-img" src="media/Arch-cloudYPC.low.jpg" data-src="media/Arch-cloudYPC.png" alt="Cloud Architecture Diagram for YPC Solution">
-    <p class="caption">System integration architecture using AWS services, OpenStack, and a centralized backend.</p>
-  </div>
+    </div>
+    <div>
+        <h3>Cloud Architecture Design – YPC Integration</h3>
 
- 
-    <!-- Right -->
-     <div class="text-section">
-    <h2>Cloud Architecture Design – YPC Integration Project</h2>
+   <p>Hibrid AWS and Open stack solution.</p>
+     
+    <button class="expand-btn">Learn More</button>
+    </div>
+  
+  </div>
+  <!-- The hidden text -->
+     <div class="text-section hidden">
     <!-- <h3>
       Designed a scalable hybrid solution using AWS and OpenStack to unify YPC’s mobile and web-based solutions. 
       The system supports authentication, payments, photo storage, and admin/frontend hosting.
@@ -311,53 +350,68 @@
     <!-- <div class="content-wrapper"> -->
         <!-- Overview Section -->
         <div class="overview">
-            <h2>Overview</h2>
-            <p>The YPC parking management system needed a unified cloud-based architecture to integrate its web and mobile applications. My solution ensured seamless service expansion while supporting key functionalities such as user accounts, payment handling, and API-driven interactions.</p>
+            <h3>Overview</h>
+            <p>The YPC parking management system needed a unified cloud-based architecture to integrate its web and mobile applications.</p>
+            <p> My solution ensured seamless service expansion while supporting key functionalities such as user accounts, payment handling, and API-driven interactions.</p>
         </div>
 
-        <!-- Challenges Section -->
-        <!-- <div class="challenges">
-            <h2>Challenges</h2>
-            <ul>
-                <li>Existing applications were independent, requiring a shared backend.</li>
-                <li>Secure cloud-based payment processing with scalability.</li>
-                <li>Optimized storage for photos and user data.</li>
-                <li>Ensuring future service expansion without disrupting current operations.</li>
-            </ul>
-        </div> -->
-         <!-- </div> -->
-    <!-- </div> -->
+        
     </div>
-
-</section>
-<!-- </section> -->
-
-<!-- Food app -->
- <div class="architecture-text">
-   
   </div>
+  
+
+
+  
+
+
+<div class="text-section hidden">
+       <h3>Key Features</h3>
+       <h4>Technologies Used</h4>
+      <p>React Native, Express.js, Vite, OBS video</p>
+      <ul class="feature-list">
+        <li class="list-style-purple"><strong>Real-time Parking Availability</strong></li>
+        <li class="list-style-purple"><strong>Location-Based Search</strong></li>
+        <li class="list-style-purple"><strong>Secure Booking System</strong></li>
+      </ul>
+    </div>
+</div>
+ 
+
+ 
+    
+  <!-- Food app -->
+ <!-- <div class="architecture-text"> -->
+   
  <section class="architecture-section">
   
-  <section class="project-intro">
+  <!-- <section class="project-intro"> -->
+    <div class="screen-foodapp">
+    <img src="./media/Mobile.low.jpg" data-src="./media/Mobile.png" class="mobile lazy-img" alt="Mobile view image screenshot"/>
+        <img src="./media/FoodApp.low.jpg" data-src="./media/FoodApp.PNG" cass="mobile lazy-img" alt="food app image screenshot"/>
+    
+  </div>
+
     <div class="content-wrapper">
-       <h2>Food Web application -platform</h2>
+      
+ <h2>Food Web application -platform</h2>
     <p>
      Recipe exploration platform that allow users to explore receipts ideas.
 
     </p>
+    
         <!-- Overview Section -->
         <div class="overview">
             <h2>Overview</h2>
             <p>FoodApp is a calorie-conscious meal planner designed to reduce weekly food stress by offering personalized recipes and a downloadable shopping list—making nutrition planning easier, faster, and more sustainable.
 
 </p>
+<button class="expand-btn">Learn More</button>
+  <div class="hidden">
 <h3>How it works</h3>
 <p>Uses fetch to retrieve data from the Spoonacular API.
 </p>
 <p> React manages UI state (e.g., selected recipes, search history, weekly meal plan).</p>
-        </div>
-
-        <!-- Challenges Section -->
+  <!-- Challenges Section -->
         <div class="challenges">
             <h2>Challenges</h2>
             <ul>
@@ -367,8 +421,13 @@
                 <li><b>Responsive, Accessible UI: </b>The app offers a responsive, semantic layout that adapts across devices while ensuring meals are clearly labeled, organized, and accessible.
 </li>
             </ul>
+        </div>        
+</div>
+
+      
         </div>
-         <div class="buttons-container">
+
+         <!-- <div class="buttons-container">
 <button
             class="show-more"
             onclick='window.location.href = "https://github.com/priorityc/FoodApp"'
@@ -383,18 +442,15 @@
           >
             Live demo
           </button>
-          </div>
+          </div> -->
     </div>
 </section>
 
 
-  <div class="screen-foodapp">
-    <img cass="lazy-img" src="./media/FoodApp.low.jpg" data-src="./media/FoodApp.PNG" alt="food app image screenshot"/>
-    <img src="./media/Mobile.low.jpg" data-src="./media/Mobile.png" class="phone-frame lazy-img" alt="Mobile view image screenshot"/>
-      
  
-          </div>
-</section>
+
+<!-- </section> -->
+
 
 <!-- THE Landing page -->
  <!--  -->
@@ -417,12 +473,7 @@
 
 
 </p>
-<h3>How it works</h3>
-<p>The page uses keyframe animations, transform effects, and opacity transitions to animate elements like headings, icons, and backgrounds.
 
-
-</p>
-<p>Subtle motion guides the user’s attention while maintaining a clean, uncluttered interface.</p>
  <section class="project">
 
 
@@ -444,13 +495,20 @@
             Live demo
           </button>
           </div>
+</section>
 
   <div class="project-description hidden">
+  <h3>How it works</h3>
+<p>The page uses keyframe animations, transform effects, and opacity transitions to animate elements like headings, icons, and backgrounds.
+
+
+</p>
+<p>Subtle motion guides the user’s attention while maintaining a clean, uncluttered interface.</p>
     <p><strong>Goal:</strong> Create a CSS-based animation simulating gravitational lensing.</p>
     <p><strong>Challenges:</strong> Achieved distortion effects using gradients and keyframes. Ensured performance and accessibility.</p>
     <p><strong>Outcome:</strong> Demonstrated creative use of CSS to convey complex astrophysical concepts.</p>
   </div>
-</section>
+
 
         </div>
 
@@ -473,249 +531,19 @@
 
   <div class="screen-foodapp">
     <img class="lazy-img" src="./media/blackHole.low.png" data-src="./media/blackHole.png" alt="food app image screenshot"/>
-    <img src="media/secondImage.low.png" data-src="media/secondImage.png" class="phone-frame lazy-img" alt="Mobile view image screenshot"/> 
       
   
           </div>
 </section>
-
-<!--    
-</section> -->
-<!-- Portfolio -->
-<!--     
-             <div class="timeline">
-          <div class="container left">
-            <div class="content">
-              <h2>2024</h2>
-              <p>Study at Open University</p>
-            </div>
-          </div>
-          <div class="container right">
-            <div class="content">
-              <h2>2023</h2>
-              <p>The Complete JavaScript course</p>
-            </div>
-          </div>
-          <div class="container left">
-            <div class="content">
-              <h2>2022</h2>
-              <p>Purple Beards Bootscamp</p>
-            </div>
-        </div>
-      </section> -->
+</section>
+   
      
-      <!-- <div class="Aboutme-box">
-        <h1>Here are some stuff I made recently.</h1> -->
-       
 
-      <!-- <a
-              class="one"
-              href="https://github.com/priorityc?tab=repositories"
-              target="_blank"
-              >Github</a> -->
-           
-     
-        
-      <!-- </div> -->
-<!-- 
+    </div>    <!-- End of comp container -->
 
-      <section id="portfolio" class="Portfolio-box">
-        
-        <div class="portfolio-comp flex-left">
-          <h3 class="project-heading">Agro weather forecast</h2>
-          <h4> Technologies Used:HTML, CSS, JavaScript, and OpenWeatherMap API.</h3>
-          
-          <img
-            class="portfolio-img"
-            src="./Agro-Weather-App.png"
-            alt="Project"
-          />
-          <p>This project is a weather application that provides real-time weather information for any city worldwide.</p>
-            Users often need quick and accurate weather updates to plan their day. This app solves the problem by offering instant weather data, including temperature, humidity, and weather conditions.</li>
-          <p>Challenges Faced:
-            API Integration: Integrating the OpenWeatherMap API was challenging due to rate limits and handling asynchronous data fetching. I learned to manage API requests efficiently and handle errors gracefully.
-            </p>
-          </ul>
-         
-          <p>Explore the project with live demo.</p>
-          <button
-            class="portfolio-btn"
-            onclick='window.location.href = "https://priorityc.github.io/weather/"'
-          >
-            Live Demo
-          </button>
-        </div>
 
-        <div class="portfolio-comp flex-middle">
-          <h3 class="project-heading">Home decoration furniture shop</h3>
-          <h4>Techology used: HTML, CSS, GitHub</h4>
-          
-          <img class="portfolio-img" src="./Furniture-Shop.png" alt="Project" />
-          <p>
-            Buissiness website for young furniture manifacturer who want to
-            build in awareness on the market.They offer home decoration
-            designers bookings as additional service to their shop. The
-            buissines provide new technology for manifacturing office and home
-            furniture, such as using only natural materials. They showcaseing
-            their products at the show room to atract customers.Their goal is to
-            provide values, salling products and services as well as building
-            trust and attracting more clients.
-          </p>
-          <p>Explore the project with live demo.</p>
-          <button
-            class="portfolio-btn"
-            onclick='window.location.href = "https://priorityc.github.io/Furniture-shop/"'
-          >
-            Live Demo
-          </button>
-        </div>
 
-        <div class="portfolio-comp flex-right">
-          <h3 class="project-heading">British Meteorite Society</h3>
-            <h4>Techology used: HTML, CSS, GitHub</h4>
-          <img class="portfolio-img" src="./meteor. png.png" alt="Project" />
-          <p>
-            British meteor society is educational website with a potential to
-            use Softwere that group reports of fireballs into Events. If more
-            than three events are occured at same area they are grouped as an
-            event. The number of events are displayed in a table sorted by area.
-            This site also share information about different types of
-            meteorites, so the users are easy to identify them. (BMS) is builded
-            to track meteorites observation across England and might be used
-            from proffesionals as well as amatiors.
-          </p>
-          <button
-            class="portfolio-btn"
-            onclick='window.location.href = "https://priorityc.github.io/-BMS-Meteorite-society/"'
-          >
-            Live Demo
-          </button>
-        </div>
-
-        <div class="portfolio-comp flex-right">
-           <h3 class="project-heading">BMS-Project</h3>
-          <h4>Techology used: Java, Swing, GitHub</h4>
-          <img class="portfolio-img" src="./BMSpic.PNG" alt="Project-BMS" />
-          <p>
-            The BMS (Business Meteorite Society) project is a Java-based application designed to manage business society operations efficiently. It includes features like report generation, data management, and user interaction through a graphical user interface.
-
-          </p>
-          <button
-            class="portfolio-btn"
-            onclick='window.location.href = "https://priorityc.github.io/-BMS-Meteorite-society/"'
-          >
-            Live Demo
-          </button>
-        </div>
-
-        <div class="portfolio-comp flex-right">
-           <h3 class="project-heading">Walking club-Admin Application</h3>
-          <h4>Techology used: HTML, CSS, GitHub</h4>
-          <img class="portfolio-img" src="./Application.PNG" alt="Project-BMS" />
-          <p>
-            The Walking club organisers (the ‘admin team’) are keen to create a web application that
-             will support the day-to-day administrative tasks that are essential for the website to fulfil its design goals (the ‘admin application’). 
-           The application will help the admin team that are not familiar with PHP programming language to manage the datatbase. It is hoped that, by creating a web application, the work can be shared among all members of the club’s admin team.
-
-          </p>
-          <button
-            class="portfolio-btn"
-            onclick='window.location.href = "https://priorityc.github.io/-BMS-Meteorite-society/"'
-          >
-            Live Demo
-          </button>
-        </div>
-
-        <div class="portfolio-comp flex-right">
-         <h3 class="project-heading">3D rotating subscription form</h3>
-          <h4>Techology used: HTML, CSS, GitHub</h4>
-          <img class="portfolio-img" src="./3D.png" alt="Project-3D" />
-          <p>
-            This is a Sign-up-Sign-in form that rotates to represent 3D appearance on be able to grap the attention on the users. The Prototype sign in form is a good way to pay attention on most significant part of the website or application.
-
-          </p>
-          <button
-            class="portfolio-btn"
-            onclick='window.location.href = "https://priorityc.github.io/-BMS-Meteorite-society/"'
-          >
-            Live Demo
-          </button>
-        </div>
-      </section>
-
-      The skills section -->
-      <!-- <h1>Here are some of my technical skills.</h1>
-      <section id="skills" class="skills-box">
-         Row-1 -->
-
-        <!-- <div class="skills-cont">
-          <h3>HTML</h3>
-          <p>
-            HTML provides the basic structure for every design. It is the
-            building block, an essential skill I learned takeing part of
-            Introduction to Web Development course from Rasbery P foundation.
-          </p>
-           <div class="container">
-            <div class="skills html">90%</div>
-          </div> -->
-        <!-- </div>
-        <div class="skills-cont">
-          <h3>CSS</h3>
-          <p>CSS specify how interface is presented to users, how all the ellements and section are styled. It also implement font styles, colours even animations.</p>
-        </div>
-        <div class="skills-cont">
-          <h3 class="skills-cont">JavaScript</h3>
-          <p>JavaScript is the browser functional language that can make website dinamic. It also implement complex features on the website. JavaScript display timely content updates, interactive maps, animated 2D/3D graphics, scrolling video and more...</p>
-        </div> -->
-
-        <!-- Row 2 -->
-
-        <!-- <div class="skills-cont">
-          <h3>Java</h3>
-          <p>Java is a high-level, class-based, object-oriented programming language that is designed to have as few implementation dependencies as possible.  compiled Java code can run on all platforms that support Java without the need to recompile.</p>
-        </div>
-        <div class="skills-cont">
-          <h3>Managing IT</h3>
-          <p>Managing an IT is complex process of establishing requirements. explore the principles, concepts and techniques of IT service management, capturing and understanding requirements, and managing projects that deliver IT services and realise requirements. </p>
-        </div>
-        <div class="skills-cont">
-          <h2>SQL</h2>
-          <p>SQL Data Manipulation Language, which allows data to be entered into, and retrieved from, an SQL database.</p>
-        </div> -->
-        <!-- </div> -->
-      <!-- </section> -->
-
-    
-
-       <!-- <div class="portfolio-comp flex-middle">
-        <h3 class="project-heading">Yorvik Perking application-Prototype</h3>
-        <h4>Techology used: React Native, TypeScript, Express.js,Expo Router, OBS studio</h4>
-        
-        <video width="600" autoplay muted constrols>
-          <source src="/media/Yorvik-demo.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        <p>
-          The Yorvik Berthing App is cross-platform prototype that have been adjusted from an existing initial template to allow showcasing the following functionalities
-        </p>
-        <ul>
-          <li>Allow captain to register </li>
-          <li>Check berth availability </li>
-          <li>Book permits in real time</li>
-        </ul>
-        <p>
-          Designed initialy with Vite tooling the prototype has been adjusted to use Expo Go whilist remain that the application communicates with custom-build Express.js backend to simulate the booking marine experience.
-          Captain can register check availible berths for specific time periods and generate permit confirmation with QR code. The intuitive interface ensures fluid interaction flow. The main purpose of the prototype is to showcase the features without needing the live beckend -perfect for organisations or buissiness that require visual representation of their service or exploration of technology tools for integrating services.
-        </p>
-        <p>Explore the project with live demo</p>
-        <button
-          class="portfolio-btn"
-          onclick='window.location.href = "https://priorityc.github.io/Furniture-shop/"'
-        >
-          Live Demo
-        </button>
-      </div> -->
-    <!-- </section> -->
+  
     </main> 
 
     <!-- Footer -->

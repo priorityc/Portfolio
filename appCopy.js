@@ -160,6 +160,15 @@ modal.addEventListener('click', (e) => {
 });
 // ////////
 
+const expandButtons = document.querySelectorAll('.expand-btn');
+
+expandButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const card = button.closest('.project-card');
+    card.classList.toggle('expanded');
+  });
+});
+
 // STARGAZING REVEAL more
   const toggleBtns = document.querySelector('.toggle-btn');
   const hiddenEl = document.querySelector('.project-description');
@@ -190,19 +199,31 @@ const imgTargets = document.querySelectorAll('img[data-src]');
 console.log(imgTargets);
 
 // The call back func.
+// const loadImg = function(entries, observer){
+//   const [entry]=entries;
+//   // console.log(entry);
+//   if(!entry.isIntersecting) return;
+// //replace the src
+//   entry.target.src = entry.target.dataset.src;
+
+//   entry.target.addEventListener('load', function(){
+//     entry.target.classList.remove('lazy-img');
+//   // entry.target.classList.add('loaded');
+
+//   });
+// }
+
 const loadImg = function(entries, observer){
-  const [entry]=entries;
-  console.log(entry);
-  if(!entry.isIntersecting) return;
-//replace the src
-  entry.target.src = entry.target.dataset.src;
-
-  entry.target.addEventListener('load', function(){
-    entry.target.classList.remove('lazy-img');
-  // entry.target.classList.add('loaded');
-
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.src = entry.target.dataset.src;
+    entry.target.addEventListener('load', function(){
+      entry.target.classList.remove('lazy-img');
+    });
+    observer.unobserve(entry.target); // prevent future triggers
   });
-}
+};
+
 
 // Create the observer
 const imgObserver = new IntersectionObserver(loadImg, {
@@ -214,6 +235,24 @@ const imgObserver = new IntersectionObserver(loadImg, {
 imgTargets.forEach(img=>imgObserver.observe(img));
 ///////////
 
+// LEFT RIGHT navigation
+
+  const track = document.querySelector('.slider-track');
+  const leftArrow = document.querySelector('.nav-arrow.left');
+  const rightArrow = document.querySelector('.nav-arrow.right');
+  let scrollAmount = 0;
+
+  rightArrow.addEventListener('click', () => {
+    scrollAmount += 240;
+    track.style.transform = `translateX(-${scrollAmount}px)`;
+  });
+
+  leftArrow.addEventListener('click', () => {
+    scrollAmount = Math.max(scrollAmount - 240, 0);
+    track.style.transform = `translateX(-${scrollAmount}px)`;
+  });
+
+// 
 
 
 // Footer form validation
