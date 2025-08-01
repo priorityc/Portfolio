@@ -237,22 +237,38 @@ imgTargets.forEach(img=>imgObserver.observe(img));
 
 // LEFT RIGHT navigation
 
-  const track = document.querySelector('.slider-track');
-  const leftArrow = document.querySelector('.nav-arrow.left');
-  const rightArrow = document.querySelector('.nav-arrow.right');
-  let scrollAmount = 0;
+  // const track = document.querySelector('.slider-track');
+  // const leftArrow = document.querySelector('.nav-arrow.left');
+  // const rightArrow = document.querySelector('.nav-arrow.right');
+  // let scrollAmount = 0;
 
-  rightArrow.addEventListener('click', () => {
-    scrollAmount += 240;
-    track.style.transform = `translateX(-${scrollAmount}px)`;
-  });
+  // rightArrow.addEventListener('click', () => {
+  //   scrollAmount += 240;
+  //   track.style.transform = `translateX(-${scrollAmount}px)`;
+  // });
 
-  leftArrow.addEventListener('click', () => {
-    scrollAmount = Math.max(scrollAmount - 240, 0);
-    track.style.transform = `translateX(-${scrollAmount}px)`;
-  });
+  // leftArrow.addEventListener('click', () => {
+  //   scrollAmount = Math.max(scrollAmount - 240, 0);
+  //   track.style.transform = `translateX(-${scrollAmount}px)`;
+  // });
 
 // 
+
+// Learn more button content expanded
+const learnMoreBtn = document.querySelectorAll(".expand-btn");
+
+learnMoreBtn.forEach((btn)=> {
+btn.addEventListener('click', function (){
+  //Take the next element of each learn more btn
+  const hiddenContent = this.nextElementSibling;
+  hiddenContent.classList.toggle("visible");
+  hiddenContent.classList.toggle("hidden");
+
+  // Change learn more btm text content
+  //The content is with class visible than 
+  this.textContent = hiddenContent.classList.contains("visible") ? "Show Less" : "Learn More" ;
+});
+});
 
 
 // Footer form validation
