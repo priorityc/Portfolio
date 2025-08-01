@@ -175,7 +175,7 @@
 <!-- The new skills section -->
  <!-- Thie is the TAB component -->
  <!-- Here data tab added to the buttons as atribute -->
-  <div class="sections-header">
+  <section class="sections-header">
       <h2  class = "about__header">Technical Skills</h2>
   <p class="skills-intro">Here are some of my core technical skills, shaped through hands-on projects and continuous learning.</p>
  </div>
@@ -274,16 +274,15 @@
        </div>
        </div>
        
-        <div class="components-cont">
+        <!-- <div class="components-cont"> The whole projects section -->
+          
+        <div class="phone-frames-container"> <!-- The container for the two phone mock ups -->
 
-        <div class="project-card">
- 
-     <!-- Right Side: Phone Image -->
-    <div class="phone-frame">
-      <!-- <div class="screen"> -->
-        <img class="phone-img lazy-img" src="./media/parking-qr-low.png" data-src="./media/parking-qr.png" alt="Yorvik Parking App UI">
-      </div>
-       <div>
+        <div class="project-card"> <!--The card container with single phone mock up-->
+          <div class="phone-frame"> <!-- Left Side: Phone Image -->
+            <img class="phone-img lazy-img" src="./media/parking-qr-low.png" data-src="./media/parking-qr.png" alt="Yorvik Parking App UI">
+          </div> <!--end of card mobile mock up-->
+       <div> <!--end of single phone card -->
    <h3>QR code component</h3>
    <p>Build with React Native and Express.js</p>
      
@@ -292,18 +291,21 @@
     <div class="hidden">
       <p>A functional and user-friendly QR code module designed to simplify parking access and payment within the Yorvik Parking App. This component enables users to scan and instantly retrieve booking details.</p>
     </div>
+       </div>
    
- </div>
+    </div> <!--end of  the container for the two phone mock ups phone frames container-->
 
     
-    </div>
-      <div class="project-card">
+   
+      <div class="project-card"> <!--The card container with single phone mock up-->
     <div class="phone-frame">
       <div class="screen">
         <img class="phone-img lazy-img" src="./media/calendar-low.jpg" data-src="./media/calendar.png" alt="Calendar component App UI">
       </div>
     </div>
-    <div>
+  
+
+      <div>
    <h3>Calendar component</h3>
    <p>Custom date picker using "React-native ui-datepicker.</p>
      
@@ -311,13 +313,17 @@
      <div class="hidden">
       <p>UI calendar component build with React native ui date picker libraly designed to assist creating longboat start and end date parking ticket and instantly guide user to the space selection spots.</p>
     </div>
-    </div>
     
     </div>
+        </div>
+        </div> <!--END of MObile mock ups-->
 
-    
-    </div>
 
+
+
+
+
+<!-- The second container with video demo and diagram -->
 <div class="components-cont">
   <!-- <div class="video-demo-cont"> -->
      
@@ -337,61 +343,33 @@
     <img class="lazy-img" src="media/Arch-cloudYPC.low.jpg" data-src="media/Arch-cloudYPC.png" alt="Cloud Architecture Diagram for YPC Solution">
     </div>
     <div>
+
         <h3>Cloud Architecture Design – YPC Integration</h3>
 
    <p>Hibrid AWS and Open stack solution.</p>
      
     <button class="expand-btn">Learn More</button>
      <div class="overview hidden">
-            <h3>Overview</h>
+            <h3>Overview</h3>
             <p>The YPC parking management system needed a unified cloud-based architecture to integrate its web and mobile applications.</p>
             <p> My solution ensured seamless service expansion while supporting key functionalities such as user accounts, payment handling, and API-driven interactions.</p>
+        </div>
         </div>
     </div>
   
   </div>
-  <!-- The hidden text -->
-     <div class="text-section hidden">
-    <!-- <h3>
-      Designed a scalable hybrid solution using AWS and OpenStack to unify YPC’s mobile and web-based solutions. 
-      The system supports authentication, payments, photo storage, and admin/frontend hosting.
-    </h3> -->
- 
-    <!-- <div class="content-wrapper"> -->
-        <!-- Overview Section -->
-       
-
-        
+    
     </div>
-  </div>
-  
-
-
-  
-
-
-<div class="text-section hidden">
-       <h3>Key Features</h3>
-       <h4>Technologies Used</h4>
-      <p>React Native, Express.js, Vite, OBS video</p>
-      <ul class="feature-list">
-        <li class="list-style-purple"><strong>Real-time Parking Availability</strong></li>
-        <li class="list-style-purple"><strong>Location-Based Search</strong></li>
-        <li class="list-style-purple"><strong>Secure Booking System</strong></li>
-      </ul>
-    </div>
-</div>
+  <!-- </div> -->
  
 
  
     
   <!-- Food app -->
- <!-- <div class="architecture-text"> -->
    
- <section class="architecture-section">
-  
-  <!-- <section class="project-intro"> -->
-    <div class="screen-foodapp">
+ <div class="architecture-section">
+
+    <div class="screen-foodapp"> <!--the screen images cont-->
     <img src="./media/Mobile.low.jpg" data-src="./media/Mobile.png" class="mobile lazy-img" alt="Mobile view image screenshot"/>
         <img src="./media/FoodApp.low.jpg" data-src="./media/FoodApp.PNG" cass="mobile lazy-img" alt="food app image screenshot"/>
     
@@ -432,78 +410,27 @@
 
       
         </div>
-
-         <!-- <div class="buttons-container">
-<button
-            class="show-more"
-            onclick='window.location.href = "https://github.com/priorityc/FoodApp"'
-          >
-            Source code
-          </button>
-          
-
-          <button
-            class="show-more"
-            onclick='window.location.href = "https://priorityc.github.io/FoodApp/"'
-          >
-            Live demo
-          </button>
-          </div> -->
-    </div>
-</section>
-
+    </div> <!--end of content wrapper-->
+</div>
 
  
 
-<!-- </section> -->
 
+    <!-- THE Landing Page -->
+<div class="architecture-section">
+    <div class="text-content"> 
+      <h2>Cosmic Black Holes event – CSS animations / Landing page</h2>
+      <p>Landing page animation</p>
 
-<!-- THE Landing page -->
- <!--  -->
- <div class="architecture-text">
-   
-  </div>
- <section class="architecture-section">
-  
-  <section class="project-intro">
-    <div class="content-wrapper">
-       <h2>Cosmic Black Holes event-CSS animations/Landing page</h2>
-    <p>
-    Landing page animation
+      <div class="overview">
+        <h2>Overview</h2>
+        <p>
+          A visually immersive landing page designed to highlight the expressive power of pure CSS animations...
+        </p>
 
-    </p>
-        <!-- Overview Section -->
-        <div class="overview">
-            <h2>Overview</h2>
-            <p>A visually immersive landing page designed to highlight the expressive power of pure CSS animations. This project blends minimalist layout with dynamic motion to create an atmospheric experience that feels both modern and playful.
-
-
-</p>
-
- <section class="project">
-
-
- 
-  <div class="buttons-container">
-     <button class="show-more toggle-btn">Learn More</button>
-<button
-            class="show-more"
-            onclick='window.location.href = "https://github.com/priorityc/stargazing-landing-page"'
-          >
-            Source code
-          </button>
-          
-
-          <button
-            class="show-more"
-            onclick='window.location.href = "https://priorityc.github.io/stargazing-landing-page/"'
-          >
-            Live demo
-          </button>
-          </div>
-</section>
-
-  <div class="project-description hidden">
+        <div class="buttons-container">
+          <button class="show-more toggle-btn">Learn More</button>
+          <div class="project-description hidden">
   <h3>How it works</h3>
 <p>The page uses keyframe animations, transform effects, and opacity transitions to animate elements like headings, icons, and backgrounds.
 
@@ -514,38 +441,32 @@
     <p><strong>Challenges:</strong> Achieved distortion effects using gradients and keyframes. Ensured performance and accessibility.</p>
     <p><strong>Outcome:</strong> Demonstrated creative use of CSS to convey complex astrophysical concepts.</p>
   </div>
-
-
+          <button class="show-more" onclick='window.location.href = "https://github.com/priorityc/stargazing-landing-page"'>Source code</button>
+          <button class="show-more" onclick='window.location.href = "https://priorityc.github.io/stargazing-landing-page/"'>Live demo</button>
         </div>
 
-        <!-- Challenges Section -->
-        <!-- <div class="challenges">
-            <h2>Challenges</h2>
-            <p>This project demonstrates how CSS alone can be used to create engaging, performant animations—without relying on JavaScript or external libraries. It’s ideal for:
-</p>
-            <ul>
-                <li><b>Planning Overwhelm:</b>  Users often struggle to organize diverse, balanced meals across the week. FoodApp auto-generates structured plans for breakfast, lunch, and dinner using real-time recipe data.</li>
-                <li><b>Nutritional Awareness:</b>It brings transparency to calorie intake, helping users manage fitness goals or dietary restrictions while avoiding guesswork.</li>
-                <li><b>Ingredient Shopping Efficiency: </b>By aggregating ingredients across the week and removing duplicates, it creates a clean, downloadable shopping list—saving time and reducing food waste.</li>
-                <li><b>Responsive, Accessible UI: </b>The app offers a responsive, semantic layout that adapts across devices while ensuring meals are clearly labeled, organized, and accessible.
-</li>
-            </ul>
-        </div> -->
+        <div class="project-description hidden">
+          <h3>How it works</h3>
+          <p>The page uses keyframe animations, transform effects, and opacity transitions...</p>
+          <p><strong>Goal:</strong> Create a CSS-based animation simulating gravitational lensing.</p>
+          <p><strong>Challenges:</strong> Achieved distortion effects using gradients and keyframes.</p>
+          <p><strong>Outcome:</strong> Demonstrated creative use of CSS to convey complex astrophysical concepts.</p>
+        </div>
+      </div>
     </div>
-</section>
 
-
-  <div class="screen-foodapp">
-    <img class="lazy-img" src="./media/blackHole.low.png" data-src="./media/blackHole.png" alt="food app image screenshot"/>
-      
+    <div class="screen-foodapp">
+      <img class="lazy-img" src="./media/blackHole.low.png" data-src="./media/blackHole.png" alt="Black hole animation screenshot" />
+    </div>
+</div>
   
-          </div>
+         
 </section>
-</section>
+
    
      
 
-    </div>    <!-- End of comp container -->
+   <!-- End of the whole project section-->
 
 
 
