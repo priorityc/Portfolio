@@ -127,10 +127,9 @@
 
  <main>
        <!-- About me section-->
-    <section class="sections-header">
+    <!-- <section class="sections-header"> -->
       
-  <div class="about-text">
-    <!-- <section id="about-me" class="Aboutme-box"> -->
+  <!-- <div class="about-text">
         <h2 class = "about__header">About me</h2>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -147,37 +146,98 @@
           />
         </svg>
         <p>Hi there! I’m Petya, a web-developer passionate about building responsive, user-focused applications.I specialize in React and React Native, cloud-integrated solutions, and Software development, crafting intuitive -UI experiences.I  thrive on solving redi-world problems with using cuancellable code.</p>
-    <section class="stellar-slider">
-  <div class="slider-track">
-    <div class="card">
-      <span class="date">Aug 2022</span>
-      <h3>Started learning with Rasbery Pi</h3>
+  <button class="expand-btn">⬇️Download CV</button>
+      </div> -->
+
+      <!-- The new ABOUT section -->
+        <section class="about-section">
+          <div class="planet-container">
+           <div class="planet">
+
+  <div class="about-content">
+    <h2 class="about-title">About Me</h2>
+    <p class="about-bio">
+       Hi there! I’m Petya, a web-developer passionate about building responsive, user-focused applications.I specialize in React and React Native, cloud-integrated solutions, and Software development, crafting intuitive -UI experiences.I  thrive on solving redi-world problems with using cuancellable code.
+    </p>
+    <button class="expand-btn">⬇️Download CV</button>
+
+  </div>
     </div>
-    <div class="card">
-      <span class="date">Feb 2023</span>
-      <h3>Purple Beard Bootscamp</h3>
+    <div class="ring-front"></div>
+  </div>
+
+  <section class="constellation-section">
+  <h2 class="section-title">Skills Constellation</h2>
+  <div class="constellation-container">
+    <div class="star" style="top: 10%; left: 20%;">
+      <span class="label">HTML & CSS</span>
     </div>
-    <div class="card">
-      <span class="date">Oct 2023</span>
-      <h3>Started BSc Honors Computing and IT with Open university</h3>
+    <div class="star" style="top: 30%; left: 40%;">
+      <span class="label">Python</span>
     </div>
-    <div class="card">
-      <span class="date">July 2023</span>
-      <h3>Freecodecamp Front-end development certificate</h3>
+    <div class="star" style="top: 50%; left: 60%;">
+      <span class="label">React</span>
+    </div>
+    <div class="star" style="top: 70%; left: 80%;">
+      <span class="label">JavaScript</span>
+    </div>
+    <svg class="constellation-lines">
+      <line x1="20%" y1="10%" x2="40%" y2="30%" />
+      <line x1="40%" y1="30%" x2="60%" y2="50%" />
+      <line x1="60%" y1="50%" x2="80%" y2="70%" />
+    </svg>
+  </div>
+</section>
+</section>
+
+
+      <!-- End About section -->
+
+
+<!-- The Pillar section  -->
+ <section class="skills-section">
+  <h2>Technical Skills</h2>
+  <div class="pillars-container">
+    <div class="pillar frontend">
+      <h3>Frontend</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+      </ul>
+    </div>
+    <div class="pillar tooling">
+      <h3>Tooling</h3>
+      <ul>
+        <li>API</li>
+        <li>Vite</li>
+        <li>Tailwind</li>
+        <li>Intersection Observer</li>
+      </ul>
+    </div>
+    <div class="pillar creative">
+      <h3>Creative</h3>
+      <ul>
+        <li>Glowing Effects</li>
+        <li>Cosmic Animations</li>
+        <li>Storytelling UI</li>
+        <li>Responsive Design</li>
+      </ul>
     </div>
   </div>
-  <!-- <div class="nav-arrow left">&#8678;</div>
-  <div class="nav-arrow right">&#8680;</div> -->
 </section>
-  </div>
- 
-</section>
+
+ <!-- ENd of pillar section -->
+
+
+
 <!-- The new skills section -->
  <!-- Thie is the TAB component -->
  <!-- Here data tab added to the buttons as atribute -->
-  <section class="sections-header">
-      <h2  class = "about__header">Technical Skills</h2>
-  <p class="skills-intro">Here are some of my core technical skills, shaped through hands-on projects and continuous learning.</p>
+  <!-- <section class="sections-header">
+    <div class="skills-header">
+      <h2 class = "about__header">Technical Skills</h2>
  </div>
   <div class="operations">
         <div class="operations__tab-container">
@@ -207,7 +267,7 @@
             <span class = "frontend-skills">React Native</span>
             <span class = "frontend-skills">API</span>
           </div>
-          <!-- <img src="./media/367627_html_html5_icon.png" alt="HTML Icon"> -->
+          <img src="./media/367627_html_html5_icon.png" alt="HTML Icon"> 
           <h5>Frontend Strenght</h5>
           <p>
           Precision-driven HTML markup that forms the backbone of dynamic, user-friendly designs.
@@ -249,14 +309,181 @@
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
  <!--  -->
+
+ <!-- Celestial projects section -->
+      <div>
+  <h2 class="section-title">Projects</h2>
+</div>
+    <section class="projects-section">
+  <div class="first-proj-cont">
+   <div class="project-card"> <!--The card container with single phone mock up-->
+
+          <div class="phone-frame"> <!-- Left Side: Phone Image -->
+            <!-- Add class lazy-img later with src="./media/parking-qr-low.png" data-src="./media/parking-qr.png"-->
+            <img class="phone-img lazy-img" src="./media/parking-qr.low.jpg" data-src="./media/parking-qr.png" alt="Yorvik Parking App UI">
+          </div> <!--end of card mobile mock up-->
+       
+    
+    <div class="project-content">
+      <h3 class="project-title">Yorvik Parking App</h3>
+      <p class="project-description">A mobile-first parking solution Prototype.</p>
+      
+      <ul class="tech-stack">
+        <li>React Native</li>
+        <li>Express.js</li>
+        <li>Expo Go</li>
+        <li>Figma</li>
+      </ul>
+
+      
+      </div>
+      <button class="learn-more-btn">Learn More</button>
+      <div class="hidden">
+ <p>Designed a mobile-first interface with slider logic and real-time filtering. Focused on accessibility using ARIA labels and responsive layout techniques.</p>
+        <ul>
+          <li>UI/UX Design & Prototype Development</li>
+          <li>UI date picker & svg - QR code libralies </li>
+        </ul>
+        <a href="#" class="demo-link">Source code</a>  
+        </div>
+    </div>
+
+    <div class="video-card">
+    <div class="project-card-video">
+    <video class="project-video" controls muted loop preload="metadata">
+     <source src="./media/Yorvik-demo.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button class="play-button" aria-label="Play Demo">▶</button>
+    <div class="project-overlay">
+      <h3 class="project-title">Yorvik Parking App video demo</h3>
+    </div>
+    
+    </div>
+    <div>
+      <h3 class="project-title">UI interaction flow</h3>
+          <p>The user register on the system then press continue to select longboat parking period start and end date. Than it has been guided to pick a parking spot. Following is the confirmation of the longboat parking details along with the QR code.</p>
+      </div>
+  </div>
+  
+
+   <!-- <div class="project-card">
+        <div class="diagram-wrapper">
+    <img class="lazy-img" src="media/Arch-cloudYPC.low.jpg" data-src="media/Arch-cloudYPC.png" alt="Cloud Architecture Diagram for YPC Solution">
+    </div>
+    <div>
+
+        <h3>Cloud Architecture Design – YPC Integration</h3>
+
+   <p>Hibrid AWS and Open stack solution.</p>
+     
+    <button class="expand-btn">Learn More</button>
+     <div class="overview hidden">
+            <h3>Overview</h3>
+            <p>The YPC parking management system needed a unified cloud-based architecture to integrate its web and mobile applications.</p>
+            <p> My solution ensured seamless service expansion while supporting key functionalities such as user accounts, payment handling, and API-driven interactions.</p>
+        </div>
+        </div> -->
+
+
+    
+
+       </div> 
+    </div>
+    </div>
+
+    <div class="second-proj-cont">
+<!-- The second project food app -->
+    <div class="project-card"> <!--The card container with single phone mock up-->
+           <div class="screen-foodapp"> <!--the screen images cont-->
+    <!-- <img src="./media/Mobile.low.jpg" data-src="./media/Mobile.png" class="lazy-img" id="mobile" alt="Mobile view image screenshot"/> -->
+        <img src="./media/FoodApp.low.jpg" data-src="./media/FoodApp.png" cass="lazy-img" alt="food app image screenshot"/>
+    
+  </div>
+    
+    <div class="project-content">
+      <h3 class="project-title">Food Web application</h3>
+      <p class="project-description">FoodApp is a calorie-conscious meal planner designed to reduce weekly food stress .</p>
+      
+      <ul class="tech-stack">
+        <li>React</li>
+        <li>Vite</li>
+        <li>npm</li>
+        <li>Figma</li>
+      </ul>
+
+      
+    </div>
+    <button class="learn-more-btn">Learn More</button>
+      <div class="hidden">
+ <p>FoodApp is a calorie-conscious meal planner designed to reduce weekly food stress by offering personalized recipes and a downloadable shopping list—making nutrition planning easier, faster, and more sustainable..</p>
+        <ul>
+          <li>UI/UX Design & Desktop app Development</li>
+          <li>simple UI </li>
+        </ul>
+        <a href="#" class="demo-link">Live Demo</a>  
+        </div>
+    </div>
+
+           <!-- The third Landing page project card -->
+    <!-- The second project food app -->
+    <div class="project-card"> <!--The card container with single phone mock up-->
+           <div class="screen-foodapp"> <!--the screen images cont-->
+    <!-- <img src="./media/Mobile.low.jpg" data-src="./media/Mobile.png" class="lazy-img" id="mobile" alt="Mobile view image screenshot"/> -->
+        <img src="./media/blackHole.low.jpg" data-src="./media/blackHole.png" class="lazy-img" alt="food app image screenshot"/>
+    
+  </div>
+    
+    <div class="project-content">
+      <h3 class="project-title">Food Web application</h3>
+      <p class="project-description">FoodApp is a calorie-conscious meal planner designed to reduce weekly food stress .</p>
+      
+      <ul class="tech-stack">
+        <li>HTML</li>
+        <li>CSS-Animations</li>
+        <li>JavaScript</li>
+
+      </ul>
+       
+      
+      </div>
+      <button class="learn-more-btn">Learn More</button>
+      <div class="hidden">
+ <p>A visually immersive landing page designed to highlight the expressive power of pure CSS animations.</p>
+        <ul>
+          <li>UI/UX Design & Desktop app Development</li>
+          <li>Spoonacular API</li>
+          <li>Vite/li>
+        </ul>
+       <a href="https://priorityc.github.io/stargazing-landing-page/" class="demo-link">Live Demo</a>  
+        </div>
+    </div>
+    
+</div>
+     
+      
+        
+      <!-- <div class="project-details hidden">
+        <p>Designed a mobile-first interface with slider logic and real-time filtering. Focused on accessibility using ARIA labels and responsive layout techniques.</p>
+        <ul>
+          <li>UI/UX Design & Development</li>
+          <li>Slider Logic & Lazy Loading</li>
+        </ul>
+        <a href="#" class="demo-link">Live Demo</a>
+      </div> -->
+    
+  
+</section>
+ <!-- END -->
     <!-- New Portfolio section -->
-    <section class="projects">
-  <h2 class="section-title">Featured Projects</h2>
+    <!-- <section class="projects">
+  <h2 class="section-title">Projects</h2>
        <div class="project-overview">
+        <h2 class="project-title">Yorvik Parking App</h2>
         <div>
-       <h2 class="project-title">Yorvik Parking App</h2>
+       
         <p class="project-summary">A mobile-first parking solution Prototype built with React Native.</p>
         <h3>Overview</h3>
         <p>Initially designed by the Open University, the template was built with Vite tooling and later adapted to use Expo Go.
@@ -274,30 +501,28 @@
        </div>
        </div>
        
-        <!-- <div class="components-cont"> The whole projects section -->
-          
-        <div class="phone-frames-container"> <!-- The container for the two phone mock ups -->
+        
+         <div class="yorvik-cont">
+        <div class="phone-frames-container">
 
-        <div class="project-card"> <!--The card container with single phone mock up-->
-          <div class="phone-frame"> <!-- Left Side: Phone Image -->
+        <div class="project-card"> 
+          <div class="phone-frame"> 
             <img class="phone-img lazy-img" src="./media/parking-qr-low.png" data-src="./media/parking-qr.png" alt="Yorvik Parking App UI">
-          </div> <!--end of card mobile mock up-->
-       <div> <!--end of single phone card -->
+          </div> 
+       <div> 
    <h3>QR code component</h3>
    <p>Build with React Native and Express.js</p>
      
     <button class="expand-btn">Learn More</button>
-    <!-- The hidden div that appears after pressing learn more -->
     <div class="hidden">
       <p>A functional and user-friendly QR code module designed to simplify parking access and payment within the Yorvik Parking App. This component enables users to scan and instantly retrieve booking details.</p>
     </div>
        </div>
    
-    </div> <!--end of  the container for the two phone mock ups phone frames container-->
-
+    </div> 
     
    
-      <div class="project-card"> <!--The card container with single phone mock up-->
+      <div class="project-card"> 
     <div class="phone-frame">
       <div class="screen">
         <img class="phone-img lazy-img" src="./media/calendar-low.jpg" data-src="./media/calendar.png" alt="Calendar component App UI">
@@ -315,29 +540,28 @@
     </div>
     
     </div>
-        </div>
-        </div> <!--END of MObile mock ups-->
-
-
-
-
-
-
-<!-- The second container with video demo and diagram -->
-<div class="components-cont">
-  <!-- <div class="video-demo-cont"> -->
+  </div>
      
-     <div>
-       <div class="feature-video">
-    <video controls aria-label="Demo of Yorvik app features">
-      <source src="./media/Yorvik-demo.mp4" type="video/mp4">
+   
+    
+    
+
+    </div>
+       
+<section class="video-section">
+  <div class="project-card-video">
+    <video class="project-video" controls muted loop preload="metadata">
+     <source src="./media/Yorvik-demo.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-  </div>
-   <h3>Live video demo</h3>
-    
+    <button class="play-button" aria-label="Play Demo">▶</button>
+    <div class="project-overlay">
+      <h3 class="project-title">Yorvik Parking App video demo</h3>
+      <p class="project-description">A React-based app that fetches and displays images from an API.</p>
     </div>
-<!-- Right -->
+  </div>
+
+ 
       <div class="diagram-wrapper">
         <div>
     <img class="lazy-img" src="media/Arch-cloudYPC.low.jpg" data-src="media/Arch-cloudYPC.png" alt="Cloud Architecture Diagram for YPC Solution">
@@ -355,23 +579,19 @@
             <p> My solution ensured seamless service expansion while supporting key functionalities such as user accounts, payment handling, and API-driven interactions.</p>
         </div>
         </div>
-    </div>
+</section>
+
   
   </div>
     
     </div>
-  <!-- </div> -->
+  </div>
  
-
- 
-    
-  <!-- Food app -->
-   
+  <section class="foodapp-blackhole-cont">
  <div class="architecture-section">
 
-    <div class="screen-foodapp"> <!--the screen images cont-->
-    <img src="./media/Mobile.low.jpg" data-src="./media/Mobile.png" class="mobile lazy-img" alt="Mobile view image screenshot"/>
-        <img src="./media/FoodApp.low.jpg" data-src="./media/FoodApp.PNG" cass="mobile lazy-img" alt="food app image screenshot"/>
+    <div class="screen-foodapp"> 
+        <img src="./media/FoodApp.low.jpg" data-src="./media/FoodApp.PNG" cass="lazy-img" alt="food app image screenshot"/>
     
   </div>
 
@@ -383,7 +603,6 @@
 
     </p>
     
-        <!-- Overview Section -->
         <div class="overview">
             <h2>Overview</h2>
             <p>FoodApp is a calorie-conscious meal planner designed to reduce weekly food stress by offering personalized recipes and a downloadable shopping list—making nutrition planning easier, faster, and more sustainable.
@@ -395,7 +614,7 @@
 <p>Uses fetch to retrieve data from the Spoonacular API.
 </p>
 <p> React manages UI state (e.g., selected recipes, search history, weekly meal plan).</p>
-  <!-- Challenges Section -->
+ 
         <div class="challenges">
             <h2>Challenges</h2>
             <ul>
@@ -410,14 +629,17 @@
 
       
         </div>
-    </div> <!--end of content wrapper-->
+    </div> 
 </div>
 
  
 
 
-    <!-- THE Landing Page -->
+    
 <div class="architecture-section">
+  <div class="screen-foodapp">
+      <img class="lazy-img" src="./media/blackHole.low.png" data-src="./media/blackHole.png" alt="Black hole animation screenshot" />
+    </div>
     <div class="text-content"> 
       <h2>Cosmic Black Holes event – CSS animations / Landing page</h2>
       <p>Landing page animation</p>
@@ -455,15 +677,13 @@
       </div>
     </div>
 
-    <div class="screen-foodapp">
-      <img class="lazy-img" src="./media/blackHole.low.png" data-src="./media/blackHole.png" alt="Black hole animation screenshot" />
-    </div>
+    
 </div>
   
-         
+  </section>     
 </section>
 
-   
+    -->
      
 
    <!-- End of the whole project section-->
@@ -574,8 +794,10 @@ Write your message here.
        <div class="form-heading">
         <a href="https://github.com/priorityc?tab=repositories">
           <i
-            class="fa fa-github-square"
-            style="font-size: 48px; color: var(--color-secondary-darker)"
+            class="fa fa-github-square"             
+            style="font-size: 48px; color: #00FFFF"
+"
+
           ></i
         ></a>
         <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/">

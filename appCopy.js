@@ -31,7 +31,7 @@ const handleHover = function (e) {
   // 2. siblings finds all other .nav__link elements in the nav
   //select the sibling elements(links) by going to the parent and select a children from there
   const siblings = link.closest('.arrange-manu').querySelectorAll('.nav__link');
-    console.log(link)
+   
   //select the logo-move  to the closest which is nav and search for the image
   const logo = link.closest('.sidenav').querySelector('#logo');
     console.log(logo);
@@ -100,12 +100,12 @@ document.querySelector('.toggle-btn').addEventListener('click', function (e) {
 
 
 // Scrolling to view my work
-const btnScrollTo = document.querySelector('.btn-primary');
-const portfolio= document.querySelector('#portfolio');
+// const btnScrollTo = document.querySelector('.btn-primary');
+// const portfolio= document.querySelector('#portfolio');
 
-btnScrollTo.addEventListener('click', function(e) {
-  portfolio.scrollIntoView({behavior: 'smooth'})
-});
+// btnScrollTo.addEventListener('click', function(e) {
+//   portfolio.scrollIntoView({behavior: 'smooth'})
+// });
 
 // const btnLearnMore=document.querySelector('.show-more');
 // const divHidden= document.querySelector('hidden');
@@ -115,30 +115,30 @@ btnScrollTo.addEventListener('click', function(e) {
 
 // SKILLS section
 //1.selecting elements
-const tabs = document.querySelectorAll('.operations__tab');
-const tabContainer = document.querySelector('.operations__tab-container');
-const operationContainer = document.querySelectorAll('.operations__content');
+// const tabs = document.querySelectorAll('.operations__tab');
+// const tabContainer = document.querySelector('.operations__tab-container');
+// const operationContainer = document.querySelectorAll('.operations__content');
 
-//attach eventlistener
-tabContainer.addEventListener('click', function(e) {
-  const clicked = event.target.closest('.operations__tab');
-  console.log(clicked);
+// //attach eventlistener
+// tabContainer.addEventListener('click', function(e) {
+//   const clicked = event.target.closest('.operations__tab');
+//   console.log(clicked);
 
-  if (!clicked) return;
+//   if (!clicked) return;
 
-  //remove the active classes from tabs
-  tabs.forEach(t => t.classList.remove('operations__tab--active'))
-  //remove active classes from content
-operationContainer.forEach(c => c.classList.remove('operations__content--active'))
+//   //remove the active classes from tabs
+//   tabs.forEach(t => t.classList.remove('operations__tab--active'))
+//   //remove active classes from content
+// operationContainer.forEach(c => c.classList.remove('operations__content--active'))
   
-  //add the active class to the clicked tab
-  clicked.classList.add('operations__tab--active');
+//   //add the active class to the clicked tab
+//   clicked.classList.add('operations__tab--active');
 
-  //show the content on each click
-  document.querySelector(`.operations__content--${clicked.dataset.tab}`)
-  .classList.add('operations__content--active');
+//   //show the content on each click
+//   document.querySelector(`.operations__content--${clicked.dataset.tab}`)
+//   .classList.add('operations__content--active');
 
-});
+// });
 
 // MODAL
 const hireBtn = document.querySelector('.hire-btn');
@@ -199,19 +199,19 @@ const imgTargets = document.querySelectorAll('img[data-src]');
 console.log(imgTargets);
 
 // The call back func.
-// const loadImg = function(entries, observer){
+//  const loadImg = function(entries, observer){
 //   const [entry]=entries;
-//   // console.log(entry);
-//   if(!entry.isIntersecting) return;
-// //replace the src
+
+//  if(!entry.isIntersecting) return;
+
 //   entry.target.src = entry.target.dataset.src;
 
-//   entry.target.addEventListener('load', function(){
-//     entry.target.classList.remove('lazy-img');
-//   // entry.target.classList.add('loaded');
+// entry.target.addEventListener('load', function(){
+//   entry.target.classList.remove('lazy-img');
+//  entry.target.classList.add('loaded');
 
 //   });
-// }
+//  }
 
 const loadImg = function(entries, observer){
   entries.forEach(entry => {
@@ -255,20 +255,34 @@ imgTargets.forEach(img=>imgObserver.observe(img));
 // 
 
 // Learn more button content expanded
-const learnMoreBtn = document.querySelectorAll(".expand-btn");
+const learnMoreBtn = document.querySelectorAll(".learn-more-btn");
 
 learnMoreBtn.forEach((btn)=> {
 btn.addEventListener('click', function (){
   //Take the next element of each learn more btn
   const hiddenContent = this.nextElementSibling;
-  hiddenContent.classList.toggle("visible");
   hiddenContent.classList.toggle("hidden");
+  hiddenContent.classList.toggle("visible");
+  
 
   // Change learn more btm text content
   //The content is with class visible than 
   this.textContent = hiddenContent.classList.contains("visible") ? "Show Less" : "Learn More" ;
 });
 });
+
+// PLAY VIDEO on button click in video section
+ const playButton = document.querySelector('.play-button');
+  const video = document.querySelector('.project-video');
+  const videoTitle = document.querySelector(".project-title");
+
+  playButton.addEventListener('click', () => {
+    video.play();
+    video.style.opacity = '1';
+    playButton.style.display = 'none';
+    videoTitle.style.display = 'none';
+  });
+
 
 
 // Footer form validation
