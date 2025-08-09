@@ -194,26 +194,6 @@ expandButtons.forEach(button => {
   });
 });
 
-// STARGAZING REVEAL more
-  const toggleBtns = document.querySelector('.toggle-btn');
-  const hiddenEl = document.querySelector('.project-description');
-
-  
-document.addEventListener('click', () => {
-
-  // toggleBtns.forEach(btn => {
-  //   btn.addEventListener('click', () => {
-  //     const description = btn.secondElementSibling;
-
-      // Toggle classes
-      hiddenEl.classList.remove('hidden');
-      const isVisible = hiddenEl.classList.contains('visible');
-      hiddenEl.classList.toggle('visible');
-      toggleBtns.textContent = isVisible ? 'Learn More' : 'Learn Less';
-    });
- 
-
-
 
 
 //////////
@@ -221,7 +201,7 @@ document.addEventListener('click', () => {
 // Lazy loading img
 // select the imges
 const imgTargets = document.querySelectorAll('img[data-src]');
-console.log(imgTargets);
+// console.log(imgTargets);
 
 // The call back func.
 //  const loadImg = function(entries, observer){
