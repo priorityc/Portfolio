@@ -479,15 +479,16 @@ display: inline-block;
   box-shadow: 0 0 10px #00FFFF;
 }
 
-.star .label {
+ .label {
   position: absolute;
   top: -30px;
-  left: 50%;
+  left: 10%;
   transform: translateX(-50%);
   font-size: 0.9rem;
   color: #C0C0C0;
   white-space: nowrap;
-}
+ }
+
 
 .constellation-lines {
   position: absolute;
@@ -636,8 +637,9 @@ display: inline-block;
 }
 
 .skills-section h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin-bottom: 3rem;
+  font-weight: 300;
   color: #a3d8ff;
 }
 
@@ -979,10 +981,21 @@ display: inline-block;
 .section-title {
   margin-bottom: 0.5rem;
   font-weight: 300;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
   position: relative;
   color:  var(--color-accent);
+  font-size: 1.5rem;
+}
+.projects-title {
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  color:  white;
+  font-size: 2rem;
+  margin-bottom: 80px;
 }
 .section-title::after {
   content: '';
@@ -1611,6 +1624,7 @@ ul li {
 }
 /* Style the footer */
 .footer-box {
+  width: 100%;
   background: #2d2d2d;
   color: white;
   padding: 10px 16px;
@@ -2040,5 +2054,12 @@ textarea {
     margin: 50px auto;
     width: 100%;
   }
+
   /*  */
+  .footer-box {
+  width: 100%;
+}
+.form {
+  width: 100%;
+}
 }
