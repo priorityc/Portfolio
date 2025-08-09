@@ -3,6 +3,13 @@
 const nav = document.querySelector('.sidenav');
 const header = document.querySelector('.hero-header');
 
+// Accessibility
+ function handleKey(event) {
+  if (event.key === "Enter" || event.key === " ") {
+    event.preventDefault();
+    toggleMenu();
+  }
+}
 
 // the hamburger icon show
 function myFunction() {
@@ -15,6 +22,24 @@ function myFunction() {
   }
 }
 
+// Generate stars
+
+  for (let i = 0; i < 60; i++) {
+    const headerStars = document.createElement('div');
+    headerStars.className = 'header-stars';
+    headerStars.style.top = `${Math.random() * 100}%`;
+    headerStars.style.left = `${Math.random() * 100}%`;
+    headerStars.style.animationDuration = `${1 + Math.random() * 2}s`;
+    header.appendChild(headerStars);
+  }
+
+
+//Download CV
+ function downloadCV() {
+    document.getElementById('cvLink').click();
+  }
+
+  
 // FADING navigation
 const handleHover = function (e) {
   // console.log(this, e.target);
@@ -77,7 +102,7 @@ const headerObserver =  new IntersectionObserver(stickyNav, {
 //observe for the header
 headerObserver.observe(header);
 
-document.querySelector('.toggle-btn').addEventListener('click', function (e) {
+document.querySelector('.learn-more-btn').addEventListener('click', function (e) {
   e.preventDefault(); // Prevent link from jumping
 
   const content = document.querySelector('.extra-content');
@@ -283,7 +308,21 @@ btn.addEventListener('click', function (){
     videoTitle.style.display = 'none';
   });
 
+// Fade in 
+   const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+       if (entry.isIntersecting) {
+entry.target.classList.add('visible');
+      }
+    });
+  }, {
+ threshold: 0.1 // Trigger when 10% of the element is visible
+  })
+    document.querySelectorAll('.fade-in-section').forEach(section => {
+    observer.observe(section);
+  });
 
+// 
 
 // Footer form validation
 //1

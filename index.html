@@ -34,7 +34,12 @@
         </svg>
       </div>
 
-      <div class="hamburger" onclick="myFunction(this)">
+      <div class="hamburger" 
+       role="button" 
+      tabindex="0" 
+      aria-label="Open navigation menu" 
+      onclick="myFunction(this)"
+      onkeydown="handleKey(event)">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -150,16 +155,18 @@
       </div> -->
 
       <!-- The new ABOUT section -->
-        <section class="about-section">
+        <section class="about-section fade-in-section">
           <div class="planet-container">
            <div class="planet">
 
   <div class="about-content">
-    <h2 class="about-title">About Me</h2>
+    <h3 class="about-title">About Me</h3>
     <p class="about-bio">
        Hi there! I’m Petya, a web-developer passionate about building responsive, user-focused applications.I specialize in React and React Native, cloud-integrated solutions, and Software development, crafting intuitive -UI experiences.I  thrive on solving redi-world problems with using cuancellable code.
     </p>
-    <button class="expand-btn">⬇️Download CV</button>
+    <button class="expand-btn" onclick="downloadCV()">⬇️Download CV</button>
+    <!-- Hidden link -->
+<a id="cvLink" href="./media/cv_PD.docx" download="cv_PD.docx" style="display: none;"></a>
 
   </div>
     </div>
@@ -167,24 +174,24 @@
   </div>
 
   <section class="constellation-section">
-  <h2 class="section-title">Skills Constellation</h2>
+  <h3 class="section-title">Timeline Constellation</h3>
   <div class="constellation-container">
-    <div class="star" style="top: 10%; left: 20%;">
-      <span class="label">HTML & CSS</span>
+    <div class="star-const" style="top: 10%; left: 50%;">
+      <span class="label">2023 - Open university</span>
     </div>
-    <div class="star" style="top: 30%; left: 40%;">
-      <span class="label">Python</span>
+    <div class="star-const" style="top: 30%; left: 40%;">
+      <span class="label">2022 - Freecodecamp</span>
     </div>
-    <div class="star" style="top: 50%; left: 60%;">
-      <span class="label">React</span>
+    <div class="star-const" style="top: 50%; left: 90%;">
+      <span class="label"> 2022 - Purple Beard Bootscamp</span>
     </div>
-    <div class="star" style="top: 70%; left: 80%;">
-      <span class="label">JavaScript</span>
+    <div class="star-const" style="top: 70%; left: 80%;">
+      <span class="label">2020 - Rasberi Pi</span>
     </div>
     <svg class="constellation-lines">
-      <line x1="20%" y1="10%" x2="40%" y2="30%" />
-      <line x1="40%" y1="30%" x2="60%" y2="50%" />
-      <line x1="60%" y1="50%" x2="80%" y2="70%" />
+      <line x1="50%" y1="10%" x2="40%" y2="30%" />
+      <line x1="40%" y1="30%" x2="90%" y2="50%" />
+      <line x1="90%" y1="50%" x2="80%" y2="70%" />
     </svg>
   </div>
 </section>
@@ -195,7 +202,7 @@
 
 
 <!-- The Pillar section  -->
- <section class="skills-section">
+ <section class="skills-section fade-in-section">
   <h2>Technical Skills</h2>
   <div class="pillars-container">
     <div class="pillar frontend">
@@ -316,7 +323,7 @@
       <div>
   <h2 class="section-title">Projects</h2>
 </div>
-    <section class="projects-section">
+    <section class="projects-section fade-in-section">
   <div class="first-proj-cont">
    <div class="project-card"> <!--The card container with single phone mock up-->
 
@@ -405,7 +412,7 @@
     
     <div class="project-content">
       <h3 class="project-title">Food Web application</h3>
-      <p class="project-description">FoodApp is a calorie-conscious meal planner designed to reduce weekly food stress .</p>
+      <p class="project-description visible">Meal planner desktop application.</p>
       
       <ul class="tech-stack">
         <li>React</li>
@@ -437,8 +444,8 @@
   </div>
     
     <div class="project-content">
-      <h3 class="project-title">Food Web application</h3>
-      <p class="project-description">FoodApp is a calorie-conscious meal planner designed to reduce weekly food stress .</p>
+      <h3 class="project-title">Event Landing page</h3>
+      <p class="project-description visible">Immersive stargazing animated Landing page.</p>
       
       <ul class="tech-stack">
         <li>HTML</li>
@@ -808,7 +815,7 @@ Write your message here.
         </a>
         <i
           class="fa fa-facebook-square"
-          style="font-size: 48px; color: var(--color-tertiary-darker)"
+          style="font-size: 48px; color: var(--color-highlight)"
         ></i>
       </div>
       
