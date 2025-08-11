@@ -86,10 +86,10 @@ console.log(navHeight);
 //3.create the func
 const stickyNav = function(entries) {
   const [entry] = entries;//get the first entry
-
+//if false(not intersecting)
   if (!entry.isIntersecting)
     nav.classList.add('sticky');
-
+//if true( intersecting)
   else nav.classList.remove('sticky');
 }
 
@@ -102,20 +102,20 @@ const headerObserver =  new IntersectionObserver(stickyNav, {
 //observe for the header
 headerObserver.observe(header);
 
-document.querySelector('.learn-more-btn').addEventListener('click', function (e) {
-  e.preventDefault(); // Prevent link from jumping
+// document.querySelector('.learn-more-btn').addEventListener('click', function (e) {
+//   e.preventDefault(); // Prevent link from jumping
 
-  const content = document.querySelector('.extra-content');
+//   const content = document.querySelector('.description');
 
-  // Toggle visibility
-  content.classList.toggle('hidden');
+//   // Toggle visibility
+//   content.classList.toggle('hidden');
 
-  // Toggle animation class
-  content.classList.toggle('section-visible');
+//   // Toggle animation class
+//   content.classList.toggle('section-visible');
 
-  // Update button text
-  this.textContent = content.classList.contains('hidden') ? 'Learn More' : 'Show Less';
-});
+//   // Update button text
+//   this.textContent = content.classList.contains('hidden') ? 'Learn More' : 'Show Less';
+// });
 
 
 
