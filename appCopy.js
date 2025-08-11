@@ -59,7 +59,7 @@ const handleHover = function (e) {
    
   //select the logo-move  to the closest which is nav and search for the image
   const logo = link.closest('.sidenav').querySelector('#logo');
-    console.log(logo);
+    
   //change the opasity of the siblings of the selected link like first
   //check if the element are not the original link change opacity
   siblings.forEach(el=> {

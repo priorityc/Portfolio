@@ -679,7 +679,7 @@ display: inline-block;
   max-width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   margin-bottom: 50px;
 }
@@ -687,7 +687,7 @@ display: inline-block;
   width: 90%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 90px;
 }
 .video-card {
@@ -1307,9 +1307,11 @@ display: inline-block;
 }
 
 h2 {
-    font-size: 28px;
+    font-size:2.2rem;
+    text-transform: uppercase;
+    font-weight: 300;
     color:  #4bbb7d;
-    margin-bottom: 15px;
+    margin: 5rem;
 }
 p {
   font-size: 1.2rem;
