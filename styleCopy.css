@@ -146,7 +146,7 @@ main {
     padding-right: 48px;
     background-color: #f4f3ff;
     line-height: 1.4;
-    height: 80px;
+    height: 120px;
     
   }
   .sidenav a {
@@ -190,11 +190,12 @@ main {
   background-color: #333;
 }
 #logo {
-  width: 100px;
+  width: 80px;
   border-radius: 12px;
   transition: transform 0.3s ease-in-out;
-   height: auto;              /* Preserve proportions */
+  height: auto;              /* Preserve proportions */
   display: block; 
+  margin: 10px auto;
 }
 
 /* Style the topnav links */
@@ -337,11 +338,10 @@ main {
 .btn-primary {
 display: inline-block;
     background: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: inherit;
     font-weight: 500;
     border: none;
-    border-bottom: 1px solid currentColor;
     padding-bottom: 2px;
     cursor: pointer;
     transition: all 0.3s;
@@ -385,18 +385,16 @@ display: inline-block;
   border-radius: 1px solid #398294;
 }
 .hire-btn {
-   width: 160px;
-  height: 45px;
   /* background-color: var(--color-tertiary-darker); */
   background-color: #FF69B4;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.8px;
   border: none;
   border-radius: 5px;
   text-transform: uppercase;
-  color: whitesmoke;
+  color: #fff;
   font-size: 16px;
-  font-weight: bold;
-  padding: 6px 8px;
+  font-weight: 300;
+  padding: 12px 36px;
   margin-left: 20px;
 }
 .hire-btn:hover {
@@ -1307,10 +1305,8 @@ display: inline-block;
 }
 
 h2 {
-    font-size:2.2rem;
-    text-transform: uppercase;
+    font-size:2rem;
     font-weight: 300;
-    color:  #4bbb7d;
     margin: 5rem;
 }
 p {
@@ -1443,16 +1439,18 @@ ul li {
 }
 
 .sticky-projects-btn {
-  border: 1px solid var(--color-accent);
+  /* border: 1px solid var(--color-accent); */
   color: var(--color-accent);
   padding: 12px 48px;
   border-radius: 22px;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.2rem;
   box-shadow: 0 0 20px rgba(255, 160, 200, 0.3);
-  text-transform: capitalize;
+  text-transform: uppercase;
+  letter-spacing: 1.8;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .learn-more-btn:hover {
