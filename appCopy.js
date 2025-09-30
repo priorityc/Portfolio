@@ -22,16 +22,31 @@ function myFunction() {
   }
 }
 
-// Generate stars
+// Generate meteors
 
-  for (let i = 0; i < 60; i++) {
-    const headerStars = document.createElement('div');
-    headerStars.className = 'header-stars';
-    headerStars.style.top = `${Math.random() * 100}%`;
-    headerStars.style.left = `${Math.random() * 100}%`;
-    headerStars.style.animationDuration = `${1 + Math.random() * 2}s`;
-    header.appendChild(headerStars);
-  }
+const container = document.querySelector('.meteor-container');
+
+// Create a div for meteors with class meteor
+function createMeteor() {
+  const meteor = document.createElement('div');
+  meteor.classList.add('meteor');
+  // - Math.random() gives a number between 0 and 1.
+  // - Multiplying by window.innerWidth spreads meteors across the full screen width.
+
+  meteor.style.left = `${Math.random() * window.innerWidth}px`;
+  // container.appendChild(meteor);
+
+  // - Waits 1.5 seconds, then removes the meteor from the DOM.
+
+  setTimeout(() => {
+    meteor.remove();
+  }, 1500); // Match animation duration
+}
+
+setInterval(() => {
+  createMeteor();
+}, 500); // Adjust frequency as needed
+
 
 
 //Download CV

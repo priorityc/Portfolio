@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styleCopy.css" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" type="image/png" href="img/icon.png" />
 
     <link
@@ -98,14 +98,14 @@
     </nav>
    
     <!-- Header -->
-    <header class="hero-header">
-      <div class="hero-text">
+<header class="hero-header">
+  <div class="hero-text">
      <h1><span class="highlight">Hi, I'm  Petya.</span></h1>
     <h4>I craft elegant front-end solutions that balance design precision with user needs - from concept to code.</h4>
-    <h5>"Passioned about code that adapts effortlessly across devices.</h5>
+    <h5>"Passionate about code that adapts effortlessly across devices.</h5>
   
-    <a class="btn-primary">See My projects</a>
-    <button class="hire-btn">Hire Me</button>
+    <a  href="portfolio.html" class="btn-primary">See My projects</a>
+    <!-- <button class="hire-btn">Hire Me</button> -->
 
       </div>
        <div >
@@ -139,46 +139,51 @@
         <p>Hi there! I’m Petya, a web-developer passionate about building responsive, user-focused applications.I specialize in React and React Native, cloud-integrated solutions, and Software development, crafting intuitive -UI experiences.I  thrive on solving redi-world problems with using cuancellable code.</p>
   <button class="expand-btn">⬇️Download CV</button>
       </div> -->
-
-      <!-- The new ABOUT section -->
-        <section class="about-section fade-in-section">
-          <div class="planet-container">
-           <div class="planet">
-
+       
+        
+      
+      <section class="about-section">
   <div class="about-content">
     <h3 class="about-title">About Me</h3>
     <p class="about-bio">
-       Hi there! I’m Petya, a web-developer passionate about building responsive, user-focused applications.I specialize in React and React Native, cloud-integrated solutions, and Software development, crafting intuitive -UI experiences.I  thrive on solving redi-world problems with using cuancellable code.
+      Hi there! I’m Petya, a web developer passionate about building responsive, user-focused applications. I specialize in React and React Native, cloud-integrated solutions, and software development, crafting intuitive UI experiences. I thrive on solving real-world problems using cancellable code.
     </p>
-    <button class="expand-btn" onclick="downloadCV()">⬇️Download CV</button>
-    <!-- Hidden link -->
-<a id="cvLink" href="./media/cv_PD.docx" download="cv_PD.docx" style="display: none;"></a>
-
+    <button class="expand-btn" onclick="downloadCV()">⬇️ Download CV</button>
+    <a id="cvLink" href="./media/cv_PD.docx" download="cv_PD.docx" style="display: none;"></a>
   </div>
-    </div>
-    <div class="ring-front"></div>
-  </div>
+  <div class="saturn">
+  <div class="planet"></div>
+  <div class="ring"></div>
+</div>
 
-  <section class="constellation-section">
+</section>
+
+      <!-- The new ABOUT section -->
+ 
+
+ <section class="starmap-section">
   <h3 class="section-title">Timeline Constellation</h3>
-  <div class="constellation-container">
-    <div class="star-const" style="top: 10%; left: 50%;">
-      <span class="label">2023 - Open university</span>
+  <div class="starmap-container">
+    <div class="planet-node">
+      <span class="planet-label">
+        <strong>2023</strong><br>Open University – Exploring software foundations and cloud architecture.
+      </span>
     </div>
-    <div class="star-const" style="top: 30%; left: 40%;">
-      <span class="label">2022 - Freecodecamp</span>
+    <div class="planet-node">
+      <span class="planet-label">
+        <strong>2022</strong><br>FreeCodeCamp – Mastered JavaScript, React, and responsive design.
+      </span>
     </div>
-    <div class="star-const" style="top: 50%; left: 90%;">
-      <span class="label"> 2022 - Purple Beard Bootscamp</span>
+    <div class="planet-node">
+      <span class="planet-label">
+        <strong>2022</strong><br>Purple Beard Bootcamp – Built full-stack apps and practiced agile workflows.
+      </span>
     </div>
-    <div class="star-const" style="top: 70%; left: 80%;">
-      <span class="label">2020 - Rasberi Pi</span>
+    <div class="planet-node">
+      <span class="planet-label">
+        <strong>2020</strong><br>Raspberry Pi – First taste of hardware tinkering and Python scripting.
+      </span>
     </div>
-    <svg class="constellation-lines">
-      <line x1="50%" y1="10%" x2="40%" y2="30%" />
-      <line x1="40%" y1="30%" x2="90%" y2="50%" />
-      <line x1="90%" y1="50%" x2="80%" y2="70%" />
-    </svg>
   </div>
 </section>
 </section>
@@ -224,101 +229,19 @@
  <!-- ENd of pillar section -->
 
 
-
-<!-- The new skills section -->
- <!-- Thie is the TAB component -->
- <!-- Here data tab added to the buttons as atribute -->
-  <!-- <section class="sections-header">
-    <div class="skills-header">
-      <h2 class = "about__header">Technical Skills</h2>
- </div>
-  <div class="operations">
-        <div class="operations__tab-container">
-          <button
-            class="btn operations__tab operations__tab--1 operations__tab--active"
-          
-            data-tab="1"
-          >
-            <span><img src="./media/monitor_icon.png" alt="HTML Icon"></span>Frontend techologies
-          </button>
-          <button class="btn operations__tab operations__tab--2" data-tab="2">
-            <span><img src="media/multimedia_options_setting_settings_gear_icon.png" alt="CSS Icon"></span>Tooling & Development
-          </button>
-          <button class="btn operations__tab operations__tab--3" data-tab="3">
-            <span><img src="media/9310097stars_sparkle_icon.png" alt="JavaScript Icon"></span>Creative Techniques
-          </button>
-        </div>
-
-        <div
-          class="operations__content operations__content--1 operations__content--active"
-        >
-          <div class="badges-container">
-            <span class = "frontend-skills">HTML</span>
-            <span class = "frontend-skills">CSS</span>
-            <span class = "frontend-skills">JavaScript</span>
-            <span class = "frontend-skills">React</span>
-            <span class = "frontend-skills">React Native</span>
-            <span class = "frontend-skills">API</span>
-          </div>
-          <img src="./media/367627_html_html5_icon.png" alt="HTML Icon"> 
-          <h5>Frontend Strenght</h5>
-          <p>
-          Precision-driven HTML markup that forms the backbone of dynamic, user-friendly designs.
-          Expert in building polished interfaces with clean CSS, Flexbox, and Grid—combining structure and creativity for immersive web experiences.
-          Interactive scripting for dynamic features like animations, APIs, and event-driven user interactions.
-          Building dynamic, component-driven web interfaces with React—focused on reusable architecture, state management.
-        </p>
-          
-        </div>
-
-        <div class="operations__content operations__content--2">
-         <div class="badges-container">
-            <span class = "frontend-skills">GIT</span>
-            <span class = "frontend-skills">VITE</span>
-            <span class = "frontend-skills">npm</span>
-            <span class = "frontend-skills">Expo</span>
-          </div>
-           <h5>Tooling and development mastery</h5>
-          <p>
-          Using Vite to accelerate prototyping and streamline frontend builds with minimal config and blazing-fast performance.
-          Version control mastery using Git to track changes, collaborate across branches, and maintain clean commit history for professional-grade projects
-          Managing dependencies and scripts with npm—installing, organizing, and running packages to power scalable JavaScript ecosystems.
-          Building mobile-first React Native applications prototype using Expo for streamlined deployment, device previews, and modular development.
-        </p>
- </div>
-
-        <div class="operations__content operations__content--3">
-           <div class="badges-container">
-            <span class = "frontend-skills">Responsive</span>
-            <span class = "frontend-skills">CSS Animations</span>
-            <span class = "frontend-skills">Figma</span>
-            <span class = "frontend-skills">Wareframes</span>
-          </div>
-           <h5>Design</h5>
-          <p>Designing pixel-perfect UI mockups and interactive prototypes with Figma—streamlining handoff between design and development.
-            Confident in translating wireframes into functional interfaces using layered components
-            Creating cohesive user flows and visual hierarchies that inform responsive builds.
-            Balancing performance with creativity to deliver immersive yet lightweight animations.
-          </p>
-        </div>
-      </div>
-    </section> -->
- <!--  -->
-
  <!-- Celestial projects section -->
-      <div>
-  <h2 class="projects-title">Projects</h2>
-</div>
-    <section class="projects-section fade-in-section">
-  <div class="first-proj-cont">
-   <div class="project-card"> <!--The card container with single phone mock up-->
-
-          <div class="phone-frame"> <!-- Left Side: Phone Image -->
-            <!-- Add class lazy-img later with src="./media/parking-qr-low.png" data-src="./media/parking-qr.png"-->
-            <img class="phone-img lazy-img" src="./media/parking-qr.low.jpg" data-src="./media/parking-qr.png" alt="Yorvik Parking App UI">
-          </div> <!--end of card mobile mock up-->
-       
-    
+      <!-- <div>
+        <h2 class="projects-title">Projects</h2>
+      </div>
+    <div class="projects-section fade-in-section">
+        <section class="first-proj-cont">
+        <div class="project-card-col"> <!--The card container with single phone mock up-->
+<!-- 
+               
+                  <img class="phone-img lazy-img" src="./media/parking-qr.low.jpg" data-src="./media/parking-qr.png" alt="Yorvik Parking App UI">
+                
+            
+          
     <div class="project-content">
       <h3 class="project-title">Yorvik Parking App</h3>
       <p class="project-description">A mobile-first parking solution Prototype.</p>
@@ -329,69 +252,42 @@
         <li>Expo Go</li>
         <li>Figma</li>
       </ul>
-
-      
-      </div>
+    </div>
       <button class="learn-more-btn">Learn More</button>
       <div class="description hidden">
- <p>Designed a mobile-first interface with slider logic and real-time filtering. Focused on accessibility using ARIA labels and responsive layout techniques.</p>
+        <p>Designed a mobile-first interface with slider logic and real-time filtering. Focused on accessibility using ARIA labels and responsive layout techniques.</p>
         <ul>
           <li>UI/UX Design & Prototype Development</li>
           <li>UI date picker & svg - QR code libralies </li>
         </ul>
         <a href="#" class="demo-link">Source code</a>  
-        </div>
+      </div>
     </div>
 
-    <div class="video-card">
-    <div class="project-card-video">
-    <video class="project-video" controls muted loop preload="metadata">
-     <source src="./media/Yorvik-demo.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <button class="play-button" aria-label="Play Demo">▶</button>
+    <div class="video-card-col">
+      <div class="project-card-video-col">
+        <video class="project-video" controls muted loop preload="metadata">
+        <source src="./media/Yorvik-demo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <button class="play-button" aria-label="Play Demo">▶</button>
     <div class="project-overlay">
       <h3 class="project-title">Yorvik Parking App video demo</h3>
     </div>
     
     </div>
-    <div>
-      <h3 class="project-title">UI interaction flow</h3>
-          <p>The user register on the system then press continue to select longboat parking period start and end date. Than it has been guided to pick a parking spot. Following is the confirmation of the longboat parking details along with the QR code.</p>
-      </div>
-  </div>
-  
-
-   <!-- <div class="project-card">
-        <div class="diagram-wrapper">
-    <img class="lazy-img" src="media/Arch-cloudYPC.low.jpg" data-src="media/Arch-cloudYPC.png" alt="Cloud Architecture Diagram for YPC Solution">
-    </div>
-    <div>
-
-        <h3>Cloud Architecture Design – YPC Integration</h3>
-
-   <p>Hibrid AWS and Open stack solution.</p>
-     
-    <button class="expand-btn">Learn More</button>
-     <div class="overview hidden">
-            <h3>Overview</h3>
-            <p>The YPC parking management system needed a unified cloud-based architecture to integrate its web and mobile applications.</p>
-            <p> My solution ensured seamless service expansion while supporting key functionalities such as user accounts, payment handling, and API-driven interactions.</p>
+          <div>
+            <h3 class="project-title">UI interaction flow</h3>
+            <p>The user register on the system then press continue to select longboat parking period start and end date. Than it has been guided to pick a parking spot. Following is the confirmation of the longboat parking details along with the QR code.</p>
+          </div>
         </div>
-        </div> -->
-
-
-    
-
-       </div> 
+      </div> 
     </div>
-    </div>
+  </section>
 
-    <div class="second-proj-cont">
-<!-- The second project food app -->
-    <div class="project-card"> <!--The card container with single phone mock up-->
-           <div class="screen-foodapp"> <!--the screen images cont-->
-    <!-- <img src="./media/Mobile.low.jpg" data-src="./media/Mobile.png" class="lazy-img" id="mobile" alt="Mobile view image screenshot"/> -->
+    <section class="second-proj-cont">
+    <div class="project-card-col"> 
+           <div class="screen-foodapp"> 
         <img src="./media/FoodApp.low.jpg" data-src="./media/FoodApp.png" cass="lazy-img" alt="food app image screenshot"/>
     
   </div>
@@ -420,11 +316,9 @@
         </div>
     </div>
 
-           <!-- The third Landing page project card -->
-    <!-- The second project food app -->
-    <div class="project-card"> <!--The card container with single phone mock up-->
-           <div class="screen-foodapp"> <!--the screen images cont-->
-    <!-- <img src="./media/Mobile.low.jpg" data-src="./media/Mobile.png" class="lazy-img" id="mobile" alt="Mobile view image screenshot"/> -->
+         
+    <div class="project-card-col">
+           <div class="screen-foodapp"> 
         <img src="./media/blackHole.low.jpg" data-src="./media/blackHole.png" class="lazy-img" alt="food app image screenshot"/>
     
   </div>
@@ -452,26 +346,82 @@
         </ul>
        <a href="https://priorityc.github.io/stargazing-landing-page/" class="demo-link">Live Demo</a>  
         </div>
-    </div>
+    </div> -->
     
+
+
+ <h2 class="projects-heading">Projects</h2>
+     <section class="projects-section">
+  
+
+  <div class="project-card">
+   <div class="phone-frame">
+    <img src="./media/parking-qr.png" alt="Yorvik Parking App UI" class="project-img" />
+   </div>
+
+    <div class="project-info">
+      <h3 class="project-title">Yorvik Parking App</h3>
+      <p class="project-description">A mobile-first parking solution Prototype</p>
+      <ul class="tech-stack">
+        <li>React Native</li>
+        <li>Express.js</li>
+        <li>Expo Go</li>
+        <li>Figma</li>
+      </ul>
+      <button class="learn-more-btn">Learn More</button>
+    </div>
   </div>
+
+  <div class="project-card">
+    <img src="./media/FoodApp.png" alt="Food Web App UI" class="project-img" />
+    <div class="project-info">
+      <h3 class="project-title">Food Web application</h3>
+      <p class="project-description">Meal planner desktop application</p>
+      <ul class="tech-stack">
+        <li>React</li>
+        <li>Vite</li>
+        <li>npm</li>
+        <li>Figma</li>
+      </ul>
+      <button class="learn-more-btn">Learn More</button>
+    </div>
+  </div>
+
+  <div class="project-card">
+    <img src="./media/blackHole.png" alt="Event Landing Page UI" class="project-img" />
+    <div class="project-info">
+      <h3 class="project-title">Event Landing page</h3>
+      <p class="project-description">Immersive stargazing animated Landing page</p>
+      <ul class="tech-stack">
+        <li>HTML</li>
+        <li>CSS-Animations</li>
+        <li>JavaScript</li>
+      </ul>
+      <button class="learn-more-btn">Learn More</button>
+    </div>
+  </div>
+</section>
+  </section>
+  <h2 class="projects-heading">Want to see a real live e-commerce shop build with React?</h2>
      <section class="link-to-projects-cont">
-    <h2>Want to see how these stars were born?</h2>
-    <a href="portfolio.html" class="learn-more-btn sticky-projects-btn">View All Projects</a>
-    </section>
+
+    
+    <div class="commerce-col">
+    <img src="./media/Home.png" class="ecommerce-img" alt="E-commerce home page"/>
+    <h3>🌿What Is Cosmic Care ?</h3>
+    <p class="project-description">Cosmic Care is a self-care brand born from curiosity, clarity, and code. It’s where scientific integrity meets intentional design — a space where every product tells a story, and every interaction builds trust. I build this brand to introduce the connection betwean technology and buissiness and apply them to a dual-mode checkout system. Cosmic Care reflects a commitment to transparency, user empowerment, and resilient technology.</p>
+    <p class="project-description">This project isn’t just a storefront — it’s a full-stack experience designed to scale, test, and inspire. Built with React, Express, and Stripe, it offers both real customer purchases and demo-safe testing for collaborators </p>
+
+    <p class="project-description">What follows is a deeper look into how Cosmic Care works, what makes it unique, and the technical journey behind its development.</p>  
+    <a href="cosmiccareproject.html" class="learn-more-btn link-to-cc">Learn more</a>
+  </div>
+    
+  </section>
       
-        
-      <!-- <div class="project-details hidden">
-        <p>Designed a mobile-first interface with slider logic and real-time filtering. Focused on accessibility using ARIA labels and responsive layout techniques.</p>
-        <ul>
-          <li>UI/UX Design & Development</li>
-          <li>Slider Logic & Lazy Loading</li>
-        </ul>
-        <a href="#" class="demo-link">Live Demo</a>
-      </div> -->
+    
     
   
-</section>
+    </div>
  <!-- END -->
     <!-- New Portfolio section -->
     <!-- <section class="projects">
@@ -627,58 +577,6 @@
         </div>
     </div> 
 </div>
-
- 
-
-
-    
-<div class="architecture-section">
-  <div class="screen-foodapp">
-      <img class="lazy-img" src="./media/blackHole.low.png" data-src="./media/blackHole.png" alt="Black hole animation screenshot" />
-    </div>
-    <div class="text-content"> 
-      <h2>Cosmic Black Holes event – CSS animations / Landing page</h2>
-      <p>Landing page animation</p>
-
-      <div class="overview">
-        <h2>Overview</h2>
-        <p>
-          A visually immersive landing page designed to highlight the expressive power of pure CSS animations...
-        </p>
-
-        <div class="buttons-container">
-          <button class="show-more toggle-btn">Learn More</button>
-          <div class="project-description hidden">
-  <h3>How it works</h3>
-<p>The page uses keyframe animations, transform effects, and opacity transitions to animate elements like headings, icons, and backgrounds.
-
-
-</p>
-<p>Subtle motion guides the user’s attention while maintaining a clean, uncluttered interface.</p>
-    <p><strong>Goal:</strong> Create a CSS-based animation simulating gravitational lensing.</p>
-    <p><strong>Challenges:</strong> Achieved distortion effects using gradients and keyframes. Ensured performance and accessibility.</p>
-    <p><strong>Outcome:</strong> Demonstrated creative use of CSS to convey complex astrophysical concepts.</p>
-  </div>
-          <button class="show-more" onclick='window.location.href = "https://github.com/priorityc/stargazing-landing-page"'>Source code</button>
-          <button class="show-more" onclick='window.location.href = "https://priorityc.github.io/stargazing-landing-page/"'>Live demo</button>
-        </div>
-
-        <div class="project-description hidden">
-          <h3>How it works</h3>
-          <p>The page uses keyframe animations, transform effects, and opacity transitions...</p>
-          <p><strong>Goal:</strong> Create a CSS-based animation simulating gravitational lensing.</p>
-          <p><strong>Challenges:</strong> Achieved distortion effects using gradients and keyframes.</p>
-          <p><strong>Outcome:</strong> Demonstrated creative use of CSS to convey complex astrophysical concepts.</p>
-        </div>
-      </div>
-    </div>
-
-    
-</div>
-  
-  </section>     
-</section>
-
     -->
      
 
@@ -712,16 +610,8 @@
               />
               <small id="feedback_fname"></small>
             </div>
-
-            <div class="name-email">
-              <label for="email">Enter your email:</label>
-              <input type="email" id="email" name="email" onchange="validate(event.target)" />
-      
-              <small id="feedback_email"></small>
-            </div>
-          </div>
-
-          <label for="lname">Last Name</label>
+             <div class="name-email">
+              <label for="lname">Last Name</label>
           <input
             type="text"
             id="lname"
@@ -730,12 +620,23 @@
             
             onchange="validate(event.target)"
           />
+          </div>
+
+          </div>
+        
+           <div class="name-email">
+              <label for="email">Enter your email:</label>
+              <input type="email" id="email" name="email" onchange="validate(event.target)" />
+      
+              <small id="feedback_email"></small>
+            </div>
           <!-- text area -->
           <textarea name="message" rows="10" cols="30" onchange="validate(event.target)">
 Write your message here.
 </textarea
            >
           <small id="feedback_emailTwo"></small>
+
 
           <input class="submit btn" type="submit" value="Submit" />
           <input class="clear btn" type="submit" value="Clear" />
@@ -746,7 +647,7 @@ Write your message here.
         <a href="https://github.com/priorityc?tab=repositories">
           <i
             class="fa fa-github-square"
-            style="font-size: 48px; color: var(--color-secondary-darker)"
+            style="font-size: 48px; color:rgb(255, 153, 170);"
           ></i
         ></a>
         <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/">
@@ -772,7 +673,7 @@ Write your message here.
         <!-- <li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
       </ul>
     </footer>
-    <div class="modal-overlay hidden" id="hireModal">
+    <!-- <div class="modal-overlay hidden" id="hireModal">
   <div class="modal-content">
     <button class="close-modal">&times;</button>
     <h2>Let’s Work Together</h2>
@@ -806,7 +707,7 @@ Write your message here.
           class="fa fa-facebook-square"
           style="font-size: 48px; color: var(--color-highlight)"
         ></i>
-      </div>
+      </div> -->
       
         
     </form>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmic Care Checkout Experience</title>
+  <link rel="stylesheet" href="cosmic.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>COSMIC CARE CHECKOUT EXPERIENCE</h1>
+    <p class="subtitle">Dual-mode e-commerce flow with Stripe integration and demo-safe testing</p>
+    <div class="cta-buttons">
+      <a href="https://cosmiccare.netlify.app/cart?demo=true" class="btn">Live Demo Mode</a>
+      <a href="https://cosmiccare.netlify.app" class="btn">Live Real Mode</a>
+    </div>
+  </header>
+  <main class="block-cont">
+    <h2>Introduction 📘</h2>
+  <section class="block">
+    <div class="block-col">
+    <img src="./media/Home.png" alt="Home page" />
+
+    <div>
+    <p>
+      Cosmic Care is more than a project — it’s a brand built on trust, clarity, and intentional design. This project showcases a secure, scalable checkout experience that supports both real customer purchases and colaborators demo testing. Built from the ground up using React, Express, and Stripe, and other essential backend tools it reflects my commitment to resilient architecture, intuitive UX, and transparent debugging.
+    </p>
+    <span class="tech">Tech: React Context, localStorage persistence, Stripe API</span>
+    <span class="tech">Tools: Netlify, Render, Supabase, Cloudinary, React, Vite, Express.js</span>
+    
+</div>    
+</div>
+
+  </section>
+  <!-- Architecture -->
+  <section class="architecture">
+    <div class="layer frontend">
+      <h2>Frontend Layer</h2>
+      <ul>
+        <li>React + Vite</li>
+        <li>Plain CSS for styling</li>
+        <li>Supabase for dynamic product data</li>
+        <li>Stripe.js for checkout redirect</li>
+        <li>LocalStorage for demo mode persistence</li>
+        <li>Deployed on Netlify</li>
+      </ul>
+      <p class="desc">Handles UI, routing and user interactions. Detects demo mode and sends cart data to backend.</p>
+    </div>
+
+    <div class="layer backend">
+      <h2>Backend Layer</h2>
+      <ul>
+        <li>Express.js REST API</li>
+        <li>Stripe API for session creation</li>
+        <li>CORS setup for Netlify requests</li>
+        <li>Environment variables for secret keys</li>
+        <li>Demo mode logic with mock items</li>
+        <li>Deployed on Render</li>
+      </ul>
+      <p class="desc">Receives cart data, validates it, and creates Stripe sessions. Supports both real and test flows.</p>
+    </div>
+
+    <div class="layer services">
+      <h2>External Services</h2>
+      <ul>
+        <li>Supabase: product database</li>
+        <li>Cloudinary: image hosting</li>
+        <li>Stripe: payment processing</li>
+      </ul>
+      <p class="desc">Connects content, visuals and payments into a seamless experience.</p>
+    </div>
+  </section>
+<!--  -->
+<h2>Demo Mode Flow 🧪</h2>
+  <section class="block">
+    <div class="block-col">
+    <img src="./media/ShopPage.png" alt="Shop page" />
+
+    <div>
+    <p>
+      Safely test the checkout using <code>?demo=true</code>. No real payment is processed.
+      The frontend detects demo mode and sends mock data to the backend, which returns a Stripe test session.
+    </p>
+    <h3>How?</h3>
+    <ul>
+      <li>Persists across navigation and reloads using localStorage</li>
+      <li>Sends mock product data to the backend</li>
+      <li>Returns a Stripe test session with no real payment required</li>
+      <li>Visually mirrors the real checkout flow for authenticity</li>
+    </ul>
+    <span class="tech">Tech: React Context, localStorage persistence, Stripe API</span>
+    <span class="tech">Tools: Netlify, Render, Supabase, Cloudinary, React, Vite, Express.js</span>
+    
+</div>    
+</div>
+  </section>
+
+  <h2>Real Mode Flow ✅</h2>
+  <section class="block">
+     <div class="block-col">
+    <img src="./media/CartPage.png" alt="Cart page" />
+
+    <div>
+    <p>
+      Customers experience the full checkout with live product data and secure Stripe payment.
+      The backend validates cart items and shipping zones before creating the session.
+    </p>
+     <h3>How?</h3>
+    <ul>
+      <li>Validates cart items and shipping zones</li>
+      <li>Creates Stripe sessions using authenticated secret keys</li>
+      <li>Handles metadata like SKU and product ID for traceability</li>
+      <li>Supports dynamic product variants and quantity selection</li>
+    </ul>
+    <span class="tech">Tech: Express, Stripe, CORS, environment-aware routing</span>
+    </div>
+    </div>
+  </section>
+
+<h2>Problem Solving 🧠</h2>
+  <section class="block"> 
+    <div class="block-col">
+    <img src="./media/error.avif" alt="Console error trace" />
+
+    <div>
+    <p>
+      This project pushed me to refine my deployment skill and also adding new backend skills that constantly challanged me to vast error handling across environments. Each issue was traced methodically using console logs, network traces, and backend logging — reinforcing my ability to debug across the stack and maintain a resilient workflow.Key challenges I overcame was:
+    </p>
+    <ul>
+      <li>Stripe session failures due to mismatched secret keys between frontend and backend</li>
+      <li>Demo mode persistence across deep links and reloads</li>
+      <li>404 errors and - Environment variable syncing across local, staging, and production</li>
+      <li>CORS configuration between Netlify (frontend) and Render (backend)</li>
+    </ul>
+    <span class="tech">Tech: Logging, environment management, error tracing</span>
+    <h3>🌱 What I Learned</h3>
+    <ul>
+<li>How to build scalable, testable payment flows with Stripe</li>
+<li>How to debug across environments and sync deployment variables</li>
+<li>How to connect technical decisions to user trust and brand experience</li>
+<li>How to design fallback logic and error boundaries for resilient UX</li>
+  </ul>
+  <p>Resources used: Some images of models wearing products was generated by Copilot</p>
+    <a>https://react.dev/</a>
+    <a>https://expressjs.com/</a>
+</div>
+    </div>
+  </section>
+  </main>
+</body>
+</html>
