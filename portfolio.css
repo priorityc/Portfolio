@@ -1,3 +1,14 @@
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+ }
+ .mobile-header {
+    display: block;
+  }
+  .desktop-header {
+    display: none;
+  }
 /* Sticky nav styling */
 .sticky {
   position: fixed;
@@ -8,6 +19,160 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+ .mobile-header {
+    display: block;
+  }
+  .desktop-header {
+    display: none;
+  }
+
+/* Mobile navigation */
+/* NAVIGATION */
+.mobile-header {
+  width: 100%;
+  /* background-color: #fdfaf6; */
+  color: #222;
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px;
+}
+
+/* the HAMBURGER MENU styling */
+.hamburger {
+  cursor: pointer;
+  margin: 6px;
+}
+.features-icon {
+  stroke: #4b4b4b;
+  width: 40px;
+  height: 40px;
+  /* margin-bottom: 24px; */
+}
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #222;
+  margin: 7px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* The hidden hamburg menu */
+.topnav {
+  overflow: hidden;
+  background-color: #ddd;
+  position: relative;
+  background-color: #3a9bc2;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #f0eeee;
+}
+
+
+/* end */
+ .header-box {
+    margin-bottom: 120px;
+  }
+  .sidenav {
+    display: flex;
+    align-items: center;
+
+    padding-left: 48px;
+    padding-right: 48px;
+    background-color: #f4f3ff;
+    line-height: 1.4;
+    height: 120px;
+    
+  }
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #4b4b4b;
+  }
+  .sidenav a:hover {
+    color: #064579;
+    background-color: #fff;
+  }
+
+  .arrange-manu {
+    margin-left: auto;
+  }
+   .form-box {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .form-heading {
+    text-align: center;
+    padding: 64px;
+  }
+/* Style the top navigation bar */
+/* nav and stickly class at the same time */
+.desktop-header {
+  width: 100%;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+#logo {
+  width: 80px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+  height: auto;              /* Preserve proportions */
+  display: block; 
+  margin: 10px auto;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
 /* Smooth fade effect */
 .arrange-manu a {
   transition: opacity 0.3s ease;
@@ -93,22 +258,69 @@
 }
 
 /* PROJECT SECTION */
+/* PHONE FRAME */
+.phone-frame {
+  background-color: rgb(34, 34, 36);;
+  border-radius: 40px;
+  padding: 1rem;
+  width: 200px;
+  height: 390px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Optional notch or speaker */
+/* .phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 3px;
+} */
+
+/* Image inside phone */
+.yorvik-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
 .description-col {
     margin-left: 20px;
 }
 /* LAZY LOADING  */
-.lazy-img {
-  filter: blur(4px);
-  transition: filter 0.5s ease;
-}
-
 .loaded {
   filter: blur(0);
+  opacity: 1;
+  transition: filter 0.5s ease, opacity 0.5s ease;
+
+}
+.lazy-img {
+  opacity: 0.6;
+}
+.project-img {
+  max-width: 300px;
+  border-radius: 15px;
+  margin-bottom: 20px;
 }
 
+.cc-image {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
 
 /* Responsive tweaks */
 @media screen and (min-width: 600px) {
+ 
   .cta-video h3 {
     font-size: 1.5rem;
     max-width: 900px;
@@ -134,6 +346,12 @@
 }
 
 @media screen and (min-width: 900px) {
+   .mobile-header {
+    display: none;
+  }
+  .desktop-header {
+    display: block;
+  }
     .description-col {
         margin-left: 50px;;
     }

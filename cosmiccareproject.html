@@ -5,17 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cosmic Care Checkout Experience</title>
   <link rel="stylesheet" href="cosmic.css" />
-   <link rel="stylesheet" href="style.css" />
 
 </head>
 <body>
-   <!-- NAVIGATION -->
-    <!-- Navbar on small screens -->
-    <!-- Section MOBILE MENU -->
-
     <nav class="mobile-header">
 
-      <div class="hamburger" onclick="myFunction(this)">
+      <div class="hamburger" 
+       role="button" 
+      tabindex="0" 
+      aria-label="Open navigation menu" 
+      >
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -24,11 +23,12 @@
 
     <div class="topnav">
       <div id="myLinks">
-        <a href="about.html">About me</a>
-        <a href="skills.html">Skills</a>
-        <a href="index.html">Portfolio</a>
+        <a class=nav__link href="index.html">Home</a>
+        <a class=nav__link href="about.html">About me</a>
+        <a class=nav__link href="skills.html">Skills</a>
+        <a class=nav__link href="portfolio.html">Portfolio</a>
         <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a>
-        <a href="contact.html">Contact</a>
+        <a class=nav__link href="contact.html">Contact</a>
       </div>
     </div>
 
@@ -37,21 +37,19 @@
     <nav class="desktop-header">
       <div class="sidenav">
         <!-- first container -->
-         <!-- first container -->
         <div>
           <img id="logo" src="./media/logo.png" alt="logo image"/>
         </div>
         <!-- Second container menus -->
         <div class="arrange-manu">
           <a class=nav__link href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="skills.html">Skills</a>
-          <a href="services.html">Portfolio</a>
+          <a class=nav__link href="about.html">About</a>
+          <a class=nav__link href="skills.html">Skills</a>
+          <a class=nav__link href="portfolio.html">Portfolio</a>
           <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a>
-          <a href="contact.html">Contact</a>
+          <a class=nav__link href="contact.html">Contact</a>
         </div>
-        <!-- Third container serch bar -->
-       
+
       </div>
     </nav>
   <header class="hero">
@@ -66,7 +64,7 @@
     <h2>Introduction 📘</h2>
   <section class="block">
     <div class="block-col">
-    <img src="./media/Home.png" alt="Home page" />
+    <img class="block-img" src="./media/Home.png" alt="Home page" />
 
     <div>
     <p>
@@ -121,7 +119,7 @@
 <h2>Demo Mode Flow 🧪</h2>
   <section class="block">
     <div class="block-col">
-    <img src="./media/ShopPage.png" alt="Shop page" />
+    <img src="./media/ShopPage.png" class="block-img" alt="Shop page" />
 
     <div>
     <p>
@@ -145,7 +143,7 @@
   <h2>Real Mode Flow ✅</h2>
   <section class="block">
      <div class="block-col">
-    <img class="block-img" src="./media/CartPage.png" alt="Cart page" />
+    <img class="block-img"src="./media/CartPage.png" alt="Cart page" />
 
     <div>
     <p>
@@ -167,7 +165,7 @@
 <h2>Problem Solving 🧠</h2>
   <section class="block"> 
     <div class="block-col">
-    <img src="./media/error.avif" alt="Console error trace" />
+    <img src="./media/error.avif" class="block-img" alt="Console error trace" />
 
     <div>
     <p>
@@ -194,5 +192,6 @@
     </div>
   </section>
   </main>
+  <script src="appCosmic.js"></script>
 </body>
 </html>
