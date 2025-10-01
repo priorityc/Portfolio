@@ -5,8 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cosmic Care Checkout Experience</title>
   <link rel="stylesheet" href="cosmic.css" />
+   <link rel="stylesheet" href="style.css" />
+
 </head>
 <body>
+   <!-- NAVIGATION -->
+    <!-- Navbar on small screens -->
+    <!-- Section MOBILE MENU -->
+
+    <nav class="mobile-header">
+
+      <div class="hamburger" onclick="myFunction(this)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+
+    <div class="topnav">
+      <div id="myLinks">
+        <a href="about.html">About me</a>
+        <a href="skills.html">Skills</a>
+        <a href="index.html">Portfolio</a>
+        <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!-- Desktop navigation -->
+    <!-- Desktop navigation on larger screens -->
+    <nav class="desktop-header">
+      <div class="sidenav">
+        <!-- first container -->
+         <!-- first container -->
+        <div>
+          <img id="logo" src="./media/logo.png" alt="logo image"/>
+        </div>
+        <!-- Second container menus -->
+        <div class="arrange-manu">
+          <a class=nav__link href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="skills.html">Skills</a>
+          <a href="services.html">Portfolio</a>
+          <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <!-- Third container serch bar -->
+       
+      </div>
+    </nav>
   <header class="hero">
     <h1>COSMIC CARE CHECKOUT EXPERIENCE</h1>
     <p class="subtitle">Dual-mode e-commerce flow with Stripe integration and demo-safe testing</p>
@@ -98,7 +145,7 @@
   <h2>Real Mode Flow ✅</h2>
   <section class="block">
      <div class="block-col">
-    <img src="./media/CartPage.png" alt="Cart page" />
+    <img class="block-img" src="./media/CartPage.png" alt="Cart page" />
 
     <div>
     <p>

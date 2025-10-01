@@ -49,7 +49,7 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.block img {
+.block-img {
   width: 100%;
   max-width: 500px;
   display: block;
@@ -169,7 +169,7 @@ body {
   /* ARCHITECTURE */
    .architecture {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-bottom: 120px;
   }
 
@@ -191,6 +191,6 @@ body {
    .block img {
     flex: 1;
     max-width: 500px;
-    margin-right: 50px;
+    /* margin-right: 50px; */
   }
 }

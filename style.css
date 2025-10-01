@@ -245,6 +245,23 @@ display: inline-block;
  padding: 10px;
  border-radius: 12px;
 }
+
+.btn-secondary {
+  display: inline-block;
+    background: #fff;
+    border: 1px solid #fff;
+    font-size: 1.2rem;
+    font-family: inherit;
+    font-weight: 500;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    color: #222;
+    margin-top: 10px;
+    border-radius: 5px;
+}
 /* Hero img */
 .hero-header img {
   flex: 1;
@@ -766,6 +783,11 @@ textarea {
 }
 
 /* Modal styling */
+.modal-overlay.hidden {
+  display: none !important;
+}
+
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -777,6 +799,7 @@ textarea {
   justify-content: center;
   align-items: center;
   z-index: 999;
+
 }
 
 .modal-content {
@@ -820,29 +843,15 @@ textarea {
 
 .close-modal {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 2.5rem;
+  right: 1.2rem;
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
-/* Responsive layout */
-@media (min-width: 768px) {
-  .name-email-box {
-    flex-direction: row;
-    gap: 2rem;
-  }
 
-  .form-heading i {
-    font-size: 48px;
-  }
-
-  .footer-img img {
-    width: 100px;
-  }
-}
 /* Tablet & Desktop Enhancements */
 @media (min-width: 768px) {
     .hero-header {
@@ -922,6 +931,18 @@ textarea {
   }
 
 /* FORM */
+.name-email-box {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .form-heading i {
+    font-size: 48px;
+  }
+
+  .footer-img img {
+    width: 100px;
+  }
 
 }
 

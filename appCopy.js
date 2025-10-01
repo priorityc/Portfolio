@@ -22,30 +22,6 @@ function myFunction() {
   }
 }
 
-// Generate meteors
-
-const container = document.querySelector('.meteor-container');
-
-// Create a div for meteors with class meteor
-function createMeteor() {
-  const meteor = document.createElement('div');
-  meteor.classList.add('meteor');
-  // - Math.random() gives a number between 0 and 1.
-  // - Multiplying by window.innerWidth spreads meteors across the full screen width.
-
-  meteor.style.left = `${Math.random() * window.innerWidth}px`;
-  // container.appendChild(meteor);
-
-  // - Waits 1.5 seconds, then removes the meteor from the DOM.
-
-  setTimeout(() => {
-    meteor.remove();
-  }, 1500); // Match animation duration
-}
-
-setInterval(() => {
-  createMeteor();
-}, 500); // Adjust frequency as needed
 
 
 
@@ -153,51 +129,51 @@ headerObserver.observe(header);
 //   divHidden.toggle(true);
 // })
 
-// SKILLS section
-//1.selecting elements
-// const tabs = document.querySelectorAll('.operations__tab');
-// const tabContainer = document.querySelector('.operations__tab-container');
-// const operationContainer = document.querySelectorAll('.operations__content');
 
-// //attach eventlistener
-// tabContainer.addEventListener('click', function(e) {
-//   const clicked = event.target.closest('.operations__tab');
-//   console.log(clicked);
-
-//   if (!clicked) return;
-
-//   //remove the active classes from tabs
-//   tabs.forEach(t => t.classList.remove('operations__tab--active'))
-//   //remove active classes from content
-// operationContainer.forEach(c => c.classList.remove('operations__content--active'))
-  
-//   //add the active class to the clicked tab
-//   clicked.classList.add('operations__tab--active');
-
-//   //show the content on each click
-//   document.querySelector(`.operations__content--${clicked.dataset.tab}`)
-//   .classList.add('operations__content--active');
-
-// });
 
 // MODAL
-const hireBtn = document.querySelector('.hire-btn');
-const modal = document.getElementById('hireModal');
-const closeBtn = document.querySelector('.close-modal');
+// Select elements
+// document.addEventListener('DOMContentLoaded', () => {
+//   const hireBtn = document.querySelector('.hire-btn');
+//   console.log(hireBtn)
+//   const modal = document.querySelector('#hireModal');
+//   console.log(modal)
+//   const closeBtn = document.querySelector('.close-modal');
 
-hireBtn.addEventListener('click', () => {
-  modal.classList.remove('hidden');
-});
+//   console.log(closeBtn)
+//   if (!hireBtn || !modal || !closeBtn) {
+//     console.warn('Modal elements not found');
+//     return;
+//   }
 
-closeBtn.addEventListener('click', () => {
-  modal.classList.add('hidden');
-});
+//   // Open modal
+//   hireBtn.addEventListener('click', () => {
+//     console.log("function trigered");
+//     modal.classList.add('hidden');
+//   });
 
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.add('hidden');
-  }
-});
+//   // Close modal via button
+//   closeBtn.addEventListener('click', () => {
+//     console.log("function trigered");
+//     modal.classList.add('hidden');
+//   });
+
+//   // Close modal when clicking outside modal-content
+//   modal.addEventListener('click', (e) => {
+//     if (e.target === modal) {
+//       modal.classList.remove('hidden');
+//     }
+//   });
+
+//   // Optional: Close on Escape key
+//   document.addEventListener('keydown', (e) => {
+//     if (e.key === 'Escape') {
+//       modal.classList.add('hidden');
+//     }
+//   });
+// });
+
+
 // ////////
 
 const expandButtons = document.querySelectorAll('.expand-btn');
@@ -216,22 +192,7 @@ expandButtons.forEach(button => {
 // Lazy loading img
 // select the imges
 const imgTargets = document.querySelectorAll('img[data-src]');
-// console.log(imgTargets);
 
-// The call back func.
-//  const loadImg = function(entries, observer){
-//   const [entry]=entries;
-
-//  if(!entry.isIntersecting) return;
-
-//   entry.target.src = entry.target.dataset.src;
-
-// entry.target.addEventListener('load', function(){
-//   entry.target.classList.remove('lazy-img');
-//  entry.target.classList.add('loaded');
-
-//   });
-//  }
 
 const loadImg = function(entries, observer){
   entries.forEach(entry => {
@@ -239,10 +200,13 @@ const loadImg = function(entries, observer){
     entry.target.src = entry.target.dataset.src;
     entry.target.addEventListener('load', function(){
       entry.target.classList.remove('lazy-img');
+      entry.target.classList.add('loaded');
+
     });
     observer.unobserve(entry.target); // prevent future triggers
   });
 };
+
 
 
 // Create the observer
@@ -292,16 +256,16 @@ btn.addEventListener('click', function (){
 });
 
 // PLAY VIDEO on button click in video section
- const playButton = document.querySelector('.play-button');
-  const video = document.querySelector('.project-video');
-  const videoTitle = document.querySelector(".project-title");
+//  const playButton = document.querySelector('.play-button');
+//   const video = document.querySelector('.project-video');
+//   const videoTitle = document.querySelector(".project-title");
 
-  playButton.addEventListener('click', () => {
-    video.play();
-    video.style.opacity = '1';
-    playButton.style.display = 'none';
-    videoTitle.style.display = 'none';
-  });
+//   playButton.addEventListener('click', () => {
+//     video.play();
+//     video.style.opacity = '1';
+//     playButton.style.display = 'none';
+//     videoTitle.style.display = 'none';
+//   });
 
 // Fade in 
    const observer = new IntersectionObserver((entries) => {
@@ -321,102 +285,53 @@ entry.target.classList.add('visible');
 
 // Footer form validation
 //1
-function preventSubmit(e) {
-  e.preventDefault();
-}
-// this function passes as argument all the input fields
 function validate(inputElement) {
-  console.log("validate() caled for inputElement:", inputElement);
-  // if input is not filled
-  if (!inputElement) {
-    alert("validate() called with no input element");
-    return false;
-  }
-
-  //2
-  //select the id of every span element as concatenated part of the id with passed argument id from the above function
-  const feedbackElement = document.getElementById(
-    "feedback_" + inputElement.id //string + id of the input
-  );
-  //3
-  if (!inputElement) {
-    alert("validate() called with no input element");
-    return false;
-  }
-
-  //declare two patterns
+  const feedbackElement = document.getElementById("feedback_" + inputElement.id);
   let pattern;
   let feedback;
 
-  // First name
-  // select the inputs with the passing argument for every id at this case is = "firstname"
-  if (inputElement.id == "fname") {
-    // regeclare min 2 charcters
+  if (inputElement.id === "fname" || inputElement.id === "lname") {
     pattern = /^.{2,}$/;
-    // redeclare feedback
-    feedback = "First name is required. At least two characters";
-  }
-  //Last name
-  if (inputElement.id == "lname") {
-    // ^$ = anchors, . = any character, {2,} = 2 or more of these characters
-    pattern = /^.{2,}$/;
-    feedback = "Last name is required. At least two characters";
+    feedback = "At least two characters required.";
   }
 
-  //Email
-  if (inputElement.id == "email") {
-    // ^$ = anchors, .+ = 1+ of any character, \@ = one @ symbol
-    pattern = /^.+\@.+$/;
-    feedback = "name@domain";
-  }
-  // Read the input value from the input element
-  //  this is the reading value from the passinfg argument with every id
-  let value = inputElement.value;
-  // Start by assuming the input is valid
-  var valid = true;
-
-  // Test the input value against the regular expression pattern
-  //JavaScript test() method is a Regular expression method that is used to match the pattern of expression with the string.
-  if (pattern.test(value)) {
-    feedback = "Valid";
-    //feedback el is every input span with particular id of it and we set them a class="valid" wehave that call in the css  // Set the class attribute value of the feedback element to change its colour
-    //the purpose id to change the colour to lightgreen
-    feedbackElement.className = "valid";
-  } else {
-    // Set the class attribute value of the feedback element to change its colour
-    feedbackElement.className = "invalid";
-    // The value is invalid change to invalid state
-    valid = false;
+  if (inputElement.id === "email") {
+    pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    feedback = "Enter a valid email address.";
   }
 
-  // Show the feedback message on the page
-  // change the feedback of every coresponding feedback span element with coresponding feedback for every input
-  feedbackElement.innerText = "Client feedback: " + feedback;
-  if (value != "") {
-    // If there is a value of the input, show the value  too
-    feedbackElement.innerText += ": " + value;
+  if (inputElement.id === "message") {
+    pattern = /^.{10,}$/;
+    feedback = "Message must be at least 10 characters.";
   }
 
-  return valid;
+  const value = inputElement.value.trim();
+  const isValid = pattern.test(value);
+
+  feedbackElement.innerText = isValid
+    ? "✓ Valid"
+    : "✗ " + feedback;
+
+  feedbackElement.className = isValid ? "valid" : "invalid";
+
+  return isValid;
 }
 
-function validateForm() {
-  preventSubmit();
-  // Start by assuming the form is valid
-  var valid = true;
+function validateForm(e) {
+  e.preventDefault(); // Stop form from submitting
 
-  // Validate each known input
-  // TODO: Change these checks according to the inputs you expect
-  valid = valid && validate(document.getElementById("fname"));
-  valid = valid && validate(document.getElementById("lname"));
-  valid = valid && validate(document.getElementById("email"));
+  const isFirstNameValid = validate(document.getElementById("fname"));
+  const isLastNameValid = validate(document.getElementById("lname"));
+  const isEmailValid = validate(document.getElementById("email"));
+  const isMessageValid = validate(document.getElementById("message"));
 
-  // Feedback if form cannot be submitted
-  if (!valid) {
-    alert("Client message: Form data is invalid - please check and try again!");
+  const formIsValid = isFirstNameValid && isLastNameValid && isEmailValid && isMessageValid;
+
+  if (!formIsValid) {
+    alert("Please correct the errors before submitting.");
+    return false;
   }
 
-  return valid;
+  // If valid, manually submit the form
+  e.target.submit();
 }
-
-
