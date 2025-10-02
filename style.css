@@ -589,7 +589,7 @@ display: inline-block;
 .projects-heading {
   text-align: center;
   color: rgb(255, 153, 170);
-  padding: 3rem;
+  padding: 1rem;
   text-transform: uppercase;
   font-weight: 400;
 }
@@ -686,6 +686,14 @@ display: inline-block;
   gap: 30px;
   max-width: 80%;
   margin: 0 auto;
+}
+
+.pink-link {
+  color: #FF99AA;
+}
+
+.pink-link:hover {
+  color: #e67a95; /* slightly darker on hover */
 }
 
 /* FOOTER */
@@ -970,7 +978,7 @@ textarea {
        flex-direction: row;
         justify-content: space-evenly;
         gap: 30px;
-       margin: 0 auto;
+       margin: 120px auto;
     }
 
    .project-card {

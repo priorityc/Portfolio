@@ -318,6 +318,13 @@
   margin-bottom: 20px;
 }
 
+.pink-link {
+  color: #FF99AA;
+}
+
+.pink-link:hover {
+  color: #e67a95; /* slightly darker on hover */
+}
 /* Responsive tweaks */
 @media screen and (min-width: 600px) {
  
