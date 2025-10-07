@@ -281,8 +281,61 @@ entry.target.classList.add('visible');
     observer.observe(section);
   });
 
-// 
 
+
+
+// MODAL form validation
+function validateModal(inputElement) {
+  const feedbackModal = document.getElementById("feedback_" + inputElement.id);
+  let pattern;
+  let feedback;
+
+  if (inputElement.id === "name") {
+    pattern = /^.{2,}$/;
+    feedback = "At least two characters required.";
+  }
+
+  if (inputElement.id === "email") {
+    pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    feedback = "Enter a valid email address.";
+  }
+
+  if (inputElement.id === "message") {
+    pattern = /^.{10,}$/;
+    feedback = "Message must be at least 10 characters.";
+  }
+
+  const value = inputElement.value.trim();
+  const isValid = pattern.test(value);
+
+  feedbackModal.innerText = isValid
+    ? "✓ Valid"
+    : "✗ " + feedback;
+
+  feedbackModal.className = isValid ? "valid" : "invalid";
+
+  return isValid;
+}
+
+
+function validateForm(e) {
+  e.preventDefault(); // Stop form from submitting
+
+  const isFirstNameModalValid = validate(document.getElementById("name"));
+  const isEmailModalValid = validate(document.getElementById("email"));
+  const isMessageModalValid = validate(document.getElementById("message"));
+
+  const formIsValid = isFirstNameModalValid && isEmailModalValid && isMessageModalValid;
+
+  if (!formIsValid) {
+    alert("Please correct the errors before submitting.");
+    return false;
+  }
+
+  // If valid, manually submit the form
+  e.target.submit();
+}
+///////////////////////////////
 // Footer form validation
 //1
 function validate(inputElement) {

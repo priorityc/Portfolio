@@ -796,10 +796,6 @@ textarea {
 }
 
 /* Modal styling */
-.modal-overlay.hidden {
-  display: none !important;
-}
-
 
 .modal-overlay {
   position: fixed;
@@ -807,22 +803,25 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 999;
-
 }
 
 .modal-content {
-  background-color: #fff;
+  background: white;
   padding: 2rem;
-  border-radius: 12px;
+  border-radius: 8px;
   max-width: 500px;
   width: 90%;
-  text-align: left;
 }
+
+.hidden {
+  display: none;
+}
+
 
 .modal-content h2 {
   font-size: 1.5rem;
@@ -843,6 +842,9 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 8px;
 }
+.modal-content {
+  position: relative;
+}
 
 .btn-primary {
   background-color: #7b4eff;
@@ -856,17 +858,33 @@ textarea {
 
 .close-modal {
   position: absolute;
-  top: 2.5rem;
-  right: 1.2rem;
+  top: 1rem;
+  right: 1rem;
   background: none;
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
+.valid {
+  color: green;
+  font-weight: bold;
+}
+
+.invalid {
+  color: red;
+  font-weight: bold;
+}
+
 
 /* Tablet & Desktop Enhancements */
 @media (min-width: 768px) {
+   .close-modal {
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.25rem;
+  }
+
     .hero-header {
         gap: 5rem;
         max-width: 1000px;
