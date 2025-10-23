@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="about.css" />
     <link rel="shortcut icon" type="image/png" href="img/icon.png" />
 
     <link
@@ -14,6 +15,118 @@
   </head>
   
     <body>
-     <h1>This page is under construdction ⚒️</h1>   
+       <nav class="mobile-header">
+
+      <div class="hamburger" 
+       role="button" 
+      tabindex="0" 
+      aria-label="Open navigation menu" 
+      onclick="myFunction(this)"
+      onkeydown="handleKey(event)">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+
+    <div class="topnav">
+      <div id="myLinks">
+        <a class=nav__link href="index.html">Home</a>
+        <a class=nav__link href="about.html">About me</a>
+        <a class=nav__link href="skills.html">Skills</a>
+        <a class=nav__link href="portfolio.html">Portfolio</a>
+        <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a>
+        <a class=nav__link href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!-- Desktop navigation -->
+    <!-- Desktop navigation on larger screens -->
+    <nav class="desktop-header">
+      <div class="sidenav">
+        <!-- first container -->
+        <div>
+          <img id="logo" src="./media/logo.png" alt="logo image"/>
+        </div>
+        <!-- Second container menus -->
+        <div class="arrange-manu">
+          <a class=nav__link href="index.html">Home</a>
+          <a class=nav__link href="about.html">About</a>
+          <a class=nav__link href="skills.html">Skills</a>
+          <a class=nav__link href="portfolio.html">Portfolio</a>
+          <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a>
+          <a class=nav__link href="contact.html">Contact</a>
+        </div>
+ </div>
+    </nav>
+   
+   <!-- Header -->
+<header class="hero-header">
+  <div class="hero-text">
+     <h1><span class="highlight">Hi, I'm  Petya.</span></h1>
+      <h3 class="headertext">I design and develop interfaces that reflect brand emotion, respect user needs, and scale with purpose</h3>    
+      <h5>"Passionate about code that adapts effortlessly across devices.</h5>
+  
+    <a  href="portfolio.html" class="btn-primary">See My projects</a>
+    <button id="openModal" class="btn-secondary">Hire Me</button>
+
+  </div>
+      <div class="portrait-wrapper">
+        <img src="./media/me.jpg" alt="Photo of Petya">
+      </div>
+  </header>
+    <!-- Header -->
+
+ <main>
+     <section class="about-me">
+  <h1>👋 This page is under construction</h1>
+<h2>👩‍💻 My Journey into Web Development</h2>
+<p>
+I’m Petya Dimitrova — a Computing and IT student with a passion for building thoughtful digital experiences. My journey into web development began during a difficult chapter in my life, when I realized I wanted a career that brings joy and meaning, not just a paycheck.  
+<br><br>
+Since childhood, I’ve been drawn to design and art — anything that makes people feel something. That curiosity led me to explore what lies behind the beautiful websites we all use. After completing a few introductory courses, I enrolled in the Purple Beard Bootcamp, which became my first real step into tech.  
+<br><br>
+From there, I’ve taken many small but meaningful steps: building prototypes, experimenting with frameworks, and deepening my skills through my academic journey with The Open University. Each project has helped me grow not just as a developer, but as a creative problem-solver with a people-first mindset.
+</p>
+<!-- <img src="./media/technicalapp.avif" class="tech-photo" alt="technical-focus"> -->
+  <h3> My Approach to Problem Solving</h3>
+  <p>
+    I’m naturally detail-oriented and persistent, and I approach every project with deep focus and responsibility. Like most developers, I often encounter challenging bugs or moments where the code feels stuck — but I never give up.  
+    <br><br>
+    My problem-solving methodology involves thorough review, trace analysis, and identifying the root cause with care and precision. I believe that persistence, curiosity, and structured debugging are key to building reliable and meaningful digital experiences.
+  </p>
+</section>
+
+</section>
+
+<section class="technical-focus">
+  <h2>💻 Technical Focus</h2>
+  <ul>
+    <li>React, JavaScript, Supabase, Cloudinary</li>
+    <li>Modular architecture and API integrations</li>
+    <li>Object-oriented programming (Java, PHP)</li>
+  </ul>
+</section>
+
+<section class="design-philosophy">
+  <h2>🎨 Design Philosophy</h2>
+  <p>I believe good design is quiet, clear, and inclusive...</p>
+</section>
+
+<section class="growth-values">
+  <h2>🚀 Learning & Values</h2>
+  <p>I’m a fast learner who thrives in collaborative environments...</p>
+</section>
+
+<section class="personal-touch">
+  <h2>🌍 Beyond Tech</h2>
+  <p>Outside of tech, I’m a parent, a healthy baking enthusiast, and a community advocate...</p>
+</section>
+
+<section class="contact-cta">
+  <h2>📎 Portfolio & Contact</h2>
+  <p>Want to collaborate or learn more? Explore my <a href="https://priorityc.github.io/Portfolio">portfolio</a> or reach out at <a href="mailto:petya83dimitrova@gmail.com">petya83dimitrova@gmail.com</a>.</p>
+</section>
+ </main>
     </body>
 </html>

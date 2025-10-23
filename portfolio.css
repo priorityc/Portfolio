@@ -325,6 +325,83 @@
 .pink-link:hover {
   color: #e67a95; /* slightly darker on hover */
 }
+
+/* .block-col-design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.design {
+  margin-top: 2rem;
+}
+.design-img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 20px;
+} */
+ section {
+  padding: 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.description-col p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.design {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.block-col-design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 1rem 0;
+}
+
+.design-img {
+  width: 100%;
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.block-col-design p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding: 0 1rem;
+}
+
+.about-me h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+}
+
+.about-me p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
 /* Responsive tweaks */
 @media screen and (min-width: 600px) {
  
@@ -350,8 +427,30 @@
     padding: 2em;
     gap: 30px;
   }
-}
+  /* .design {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+  } */
+  .design {
+    flex-direction: row;
+    justify-content: center;
+  }
+/* - The item can grow to fill available space
+- If multiple items have flex-grow: 1, they’ll share the extra space equally.
+- If one has flex-grow: 2, it will get twice as much extra space as one with flex-grow: 1.
+🔹 flex-shrink: 1
+- This means the item can shrink if there’s not enough space.
+ flex-basis: 300px
+- This sets the initial size of the item before growing or shrinking.
 
+ */
+  .block-col-design {
+    flex: 2 2 300px;
+    max-width: 300px;
+    gap:30px; 
+  }
+}
 @media screen and (min-width: 900px) {
    .mobile-header {
     display: none;
