@@ -195,12 +195,11 @@ body {
   align-items: center;
   padding: 2rem 1rem;
   text-align: center;
-  /* background-color: #fff; */
   background: rgba(34, 34, 36, 0.886);
   padding: clamp(2rem, 5vw, 4rem);
-  height: 400px;
+  height: 600px;
   margin-bottom: 50px;
-  gap: 2rem; 
+  gap: 1.8rem; 
 }
 .hero-text {
   margin-bottom: 25px;
@@ -219,24 +218,20 @@ body {
   font-weight: lighter;
 }
 
-/* .hero-text h5 {
-  font-size: 1rem;
-  font-style: italic;
-  margin-bottom: 1rem;
-  color: #555;
-} */
-
+.hero-btn {
+  display:flex;
+  justify-content: center;
+}
 .highlight {
   color: #007BFF; /* soft blue highlight */
 }
 
 .btn-primary,
 .btn-secondary {
-  margin: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  margin: 0.3rem;
+  padding: 0.6rem 1.2rem;
   border: none;
   border-radius: 6px;
-  font-size: 1rem;
   cursor: pointer;
 }
 
@@ -265,7 +260,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin: 10px auto;
+  margin: 2rem auto;
 }
 /* .hero-header img {
   position: absolute;
@@ -611,8 +606,11 @@ display: inline-block;
 }
 
 .pillars-container {
-  display: flex;
-  flex-direction: column;
+  background-color: skyblue;
+  border-radius: 0 15px 0 15px;
+  padding: 1em;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -622,7 +620,7 @@ display: inline-block;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   padding: 1.5rem;
-  text-align: left;
+  
 }
 
 .pillar h3 {
@@ -937,7 +935,7 @@ textarea {
 .modal-content {
   position: relative;
 }
-
+/* 
 .btn-primary {
   background-color: #7b4eff;
   color: #fff;
@@ -946,7 +944,7 @@ textarea {
   border-radius: 6px;
   margin-top: 1rem;
   cursor: pointer;
-}
+} */
 
 .close-modal {
   position: absolute;
@@ -1160,10 +1158,12 @@ textarea {
     justify-content: center;
     margin-bottom: 120px;
   }
-
+  .pillars-container {
+    display: flex;
+  }
   .pillar {
     flex: 1;
-    max-width: 300px;
+   max-width: 200px;
   }
 
     .design-section {
@@ -1212,7 +1212,7 @@ textarea {
 }
 .hero-header {
   padding: 3em;
-  height: 500px;
+  height: 800px;
   margin-bottom: 90px;
 }
 .hero-header h1 {
