@@ -9,11 +9,12 @@ body, html {
     width: 100vw;
 }
 body {
- font-family: "Inter', sans-serif";
-  background-color: #fdf7f2;
-  margin: 0;
-  padding: 0;
-  color: #000;
+ font-family: 'Inter', sans-serif;
+  /* background: linear-gradient(to bottom, #1a1a2e, #16213e); */
+  color: var(--charcoal);
+  background-color: var(--white);
+  line-height: 1.6;
+  padding: 1rem;
 }
  .mobile-header {
     display: block;
