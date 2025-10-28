@@ -109,7 +109,7 @@
   <div class="hero-text">
      <h1><span class="highlight">Hi, I'm  Petya.</span></h1>
       <h3 class="headertext">I design and develop interfaces that reflect brand emotion, respect user needs, and scale with purpose</h3s>    
-      <h5>"Passionate about code that adapts effortlessly across devices.</h5>
+      <h5>"Passionate about code that adapts effortlessly across devices."</h5>
         <div class="hero-btn">
           <a  href="portfolio.html" class="btn-primary">Projects</a>
           <button id="openModal" class="btn-secondary">Hire Me</button>
@@ -201,7 +201,7 @@
   <div class="pillars-container">
     <div class="pillar frontend">
       <h3>Frontend</h3>
-      <img src="./media/monitor_icon.png" alt="Monitor icon">
+      <img class="icon" src="./media/monitor_icon.png" alt="Monitor icon">
       <ul>
         <li>HTML</li>
         <li>CSS</li>
@@ -211,7 +211,7 @@
     </div>
     <div class="pillar tooling">
       <h3>Tooling</h3>
-      <img src="./media/tooling.png" alt="Toolingicon">
+      <img class="icon" src="./media/tooling.png" alt="Toolingicon">
       <ul>
         <li>API</li>
         <li>Vite</li>
@@ -221,7 +221,7 @@
     </div>
      <div class="pillar tooling">
       <h3>Backend</h3>
-      <img src="./media/setting.png" alt="Settings icon">
+      <img class="icon" src="./media/setting.png" alt="Settings icon">
       <ul>
         <li>Java</li>
         <li>PHP</li>
@@ -231,7 +231,7 @@
     </div>
     <div class="pillar creative">
       <h3>Creative</h3>
-        <img src="./media/palete.png" alt="Palete icon">
+        <img class="icon" src="./media/palete.png" alt="Palete icon">
       <ul>
         <li>Effects</li>
         <li>Animations</li>
@@ -247,80 +247,99 @@
 
  <!-- Projects -->
 
- <h2 class="projects-heading">Projects</h2>
-     <section class="projects-section">
-  
+<section class="projects-wrapper">
+  <h2 class="projects-heading">Projects</h2>
+  <div class="projects-section">
 
-  <div class="project-card">
-   <div class="phone-frame">
-    <img src="./media/parking-qr.png" alt="Yorvik Parking App UI" class="project-img" />
-   </div>
+    <!-- Project 1 -->
+    <div class="project-card">
+      <div class="phone-frame">
+        <img src="./media/parking-qr.png" alt="Yorvik Parking App UI" class="project" />
+      </div>
+      <div class="project-info">
+        <h3 class="project-title">Yorvik Parking App</h3>
+        <p class="project-description">A mobile-first parking solution prototype</p>
+        <ul class="tech-stack">
+          <li>React Native</li>
+          <li>Express.js</li>
+          <li>Expo Go</li>
+          <li>Figma</li>
+        </ul>
+        <a href="portfolio.html" class="pink-link">Learn More</a>
+      </div>
+    </div>
 
-    <div class="project-info">
-      <h3 class="project-title">Yorvik Parking App</h3>
-      <p class="project-description">A mobile-first parking solution Prototype</p>
-      <ul class="tech-stack">
-        <li>React Native</li>
-        <li>Express.js</li>
-        <li>Expo Go</li>
-        <li>Figma</li>
-      </ul>
-      <a href="portfolio.html" class="pink-link">Learn More</a>
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="./media/FoodApp.png" alt="Food Web App UI" class="project-img" />
+      <div class="project-info">
+        <h3 class="project-title">Food Web Application</h3>
+        <p class="project-description">Meal planner desktop application built with React and Spoonacular API</p>
+        <ul class="tech-stack">
+          <li>React</li>
+          <li>Vite</li>
+          <li>npm</li>
+          <li>Figma</li>
+        </ul>
+        <a href="portfolio.html" class="pink-link">Learn More</a>
+        <a href="https://priorityc.github.io/FoodApp/" class="pink-link">Demo</a>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="./media/blackHole.png" alt="Event Landing Page UI" class="project-img" />
+      <div class="project-info">
+        <h3 class="project-title">Event Landing Page</h3>
+        <p class="project-description">Immersive stargazing animated landing page built with HTML, CSS animations, and JavaScript</p>
+        <ul class="tech-stack">
+          <li>HTML</li>
+          <li>CSS Animations</li>
+          <li>JavaScript</li>
+        </ul>
+        <a href="portfolio.html" class="pink-link">Learn More</a>
+        <a href="https://priorityc.github.io/stargazing-landing-page/" class="pink-link">Demo</a>
+      </div>
     </div>
   </div>
 
-  <div class="project-card">
-    <img src="./media/FoodApp.png" alt="Food Web App UI" class="project-img" />
-    <div class="project-info">
-      <h3 class="project-title">Food Web application</h3>
-      <p class="project-description">Meal planner desktop application build with React and Spoonacular API</p>
-      <ul class="tech-stack">
-        <li>React</li>
-        <li>Vite</li>
-        <li>npm</li>
-        <li>Figma</li>
-      </ul>
-      <a href="portfolio.html" class="pink-link">Learn More</a>
-      <a href="https://priorityc.github.io/FoodApp/" class="pink-link">Demo</a>
-    </div>
+  <!-- Cosmic Care Section -->
+   <div class="project-card commerce-card">
+  <img src="./media/Home.png" class="project-img" alt="E-commerce home page" />
+  <div class="project-info">
+    <h3 class="project-title">🌿 What Is Cosmic Care?</h3>
+    <p class="project-description">
+        Cosmic Care is a self-care brand born from curiosity, clarity, and code. It’s where scientific integrity meets intentional design — a space where every product tells a story, and every interaction builds trust.
+      </p>
+      <p class="project-description">
+        I built this brand to connect technology and business through a dual-mode checkout system. Cosmic Care reflects a commitment to transparency, user empowerment, and resilient technology.
+      </p>
+      <p class="project-description">
+        This project isn’t just a storefront — it’s a full-stack experience designed to scale, test, and inspire. Built with React, Express, and Stripe, it offers both real customer purchases and demo-safe testing for collaborators.
+      </p>
+    <p class="project-description">Built with React, Express, and Stripe...</p>
+    <a href="cosmiccareproject.html" class="learn-more-btn pink-link">Learn More</a>
   </div>
+</div>
 
-  <div class="project-card">
-    <img src="./media/blackHole.png" alt="Event Landing Page UI" class="project-img" />
-    <div class="project-info">
-      <h3 class="project-title">Event Landing page</h3>
-      <p class="project-description">Immersive stargazing animated Landing page build with plain HTML a lots of CSS plus Jsvascript</p>
-      <ul class="tech-stack">
-        <li>HTML</li>
-        <li>CSS-Animations</li>
-        <li>JavaScript</li>
-      </ul>
-      <a href="portfolio.html" class="pink-link">Learn More</a>
-      <a href="https://priorityc.github.io/stargazing-landing-page/" class="pink-link">Learn More</a>
-    </div>
+  <!-- <h2 class="projects-heading">Want to see a real live e-commerce shop built with React?</h2>
+  <div class="link-to-projects-cont">
+    <div class="commerce-col">
+      <img src="./media/Home.png" class="ecommerce-img" alt="E-commerce home page" />
+      <h3>🌿 What Is Cosmic Care?</h3>
+      <p class="project-description">
+        Cosmic Care is a self-care brand born from curiosity, clarity, and code. It’s where scientific integrity meets intentional design — a space where every product tells a story, and every interaction builds trust.
+      </p>
+      <p class="project-description">
+        I built this brand to connect technology and business through a dual-mode checkout system. Cosmic Care reflects a commitment to transparency, user empowerment, and resilient technology.
+      </p>
+      <p class="project-description">
+        This project isn’t just a storefront — it’s a full-stack experience designed to scale, test, and inspire. Built with React, Express, and Stripe, it offers both real customer purchases and demo-safe testing for collaborators.
+      </p>
+      <a href="cosmiccareproject.html" class="learn-more-btn link-to-cc">Learn More</a>
+    </div> -->
   </div>
 </section>
-  </section>
-  <h2 class="projects-heading">Want to see a real live e-commerce shop build with React?</h2>
-     <section class="link-to-projects-cont">
-
-    
-    <div class="commerce-col">
-    <img src="./media/Home.png" class="ecommerce-img" alt="E-commerce home page"/>
-    <h3>🌿What Is Cosmic Care ?</h3>
-    <p class="project-description">Cosmic Care is a self-care brand born from curiosity, clarity, and code. It’s where scientific integrity meets intentional design — a space where every product tells a story, and every interaction builds trust. I build this brand to introduce the connection betwean technology and buissiness and apply them to a dual-mode checkout system. Cosmic Care reflects a commitment to transparency, user empowerment, and resilient technology.</p>
-    <p class="project-description">This project isn’t just a storefront — it’s a full-stack experience designed to scale, test, and inspire. Built with React, Express, and Stripe, it offers both real customer purchases and demo-safe testing for collaborators </p>
-
-    <p class="project-description">What follows is a deeper look into how Cosmic Care works, what makes it unique, and the technical journey behind its development.</p>  
-    <a href="cosmiccareproject.html" class="learn-more-btn link-to-cc">Learn more</a>
-  </div>
-    
-  </section>
-      
-    
-    
-  
-    </div>
  <!-- END -->
 
 
