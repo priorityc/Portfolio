@@ -494,7 +494,7 @@ body {
   display: block;
 }
 .project {
-  max-width: 60%;
+  width: 100%;
   height: auto;
 }
 
