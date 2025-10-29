@@ -260,9 +260,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: -75px auto 2rem; /* pulls image upward between sections */
-  z-index: 2;
-  position: relative;
+  margin-bottom: 20px;
+
 }
 
 .portrait-wrapper img {
@@ -271,7 +270,7 @@ body {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin: 2rem auto;
+  margin: 0 auto;
 }
 
 
@@ -476,8 +475,14 @@ body {
   box-shadow: 0 0 8px var(--lavender);
   overflow: hidden;
   transition: transform 0.3s ease;
-}
 
+}
+.project-card li {
+ list-style-type: none;
+}
+.tech-stack {
+  display: block;
+}
 .project-card:hover {
   transform: scale(1.02);
   box-shadow: 0 0 12px var(--sky-blue);
@@ -496,6 +501,9 @@ body {
 .project-info {
   padding: 1rem;
   color: var(--charcoal);
+}
+.project-info li {
+  text-decoration: none;
 }
 
 .project-title {
