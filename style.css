@@ -91,13 +91,6 @@ body {
   font-size: 17px;
   display: block;
 }
-/* .topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
-} */
 
 .topnav a:hover {
   background-color: #f0eeee;
@@ -191,6 +184,7 @@ body {
 }
 
 /*  */
+/* hero  */
 .hero-header {
   display: flex;
   /* font-family: "Inter', sans-serif"; */
@@ -272,7 +266,9 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   margin: 0 auto;
 }
-
+.btn {
+  border-radius: 0 15px 0 15px;
+}
 
 /* ABOUT SECTION */
 .about-section {
@@ -284,12 +280,6 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-}
-
-.about-title {
-  font-size: 1.75rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
 }
 
 .about-bio {
@@ -304,7 +294,7 @@ body {
   color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   font-weight: 600;
   cursor: pointer;
   margin-top: 1rem;
@@ -352,7 +342,8 @@ body {
 .section-title {
   font-size: 1.75rem;
   font-weight: 300;
-  margin-bottom: 2rem;
+  margin: 3rem 0 2rem 0;
+  text-align: center;
 }
 
 .starmap-container {
@@ -393,17 +384,12 @@ body {
 }
 /* PILLAR */
 .skills-section {
-  background-color: #fdf7f2;
+  /* background-color: #fdf7f2; */
+  background-color: var(--off-white);
   padding: 2rem 1rem;
   font-family: 'Inter', sans-serif;
   color: #000;
   text-align: center;
-}
-
-.skills-section h2 {
-  font-size: 1.75rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
 }
 
 .pillars-container {
@@ -443,10 +429,10 @@ body {
 }
 .icon {
   background-color: var(--off-white);
-  border: 1px solid #7E57C2; /* Lavender border */
   box-shadow: 0 0 8px #7E57C2; /* Lavender glow */
   transition: box-shadow 0.3s ease;
   border-radius: 6px;
+  padding: 1rem;
 }
 .icon:hover{
    box-shadow: 0 0 12px #7E57C2;
@@ -467,6 +453,7 @@ body {
   gap: 2rem;
   padding: 2rem 1rem;
   background-color: var(--off-white);
+  
 }
 
 .project-card {
@@ -475,7 +462,6 @@ body {
   box-shadow: 0 0 8px var(--lavender);
   overflow: hidden;
   transition: transform 0.3s ease;
-
 }
 .project-card li {
  list-style-type: none;
@@ -522,13 +508,17 @@ body {
   background-color: var(--lavender);
   color: var(--white);
   padding: 0.5rem 1rem;
-  border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
 }
 
 .learn-more-btn:hover {
   background-color: var(--sky-blue);
+}
+.pink-link {
+  color: var(--soft-pink);
+  text-decoration: underline;
+  font-weight: 300;
 }
 
 
@@ -615,6 +605,57 @@ body {
 .ecommerce-img {
   max-width: 320px;
 } */
+ /* The design process section  */
+.design-process {
+  margin: 1rem;
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  background-color: var(--soft-pink);
+  right: 0;
+}
+
+ .scroll-container {
+      display: flex;
+      /* overflow-x: auto; */
+      /* scroll-snap-type: x mandatory; */
+      /* -webkit-overflow-scrolling: touch; */
+      /* padding: 1rem; */
+      gap: 2rem;
+    }
+
+    .step {
+      font-style: italic;
+      margin: 0 auto;
+      /* scroll-snap-align: start; */
+      background: #fdf7f2;
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      min-height: fit-content;
+      /* background-image: url(./media/construction.avif); */
+      opacity: 0.8;
+      color: black;
+;
+    }
+    .step h2 {
+      color: #fff;
+
+    }
+    .step-img {
+      max-width: 200px;
+      height: auto;
+      float: left;
+      margin-right: 1.5rem;
+    }
+    .step h2 {
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: #333;
+    }
+
 
 /* FOOTER */
 footer.footer-box {
@@ -677,17 +718,16 @@ textarea {
   resize: vertical;
 }
 
-.btn {
+/* .btn {
   background-color: var(--lavender);
   color: #fff;
   border: none;
   padding: 0.6rem 1.2rem;
-  border-radius: 6px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1.6px;
   cursor: pointer;
-}
+} */
 
 .clear.btn {
   background-color: #ccc;
@@ -888,6 +928,7 @@ textarea {
 }
 
 
+
 /* Tablet & Desktop Enhancements */
 @media (min-width: 768px) {
    .close-modal {
@@ -1061,6 +1102,18 @@ textarea {
   .link-to-projects-cont {
     margin-bottom: 120px;
 }
+
+ .step {
+  flex: 0 0 80%;
+  padding: 3rem;
+ }
+
+ .label {
+  right: 10%;
+  padding: 1rem;
+  border-radius: 15px 0 15px 0;
+ }
+
 footer.footer-box {
   margin-top: 5rem;
 }
