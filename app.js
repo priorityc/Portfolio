@@ -195,8 +195,27 @@ function validateModal(e) {
   });
 }
 
+// Fading sections
 
- 
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll('.fade-in-section');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Optional: stop observing once visible
+        }
+      });
+    }, {
+      threshold: 0.01
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+
 
 
 
