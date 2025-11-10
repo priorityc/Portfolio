@@ -1,30 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>HTML Semantic Layout</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container-grid {
+            background-color: black;
+            width: 768px;
+            height: 768px;
+            display: grid;
+            gap: 9px;
+            grid-template-columns: 200px 50px 500px;
+            grid-template-rows: 200px 80px 80px 380px;
 
+
+        }
+        .item {
+            background-color: antiquewhite;
+        }
+          .yellow {
+            background-color: yellow;
+        }
+        .red {
+            background-color: brown;
+            grid-row: span 2;
+       }
+       .whiteright {
+        background-color: black;
+       }
+        .blue {
+            background-color: blue;
+            grid-column: span 2;
+        }
+        .white2 {
+            grid-row: span 2;
+        }
+        
+       
+
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to My HTML Layout</h1>
-    <button class="animated-btn">Learn More</button>
-    <nav>
-      <a href="#">Home</a> |
-      <a href="#">About</a> |
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-  <main>
-    <article>
-      <h2>Why Semantic HTML Matters</h2>
-      <p>Semantic tags like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code> improve accessibility and structure.</p>
-    </article>
-  </main>
-  <footer>
-    <p>© 2025 Petya Dimitrova</p>
-  </footer>
+  <div class="container-grid">
+  <div class="item white"></div>
+  <div class="item yellow"></div>
+  <div class="item red"></div>
+  <div class="item white2"></div>
+  <div class="item white"></div>
+  <div class="item whiteright"></div>
+  <div class="item white3"></div>
+  <div class="item"></div>
+  <div class="item blue"></div>
+   
+   
+</div>
+
 </body>
 </html>

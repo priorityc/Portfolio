@@ -16,6 +16,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <title>Home</title>
   </head>
   <body>
@@ -118,6 +121,7 @@
   </div>
       <div class="portrait-wrapper">
         <img src="./media/me.jpg" alt="Photo of Petya">
+         <div class="ring"></div>
       </div>
   </header>
     <!-- Header -->
@@ -132,12 +136,15 @@
     <p class="about-bio">
       Hi there! I’m Petya, a web developer passionate about building responsive, user-focused applications. I specialize in React and React Native, cloud-integrated solutions, and software development, crafting intuitive UI experiences. I thrive on solving real-world problems using cancellable code.
     </p>
+    </div>
+    <div class="saturn">
     <button class="expand-btn" onclick="downloadCV()">⬇️ Download CV</button>
     <a id="cvLink" class='btn' href="./media/cv_PD.docx" download="cv_PD.docx" style="display: none;"></a>
+ 
+    </div>
   </div>
-  <div class="saturn">
-  <div class="planet"></div>
-  <div class="ring"></div>
+  
+  
 </div>
 
 </section>
@@ -217,7 +224,7 @@
       <ul>
         <li>Effects</li>
         <li>Animations</li>
-        <li>Storytelling UI</li>
+        <li>Storytelling</li>
         <li>Responsive</li>
       </ul>
     </div>
@@ -235,7 +242,7 @@
 
     <!-- Project 1 -->
     <div class="project-card">
-      <div class="phone-frame">
+      <div class="frame">
         <img src="./media/parking-qr.png" alt="Yorvik Parking App UI" class="project" />
       </div>
       <div class="project-info">
@@ -249,7 +256,9 @@
 
     <!-- Project 2 -->
     <div class="project-card">
+      <div class="frame">
       <img src="./media/FoodApp-mobile.png" alt="Food Web App UI" class="project-img" />
+      </div>
       <div class="project-info">
         <h3 class="project-title">Food Web Application</h3>
         <p class="project-description">Meal planner desktop application built with React and Spoonacular API</p>
@@ -260,13 +269,16 @@
           <li>Figma</li>
         </ul>
         <a href="portfolio.html" class="pink-link">Learn More</a>
-        <a href="https://priorityc.github.io/FoodApp/" class="pink-link">Demo</a>
+        <a href="https://priorityc.github.io/FoodApp/" class="btn learn-more-btn pink-link">Demo</a>
       </div>
-    </div>
+      </div>
+   
 
     <!-- Project 3 -->
     <div class="project-card">
+      <div class="frame">
       <img src="./media/black_hole.png" alt="Event Landing Page UI" class="project-img" />
+      </div>
       <div class="project-info">
         <h3 class="project-title">Event Landing Page</h3>
         <p class="project-description">Immersive stargazing animated landing page built with HTML, CSS animations, and JavaScript</p>
@@ -276,24 +288,20 @@
           <li>JavaScript</li>
         </ul>
         <a href="portfolio.html" class="pink-link">Learn More</a>
-        <a href="https://priorityc.github.io/stargazing-landing-page/" class="pink-link">Demo</a>
+        <a href="https://priorityc.github.io/stargazing-landing-page/" class="btn learn-more-btn pink-link">Demo</a>
       </div>
     </div>
-  </div>
+ 
 
   <!-- Cosmic Care Section -->
-   <div class="project-card commerce-card">
-  <img src="./media/Home.png" class="project-img" alt="E-commerce home page" />
+   <div class="project-card">
+    <div class="frame">
+  <img src="./media/Home.png" class="project-img-commerce" alt="E-commerce home page" />
+  </div>
   <div class="project-info">
     <h3 class="project-title">🌿 What Is Cosmic Care?</h3>
     <p class="project-description">
-        Cosmic Care is a self-care brand born from curiosity, clarity, and code. It’s where scientific integrity meets intentional design — a space where every product tells a story, and every interaction builds trust.
-      </p>
-      <p class="project-description">
-        I built this brand to connect technology and business through a dual-mode checkout system. Cosmic Care reflects a commitment to transparency, user empowerment, and resilient technology.
-      </p>
-      <p class="project-description">
-        This project isn’t just a storefront — it’s a full-stack experience designed to scale, test, and inspire. Built with React, Express, and Stripe, it offers both real customer purchases and demo-safe testing for collaborators.
+        Cosmic Care is a self-care brand it’s a full-stack experience designed to scale, test, and inspire.
       </p>
     <p class="project-description">Built with React, Express, and Stripe...</p>
     <a href="cosmiccareproject.html" class="btn learn-more-btn pink-link">Learn More</a>
@@ -304,7 +312,7 @@
 </section>
  <!-- END -->
  <section class="design-process fade-in-section">
-    <h2 class="section-title">From concept to solution</h2>
+    <h2 class="section-title">Comming soon...</h2>
     <div class="scroll-container">
       <div class="step">
         <img class="step-img" src="./media/construction.avif" alt="Use case image">
