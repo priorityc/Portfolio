@@ -163,7 +163,7 @@ body {
   background-color: #333;
 }
 #logo {
-  width: 80px;
+  width: 120px;
   border-radius: 12px;
   transition: transform 0.3s ease-in-out;
   height: auto;              /* Preserve proportions */
