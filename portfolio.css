@@ -197,9 +197,9 @@ h2 {
 }
 .cta-video {
   padding: 1.5rem;
-  background-color: var(--bg-light, #f9f9f9);
+  background-color: var(--charcoal);
   font-family: 'Inter', sans-serif;
-  color: var(--text-dark, #222);
+  color: var(--charcoal);
   max-width: 900px;
   margin: 0 auto;
 }

@@ -7,14 +7,14 @@
 /* :root {
   --lavender: #7E57C2;
   --soft-pink: #FF99AA;
-  --sky-blue: #3A9BC2;
+  --sky-blue: 
   --off-white: #FDF3FF;
   --charcoal: #4B4B4B;
   --white: #FFFFFF;
 } */
 :root {
  --lavander: #3B0270;
- --sky-blue: #6F00FF;
+ --sky-blue: #3A9BC2;
   --soft-pink: #E9B3FB;
   --off-white: FFF1F1;
   /* Fonts */
@@ -228,24 +228,22 @@ body {
 .hero-header {
   display: flex;
   color: var(--charcoal);
-  font-weight: 200;
+  font-weight: 300;
   flex-direction: column;
   align-items: center;
-  padding: 2rem 1rem;
   text-align: center;
+  padding: 2rem 1rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   padding: clamp(1.5rem, 5vw, 4rem);
   gap: clamp(1rem, 4vw, 1.8rem);
-
-  /* opacity: 1; */
+  margin-bottom: 1rem;
   gap: 1.8rem; 
-  /* Set a specific height */
 }
 .hero-text {
-  color: var(--charcoal);
+ 
   font-weight: 100;
    font-size: clamp(0.8rem, 1vw, 1rem);
 
@@ -255,24 +253,22 @@ body {
   font-family: 'Playfair Display serif';
   font-size: clamp(2.8rem, 5vw, 3rem);
   margin-bottom: 0.5rem;
-  font-weight: 100;
+  font-weight: 400;
+  color: #3B0270;
 }
 
 
-.hero-text-align {
-  text-align: center;
-}
 .headertext{
- font-size: clamp(1.3rem, 3vw, 2rem);
+ font-size: clamp(1.3rem, 3vw, 2.5rem);
   margin-bottom: 0.5rem;
   line-height: 1.2;
-  font-weight: 200;
+  font-weight: 300;
+  color: #3B0270;
 }
 
 .hero-btn {
   display:flex;
   justify-content: center;
-  display: flex;
   align-items: center;
   gap: 0.5rem;
 
@@ -308,35 +304,23 @@ body {
   color: var(--off-white);
   border: 2px solid var(--off-white);
 }
-.portrait-wrapper {
+/* .portrait-wrapper {
   position: relative;
   display: inline-block;
   margin-bottom: 20px;
-}
+} */
 
 .portrait-wrapper img {
   border-radius: 50%;
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   z-index: 2;
-  position: relative;
+  /* position: relative; */
   width: clamp(80px, 25vw, 120px);
   height: clamp(80px, 25vw, 120px);
 
 }
 
-.ring {
-  position: absolute;
-  border: 4px solid #a58aff;
-  border-radius: 50%;
-  transform: rotate(-20deg);
-  z-index: 1; 
-  width: clamp(150px, 50vw, 220px);
-  height: clamp(50px, 20vw, 80px);
-  top: clamp(10px, 5vw, 20px);
-  left: clamp(-30px, -10vw, -50px);
-
-}
 .btn {
   border-radius: 0 15px 0 15px;
 }
@@ -350,6 +334,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 .about-title {
   font-family: "Playfair Display serif";
@@ -359,7 +344,7 @@ body {
   text-align: left;
 }
 .about-img {
-  max-width: 200px;
+  max-width: 300px;
   border-radius: 8px;
 }
 
@@ -370,23 +355,25 @@ body {
   line-height: 1.7;
   max-width: 600px;
   margin: 0 auto 1rem;
-  padding: 0 1rem;
-
 }
 
 .expand-btn {
-    width: 160px;
-    height: 60px;
-    border-radius: 8px;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
     box-shadow: 0 0 0 4px #a58aff;
   background-color: #fdf7f2;
   color: var(--lavender);
   border: none;
-  padding: 0.6rem;
+  padding: 0.5em;
   /* border-radius: 6px; */
-  font-weight: 600;
+  font-weight: 300;
   font-size: 1rem;
   cursor: pointer;
+}
+.a-about {
+  height: 55px;
+  margin-left: 20px;
 }
 
 
@@ -1159,19 +1146,12 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
     justify-content: space-between;
     padding: 4rem 6rem;
     max-width: 1200px;
+    max-height: 800px;
     border-radius: 0 0 15px 15px;
-    margin: 0 auto;
+    margin-bottom: 2rem;
   
   }
- 
-  .hero-text {
-    text-align: right;
-    gap: 1rem;
-  }
 
-  .hero-text-align {
-    text-align: right;
-  }
 
   .portrait-wrapper {
     flex-shrink: 0;
@@ -1215,9 +1195,8 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
 
    .about-content {
     flex-direction: row;
-    align-items: flex-start;
     text-align: left;
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .planet-visual {
@@ -1302,16 +1281,11 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
   .desktop-header {
     display: block;
   }
-    .headertext {
-  margin-bottom: 0.5rem;
-  font-weight: 100;
-  font-size: 3.2em;
 
-}
 .hero-header {
-  padding: 3em;
-  height: 800px;
-  margin-bottom: 90px;
+  height: 1000px;
+  margin: 0 auto 4rem auto;
+  padding: 2rem;
 }
 .hero-header h1 {
   font-size: 5em;
@@ -1326,10 +1300,22 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
   .hero-text-align {
     max-width: 600px;
   }
+
+  .headertext {
+  /* margin-bottom: 0.5rem; */
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    
+
+}
   .about-section {
     flex-direction: row;
     width: 80%;
     margin: 0 auto;
+  }
+  .about-content {
+    gap: 3rem;
   }
   .starmap-section {
     margin: 3rem auto;
@@ -1346,9 +1332,6 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
   }
   .link-to-projects-cont {
     margin-bottom: 120px;
-}
-.hero-btn {
-  justify-content: flex-end;
 }
  .step {
   flex: 0 0 80%;

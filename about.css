@@ -84,10 +84,8 @@ h3 {
 }
 
 .portrait img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
+  max-width: 300px;
+  border-radius: 8px;
 }
 
 .highlights h2 {
@@ -96,8 +94,6 @@ h3 {
 }
 
 .highlights ul {
-  list-style: disc;
-  padding-left: 1.5rem;
   list-style-type: none;
   
 }
@@ -257,7 +253,7 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
-    gap: 5rem;
+    gap: 3rem;
   }
 
   .about-cont {
@@ -265,9 +261,6 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
     align-items: flex-start;
     padding: 20px;
     gap: 2rem;
-  }
-  .highlights {
-    max-width: 400px;
   }
 
   .case-grid {
@@ -293,7 +286,7 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
   }
    .about-cont {
     padding: 50px;
-    margin: 5em;
+    margin: 3em;
     gap: 50px;
 }
 .process {

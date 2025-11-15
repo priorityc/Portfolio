@@ -1,4 +1,14 @@
 /* style.css */
+
+:root {
+ --lavander: #3B0270;
+ --sky-blue: #6F00FF;
+  --soft-pink: #E9B3FB;
+  --off-white: FFF1F1;
+  /* Fonts */
+  --charcoal: #4B4B4B;
+   --off-white: #FDF3FF;
+}
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -173,8 +183,12 @@ body {
 }
 
 .hero h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
+ font-family: 'Playfair Display serif';
+  font-size: clamp(2.8rem, 5vw, 3rem);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  color: #3B0270;
+  text-transform: capitalize;
 }
 
 .subtitle {
@@ -182,21 +196,53 @@ body {
   margin-bottom: 2rem;
 }
 
-.cta-buttons {
+.btn-primary,
+.btn-secondary {
+  margin: 0.3rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0 15px 0 15px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #3A9BC2;
+  color: white;
+  text-decoration: none;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--charcoal);
+  border: 2px solid var(--charcoal);
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 300;
+  font-family: 'Playfair Display serif';
+  padding: 0.5em;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  text-align: center;
+  margin-bottom: 1rem;
+
+}
+/* .cta-buttons {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
-}
+} */
 
-.btn {
+/* .btn {
   background: #6c4bc3;
   color: #fff;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
-}
+} */
 
 .block {
   padding: 1.5rem 1rem;
