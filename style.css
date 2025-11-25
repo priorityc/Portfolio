@@ -789,17 +789,11 @@ body {
 .label {
   position: absolute;
   background-color: var(--soft-pink);
+  opacity: 2;
   right: 0;
+  border-radius: 0px 15px 0 15px;
+  padding: 0.5em;
 }
-
- .scroll-container {
-      display: flex;
-      /* overflow-x: auto; */
-      /* scroll-snap-type: x mandatory; */
-      /* -webkit-overflow-scrolling: touch; */
-      /* padding: 1rem; */
-      gap: 2rem;
-    }
 
     .step {
       font-style: italic;
@@ -812,6 +806,7 @@ body {
       min-height: fit-content;
       /* background-image: url(./media/construction.avif); */
       opacity: 1;
+      padding: 3em 2em;
     }
     .step h2 {
       color: #fff;
@@ -1028,15 +1023,197 @@ textarea {
 
 /* THE DESIGN  */
 /* Cosmic Care Light Theme */
-:root {
+/* :root {
   --lavender: #7E57C2;
   --soft-pink: #FF99AA;
   --sky-blue: #3A9BC2;
   --off-white: #F4F3FF;
   --charcoal: #4B4B4B;
   --white: #FFFFFF;
+} */
+
+/* SLIDER */
+.slider {
+  max-width: 100rem;
+  height: 40rem;
+  margin: 0 auto;
+  position: relative;
+
+  /* IN THE END */
+  overflow: hidden;
 }
 
+.slide {
+  position: absolute;
+  top: 0;
+  /* width: 100%;
+  height: 20rem; */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* THIS creates the animation! */
+  transition: transform 1s;
+}
+
+.slide > img {
+  /* Only for images that have different size than slide */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: #333;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+
+.dots__dot {
+  border: none;
+  background-color: #b9b9b9;
+  opacity: 0.7;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 50%;
+  margin-right: 1.75rem;
+  cursor: pointer;
+  transition: all 0.5s;
+
+  /* Only necessary when overlying images */
+  /* box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.7); */
+}
+
+.dots__dot:last-child {
+  margin: 0;
+}
+
+.dots__dot--active {
+  /* background-color: #fff; */
+  background-color: #888;
+  opacity: 1;
+}
+
+/* TESTIMONIALS */
+.testimonial {
+  width: 65%;
+  position: relative;
+}
+/* - ::before → This is a pseudo-element. It allows 
+  to insert content before the actual content of the selected element, without needing extra HTML.
+- It’s often used for decorative icons, quotation marks, or stylistic flourishes
+ */
+/* .testimonial::before {
+  content: '\201C';
+  position: absolute;
+  top: -5.7rem;
+  left: -6.8rem;
+  line-height: 1;
+  font-size: 20rem;
+  font-family: inherit;
+  color: var(--color-primary);
+  z-index: -1;
+} */
+
+/* .testimonial__header {
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+} */
+
+.testimonial__text {
+  margin-bottom: 2.5rem;
+  color: #666;
+}
+
+.testimonial__photo {
+  grid-row: 1 / span 2;
+  width: 6.5rem;
+  border-radius: 50%;
+}
+
+.testimonial__name {
+  font-size: 1.2rem;
+  font-weight: 300;
+  align-self: end;
+  margin: 0;
+}
+
+.section__title--testimonials {
+  margin-bottom: 4rem;
+}
+/* end  */
+
+/* .slider {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+} */
+
+/* .slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+} */
+
+.step {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.step img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(175, 175, 175, 0.518);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.arrow.left {
+  left: 5px;
+}
+
+.arrow.right {
+  right: 5px;
+}
 
 .design-section {
   display: flex;
@@ -1258,6 +1435,9 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
     flex: 1;
   }
 
+.slider {
+  height: 25rem;
+}
 /* FORM */
 .name-email-box {
     flex-direction: row;
@@ -1345,6 +1525,9 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
   border-radius: 15px 0 15px 0;
  }
 
+ .slider {
+  height: 20rem;
+ }
 footer.footer-box {
   margin-top: 5rem;
 }
