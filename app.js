@@ -2,6 +2,7 @@
 
 const nav = document.querySelector('.sidenav');
 const header = document.querySelector('.hero-header');
+const dotContainer = document.querySelector('.dots');
 
 // Accessibility
  function handleKey(event) {
@@ -270,6 +271,8 @@ const prevSlide = function () {
   }
   
   goToSlide(currentSlide);
+  activateDot(currentSlide);//activate dot for the current slide
+
 }
 
 const nextSlide  = function () {
@@ -280,7 +283,7 @@ const nextSlide  = function () {
   }
  
   goToSlide(currentSlide);
-
+  activateDot(currentSlide);//activate dot for the current slide
 }
 
 btnRight.addEventListener('click', nextSlide);
@@ -293,6 +296,52 @@ btnLeft.addEventListener('click', prevSlide);
   //slide at position 0 is 0-1 = -1 than -1 * 100 =-100
   //next slide is 1 so 1-1 = 0 * 100 = 0
   //next slide is 2 -1 = 1 * 100 = 100
+
+  const createDots = function () {
+    //loop over the slides /throw away variable that we dont need
+    slider.forEach(function(_, i) {
+      //adding el as a last child always
+      dotContainer.insertAdjacentHTML('beforeend',`<button class="dots__dot data-slide="${i}"></button>`)
+
+    })
+  }
+
+  // Show the current slide style active
+  const activateDot = function (slide) {
+    //select all of the dots
+    document.querySelectorAll('.dots__dot').forEach((dot)=> {
+      //deactivate all of the dots
+      dot.classList.remove('dots__dot--active');
+
+      //add only this class to the one we are intrested in
+      //select the element with this class and with this data atribute set to 2
+      document.querySelector(`.dots__dot[data-slide = "${slide}"]`)
+      .classList.add('dots__dot--active');
+      
+    })
+    
+  }
+
+  activateDot(0); //activates the first slide
+  
+// The dot logic implementation
+document.addEventListener('keydown', function (e) {
+
+ 
+  if (e.key === "ArrowLeft") prevSlide();
+  e.key==="ArrowRight" && nextSlide();
+
+})
+
+// Event delegation attaching the event to the parent where event will happen
+dotContainer.addEventListener('click', function (e) {
+  //if the event targed contains this class
+  if (e.target.classList.contains('dots__dot')) {
+    currentSlide = Number(e.target.dataset.slide);
+    goToSlide(currentSlide);
+    activateDot(currentSlide);
+  }
+})
 
 
 
