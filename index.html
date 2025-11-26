@@ -125,6 +125,7 @@
         </div>
       </div>
   </div>
+
       
   </header>
     <!-- Header -->
@@ -132,33 +133,39 @@
  <main>
     
     
-      <section class="about-section fade-in-section">
-       
-        <div class="about-content">
-          <div>
-            <img class="about-img" src="./media/programming.png" alt="programming image">
-            <img class="about-img" src="./media/avatar.webp" alt="programming image">
+  <!-- <section class="process">
+    <h2 class="section-title">💻 Technical Focus</h2>
+    <div>
+      <span> <img class="icon" src="./media/html_icon.png" alt="HTML Icon" />
+HTML the skeleton</span> →
+      <span><img class="icon" src="./media/css_icon.png" alt="CSS Icon" width="34" height="34" />CSS the beauty</span> →
+      <span><img class="icon" src="./media/javascript_icon.png" alt="JavaScript Icon" width="34" height="34" />JavaScript the movements</span> →
+      <span><img class="icon" src="./media/java_icon.png" alt="Java Icon" width="34" height="34" />Java the functionality</span> →
+      <span><img class="icon" src="./media/react_icon.png" alt="React Icon" width="34" height="34" />React makes development easy</span>
+    </div>
+  </section> -->
+     
 
-          </div>
-          <div>
-            <h3>About Me</h3>
-          <p class="about-bio">
-            
-              Hi, I’m Petya — Founder and Creative Director of Petya’s Digital Care.
-          For the past six years, I’ve immersed myself in programming, analysis, and management, building a strong foundation in IT design and development. During my final year of study, I established my boutique studio to empower small business owners who want to stand out in the digital world.</p>
-          <p class="about-bio">At Petya’s Digital Care, I specialize in web and app development with a unique focus on emotional impact. My approach goes beyond functionality: I design digital experiences that resonate with users while staying deeply aligned with business objectives. Every project begins with thorough analysis, ensuring that the technical solutions I deliver reflect not only brand identity but also the emotions a business wants to evoke.</p>
-            
-   
-          <button class="expand-btn" onclick="downloadCV()">⬇️ Download CV</button>
-          <a id="cvLink" class='btn' href="./media/cv_PD.docx" download="cv_PD.docx" style="display: none;"></a>
-          <a href="about.html" class="btn btn-primary a-about">Learn More</a>
-   </div>
+<section class="about-section fade-in-section">
+  <!-- Heading -->
 
+    <h3>About Me</h3>
+<div class="about-cont">
+  <img class="about-img" src="./media/avatar.webp" alt="programming image">
+  <!-- Image and text container -->
+  <div class="about-col">
+    <p class="about-bio">Hi, I’m Petya — Founder and Creative Director of Petya’s Digital Care.
+    For the past six years, I’ve immersed myself in programming, analysis, and management, building a strong foundation in IT design and development. During my final year of study, I established my creative studio to empower small business owners who want to stand out in the digital world.</p></p>
+  
+    <!-- Buttons -->
+  <div>
+    <button class="btn-secondary btn-color" onclick="downloadCV()">⬇️ Download CV</button>
+    <a id="cvLink" class="btn" href="./media/cv_PD.docx" download="cv_PD.docx" style="display: none;"></a>
+    <a href="about.html" class="btn btn-primary a-about">Learn More</a>
   </div>
-  
-  
+  </div>
 </div>
-
+  
 </section>
 
 <!-- Unique Section: Mobile-first responsive cards -->
@@ -271,7 +278,7 @@
 
 
 <!-- The Pillar section  -->
- <section class="skills-section fade-in-section">
+ <!-- <section class="skills-section fade-in-section">
   <div>
   <h3>Technical Skills</h3>
   </div>
@@ -317,31 +324,73 @@
       </ul>
     </div>
   </div>
-</section>
+</section> -->
 
  <!-- ENd of pillar section -->
 
 
  <!-- Projects -->
+  <section class="projects" aria-labelledby="projects-title">
+  <div class="container">
+    <h2 id="projects-title">Projects</h2>
+    <div class="project-grid">
 
-<section class="projects-wrapper fade-in-section">
+      <!-- Project 1 -->
+      <article class="project-card card-blush">
+      <img src="./media/parking-qr.png" alt="Food Web App UI" class="project-thumb" />
+        <h3 class="project-title">Yorvik Parking App</h3>
+        <p class="project-desc">Height fidelity web app prototype for city of Yorvik company</p>
+        <a href="portfolio.html" class="pink-link">Learn More</a>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card card-teal">
+      <img src="./media/FoodApp-mobile.png" alt="Food Web App UI" class="project-thumb" />
+        <h3 class="project-title">Food Web App</h3>
+        <p class="project-desc">Meal planner desktop application built-React and Spoonacular API</p>
+         <a href="portfolio.html" class="pink-link">Learn More</a>
+        <a href="https://priorityc.github.io/FoodApp/" class="btn learn-more-btn pink-link">Demo</a>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card card-gold">
+      <img src="./media/black_hole.png" alt="Event Landing Page UI" class="project-thumb" />
+        <h3 class="project-title">Black hole event Landing page</h3>
+        <p class="project-desc">Immersive stargazing black hole event Landing page for museums.</p>
+         <a href="portfolio.html" class="pink-link">Learn More</a>
+        <a href="https://priorityc.github.io/stargazing-landing-page/" class="btn learn-more-btn pink-link">Demo</a>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="project-card card-blush">
+        <img src="./media/Home.png" class="project-thumb" alt="E-commerce home page" />
+        <h3 class="project-title">Cosmic care e-commerce website</h3>
+        <p class="project-desc">Brand and website design and development for Cosmic care</p>
+        <a href="cosmiccareproject.html" class="btn learn-more-btn pink-link">Learn More</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+<!--  -->
+
+<!-- <section class="projects-wrapper fade-in-section">
   <h3>Projects</h3>
   <div class="projects-section">
 
-    <!-- Project 1 -->
+    
     <div class="project-card">
       <div class="frame">
-        <img src="./media/parking-qr.png" alt="Yorvik Parking App UI" class="project" />
+      <img src="./media/FoodApp-mobile.png" alt="Food Web App UI" class="project-thumb" />
       </div>
       <div class="project-info">
         <h3 class="project-title">Yorvik Parking App</h3>
         <p class="project-description">React Native mobile-first rapid parking prototype</p>
-        <!-- <p>React Native, Express.js, Expo Go, Figma</li> -->
         <a href="portfolio.html" class="pink-link">Learn More</a>
       </div>
     </div>
 
-    <!-- Project 2 -->
+   
     <div class="project-card">
       <div class="frame">
       <img src="./media/FoodApp-mobile.png" alt="Food Web App UI" class="project-img" />
@@ -353,9 +402,7 @@
         <a href="https://priorityc.github.io/FoodApp/" class="btn learn-more-btn pink-link">Demo</a>
       </div>
       </div>
-   
 
-    <!-- Project 3 -->
     <div class="project-card">
       <div class="frame">
       <img src="./media/black_hole.png" alt="Event Landing Page UI" class="project-img" />
@@ -367,9 +414,7 @@
         <a href="https://priorityc.github.io/stargazing-landing-page/" class="btn learn-more-btn pink-link">Demo</a>
       </div>
     </div>
- 
 
-  <!-- Cosmic Care Section -->
    <div class="project-card">
     <div class="frame">
   <img src="./media/Home.png" class="project-img-commerce" alt="E-commerce home page" />
@@ -385,7 +430,7 @@
 </div>
 
   </div>
-</section>
+</section> -->
  <!-- END -->
 
  <div class="slider">
