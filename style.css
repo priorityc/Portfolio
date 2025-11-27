@@ -5,11 +5,14 @@
 }
 :root {
   /* Brand palette (adjust to your exact codes) */
-  --cream: #ffff;
+  --cream: #F4F3FF;
   --charcoal: #2D2A2A;
   --blush: #E8C7C7;
-  --muted-teal: #9CB7B3;
+  --light-blue: #9aafee;
+  --muted-teal:  #12286a;
   --soft-gold: #C9A96A;
+  --lavander: #7E57C2;
+
 
   /* Text + UI */
   --text: var(--charcoal);
@@ -47,7 +50,6 @@ body, html {
 }
 body {
   color: var(--text);
-  background: var(--cream);
   font-family: var(--font-sans);
   line-height: 1.6;
 }
@@ -106,9 +108,9 @@ body {
 /* The hidden hamburg menu */
 .topnav {
   overflow: hidden;
-  background-color: #ddd;
+  background-color: var(--cream);
   position: relative;
-  background-color: #3a9bc2;
+  background-color: var(--muted-teal);
 }
 
 .topnav #myLinks {
@@ -124,7 +126,7 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #f0eeee;
+  background-color: var(--cream);
 }
 
 
@@ -138,7 +140,7 @@ body {
 
     padding-left: 48px;
     padding-right: 48px;
-    background-color: var(--off-white);
+    background-color: var(--cream);
     line-height: 1.4;
     height: 120px;
     
@@ -147,11 +149,11 @@ body {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
     font-size: 18px;
-    color: #4b4b4b;
+    color: var(--charcoal);
   }
   .sidenav a:hover {
-    color: #064579;
-    background-color: #fff;
+    color: var(--muted-teal);
+    background-color: var(cream);
   }
 
   .arrange-manu {
@@ -181,7 +183,7 @@ body {
 }
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: var(--charcoal);
 }
 #logo {
   width: 120px;
@@ -196,7 +198,7 @@ body {
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: var(--cream);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -204,12 +206,12 @@ body {
 
 /* Change color on hover */
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: var(--cream);
   color: black;
 }
 /* Style the content */
 .content {
-  background-color: whitesmoke;
+  background-color: var(--cream);
   padding: 10px;
   height: 200px; /* Should be removed. Only for demonstration */
 }
@@ -217,9 +219,13 @@ body {
 /*  */
 /* hero  */
 .gradient-background {
-  background: linear-gradient(300deg,   #1f3f9e, #7E57C2,#F4F3FF);
-  background-size: 180% 180%;
-  animation: gradient-animation 18s ease infinite;
+  /* background: linear-gradient(300deg,   #1f3f9e, #7E57C2,#F4F3FF);
+  background-size: 180% 180%; */
+  /* background-image: ull("./media/computer");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: gradient-animation 18s ease infinite; */
 }
 
 
@@ -248,14 +254,20 @@ body {
 
 .hero-header {
   display: flex;
-  color: var(--charcoal);
+  color: var(--cream);
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 2rem 1rem;
-  background-position: center;
+  background-image: linear-gradient(rgba(0,0,0,0.06), rgba(0,0,0,0.06)),url(./media/digital.avif);
+   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+   height: 50%;
+/* background: linear-gradient(135deg, #1a1f4b, #6a5acd, #f7c6c7); */
+/* background: linear-gradient(120deg, #008080, #40e0d0, #ffb07c, #ff6f61); */
+/* background: linear-gradient(135deg, var(--muted-teal), var(--lavander), var(--blush));  background-size: cover; */
+  animation: gradient-animation 18s ease infinite;
   position: relative;
   padding: clamp(1.5rem, 5vw, 4rem);
   gap: clamp(1rem, 4vw, 1.8rem);
@@ -272,16 +284,20 @@ body {
   font-size: clamp(2.8rem, 5vw, 3rem);
   margin-bottom: 0.5rem;
   font-weight: 800;
-  color: #3B0270;
+  /* color: #3B0270; */
+  color: var(--muted-teal);
 }
 
-
+.hero-img {
+  max-width:  700px;
+}
 .headertext{
  font-size: clamp(1.5rem, 2vw, 2rem);
   margin-bottom: 0.5rem;
   line-height: 1.2;
   font-weight: 400;
-  color: #3B0270;
+  /* color: #3B0270; */
+  color: var(--lavander);
 }
 
 .hero-btn {
@@ -296,10 +312,10 @@ body {
 } */
 
 .hero-text h5 {
-  color: var(--soft-pink);
+  color: var(--lavander);
   font-size: 1rem;
   font-style: italic;
-  font-weight: 200;
+  font-weight: 500;
 }
 .btn-primary,
 .btn-secondary {
@@ -313,13 +329,13 @@ body {
 
 .btn-primary {
   background-color: var(--soft-gold);
-  color: white;
+  color: var(--cream);
   text-decoration: none;
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: #fff;
+  color: var(--muted-teal);
   border: 2px solid var(--soft-gold);
 }
 
@@ -327,12 +343,9 @@ body {
 .portrait-wrapper img {
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   z-index: 2;
-  /* position: relative; */
   width: clamp(80px, 25vw, 120px);
   height: clamp(80px, 25vw, 120px);
-
 }
 
 .btn {
@@ -366,9 +379,6 @@ body {
 .btn {
   margin-right: 0.5rem;
 }
-.btn-color {
-  color: var(--charcoal);
-}
 
 
 /* CONSTELATION */
@@ -391,6 +401,7 @@ h3 {
   font-family: var(--font-serif);
     font-size: clamp(25px, 4vw, 40px);
     margin-bottom: 32px;
+    color: var(--muted-teal);
 /*     
   font-family: var(--font-serif);
   color: var(--heading);
@@ -479,8 +490,12 @@ h3 {
 /* Section wrapper */
 .unique {
   padding: var(--space-6) var(--space-4);
-  
 }
+
+/* .container {
+   background: var(--blush);
+
+} */
 
 /* .container {
   max-width: 1120px;
@@ -508,35 +523,23 @@ h3 {
   display: grid;
   gap: var(--space-4);
   grid-template-columns: 1fr;
+
+
+
 }
 
 /* Card */
 .unique-card {
-  /* background: var(--card-bg); */
-  background: rgb(176, 146, 191);
-  border: 1px solid var(--card-border);
   border-radius: var(--radius);
   padding: var(--space-5) var(--space-4);
-  box-shadow: var(--shadow);
+  /* box-shadow: var(--shadow); */
   transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+  background: rgb(240, 239, 239);
 }
 
-/* Icon wrapper */
-.unique-card .icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  margin-bottom: var(--space-3);
-  background: linear-gradient(135deg, var(--soft-gold), var(--blush));
-  box-shadow: 0 8px 20px rgba(201,169,106,0.25);
-}
-
-.unique-card .icon svg {
-  width: 28px;
-  height: 28px;
-  fill: var(--charcoal);
+.unique-img {
+  max-width: 90%;
+  border-radius: 8px;
 }
 
 /* Titles + text */
@@ -545,11 +548,12 @@ h3 {
   font-size: clamp(18px, 3.8vw, 22px);
   color: var(--heading);
   font-weight: 700;
+  color: #00040d;
 }
 
 .unique-text {
   margin: 0;
-  color: #4B4750;
+  color: #00040d;
   font-size: clamp(14px, 3vw, 16px);
 }
 
@@ -563,18 +567,7 @@ h3 {
 
 /* Responsive steps */
 /* >= 640px: two columns */
-@media (min-width: 640px) {
-  .unique-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-/* >= 960px: four columns */
-@media (min-width: 960px) {
-  .unique-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
 /* Optional accent variants per card (assign with nth-child) */
 .unique-card:nth-child(1) .icon {
@@ -591,11 +584,11 @@ h3 {
 }
 
 /* Reduced motion preference */
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   .unique-card {
     transition: none;
   }
-}
+} */
 /*  */
 /* PILLAR */
 .skills-section {
@@ -648,8 +641,8 @@ h3 {
   border-bottom: 1px solid #eee;
 }
 .icon {
-  background-color: var(--off-white);
-  box-shadow: 0 0 8px #7E57C2; /* Lavender glow */
+  /* background-color: var(--cream); */
+  /* box-shadow: 0 0 8px #7E57C2;  */
   transition: box-shadow 0.3s ease;
   border-radius: 6px;
   padding: 1rem;
@@ -674,7 +667,6 @@ h3 {
   font-family: var(--font-serif);
   font-size: clamp(28px, 5vw, 40px);
   margin-bottom: 32px;
-  color: var(--charcoal);
 }
 
 .project-grid {
@@ -689,18 +681,19 @@ h3 {
   box-shadow: var(--shadow);
   padding: 24px;
   transition: transform 180ms ease;
-  background: var(--cream);
   text-align: center;
+  color: #00040d;
+  background-color: #e4e2e26f;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
 }
 
-/* Card variants */
-.card-blush { background: var(--blush); }
-.card-teal { background: var(--muted-teal); }
-.card-gold { background: var(--soft-gold); }
+
+.card-blush { background: var(--light-blue); }
+.card-teal { background: var(--soft-gold); }
+.card-gold { background: var(--lavander); }
 
 /* Thumbnail */
 .project-thumb {
@@ -721,7 +714,7 @@ h3 {
 .project-desc {
   font-size: 16px;
   margin: 0;
-  color: #3A3A3A;
+color: var(--cream);
 }
 
 /*  */
@@ -1010,8 +1003,10 @@ footer.footer-box {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  font-family: "Playfair Display serif";
-  color: var(--off-white);
+   font-family: var(--font-serif);
+  font-size: clamp(25px, 4vw, 40px);
+  margin-bottom: 32px;
+  color: var(--cream);
 }
 
 .form-heading p {
@@ -1048,29 +1043,20 @@ input[type="text"],
 input[type="email"],
 textarea {
   padding: 0.6rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--cream);
   border-radius: 8px;
   font-size: 1rem;
-  background-color: #fff;
+  background-color: var(--cream);
 }
 
 textarea {
   resize: vertical;
 }
 
-/* .btn {
-  background-color: var(--lavender);
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1.6px;
-  cursor: pointer;
-} */
+
  .submit {
-  background-color: var(--sky-blue);
-  color: #fff;
+  background-color: var(--lavander);
+  color: var(--cream);
   border: none;
   padding: 0.6rem 1.2rem;
   letter-spacing: 1.6px;
@@ -1586,6 +1572,12 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
     margin-left: 200px; /* aligns with image */
   }
 
+   .unique-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .unique-img {
+    width: 50%;
+  }
   /* PILLAR */
   .pillars-container {
     flex-direction: row;

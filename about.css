@@ -2,14 +2,38 @@
 
 /* Cosmic Care Light Theme */
 :root {
-  --lavender: #7E57C2;
-  --soft-pink: #FF99AA;
-  --sky-blue: #3A9BC2;
-  --off-white: #F4F3FF;
-  --charcoal: #4B4B4B;
-  --white: #FFFFFF;
-  --darklavander:  background-color: rgba(75, 68, 125, 0.845);
+  /* Brand palette (adjust to your exact codes) */
+  --cream: #F4F3FF;
+  --charcoal: #2D2A2A;
+  --blush: #E8C7C7;
+  --light-blue: #9aafee;
+  --muted-teal:  #12286a;
+  --soft-gold: #C9A96A;
+  --lavander: #7E57C2;
+
+
+  /* Text + UI */
+  --text: var(--charcoal);
+  --heading: #3A2A4A;           /* elegant deep purple-charcoal */
+  --card-bg: #FFFFFF;
+  --card-border: #EFE9E2;
+  --shadow: 0 6px 18px rgba(0,0,0,0.06);
+  --radius: 16px;
+  --radius-sm: 12px;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  --font-serif: "Georgia", "Garamond", "Times New Roman", serif;
+
+  /* Spacing scale */
+  --space-1: 6px;
+  --space-2: 10px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 36px;
+  --space-6: 52px;
 }
+
 
 /* Base Reset */
 * {
@@ -200,7 +224,8 @@ h3 {
 }
 
 .flowchart span {
-  background-color: #1b1b3a;
+  background-color: var(--muted-teal);
+  color: var(--blush);
   padding: 0.5rem 1rem;
   border-radius: 4px;
 }

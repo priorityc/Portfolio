@@ -67,44 +67,6 @@
           <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a>
           <a class=nav__link href="contact.html">Contact</a>
         </div>
-
-             <!-- <div class="form-heading">
-        <a href="https://github.com/priorityc?tab=repositories">
-          <i
-            class="fa fa-github-square"
-            style="font-size: 48px; color: var(--color-secondary-darker)"
-          ></i
-        ></a>
-        <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/">
-          <i
-            class="fa fa-linkedin-square"
-            style="font-size: 48px; color: var(--color-primary-darker)"
-          ></i>
-        </a>
-        <i
-          class="fa fa-facebook-square"
-          style="font-size: 48px; color: var(--color-tertiary-darker)"
-        ></i>
-      </div> -->
-
-        <!-- Third container serch bar -->
-        <!-- <div>
-          <input id="search-bar" type="text" placeholder="Search.." />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="features-icon"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="m15.75 15.75-2.489-2.489m0 0a3.375 3.375 0 1 0-4.773-4.773 3.375 3.375 0 0 0 4.774 4.774ZM21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
-            />
-          </svg>
-        </div> -->
       </div>
     </nav>
    
@@ -112,9 +74,7 @@
 <header class="hero-header gradient-background">
   <div class="hero-text">
      <h1><span class="highlight">Hi, I'm  Petya.</span></h1>
-     <div class="portrait-wrapper">
-        <img src="./media/me.jpg" alt="Photo of Petya">
-      </div>
+     
       <div class="hero-text-align">
       <h2 class="headertext">Here in Petya’s Digital Care — I design and develop Intelligent Web & App Solutions focusing on emotion, scalability and user experiance.</h2>    
       <h5>"I design and develop digital experiences that align business goals with user emotions."</h5>
@@ -151,15 +111,16 @@ HTML the skeleton</span> →
 
     <h3>About Me</h3>
 <div class="about-cont">
-  <img class="about-img" src="./media/avatar.webp" alt="programming image">
-  <!-- Image and text container -->
+<div class="portrait-wrapper">
+        <img src="./media/me.jpg" alt="Photo of Petya">
+      </div>  <!-- Image and text container -->
   <div class="about-col">
     <p class="about-bio">Hi, I’m Petya — Founder and Creative Director of Petya’s Digital Care.
     For the past six years, I’ve immersed myself in programming, analysis, and management, building a strong foundation in IT design and development. During my final year of study, I established my creative studio to empower small business owners who want to stand out in the digital world.</p></p>
   
     <!-- Buttons -->
   <div>
-    <button class="btn-secondary btn-color" onclick="downloadCV()">⬇️ Download CV</button>
+    <button class=" btn btn-secondary btn-color" onclick="downloadCV()">⬇️ CV</button>
     <a id="cvLink" class="btn" href="./media/cv_PD.docx" download="cv_PD.docx" style="display: none;"></a>
     <a href="about.html" class="btn btn-primary a-about">Learn More</a>
   </div>
@@ -172,34 +133,25 @@ HTML the skeleton</span> →
 <section class="unique" aria-labelledby="unique-title">
   <div class="container">
     <h3>What makes me unique</h3>
-
     <p class="unique-subline">
       I design digital experiences that align business goals with human emotions.
     </p>
 
     <div class="unique-grid">
       <!-- Card 1 -->
-      <article class="unique-card">
-        <div class="icon" aria-hidden="true">
-          <!-- Lightbulb icon -->
-          <svg viewBox="0 0 24 24" role="img" aria-label="Emotionally Intelligent Design">
-            <path d="M9 21h6v-1H9v1zm3-20a7 7 0 0 0-4.9 11.9c.81.84 1.4 1.62 1.7 2.42h6.4c.3-.8.89-1.58 1.7-2.42A7 7 0 0 0 12 1zm0 2a5 5 0 0 1 3.5 8.6c-.98 1.02-1.67 1.96-1.98 2.9h-3.05c-.31-.94-1-1.88-1.98-2.9A5 5 0 0 1 12 3z" />
-          </svg>
-        </div>
-        <h3 class="unique-title">Emotionally intelligent design</h3>
+       <article>
+      <div class="unique-card">
+    <img src="./media/inteligent.jpg" alt="Inteligent design" class="unique-img">
+       <h3 class="unique-title">Emotionally intelligent design</h3>
         <p class="unique-text">
           I create digital experiences that connect on a human level, turning brands into stories people feel.
         </p>
+        </div>
       </article>
 
       <!-- Card 2 -->
       <article class="unique-card">
-        <div class="icon" aria-hidden="true">
-          <!-- Bar chart icon -->
-          <svg viewBox="0 0 24 24" role="img" aria-label="Precise Business Analysis">
-            <path d="M3 21h18v-2H3v2zM6 17h3V7H6v10zm5 0h3V4h-3v13zm5 0h3V10h-3v7z" />
-          </svg>
-        </div>
+    <img src="./media/analysis.jpg" alt="Buisiness analysis" class="unique-img">
         <h3 class="unique-title">Precise business analysis</h3>
         <p class="unique-text">
           Every project begins with deep analysis of goals, ensuring solutions are strategic and impactful.
@@ -208,12 +160,7 @@ HTML the skeleton</span> →
 
       <!-- Card 3 -->
       <article class="unique-card">
-        <div class="icon" aria-hidden="true">
-          <!-- Target icon -->
-          <svg viewBox="0 0 24 24" role="img" aria-label="Business-Aligned Creativity">
-            <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm0-12a4 4 0 1 0 4 4 4 4 0 0 0-4-4zm7-3-2 2 1 1 2-2 2 2 1-1-2-2 2-2-1-1-2 2-2-2-1 1 2 2z" />
-          </svg>
-        </div>
+        <img src="./media/creativity.jpg" alt="Creativity" class="unique-img">
         <h3 class="unique-title">Business‑aligned creativity</h3>
         <p class="unique-text">
           I bridge technical innovation with brand storytelling to drive growth, trust, and adoption.
@@ -221,18 +168,12 @@ HTML the skeleton</span> →
       </article>
 
       <!-- Card 4 -->
-      <article class="unique-card">
-        <div class="icon" aria-hidden="true">
-          <!-- Lock icon -->
-          <svg viewBox="0 0 24 24" role="img" aria-label="Dedication to Detail">
-            <path d="M12 2a5 5 0 0 0-5 5v3H5v12h14V10h-2V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 0 1 6 0v3H9zm3 4a2 2 0 0 0-2 2c0 .91.62 1.68 1.45 1.93V18h1.1v1.93A2 2 0 0 0 14 16a2 2 0 0 0-2-2z" />
-          </svg>
-        </div>
+      <!-- <article class="unique-card">
         <h3 class="unique-title">Dedication to detail</h3>
         <p class="unique-text">
           From code to concept, I work with care, precision, and a commitment to excellence.
         </p>
-      </article>
+      </article> -->
     </div>
   </div>
 </section>
@@ -683,7 +624,7 @@ Write your message here.
         <a href="https://github.com/priorityc?tab=repositories">
           <i
             class="fa fa-github-square"             
-            style="font-size: 48px; color: lightpink"
+            style="font-size: 48px; color: #E8C7C7"
 "
 
           ></i
@@ -691,12 +632,12 @@ Write your message here.
         <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/">
           <i
             class="fa fa-linkedin-square"
-            style="font-size: 48px; color: skyblue"
+            style="font-size: 48px; color:  #9aafee"
           ></i>
         </a>
         <i
           class="fa fa-facebook-square"
-          style="font-size: 48px; color: var(--color-highlight)"
+          style="font-size: 48px; color: #12286a"
         ></i>
       </div>
       
