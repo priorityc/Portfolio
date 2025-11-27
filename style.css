@@ -36,15 +36,6 @@
   --space-6: 52px;
 }
 
-/* :root {
- --lavander: #3B0270;
- --sky-blue: #3A9BC2;
-  --soft-pink: #E9B3FB;
-  --off-white: FFF1F1;
-
-  --charcoal: #4B4B4B;
-   --off-white: #FDF3FF;
-} */
 body, html {
     width: 100vw;
 }
@@ -65,7 +56,6 @@ body {
 /* NAVIGATION */
 .mobile-header {
   width: 100%;
-  /* background-color: #fdfaf6; */
   color: var(--charcoal);
   display: flex;
   justify-content: space-between;
@@ -81,7 +71,6 @@ body {
   stroke: var(--charcoal);
   width: 40px;
   height: 40px;
-  /* margin-bottom: 24px; */
 }
 .bar1,
 .bar2,
@@ -218,15 +207,7 @@ body {
 
 /*  */
 /* hero  */
-.gradient-background {
-  /* background: linear-gradient(300deg,   #1f3f9e, #7E57C2,#F4F3FF);
-  background-size: 180% 180%; */
-  /* background-image: ull("./media/computer");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  animation: gradient-animation 18s ease infinite; */
-}
+
 
 
 @keyframes gradient-animation {
@@ -264,9 +245,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
    height: 50%;
-/* background: linear-gradient(135deg, #1a1f4b, #6a5acd, #f7c6c7); */
-/* background: linear-gradient(120deg, #008080, #40e0d0, #ffb07c, #ff6f61); */
-/* background: linear-gradient(135deg, var(--muted-teal), var(--lavander), var(--blush));  background-size: cover; */
   animation: gradient-animation 18s ease infinite;
   position: relative;
   padding: clamp(1.5rem, 5vw, 4rem);
@@ -402,13 +380,6 @@ h3 {
     font-size: clamp(25px, 4vw, 40px);
     margin-bottom: 32px;
     color: var(--muted-teal);
-/*     
-  font-family: var(--font-serif);
-  color: var(--heading);
-  font-weight: 500;
-  letter-spacing: 0.2px;
-  margin: 0 0 var(--space-2);
-  font-size: clamp(28px, 5vw, 40px); */
 
 }
 
@@ -492,25 +463,6 @@ h3 {
   padding: var(--space-6) var(--space-4);
 }
 
-/* .container {
-   background: var(--blush);
-
-} */
-
-/* .container {
-  max-width: 1120px;
-  margin: 0 auto;
-} */
-
-/* Heading + subline */
-/* .unique h2 {
-  font-family: var(--font-serif);
-  color: var(--heading);
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  margin: 0 0 var(--space-2);
-  font-size: clamp(28px, 5vw, 40px);
-} */
 
 .unique-subline {
   margin: 0 0 var(--space-5);
@@ -564,9 +516,6 @@ h3 {
   box-shadow: 0 10px 28px rgba(0,0,0,0.09);
   border-color: var(--soft-gold);
 }
-
-/* Responsive steps */
-/* >= 640px: two columns */
 
 
 /* Optional accent variants per card (assign with nth-child) */
@@ -719,231 +668,6 @@ color: var(--cream);
 
 /*  */
 
-/* Base styles */
-/* .project-wrapper {
-  margin-bottom: 2rem;
-}
-.projects-heading{
-  text-transform: uppercase;
-  text-align: left;
-  margin: 1em;
-  font-weight: 300;
-  font-family: "Playfair Display serif";
-}
-.projects-section {
-  display: flex;
-  flex-direction: column;
-  padding: var(--space-6) var(--space-4);
- 
-  gap: 2rem;
-  
-
-  
-}
-.frame {
-  width: 100%;
-  height: 200px;
-  width: 100%;
-  height: auto;
-
-}
-
-.project-card {
-  
-  border-radius: 12px 12px 0 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 1rem 0 1rem;
-  margin: 0 auto;
-  width: 100%;
-  height: 400px;
-  max-width: 100%;
-  
-
-
-}
-.project-card li {
- list-style-type: none;
-}
-.tech-stack {
-   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding: 0;
-  margin: 0.5rem 0;
-
-}
-
-.tech-stack li {
- background-color: var(--moonstone);
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  list-style: none;
-}
-
-.project-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 12px var(--sky-blue);
-}
-
-.project-img,
-.project {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-bottom: 1px solid #eee;
-}
-
-.project-info {
- 
-
-  padding: 1rem;
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  line-height: 1.6;
-  text-align: left;
-
-}
-.project-info li {
-  text-decoration: none;
-}
-
-.project-title {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  font-family: "Playfair Display serif";
-
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
-  color: var(--sky-blue);
-
-}
-
-.project-description {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.learn-more-btn,
-.pink-link {
-  margin-right: 0.5rem;
-  margin-top: 0.5rem;
-  display: inline-block;
-}
-
-.learn-more-btn {
-  display: inline-block;
-  background-color: var(--lavender);
-  color: var(--white);
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.learn-more-btn:hover {
-  background-color: var(--sky-blue);
-}
-.pink-link {
-  color: var(--soft-pink);
-  text-decoration: underline;
-  font-weight: 300;
-}
-.commerce-card {
-  border-radius: 8px;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 8px var(--lavender);
-  margin-bottom: 1rem;
-}
-.project-img-commerce {
-  max-width: 100%;
-} */
-/* @media (min-width: 600px) {
-  .projects-section {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 900px) {
-  .projects-section {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .commerce-card {
-    grid-column: span 2; /* Make it wider on desktop */
-  
-
-/* .projects-section {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  padding: 2rem 1rem;
-  background-color: var(--off-white);
-}
-
-.project-card {
-  background-color: var(--white);
-  border-radius: 8px;
-  box-shadow: 0 0 8px var(--lavender);
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.project-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 12px var(--sky-blue);
-}
-
-.project-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.project-info {
-  padding: 1rem;
-  color: var(--charcoal);
-}
-
-.project-title {
-  color: var(--lavender);
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-description {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.tech-stack {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tech-stack li {
-  background-color: var(--sky-blue);
-  color: var(--white);
-  padding: 0.3rem 0.6rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-}
-
-.pink-link {
-  color: var(--soft-pink);
-  text-decoration: underline;
-  font-weight: bold;
-}
-.ecommerce-img {
-  max-width: 320px;
-} */
- /* The design process section  */
 .design-process {
   margin: 1rem;
   position: relative;

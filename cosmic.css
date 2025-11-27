@@ -182,14 +182,13 @@ body {
   background: #fff;
 }
 
-.hero h1 {
+/* .hero h1 {
  font-family: 'Playfair Display serif';
   font-size: clamp(2.8rem, 5vw, 3rem);
   margin-bottom: 0.5rem;
   font-weight: 400;
   color: #3B0270;
-  text-transform: capitalize;
-}
+} */
 
 .subtitle {
   font-style: italic;
