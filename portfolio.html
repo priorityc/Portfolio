@@ -3,8 +3,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="cosmic.css" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="portfolio.css" />
+    <link rel="stylesheet" href="style.css" />
+
 
 
 
@@ -63,106 +64,275 @@
       </div>
     </nav>
     <!-- HEADER -->
-      <header class="hero">
-    <h1>YORVIK PARKING APP</h1>
-    <p class="subtitle">“Dock your longboat with ease — a modern parking solution for the City of York.”</p>
-    <!-- Video demo -->
-    <div class="cta-video">
-       <h3>⚙️ Video demo</h3>
-       <div class="video-card">
-        <div class="project-card-video">
-          <video class="project-video" muted loop preload="metadata">
-            <source src="./media/Yorvik-demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-            <button class="play-button" aria-label="Play Demo">▶</button>
-        <div class="project-overlay">
-          <h3 class="project-title">Yorvik Parking App video demo</h3>
+
+      <!-- Header -->
+<header class="hero-header">
+  <div class="hero-text">
+     <h1><span class="highlight">Hi, I'm  Petya.</span></h1>
+     
+      <div class="hero-text-align">
+      <h2 class="headertext">Here in Petya’s Digital Care — I design and develop Inteligent Web & App Solutions focusing on emotion, scalability and user experiance.</h2>    
+      <h5>"I design and develop digital experiences that align business goals with user emotions."</h5>
+        <div class="hero-btn">
+          <button class="btn btn-primary" onclick="downloadCV()">View Resume</button>
+          <a id="cvLink" class='btn' href="./media/cv_PD.docx" download="cv_PD.docx" style="display: none;"></a>
+          <button id="openModal" class="btn btn-secondary">Hire Me</button>
         </div>
-       </div>
-      <div>
+      </div>
+  </div>
+
+      
+  </header>
+    <!-- Header -->
+  
+     
+  <!-- New content  -->
+
+  <section class="card">
+    <div class="left-col frame-blue">
+      <img src="./media/parking-qr.png" alt="Yorvik parking app image" class="img-mobile">
+    </div>
+    <div class="right-col">
+      <h3>Yorvik parking app</h3>
+      <p>The Yorvik Parking App is a mobile-first prototype designed to help users register and book longboat parking spaces in the historic city of York. Built with stakeholder collaboration at its core, the app transforms a niche service into a seamless digital experience — from registration to QR-based ticketing.</p>
+      <button class="btn btn-primary">Description</button>
+    </div>
+    <!--  -->
+  
+
+  </section>
+     <!-- 🔽 Hidden content goes here -->
+  <div class="case-content hidden">
+    <div class="cta-video">
+                <h3>⚙️ Video demo</h3>
+                <div class="video-card">
+                  <div class="project-card-video">
+                    <video class="project-video" muted loop preload="metadata">
+                      <source src="./media/Yorvik-demo.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <button class="play-button" aria-label="Play Demo">▶</button>
+                      <div class="project-overlay">
+                        <h3 class="project-title">Yorvik Parking App video demo</h3>
+                      </div>
+                  </div>
+                </div>
+              </div>
+        
+          
+  <div >
+    <h4>Context & Challenge</h4>
+    <p>Developed through close stakeholder collaboration, it transforms a niche service into a seamless digital experience—from user registration to QR-based ticketing.</p>
+    <p>To guide the company I developed a detailed report, providing stakeholders with clear recommendations for the technicical solution they needed.</p>
+
+</div>
+<div>
+    <h4>Process & Tools</h4>
+    <ul>
+      <li>Discovery: Stakeholder usecase</li>
+      <li>Design: Figma wireframes</li>
+      <li>Development: React Native + Express.js</li>
+      <li>Integration: Expo Go</li>
+    </ul>
+</div>
+<div>
+<h4>Key Features</h4>
+      <ul>
+        <li>Maintain a list of parking berths with visual map</li>
+        <li>Real time data parking availability</li>
+        <li>Generating QR code berthing permit</li>
+        <li>Acount based previous permits views.</li>
+      </ul>
+    </div>
+<div>
+    <h4>Outcome</h4>
+    <p>Test users reported feeling more guided and relaxed — a reflection of emotionally intelligent UX.</p>
+    <p>As a result, stakeholders gained confidence in selecting the right technology and investing resources effectively to drive full-scale application development.
+
+  </div>
+  </div>
+
+
+
+
+  <section class="card">
+     <div class="left-col frame-gold">
+      <img src="./media/FoodApp-mobile.png" alt="Yorvik parking app image" class="img-mobile">
+    </div>
+    <div class="right-col">
+      <h3>Food Web App</h3>
+      <p>The Yorvik Parking App is a mobile-first prototype designed to help users register and book longboat parking spaces in the historic city of York. Built with stakeholder collaboration at its core, the app transforms a niche service into a seamless digital experience — from registration to QR-based ticketing.</p>
+      <button class="btn btn-primary">Description</button>
+      <a href="https://priorityc.github.io/FoodApp/" class="btn learn-more-btn pink-link">Demo</a>
+    </div>
+  </section>
+
+     <!-- 🔽 Hidden content goes here -->
+  <div  class="case-content hidden">
+    <div>
+      <img src="./media/FoodApp-Tablet.png" alt="FoodApp-Tablet view" class="img-desktop">
+      <img src="./media/Homescreen.png" alt="Home screen view" class="img-desktop">
 
     </div>
-  </header>
-  <!-- New content  -->
-  
-  <section id="projects-portfolio" class="project-grid-portfolio">
-    <article class="project-card-portfolio">
-      <div class="image-frame-portfolio">
-      <img src="./media/parking-qr.png" alt="Yorvik Parking App" class="project-mobile"/>
-      </div>
-      <div class="project-info">
-        <h2>Yorvik Parking App</h2>
-        <p>The Yorvik Parking App is a mobile-first prototype designed to help users register and book longboat parking spaces in the city of York. Developed through close stakeholder collaboration, it transforms a niche service into a seamless digital experience—from user registration to QR-based ticketing.
-This functional prototype was built to help stakeholders visualize the service in action before committing to full-scale development. It serves as both a proof of concept and a strategic planning tool.
-Libraries and frameworks were selected based on stakeholder priorities, team familiarity, and long-term scalability. Each tool was tested to ensure optimal performance and smooth integration.
-</p>
-        <p class="tech-stack">React • Context API • CSS • Formspree</p>
-        <a href="#" class="case-button">View Case Study →</a>
-      </div>
-    </article>
+    
+          
+  <div >
+    <h4>Context & Challenge</h4>
+    <p>The Food Web Application was built using React.js for its modular architecture and dynamic UI capabilities, paired with CSS Modules for scoped styling and maintainability. Real-time recipe data is sourced from the Spoonacular API, with dietary filters and nutrition info integrated seamlessly.</p>
+    <p>Busy working people needed a web application to plan daily meals whilist stay healthy. The application solves this demand with updating receipts plan that users can download.</p>
+    <img src="./media/MobileFood.png" alt="Mobile view" class="img-mobile">
 
-    <article class="project-card-portfolio">
-      <div class="image-frame-portfolio">
-      <img src="./media/FoodApp-Tablet.png" alt="Food Web App" class="project-tablet" />
-       <img src="./media/FoodApp-mobile.png" alt="Food Web App" class="project-mobile" />
-
-      </div>
-      <div class="project-info">
-        <h2>Food Web App</h2>
-       <p>The Food Web Application was built using React.js for its modular architecture and dynamic UI capabilities, paired with CSS Modules for scoped styling and maintainability. Real-time recipe data is sourced from the Spoonacular API, with dietary filters and nutrition info integrated seamlessly.</p>
-    </p>
-    <p>
-   Users browse or search for meals based on dietary preferences, ingredients, or cooking time.Selected recipes are added to a weekly planner, with drag-and-drop functionality and calendar integration.</li>
-    Shoping list generation-The app compiles ingredients from selected meals into a categorized shopping list, optimized for mobile use that user can easy save.
-   </p>
-        <p class="tech-stack">React • Spoonacular API • Formspree</p>
-        <a href="#" class="case-button">View Case Study →</a>
-      </div>
-    </article>
-
-    <article class="project-card-portfolio">
-      <div class="image-frame-portfolio">
-      <img src="./media/blackHole.png" alt="Black Hole Landing Page" class="project-desktop" />
-      </div>
-      <div class="project-info">
-        <h2>Black Hole Landing Page</h2>
- <p>
-      A glowing title and starry background set the tone of the Black hole event landing page, with smooth entrance Black hole animations that draw users attention..
-        The scroll-triggered sections reveal stargazing tips, celestial facts, and themed visuals — each styled with gradients and soft transitions.
-        A final section encourages users to explore further or connect.
-    </p>
-    <p>
-        Styling include Animations, gradients and glowing effects that attract more visitors.
-        Layout is responsive across different devices and accessibility supports different users with screen readers and keyboard navigation</td></tr>
-        Scrowl-triggered animations and dynamic section reveals instantt interactivity.
-    </p>        <p class="tech-stack">JavaScript • HTML • CSS</p>
-        <a href="#" class="case-button">See Demo →</a>
-      </div>
-    </article>
-
-    <article class="project-card-portfolio">
-      <div class="image-frame-portfolio">
-      <img src="./media/Home.png" alt="Food Web App" class="project-desktop" />
-      <!-- <img src="./media/ShopPage.png" alt="Food Web App" class="project-mobile" /> -->
-      </div>
-      <div class="project-info">
-        <h2>Cosmic Care e-commerce</h2>
-   <p>
-      Safely test the checkout using <code>?demo=true</code>. No real payment is processed.
-      The frontend detects demo mode and sends mock data to the backend, which returns a Stripe test session.
-    </p>
-    <h3>How?</h3>
+</div>
+<div>
+    <h4>Process & Tools</h4>
     <ul>
-      <li>Persists across navigation and reloads using localStorage</li>
-      <li>Sends mock product data to the backend</li>
-      <li>Returns a Stripe test session with no real payment required</li>
-      <li>Visually mirrors the real checkout flow for authenticity</li>
-    </ul>        <p class="tech-stack">React • Spoonacular API • Formspree</p>
-        <a href="#" class="case-button">View Case Study →</a>
-      </div>
-    </article>
+      <li>Discovery: Reserch the need for meal plan solution for busy individuals</li>
+      <li>Design: Figma wireframes</li>
+      <li>Development: React + Spoonacular API</li>
+      <li>Integration: Vite, GitHub</li>
+    </ul>
+</div>
+<div>
+<h4>Key Features</h4>
+      <ul>
+        <li>Search functionality for ingredient based receipts filter by vegan, vegeterian or Krtogenic categories</li>
+        <li>Weekly meal plan generate filter by calories, diet plan.</li>
+        <li>Download shoping list</li>
+      </ul>
+    </div>
+<div>
+    <h4>Outcome</h4>
+    <p>The app is build as a fight fidelity prototype and it is still under development</p>
+  </div>
+  </div>
+
+  <section class="card">
+     <div class="left-col frame-lavander">
+      <img src="./media/black_hole.png" alt="Yorvik parking app image" class="img-mobile">
+    </div>
+    <div class="right-col">
+      <h3>Black Hole Event-landing page</h3>
+      <p>The Yorvik Parking App is a mobile-first prototype designed to help users register and book longboat parking spaces in the historic city of York. Built with stakeholder collaboration at its core, the app transforms a niche service into a seamless digital experience — from registration to QR-based ticketing.</p>
+       <button class="btn btn-primary">Description</button>
+      <a href="https://priorityc.github.io/stargazing-landing-page/" class="btn learn-more-btn pink-link">Demo</a>
+
+    </div>
   </section>
+
+    <!-- 🔽 Hidden content goes here -->
+  <div class="case-content hidden">
+    <div>
+      <img src="./media/Bhole.png" alt="Black hole-Tablet view" class="img-desktop">
+
+    </div>
+    
+          
+  <div >
+    <h4>Context & Challenge</h4>
+    <p>Immersive stargasing black hole event landing page build to atrach more event attendance with marketing purpose</p>
+    <p>The museums often lack of clear marketing visuals to attract more event attendance. The Black hole landing page build more leads to sale subscription for event in the museum.</p>
+    <img src="./media/main.png" alt="Home screen view" class="img-desktop">
+
+</div>
+<div>
+    <h4>Process & Tools</h4>
+    <ul>
+      <li>Discovery: Reserch the need for atractive visuals describing the events</li>
+      <li>Design: Figma wireframes</li>
+      <li>Development: HTML + CSS +Animations + JavaScript</li>
+      <li>Integration: GitHub</li>
+    </ul>
+</div>
+<div>
+<h4>Key Features</h4>
+      <ul>
+        <li>Immediate grap of user attention with Black hole simulation hero section asking users to register for the event.</li>
+        <li>Event description and workshop gallery section for all ages</li>
+        <li>Save my seat section and registartion form that simulates user details falling into the black hole.</li>
+      </ul>
+    </div>
+<div>
+    <h4>Outcome</h4>
+    <p>The landing page targets sciance events in museums or other organisations and can be modifyed to serve a different theme.</p>
+  </div>
+  </div>
+  <section class="card">
+     <div class="left-col frame-blue">
+      <img src="./media/Home.png" alt="Yorvik parking app image" class="img-desktop">
+    </div>
+    <div class="right-col">
+      <h3>Cosmic Care e-commerce shop</h3>
+      <p>The Yorvik Parking App is a mobile-first prototype designed to help users register and book longboat parking spaces in the historic city of York. Built with stakeholder collaboration at its core, the app transforms a niche service into a seamless digital experience — from registration to QR-based ticketing.</p>
+      <button class="btn btn-primary">Description</button>
+              <a href="cosmiccareproject.html" class="btn learn-more-btn pink-link">Learn More</a>
+
+    </div>
+  </section>
+
+<!-- 
+  
+  
+              <div class="cta-video">
+                <h3>⚙️ Video demo</h3>
+                <div class="video-card">
+                  <div class="project-card-video">
+                    <video class="project-video" muted loop preload="metadata">
+                      <source src="./media/Yorvik-demo.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                    <button class="play-button" aria-label="Play Demo">▶</button>
+                    <div class="project-overlay">
+                      <h3 class="project-title">Yorvik Parking App video demo</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+              </div>
+           </div>
+
+    <div class="right-column">
+      <h3>Context & Challenge</h3>
+      <p>Developed through close stakeholder collaboration, it transforms a niche service into a seamless digital experience—from user registration to QR-based ticketing.</p>
+      <p>To guide the company I developed a detailed report, providing stakeholders with clear recommendations for the technicical solution they needed.</p>
+      <h3>Goals & Strategy</h3>
+      <p>Prioritized clarity and simple memorable UX flow  using soft color cues and iconography.</p>
+      </div>
+      <div>
+      <h3>Process & Tools</h3>
+      <ul>
+        <li>Discovery: Stakeholder interviews based on use case scenario</li>
+        <li>Design: Figma wireframes</li>
+        <li>Development: React Native + Express.js to mimic fully function application.</li>
+        <li>Integration: Expo Go to showcase to the stakeholders</li>
+      </ul>
+     
+      <h3>Key Features</h3>
+      <ul>
+        <li>Maintain a list of parking berths with visual map</li>
+        <li>Real time data parking availability</li>
+        <li>Generating QR code berthing permit</li>
+        <li>Acount based previous permits views.</li>
+      </ul>
+      </div>
+
+      <div>
+      <h3>Outcome & Impact</h3>
+      <p>Test users reported feeling more guided and relaxed during their experiance — a reflection of emotionally intelligent UX.</p>
+      <p>- As a result, stakeholders gained confidence in selecting the right technology and investing resources effectively to drive full-scale application development.
+
+Would you like me to expand this into a full impact statement (e.g., “This increased confidence accelerated decision-making and reduced project risk”), so it reads like a strong portfolio case study outcome?
+</p>
+      <h3>Reflection</h3>
+      <p>It reinforced my commitment to designing experiences that guide users with clarity, empathy, and calm.</p>
+
+      <button class="demo-button">View Prototype →</button>
+      </div>
+    </div>
+  </article>
+</section> -->
+
+
 
   <!-- <aside class="care-code">
     <h3>Care Code Manifesto</h3>
@@ -535,7 +705,6 @@ Write your message here.
     </form>
   </div>
 </div>
-    <script src="app.js"></script>
   <script src="appPortfolio.js"></script>
     </body>
 </html>

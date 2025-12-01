@@ -96,7 +96,7 @@ headerObserver.observe(header);
   const openBtn = document.getElementById('openModal');//selects the button
   const modal = document.getElementById('hireModal');//select the modal
   const closeBtn = modal.querySelector('.close-modal');//select the btn that closes the modal
-
+console.log(openBtn);
   openBtn.addEventListener('click', () => {
     modal.classList.remove('hidden');
   });

@@ -231,7 +231,7 @@
   border-radius: 5px;
 }
 
-.image-frame-portfolio {
+/* .image-frame-portfolio {
   background-color: var(--light-blue);
   border: 8px;
   display: flex;
@@ -240,48 +240,56 @@
   width: 100%;
   height: auto;
  
-}
-
-.project-grid-portfolio {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
-}
-
-.project-card-portfolio {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.project-mobile {
-  width: 40%;
-  height: auto;
-}
-
-.project-tablet {
-  width: 40%;
-  height: auto;
-}
-
-.project-desktop {
+} */
+/* 
+.image-frame-portfolio {
   width: 100%;
-  height: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+} */
+.card {
+ padding: 1em;
+ margin: 1rem
 }
-.project-info {
-  padding: 1rem;
-  width: 50%;
+.img-mobile {
+  max-width: 30%;
+  border-radius: 8px;
 }
 
-.project-info h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
+.left-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+.img-desktop {
+  width: 80%;
+  border-radius: 8px;
+}
+.frame-blue {
+  background: var(--light-blue);
+  display: flex;
+  justify-content: center;
+}
+.frame-gold {
+  background: var(--soft-gold);
+}
+.frame-lavander {
+  background: var(--lavander);
 }
 
+
+
+.hidden {
+  display: none;
+}
+
+
+
+
+
+/*  */
 .tech-stack {
   font-size: 0.9rem;
   color: #555;
@@ -350,11 +358,12 @@
 }
 /*  */
 /* Base styles */
+
 .hero h1 {
-   font-family: var(--font-serif);
+  font-family: var(--font-sans);
   font-size: clamp(2.8rem, 5vw, 3rem);
   margin-bottom: 0.5rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--muted-teal);
 }
 /* h2 {
@@ -364,49 +373,87 @@
   margin: 1rem auto;
 } */
 .cta-video {
-  padding: 1.5rem;
-  background-color: var(--charcoal);
-  font-family: 'Inter', sans-serif;
-  color: var(--charcoal);
-  max-width: 900px;
-  margin: 0 auto;
+  grid-column: span 2; /* if inside a grid */
+  padding: 1rem;
+  background: #f0f4ff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.1);
 }
+
 
 .cta-video h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  color: #6c5ce7;
   margin-bottom: 1rem;
-  color: var(--accent, #7e57c2);
 }
 
-/* Video card container */
+/* Video container */
 .video-card {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  background-color: #fff;
-}
-
-/* Video wrapper */
-.project-card-video {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  background-color: #000;
+  max-width: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
 }
 
-/* Video element */
+/* Video itself */
 .project-video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: none;
+  height: auto;
+  display: block;
+  border-radius: 12px;
 }
 
-/* Overlay title */
+/* Play button */
+.play-button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: #6c5ce7;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.play-button:hover {
+  background: #4834d4;
+}
+
+/* Overlay text */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(108, 92, 231, 0.2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-card-video:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Overlay title
 .project-overlay {
   position: absolute;
   bottom: 0;
@@ -420,10 +467,10 @@
 .project-title {
   font-size: 1rem;
   font-weight: 500;
-}
+} */
 
 /* Play button */
-.play-button {
+/* .play-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -436,7 +483,7 @@
   font-size: 1.25rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
+} */
 
 .play-button:hover {
   background-color: var(--accent-hover, #5e3ea1);
@@ -444,7 +491,7 @@
 
 /* PROJECT SECTION */
 /* PHONE FRAME */
-.phone-frame {
+/* .phone-frame {
   background-color: rgb(34, 34, 36);;
   border-radius: 40px;
   padding: 1rem;
@@ -456,7 +503,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-}
+} */
 
 /* Optional notch or speaker */
 /* .phone-frame::before {
@@ -472,7 +519,7 @@
 } */
 
 /* Image inside phone */
-.yorvik-img {
+/* .yorvik-img {
   width: 100%;
   height: auto;
   border-radius: 15px;
@@ -480,7 +527,27 @@
 }
 .description-col {
     margin-left: 20px;
+} */
+
+.hidden {
+  display: none; /* hidden by default */
+  
 }
+
+/* When visible */
+.case-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: auto auto;         /* 2 rows */
+  grid-auto-flow: row;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-left: 3px solid #6c5ce7;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+
+
 /* LAZY LOADING  */
 .loaded {
   filter: blur(0);
@@ -765,7 +832,12 @@ textarea {
 
 /* Responsive tweaks */
 @media screen and (min-width: 600px) {
- 
+ .project-card {
+  display: flex;
+ }
+ .project-grid {
+  grid-template-columns: 1fr 1fr;
+ }
   .cta-video h3 {
     font-size: 1.5rem;
     max-width: 900px;
@@ -779,6 +851,16 @@ textarea {
     font-size: 1.5rem;
     padding: 1rem;
   }
+
+
+  .case-content {
+    grid-template-columns: 1fr 1fr; /* two columns */
+    gap: 3rem;
+    max-width: 80%;
+    margin: 1rem auto;
+   
+  }
+
   /* Project section */
   .description-stack {
     display: flex;
@@ -819,20 +901,22 @@ textarea {
   .desktop-header {
     display: block;
   }
-    .description-col {
-        margin-left: 50px;;
-    }
-    .project-grid-portfolio {
-      max-width: 1120px;
-      margin: 0 auto;
-    }
-   .project-card-portfolio{
-      max-width: 1120px;
-     flex-direction: row;
-     gap: 2em;
-    }
-    .image-frame-portfolio {
-      width: 50%;
-    }
+   .card {
+    display: flex;
+    gap: 1em;
+    max-width: 900px;
+    margin: 3rem auto;
+   }
+   .left-col {
+    max-width: 50%;
+   }
+    .right-col {
+    max-width: 50%;
+   }
+
+   .case-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   }
    
 }

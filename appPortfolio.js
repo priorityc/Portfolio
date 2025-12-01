@@ -1,4 +1,8 @@
 "use strict";
+// selecting el
+  const nav = document.querySelector('.desktop-header');
+  const header = document.querySelector('.hero-header');
+
 // Hamburger
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
@@ -21,8 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // NAVIGATION FADING 
 document.addEventListener("DOMContentLoaded", function () {
-  const nav = document.querySelector('.desktop-header');
-  const header = document.querySelector('.hero');
+
 
 
 const handleHover = function (e) {
@@ -76,7 +79,8 @@ const headerObserver =  new IntersectionObserver(stickyNav, {
   root: null,
   threshold: 0,
   rootMargin: `-${navHeight}px`,
-})
+});
+console.log(headerObserver);
 //observe for the header
 headerObserver.observe(header);
 });
@@ -135,5 +139,100 @@ const imgObserver = new IntersectionObserver(loadImg, {
 imgTargets.forEach(img=>imgObserver.observe(img));
 
  
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.querySelector(".project-video");
+    const playButton = document.querySelector(".play-button");
+
+    playButton.addEventListener("click", () => {
+      if (video.paused) {
+        video.play();
+        playButton.textContent = "⏸"; // change icon to pause
+      } else {
+        video.pause();
+        playButton.textContent = "▶"; // change icon back to play
+      }
+    });
+  });
+
+  // TOggle project description
+
+// select all primary buttons aand for each btn attach click event
+document.querySelectorAll(".btn.btn-primary").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".card");
+    const section = card.nextElementSibling; // hidden content right after card
+    if (section && section.classList.contains("case-content")) {
+      section.classList.toggle("hidden");
+    }
+  });
+});
+
+
+
+
+ 
+  
+
+  
+
+  // Pull out projects from usecase,json
+  // Load JSON file
+// Load JSON file
+// fetch('./usecase.json')
+//   .then(response => response.json())
+//   .then(data => {
+//     const project = data.projects.find(p => p.id === "yorvik-parking-app");
+// console.log(project);
+//     // Title & subtitle
+//     document.querySelector('.hero-header h2').textContent = project.title;
+//     document.querySelector('.hero-header .subtitle').textContent = project.subtitle;
+
+//     // Video
+//     document.querySelector('.project-video source').src = project.videoDemo;
+
+//     // Context
+//     const contextContainer = document.querySelector('.case-text');
+//     project.context.forEach(text => {
+//       const p = document.createElement('p');
+//       p.textContent = text;
+//       contextContainer.appendChild(p);
+//     });
+
+//     // Process list
+//     const processList = document.createElement('ul');
+//     project.process.forEach(item => {
+//       const li = document.createElement('li');
+//       li.textContent = item;
+//       processList.appendChild(li);
+//     });
+//     contextContainer.appendChild(processList);
+
+//     // Features
+//     const featuresList = document.querySelector('.case-content ul');
+//     project.features.forEach(feature => {
+//       const li = document.createElement('li');
+//       li.textContent = feature;
+//       featuresList.appendChild(li);
+//     });
+
+//     // Outcome
+//     const outcomeContainer = document.querySelector('.case-content');
+//     project.outcome.forEach(text => {
+//       const p = document.createElement('p');
+//       p.textContent = text;
+//       outcomeContainer.appendChild(p);
+//     });
+
+//     // Reflection
+//     const reflection = document.createElement('p');
+//     reflection.textContent = project.reflection;
+//     outcomeContainer.appendChild(reflection);
+
+//     // Prototype link
+//     document.querySelector('.demo-button').href = project.prototypeLink;
+//   });
+
+  
 
    

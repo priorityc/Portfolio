@@ -244,7 +244,6 @@ body {
    background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-   height: 50%;
   animation: gradient-animation 18s ease infinite;
   position: relative;
   padding: clamp(1.5rem, 5vw, 4rem);

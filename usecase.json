@@ -1,0 +1,33 @@
+{
+  "projects": [
+    {
+      "id": "yorvik-parking-app",
+      "title": "Yorvik Parking App",
+      "subtitle": "Dock your longboat with ease — a modern parking solution for the City of York.",
+      "videoDemo": "./media/Yorvik-demo.mp4",
+      "context": [
+        "Developed through close stakeholder collaboration, it transforms a niche service into a seamless digital experience—from user registration to QR-based ticketing.",
+        "To guide the company I developed a detailed report, providing stakeholders with clear recommendations for the technical solution they needed."
+      ],
+      "goals": "Prioritized clarity and simple memorable UX flow using soft color cues and iconography.",
+      "process": [
+        "Discovery: Stakeholder interviews based on use case scenario",
+        "Design: Figma wireframes",
+        "Development: React Native + Express.js to mimic fully functional application",
+        "Integration: Expo Go to showcase to the stakeholders"
+      ],
+      "features": [
+        "Maintain a list of parking berths with visual map",
+        "Real-time data parking availability",
+        "Generating QR code berthing permit",
+        "Account-based previous permits views"
+      ],
+      "outcome": [
+        "Test users reported feeling more guided and relaxed during their experience — a reflection of emotionally intelligent UX.",
+        "As a result, stakeholders gained confidence in selecting the right technology and investing resources effectively to drive full-scale application development."
+      ],
+      "reflection": "It reinforced my commitment to designing experiences that guide users with clarity, empathy, and calm.",
+      "prototypeLink": "#"
+    }
+  ]
+}
