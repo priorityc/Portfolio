@@ -820,13 +820,10 @@ textarea {
 }
 
 /* Modal styling */
-
+/* Base overlay */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 50%;
+  inset: 0; /* shorthand for top/right/bottom/left:0 */
   background: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
@@ -834,51 +831,117 @@ textarea {
   z-index: 999;
 }
 
-.modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  max-width: 500px;
-  width: 90%;
-}
-
-.hidden {
+/* Hidden state */
+.modal-overlay.hidden {
   display: none;
 }
 
-
-.modal-content h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+/* Modal content */
+.modal-content {
+  background: #fff;
+  width: 90%;              /* mobile-first: almost full width */
+  max-width: 500px;        /* cap width for larger screens */
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  position: relative;
+  animation: fadeIn 0.3s ease-out;
 }
 
-.modal-content label {
+/* Close button */
+.close-modal {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Headings */
+.modal-content h2 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Form elements */
+.hireModal label {
   display: block;
   margin-top: 1rem;
   font-weight: 600;
+  color: #444;
 }
 
-.modal-content input,
-.modal-content textarea {
+.hireModal input[type="text"],
+.hireModal input[type="email"],
+.hireModal textarea {
   width: 100%;
-  padding: 0.6rem;
-  margin-top: 0.3rem;
+  padding: 0.75rem;
+  margin-top: 0.25rem;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
 }
-.modal-content {
-  position: relative;
+
+.hireModal input:focus,
+.hireModal textarea:focus {
+  border-color: #9aafee;
+  outline: none;
 }
-/* 
-.btn-primary {
-  background-color: #7b4eff;
+
+/* Feedback messages */
+.hireModal small {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #d9534f; /* red for errors */
+}
+
+/* Submit button */
+/* .btn-primary {
+  display: block;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background: #9aafee;
   color: #fff;
   border: none;
-  padding: 0.6rem 1.2rem;
   border-radius: 6px;
-  margin-top: 1rem;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s;
 } */
+
+.btn-primary:hover {
+  background: #7f96d6;
+}
+
+/* Social icons row */
+.form-heading {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.form-heading i {
+  transition: transform 0.2s;
+}
+
+.form-heading i:hover {
+  transform: scale(1.1);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 
 .close-modal {
   position: absolute;
@@ -1192,10 +1255,12 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
 
 /* Tablet & Desktop Enhancements */
 @media (min-width: 768px) {
-   .close-modal {
-    top: 0.5rem;
-    right: 0.5rem;
-    font-size: 1.25rem;
+  
+   .modal-content {
+    padding: 2rem;
+  }
+  .modal-content h2 {
+    font-size: 1.5rem;
   }
 
   .hero-header {
@@ -1360,6 +1425,10 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
   }
   .desktop-header {
     display: block;
+  }
+
+   .modal-content {
+    width: 70%;
   }
 
 .hero-header {
