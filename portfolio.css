@@ -905,7 +905,7 @@ textarea {
     display: flex;
     gap: 1em;
     max-width: 900px;
-    margin: 3rem auto;
+    margin: 5rem auto;
    }
    .left-col {
     max-width: 50%;
