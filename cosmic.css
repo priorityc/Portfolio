@@ -286,7 +286,15 @@ body {
   border-radius: 8px;
 }
 
-
+/* ARCHITECTURE */
+/* style.css */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #fdfaf6;
+  margin: 0;
+  padding: 1rem;
+  color: #222;
+}
 
 .architecture {
   display: flex;
@@ -345,7 +353,7 @@ body {
   display: inline-block;        /* Allows padding and background */
   margin: 4px 6px;              /* Spacing between tags */
 }
-
+}
 
 @media (min-width: 600px) {
   .cta-buttons {
