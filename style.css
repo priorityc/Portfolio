@@ -335,13 +335,17 @@ body {
 }
 
 .about-snapshot,
-.about-main,
-.about-skills {
+.about-main{
   background: #f9f9ff;
-  padding: 24px;
-  border-radius: 12px;
+  padding: 18px;
+  border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
+
+.about-skills {
+  padding: 10px;
+}
+
 
 .about-photo {
   /* width: 100%;
@@ -360,10 +364,39 @@ body {
   color: #4E47D0;
 }
 
-.snap-section ul,
-.skill-group ul {
+.snap-section ul{
   padding-left: 20px;
   margin-top: 8px;
+  
+}
+.skill-group ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: 1px solid var(--cream);
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 5px 5px #4e47d071;
+}
+.skill-group ul li{
+ display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  /* color: #444; */
+  color: var(--lavander);
+  font-weight: 600;
+  background-color: var(--blush);
+  border-radius: 8px;
+  padding: 8px;
+
+/* background-color: var(--lavander);
+list-style-type: none;
+margin-bottom: 1rem;
+color: var(--cream);
+padding: 10px;
+width: fit-content;
+ */
 }
 
 .about-main h2,
