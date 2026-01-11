@@ -1,7 +1,7 @@
 "use strict";
 
 const nav = document.querySelector('.sidenav');
-const header = document.querySelector('.hero-header');
+const header = document.querySelector('.hero');
 const dotContainer = document.querySelector('.dots');
 
 // Accessibility
@@ -219,129 +219,129 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // The slideshow 
-const loadImg = function (entries, observer) {
-  const [entry] = entries;
+// const loadImg = function (entries, observer) {
+//   const [entry] = entries;
 
-  if (!entry.isIntersecting) return;
+//   if (!entry.isIntersecting) return;
 
-  // Replace src with data-src
-  entry.target.src = entry.target.dataset.src;
+//   // Replace src with data-src
+//   entry.target.src = entry.target.dataset.src;
 
-  entry.target.addEventListener('load', function () {
-    entry.target.classList.remove('lazy-img');
-  });
+//   entry.target.addEventListener('load', function () {
+//     entry.target.classList.remove('lazy-img');
+//   });
 
-  observer.unobserve(entry.target);
-};
+//   observer.unobserve(entry.target);
+// };
 
-const imgObserver = new IntersectionObserver(loadImg, {
-  root: null,
-  threshold: 0,
-  rootMargin: "200px"
-});
+// const imgObserver = new IntersectionObserver(loadImg, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: "200px"
+// });
 
-// Select the slides
-const slides = document.querySelectorAll(".slide");
-const slider = document.querySelector('.slider');
-const btnLeft = document.querySelector('.slider__btn--left');
-const btnRight = document.querySelector('.slider__btn--right');
+// // Select the slides
+// const slides = document.querySelectorAll(".slide");
+// const slider = document.querySelector('.slider');
+// const btnLeft = document.querySelector('.slider__btn--left');
+// const btnRight = document.querySelector('.slider__btn--right');
 
-let currentSlide = 0;
-// define the max slide and when we reach we stop this is the lenght of the slides
-const maxSlide = slides.length;
+// let currentSlide = 0;
+// // define the max slide and when we reach we stop this is the lenght of the slides
+// const maxSlide = slides.length;
 
-// slider.style.transform = 'scale(0.5) translateX(-500px)';
-slider.style.overflow = 'visible';
+// // slider.style.transform = 'scale(0.5) translateX(-500px)';
+// slider.style.overflow = 'visible';
 
 
-const goToSlide = function (slide) {
-slides.forEach((s, index) => {
-  //0% , 100% , 200% will move the sides to the right
- s.style.transform=`translateX(${100 * (index- slide)}%)`;//0*100=0
-})
-}
+// const goToSlide = function (slide) {
+// slides.forEach((s, index) => {
+//   //0% , 100% , 200% will move the sides to the right
+//  s.style.transform=`translateX(${100 * (index- slide)}%)`;//0*100=0
+// })
+// }
 
-goToSlide (0);
+// goToSlide (0);
 
-const prevSlide = function () {
-  if (currentSlide === 0) {
-    currentSlide = maxSlide -1;
-  }else {
-    currentSlide --;
-  }
+// const prevSlide = function () {
+//   if (currentSlide === 0) {
+//     currentSlide = maxSlide -1;
+//   }else {
+//     currentSlide --;
+//   }
   
-  goToSlide(currentSlide);
-  activateDot(currentSlide);//activate dot for the current slide
+//   goToSlide(currentSlide);
+//   activateDot(currentSlide);//activate dot for the current slide
 
-}
+// }
 
-const nextSlide  = function () {
-   if (currentSlide===maxSlide-1) {
-    currentSlide=0;// going back into the begining of the slides
-  } else {
-    currentSlide++;
-  }
+// const nextSlide  = function () {
+//    if (currentSlide===maxSlide-1) {
+//     currentSlide=0;// going back into the begining of the slides
+//   } else {
+//     currentSlide++;
+//   }
  
-  goToSlide(currentSlide);
-  activateDot(currentSlide);//activate dot for the current slide
-}
+//   goToSlide(currentSlide);
+//   activateDot(currentSlide);//activate dot for the current slide
+// }
 
-btnRight.addEventListener('click', nextSlide);
-btnLeft.addEventListener('click', prevSlide);
+// btnRight.addEventListener('click', nextSlide);
+// btnLeft.addEventListener('click', prevSlide);
 
- //0*100=0
+//  //0*100=0
 
-   //-100% , 0% , 100% will move the sides to the right
-  // if current slide is 1 
-  //slide at position 0 is 0-1 = -1 than -1 * 100 =-100
-  //next slide is 1 so 1-1 = 0 * 100 = 0
-  //next slide is 2 -1 = 1 * 100 = 100
+//    //-100% , 0% , 100% will move the sides to the right
+//   // if current slide is 1 
+//   //slide at position 0 is 0-1 = -1 than -1 * 100 =-100
+//   //next slide is 1 so 1-1 = 0 * 100 = 0
+//   //next slide is 2 -1 = 1 * 100 = 100
 
-  const createDots = function () {
-    //loop over the slides /throw away variable that we dont need
-    slider.forEach(function(_, i) {
-      //adding el as a last child always
-      dotContainer.insertAdjacentHTML('beforeend',`<button class="dots__dot data-slide="${i}"></button>`)
+//   const createDots = function () {
+//     //loop over the slides /throw away variable that we dont need
+//     slider.forEach(function(_, i) {
+//       //adding el as a last child always
+//       dotContainer.insertAdjacentHTML('beforeend',`<button class="dots__dot data-slide="${i}"></button>`)
 
-    })
-  }
+//     })
+//   }
 
-  // Show the current slide style active
-  const activateDot = function (slide) {
-    //select all of the dots
-    document.querySelectorAll('.dots__dot').forEach((dot)=> {
-      //deactivate all of the dots
-      dot.classList.remove('dots__dot--active');
+//   // Show the current slide style active
+//   const activateDot = function (slide) {
+//     //select all of the dots
+//     document.querySelectorAll('.dots__dot').forEach((dot)=> {
+//       //deactivate all of the dots
+//       dot.classList.remove('dots__dot--active');
 
-      //add only this class to the one we are intrested in
-      //select the element with this class and with this data atribute set to 2
-      document.querySelector(`.dots__dot[data-slide = "${slide}"]`)
-      .classList.add('dots__dot--active');
+//       //add only this class to the one we are intrested in
+//       //select the element with this class and with this data atribute set to 2
+//       document.querySelector(`.dots__dot[data-slide = "${slide}"]`)
+//       .classList.add('dots__dot--active');
       
-    })
+//     })
     
-  }
+//   }
 
-  activateDot(0); //activates the first slide
+//   activateDot(0); //activates the first slide
   
-// The dot logic implementation
-document.addEventListener('keydown', function (e) {
+// // The dot logic implementation
+// document.addEventListener('keydown', function (e) {
 
  
-  if (e.key === "ArrowLeft") prevSlide();
-  e.key==="ArrowRight" && nextSlide();
+//   if (e.key === "ArrowLeft") prevSlide();
+//   e.key==="ArrowRight" && nextSlide();
 
-})
+// })
 
-// Event delegation attaching the event to the parent where event will happen
-dotContainer.addEventListener('click', function (e) {
-  //if the event targed contains this class
-  if (e.target.classList.contains('dots__dot')) {
-    currentSlide = Number(e.target.dataset.slide);
-    goToSlide(currentSlide);
-    activateDot(currentSlide);
-  }
-})
+// // Event delegation attaching the event to the parent where event will happen
+// dotContainer.addEventListener('click', function (e) {
+//   //if the event targed contains this class
+//   if (e.target.classList.contains('dots__dot')) {
+//     currentSlide = Number(e.target.dataset.slide);
+//     goToSlide(currentSlide);
+//     activateDot(currentSlide);
+//   }
+// })
 
 
 

@@ -71,7 +71,7 @@
     </nav>
    
     <!-- Header -->
-<section class="hero">
+<header class="hero">
   <div class="hero-text">
     <h1>
       Hi, I am Petya
@@ -83,12 +83,9 @@
   </div>
     <div class="hero-buttons">
       <a href="#projects" class="btn-primary">View My Work</a>
-      <a href="media/Petya-Dimitrova-CV.pdf" class="btn-secondary">Download CV</a>
+      <button id="openModal" class="btn-secondary">Hire me</button>
     </div>
-   
-
- 
-</section>
+   </header>
     <!-- Header -->
 
  <main>
@@ -225,29 +222,27 @@
 <!-- Skills section -->
 
 
-<!-- Unique Section: Mobile-first responsive cards -->
+<<!-- Unique Section: Mobile-first responsive cards -->
 <section class="unique" aria-labelledby="unique-title">
   <div class="container">
-    <h2 class="section-title">What makes me unique</h2>
+    <h2 id="unique-title" class="section-title">What makes me unique</h2>
     <p class="unique-subline">
       I design digital experiences that align business goals with human emotions.
     </p>
 
     <div class="unique-grid">
       <!-- Card 1 -->
-       <article>
-      <div class="unique-card">
-    <img src="./media/inteligent.jpg" alt="Inteligent design" class="unique-img">
-       <h3 class="unique-title">Emotionally inteligent design</h3>
+      <article class="unique-card">
+        <img src="./media/creativity.jpg" alt="Emotionally intelligent design" class="unique-img" />
+        <h3 class="unique-title">Emotionally intelligent design</h3>
         <p class="unique-text">
           I create digital experiences that connect on a human level, turning brands into stories people feel.
         </p>
-        </div>
       </article>
 
       <!-- Card 2 -->
       <article class="unique-card">
-    <img src="./media/analysis.jpg" alt="Buisiness analysis" class="unique-img">
+        <img src="./media/analysis.jpg" alt="Precise business analysis" class="unique-img" />
         <h3 class="unique-title">Precise business analysis</h3>
         <p class="unique-text">
           Every project begins with deep analysis of goals, ensuring solutions are strategic and impactful.
@@ -256,8 +251,8 @@
 
       <!-- Card 3 -->
       <article class="unique-card">
-        <img src="./media/creativity.jpg" alt="Creativity" class="unique-img">
-        <h3 class="unique-title">Business‑aligned creativity</h3>
+        <img src="./media/creativity.jpg" alt="Business-aligned creativity" class="unique-img" />
+        <h3 class="unique-title">Business-aligned creativity</h3>
         <p class="unique-text">
           I bridge technical innovation with brand storytelling to drive growth, trust, and adoption.
         </p>
@@ -265,7 +260,6 @@
     </div>
   </div>
 </section>
-
 
       <!-- The new ABOUT section -->
 
@@ -286,6 +280,15 @@
       <img src="./media/parking-qr.png" alt="Food Web App UI" class="project-thumb" />
         <h3 class="project-title">Yorvik Parking App</h3>
         <p class="project-desc">High fidelity web app prototype for city of Yorvik company</p>
+         <div class="skill-group">
+      <h3>Tech stack</h3>
+      <ul>
+        <li>React Native</li>
+        <li>JavaScript</li>
+        <li>Vite</li>
+        <li>Expo Go</li>
+      </ul>
+    </div>
         <a href="portfolio.html" class="pink-link">Learn More</a>
       </article>
 
@@ -294,6 +297,16 @@
       <img src="./media/FoodApp-mobile.png" alt="Food Web App UI" class="project-thumb" />
         <h3 class="project-title">Food Web App</h3>
         <p class="project-desc">Meal planner desktop application built-React and Spoonacular API</p>
+         <div class="skill-group">
+      <h3>Tech stack</h3>
+      <ul>
+        <li>React</li>
+        <li>JavaScript</li>
+        <li>Vite</li>
+        <li>Spoonacular API</li>
+        <li>Git Hub</li>
+      </ul>
+    </div>
          <a href="portfolio.html" class="pink-link">Learn More</a>
         <a href="https://priorityc.github.io/FoodApp/" class="btn learn-more-btn pink-link">Demo</a>
       </article>
@@ -303,6 +316,15 @@
       <img src="./media/black_hole.png" alt="Event Landing Page UI" class="project-thumb" />
         <h3 class="project-title">Black hole event Landing page</h3>
         <p class="project-desc">Immersive stargazing black hole event Landing page for museums.</p>
+           <div class="skill-group">
+      <h3>Tech stack</h3>
+      <ul>
+        <li>HTML&CSS</li>
+        <li>JavaScript</li>
+        <li>Animation</li>
+        <li>Git Hub</li>
+      </ul>
+    </div>
          <a href="portfolio.html" class="pink-link">Learn More</a>
         <a href="https://priorityc.github.io/stargazing-landing-page/" class="btn learn-more-btn pink-link">Demo</a>
       </article>
@@ -312,6 +334,16 @@
         <img src="./media/Home.png" class="project-thumb" alt="E-commerce home page" />
         <h3 class="project-title">Cosmic care e-commerce website</h3>
         <p class="project-desc">Brand and website design and development for Cosmic care</p>
+            <div class="skill-group">
+      <h3>Tech stack</h3>
+      <ul>
+        <li>React</li>
+        <li>JavaScript</li>
+        <li>Express.js</li>
+        <li>Supabase & Claudinary</li>
+        <li>Render & Netlify</li>
+      </ul>
+    </div>
         <a href="cosmiccareproject.html" class="btn learn-more-btn pink-link">Learn More</a>
       </article>
 
@@ -376,14 +408,14 @@
             </div>
           <!-- text area -->
 <textarea id="footer_message" name="message" rows="10" cols="30"  onchange="validateFooterInput(this)" placeholder="Write your message here."></textarea>
-Write your message here.
 </textarea
            >
           <small id="feedback_footer_message" aria-live="polite"></small>
 
-
-          <input class="submit btn btn-primary" type="submit" value="Submit" />
-          <input class="clear btn btn-secondary" type="reset" value="Clear" />
+          <div class="footer-btn">
+            <input class="submit btn btn-primary" type="submit" value="Submit" />
+            <input class="clear btn btn-secondary" type="reset" value="Clear" />
+          </div>
         </form>
       </div>
       
