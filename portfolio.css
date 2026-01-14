@@ -904,7 +904,7 @@ textarea {
    .card {
     display: flex;
     gap: 1em;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 5rem auto;
    }
    .left-col {
