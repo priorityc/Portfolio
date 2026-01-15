@@ -249,8 +249,24 @@
   padding: 1em;
 } */
 .card {
- padding: 1em;
- margin: 1rem
+ padding: 3em;
+ margin: 1rem;
+ border-radius: 8px;
+}
+
+.card-one {
+  background: rgba(248, 246, 211, 0.445);
+}
+
+.card-two {
+  background: rgba(200, 209, 249, 0.44);;
+}
+.card-three {
+  background: rgba(249, 200, 248, 0.44);;
+}
+
+.card-four {
+  background: rgba(192, 208, 217, 0.44);;
 }
 .img-mobile {
   max-width: 30%;
@@ -535,7 +551,7 @@
 }
 
 /* When visible */
-.case-content {
+.case-inner {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
   grid-template-rows: auto auto;         /* 2 rows */
@@ -582,7 +598,6 @@
  section {
   padding: 1.5rem;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
   color: #333;
 }
 
@@ -832,12 +847,16 @@ textarea {
 
 /* Responsive tweaks */
 @media screen and (min-width: 600px) {
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    margin: 5rem;
+  }
  .project-card {
   display: flex;
  }
- .project-grid {
-  grid-template-columns: 1fr 1fr;
- }
+ 
   .cta-video h3 {
     font-size: 1.5rem;
     max-width: 900px;
@@ -903,20 +922,24 @@ textarea {
   }
    .card {
     display: flex;
-    gap: 1em;
+    gap: 3rem;
     max-width: 1000px;
-    margin: 5rem auto;
+    margin: 1rem auto;
    }
    .left-col {
     max-width: 50%;
    }
     .right-col {
     max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
    }
 
-   .case-content {
+   /* .case-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-   }
+   } */
    
 }

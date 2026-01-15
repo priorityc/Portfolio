@@ -238,7 +238,7 @@ body {
  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./media//starynight.avif");
 
   /* Set a specific height */
-  height: 50%;
+  /* height: 50%; */
   
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -336,12 +336,14 @@ body {
 
 .about-snapshot,
 .about-main{
-  background: #f9f9ff;
   padding: 18px;
   border-radius: 8px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
 }
 
+.about-main {
+  background: rgba(195, 237, 251, 0.303);
+}
 .about-skills {
   padding: 10px;
 }
@@ -377,6 +379,8 @@ body {
   padding: 1em;
   border-radius: 8px;
   box-shadow: 5px 5px #4e47d071;
+  background: rgba(250, 205, 243, 0.303);
+;
 }
 .skill-group ul li{
  display: flex;
@@ -642,7 +646,8 @@ width: fit-content;
    CARD STYLING
 --------------------------------*/
 .unique-card {
-  background: var(--cream);
+  /* background: var(--cream); */
+  
   border-radius: 8px;
   padding: 24px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.05);
@@ -1443,12 +1448,6 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
     gap: 20px;
   }
 
- 
-  /* .about-skills {
-    display: flex;
-    flex-wrap: wrap;
-  } */
-
   .about-photo {
     max-width: 300px;
     margin: 0 auto 20px;
@@ -1458,20 +1457,19 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
   .btn-primary {
     text-align: center;
     display: block;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
  .unique-grid {
     grid-template-columns: repeat(2, 1fr);
   }
  
  .projects-section {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
-   flex-direction: row;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
   }
+
 .project-card {
     flex: 1 1 280px;
     max-width: 320px;
@@ -1603,7 +1601,7 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
   flex-direction: row;
 }
 .hero-text {
-   width: 800px;
+  max-width: 800px;
 }
 .hero h1 {
   font-size: 3rem;

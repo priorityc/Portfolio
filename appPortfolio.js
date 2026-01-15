@@ -1,7 +1,7 @@
 "use strict";
 // selecting el
   const nav = document.querySelector('.desktop-header');
-  const header = document.querySelector('.hero-header');
+  const header = document.querySelector('.hero');
 
 // Hamburger
 document.addEventListener("DOMContentLoaded", function () {
@@ -157,8 +157,8 @@ imgTargets.forEach(img=>imgObserver.observe(img));
 
   // TOggle project description
 
-// select all primary buttons aand for each btn attach click event
-document.querySelectorAll(".btn.btn-primary").forEach(btn => {
+// select all primary buttons and for each btn attach click event
+document.querySelectorAll(".btn").forEach(btn => {
   btn.addEventListener("click", () => {
     const card = btn.closest(".card");
     const section = card.nextElementSibling; // hidden content right after card
