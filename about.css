@@ -275,9 +275,9 @@ nav {
 }
 
 .flowchart span {
-  color: var(--lavander);
+  background: var(--soft-gold);
   font-weight: 600;
-  background-color: var(--blush);
+  color: var(--cream);
   border-radius: 8px;
   padding: 8px;
   /* padding: 0.5rem 1rem;
