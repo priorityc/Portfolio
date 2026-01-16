@@ -395,7 +395,7 @@ body {
   padding: 8px;
 }
 
-.academic, .power, .tech {
+.academic, .power, .tech, .role {
   width: 25px;
 }
 
@@ -1516,7 +1516,7 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
   }
 
    .unique-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .unique-img {
     width: 50%;
@@ -1652,7 +1652,7 @@ transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(
   flex-direction: column;
 }
 .unique-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .unique {
