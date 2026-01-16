@@ -393,14 +393,10 @@ body {
   background-color: var(--blush);
   border-radius: 8px;
   padding: 8px;
+}
 
-/* background-color: var(--lavander);
-list-style-type: none;
-margin-bottom: 1rem;
-color: var(--cream);
-padding: 10px;
-width: fit-content;
- */
+.academic, .power, .tech {
+  width: 25px;
 }
 
 .about-main h2,
