@@ -280,7 +280,8 @@
   border-radius: 5px;
 }
 .img-desktop {
-  max-width: 260px;
+  max-width: 290px;
+  
   border-radius: 8px;
 }
 .frame-blue {
@@ -957,5 +958,11 @@ textarea {
     .visulas-col {
       align-items: center;
       justify-content: space-around;
+}
+
+.keyfeatures-buttons {
+  display: flex;
+  align-items: center;
+  padding: 1em 0;
 }
 }
