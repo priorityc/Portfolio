@@ -15,11 +15,11 @@ const dotContainer = document.querySelector('.dots');
 // the hamburger icon show
 function myFunction() {
   var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
+  if (x.style.display === "flex") {
     x.style.display = "none";
     x.classList.toggle("change");
   } else {
-    x.style.display = "block";
+    x.style.display = "flex";
   }
 }
 
@@ -93,24 +93,26 @@ headerObserver.observe(header);
 
 
 // MODAL
-  const openBtn = document.getElementById('openModal');//selects the button
-  const modal = document.getElementById('hireModal');//select the modal
-  const closeBtn = modal.querySelector('.close-modal');//select the btn that closes the modal
-console.log(openBtn);
+const openBtn = document.getElementById('openModal');
+const modal = document.getElementById('hireModal');
+const closeBtn = modal.querySelector('.close-modal');
+
+if (openBtn) {
   openBtn.addEventListener('click', () => {
     modal.classList.remove('hidden');
   });
+}
 
-  closeBtn.addEventListener('click', () => {
+closeBtn.addEventListener('click', () => {
+  modal.classList.add('hidden');
+});
+
+// Close when clicking outside modal content
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
     modal.classList.add('hidden');
-  });
-
-  // Optional: close modal when clicking outside content
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.add('hidden');
-    }
-  });
+  }
+});
 
   
 // MODAL form validation
