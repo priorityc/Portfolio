@@ -1,30 +1,21 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="cosmic.css" />
-    <link rel="stylesheet" href="portfolio.css" />
-    <link rel="stylesheet" href="style.css" />
-
-
-
-
-
-    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-  </head>
-  <!-- NAVIGATION -->
-    <!-- Navbar on small screens -->
-    <!-- Section MOBILE MENU -->
+    <link rel="stylesheet" href="./portfoliostyle.css">
+</head>
+<body>
+    
+     <nav class="mobile-header">
 
-    <nav class="mobile-header">
-
-      <div class="hamburger" onclick="myFunction(this)">
+      <div class="hamburger" 
+       role="button" 
+      tabindex="0" 
+      aria-label="Open navigation menu" 
+      onclick="myFunction(this)"
+      onkeydown="handleKey(event)">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -33,11 +24,11 @@
 
     <div class="topnav">
       <div id="myLinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About me</a>
-        <a href="skills.html">Skills</a>
-        <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a>
-        <a href="contact.html">Contact</a>
+        <a class=nav__link href="index.html">Home</a>
+        <a class=nav__link href="about.html">About</a>
+        <a class=nav__link href="portfolio.html">Portfolio</a>
+        <!-- <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a> -->
+        <a class=nav__link href="contact.html">Contact</a>
       </div>
     </div>
 
@@ -46,340 +37,429 @@
     <nav class="desktop-header">
       <div class="sidenav">
         <!-- first container -->
-         <!-- first container -->
         <div>
-          <img id="logo" src="./media/logoPetya.png" alt="logo image"/>
+          <img class="logo" src="./media/logoPetya.png" alt="logo image"/>
         </div>
         <!-- Second container menus -->
         <div class="arrange-manu">
           <a class=nav__link href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="skills.html">Skills</a>
-          <a href="services.html">Portfolio</a>
-          <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a>
-          <a href="contact.html">Contact</a>
+          <!-- <a class=nav__link href="about.html">About</a>
+          <a class=nav__link href="skills.html">Skills</a> -->
+          <a class=nav__link href="portfolio.html">Portfolio</a>
+          <!-- <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a> -->
+          <a class=nav__link href="contact.html">Contact</a>
         </div>
-        <!-- Third container serch bar -->
-       
       </div>
     </nav>
-    <!-- HEADER -->
+
+    <!-- Header with full-height image -->
 <header class="hero">
-  <div class="hero-text">
-    <h1>
-      Hi, I am Petya
-      <span class="highlight">I design modern, scalable web applications</span>
-    </h1>
-    <p class="subhead">
-      Blending UX thinking with technical precision to build clean, user‑focused digital experiences.
+  <div class="hero-content">
+    <h1 class="hero-name">Petya Dimitrova</h1>
+    <h2 class="hero-role">Web Developer</h2>
+    <p class="hero-tagline">
+      Building clean, accessible, user-centered interfaces that feel effortless.
     </p>
+    <p class="subhead">
+      I build intuitive, scalable interfaces- and translate complex ideas into simple, user-friendly solutions.
+    </p>
+     <a href="https://github.com/priorityc?tab=repositories"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+    <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+     <a href="mailto:petya83dimitrova@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
   </div>
-    <div class="hero-buttons">
-      <a href="#projects" class="btn-primary">View My Work</a>
-      <button id="openModal" class="btn-secondary">Hire me</button>
+  <div class="hero-shape">
+    <button id="openModal" class="cta-button">Contact me</button>
+  </div>
+</header>
+<main>
+     <article class="section-header">
+        <h2>Selected Projects</h2>
+        <p>Projects that blend thoughtful UI, accessibility, and clean engineering.
+Each one reflects my approach to building intuitive, emotionally engaging digital experiences.
+        </p>
+    </article>
+    <section class="case-study">
+   
+  <!-- Hero -->
+   <div class="project-overview-cont">
+  <section class="cs-hero">
+    <h2 class="cs-title">Cosmic Care</h2>
+    <p class="cs-subtitle">Wellness e-commerce website</p>
+    <img
+      src="./media/projectCC.png"
+      alt="Cosmic Care home page overview"
+      class="cs-hero-image"
+    />
+  </section>
+
+  <!-- Quick Overview -->
+  <section class="cs-overview">
+    <h2 class="cs-section-title">Project Overview</h2>
+    <div class="cs-overview-grid">
+      <div class="cs-overview-item">
+        <h3>Role</h3>
+        <p>Full Stack Developer</p>
+      </div>
+      <div class="cs-overview-item">
+        <h3>Timeline</h3>
+        <p>3 months</p>
+      </div>
+      <div class="cs-overview-item">
+        <h3>Tools</h3>
+        <p>React, JavaScriptScript, Express.js(Data endpoints), Supabase(database), Cloudinary(Cloud storage),Render(deployment), Netlify(hosting)</p>
+      </div>
+      <div class="cs-overview-item">
+        <h3>Responsibilities</h3>
+        <p>UI engineering, Front-end development, responsive layout, database integration, accessibility</p>
+      </div>
     </div>
-   </header>
-    <!-- Header -->
+  </section>
+  </div>
+
+  <!-- Problem -->
+   <div class="container">
+  <section class="cs-block">
+    <h2 class="cs-section-title">Problem</h2>
+    <p>
+      Existing wellness websites were often cluttered and overwhelming. The challenge
+      was to design a calming interface that allows users to track their well-being
+      effortlessly and provide positive shoping experiance.
+    </p>
+  </section>
+
+  <!-- Process -->
+  <section class="cs-block">
+    <h2 class="cs-section-title">Process</h2>
+
+    <div class="cs-subblock">
+      <h3>Research & Insights</h3>
+      <p>
+        I analyzed user feedback and identified the need for intuitive, easily
+        interpretable wellness data with minimal cognitive load.
+      </p>
+    </div>
+</section>
+</div>
+
+    <section>
+    <div class="cs-subblock">
+      <h3>Gallery</h3>
+      <div class="cs-wireframes">
+        <img src="./media/productview.png" alt="Product view image" />
+        <img src="./media/productView2.png" alt="Product view" />
+      </div>
+    </div>
+</section>
+
+<section>
+    <div class="cs-subblock">
+      <h3>UI Decisions and Interaction flow</h3>
+      <section class="cs-block">
+  <h2 class="cs-section-title">Interaction Flow (Shopping a Product)</h2>
+
+  <div class="cs-video">
+    <video controls>
+      <source src="./1000019914.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <p class="cs-video-caption">
+    A short walkthrough demonstrating the full shopping flow — browsing products,
+    viewing details, adding to cart, and proceeding to checkout.
+  </p>
+  <h2 class="cs-section-title">Design decisions</h2>
+
+      <p>
+        I opted for a soothing color palette, generous whitespace, and clear visual
+        hierarchy to keep focus on key wellness products. Components were designed to be
+        reusable and responsive. Products ware automated betwean the database and the front end interface.
+      </p>
+    </div>
+</section>
+
   
-     
-  <!-- New content  -->
-<main class="projects-grid">
-  <div class="section-title">
-  <h2>Projects</h2>
-  </div>
-  <section class="card card-one">
-    <div class="left-col frame-blue">
-      <img src="./media/parking-qr.png" alt="Yorvik parking app image" class="img-mobile">
-    </div>
-    <div class="right-col">
-      <div>
-      <h3>Yorvik parking app</h3>
-      <p>The Yorvik Parking App is a mobile-first prototype designed to help users register and book longboat parking spaces in the historic city of York. Built with stakeholder collaboration at its core, the app transforms a niche service into a seamless digital experience — from registration to QR-based ticketing.</p>
-      </div>
-      <div>
-      <button class="btn btn-primary" aria-expanded="false" aria-controls="yorvik-details">Description</button>
-      </div>
+
+  <section class="cs-block">
+      <h3>Technical Challenges</h3>
+      <p>
+        I implemented dynamic data handling with the wellness API, optimized component
+        rendering, and ensured keyboard navigation and screen reader support across all
+        interactive elements.
+      </p>
     </div>
   </section>
 
-     <!-- 🔽 Hidden content goes here -->
-    <section class="case-content hidden">
-      <!-- The inner container -->
-  <div class="case-inner">
-    <div class="cta-video">
-                <h3>⚙️ Video demo</h3>
-                <div class="video-card">
-                  <div class="project-card-video">
-                    <video class="project-video" muted loop preload="metadata">
-                      <source src="./media/Yorvik-demo.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                    </video>
-                    <button class="play-button" aria-label="Play Demo">▶</button>
-                      <div class="project-overlay">
-                        <h3 class="project-title">Yorvik Parking App video demo</h3>
-                      </div>
-                  </div>
-                </div>
-              </div>
-   <!-- ROW 2: Text blocks -->
-    <div class="case-text-grid">
-               
-  <div >
-    <h4>Context & Challenge</h4>
-    <p>Developed through close stakeholder collaboration, it transforms a niche service into a seamless digital experience—from user registration to QR-based ticketing.</p>
-    <p>To guide the company I developed a detailed report, providing stakeholders with clear recommendations for the technicical solution they needed.</p>
-
-</div>
-<div>
-    <h4>Process & Tools</h4>
-    <ul>
-      <li>Discovery: Stakeholder usecase</li>
-      <li>Design: Figma wireframes</li>
-      <li>Development: React Native + Express.js</li>
-      <li>Integration: Expo Go</li>
-    </ul>
-</div>
-<div>
-<h4>Key Features</h4>
-      <ul>
-        <li>Maintain a list of parking berths with visual map</li>
-        <li>Real time data parking availability</li>
-        <li>Generating QR code berthing permit</li>
-        <li>Acount based previous permits views.</li>
-      </ul>
-    </div>
-<div>
-    <h4>Outcome</h4>
-    <p>Test users reported feeling more guided and relaxed — a reflection of emotionally intelligent UX.</p>
-    <p>As a result, stakeholders gained confidence in selecting the right technology and investing resources effectively to drive full-scale application development.
-
-  </div>
-  </div>
-
-</section>
-<!-- ------------------------ -->
-
-
-  <section class="card card-two">
-     <div class="left-col frame-gold">
-      <img src="./media/FoodApp-mobile.png" alt="Yorvik parking app image" class="img-mobile">
-    </div>
-    <div class="right-col">
-      <h3>Food Web App</h3>
-      <p>The Yorvik Parking App is a mobile-first prototype designed to help users register and book longboat parking spaces in the historic city of York. Built with stakeholder collaboration at its core, the app transforms a niche service into a seamless digital experience — from registration to QR-based ticketing.</p>
-      <button class="btn btn-primary">Description</button>
-      <a href="https://priorityc.github.io/FoodApp/" class="btn learn-more-btn pink-link">Demo</a>
-    </div>
+  <!-- Outcome -->
+  <section class="cs-block">
+    <h2 class="cs-section-title">Outcome & Lessons Learned</h2>
+    <p>
+      The final product offers a tranquil, focused user experience. I deepened my
+      knowledge of accessible design, refined my approach to state management with React
+      hooks, and improved how I structure reusable UI components for scalability.
+    </p>
   </section>
 
-     <!-- 🔽 Hidden content goes here -->
-  <section  class="case-content hidden">
-      <!-- Row 1 Images-->
-  <div class="case-inner">
-    <div class="visuals-col">
 
-      <div>
-      <h3>Mobile View</h3>
-      <img src="./media/MobileFood.png" alt="Mobile view" class="img-mobile">
+  <!-- Links -->
+  <section class="cs-links">
+    <a href="https://cosmiccare.netlify.app/?demo=true" class="cs-link-btn">Live Demo</a>
+    <a href="https://github.com/priorityc/cosmic-care-site" class="cs-link-btn cs-link-secondary">GitHub Repo</a>
+    <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
+  </section>
+
+  <!--  -->
+
+  <!-- SECOND PROJECT -->
+   <!-- Hero -->
+   <div class="project-overview-cont">
+  <section class="cs-hero">
+    <h1 class="cs-title">Black Hole Event</h1>
+    <p class="cs-subtitle">Landing Page</p>
+    <img
+      src="./media/projectLP.png"
+      alt="Black hole landing page overview"
+      class="cs-hero-image"
+    />
+  </section>
+
+  <!-- Quick Overview -->
+  <section class="cs-overview">
+    <h2 class="cs-section-title">Project Overview</h2>
+    <div class="cs-overview-grid">
+      <div class="cs-overview-item">
+        <h3>Role</h3>
+        <p>Front-end Developer</p>
       </div>
-
-      <div>
-      <h3>Tablet View</h3>
-      <img src="./media/FoodApp-Tablet.png" alt="FoodApp-Tablet view" class="img-desktop">
+      <div class="cs-overview-item">
+        <h3>Timeline</h3>
+        <p>1 month</p>
       </div>
-
-      <div>
-      <h3>Desktop View</h3>
-      <img src="./media/Homescreen.png" alt="Home screen view" class="img-desktop">
+      <div class="cs-overview-item">
+        <h3>Tools</h3>
+        <p>HTML, CSS, JavaScript, Animations</p>
       </div>
-
+      <div class="cs-overview-item">
+        <h3>Responsibilities</h3>
+        <p>UI engineering, Front-end development, responsive layout</p>
+      </div>
     </div>
-    
-    <!-- ROW 2: Text blocks -->
-    <div class="case-text-grid">
-
-  <div>
-    <h4>Context & Challenge</h4>
-    <p>The Food Web Application was built using React.js for its modular architecture and dynamic UI capabilities, paired with CSS Modules for scoped styling and maintainability. Real-time recipe data is sourced from the Spoonacular API, with dietary filters and nutrition info integrated seamlessly.</p>
-    <p>Busy working people needed a web application to plan daily meals whilist stay healthy. The application solves this demand with updating recipes plan that users can download.</p>
-
-</div>
-<div>
-    <h4>Process & Tools</h4>
-    <ul>
-      <li>Discovery: Researched the need for meal plan solution for busy individuals</li>
-      <li>Design: Figma wireframes</li>
-      <li>Development: React + Spoonacular API</li>
-      <li>Integration: Vite, GitHub</li>
-    </ul>
-</div>
-<div>
-<h4>Key Features</h4>
-      <ul>
-        <li>Implemented search functionality for ingredient based receipts filter by vegan, vegeterian or Katogenic categories</li>
-        <li>Weekly meal plan generate filter by calories, diet plan.</li>
-        <li>Download shoping list</li>
-      </ul>
-    </div>
-  <div>
-    <h4>Outcome</h4>
-    <p>The app is build as a height fidelity prototype and it is still under development</p>
+  </section>
   </div>
-</div>
+
+  <!-- Problem -->
+  <section class="cs-block">
+    <h2 class="cs-section-title">Problem</h2>
+    <p>
+       The British Science Museum was struggling to attract attendance to their family‑friendly events and needed a web solution that would increase customer engagement and raise awareness of their space‑themed activities.
+    </p>
+  </section>
+
+  <!-- Process -->
+  <section class="cs-block">
+    <h2 class="cs-section-title">Process</h2>
+
+    <div class="cs-subblock">
+      <h3>Research & Insights</h3>
+      <p>
+        I analyzed user feedback of people attending similar events and identified the need for intuitive interactive similar as live event landing page that they can add to their website.
+      </p>
+    </div>
+
+    <!-- <div class="cs-subblock">
+      <h3>Gallery</h3>
+      <div class="cs-wireframes">
+        <img src="./media/productview.png" alt="Product view image" />
+        <img src="./media/productView2.png" alt="Product view" />
+      </div>
+    </div> -->
+
+    <div class="cs-subblock">
+      <h3>UI Decisions and Interaction flow</h3>
+      <section class="cs-block">
+  <h2 class="cs-section-title">Interaction Flow Gallery</h2>
+        <div class="cs-wireframes">
+        <img src="./media/BHhero.png" alt="Landing page hero view image" />
+        <img src="./media/BHform.png" alt="SUbscibe form view" />
+      </div>
+ 
+  </div>
+  <p class="cs-video-caption">
+    A short screenshoots demonstrating interaction from the hero section leading to saving seat for the event.
+  </p>
+  <h2 class="cs-section-title">Design decisions</h2>
+
+      <p>
+        I designed the interface using a dark cosmic palette, blending deep blue and soft black to create an immersive atmosphere. Generous whitespace and a strong visual hierarchy guide the user’s attention through each section. The hero section recreates the look of a real black hole to spark curiosity — particularly for families exploring the site together. Even the subscription form plays into the theme, with elements that appear to slip beyond the event horizon.
+      </p>
+    </div>
 </section>
 
-<!-- -------------------- -->
-
-  <section class="card card-three">
-     <div class="left-col frame-lavander">
-      <img src="./media/black_hole.png" alt="Black hole landing page" class="img-mobile">
-      <img src="./media/redesign-mobile.png" alt="Redesign black hole landing page" class="img-mobile">
-    </div>
-    <div class="right-col">
-      <h3>Black Hole Event-landing page</h3>
-      <p>The Black hole event landing page was build to showcase how technology can be used to mimic event interaction in the real world. Designed for curious minds of the specific users with animation and glow effects that graps visitors attention.</p>
-       <button class="btn btn-primary">Description</button>
-      <a href="https://priorityc.github.io/stargazing-landing-page/" class="btn learn-more-btn pink-link">Demo</a>
-
+  <section class="cs-block">
+      <h3>Technical Challenges</h3>
+      <p>
+        The technical challange involved constructing the animation simulation to mimic the black hole event experiance.
+      </p>
     </div>
   </section>
 
-    <!-- 🔽 Hidden content goes here -->
-  <section class="case-content hidden">
-      <!-- The inner container -->
-  <div class="case-inner">
-    
-  <div class="visuals-col">
-     <div>
-      <img src="./media/redesign-mobile.png" alt="Redesigned mobile view of black hole landing page" class="img-mobile">
-      </div>
-
-      <div>
-      <img src="./media/redesignTablet.png" alt="Black hole-Tablet view" class="img-desktop">
-      </div>
-
-       <div>
-      
-      <!-- <img src="./media/Home.png" alt="Yorvik parking app image" class="img-desktop"> -->
-        <img src="./media/redesign desktop.png" alt="Black hole-Desktop view" class="img-desktop">
-      </div>
-
-      </div>
-    <!-- ROW 2: Text blocks -->
-<div class="case-text-grid">     
-  <div >
-    <h4>Context & Challenge</h4>
-    <p>Immersive stargasing black hole event landing page build to atract more event attendance with marketing purpose.</p>
-    <p>The museums often lack of clear marketing visuals to attract more event attendance. The Black hole landing page build more leads to sale subscription for event in the museum.</p>
+  <!-- Final Solution -->
+  <!-- <section class="cs-block">
+    <h2 class="cs-section-title">Final Solution</h2>
+    <div class="cs-gallery">
+      <img src="./media/projectCC.png" alt="Final dashboard UI" />
+      <img src="./media/cosmic-final-2.png" alt="Detail view of widgets" />
+      <img src="./media/cosmic-final-3.png" alt="Responsive mobile layout" />
     </div>
+  </section> -->
 
-<div>
-    <h4>Process & Tools</h4>
-    <ul>
-      <li>Discovery: Reserch the need for atractive visuals describing the events</li>
-      <li>Design: Figma wireframes</li>
-      <li>Development: HTML + CSS +Animations + JavaScript</li>
-      <li>Integration: GitHub</li>
-    </ul>
-</div>
-
-<div>
-<h4>Key Features</h4>
-      <ul>
-        <li>Immediate grap of user attention with Black hole simulation hero section asking users to register for the event.</li>
-        <li>Event description and workshop gallery section for all ages</li>
-        <li>Save my seat section and registartion form that simulates user details falling into the black hole.</li>
-      </ul>
-    </div>
-    
-<div>
-    <h4>Outcome</h4>
-    <p>The landing page targets sciance events in museums or other organisations and can be modifyed to serve a different theme.</p>
-  </div>
-  </div>
+  <!-- Outcome -->
+  <section class="cs-block">
+    <h2 class="cs-section-title">Outcome & Lessons Learned</h2>
+    <p>
+      The final product offers a tranquil, focused user experience. I deepened my
+      knowledge of CSS animations, refined my approach design requirements.
+    </p>
   </section>
 
-<!-- --------------------- -->
-  <section class="card card-four">
-     <div class="left-col">
-      <img src="./media/Home.png" alt="Mobile screen view" class="img-desktop">
-      </div>
-    <div class="right-col">
-      <h3>Cosmic Care e-commerce shop</h3>
-      <p>Cosmic Care is fully functional website build with React for the front-end and Express.js to simulate backend functionality. The design goals was clear, user-frendly interface that supports positive shopping experiance enriched with emotional-impact design.</p>
-      <button class="btn btn-primary">Description</button>
-      <a href="cosmiccareproject.html" class="btn learn-more-btn pink-link">Learn More</a>
-      </div>
+  <!-- Links -->
+  <section class="cs-links">
+    <a href="https://priorityc.github.io/stargazing-landing-page/" class="cs-link-btn">Live Demo</a>
+    <a href="https://github.com/priorityc/stargazing-landing-page" class="cs-link-btn cs-link-secondary">GitHub Repo</a>
+    <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
+  </section>
+   <!--  -->
 
+   <!-- THIRD PROJECT -->
+   <!-- Hero -->
+   <div class="project-overview-cont">
+  <section class="cs-hero">
+    <h1 class="cs-title">Food Web App</h1>
+    <p class="cs-subtitle">Web Application</p>
+    <img
+      src="./media/FoodApp.PNG"
+      alt="Food Apps image"
+    />
   </section>
 
-   <!-- 🔽 Hidden content goes here -->
-  <section class="case-content hidden">
-    <div class="case-inner">
-    <div class="visuals-col">
-    <div>
-      <h3>Home page</h3>
-    <img src="./media/Home.png" alt="Mobile screen view" class="img-desktop">
-    </div>
-    <div>
-      <h3>Shop page</h3>
-    <img src="./media/shoppingCC.png" alt="Mobile screen view" class="img-desktop">
-    </div>
-    <div>
-      <h3>Checkout page</h3>
-    <img src="./media/checoutCC.png" alt="Desktop screen view" class="img-desktop">
-    </div>
-  </div>  
-
-  <!-- ROW 2: Text blocks -->
-<div class="case-text-grid">    
-  <div >
-    <h4>Context & Challenge</h4>
-    <p>Niche positioning: Cosmic Care was envisioned as a wellness‑oriented e‑commerce brand, blending cosmic aesthetics with practical self‑care products.</p>
-    <p>The brand needed to stand out in a crowded online retail space while maintaining trust and emotional connection.</p>
-    <p>The pain point around checkout friction, unclear product storytelling, and the need for a memorable brand identity that felt both modern and soulful.</p>
-
-</div>
-<div>
-    <h4>Process & Tools</h4>
-    <ul>
-      <li>Discovery: Conducted competitor analysis and mapped user journeys to identify gaps in emotional resonance and usability.</li>
-      <li>Design: Figma wireframes</li></li>
-      <li>Built a modular front‑end prototype using React.js and CSS, with mock product data feeding into dual mode checkout(Real and test) checkout.</li>
-      <li>Integration: Connected the prototype to a backend that generated Stripe test sessions (?demo=true), allowing stakeholders to experience a realistic checkout flow.</li>
-      <li>Development: React + Vite + JavaScript + Express.js</li>
-    </ul>
-</div>
-<div>
-<h4>Key Features</h4>
-      <ul>
-        <li>Simulated checkout: Demo mode with Stripe test integration, enabling realistic payment flow without risk.</li>
-        <li>Product storytelling: Rich imagery and contextual copy that framed items as part of a holistic care ritual.</li>
-        <li>Modular architecture: Components designed for scalability, making future expansion into full e‑commerce straightforward.</li>
-      </ul>
-    </div>
-<div>
-    <h4>Outcome</h4>
-    <p> Portfolio value: The project showcased my ability to combine emotionally intelligent UX with technical rigor, positioning me as a designer who can bridge brand storytelling and functional e‑commerce..</p>
-     <div class="keyfeatures-buttons">
-      <a href="https://cosmiccare.netlify.app/cart?demo=true" class="btn btn-primary">Live Demo Mode</a>
-      <a href="https://cosmiccare.netlify.app" class="btn btn-secondary">Live Real Mode</a>
+  <!-- Quick Overview -->
+  <section class="cs-overview">
+    <h2 class="cs-section-title">Project Overview</h2>
+    <div class="cs-overview-grid">
+      <div class="cs-overview-item">
+        <h3>Role</h3>
+        <p>Front-end Developer</p>
       </div>
+      <div class="cs-overview-item">
+        <h3>Timeline</h3>
+        <p>2 months</p>
+      </div>
+      <div class="cs-overview-item">
+        <h3>Tools</h3>
+        <p>React, JavaScript, Github, Vite</p>
+      </div>
+      <div class="cs-overview-item">
+        <h3>Responsibilities</h3>
+        <p>UI engineering, Front-end development, responsive layout</p>
+      </div>
+    </div>
+  </section>
   </div>
-</div>
-</div>
+
+  <!-- Problem -->
+  <section class="cs-block">
+    <h2 class="cs-section-title">Problem</h2>
+    <p>
+      Busy families and proffesionals strugle to cook healthy meals and lack of receipt ideas. 
+    </p>
+  </section>
+
+  <!-- Process -->
+  <section class="cs-block">
+    <h2 class="cs-section-title">Process</h2>
+
+    <div class="cs-subblock">
+      <h3>Research & Insights</h3>
+      <p>
+        I analyzed user feedback of working families and identified the need for meal receipts and provide ideas for cooking receipts based on ingredients they have at home.
+      </p>
+    </div>
+
+    <!-- <div class="cs-subblock">
+      <h3>Gallery</h3>
+      <div class="cs-wireframes">
+        <img src="./media/productview.png" alt="Product view image" />
+        <img src="./media/productView2.png" alt="Product view" />
+      </div>
+    </div> -->
+
+    <div class="cs-subblock">
+      <h3>UI Decisions and Interaction flow</h3>
+      <section class="cs-block">
+  <h2 class="cs-section-title">Interaction Flow Gallery</h2>
+        <div class="cs-wireframes">
+        <img src="./media/MobileFood.png" alt="Food app view image" />
+        <img src="./media/FoodApp-Tablet.png" alt="Food app view" />
+      </div>
+ 
+  </div>
+  <p class="cs-video-caption">
+   A short screenshots demonstrating mobile responsiveness.
+  </p>
+  <h2 class="cs-section-title">Design decisions</h2>
+
+      <p>
+        I designed the interface using a warm supportive colours, to create an wellcoming atmosphere. Generous whitespace and a strong visual hierarchy guide the user’s attention through each section. The hero section. The app allows selecting receipts acording to ingredients searches and categories for dietary requirements. Despite most functionality is implemented some are still not and in process of development.
+      </p>
+    </div>
 </section>
+
+  <section class="cs-block">
+      <h3>Technical Challenges</h3>
+      <p>
+        The technical challange involved learning to work with an API resources.
+      </p>
+    </div>
+  </section>
+
+  <!-- Final Solution -->
+  <!-- <section class="cs-block">
+    <h2 class="cs-section-title">Final Solution</h2>
+    <div class="cs-gallery">
+      <img src="./media/projectCC.png" alt="Final dashboard UI" />
+      <img src="./media/cosmic-final-2.png" alt="Detail view of widgets" />
+      <img src="./media/cosmic-final-3.png" alt="Responsive mobile layout" />
+    </div>
+  </section> -->
+
+  <!-- Outcome -->
+  <section class="cs-block">
+    <h2 class="cs-section-title">Outcome & Lessons Learned</h2>
+    <p>
+      The final product offers useful user experience but it is still in process of refine.
+    </p>
+  </section>
+
+  <!-- Links -->
+  <section class="cs-links">
+    <a href="https://priorityc.github.io/FoodApp/" class="cs-link-btn">Live Demo</a>
+    <a href="https://github.com/priorityc/FoodApp" class="cs-link-btn cs-link-secondary">GitHub Repo</a>
+    <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
+  </section>
+   <!--  -->
 </main>
 
-     <!-- Footer -->
+ <!-- Footer -->
     <footer id="contact" class="footer-box">
       <div class="form-heading">
         <h2>Have me make stuff for you.</h2>
         <p>Please leave your details.</p>
       </div>
       <div class="form-box">
+                    <div class="footer-abstract-shape"></div>
+
 
         <form 
+        
           onsubmit="validateFooterForm(event)"
 >
           <div class="name-email-box">
@@ -394,7 +474,6 @@
                 onchange="validateFooterInput(this)"
               />
               <small id="feedback_footer_fname" aria-live="polite"></small>
-            
             </div>
              <div class="name-email">
               <label for="lname">Last Name</label>
@@ -419,37 +498,25 @@
             </div>
           <!-- text area -->
 <textarea id="footer_message" name="message" rows="10" cols="30"  onchange="validateFooterInput(this)" placeholder="Write your message here."></textarea>
-Write your message here.
 </textarea
            >
           <small id="feedback_footer_message" aria-live="polite"></small>
 
-
-          <input class="submit btn" type="submit" value="Submit" />
-          <input class="clear btn" type="reset" value="Clear" />
+          <div class="footer-btn">
+            <input class="submit btn btn-primary" type="submit" value="Submit" />
+            <input class="clear btn btn-secondary" type="reset" value="Clear" />
+          </div>
         </form>
       </div>
       
       <div class="form-heading">
-        <a href="https://github.com/priorityc?tab=repositories">
-          <i
-            class="fa fa-github-square"
-            style="font-size: 48px; color:rgb(255, 153, 170);"
-          ></i
-        ></a>
-        <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/">
-          <i
-            class="fa fa-linkedin-square"
-            style="font-size: 48px; color:#3A9BC2"
-          ></i>
-        </a>
-        <i
-          class="fa fa-facebook-square"
-          style="font-size: 48px; color: var(--color-tertiary-darker)"
-        ></i>
-        
+        <a href="https://github.com/priorityc?tab=repositories"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
+    <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+     <a href="mailto:petya83dimitrova@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
 
       </div>
+      
+  </div>
       <div class="footer-img">
          <img class="footer-img" id="logo" src="./media/logoPetya.png" alt="logo image"/>
 
@@ -464,10 +531,11 @@ Write your message here.
   <div class="modal-overlay hidden" id="hireModal">
   <div class="modal-content">
     <button class="close-modal">&times;</button>
-    <h2>Let’s Work Together</h2>
+    
     <form class="hireModal"
           onsubmit="validateModal(event)">
-
+       <!-- <div class="abstract-shape-modal"></div> -->
+        <h2>Let’s Work Together</h2>
       <label for="name">Name</label>
       <input type="text" id="modal_name" name="name" placeholder="Your name"  onchange="validateModalInput(this)">
       <small id="feedback_modal_name" aria-live="polite"></small>
@@ -506,6 +574,11 @@ Write your message here.
     </form>
   </div>
 </div>
-  <script src="appPortfolio.js"></script>
-    </body>
+   
+ 
+
+    
+    <script src="app.js"></script>
+
+</body>
 </html>
