@@ -1,0 +1,107 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* color: white; */
+  background: rgba(236, 200, 236, 0.184);
+  font-size: 1rem;
+}
+
+.contact-section {
+  padding: 2rem 1rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.contact-section h2 {
+  margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+  margin-bottom: 2rem;
+  color: #9ca3af;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  border: 1px solid gray;
+  border-radius: 15px;
+  padding: 1em;
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+-moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #374151;
+  background: #111827;
+  color: #f3f4f6;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+  outline: none;
+}
+
+textarea {
+  height: 150px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.cta-button, .clear-button {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cta-button {
+  background: #6366f1;
+  color: white;
+}
+
+.cta-button:hover {
+  background: #4f46e5;
+}
+
+.clear-button {
+  background: #374151;
+  color: #e5e7eb;
+}
+
+.clear-button:hover {
+  background: #4b5563;
+}
+
+.form-status {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #10b981;
+}

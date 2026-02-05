@@ -206,10 +206,21 @@ body {
 
 /* MAIN STYLE */
 .section-header {
-  margin: 2rem;
+  margin: 1rem;
   padding: 0.5em;
   text-align: left;
 }
+
+.section-header-case {
+  padding: 0.5em;
+  text-align: left;
+  margin-bottom: 2.5rem;
+  /* color:#0a0f2c; */
+  color: #0a0f2c;
+  max-width: 50%;
+}
+
+
 .section-header h2{
  font-size: 2rem;
   font-weight: 700;
