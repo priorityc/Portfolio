@@ -117,6 +117,17 @@ body {
     color: var(--muted-teal);
     background-color: var(cream);
   }
+/* Sticky navigation */
+
+/* Sticky navigation class */
+  .sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* keeps it above other elements */
+  background-color: white; 
+}
 
 /* Hero section */
 .hero {
@@ -204,6 +215,45 @@ body {
   stroke: #9a00ff;
 }
 
+/* - Use the animation called float
+- Make it last 6 seconds
+- Use a smooth easing (ease-in-out)
+- Repeat it forever (infinite
+ */
+.hero-shape {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* - At the start: the blob is in its normal position
+- Halfway through: it moves 20px upward
+- At the end: it comes back down to the starting point
+Then the animation loops again.
+ */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Hero animation */
+.hero-content > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero-content.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-content.visible > *:nth-child(1) { transition-delay: 0.1s; }
+.hero-content.visible > *:nth-child(2) { transition-delay: 0.25s; }
+.hero-content.visible > *:nth-child(3) { transition-delay: 0.4s; }
+.hero-content.visible > *:nth-child(4) { transition-delay: 0.55s; }
+.hero-content.visible > *:nth-child(5) { transition-delay: 0.7s; }
+
+
 /* MAIN STYLE */
 .section-header {
   margin: 1rem;
@@ -217,7 +267,7 @@ body {
   margin-bottom: 2.5rem;
   /* color:#0a0f2c; */
   color: #0a0f2c;
-  max-width: 50%;
+ 
 }
 
 
@@ -447,7 +497,7 @@ body {
 }
 
 /* ------------- */
-* FOOTER */
+
 /* FOOTER BASE */
 .footer-box {
  
@@ -748,6 +798,19 @@ small {
   transform: scale(1.1);
 }
 
+/* Fade in */
+/* Fade in sections style */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* Responsive: tablet & up */
 @media (min-width: 768px) {
       .topnav {

@@ -30,6 +30,8 @@ function myFunction() {
 
   
 // FADING navigation
+// This code makes the navigation menu fade other links + the logo when hover over one link.
+//  When you move mouse away, everything returns to full opacity.
 const handleHover = function (e) {
   // console.log(this, e.target);
 
@@ -38,7 +40,7 @@ const handleHover = function (e) {
   if(e.target.classList.contains('nav__link')) {
 
   //Identify Elements to Fade
-
+//The current link huvered 
   const link = e.target;
   // console.log(link)
 
@@ -47,13 +49,15 @@ const handleHover = function (e) {
   const siblings = link.closest('.arrange-manu').querySelectorAll('.nav__link');
    
   //select the logo-move  to the closest which is nav and search for the image
-  const logo = link.closest('.sidenav').querySelector('#logo');
+  const logo = link.closest('.sidenav').querySelector('.logo');
     
   //change the opasity of the siblings of the selected link like first
-  //check if the element are not the original link change opacity
   siblings.forEach(el=> {
+
+    //If the link is not the one being hovered, change its opacity.
+
     if (el !== link) el.style.opacity = this;
-  });
+  });//exit than do the same with the logo
   logo.style.opacity = this;
   }
 };
@@ -67,29 +71,55 @@ nav.addEventListener('mouseout', handleHover.bind(1));
 
 
 // STICKY NAVIGATION
-// 1.select the header-already selected
+// 1.select the header-already selected above
+
+// nav.getBoundingClientRect() returns an object with the size and position of the nav element.
+//Example of what it returns:
+//{
+//   width: 1200,
+//   height: 120, ///this is the extracted height in px
+//   top: 0,
+//   left: 0,
+//   ...
+// }
+
 // 2. calc the height of the nav 
 const navHeight = nav.getBoundingClientRect().height;
-console.log(navHeight);
+console.log(navHeight);//the height of the nav
 
 //3.create the func
+// This function is designed to work with the Intersection Observer API.
+//Its job is to add or remove a “sticky” class on the navigation bar depending on whether a certain element is visible on the screen.
+
+//The Intersection Observer always gives you an array of “entries”.
 const stickyNav = function(entries) {
-  const [entry] = entries;//get the first entry
+  const [entry] = entries;//get the first entry only
+
 //if false(not intersecting)
+//if - entry.isIntersecting is true when the observed element is visible on the screen.
   if (!entry.isIntersecting)
+    //- If the element is not visible, the nav becomes sticky (fixed at the top).
     nav.classList.add('sticky');
-//if true( intersecting)
+
+//- If the element is visible again, the nav stops being sticky.
   else nav.classList.remove('sticky');
 }
 
 //4.create the header observer when header will enter the viewport
+//- It will run every time the header enters or leaves the viewport.
+
 const headerObserver =  new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
+  root: null,//Use the entire browser viewport as the area to observe.
+  //As soon as the header touches the top of the screen, the observer triggers.
+  threshold: 0, //- The callback fires when 0% of the header is visible
+//- It shifts the observer’s trigger point upward by the height of the nav.
+//- So the nav becomes sticky a little earlier, exactly when the header scrolls behind the nav.
+
   rootMargin: `-${navHeight}px`,
 })
-//observe for the header
+//observe for the header(Watch the header. Let me know when it enters or leaves the viewport.)
 headerObserver.observe(header);
+
 
 
 // MODAL
@@ -200,23 +230,32 @@ function validateModal(e) {
 
 // Fading sections
 
+//This ensures the script runs after the DOM is ready, so all .fade-in-section elements exist.
+
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll('.fade-in-section');
-
+    const hero = document.querySelector('.hero-content');
+//This observer watches each section and tells you when it becomes visible.
     const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
+      entries.forEach(entry => { 
+//- entry.isIntersecting → true when the section enters the viewport.
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
           observer.unobserve(entry.target); // Optional: stop observing once visible
         }
       });
     }, {
-      threshold: 0.01
+      threshold: 0.02,
+      rootMargin: "0px 0px -10% 0px"
+
     });
+//Every .fade-in-section is now being watched.
 
     sections.forEach(section => {
       observer.observe(section);
     });
+       observer.observe(hero); 
+
   });
 
 
