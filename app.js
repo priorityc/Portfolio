@@ -13,20 +13,49 @@ const dotContainer = document.querySelector('.dots');
 }
 
 // the hamburger icon show
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "flex") {
-    x.style.display = "none";
-    x.classList.toggle("change");
-  } else {
-    x.style.display = "flex";
-  }
+// function myFunction() {
+//   var x = document.getElementById("myLinks");
+//   if (x.style.display === "flex") {
+//     x.style.display = "none";
+//     x.classList.toggle("change");
+//   } else {
+//     x.style.display = "flex";
+//   }
+// }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const menu = document.getElementById("myLinks");
+
+  // function toggleMenu() {
+  //   const isOpen = menu.style.display === "block"; //the menu links
+  //   menu.classList.toggle("open");
+  //   hamburger.classList.toggle("change", !isOpen);
+  // }
+
+  function toggleMenu() {
+  const isOpen = menu.style.display === "block";
+
+  menu.style.display = isOpen ? "none" : "block";
+
+  // This toggles the hamburger animation correctly
+  hamburger.classList.toggle("change", !isOpen);
 }
 
+  hamburger.addEventListener("click", toggleMenu);
+  
+  hamburger.addEventListener("keydown", function (event) {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      toggleMenu();
+    }
+  });
+});
+
 //Download CV
- function downloadCV() {
-    document.getElementById('cvLink').click();
-  }
+//  function downloadCV() {
+//     document.getElementById('cvLink').click();
+//   }
 
   
 // FADING navigation

@@ -9,12 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
   const menu = document.getElementById("myLinks");
 
   function toggleMenu() {
-    const isOpen = menu.style.display === "block";
-    menu.style.display = isOpen ? "none" : "block";
+    const isOpen = menu.style.display === "block"; //the menu links
+    menu.style.display = isOpen ? "none" : "block";//if menu links are open close it - If it is closed, show it
     hamburger.classList.toggle("change", !isOpen);
   }
 
   hamburger.addEventListener("click", toggleMenu);
+  
   hamburger.addEventListener("keydown", function (event) {
     if (event.key === "Enter" || event.key === " ") {
       event.preventDefault();

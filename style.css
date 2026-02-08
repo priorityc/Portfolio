@@ -56,7 +56,7 @@ body {
   transition: 0.4s;
 }
 
-.change .bar1 {
+/* .change .bar1 {
   transform: translate(0, 11px) rotate(-45deg);
 }
 
@@ -66,7 +66,7 @@ body {
 
 .change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
-}
+} */
 
 
 .topnav {
@@ -113,6 +113,29 @@ body {
     background-color: var(cream);
   }
 
+  /* Animate the hamburger */
+  .hamburger.change .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.change .bar2 {
+  opacity: 0;
+}
+
+.hamburger.change .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Open-show mobile menu */
+#myLinks {
+  display: none;
+}
+
+#myLinks.open {
+  display: block;
+}
+
+
   /* Sticky navigation class */
   .sticky {
   position: fixed;
@@ -123,6 +146,7 @@ body {
   background-color: white; 
 }
 /* Hero section */
+
 
 .hero {
   display: flex;
