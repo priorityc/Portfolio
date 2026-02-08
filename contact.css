@@ -72,6 +72,7 @@ body {
 
 .topnav {
     background: radial-gradient(circle at center, #0a0f2c, #050618);
+    color: white;
 
 }
 
@@ -115,6 +116,7 @@ body {
   }
 
   /* Animate the hamburger */
+ 
   .hamburger.change .bar1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -133,7 +135,7 @@ body {
 }
 
 #myLinks.open {
-  display: block;
+  display: flex;
 }
 
 
