@@ -14,6 +14,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: white;
   font-size: 1rem;
+  line-height: 1.7;
 
 }
 .mobile-header {
@@ -357,7 +358,6 @@ Then the animation loops again.
   padding: 1rem;
   border-radius: 15px;
   color:#0a0f2c;
-  border: 1px solid #9900ff5e;
 
 }
 
@@ -392,7 +392,9 @@ Then the animation loops again.
 
 .cs-block {
   margin-bottom: 2.5rem;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .cs-block p {
@@ -519,8 +521,138 @@ Then the animation loops again.
   line-height: 1.5;
   margin-top: 0.5rem;
 }
+.UI-gallery {
+  display: flex;
+}
 
+.UI-image {
+  max-width: 300px;
+  height: auto;
+}
+.UI-description {
+  display: flex;
+  flex-direction: column;
+}
 /* ------------- */
+
+/* IMAGE GALLERY */
+/* ---------------------------
+   MOBILE-FIRST GALLERY
+---------------------------- */
+
+/* Intro text */
+.cs-gallery-intro {
+  margin-bottom: 1rem;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Grid: mobile = 1 column */
+.ui-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+      background: #f0f0f0;
+    border-radius: 15px;
+    padding: 0.5em;
+    margin: 1rem 0;
+}
+
+.ui-grid img {
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ui-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ---------------------------
+   MODAL (MOBILE-FIRST)
+---------------------------- */
+
+
+.ui-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(0,0,0,0.85);
+
+  /* Center content */
+  
+  justify-content: center;
+  align-items: center;
+
+  padding: 1rem;
+}
+
+/* Image inside modal */
+.ui-modal-content {
+  width: 100%;
+  max-height: 80vh;   /* fits inside viewport */
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Caption */
+.ui-caption {
+  text-align: center;
+  color: #fff;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+/* Close button */
+.ui-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ui-close:hover {
+  color: #ccc;
+}
+
+
+
+/* Design decisions */
+/* Container */
+.design-decisions .dd-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Title */
+.design-decisions h2 {
+  margin: 0;
+}
+.dd-content p {
+  margin-bottom: 1rem;
+}
+/* Content */
+.design-decisions .dd-content ul {
+  padding-left: 1.2rem;
+}
+
+.process-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  
+}
 
 /* FOOTER BASE */
 .footer-box {
@@ -907,6 +1039,19 @@ small {
     gap: 1rem;
     margin-bottom: 3rem;
   }
+.process-flex {
+  flex-direction: row;
+  justify-content: space-around;
+}
+  /* Gallery */
+   .ui-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+ .ui-modal-content {
+    max-width: 70%;
+    max-height: 85vh;
+  }
 
    .footer-abstract-shape {
     width: 220px;
@@ -915,6 +1060,8 @@ small {
     
   }
 }
+   
+
 
 @media (min-width: 1024px) {
 
@@ -927,10 +1074,17 @@ small {
   .section-header p{
     font-size: 1.3rem;
   }
-     .project-overview-cont {
+  .project-overview-cont {
         margin-bottom: 5rem;
-       
-    }
+  }
+  .cs-overview {
+        background: #f0f0f0;
+        display: flex;
+        gap: 4rem;
+        justify-content: space-between;
+        border-radius: 5px;
+  }
+  
     .case-study {
   max-width: 1000px;
     }
@@ -939,15 +1093,27 @@ small {
 }
 .cs-block {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 1fr;
   gap: 2rem;
   align-items: start;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .cs-section-title {
   margin: 0;
 }
+/* Gallery */
+ /* .ui-grid {
+    grid-template-columns: repeat(2, 1fr);
+   margin: 3rem 0;
+    
+  } */
+
+  .ui-modal-content {
+    max-width: 70%;
+    max-height: 80vh;
+  }
+ 
  .form-heading {
     text-align: center;
   }

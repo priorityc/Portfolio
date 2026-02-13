@@ -180,7 +180,7 @@ body {
 }
 
 .hero-tagline {
-  font-size: 1rem;
+  font-size: 1.3rem;
   line-height: 1.5;
   max-width: 22rem;
 }
@@ -806,7 +806,7 @@ small {
   }
 
   .hero-tagline {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
 
   .hero-shape {

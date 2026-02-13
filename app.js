@@ -287,6 +287,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
+// The tab Gallery 
+
+
+function expandImage(img) {
+  const modal = document.getElementById("uiModal");
+  const modalImg = document.getElementById("uiModalImg");
+  const caption = document.getElementById("uiModalCaption");
+
+  modal.style.display = "flex";
+  modalImg.src = img.src;
+  caption.innerHTML = img.alt;
+}
+
+function closeModal() {
+  document.getElementById("uiModal").style.display = "none";
+}
 
 // The slideshow 
 // const loadImg = function (entries, observer) {
