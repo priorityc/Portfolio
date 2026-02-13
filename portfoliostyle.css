@@ -577,7 +577,7 @@ Then the animation loops again.
 
 
 .ui-modal {
-  display: none;
+  /* display: none;
   position: fixed;
   inset: 0;
   z-index: 999;
@@ -585,20 +585,40 @@ Then the animation loops again.
 
   /* Center content */
   
-  justify-content: center;
+  /* justify-content: center;
   align-items: center;
 
-  padding: 1rem;
+  padding: 1rem; */
+
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  z-index: 999;
 }
 
 /* Image inside modal */
 .ui-modal-content {
-  width: 100%;
-  max-height: 80vh;   /* fits inside viewport */
+  max-width: 290px;
+  margin: 0 auto;;
+  max-height: 80vh;   
   object-fit: contain;
   border-radius: 8px;
 }
-
+/* .ui-modal-content {
+background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+} */
 /* Caption */
 .ui-caption {
   text-align: center;
@@ -1048,8 +1068,13 @@ small {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .ui-modal {
+    align-items: center;
+    justify-content: center;
+   
+  }
  .ui-modal-content {
-    max-width: 70%;
+    max-width: 100%;
     max-height: 85vh;
   }
 
@@ -1102,17 +1127,7 @@ small {
 .cs-section-title {
   margin: 0;
 }
-/* Gallery */
- /* .ui-grid {
-    grid-template-columns: repeat(2, 1fr);
-   margin: 3rem 0;
-    
-  } */
 
-  .ui-modal-content {
-    max-width: 70%;
-    max-height: 80vh;
-  }
  
  .form-heading {
     text-align: center;
