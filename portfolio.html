@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./portfoliostyle.css">
+    <!-- <link rel="stylesheet" href="./portfoliostyle.css"> -->
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
     
@@ -53,7 +54,7 @@
     <h1 class="hero-name">Petya Dimitrova</h1>
     <h2 class="hero-role">Web Developer</h2>
     <p class="hero-tagline">
-      Building clean, accessible, user-centered interfaces that feel effortless.
+      Blending thoughtful digital experiences with smart technical solutions to turn challenges into possibilities
     </p>
       <a href="https://github.com/priorityc?tab=repositories" title="View GitHub"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
     <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/" title="View Linkedin"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
@@ -67,63 +68,97 @@
   </div>
 </header>
 <main>
-     <article class="section-header fade-in-section">
-        <h2>Selected Projects</h2>
-        <p>Projects that blend thoughtful UI, accessibility, and clean engineering.
-Each one reflects my approach to building intuitive, emotionally engaging digital experiences.
-        </p>
-    </article>
-    <section class="case-study">
-   
-  <!-- Hero -->
-   <div class="project-overview-cont fade-in-section">
-  <section class="cs-hero">
-    <h2 class="cs-title">Cosmic Care</h2>
-    <p class="cs-subtitle">Wellness e-commerce website</p>
-    <img
-      src="./media/projectCC.png"
-      alt="Cosmic Care home page overview"
-      class="cs-hero-image"
-    />
-  </section>
 
-  <!-- Quick Overview -->
-  <section class="cs-overview">
-    <h2 class="cs-section-title">Project Overview</h2>
-    <div class="cs-overview-grid">
+   
+
+  <!-- Section Header -->
+  <header class="section-header fade-in-section">
+    <h2>Selected Projects</h2>
+    <p>
+      Projects that blend thoughtful UI, accessibility, and clean engineering.
+      Each one reflects my approach to building intuitive, emotionally engaging digital experiences.
+    </p>
+  </header>
+<article>
+  <!-- Project Overview (Hero + Quick Overview) -->
+  <div class="project-overview-cont fade-in-section">
+
+    <!-- Hero -->
+    <section class="cs-hero">
+      <h2 class="cs-title">Cosmic Care</h2>
+      <p class="cs-subtitle">Wellness e-commerce website</p>
+
+      <figure>
+        <img
+          src="./media/projectCC.png"
+          alt="Cosmic Care home page overview"
+          class="cs-hero-image"
+        />
+      </figure>
+
+       <div class="cs-links fade-in-section">
+    <a href="https://cosmiccare.netlify.app/?demo=true" class="cs-link-btn">Live Demo</a>
+    <a href="https://github.com/priorityc/cosmic-care-site" class="cs-link-btn cs-link-secondary">GitHub Repo</a>
+    <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
+      </div>
+    </section>
+
+    <!-- Quick Overview -->
+    <section class="cs-overview">
+      <h2 class="cs-section-title">Project Overview</h2>
+
       <div class="cs-overview-item">
         <h3>Role</h3>
         <p>Full Stack Developer</p>
       </div>
+
       <div class="cs-overview-item">
         <h3>Timeline</h3>
         <p>3 months</p>
       </div>
+
       <div class="cs-overview-item">
         <h3>Tools</h3>
-        <p>React, JavaScript, Express.js(Data endpoints), Supabase(database), Cloudinary(Cloud storage),Render(deployment), Netlify(hosting)</p>
+        <p>
+          React, JavaScript, Express.js (data endpoints), Supabase (database),
+          Cloudinary (cloud storage), Render (deployment), Netlify (hosting)
+        </p>
       </div>
+
       <div class="cs-overview-item">
         <h3>Responsibilities</h3>
-        <p>UI engineering, Front-end development, responsive layout, database integration, accessibility</p>
+        <p>
+          UI engineering, front-end development, responsive layout,
+          database integration, accessibility
+        </p>
       </div>
-    </div>
-  </section>
+
+     
+    </section>
+
   </div>
 
+  <!-- Case Study Header -->
+  <section class="section-header-case case-study fade-in-section">
+    <h2 class="sectionheader">Case Study</h2>
+    <p>
+      A closer look at how I approached the challenge, shaped the user experience,
+      and built the final interface — from early ideas to polished execution.
+    </p>
+  </section>
+
   <!-- Problem -->
-   <!-- <div class="container"> -->
-     <article class="section-header-case fade-in-section">
-        <h2>Case Study</h2>
-        <p>A closer look at how I approached the challenge, shaped the user experience, and built the final interface — from early ideas to polished execution.
-        </p>
-    </article>
   <section class="cs-block fade-in-section">
     <h2 class="cs-section-title">Problem</h2>
     <p>
-      Existing wellness websites were often cluttered and overwhelming. The challenge
-      was to design a calming interface that allows users to track their well-being
-      effortlessly and provide positive shoping experiance.
+      I’ve always dreamed of creating my own wellness brand, so I decided to design it myself.
+      Many e‑commerce platforms in the wellness space suffer from cluttered, confusing interfaces
+      that overwhelm users instead of supporting them. They often lack emotional connection,
+      and business owners tend to choose designs they personally like rather than what their
+      customers actually need.
+      The challenge was to create a calming, intuitive web experience that helps users feel
+      supported, understood, and emotionally connected to the brand. My goal was to build trust
+      through simplicity and warmth, while delivering an effortless and positive shopping experience.
     </p>
   </section>
 
@@ -138,41 +173,40 @@ Each one reflects my approach to building intuitive, emotionally engaging digita
         interpretable wellness data with minimal cognitive load.
       </p>
     </div>
-</section>
-<!-- </div> -->
+  </section>
 
-    <section>
-    <div class="cs-subblock fade-in-section">
+  <!-- Gallery -->
+  <section class="cs-block fade-in-section">
+    <div class="cs-subblock">
       <h3>Gallery</h3>
+
       <div class="cs-wireframes">
-        <img src="./media/productview.png" alt="Product view image" />
-        <img src="./media/productView2.png" alt="Product view" />
+        <figure>
+          <img src="./media/productview.png" alt="Product view image" />
+        </figure>
+
+        <figure>
+          <img src="./media/productView2.png" alt="Product view" />
+        </figure>
       </div>
     </div>
-</section>
+  </section>
 
-<section class="cs-block fade-in-section">
-   
-  <h2 class="cs-section-title">Design decisions</h2>
-
-      <p>
-        I opted for a soothing color palette, generous whitespace, and clear visual
-        hierarchy to keep focus on key wellness products. Components were designed to be
-        reusable and responsive. Products ware automated betwean the database and the front end interface.
-      </p>
-    </div>
-</section>
-
-  
-
+  <!-- Design Decisions -->
   <section class="cs-block fade-in-section">
-      <h3>Technical Challenges</h3>
-      <p>
-        I implemented dynamic data handling with the wellness API, optimized component
-        rendering, and ensured keyboard navigation and screen reader support across all
-        interactive elements.
-      </p>
-    </div>
+    <h2 class="cs-section-title">Design Decisions</h2>
+    <p>
+      I chose deep blacks, purples, and subtle gradients to evoke the feeling of outer space. 
+      This palette creates contrast, draws focus to the central animation, and reinforces the theme of mystery and exploration.
+    </p>
+  </section>
+
+  <!-- Technical Challenges -->
+  <section class="cs-block fade-in-section">
+    <h3>Technical Challenges</h3>
+    <p>
+      
+    </p>
   </section>
 
   <!-- Outcome -->
@@ -183,65 +217,92 @@ Each one reflects my approach to building intuitive, emotionally engaging digita
       knowledge of accessible design, refined my approach to state management with React
       hooks, and improved how I structure reusable UI components for scalability.
     </p>
-  </section>
-
-
-  <!-- Links -->
-  <section class="cs-links fade-in-section">
     <a href="https://cosmiccare.netlify.app/?demo=true" class="cs-link-btn">Live Demo</a>
     <a href="https://github.com/priorityc/cosmic-care-site" class="cs-link-btn cs-link-secondary">GitHub Repo</a>
     <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
   </section>
 
+  <!-- Links -->
+ 
+
+</article>
   <!--  -->
 
-  <!-- SECOND PROJECT -->
-   <!-- Hero -->
-   <div class="project-overview-cont fade-in-section">
-  <section class="cs-hero">
-    <h1 class="cs-title">Black Hole Event</h1>
-    <p class="cs-subtitle">Landing Page</p>
-    <img
-      src="./media/projectLP.png"
-      alt="Black hole landing page overview"
-      class="cs-hero-image"
-    />
-  </section>
+  <!-- ---------------------------------- -->
+   <article>
+  <!-- Project Overview (Hero + Quick Overview) -->
+  <div class="project-overview-cont fade-in-section">
 
-  <!-- Quick Overview -->
-  <section class="cs-overview">
-    <h2 class="cs-section-title">Project Overview</h2>
-    <div class="cs-overview-grid">
+    <!-- Hero -->
+    <section class="cs-hero">
+      <h2 class="cs-title">Black Hole Event</h2>
+      <p class="cs-subtitle">Landing Page</p>
+
+      <figure>
+         <img
+          src="./media/projectLP.png"
+          alt="Black hole landing page overview"
+          class="cs-hero-image"
+        />
+      </figure>
+
+       <div class="cs-links fade-in-section">
+        <a href="https://priorityc.github.io/stargazing-landing-page/" class="cs-link-btn">Live Demo</a>
+        <a href="https://github.com/priorityc/stargazing-landing-page" class="cs-link-btn cs-link-secondary">GitHub Repo</a>
+        <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
+      </div>
+    </section>
+
+    <!-- Quick Overview -->
+    <section class="cs-overview">
+      <h2 class="cs-section-title">Project Overview</h2>
+
       <div class="cs-overview-item">
         <h3>Role</h3>
         <p>Front-end Developer</p>
       </div>
+
       <div class="cs-overview-item">
         <h3>Timeline</h3>
-        <p>1 month</p>
+        <p>1 months</p>
       </div>
+
       <div class="cs-overview-item">
         <h3>Tools</h3>
-        <p>HTML, CSS, JavaScript, Animations</p>
+        <p>
+          HTML, CSS, JavaScript, Animations
+        </p>
       </div>
+
       <div class="cs-overview-item">
         <h3>Responsibilities</h3>
-        <p>UI engineering, Front-end development, responsive layout</p>
+        <p>
+          UI engineering, Front-end development, responsive layout
+        </p>
       </div>
-    </div>
-  </section>
+
+     
+    </section>
+
   </div>
 
+  <!-- Case Study Header -->
+  <section class="section-header-case case-study fade-in-section">
+    <h2 class="sectionheader">Case Study</h2>
+    <p>
+      The London Museum of Science had just launched a thrilling new astronomy event and wanted a digital experience that felt as magical as the night sky itself.
+      The museum needed a landing page that didn’t just inform people, but pulled them into the universe. Something immersive, atmospheric, and family‑friendly. A moment of wonder that would inspire visitors to subscribe to the event — and hopefully support the museum through optional donations.
+      Their goal was to increase awareness, attract families, and encourage sign‑ups for the event.
+    </p>
+  </section>
+
   <!-- Problem -->
-   <article class="section-header-case fade-in-section">
-        <h2>Case Study</h2>
-        <p>A closer look at how I approached the challenge, shaped the user experience, and built the final interface — from early ideas to polished execution.
-        </p>
-    </article>
-  <section class="cs-block">
+  <section class="cs-block fade-in-section">
     <h2 class="cs-section-title">Problem</h2>
     <p>
-       The British Science Museum was struggling to attract attendance to their family‑friendly events and needed a web solution that would increase customer engagement and raise awareness of their space‑themed activities.
+      Their existing website announcements weren’t capturing attention — visitors were scrolling past without feeling the excitement.
+      Many museum landing pages rely on static banners or text‑heavy announcements, which fail to create emotional engagement. 
+      The museum wanted something more immersive — a visually striking, interactive experience that would spark curiosity and encourage visitors to explore further.
     </p>
   </section>
 
@@ -252,125 +313,154 @@ Each one reflects my approach to building intuitive, emotionally engaging digita
     <div class="cs-subblock">
       <h3>Research & Insights</h3>
       <p>
-        I analyzed user feedback of people attending similar events and identified the need for intuitive interactive similar as live event landing page that they can add to their website.
+        Before designing the landing page, I explored how museums and science institutions typically present special events online. Many rely on static banners, long text blocks, or generic hero images that fail to create emotional engagement.
+         This helped me identify several key insights:
       </p>
-    </div>
-
-    <!-- <div class="cs-subblock">
-      <h3>Gallery</h3>
-      <div class="cs-wireframes">
-        <img src="./media/productview.png" alt="Product view image" />
-        <img src="./media/productView2.png" alt="Product view" />
-      </div>
-    </div> -->
-
-    <div class="cs-subblock">
-      <h3>UI Decisions and Interaction flow</h3>
-      <section class="cs-block">
-      <h2 class="cs-section-title">Interaction Flow Gallery</h2>
-        <div class="cs-wireframes">
-        <img src="./media/BHhero.png" alt="Landing page hero view image" />
-        <img src="./media/BHform.png" alt="SUbscibe form view" />
-      </div>
- 
-  </div>
-  <!-- <p class="cs-video-caption">
-    A short screenshoots demonstrating interaction from the hero section leading to saving seat for the event.
-  </p> -->
-</section>
-
-<section class="cs-block fade-in-section">
-  <h2 class="cs-section-title">Design decisions</h2>
-
-      <p>
-        I designed the interface using a dark cosmic palette, blending deep blue and soft black to create an immersive atmosphere. Generous whitespace and a strong visual hierarchy guide the user’s attention through each section. The hero section recreates the look of a real black hole to spark curiosity — particularly for families exploring the site together. Even the subscription form plays into the theme, with elements that appear to slip beyond the event horizon.
-      </p>
-    </div>
-</section>
-
-  <section class="cs-block fade-in-section ">
-      <h3>Technical Challenges</h3>
-      <p>
-        The technical challange involved constructing the animation simulation to mimic the black hole event experiance.
-      </p>
+      <ul>
+        <li>Users respond strongly to visual storytelling</li>
+        <li>Museum websites often feel informational, not inspirational</li>
+        <li>Interactive elements increase engagement and conversions</li>
+        <li>The event theme should shape the entire experience</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Final Solution -->
-  <!-- <section class="cs-block">
-    <h2 class="cs-section-title">Final Solution</h2>
-    <div class="cs-gallery">
-      <img src="./media/projectCC.png" alt="Final dashboard UI" />
-      <img src="./media/cosmic-final-2.png" alt="Detail view of widgets" />
-      <img src="./media/cosmic-final-3.png" alt="Responsive mobile layout" />
+  <!-- Gallery -->
+  <section class="cs-block fade-in-section">
+    <div class="cs-subblock">
+      <h3>Gallery</h3>
+
+      <div class="cs-wireframes">
+        <figure>
+          <img src="./media/BHhero.png" alt="Landing page hero view image" />
+        </figure>
+
+        <figure>
+        <img src="./media/BHform.png" alt="Subscibe form view" />
+        </figure>
+      </div>
     </div>
-  </section> -->
+  </section>
+
+  <!-- Design Decisions -->
+  <section class="cs-block fade-in-section">
+    <h2 class="cs-section-title">Design Decisions</h2>
+    <p>
+      I implemented dynamic data handling with the wellness API, optimized component
+      rendering, and ensured keyboard navigation and screen reader support across all
+      interactive elements.
+      Instead of a static banner, I used motion to create an immediate sense of immersion.
+      The swirling black hole animation acts as a visual anchor, pulling users into the experience and encouraging them to scroll. This supports the museum’s goal of capturing attention quickly.
+      Astronomy visuals can be intense, so I balanced the animation with a clean, uncluttered layout.
+      Based on research, parents want quick clarity. I placed the event title, date, and “Free Entry” information prominently above the fold. This ensures families immediately understand the value of the event.
+    </p>
+  </section>
+
+  <!-- Technical Challenges -->
+  <section class="cs-block fade-in-section">
+    <h3>Technical Challenges</h3>
+    <p>
+      Building the swirling black‑hole effect required balancing visual quality with performance.
+     I experimented with CSS animations, gradients, and layered transforms to achieve a sense of depth without relying on heavy video files or WebGL. The challenge was creating motion that felt fluid while keeping the page lightweight.
+    </p>
+  </section>
 
   <!-- Outcome -->
   <section class="cs-block fade-in-section">
     <h2 class="cs-section-title">Outcome & Lessons Learned</h2>
     <p>
-      The final product offers a tranquil, focused user experience. I deepened my
-      knowledge of CSS animations, refined my approach design requirements.
+      The final landing page successfully delivers an immersive, astronomy‑themed experience that captures users’ attention within the first few seconds. The dynamic black‑hole animation, combined with clear messaging and scroll‑triggered interactions, creates a sense of curiosity and excitement that aligns with the museum’s event.
+The design communicates key information quickly, making it easy for families to understand what the event is about and how to subscribe. 
+
     </p>
-  </section>
 
-  <!-- Links -->
-  <section class="cs-links fade-in-section">
-    <a href="https://priorityc.github.io/stargazing-landing-page/" class="cs-link-btn">Live Demo</a>
-    <a href="https://github.com/priorityc/stargazing-landing-page" class="cs-link-btn cs-link-secondary">GitHub Repo</a>
+    <!-- Links -->
+  <!-- <section class="cs-links fade-in-section"> -->
+    <a href="https://cosmiccare.netlify.app/?demo=true" class="cs-link-btn">Live Demo</a>
+    <a href="https://github.com/priorityc/cosmic-care-site" class="cs-link-btn cs-link-secondary">GitHub Repo</a>
     <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
+  <!-- </section> -->
   </section>
-   <!--  -->
 
-   <!-- THIRD PROJECT -->
-   <!-- Hero -->
-   <div class="project-overview-cont fade-in-section">
-  <section class="cs-hero">
-    <h1 class="cs-title">Food Web App</h1>
-    <p class="cs-subtitle">Web Application</p>
-    <img
+  
+
+</article>
+<!-- --------------------------------------------- -->
+
+<!-- 3d project -->
+
+   <article>
+  <!-- Project Overview (Hero + Quick Overview) -->
+  <div class="project-overview-cont fade-in-section">
+
+    <!-- Hero -->
+    <section class="cs-hero">
+      <h2 class="cs-title">Nutrition App</h2>
+      <p class="cs-subtitle">Web Application</p>
+
+      <figure>
+         <img
       src="./media/FoodApp.PNG"
       alt="Food Apps image"
-    />
-  </section>
+      class="cs-hero-image">
+      </figure>
 
-  <!-- Quick Overview -->
-  <section class="cs-overview">
-    <h2 class="cs-section-title">Project Overview</h2>
-    <div class="cs-overview-grid">
+       <div class="cs-links fade-in-section">
+        <a href="https://priorityc.github.io/FoodApp/" class="cs-link-btn">Live Demo</a>
+        <a href="https://github.com/priorityc/FoodApp" class="cs-link-btn cs-link-secondary">GitHub Repo</a>
+        <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
+      </div>
+    </section>
+
+    <!-- Quick Overview -->
+    <section class="cs-overview">
+      <h2 class="cs-section-title">Project Overview</h2>
+
       <div class="cs-overview-item">
         <h3>Role</h3>
         <p>Front-end Developer</p>
       </div>
+
       <div class="cs-overview-item">
         <h3>Timeline</h3>
-        <p>2 months</p>
+        <p>1 months</p>
       </div>
+
       <div class="cs-overview-item">
         <h3>Tools</h3>
-        <p>React, JavaScript, Github, Vite</p>
+        <p>
+          React, JavaScript, Vite, Github
+        </p>
       </div>
+
       <div class="cs-overview-item">
         <h3>Responsibilities</h3>
-        <p>UI engineering, Front-end development, responsive layout</p>
+        <p>
+          UI engineering, Front-end development, responsive layout
+        </p>
       </div>
-    </div>
-  </section>
+
+     
+    </section>
+
   </div>
 
+  <!-- Case Study Header -->
+  <section class="section-header-case case-study fade-in-section">
+    <h2 class="sectionheader">Case Study</h2>
+    <p>
+      Busy families and professionals often struggle to cook healthy meals because they lack recipe ideas and don’t have time to plan meals from scratch. Many also have different dietary needs or want to exclude certain ingredients, which makes finding suitable recipes even more challenging.
+The goal of this project was to design a simple, intuitive recipe‑search experience that helps users quickly discover meals based on their preferences, dietary restrictions, and available ingredients — making healthy cooking easier and more accessible for everyone. 
+    </p>
+  </section>
+
   <!-- Problem -->
-   <article class="section-header-case fade-in-section">
-        <h2>Case Study</h2>
-        <div class="approach-line"></div>
-        <p>A closer look at how I approached the challenge, shaped the user experience, and built the final interface — from early ideas to polished execution.
-        </p>
-    </article>
   <section class="cs-block fade-in-section">
     <h2 class="cs-section-title">Problem</h2>
     <p>
-      Busy families and proffesionals strugle to cook healthy meals and lack of receipt ideas. 
-    </p>
+      Many households have different dietary needs or want to exclude certain ingredients, which makes finding the right meal even more challenging.
+    The problem was to create a simple, intuitive way for users to discover recipes that match their preferences, dietary restrictions, and available ingredients — helping them cook healthier meals with less effort and stress.
+
   </section>
 
   <!-- Process -->
@@ -380,72 +470,71 @@ Each one reflects my approach to building intuitive, emotionally engaging digita
     <div class="cs-subblock">
       <h3>Research & Insights</h3>
       <p>
-        I analyzed user feedback of working families and identified the need for meal receipts and provide ideas for cooking receipts based on ingredients they have at home.
+Before designing the Food Web App, I explored how people search for recipes and plan meals in their daily routines. I focused on the needs of busy families and professionals who want quick, healthy meal ideas without spending too much time searching or planning.         This helped me identify several key insights:
       </p>
-    </div>
-
-    <!-- <div class="cs-subblock">
-      <h3>Gallery</h3>
-      <div class="cs-wireframes">
-        <img src="./media/productview.png" alt="Product view image" />
-        <img src="./media/productView2.png" alt="Product view" />
-      </div>
-    </div> -->
-
-    <div class="cs-subblock">
-      <h3>UI Decisions and Interaction flow</h3>
-      <section class="cs-block">
-  <h2 class="cs-section-title">Interaction Flow Gallery</h2>
-        <div class="cs-wireframes">
-        <img src="./media/MobileFood.png" alt="Food app view image" />
-        <img src="./media/FoodApp-Tablet.png" alt="Food app view" />
-      </div>
- 
-  </div>
-  <p class="cs-video-caption">
-   A short screenshots demonstrating mobile responsiveness.
-  </p>
-  <h2 class="cs-section-title">Design decisions</h2>
-
-      <p>
-        I designed the interface using a warm supportive colours, to create an wellcoming atmosphere. Generous whitespace and a strong visual hierarchy guide the user’s attention through each section. The hero section. The app allows selecting receipts acording to ingredients searches and categories for dietary requirements. Despite most functionality is implemented some are still not and in process of development.
-      </p>
-    </div>
-</section>
-
-  <section class="cs-block fade-in-section">
-      <h3>Technical Challenges</h3>
-      <p>
-        The technical challange involved learning to work with an API resources.
-      </p>
+      <ul>
+        <li>Users lack time and inspiration</li>
+        <li> Dietary needs vary across households</li>
+        <li> Ingredient‑based search is highly valuable</li>
+        <li>Existing recipe platforms can feel overwhelming</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Final Solution -->
-  <!-- <section class="cs-block">
-    <h2 class="cs-section-title">Final Solution</h2>
-    <div class="cs-gallery">
-      <img src="./media/projectCC.png" alt="Final dashboard UI" />
-      <img src="./media/cosmic-final-2.png" alt="Detail view of widgets" />
-      <img src="./media/cosmic-final-3.png" alt="Responsive mobile layout" />
+  <!-- Gallery -->
+  <section class="cs-block fade-in-section">
+    <div class="cs-subblock">
+      <h3>Gallery</h3>
+
+      <div class="cs-wireframes">
+        <figure>
+          <img src="./media/MobileFood.png" alt="Food app view image" />
+        </figure>
+
+        <figure>
+          <img src="./media/FoodApp-Tablet.png" alt="Food app view" />         
+        </figure>
+      </div>
     </div>
-  </section> -->
+  </section>
+
+  <!-- Design Decisions -->
+  <section class="cs-block fade-in-section">
+    <h2 class="cs-section-title">Design Decisions</h2>
+    <p>
+      The design of the Food Web App was shaped by the needs of busy families and professionals who want quick, 
+      healthy meal ideas without navigating overwhelming interfaces. Every decision focused on clarity, speed, and reducing cognitive load.
+    </p>
+  </section>
+
+  <!-- Technical Challenges -->
+  <section class="cs-block fade-in-section">
+    <h3>Technical Challenges</h3>
+    <p>
+      Building the swirling black‑hole effect required balancing visual quality with performance.
+     I experimented with CSS animations, gradients, and layered transforms to achieve a sense of depth without relying on heavy video files or WebGL. The challenge was creating motion that felt fluid while keeping the page lightweight.
+      Clean, Minimal Layout to Reduce Overwhelm,Search Bar for Fast Discovery, Ingredient‑Based Filtering for Real‑Life Convenience, Visual Recipe Cards for Quick Decision‑Making, 
+    </p>
+  </section>
 
   <!-- Outcome -->
   <section class="cs-block fade-in-section">
     <h2 class="cs-section-title">Outcome & Lessons Learned</h2>
     <p>
-      The final product offers useful user experience but it is still in process of refine.
+      The Food Web App successfully delivers a simple, intuitive way for users to discover recipes that match their dietary needs, ingredient preferences, and available time. By combining a clean layout with powerful filtering options, the app helps busy families and professionals find healthy meal ideas quickly — without the clutter and overwhelm of traditional recipe websites.
     </p>
-  </section>
 
-  <!-- Links -->
-  <section class="cs-links fade-in-section">
-    <a href="https://priorityc.github.io/FoodApp/" class="cs-link-btn">Live Demo</a>
-    <a href="https://github.com/priorityc/FoodApp" class="cs-link-btn cs-link-secondary">GitHub Repo</a>
+  <a href="https://cosmiccare.netlify.app/?demo=true" class="cs-link-btn">Live Demo</a>
+    <a href="https://github.com/priorityc/cosmic-care-site" class="cs-link-btn cs-link-secondary">GitHub Repo</a>
     <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
-  </section>
-   <!--  -->
+  <!-- Links -->
+  <!-- <section class="cs-links fade-in-section"> -->
+    
+  <!-- </section> -->
+
+</article>
+ <!-- --- -->
+   
 
    <!-- Section Interaction design projects -->
      <!-- Quick Overview -->
@@ -453,10 +542,16 @@ Each one reflects my approach to building intuitive, emotionally engaging digita
   <section class="cs-hero">
     <h1 class="cs-title">Service quote calculator</h1>
     <p class="cs-subtitle">User interaction and experiance design</p>
+    <figure>
     <img
       src="./media/SlideOne.png"
       alt="UI slide one project image"
-    />
+      class="cs-hero-image">
+    </figure>
+    <section class="cs-links fade-in-section">
+    <a href="https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/Untitled?node-id=1001-2&p=f&t=fwE5FstqYIspjQp7-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="cs-link-btn">Live Demo</a>
+    <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
+  </section>
   </section>
   <section class="cs-overview">
     <h2 class="cs-section-title">Project Overview</h2>
@@ -482,13 +577,13 @@ Each one reflects my approach to building intuitive, emotionally engaging digita
   </div>
 
   <!-- Problem -->
-   <article class="section-header-case fade-in-section">
+   <article class="section-header-case case-study fade-in-section">
         <h2>Case Study</h2>
         <div class="approach-line"></div>
         <p>A small construction business needed a fast, reliable way to generate service quotes while working on the move. Manual calculations were slow and inconsistent, reducing client trust. This project explores a simple, mobile‑friendly solution that supports quick, transparent quoting during site visits.
 
         </p>
-    </article>
+   
   <section class="cs-block fade-in-section">
     <h2 class="cs-section-title">Problem</h2>
     <p>
@@ -538,28 +633,28 @@ This project followed an iterative, user‑centred design approach: research →
   
       <section class="gallery-block fade-in-section">
         <div>
-  <h2 class="cs-section-title">Interaction Flow Gallery-Low-fidelity prototype of the user calculating painting services.
+  <!-- <h2 class="cs-section-title">Interaction Flow Gallery-Low-fidelity prototype of the user calculating painting services.
   </h2>
   <p class="cs-gallery-intro">
     Explore the key screens from the low‑fidelity prototype. Click any image to enlarge.
   </p>
-</div>
+</div> -->
   <!-- Thumbnail Grid -->
-  <div class="ui-grid">
+  <!-- <div class="ui-grid">
     <img src="./media/Quotecalc-slides/SlideOne.png" alt="Slide One" onclick="expandImage(this)">
     <img src="./media/Quotecalc-slides/SlideTwo.png" alt="Slide Two" onclick="expandImage(this)">
     <img src="./media/Quotecalc-slides/SlideThree.png" alt="Slide Three" onclick="expandImage(this)">
     <img src="./media/Quotecalc-slides/SlideFour.png" alt="Slide Four" onclick="expandImage(this)">
-  </div>
+  </div> -->
 
   <!-- Expanded Image Modal -->
-  <div id="uiModal" class="ui-modal" onclick="closeModal()">
+  <!-- <div id="uiModal" class="ui-modal" onclick="closeModal()">
     <span class="ui-close">&times;</span>
     <div>
     <img id="uiModalImg" class="ui-modal-content">
     </div>
     <div id="uiModalCaption" class="ui-caption"></div>
-  </div>
+  </div> -->
 </section>
 <!--  -->
 
@@ -623,14 +718,16 @@ This project followed an iterative, user‑centred design approach: research →
 The final prototype delivers a clear, mobile‑friendly quoting flow that supports fast, on‑site use. It simplifies the contractor’s process, reduces manual input, and provides a structured way to capture essential details. The project strengthened my ability to translate real‑world workflows into intuitive digital interactions and helped me refine my approach to designing simple, efficient mobile experiences.
 
     </p>
-  </section>
-
-  <!-- Links -->
-  <section class="cs-links fade-in-section">
+     <section class="cs-links fade-in-section">
     <a href="https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/Untitled?node-id=1001-2&p=f&t=fwE5FstqYIspjQp7-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1" class="cs-link-btn">Live Demo</a>
     <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
   </section>
+  </section>
+
+  <!-- Links -->
+ 
    <!--  -->
+   </article>
 </main>
 
  <!-- Footer -->
@@ -703,7 +800,7 @@ The final prototype delivers a clear, mobile‑friendly quoting flow that suppor
       
   </div>
       <div class="footer-img">
-         <img class="footer-img" id="logo" src="./media/logoPetya.png" alt="logo image"/>
+         <!-- <img class="footer-img" id="logo" src="./media/logoPetya.png" alt="logo image"/> -->
 
         </div>
       <ul id="copyright">
