@@ -367,6 +367,7 @@ Then the animation loops again.
   letter-spacing: -1.4px;
   color: #2c2a54;
   margin: 0 0 22px;
+  text-transform: capitalize;
 }
 .skills-header {
   position: absolute;
@@ -399,6 +400,7 @@ Then the animation loops again.
   letter-spacing: -1.4px;
   color: #2c2a54;
   margin: 0 0 22px;
+  text-transform: capitalize;
 }
 
 /* Skill bar container */
@@ -414,7 +416,7 @@ Then the animation loops again.
   opacity: 1;
   border-radius: 10px;
   overflow: hidden;
-  height: 38px;
+  height: 18px;
   padding: 2em 0.7em;
 }
 
@@ -426,10 +428,17 @@ Then the animation loops again.
   left: 0;
   height: 100%;
   width: 0; /* start empty */
-  background: linear-gradient(90deg, #6a5acd, #48c6ef);
+  /* background: linear-gradient(90deg, #3a00ff, #9a00ff); */
+  background: #a2a5f5;
+  text-transform: uppercase;
+
   border-radius: 10px;
   transition: width 1.6s ease;
   width: 80%;
+}
+i {
+  font-size: 3rem;
+  padding: 0.2em;
 }
 
 /* Text inside bar */
@@ -441,8 +450,15 @@ Then the animation loops again.
   height: 100%;
   font-size: 1rem;
   color: #ffff;
-  text-shadow: 1px 1px #2c2a54;
+
   font-weight: 500;
+
+  margin: 0 0 2px;
+  font-size: 18px;
+  line-height: 1.3;
+  letter-spacing: -0.8px;
+  font-weight: 600;
+  color: #2c2a54;
 }
 
 /* Skills */
