@@ -145,7 +145,8 @@ body {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
-  background: radial-gradient(circle at center, #0a0f2c, #050618);
+  /* background: radial-gradient(circle at center, #0a0f2c, #050618); */
+  background-color: #151333;
   margin-bottom: 1rem;
 }
 
@@ -153,14 +154,14 @@ body {
 .hero-content {
   z-index: 2;
   max-width: 90%;
-  color: white;
+  color: #d7d4f1;
 }
 
 .hero-name {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #3a00ff;
+  color: #836aee;
   letter-spacing: 2px;
 }
 
@@ -168,13 +169,14 @@ body {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: #d7d4f1;
 }
 
 .hero-tagline {
   font-size: 1.3rem;
   line-height: 1.5;
   max-width: 22rem;
-  color: white;
+  color: #d7d4f1;
 }
 
 .hero-shape {
@@ -202,8 +204,8 @@ body {
 /* CTA button */
 .cta-button {
   background: transparent;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid #d7d4f1;
+  color: #d7d4f1;
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
   font-weight: 600;
@@ -219,7 +221,7 @@ body {
   width: 40px;
   height: auto;
   margin: 1rem;
-  stroke: #9a00ff;
+  stroke: orange;
 }
 
 /* - Use the animation called float
@@ -566,7 +568,8 @@ Then the animation loops again.
 .project-links a {
   margin-right: 1rem;
   font-weight: 600;
-  color: #9a00ff;
+  color: rgba(255, 192, 203, 0.44);
+
   text-decoration: none;
 }
 
