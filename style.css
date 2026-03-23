@@ -997,7 +997,7 @@ small {
 
 @media (min-width: 1024px) {
   body {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .project-container {
     grid-template-columns: repeat(2, 1fr);
