@@ -166,6 +166,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+//Colapsable sidebar
+// Take all projects
+const projectItems = document.querySelectorAll(".project-item");
+//for ech of the projects take the header div with "cosmic care"
+projectItems.forEach((item) => {
+  const header = item.querySelector(".project-link");
+  //add event listener "click on the headers"
+  header.addEventListener("click", () => {
+    //ctate that it is open
+    const isOpen = item.classList.contains("active");
+    //for each projects remove the active class
+    // Close all others
+    projectItems.forEach((i) => i.classList.remove("active"));
+
+    // Toggle this one if it does NOT has class active(close)
+    //add the class active(open)
+    if (!isOpen) {
+      item.classList.add("active");
+    }
+  });
+});
 // MODAL
 const openBtn = document.getElementById("openModal");
 const modal = document.getElementById("hireModal");

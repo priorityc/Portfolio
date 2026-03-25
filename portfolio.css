@@ -143,13 +143,8 @@ body {
 }
 /* Hero section */
 /* Hero section */
+
 .hero {
-  /* background: radial-gradient(
-    circle at center,
-    rgb(60, 29, 7) 0%,
-    rgba(62, 0, 113, 0.977) 35%,
-    rgba(26, 26, 46, 1) 100%
-  ); */
   background-image: linear-gradient(
     to bottom right,
     rgba(61, 32, 105, 0.977) 35%,
@@ -317,6 +312,10 @@ Then the animation loops again.
 }
 .hero-content.visible > *:nth-child(5) {
   transition-delay: 0.7s;
+}
+
+.sidebar {
+  display: none;
 }
 
 /* Main */
@@ -1058,6 +1057,9 @@ small {
 }
 
 @media (min-width: 900px) {
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     font-size: 1.1rem;
   }
@@ -1067,6 +1069,98 @@ small {
   .hero-shape {
     right: 10.5rem;
     bottom: 10.5rem;
+  }
+  /* sidebar */
+  .sidebar {
+    display: block;
+    position: sticky;
+    top: 80px;
+    width: 220px;
+    padding: 20px;
+    /* border-right: 1px solid rgba(255, 255, 255, 0.1); */
+    height: max-content;
+    /* background: #333; */
+  }
+
+  .sidebar {
+    position: sticky;
+    top: 100px;
+    width: 240px;
+    padding: 20px;
+    height: max-content;
+  }
+
+  .sidebar ul {
+    list-style: none;
+  }
+
+  .project-item {
+    margin-bottom: 20px;
+  }
+
+  .project-link {
+    cursor: pointer;
+    font-weight: 600;
+    color: #717172;
+    margin-bottom: 8px;
+  }
+
+  .project-link:hover {
+    color: #ff9df5;
+  }
+
+  .section-list {
+    display: none;
+    margin-left: 15px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 12px;
+  }
+
+  .project-item.active .section-list {
+    display: block;
+  }
+
+  .sidebar li a {
+    margin-bottom: 12px;
+    text-decoration: none;
+    color: gray;
+  }
+
+  .section-list li {
+    margin-bottom: 6px;
+  }
+
+  .section-list a {
+    color: #cfcfff;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .section-list a:hover {
+    color: #ff9df5;
+  }
+
+  .section-list {
+    display: none;
+    margin-left: 15px;
+  }
+
+  /* .project-item.active .section-list {
+    display: block;
+  } */
+
+  #sideLinks {
+    display: none;
+  }
+
+  #sideLinks.open {
+    display: block;
+  }
+
+  .project-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 40px;
   }
   .section-header {
     margin: 8rem auto;
