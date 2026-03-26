@@ -1,6 +1,11 @@
-/* Full height image header */
-/* HEADER CONTAINER */
-/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 100vw;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -137,6 +142,8 @@ body {
   background-color: white;
 }
 /* Hero section */
+/* Hero section */
+
 .hero {
   background-image: linear-gradient(
     to bottom right,
@@ -220,7 +227,7 @@ height: 280px; */
 }
 
 .cta-button-work {
-  background: rgb(199, 131, 3);
+  background: rgb(0, 0, 98);
   font-size: 1.2rem;
   color: #d7d4f1;
   border: 1px solid rgb(119, 119, 1);
@@ -239,20 +246,40 @@ height: 280px; */
 }
 
 .git-hub-icon {
-  width: 40px;
+  width: 25px;
   height: auto;
   margin: 1rem;
   stroke: orange;
 }
 
-/* - Use the animation called float
-- Make it last 6 seconds
-- Use a smooth easing (ease-in-out)
-- Repeat it forever (infinite
- */
-.hero-shape {
-  display: inline;
-  animation: float 6s ease-in-out infinite;
+/* HTML: <div class="sparkle"></div> */
+.cube {
+  --d: 40px; /* control the depth */
+  height: 100px;
+  padding: 10px;
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  border: solid #0000;
+  border-radius: 12px;
+  border-width: var(--d) 0 0 var(--d);
+  clip-path: polygon(
+    100% 100%,
+    var(--d) 100%,
+    0 calc(100% - var(--d)),
+    0 0,
+    calc(100% - var(--d)) 0,
+    100% var(--d)
+  );
+  background: conic-gradient(
+      from 90deg at var(--d) var(--d),
+      #0000 25%,
+      #0004 0 62.5%,
+      #0008 0
+    )
+    /* border-box #9cc4e4; */ border-box #c3dff57f;
+}
+.button-hero {
+  display: flex;
 }
 .header-icons {
   display: flex;
