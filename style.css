@@ -167,7 +167,8 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 400;
   margin-bottom: 0.5rem;
-  color: rgb(130, 82, 161);
+  /* color: rgb(130, 82, 161); */
+  color: #ddddef;
   border-bottom: 2px solid rgb(130, 82, 161);
   letter-spacing: 3px;
 }
@@ -227,19 +228,26 @@ height: 280px; */
 }
 
 .cta-button-work {
-  background: rgb(0, 0, 98);
+  background: #a2a5f5;
   font-size: 1.2rem;
-  color: #d7d4f1;
-  border: 1px solid rgb(119, 119, 1);
+  color: #2c2a54;
+  border: none;
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
   font-weight: 500;
   transition: background 0.3s ease;
+  width: 140px;
+  text-align: center;
+  text-decoration: none;
 }
-.cta-button-work a {
+.cta-button-work:hover {
+  cursor: pointer;
+  background: #b0b3f7;
+}
+/* .cta-button-work a {
   text-decoration: none;
   color: white;
-}
+} */
 
 .cta-button:hover {
   background: rgba(255, 255, 255, 0.1);
@@ -252,32 +260,6 @@ height: 280px; */
   stroke: orange;
 }
 
-/* HTML: <div class="sparkle"></div> */
-.cube {
-  --d: 40px; /* control the depth */
-  height: 100px;
-  padding: 10px;
-  aspect-ratio: 1;
-  box-sizing: border-box;
-  border: solid #0000;
-  border-radius: 12px;
-  border-width: var(--d) 0 0 var(--d);
-  clip-path: polygon(
-    100% 100%,
-    var(--d) 100%,
-    0 calc(100% - var(--d)),
-    0 0,
-    calc(100% - var(--d)) 0,
-    100% var(--d)
-  );
-  background: conic-gradient(
-      from 90deg at var(--d) var(--d),
-      #0000 25%,
-      #0004 0 62.5%,
-      #0008 0
-    )
-    /* border-box #9cc4e4; */ border-box #c3dff57f;
-}
 .button-hero {
   display: flex;
 }
@@ -481,7 +463,7 @@ Then the animation loops again.
   top: -20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: orange;
+  background-color: rgb(255, 166, 0);
   color: #2c2a54;
   font-weight: 600;
   font-size: 13px;
@@ -989,8 +971,8 @@ small {
 }
 
 .btn-primary {
-  background: #3a00ff;
-  color: white;
+  background: #a2a5f5;
+  color: #2c2a54;
 }
 
 .btn-secondary {
@@ -1290,6 +1272,9 @@ small {
   }
   .hero {
     padding: 12em;
+    display: flex;
+    align-items: flex-end;
+    gap: 5rem;
   }
   .hero-shape {
     right: 12rem;
