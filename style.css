@@ -494,11 +494,12 @@ Then the animation loops again.
 /* Profile card */
 .profile-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 400px;
   margin: auto;
   text-align: center;
   font-family: arial;
   border-radius: 10px;
+  padding: 1em;
 }
 
 .title {
@@ -512,7 +513,7 @@ button {
   display: inline-block;
   padding: 8px;
   color: white;
-  background-color: #000;
+  background-color: #9a00ff;
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -851,18 +852,18 @@ i {
 .btn-primary {
   background: linear-gradient(to right, #d8b4ff, #ff9df5);
   color: #1a1b4b;
-  padding: 8px 16px;
+  padding: 6px 17px;
   border-radius: 6px;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 
 .btn-secondary {
   border: 1px solid #d8b4ff;
   color: #d8b4ff;
-  padding: 8px 16px;
+  padding: 6px 16px;
   border-radius: 6px;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -1017,17 +1018,14 @@ small {
   font-weight: 600;
   cursor: pointer;
   border: none;
+  background: transparent;
 }
 
 .btn-primary {
   background: #9a00ff;
   color: #e0e0e0;
   border-radius: 999px;
-}
-
-.btn-secondary {
-  /* background: #e0e0e0; */
-  color: #e0e0e0;
+  border: 1px solid #e0e0e0;
 }
 
 /* SOCIAL ICONS */
@@ -1298,7 +1296,7 @@ small {
     display: flex;
     gap: 3rem;
     padding: 2em;
-    float: left;
+    text-align: left;
   }
   #myProgress {
     max-width: 50%;
