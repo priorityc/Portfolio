@@ -151,6 +151,7 @@ body {
     rgb(60, 29, 7)
   ); */
   /* background: #0d022a; */
+
   background:
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03), rgba(30, 9, 51, 0.1)),
     #01021d;
@@ -866,10 +867,11 @@ Then the animation loops again.
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.03);
   transition: transform 0.25s ease;
   color: #f8f8fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .project-descr {
-  padding: 1em;
+  padding: 1.8rem;
   color: #d9d6eb;
 }
 
@@ -1424,22 +1426,29 @@ small {
   body {
     font-size: 1.2rem;
   }
+
   .projects-grid {
     max-width: 1300px;
-    margin: 3rem auto;
-    gap: 2rem;
-    grid-template-columns: repeat(2, 2fr);
-    padding: 1rem 2em;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+    margin: 0 auto;
+    gap: 1rem;
   }
 
+  /* Make sure the last card is the wide one */
+
   .hero {
-    padding: 6rem;
     display: flex;
     justify-content: space-evenly;
     text-align: left;
     height: 90vh;
   }
 
+  .project-cont {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 3rem;
+  }
   .hero-shape {
     right: 12rem;
     bottom: 4rem;
@@ -1501,6 +1510,7 @@ small {
   .skills-grid {
     max-width: 1200px;
     margin: 7rem auto;
+    gap: 2rem;
   }
 
   .skills-title {
@@ -1518,9 +1528,11 @@ small {
   }
   .unique-card {
     text-align: left;
+    padding: 2rem;
   }
   .unique-section {
     margin-bottom: 7rem;
+    padding-top: 3rem;
   }
   .form-heading {
     text-align: center;
