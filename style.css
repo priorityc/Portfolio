@@ -19,7 +19,7 @@ body {
 
   font-weight: 400;
   line-height: 1.8;
-  background-color: #f8f7fa;
+  /* background-color: #f8f7fa; */
 }
 
 .mobile-header {
@@ -148,7 +148,7 @@ body {
     #01021d;
   text-align: center;
   margin-bottom: 3rem;
-  height: 60vh;
+  height: 86vh;
   padding: 1em;
   color: white;
 }
@@ -176,7 +176,6 @@ body {
 }
 
 .hero-role {
-  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
   color: #d7d4f1;
@@ -348,7 +347,7 @@ Then the animation loops again.
 /* SECTION ABOUT */
 
 /* Table styling */
-.getin-touch-cont table {
+/* .getin-touch-cont table {
   width: 100%;
   border-collapse: collapse;
 }
@@ -357,7 +356,7 @@ Then the animation loops again.
   padding: 0.6rem 0;
 }
 
-/* Contact links */
+
 .intouch-item {
   display: flex;
   align-items: center;
@@ -371,8 +370,7 @@ Then the animation loops again.
 .intouch-item:hover {
   color: #ffffff;
   transform: translateX(4px);
-}
-*/
+} */
 
 /* New ABOUT section */
 /* Section wrapper */
@@ -381,6 +379,28 @@ Then the animation loops again.
   margin: 2rem 0;
 }
 
+.frontend-skills,
+.backend-skills,
+.software-skills,
+.cloud-skills {
+  background-color: #f0edfa;
+  list-style-type: none;
+  padding: 1em;
+  border-radius: 10px;
+  margin: 1rem;
+}
+
+.backend-skills {
+  background-color: #e0f2f7;
+}
+
+.software-skills {
+  background-color: #f7f5e0;
+}
+
+.cloud-skills {
+  background-color: #f7e0f6;
+}
 /* Header */
 .about-header {
   font-size: 2rem;
@@ -394,11 +414,10 @@ Then the animation loops again.
   margin-right: 6px;
 }
 
-/* Mobile-first grid */
-.about-grid {
+/* .about-grid {
   display: grid;
-  grid-template-columns: 1fr; /* mobile */
-}
+  grid-template-columns: 1fr; 
+} */
 
 /* Card styling */
 .about-card {
@@ -415,6 +434,7 @@ Then the animation loops again.
   padding: 2em;
   text-align: center;
 }
+
 /* Profile card specifics */
 .profile .about-img {
   width: 180px;
@@ -537,6 +557,7 @@ Then the animation loops again.
 
 .unique-section {
   padding: 2rem 1.2rem;
+  background: #f0eef7;
 }
 
 /* Skills */
@@ -558,12 +579,12 @@ Then the animation loops again.
 
 /* Card styling */
 .unique-card {
-  background: #ffffff;
-  border: 1.5px solid #d9d6eb;
+  /* border: 1.5px solid #d9d6eb; */
+
   border-radius: 16px;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.03);
+  /* box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.03); */
 }
 
 /* Text */
@@ -665,7 +686,7 @@ Then the animation loops again.
 
 /* Description */
 .skill-card p {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.6;
   color: #444;
 }
@@ -698,6 +719,7 @@ Then the animation loops again.
 /* PROJECTS SECTION */
 
 /* Section */
+
 .projects-section {
   padding: 2rem 1.2rem;
 }
@@ -705,6 +727,7 @@ Then the animation loops again.
 /* Title with underline on first word */
 .projects-title {
   text-align: center;
+  justify-content: center;
   font-size: 2rem;
   font-weight: 600;
   color: #2c2a54;
@@ -1334,7 +1357,7 @@ small {
 
   .projects-grid {
     max-width: 1200px;
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-columns: repeat(2, 2fr);
     align-items: stretch;
     margin: 0 auto;
     gap: 5rem;
@@ -1345,12 +1368,19 @@ small {
     justify-content: space-evenly;
     text-align: left;
     height: 90vh;
-    padding: 9em;
+    padding: 8em;
+    height: 100vh;
   }
 
   .project-cont {
     max-width: 800px;
     margin: 3rem auto;
+  }
+
+  .small {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
   }
   .hero-shape {
     right: 12rem;
@@ -1367,6 +1397,17 @@ small {
     margin: 0 auto;
   }
 
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .about-card {
+    grid-template-columns: 100px;
+  }
+
+  .about-text {
+    grid-template-columns: 2fr;
+  }
   .about-content > div {
     padding: 2em;
     display: flex;
@@ -1406,7 +1447,6 @@ small {
     padding: 2rem;
   }
   .unique-section {
-    margin-bottom: 7rem;
     padding-top: 3rem;
   }
 
