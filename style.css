@@ -703,6 +703,7 @@ Then the animation loops again.
 
 .projects-section {
   padding: 2rem 1.2rem;
+  background: rgba(248, 246, 246, 0.351);
 }
 
 /* Title with underline on first word */
