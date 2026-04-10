@@ -146,11 +146,14 @@ body {
   background:
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03), rgba(30, 9, 51, 0.1)),
     #01021d;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
   margin-bottom: 3rem;
   height: 86vh;
   padding: 1em;
-  color: white;
 }
 
 /* Text content */
@@ -158,9 +161,8 @@ body {
   z-index: 2;
   max-width: 100%;
   padding: 1rem;
-  color: #d306e66e;
+  color: #8d6b90fe;
   /* font-size: 0.9rem; */
-  text-transform: uppercase;
 }
 
 .hero-name {
@@ -170,7 +172,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: #e0e0e0;
+  color: #fcfcfc;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
@@ -187,11 +189,11 @@ body {
   color: #d7d4f1;
 }
 
-.sphere {
+/* .sphere {
   position: relative;
-  display: inline-block; /* keeps cloud tight around the name */
+  display: inline-block; 
   overflow: visible;
-}
+} */
 .sphere::before {
   content: "";
   position: absolute;
@@ -221,43 +223,23 @@ body {
     #4643fe;
 }
 
-.sphereTwo::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  opacity: 0.45;
-  transform: scale(1.6);
-  transform-origin: center;
-  filter: blur(2px);
-
-  width: 50px;
-  height: auto; /* control the size */
-  aspect-ratio: 1.8;
-  --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
-
-  max-width: 80px;
-  margin-left: 1rem;
-
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle at 40% 30%, #0000 4%, 57%, #000 90%)
-    #fefb43;
-}
+/*  */
 /* CTA button */
 
 .cta-button {
   background: transparent;
   border: 2px solid rgb(130, 82, 161);
-  color: #e0e0e0;
+  color: rgb(130, 82, 161);
   /* padding: 0.6rem 1.2rem; */
   border-radius: 10px;
   /* border-radius: 999px; */
   font-weight: 500;
+  border-radius: 999px;
   text-decoration: none;
   transition: background 0.3s ease;
   margin-right: 1rem;
   width: 150px;
+  font-size: 1rem;
 }
 
 .cta-button-work {
@@ -375,8 +357,8 @@ Then the animation loops again.
 /* New ABOUT section */
 /* Section wrapper */
 .about {
-  padding: 2em;
-  margin: 2rem 0;
+  /* padding: 2em; */
+  padding: 1rem;
 }
 
 .frontend-skills,
@@ -431,7 +413,6 @@ Then the animation loops again.
   border-left: 1px solid rgba(128, 128, 128, 0.267);
 }
 .about-text {
-  padding: 2em;
   text-align: center;
 }
 
@@ -771,7 +752,6 @@ Then the animation loops again.
 .project-thumb {
   width: 100%;
   border-radius: 10px 10px 0 0;
-  margin-bottom: 1rem;
 }
 
 /* Title */
@@ -1020,7 +1000,8 @@ small {
   color: #e0e0e0;
   border-radius: 999px;
   text-align: center;
-  width: 100px;
+  width: 130px;
+  padding: 0.5rem 1.5rem;
 }
 .btn-contact {
   width: 100%;
@@ -1252,13 +1233,15 @@ small {
   }
 
   .about-grid {
-    grid-template-columns: 1fr 2fr;
+    display: flex;
     align-items: start;
-    margin-bottom: 7rem;
+    margin-bottom: 2rem;
+    gap: 2rem;
   }
 
   .about-card {
     text-align: left;
+    max-width: 360px;
   }
 
   .about-text {
@@ -1399,7 +1382,8 @@ small {
 
   .about-grid {
     display: grid;
-    grid-template-columns: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 3rem;
   }
   .about-card {
     grid-template-columns: 100px;
