@@ -3,24 +3,43 @@
   margin: 0;
   padding: 0;
 }
-html {
-  width: 100%;
-  height: 100vh;
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
 }
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+
+:root {
+  --fs-h1: clamp(2rem, 5vw, 4rem);
+  --fs-h2: clamp(1.5rem, 3vw, 3rem);
+  --fs-h3: clamp(1.2rem, 2vw, 2rem);
+  --fs-body: clamp(0.95rem, 2vw, 1.1rem);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+p,
+a,
+li,
+span {
+  font-size: var(--fs-body);
 }
 
 body {
   line-height: 1.7;
   font-size: 1rem;
   font-family: "Plus Jakarta Sans", sans-serif;
-
+  color: #444;
   font-weight: 400;
   line-height: 1.8;
-  /* background-color: #f8f7fa; */
+  font-size: 1rem;
 }
 
 .mobile-header {
@@ -147,7 +166,7 @@ body {
   background:
     linear-gradient(to bottom, rgba(255, 255, 255, 0.03), rgba(30, 9, 51, 0.1)),
     #01021d;
-
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -160,7 +179,7 @@ body {
 /* Text content */
 .hero-content {
   z-index: 2;
-  max-width: 100%;
+  width: 100%;
   padding: 1em;
   color: #8d6b90fe;
 }
@@ -234,7 +253,7 @@ body {
   border-radius: 10px;
   /* border-radius: 999px; */
   font-weight: 500;
-  border-radius: 999px;
+  border-radius: 10px;
   text-decoration: none;
   transition: background 0.3s ease;
   margin-right: 1rem;
@@ -247,7 +266,7 @@ body {
   color: #e0e0e0;
   border: none;
   padding: 0.2rem 1rem;
-  border-radius: 999px;
+  border-radius: 10px;
   font-weight: 500;
   transition: background 0.3s ease;
   width: 150px;
@@ -333,9 +352,8 @@ Then the animation loops again.
   align-items: center;
   justify-content: center;
   gap: 0.2rem;
-  padding: 0.4em;
 }
-.experience-cont {
+.exp-cont {
   color: #d7d4f1;
   display: flex;
   align-items: center;
@@ -348,8 +366,8 @@ Then the animation loops again.
   border-radius: 10px;
 }
 
-.experience-cont p {
-  font-size: 0.5rem;
+.exp-cont p {
+  font-size: 0.6rem;
 }
 .bi {
   font-size: 25px;
@@ -358,6 +376,111 @@ Then the animation loops again.
 .avatar-img {
   max-width: 120px;
 }
+
+/* About  */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+  border-bottom: 1px solid #dfdddd;
+  margin: 1rem;
+  padding: 1em;
+  gap: 1rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+  padding: 1em;
+}
+
+.about-header {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c2a54;
+}
+
+.about-header span {
+  border-bottom: 4px solid #9a00ff;
+  padding-bottom: 2px;
+  margin-right: 6px;
+}
+
+.about-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.about-role {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.about-school {
+  color: #888;
+  font-size: 0.95rem;
+}
+.about-content p {
+  line-height: 1.6;
+  color: #444;
+  max-width: 500px;
+}
+
+.experence-card {
+  font-size: 0.9rem;
+  border-bottom: 1px solid #dfdddd;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.03);
+  padding: 1em;
+}
+.experience-cont {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  justify-content: center;
+  gap: 1rem;
+  text-align: justify;
+}
+
+.skill-card {
+  border-left: 1px solid #dfdddd;
+  border-right: 1px solid #dfdddd;
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.skill-card ul li {
+  line-height: 1.6;
+  color: #444;
+  list-style: none;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  border-color: #a78bfa;
+}
+
+.skill-card h4 {
+  color: #a78bfa;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.skill-card p {
+  color: #d1d5db;
+  font-size: 0.95rem;
+}
+/*  */
 /* .descr {
   text-align: left;
 } */
@@ -391,8 +514,7 @@ Then the animation loops again.
 
 /* New ABOUT section */
 /* Section wrapper */
-.about {
-  /* padding: 2em; */
+/* .about {
   padding: 1rem;
 }
 
@@ -418,7 +540,7 @@ Then the animation loops again.
 .cloud-skills {
   background-color: #f7e0f6;
 }
-/* Header */
+
 .about-header {
   font-size: 2rem;
   font-weight: 600;
@@ -431,12 +553,9 @@ Then the animation loops again.
   margin-right: 6px;
 }
 
-/* .about-grid {
-  display: grid;
-  grid-template-columns: 1fr; 
-} */
 
-/* Card styling */
+
+
 .about-card {
   background: rgba(255, 255, 255, 0.03);
   padding: 1.6rem;
@@ -451,7 +570,7 @@ Then the animation loops again.
   text-align: center;
 }
 
-/* Profile card specifics */
+
 .profile .about-img {
   width: 180px;
   height: auto;
@@ -477,32 +596,29 @@ Then the animation loops again.
   font-size: 0.95rem;
 }
 
-/* Social icons */
+
 .about-socials a {
   margin: 0 0.4rem;
   font-size: 1.3rem;
   color: #2c2a54;
 }
 
-/* Contact button */
+
 .btn-secondary {
   margin-top: 1rem;
   background: transparent;
-  color: white;
-  padding: 0.6rem 1rem;
   border-radius: 8px;
-  width: 100%;
   cursor: pointer;
 }
 
-/* Text column */
+
 .about-text p {
   text-align: left;
   margin-bottom: 1.2rem;
   line-height: 1.6;
   color: #444;
   font-size: 1rem;
-}
+} */
 
 /* CONTACT COLUMN */
 .getin-touch-cont {
@@ -645,13 +761,15 @@ Then the animation loops again.
 
 /* Section wrapper */
 .skills-section {
-  padding: 2rem 1.2rem;
+  /* padding: 1em;
+  margin: 1rem; */
+  width: 100%;
 }
 
 /* Title with underline on first word */
 .skills-title {
   text-align: center;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   font-weight: 600;
   color: #2c2a54;
   margin-bottom: 2rem;
@@ -661,28 +779,29 @@ Then the animation loops again.
   border-bottom: 4px solid #9a00ff;
   padding-bottom: 2px;
   margin-right: 6px;
+  font-size: 1.5rem;
 }
 
 /* Mobile-first grid */
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr; /* mobile */
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 /* Skill card */
 .skill-card {
+  width: 100%;
   background: #ffffff;
   border: 1.5px solid #d9d6eb;
   border-radius: 16px;
-  padding: 1.6rem;
   text-align: center;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.03);
 }
 
 /* Card heading */
 .skill-card h4 {
-  font-size: 1.3rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: #2c2a54;
   margin-bottom: 1rem;
@@ -701,8 +820,9 @@ Then the animation loops again.
 }
 
 /* Description */
-.skill-card p {
-  font-size: 0.8rem;
+.skills-card p {
+  font-size: 0.7rem;
+  font-style: italic;
   line-height: 1.6;
   color: #444;
 }
@@ -732,20 +852,203 @@ Then the animation loops again.
 }
 
 /* .......... */
-/* PROJECTS SECTION */
 
-/* Section */
-
+/* Project */
 .projects-section {
-  padding: 2rem 1.2rem;
-  background: rgba(248, 246, 246, 0.351);
+  background-color: #0f0f1a;
+  color: #fff;
+  padding: 1em;
+  overflow-x: hidden;
 }
 
-/* Title with underline on first word */
+.projects-title {
+  text-align: center;
+  color: #a78bfa;
+  margin-bottom: 40px;
+}
+
+.projects-title span {
+  color: #c084fc;
+  font-size: 1.5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.project-card {
+  width: 100%;
+  max-width: 100%;
+
+  background-color: #1a1a2e;
+  border: 1px solid #2e2e4e;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #a78bfa;
+}
+
+#scapp-cont {
+  background: #1a1a2e; /* dark card background */
+  border: 1px solid #2e2e4e; /* subtle border */
+  border-radius: 12px;
+  overflow: hidden;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* important */
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#scapp-cont:hover {
+  border-color: #a78bfa; /* purple glow on hover */
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.4);
+}
+
+.project-thumb-app {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  /* border: 7px solid #fefdfd; */
+  border-radius: 10px;
+  display: block;
+  box-sizing: border-box;
+  border: 4px solid #fefdfd;
+}
+
+.project-thumb {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+
+  height: auto;
+  border-bottom: 1px solid #2e2e4e;
+}
+
+.project-descr {
+  padding: 20px;
+}
+
+.project-title {
+  color: #a78bfa;
+  margin-bottom: 10px;
+}
+
+.project-tech {
+  color: #c084fc;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.project-desc {
+  color: #d1d5db;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.project-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-text {
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #a78bfa;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #c084fc;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #a78bfa;
+  color: #a78bfa;
+}
+
+.btn-secondary:hover {
+  background-color: #a78bfa;
+  color: #fff;
+}
+
+.btn-text {
+  color: blue;
+  text-decoration: underline;
+}
+
+.all-proj-btn-cont {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.view-all-proj-btn {
+  background-color: transparent;
+  border: 1px solid #a78bfa;
+  color: #a78bfa;
+
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-all-proj-btn a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.view-all-proj-btn:hover {
+  background-color: #a78bfa;
+  color: #fff;
+}
+
+.big {
+  font-size: 20px;
+  color: orange;
+}
+
+.avatar-img {
+  width: 100%;
+  max-width: 800px;
+}
+/*  */
+/* PROJECTS SECTION */
+
+/*
 .projects-title {
   text-align: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #2c2a54;
   margin-bottom: 2rem;
@@ -757,54 +1060,63 @@ Then the animation loops again.
   margin-right: 6px;
 }
 
-/* Mobile-first grid */
+
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr; /* mobile */
+  grid-template-columns: 1fr; 
   gap: 1.5rem;
 }
 
-/* Card */
+
 .project-card {
-  background: #0a0921;
+  max-width: 290px;
   border-radius: 16px;
   text-align: left;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.03);
   transition: transform 0.25s ease;
-  color: #f8f8fa;
+  color: #444;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
 .project-descr {
   padding: 1.8rem;
-  color: #d9d6eb;
+
 }
 
 .project-card:hover {
   transform: translateY(-4px);
 }
 
-/* Thumbnail */
+
 .project-thumb {
   width: 100%;
   border-radius: 10px 10px 0 0;
 }
 
-/* Title */
+#scapp-cont {
+  display: flex;
+  justify-content: center;
+}
+.project-thumb-app {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .project-title {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-/* Description */
 .project-desc {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
   margin-bottom: 0.8rem;
 }
 
-/* Tech line */
+
 .project-tech {
   font-size: 0.9rem;
   color: #6a4cff;
@@ -833,8 +1145,46 @@ Then the animation loops again.
   font-size: 0.9rem;
   text-decoration: underline;
 }
+.all-proj-btn-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+.view-all-proj-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  padding: 5px 10px;
+  margin: 1rem;
+  background: #9a00ff;
+
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.view-all-proj-btn a {
+  text-decoration: none;
+  color: white;
+} */
 /* Testimonial */
 
+.lets-connect-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1em;
+  margin: 1rem;
+  width: 100%;
+  background-color: rgb(249, 249, 249);
+}
+
+.connect {
+  margin-right: 0.9rem;
+}
 .testimonial-cont {
   padding: 3rem 1.5rem;
   max-width: 800px;
@@ -1034,9 +1384,9 @@ small {
 .btn-primary {
   background: #9a00ff;
   color: #e0e0e0;
-  border-radius: 999px;
+  border-radius: 10px;
   text-align: center;
-  width: 130px;
+  width: 120px;
   padding: 0.5rem 1.5rem;
 }
 .btn-contact {
@@ -1238,10 +1588,9 @@ small {
   .hero {
     flex-direction: column;
     justify-content: space-between;
-    align-items: space-between;
     padding: 3em;
     height: 80%;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
   }
 
   .hero-name {
@@ -1258,10 +1607,18 @@ small {
   .hero-shape {
     width: 240px;
     height: 240px;
-    right: 4rem;
     bottom: 4rem;
+    right: 5%;
   }
 
+  .skills-section {
+    margin-bottom: 5rem;
+  }
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    margin: 0 auto;
+  }
   .experience-box {
     justify-content: center;
   }
@@ -1269,6 +1626,20 @@ small {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .about {
+    flex-wrap: nowrap;
+    gap: 0.9rem;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .about-content {
+    text-align: left;
+    max-width: 50%;
   }
 
   .about-grid {
@@ -1302,19 +1673,30 @@ small {
     justify-content: space-between;
     gap: 2rem;
   }
+
+  .projects-section {
+    padding: 1em;
+    overflow-x: hidden;
+    margin-bottom: 5rem;
+  }
+
+  .project-card {
+    max-width: 100%;
+  }
+
   .profile-card {
-    max-width: 900px;
     display: flex;
     gap: 3rem;
     padding: 2em;
     text-align: left;
   }
+
   #myProgress {
     max-width: 50%;
   }
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* .skills-grid {
+    grid-template-columns: 1fr;
+  } */
 
   .abstract-shape {
     width: 180px;
@@ -1323,25 +1705,14 @@ small {
 
   /*  */
   /* NEW PROJECT SECTION */
-  .projects-grid {
-    grid-template-columns: 1fr 2fr;
-    margin: 0 auto;
-  }
 
-  .projects-section {
-    margin-bottom: 4rem;
-  }
-  /*  */
-  .project-container {
+  .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .small {
-    grid-column: span 2;
-  }
-  .project-card {
+  /* .project-card {
     align-items: flex-start;
-  }
+  } */
 
   .project-thumbnail {
     width: 100%;
@@ -1351,7 +1722,6 @@ small {
     width: 100%;
     gap: 2rem;
   }
-
   .testimonial-cont {
     text-align: left;
   }
@@ -1369,28 +1739,32 @@ small {
 .footer-abstract-shape {
   width: 220px;
   height: 220px;
-  right: -60px;
+  right: 0;
+  transform: translateX(20%);
 }
 
 @media (min-width: 1024px) {
   body {
     font-size: 1.2rem;
   }
-
+  /* 
   .projects-grid {
     max-width: 1200px;
     grid-template-columns: repeat(2, 2fr);
     align-items: stretch;
     margin: 0 auto;
     gap: 5rem;
+  } */
+  .projects-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
-
   .hero {
     display: flex;
-
+    margin-bottom: 7rem;
     text-align: left;
     height: 90vh;
-    padding: 7em;
+    padding: 5em;
+
     height: 120vh;
   }
 
@@ -1403,16 +1777,11 @@ small {
     justify-content: flex-start;
   }
 
-  .project-cont {
-    max-width: 800px;
-    margin: 3rem auto;
-  }
-
   .avatar-exper-cont {
     display: flex;
   }
   .avatar-img {
-    max-width: 800px;
+    max-width: 1000px;
   }
 
   .experience-box {
@@ -1432,13 +1801,17 @@ small {
   }
 
   .sphere::before {
-    width: 540px;
+    width: min(540px, 80vw);
   }
-  .about {
+  /* .about {
     max-width: 80%;
     margin: 0 auto;
-  }
+  } */
 
+  .about {
+    max-width: 85%;
+    margin: 0 auto 5rem auto;
+  }
   .about-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1451,11 +1824,13 @@ small {
   .about-text {
     grid-template-columns: 2fr;
   }
-  .about-content > div {
-    padding: 2em;
-    display: flex;
-    flex-direction: row;
-    margin: 1rem auto 7rem auto;
+  .skills-title span,
+  .projects-title span {
+    font-size: 2rem;
+  }
+
+  .about-content {
+    align-items: start;
   }
   .section-subheader {
     text-align: left;
@@ -1466,18 +1841,22 @@ small {
     max-width: 90%;
   }
 
+  .skills-section {
+    max-width: 85%;
+    margin: 0 auto 7rem auto;
+  }
   .skills-grid {
-    max-width: 1200px;
-    margin: 7rem auto;
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  .skills-title {
-    text-align: left;
-    margin: 0 0 3rem 9rem;
-  }
   .projects-section {
+    max-width: 100%;
     margin-bottom: 7rem;
+    padding: 7rem 2rem;
+  }
+
+  .experience-card {
+    font-size: 1rem;
   }
   .skill-card {
     text-align: left;
@@ -1493,9 +1872,12 @@ small {
     padding-top: 3rem;
   }
 
+  .lets-connect-cont {
+    margin-bottom: 5rem;
+  }
   .testimonial-cont {
     max-width: 1200px;
-    margin: 7rem auto;
+    margin: 0 auto 7rem auto;
   }
   .form-heading {
     text-align: center;
