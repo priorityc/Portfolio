@@ -4,7 +4,8 @@
   padding: 0;
 }
 html {
-  width: 100vw;
+  width: 100%;
+  height: 100vh;
 }
 * {
   box-sizing: border-box;
@@ -152,7 +153,7 @@ body {
   background-size: cover;
   text-align: center;
   margin-bottom: 3rem;
-  height: 86vh;
+  height: 100vh;
   padding: 1em;
 }
 
@@ -160,9 +161,8 @@ body {
 .hero-content {
   z-index: 2;
   max-width: 100%;
-  padding: 1rem;
+  padding: 1em;
   color: #8d6b90fe;
-  /* font-size: 0.9rem; */
 }
 
 .hero-name {
@@ -230,7 +230,7 @@ body {
   background: transparent;
   border: 2px solid rgb(130, 82, 161);
   color: rgb(130, 82, 161);
-  /* padding: 0.6rem 1.2rem; */
+  padding: 0.6rem 1.2rem;
   border-radius: 10px;
   /* border-radius: 999px; */
   font-weight: 500;
@@ -326,6 +326,41 @@ Then the animation loops again.
 .hero-content.visible > *:nth-child(5) {
   transition-delay: 0.7s;
 }
+
+.experience-box {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  padding: 0.4em;
+}
+.experience-cont {
+  color: #d7d4f1;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 0.5rem;
+  padding: 0.2rem;
+  border-right: 0.5px solid rgb(241, 238, 238);
+  border-left: 0.5px solid rgb(241, 238, 238);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
+.experience-cont p {
+  font-size: 0.5rem;
+}
+.bi {
+  font-size: 25px;
+  color: orange;
+}
+.avatar-img {
+  max-width: 120px;
+}
+/* .descr {
+  text-align: left;
+} */
 /* SECTION ABOUT */
 
 /* Table styling */
@@ -1201,10 +1236,10 @@ small {
   }
 
   .hero {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    padding: 4rem;
+    align-items: space-between;
+    padding: 3em;
     height: 80%;
     margin-bottom: 7rem;
   }
@@ -1227,6 +1262,9 @@ small {
     bottom: 4rem;
   }
 
+  .experience-box {
+    justify-content: center;
+  }
   .unique-grid {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1200px;
@@ -1349,16 +1387,36 @@ small {
 
   .hero {
     display: flex;
-    justify-content: space-evenly;
+
     text-align: left;
     height: 90vh;
-    padding: 8em;
-    height: 100vh;
+    padding: 7em;
+    height: 120vh;
+  }
+
+  .hero-content {
+    display: flex;
+    align-items: flex-end;
+  }
+  .button-hero {
+    display: flex;
+    justify-content: flex-start;
   }
 
   .project-cont {
     max-width: 800px;
     margin: 3rem auto;
+  }
+
+  .avatar-exper-cont {
+    display: flex;
+  }
+  .avatar-img {
+    max-width: 800px;
+  }
+
+  .experience-box {
+    justify-content: right;
   }
 
   .small {
