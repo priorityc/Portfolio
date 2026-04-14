@@ -189,11 +189,18 @@ projectItems.forEach((item) => {
 });
 // MODAL
 const openBtn = document.getElementById("openModal");
+const openB = document.getElementById("openM");
 const modal = document.getElementById("hireModal");
 const closeBtn = modal.querySelector(".close-modal");
 
 if (openBtn) {
   openBtn.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+}
+
+if (openM) {
+  openM.addEventListener("click", () => {
     modal.classList.remove("hidden");
   });
 }
