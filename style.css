@@ -747,7 +747,7 @@ body {
 .projects-section {
   background-color: #0f0f1a;
   color: #d1d5db;
-  padding: 1em;
+  padding: 3rem 1.5rem;
   overflow-x: hidden;
 }
 
@@ -934,10 +934,52 @@ body {
   color: orange;
 }
 
-.avatar-img {
+/* tech */
+.tech-strip-wrapper {
+  overflow: hidden;
   width: 100%;
-  max-width: 800px;
+  padding: 1rem 0;
+  background: transparent;
 }
+
+.tech-strip {
+  gap: 3rem;
+  animation: scroll 15s linear infinite;
+  padding: 3rem 1.5rem;
+  color: #838399;
+}
+.tech-strip span {
+  padding: 0.5em 0.7em;
+  margin-right: 10px;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  background: radial-gradient(
+    circle at top right,
+    rgba(160, 107, 255, 0.15),
+    transparent 60%
+  );
+  border-radius: 16px;
+  opacity: 0.9;
+  transition: transform 0.3s ease;
+}
+
+.tech-strip p:hover {
+  transform: scale(1.2);
+  color: #a78bfa;
+}
+.stack {
+  display: flex;
+  flex-direction: row;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /*  */
 /* PROJECTS SECTION */
 
@@ -1068,7 +1110,7 @@ body {
 } */
 /* Services */
 .services-wrapper {
-  padding: 4rem 1.5rem;
+  padding: 3rem 1.5rem;
   background: #0f0f1a;
   color: #d1d5db;
   text-align: center;
@@ -1202,7 +1244,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  padding: 1em;
+  padding: 3rem 1.5rem;
   margin: 1rem;
   width: 100%;
   background-color: rgb(249, 249, 249);
@@ -1292,7 +1334,7 @@ body {
 .footer-box {
   background: radial-gradient(circle at center, #0a0f2c, #050618);
   color: #fff;
-  padding: 2rem 1.5rem;
+  padding: 3rem 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -1808,28 +1850,46 @@ textarea:focus {
 
   .hero {
     /* padding: 2em; */
-    height: 100vh;
+    height: 80vh;
     text-align: left;
 
     justify-content: space-between;
   }
 
   .hero-content {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 3rem;
     width: 100%;
     max-width: 1400px;
-    padding: 7rem 0;
+    padding: 7rem 0; */
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0;
   }
+
+  section {
+    padding: 4rem 1.5rem;
+  }
+  /* .hero-left {
+    flex: 1;
+  }
+  .hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  } */
 
   .hero-stats {
     justify-content: left;
   }
   .hero-name {
-    font-size: 5rem;
+    font-size: 4.5rem;
   }
   /* LEFT SIDE (TEXT) */
   .hero-content > div:first-child {
@@ -1872,7 +1932,7 @@ textarea:focus {
     justify-content: space-between;
     align-items: flex-start;
     max-width: 1200px;
-    margin-bottom: 7rem;
+    margin: 0 auto 8rem auto;
   }
 
   .about-left {
@@ -1894,8 +1954,8 @@ textarea:focus {
   }
 
   .skills-section {
-    max-width: 85%;
-    margin: 0 auto 7rem auto;
+    max-width: 1200px;
+    margin: 0 auto 8rem auto;
   }
   .skills-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -1903,17 +1963,19 @@ textarea:focus {
 
   .projects-section {
     max-width: 100%;
-    margin-bottom: 7rem;
-    padding: 7rem 2rem;
+    margin: 0 auto 8rem auto;
+    padding: 5rem 3rem;
   }
 
   .experience-card {
     font-size: 1rem;
+    margin: 0 auto 8rem auto;
   }
 
   .why-hire-me {
     padding: 5rem 4rem;
     text-align: left;
+    margin: 0 auto 8rem auto;
   }
   .headline {
     font-size: 1.8rem;
@@ -1938,14 +2000,18 @@ textarea:focus {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 0 auto 8rem auto;
+    padding: 5rem 4rem;
   }
 
   .lets-connect-cont {
-    margin-bottom: 5rem;
+    margin: 0 auto 8rem auto;
+    padding: 5rem 4rem;
   }
   .testimonial-cont {
     max-width: 1200px;
-    margin: 0 auto 7rem auto;
+    margin: 0 auto 8rem auto;
+    padding: 5rem 4rem;
   }
   .form-box {
     max-width: 300px;
