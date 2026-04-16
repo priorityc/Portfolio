@@ -59,7 +59,6 @@
 <header class="hero">
   
   <div class="hero-content fade-in-section">
-    <div>
     
   
         <h1 class="hero-name">Petya Dimitrova</h1>
@@ -67,17 +66,22 @@
 
     <!-- <div> -->
       <h2 class="hero-role">Front end developer & UI/UX</h2>
-        <p>I build clean, responsive interfaces with empathy and precision.</p>
-        <p>Specialising in React, modern CSS, and user-centred interfaces.</p>
-    
+        <p>I build clean, responsive interfaces with empathy and precision.</p>    
           <a href="https://github.com/priorityc?tab=repositories" title="View GitHub"><i class="bi icon bi-github"></i></a>
         <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/" title="View Linkedin"><i class="bi adapt bi-linkedin"></i></a>
         <a href="mailto:petya83dimitrova@gmail.com" title="Send email"><i class="bi chat bi-envelope-fill"></i></a>
         <a href="./media/PetyaDimitrova.docx" download="cv_PD.docx" title="Download CV"><i class="bi rocket bi-arrow-down-square-fill"></i></a>
         </div>
-        
+
+        <div>
         <div class="tech-shape">
-           <div class="experience-box">
+         <div class="button-hero"> 
+        <button id="openModal" class="cta-button">Contact me</button>
+        <a href="#projects" class="cta-button-work">Projects</a>
+      </div>
+      </div>
+
+       <div class="experience-box">
         <div class="exp-cont">
           <i class="bi bi-person"></i>
           <p>4+</p>
@@ -99,15 +103,7 @@
           <p>Availible for Hire</p>
         </div>
         </div>
-         <div class="button-hero">
-          
-        <button id="openModal" class="cta-button">Contact me</button>
-        <a href="#projects" class="cta-button-work">Projects</a>
-         
-      </div>
-       
-      </div>
-      
+     
        <!-- <div> -->
           </div>
           
@@ -126,65 +122,63 @@
     <main>
     <!-- Skills -->
  <section class="skills-section fade-in-section">
-  <h2 class="skills-title"><span>My</span>Skills</h2>
+  <h2 class="skills-title"><span>My</span> Skills</h2>
 
   <div class="skills-grid">
 
     <div class="skill-card">
       <h4>Frontend Development</h4>
       <div class="skill-icons">
-        <i class="devicon-javascript-plain colored"></i>
-        <i class="devicon-html5-plain-wordmark"></i>
-        <i class="devicon-css3-plain-wordmark"></i>
+        <i class="devicon-javascript-plain"></i>
+        <i class="devicon-react-original"></i>
+        <i class="devicon-css3-plain"></i>
       </div>
-      <ul class="frontend-skills">
-        <li>React, Svelte, React Native, modern CSS, responsive layouts</li>
+      <ul>
+        <li>React, Svelte, modern CSS</li>
+        <li>Responsive UI engineering</li>
       </ul>
-      <p>Strong interaction design foundation blended with modern frontend technologies.</p>
     </div>
 
     <div class="skill-card">
       <h4>Backend Development</h4>
       <div class="skill-icons">
-        <i class="devicon-java-plain"></i>
-        <i class="devicon-php-plain colored"></i>
-        <i class="devicon-azuresqldatabase-plain colored"></i>
+        <i class="devicon-nodejs-plain"></i>
+        <i class="devicon-express-original"></i>
+        <i class="devicon-postgresql-plain"></i>
       </div>
-      <ul class="backend-skills">
-        <li>Express.js, Node.js, PostgreSQL, SQL fundamentals
-</li>
+      <ul>
+        <li>Node.js, Express.js</li>
+        <li>SQL & PostgreSQL fundamentals</li>
       </ul>
-      <p>Growing backend skills through API integration, Express.js, and database fundamentals.</p>
     </div>
 
     <div class="skill-card">
       <h4>Software Engineering</h4>
       <div class="skill-icons">
-        <i class="devicon-xcode-plain"></i>
+        <i class="devicon-java-plain"></i>
         <i class="devicon-npm-original-wordmark"></i>
       </div>
-       <ul class="software-skills">
-        <li>Java(OOP), Domain modeling, requirements,architecture, reuse.
-</li>
+      <ul>
+        <li>Java (OOP), domain modelling</li>
+        <li>Architecture & documentation</li>
       </ul>
-      <p>Understanding of software architecture, documentation, and system analysis.</p>
     </div>
 
     <div class="skill-card">
       <h4>Cloud Architecture</h4>
       <div class="skill-icons">
-        <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
-        <i class="devicon-cloudflare-plain colored"></i>
+        <i class="devicon-amazonwebservices-plain"></i>
+        <i class="devicon-cloudflare-plain"></i>
       </div>
-      <ul class="cloud-skills">
-        <li>Cloud introduction and design, Open Stack, AWS.
-</li>
+      <ul>
+        <li>AWS, cloud design</li>
+        <li>Hybrid architecture diagrams</li>
       </ul>
-      <p>Ability to design cloud and hybrid architectures with clear diagrams and reasoning.</p>
     </div>
 
   </div>
-</section> 
+</section>
+
 
   
     <!-- Projects -->
@@ -277,57 +271,57 @@
 
      <!--  -->
 
-     <!-- About section -->
-<section class="about">
-  <div class="about-content">
-    <h2 class="skills-title"><span>About</span> Me</h2>
-     <img src="./media/petya.jpg" class="about-img" alt="Petya Dimitrova">
-      <h3 class="about-role">Frontend Developer & UX/UI Designer</h3>
-      <h4 class="about-school">Open University</h4>
-     <p>
-        A few years ago, I made the decision to change my career and step into the world of technology. 
-        What started as a simple desire to build my own blog quickly grew into a passion for solving 
-        problems and understanding how digital products are made.
-      </p>
-      <p>
-        My journey began with an introductory web development course through the Raspberry Pi Foundation, 
-        and that experience sparked a deep curiosity to learn more.
-      </p>
+  <section class="about">
+
+  <div class="about-left">
+    <h2 class="about-title"><span>About</span> Me</h2>
+
+    <img src="./media/petya.jpg" class="about-img" alt="Petya Dimitrova">
+
+    <h3 class="about-role">Frontend Developer & UX/UI Designer</h3>
+    <p class="about-intro">
+      I transitioned into tech driven by curiosity and a passion for building meaningful digital experiences.
+      Today, I combine frontend engineering with UX thinking to create clean, intuitive interfaces.
+    </p>
   </div>
- <div class="experience-cont">
-   <h3><span>My</span> Experience</h3>
-   
-  <div class="experience-grid">
-    <div class="experence-card">
-      <i class="big bi-check-square-fill"></i>
-      <h4>UI/UX Designer</h4>
-      <h5>G&D Home Improvement</h5>
-      <ul>
-        <li>Led the full UX process: interviews, requirement gathering, persona creation.</li>
-        <li>Designed user flows, storyboards, and interactive prototypes for a multi-step system application.</li>
-      </ul>
-    </div>
-    <div class="experence-card">
-      <i class="big bi-check-square-fill"></i>
-      <h4>Front End Developer</h4>
-      <h5>Ciberinitiation LTD</h5>
-      <ul>
-        <li>Built a modern, responsive landing page using industry best practices.</li>
-        <li>Designed user flows, storyboards, and interactive prototypes for a multi-step system application.</li>
-      </ul>
-    </div>
-    <div class="experence-card">
-      <i class="big bi-check-square-fill"></i>
-      <h4>Full Stack Developer</h4>
-      <h5>Practise Project</h5>
-      <ul>
-        <li>Developed a React front-end with a simulated Express.js backend.</li>
-        <li>Implemented state management and integrated a payment gateway.</li>
-      </ul>
+
+  <div class="about-right">
+    <h3 class="exp-title"><span>My</span> Experience</h3>
+
+    <div class="experience-grid">
+
+      <div class="experience-card">
+        <h4>UI/UX Designer</h4>
+        <h5>G&D Home Improvement</h5>
+        <ul>
+          <li>Led user interviews and requirement gathering</li>
+          <li>Designed flows, wireframes, and interactive prototypes</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h4>Frontend Developer</h4>
+        <h5>Ciberinitiation LTD</h5>
+        <ul>
+          <li>Built responsive landing pages</li>
+          <li>Created UX flows and prototypes</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h4>Full Stack Developer</h4>
+        <h5>Practice Project</h5>
+        <ul>
+          <li>Developed React frontend + Express backend</li>
+          <li>Implemented state management and payment flow</li>
+        </ul>
+      </div>
+
     </div>
   </div>
-  </div>
+
 </section>
+
       <!--  -->
 
 <!-- Why hire me section -->
