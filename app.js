@@ -189,7 +189,7 @@ projectItems.forEach((item) => {
 });
 // MODAL
 const openBtn = document.getElementById("openModal");
-const openB = document.getElementById("openM");
+const openM = document.getElementById("openM");
 const modal = document.getElementById("hireModal");
 const closeBtn = modal.querySelector(".close-modal");
 
