@@ -90,6 +90,67 @@ const handleHover = function (e) {
   }
 };
 
+//Add active class on links
+const navLinks = document.querySelectorAll(".nav__link");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    navLinks.forEach((l) => l.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
+//keep active class when navigating to another page
+const currentPage = window.location.pathname.split("/").pop();
+
+navLinks.forEach((link) => {
+  if (link.getAttribute("href") === currentPage) {
+    link.classList.add("active");
+  }
+});
+
+// const sections = document.querySelector(".sidenav");
+// const navLinks = document.querySelectorAll(".nav__link");
+
+// const observer = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         navLinks.forEach((link) => {
+//           link.classList.remove("active");
+
+//           const sectionId = entry.target.id;
+//           const linkHref = link.getAttribute("href").replace("#", "");
+
+//           if (sectionId === linkHref) {
+//             link.classList.add("active");
+//           }
+//         });
+//       }
+//     });
+//   },
+//   { threshold: 0.6 },
+// );
+
+// sections.forEach((section) => observer.observe(section));
+
+// const observer = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry.isIntersecting) {
+//         navLinks.forEach((link) => {
+//           link.classList.remove("active");
+//           if (link.getAttribute("href").replace("#", "") === entry.target.id) {
+//             link.classList.add("active");
+//           }
+//         });
+//       }
+//     });
+//   },
+//   { threshold: 0.6 },
+// );
+
+// sections.forEach((section) => observer.observe(section));
+
 // Passing an argument into handler
 //select the parent el. of all the links and logo navigation
 //atach the event listener (mouse enter event does not buble)

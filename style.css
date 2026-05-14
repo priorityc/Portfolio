@@ -56,7 +56,6 @@ body {
 /* NAVIGATION */
 .mobile-header {
   width: 100%;
-  color: black;
   display: flex;
   justify-content: space-between;
   padding: 6px 12px;
@@ -83,19 +82,33 @@ body {
 }
 
 .topnav {
+  display: none;
+}
+.topnav {
   background: radial-gradient(circle at center, #0a0f2c, #050618);
+  height: 70px;
+  padding: 1rem;
 }
 
+.nav__link {
+  margin-right: 0.5rem;
+}
 .topnav a {
-  color: #eaeaea;
-  padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
-  display: block;
+  color: #fff;
 }
 
-.topnav a:hover {
-  background-color: #646464;
+.topnav .active {
+  background: rgba(138, 43, 226, 0.25); /* soft cosmic purple */
+  padding: 8px 16px;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(138, 43, 226, 0.4);
+  transition: all 0.3s ease;
+}
+
+.nav__link:hover {
+  color: #fefcfcd4;
 }
 
 .header-box {
@@ -108,7 +121,7 @@ body {
   padding-left: 48px;
   padding-right: 48px;
   background-color: var(--cream);
-  color: #050618;
+  color: #444;
   line-height: 1.4;
   height: 120px;
 }
@@ -118,9 +131,17 @@ body {
   font-size: 18px;
   color: var(--charcoal);
 }
+.sidenav .active {
+  background: rgba(138, 43, 226, 0.25); /* soft cosmic purple */
+  padding: 8px 16px;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 12px rgba(138, 43, 226, 0.4);
+  transition: all 0.3s ease;
+}
 .sidenav a:hover {
-  color: var(--muted-teal);
-  background-color: var(cream);
+  transform: translateY(-1px);
+  color: #444;
 }
 
 /* Animate the hamburger */
@@ -346,8 +367,9 @@ body {
 
 .cta-secondary {
   padding: 0.75rem 1.4rem;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid rgba(148, 163, 253, 0.6);
+  background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
   color: #f5f5ff;
   text-decoration: none;
   transition: background 0.2s ease;
@@ -356,28 +378,6 @@ body {
 .cta-secondary:hover {
   background: rgba(148, 163, 253, 0.18);
 }
-
-/* ------------------------------
-   RIGHT SIDE (cosmic orb)
---------------------------------*/
-/* .hero-right {
-  display: flex;
-  justify-content: center;
-}
-
-.hero-orb {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    #a855f7 0%,
-    #1e1b4b 60%,
-    transparent 100%
-  );
-  filter: blur(4px);
-  opacity: 0.8;
-} */
 
 /*  */
 
@@ -841,7 +841,7 @@ body {
   /* border: 1px solid rgba(167, 139, 250, 0.3); */
   background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
   color: #a78bfa;
-  border-radius: 999px;
+  border-radius: 6px;
   border: 1px solid rgba(148, 163, 253, 0.6);
   color: #f5f5ff;
   text-decoration: none;
@@ -1120,10 +1120,10 @@ body {
 
 .service-tab {
   padding: 0.7rem 1.4rem;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
   border: 1px solid rgba(167, 139, 250, 0.3);
-  color: #d1d5db;
+  color: #fff;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -1237,8 +1237,8 @@ body {
 }
 
 .testiminial-header {
-  max-width: 600px;
   margin: 1rem;
+  padding: 1em;
 }
 .testimonial-text {
   position: relative;
@@ -1358,7 +1358,12 @@ body {
 }
 
 .footer-info h2 {
-  color: #a78bfa;
+  background: linear-gradient(90deg, #a855f7, #38bdf8);
+  text-align: center;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: var(--fs-lg);
+  text-align: left;
   margin-bottom: 0.5rem;
 }
 
@@ -1366,7 +1371,8 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #c084fc;
+  /* color: #c084fc; */
+  color: #fff;
   text-decoration: none;
 }
 
@@ -1437,9 +1443,11 @@ textarea:focus {
   cursor: pointer;
 }
 .btn-secondary-footer {
-  background: transparent;
-  border: 1px solid #a78bfa;
-  color: #a78bfa;
+  background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
   padding: 0.8rem 1.2rem;
   border-radius: 6px;
   cursor: pointer;
@@ -1457,6 +1465,7 @@ textarea:focus {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 1.5rem;
   margin-top: 2rem;
+  font-size: var(--fs-xs);
 }
 .footer-logo {
   width: 80px;
@@ -1921,9 +1930,8 @@ textarea:focus {
     padding: 5rem 4rem;
   }
   .testimonial-cont {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto 8rem auto;
-    padding: 5rem 4rem;
   }
   .form-box {
     max-width: 300px;

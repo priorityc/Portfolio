@@ -16,7 +16,7 @@
 <!-- Navbar on small screens -->
     <!-- Section MOBILE MENU -->
 
-    <nav class="mobile-header">
+   <nav class="mobile-header">
 
       <div class="hamburger" 
        role="button" 
@@ -30,11 +30,12 @@
       </div>
     </nav>
 
-    <div class="topnav">
-      <div id="myLinks">
-        <a class=nav__link href="index.html">Home</a>
-        <a class=nav__link href="portfolio.html">Portfolio</a>
-        <a class=nav__link href="contact.html">Contact</a>
+    <div class="topnav" id="myLinks">
+      <div>
+        <a class="nav__link active" href="index.html">Home</a>
+        <a class="nav__link" href="portfolio.html">Portfolio</a>
+        <a class="nav__link" href="services.html">Services</a>
+        <a class="nav__link" href="contact.html">Contact</a>
       </div>
     </div>
 
@@ -48,17 +49,18 @@
         </div>
         <!-- Second container menus -->
         <div class="arrange-manu">
-          <a class=nav__link href="index.html">Home</a>
-          <a class=nav__link href="portfolio.html">Portfolio</a>
-          <!-- <a class=nav__link href="cosmiccareproject.html">Cosmic Care</a> -->
+          <a class="nav__link" href="index.html">Home</a>
+          <a class="nav__link" href="portfolio.html">Portfolio</a>
+          <a class="nav__link" href="services.html">Services</a>
           <a class=nav__link href="contact.html">Contact</a>
         </div>
       </div>
     </nav>
-<header class="hero">
-  <div class="hero-content fade-in-section">
 
-    <!-- LEFT COLUMN -->
+<header class="hero">
+  <!-- <div class="hero-content fade-in-section">
+
+    
     <div class="hero-left">
       <h1 class="hero-name">What I Can Help You With?</h1>
       <h2 class="hero-role">Web development, audits, UX prototyping, and technical guidance for small businesses and startups.</h2>
@@ -70,39 +72,97 @@
         <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"><i class="bi bi-linkedin"></i></a>
         <a href="mailto:petya83dimitrova@gmail.com"><i class="bi bi-envelope-fill"></i></a>
         <a href="./media/PetyaDimitrova.docx" download="cv_PD.docx"><i class="bi bi-arrow-down-square-fill"></i></a>
+      </div> -->
+
+      <!--  -->
+      <div class="hero__inner">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+      <h1 class="hero-name">Here to help</h1>
+      <h2 class="hero-role">Web development and technical guidance for small businesses and startups.</h2>
+
+      <p class="hero-sub">
+       I build clean, responsive interfaces with empathy and precision.
+      </p>
+
+      <div class="hero-icons">
+        <a href="https://github.com/priorityc?tab=repositories"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:petya83dimitrova@gmail.com"><i class="bi bi-envelope-fill"></i></a>
+        <a href="./media/PetyaDimitrova.docx" download="cv_PD.docx"><i class="bi bi-arrow-down-square-fill"></i></a>
+      </div>
+  </div> 
+
+ <div class="hero-right">
+        <div class="hero-stats">
+        <div class="stat-card">
+          <h3>4+</h3>
+          <p>Years Experience</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>25+</h3>
+          <p>Projects Completed</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Client Satisfaction</p>
+        </div>
       </div>
 
-      <div class="hero-stats">
-  <div class="stat">
-    <h3>4+</h3>
-    <p>Years Experience</p>
-  </div>
-
-  <div class="stat">
-    <h3>25+</h3>
-    <p>Projects Completed</p>
-  </div>
-
-  <div class="stat">
-    <h3>100%</h3>
-    <p>Client Satisfaction</p>
-  </div>
-</div>
-
-    </div>
-
     <!-- RIGHT COLUMN -->
-    <div class="hero-right">
-      <div class="tech-shape">
-        <div class="button-hero">
-          <button id="openModal" class="cta-button">Book a Free 15‑Minute Call</button>
-        </div>
+   <div class="hero-ctas">
+        <button id="openModal" class="cta-primary">Book 15-min Free Call</button>
+        <a href="#projects" class="cta-secondary">View Projects</a>
       </div>
     </div>
 
   </div>
 </header>
-   
+<main> 
+<section class="about fade-in-section">
+
+  <div class="about-left">
+    <h2 class="about-title"><span>About</span> Me</h2>
+
+    <img src="./media/petya.jpg" class="about-img" alt="Petya Dimitrova">
+
+    <h3 class="about-role">Frontend Developer & UX/UI Designer</h3>
+    <p class="about-intro">
+      I transitioned into tech driven by curiosity and a passion for building meaningful digital experiences.
+      Today, I combine frontend engineering with UX thinking to create clean, intuitive interfaces.
+    </p>
+  </div>
+
+  <div class="about-right">
+    <h3 class="exp-title"><span>My</span> Experience</h3>
+
+    <div class="experience-grid">
+
+      <div class="experience-card">
+        <h4>UI/UX Designer</h4>
+        <h5>G&D Home Improvement</h5>
+        <ul>
+          <li>Led user interviews and requirement gathering</li>
+          <li>Designed flows, wireframes, and interactive prototypes</li>
+        </ul>
+      </div>
+
+      <div class="experience-card">
+        <h4>Frontend Developer</h4>
+        <h5>Ciberinitiation LTD</h5>
+        <ul>
+          <li>Built responsive landing pages</li>
+          <li>Created UX flows and prototypes</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</section>
     <!-- Why work with me -->
     <section class="why-me" id="why-me">
   <div class="why-me__inner">
@@ -265,7 +325,7 @@
     </div>
   </div>
 </section>
-
+</main>  
  <!--  -->
    <!-- Footer -->
    <footer id="contact" class="footer-box">

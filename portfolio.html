@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -12,7 +13,10 @@
 </head>
 <body>
     
-     <nav class="mobile-header">
+    <!-- Navbar on small screens -->
+    <!-- Section MOBILE MENU -->
+
+    <nav class="mobile-header">
 
       <div class="hamburger" 
        role="button" 
@@ -26,11 +30,12 @@
       </div>
     </nav>
 
-    <div class="topnav">
-      <div id="myLinks">
-        <a class=nav__link href="index.html">Home</a>
-        <a class=nav__link href="portfolio.html">Portfolio</a>
-        <a class=nav__link href="contact.html">Contact</a>
+    <div class="topnav" id="myLinks">
+      <div>
+        <a class="nav__link active" href="index.html">Home</a>
+        <a class="nav__link" href="portfolio.html">Portfolio</a>
+        <a class="nav__link" href="services.html">Services</a>
+        <a class="nav__link" href="contact.html">Contact</a>
       </div>
     </div>
 
@@ -45,22 +50,25 @@
         <!-- Second container menus -->
         <div class="arrange-manu">
           <a class="nav__link" href="index.html">Home</a>
-          <a class="nav__link active" href="portfolio.html">Portfolio</a>
-          <a class="nav__link" href="contact.html">Contact</a>
+          <a class="nav__link" href="portfolio.html">Portfolio</a>
+          <a class="nav__link" href="services.html">Services</a>
+          <a class=nav__link href="contact.html">Contact</a>
         </div>
       </div>
     </nav>
 
-    <!-- Header with full-height image -->
+
 <header class="hero">
-  <div class="hero-content fade-in-section">
+  <div class="hero__inner">
 
-    <!-- LEFT COLUMN -->
+    <!-- LEFT -->
     <div class="hero-left">
-      <h1 class="hero-name">Petya Dimitrova</h1>
-      <h2 class="hero-role">Front end developer & UI/UX</h2>
+      <h1 class="hero-name">Selected projects</h1>
+      <h2 class="hero-role">Find a range of selected projects</h2>
 
-      <p>I build clean, responsive interfaces with empathy and precision.</p>
+      <p class="hero-sub">
+       I build clean, responsive interfaces with empathy and precision.
+      </p>
 
       <div class="hero-icons">
         <a href="https://github.com/priorityc?tab=repositories"><i class="bi bi-github"></i></a>
@@ -68,38 +76,38 @@
         <a href="mailto:petya83dimitrova@gmail.com"><i class="bi bi-envelope-fill"></i></a>
         <a href="./media/PetyaDimitrova.docx" download="cv_PD.docx"><i class="bi bi-arrow-down-square-fill"></i></a>
       </div>
-
-      <div class="hero-stats">
-  <div class="stat">
-    <h3>4+</h3>
-    <p>Years Experience</p>
-  </div>
-
-  <div class="stat">
-    <h3>25+</h3>
-    <p>Projects Completed</p>
-  </div>
-
-  <div class="stat">
-    <h3>100%</h3>
-    <p>Client Satisfaction</p>
-  </div>
-</div>
-
-    </div>
-
-    <!-- RIGHT COLUMN -->
+  </div> 
+    
+    <!-- RIGHT -->
     <div class="hero-right">
-      <div class="tech-shape">
-        <div class="button-hero">
-          <button id="openModal" class="cta-button">Contact me</button>
-          <a href="#projects" class="cta-button-work">Projects</a>
+        <div class="hero-stats">
+        <div class="stat-card">
+          <h3>4+</h3>
+          <p>Years Experience</p>
         </div>
+
+        <div class="stat-card">
+          <h3>25+</h3>
+          <p>Projects Completed</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Client Satisfaction</p>
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <button id="openModal" class="cta-primary">Contact Me</button>
+        <a href="#projects" class="cta-secondary">View Projects</a>
       </div>
     </div>
 
+  
+
   </div>
 </header>
+
 <div class="project-container">
 <aside class="sidebar">
   <nav>
@@ -161,7 +169,7 @@
     <h2>Selected Projects</h2>
     <p>
       Projects that blend thoughtful UI, accessibility, and clean engineering.
-      Each one reflects my approach to building intuitive, emotionally engaging digital experiences.
+      Each project can be adjusted to your needs and goals. The above selected example range from E-commerce website, landing page, Application and User experiance design.
     </p>
   </header>
  
@@ -177,14 +185,13 @@
       <h3 class="project-title">Cosmic Care</h3>
       <p class="project-tech"><i class="bi icon bi-arrow-right-square-fill"></i>React.js Express.js Supabase</p>
 
-      <p class="project-desc">Wellness e‑commerce experience focused on calm, intuitive shopping and clear product discovery.</p>
+      <p class="project-desc">Wellness e‑commerce fully functional website with payment integration experience. The project focuse on calm, intuitive shopping and clear product discovery.</p>
 
 
       <div class="project-buttons">
         <a href="https://cosmiccare.netlify.app/?demo=true" class="btn-primary">Demo</a>
         <a href="https://github.com/priorityc/cosmic-care-site" class="btn-secondary">GitHub</a>
         <a href="./portfolio.html#cosmic-care" class="btn-text">Case Study</a>
-        <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
       </div>
       </div>
     </div>
@@ -300,13 +307,12 @@
       <h3 class="project-title">Black Hole Event</h3>
       <p class="project-tech"><i class="bi icon bi-arrow-right-square-fill"></i>HTML, CSS, JavaScript, Animations</p>
 
-      <p class="project-desc">Immersive landing page of Black Hole event for British Sciance Museum</p>
+      <p class="project-desc">Immersive marketing landing page of Black Hole event build for British Science Museum to attract more user subscription.</p>
 
 
       <div class="project-buttons">
         <a href="https://priorityc.github.io/stargazing-landing-page/" class="btn-primary">Demo</a>
         <a href="https://github.com/priorityc/stargazing-landing-page" class="btn-secondary">GitHub</a>
-        <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
 
       </div>
       </div>
@@ -413,7 +419,6 @@ The design communicates key information quickly, making it easy for families to 
 <section class="cs-links">
   <a href="https://priorityc.github.io/stargazing-landing-page/" class="cs-btn">Live Demo</a>
   <a https="/https://github.com/priorityc/stargazing-landing-page" class="cs-btn secondary">GitHub Repo</a>
-  <a href="./index.html#projects" class="cs-back">Back to Projects</a>
 </section>
 
  
@@ -442,7 +447,6 @@ The design communicates key information quickly, making it easy for families to 
       <div class="project-buttons">
         <a href="https://priorityc.github.io/stargazing-landing-page/" class="btn-primary">Demo</a>
         <a href="/https://github.com/priorityc/stargazing-landing-page" class="btn-secondary">GitHub</a>
-        <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
 
       </div>
       </div>
@@ -558,18 +562,25 @@ While explored how people search for recipes, I focused on the needs of busy fam
  <p class="project-heading">Built a Prototype for service quote calculator with Figma</p>
 
     <div class="project-card">
-      <!-- <div class="project-img"> -->
-        <div id="scapp-cont">
-      <img src="./media/serviceCalc.png" alt="Service calculator preview" class=".project-thumb-app">
-    </div>
+      
+       <div id="scapp-cont">
+      <img src="./media/serviceCalc.png" alt="Service calculator preview" class="project-thumb-app">
+      </div>
     <!-- </div> -->
     <div class="project-descr">
       <h3 class="project-title">Service Calculator</h3>
       <p class="project-tech"><i class="bi icon bi-arrow-right-square-fill"></i>Storyboards PowerPoint Figma</p>
 
-      <p class="project-desc">Prototype for a construction quote calculator to speed up client estimates.</p>
-
-
+      <p class="project-desc">Low to mid-fidelity prototype build with PowerPoint for service quote calculatorion within the construction start up company.</p>
+      <p class="project-desc">The prototype follow User-centered design with one iteration to produce a technical design solution for further evaluations.</p>
+      <p>Current prototype strenghts:</p>
+      <ul class="calc-strenghts">
+        <li>Mobile-first flow</li>
+        <li>Step-by-step structure</li>
+        <li>Minimal inputs</li>
+        <li>Automatic measurements and calculations</li>
+        <li>Clear hierarchy and industry terminology</li>
+      </ul>
       <div class="project-buttons">
         <a  href="https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/Untitled?node-id=1001-2" class="btn-primary">Demo</a>
         <a href="./index.html#projects" class="cs-link-text">Back to Projects</a>
@@ -725,7 +736,7 @@ The final prototype delivers a clear, mobile‑friendly quoting flow that suppor
 </div>
 </main>
 
- <!-- Footer -->
+<!-- Footer -->
    <footer id="contact" class="footer-box">
   <div class="footer-content">
     <div class="footer-info">
