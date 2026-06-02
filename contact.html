@@ -55,16 +55,15 @@
     </nav>
 
 <main>
-<header class="hero">
- <section class="hero-content">
+<!-- <header class="hero">
         
         <h1>This form is still in process of development. If you want to contact me you can click on the icons provided below or email to petya83dimitrova@gmail.com</h1>
           <a href="https://github.com/priorityc?tab=repositories"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg></a>
     <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
      <a href="mailto:petya83dimitrova@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
- </header>
+ </header> -->
 
-  <section class="client-form-section" id="project-form">
+  <section id="project-form" class="client-form-section project-form" >
   <div class="client-form__inner">
 
     <header class="client-form__header">
@@ -72,366 +71,503 @@
       <p>Please fill out this short form so I can understand your project and prepare an accurate proposal.</p>
     </header>
 
-    <form class="client-form">
-
+    <form id="project-form" class="client-form" onsubmit="validateProjectForm(event)">
+       <h3>Personal or buissness details</h3>
+      <fieldset>
       <!-- CONTACT DETAILS -->
       <div class="form-group">
-        <label>Full Name</label>
-        <input type="text" name="name" required>
+        <label for="fullname">Full Name</label>
+        <input type="text" id="project_fname" name="fullname" onchange="validateProjectInput(this)">
+        <small id="feedback_project_fname" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
-        <label>Business / Organisation Name</label>
-        <input type="text" name="business">
+        <label for="business">Business / Organisation Name</label>
+        <input type="text" id="business_text" name="business" onchange="validateProjectInput(this)">
+        <small id="feedback_business_text" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" name="email" required>
+        <label for="email">Email Address</label>
+        <input type="email" id="form_email" placeHolder="Your Email" name="email" onchange="validateProjectInput(this)">
+        <small id="feedback_form_email" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
-        <label>Phone Number (optional)</label>
-        <input type="text" name="phone">
+        <label for="phone">Enter your phone number:</label>
+        <input type="tel" id="form_phone" name="phone" onchange="validateProjectInput(this)">
+        <small id="feedback_form_phone" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
         <label>Current Website (if any)</label>
-        <input type="url" name="website">
+        <input type="url" id="form_url"name="website"  placeholder="https://example.com" onchange="validateProjectInput(this)">
+        <small id="feedback_form_url" aria-live="polite"></small>
+      </div>
+    </fieldset>
+
+      
+
+ <h3>Project Details</h3>
+<div class="cont">
+  <div class="accordion-cont">
+
+    <button class="accordion" data-target="starter">
+      <i class="bi bi-rocket-takeoff"></i>Starter Website (1–3 pages)
+      <i class="bi bi-plus-circle-fill"></i>
+    </button>
+
+    <div id="starter" class="panel">
+
+      <!-- Starter Description -->
+      <div class="form-group__label">
+        <label for="starterdescription">Briefly describe your business or project</label>
+        <textarea id="starterdescription" name="starterdescription" rows="4" onchange="validateProjectInput(this)"></textarea>
       </div>
 
-      <!-- PROJECT OVERVIEW -->
-      <div class="form-group">
-        <label>What type of website do you need?</label>
-        <button class="accordion">Starter Website (1-3 pages)<i class="bi bi-plus-circle-fill"></i></button>
-        <div class="panel">
-        <div class="form-group">
-          <label>Briefly describe your business or project</label>
-          <textarea name="description" rows="4"></textarea>
+      <!-- Starter Goals -->
+      <div class="form-group__label">
+        <label for="startergoals">What are your website main goals?</label>
+        <textarea id="startergoals" name="startergoals" rows="3" placeholder="e.g., more enquiries, modern design, better UX" onchange="validateProjectInput(this)"></textarea>
+      </div>
+
+      <!-- Starter Branding -->
+      <div class="form-group__label">
+        <label for="starter-branding">Do you already have branding, content, domain and hosting?</label>
+        <textarea id="starter-branding" name="starter-branding" rows="3" onchange="validateProjectInput(this)"></textarea>
+        <small id="feedback_starter-branding" aria-live="polite"></small>
+      </div>
+
+      <!-- Starter Features -->
+      <div class="form-group__label">
+        <label for="starter-features"><strong>What elements would you like included on your website?</strong></label>
+        <p>Please bare in mind that Home, About and Service section are already included in the base price.</p>
+
+        <div class="chips-group" id="starter-features">
+
+          <label class="chip">
+            <input type="checkbox" name="starter-features[]" value="additional-page">
+            Additional page (beyond 3)
+          </label>
+
+          <label class="chip">
+            <input type="checkbox" name="starter-features[]" value="contact-form">
+            Contact form
+          </label>
+
+          <label class="chip">
+            <input type="checkbox" name="starter-features[]" value="google-map">
+            Google map
+          </label>
+
+          <label class="chip">
+            <input type="checkbox" name="starter-features[]" value="image-gallery">
+            Image gallery
+          </label>
+
+          <label class="chip">
+            <input type="checkbox" name="starter-features[]" value="testimonials">
+            Testimonials
+          </label>
+
+          <label class="chip">
+            <input type="checkbox" name="starter-features[]" value="faq">
+            FAQ section
+          </label>
+
+          <label class="chip">
+            <input type="checkbox" name="starter-features[]" value="social-links">
+            Social media links
+          </label>
+
+          <label class="chip">
+            <input type="checkbox" name="starter-features[]" value="basic-seo">
+            Basic SEO visibility
+          </label>
+
         </div>
-        <div class="form-group">
-        <label>What are your website main goals?</label>
-        <textarea name="goals" rows="3" placeholder="e.g., more enquiries, modern design, better UX"></textarea>
+
       </div>
-      <div class="form-group">
-        <label>Do you already have branding, content, domain and hosting?</label>
-        <textarea name="goals" rows="3" placeholder=""></textarea>
-      </div>
-       <label for="features">What elements would you like included on your website?</label>
-  <div class="chips-group" id="features">
-    <label class="chip">
-      <input type="checkbox" name="features" value="booking">
-      Hero section with headline + call to action
-    </label>
 
-    <label class="chip">
-      <input type="checkbox" name="features" value="store">
-      About section
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="blog">
-      Services section
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="contact">
-      Contact form
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="portfolio">
-      Google map
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Image gallery
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Testimonials
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      FAQ section
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Social media links
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Basic SEO visibility
-    </label>
-  </div>
-      <div class="form-group">
-        <label>Ideal timeline</label>
-        <select name="timeline">
-          <option>As soon as possible</option>
+      <!-- Starter Timeline -->
+      <div class="form-group__label">
+        <label for="starter-timeline"><strong>Ideal timeline</strong></label>
+        <select id="starter-timeline" name="starter-timeline" onchange="validateProjectInput(this)">
+          <option>As soon as possible (extra charge)</option>
           <option>1–2 weeks</option>
+          <option>1 week</option>
           <option>2–4 weeks</option>
-          <option>Flexible</option>
+          <option>Flexible (2–5 weeks)</option>
         </select>
+        <small id="feedback_starter-timeline" aria-live="polite"></small>
       </div>
-      <div class="form-group">
-        <label>Estimated budget</label>
-        <select name="budget">
+
+      <!-- Starter Budget -->
+      <div class="form-group__label">
+        <label for="starter-budget">Estimated budget</label>
+        <select id="starter-budget" name="starter-budget" onchange="validateProjectInput(this)">
           <option>£300–£500</option>
           <option>£500–£700</option>
           <option>£700+</option>
           <option>Not sure yet</option>
         </select>
+        <small id="feedback_starter-budget" aria-live="polite"></small>
       </div>
 
-      <!-- NOTES -->
-      <div class="form-group">
-        <label>Anything else you'd like me to know?</label>
-        <textarea name="notes" rows="4"></textarea>
-      </div>      
+      <!-- Starter Notes -->
+      <div class="form-group__label">
+        <label for="other-notes">Anything else you'd like me to know?</label>
+        <textarea id="other-notes" name="other-notes" rows="4"></textarea>
       </div>
 
-        <button class="accordion">Bissiness Website (4-10 pages)<i class="bi bi-plus-circle-fill"></i></button>
-         <div class="panel">
- <div class="form-group">
-          <label>Briefly describe your business or project</label>
-          <textarea name="description" rows="4"></textarea>
-        </div>
-        <div class="form-group">
-        <label>What are your website main goals?</label>
-        <textarea name="goals" rows="3" placeholder="e.g., more enquiries, modern design, better UX"></textarea>
-      </div>
-      <div class="form-group">
-        <label>Do you already have branding, content, domain and hosting?</label>
-        <textarea name="goals" rows="3" placeholder=""></textarea>
-      </div>
-      <!-- FEATURES -->
-      <div class="form-group">
-       <label for="features">Which features do you need?</label>
-  <div class="chips-group" id="features">
-    <label class="chip">
-      <input type="checkbox" name="features" value="booking">
-      Booking system
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="store">
-      Online store
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="blog">
-      Blog
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="contact">
-      Contact form
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="portfolio">
-      Portfolio
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Event Calendar
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Membership
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Newsletter Sign up
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Live Chat
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Multi language
-    </label>
-    <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Account/Log in
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      SEO visibility
-    </label>
-  </div>
-      </div>
-      <div class="form-group">
-        <label>Ideal timeline</label>
-        <select name="timeline">
-          <option>As soon as possible</option>
-          <option>2–4 weeks</option>
-          <option>Flexible</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Estimated budget</label>
-        <select name="budget">
-          <option>£500–£700</option>
-          <option>£700+</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-
-      <!-- NOTES -->
-      <div class="form-group">
-        <label>Anything else you'd like me to know?</label>
-        <textarea name="notes" rows="4"></textarea>
-      </div>      
-      </div>
-            <!-- ----------- -->
-
-       
-        <button class="accordion">Website Redesign<i class="bi bi-plus-circle-fill"></i></button>
-         <div class="panel">
-<div class="form-group">
-          <label>Briefly describe your business or project</label>
-          <textarea name="description" rows="4"></textarea>
-        </div>
-        <div class="form-group">
-        <label>What is not working well on your website?</label>
-        <textarea name="goals" rows="3" placeholder="e.g., less visits, old design, speed issues, poor or difficult functionality UX"></textarea>
-      </div>
-      <div class="form-group">
-  <label for="features">Which parts of your website need to be improved or redesigned?</label>
-  <div class="chips-group" id="features">
-    <label class="chip">
-      <input type="checkbox" name="features" value="booking">
-      Booking system
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="store">
-      Online store
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="blog">
-      Blog
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="contact">
-      Contact form
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="portfolio">
-      Portfolio
-    </label>
-
-    <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Membership area
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Navigation
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Layout
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Product/Service Pages
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      Mobile Experiance
-    </label>
-     <label class="chip">
-      <input type="checkbox" name="features" value="membership">
-      SEO visibility
-    </label>
-  </div>
-      </div>
-      <div class="form-group">
-        <label>Do you want to keep your current branding (colours, fonts, logo) or refresh it?</label>
-        <textarea name="goals" rows="3" placeholder=""></textarea>
-      </div>
-      <!-- FEATURES -->
-      <div class="form-group">
-        <label>What platform is your current website built on?
-        Do you have access to the backend?</label>
-        <textarea name="features" rows="3" placeholder=""></textarea>
-      </div>
-      <div class="form-group">
-        <label>Will you reuse your existing content or rewrite it?</label>
-        <textarea name="features" rows="3" placeholder=""></textarea>
-      </div>
-      <div class="form-group">
-        <label>Ideal timeline</label>
-        <select name="timeline">
-          <option>As soon as possible</option>
-          <option>2–4 weeks</option>
-          <option>Flexible</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Estimated budget</label>
-        <select name="budget">
-          <option>£200–£400 (Visual Refresh)</option>
-          <option>£500+MID redesign</option>
-          <option>£700-£1700 COMPLEX redesign</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-
-      <!-- NOTES -->
-      <div class="form-group">
-        <label>Anything else you'd like me to know?</label>
-        <textarea name="notes" rows="4"></textarea>
-      </div>      
-            <!-- ----------- -->
-      </div>
-       
-         <button class="accordion">Something else<i class="bi bi-plus-circle-fill"></i></button>
-         <div class="panel">
-      <div class="form-group">
-        <label>Briefly explain what do you need diferent from what is already offered?</label>
-        <textarea name="description" rows="4"></textarea>
-      </div>        
     </div>
-        
-
-        <!-- <select name="website_type">
-          <option>Starter Website (1–3 pages)</option>
-          <option>Business Website (4–10 pages)</option>
-          <option>Website Redesign</option>
-          <option>Not sure yet</option>
-        </select> -->
-      </div>
-
-    
-
-     
-
-      
-
-      
-
-      <!-- NOTES -->
-      <div class="form-group">
-        <label>Anything else you'd like me to know?</label>
-        <textarea name="notes" rows="4"></textarea>
-      </div>
-
-      <button type="submit" class="form-submit">Submit Project Details</button>
-
-    </form>
   </div>
+
+
+
+<div class="accordion-cont">
+  <button class="accordion" data-target="business">
+    <i class="bi bi-briefcase"></i>Business Website (4–10 pages)
+    <i class="bi bi-plus-circle-fill"></i>
+  </button>
+
+  <div id="business" class="panel">
+
+    <!-- Business Description -->
+    <div class="form-group__label">
+      <label for="business-description">Briefly describe your business or project</label>
+      <textarea id="business-description" name="business-description" rows="4"></textarea>
+    </div>
+
+    <!-- Business Goals -->
+    <div class="form-group__label">
+      <label for="business-goals">What are your website main goals?</label>
+      <textarea id="business-goals" name="business-goals" rows="3" placeholder="e.g., more enquiries, modern design, better UX"></textarea>
+    </div>
+
+    <!-- Business Branding -->
+    <div class="form-group__label">
+      <label for="business-branding">Do you already have branding, content, domain and hosting?</label>
+      <textarea id="business-branding" name="business-branding" rows="3"></textarea>
+    </div>
+
+    <!-- Business Features -->
+    <div class="form-group__label">
+      <label for="business-features"><strong>Which features do you need?</strong></label>
+      <p>Home, About, Services and Contact pages are already included. Additional features will adjust the final proposal.</p>
+
+      <div class="chips-group" id="business-features">
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="booking">
+          Booking system
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="store">
+          Online store
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="blog">
+          Blog
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="contact-form">
+          Contact form
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="portfolio">
+          Portfolio
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="event-calendar">
+          Event Calendar
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="membership">
+          Membership
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="newsletter">
+          Newsletter Sign‑up
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="live-chat">
+          Live Chat
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="multi-language">
+          Multi‑language
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="account-login">
+          Account / Log in
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="seo">
+          SEO visibility
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="business-features[]" value="additional-page">
+          Additional page beyond 10
+        </label>
+
+      </div>
+    </div>
+
+    <!-- Business Timeline -->
+    <div class="form-group__label">
+      <label for="business-timeline">Ideal timeline</label>
+      <p>Business Website Timeline: 2–4 weeks depending on content, features, and feedback speed.</p>
+
+      <select id="business-timeline" name="business-timeline" onchange="validateProjectInput(this)">
+        <option>As soon as possible (7–10 days, extra charge)</option>
+        <option>2–4 weeks (Standard)</option>
+        <option>4–6 weeks (If content is delayed)</option>
+        <option>Flexible (2–8 weeks)</option>
+      </select>
+
+      <small id="feedback_business-timeline" aria-live="polite"></small>
+    </div>
+
+    <!-- Business Budget -->
+    <div class="form-group__label">
+      <label for="business-budget">Estimated budget</label>
+      <select id="business-budget" name="business-budget" onchange="validateProjectInput(this)">
+        <option>£500–£700</option>
+        <option>£700+</option>
+        <option>Not sure yet</option>
+      </select>
+      <small id="feedback_business-budget" aria-live="polite"></small>
+    </div>
+
+    <!-- Business Notes -->
+    <div class="form-group__label">
+      <label for="business-notes">Anything else you'd like me to know?</label>
+      <textarea id="business-notes" name="business-notes" rows="4"></textarea>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="accordion-cont">
+  <button class="accordion" data-target="redesign">
+    <i class="bi bi-brush"></i>Website Redesign<i class="bi bi-plus-circle-fill"></i>
+  </button>
+
+  <div id="redesign" class="panel">
+
+    <!-- Redesign Description -->
+    <div class="form-group__label">
+      <label for="redesign-description">Briefly describe your business or project</label>
+      <textarea id="redesign-description" name="redesign-description" rows="4"></textarea>
+    </div>
+
+    <!-- Redesign Issues -->
+    <div class="form-group__label">
+      <label for="redesign-issues">What is not working well on your website?</label>
+      <textarea id="redesign-issues" name="redesign-issues" rows="3" placeholder="e.g., low traffic, outdated design, slow speed, poor UX"></textarea>
+    </div>
+
+    <!-- Redesign Features -->
+    <div class="form-group__label">
+      <p>Redesign of 3–5 core pages (Home, About, Services, Contact)</p>
+
+      <label for="redesign-features"><strong>Which parts of your website need to be improved or redesigned?</strong></label>
+
+      <div class="chips-group" id="redesign-features">
+
+        <!-- Functional Features -->
+        <label class="chip">
+          <input type="checkbox" name="redesign-features[]" value="booking">
+          Booking system
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-features[]" value="store">
+          Online store
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-features[]" value="blog">
+          Blog
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-features[]" value="contact-form">
+          Contact form
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-features[]" value="portfolio">
+          Portfolio
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-features[]" value="membership">
+          Membership area
+        </label>
+
+        <!-- UX / UI Improvements -->
+        <label class="chip">
+          <input type="checkbox" name="redesign-features[]" value="navigation">
+          Navigation
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-features[]" value="layout">
+          Layout
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-features[]" value="service-pages">
+          Product/Service Pages
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-features[]" value="mobile">
+          Mobile Experience
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-features[]" value="seo">
+          SEO visibility
+        </label>
+
+      </div>
+
+    </div>
+
+    <!-- Redesign Upgrades -->
+    <div class="form-group__label">
+      <label for="redesign-upgrades">
+        <strong>Would you like to include any additional upgrades in your redesign?</strong>
+        <span>(Select all that apply)</span>
+      </label>
+
+      <div class="chips-group" id="redesign-upgrades">
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-upgrades[]" value="content-rewrite">
+          Content rewrite
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-upgrades[]" value="branding-refresh">
+          Branding refresh (colours, fonts, style)
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-upgrades[]" value="logo-redesign">
+          Logo redesign
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-upgrades[]" value="new-images">
+          New images / image replacement
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-upgrades[]" value="speed-optimisation">
+          Speed optimisation
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-upgrades[]" value="accessibility">
+          Accessibility improvements
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-upgrades[]" value="additional-pages">
+          Additional pages
+        </label>
+
+        <label class="chip">
+          <input type="checkbox" name="redesign-upgrades[]" value="advanced-animations">
+          Advanced animations
+        </label>
+
+      </div>
+
+    </div>
+
+    <!-- Branding Refresh -->
+    <div class="form-group__label">
+      <label for="redesign-branding">Do you want to keep your current branding or refresh it?</label>
+      <textarea id="redesign-branding" name="redesign-branding" rows="3"></textarea>
+    </div>
+
+    <!-- Platform + Backend Access -->
+    <div class="form-group__label">
+      <label for="redesign-platform">What platform is your current website built on? Do you have backend access?</label>
+      <textarea id="redesign-platform" name="redesign-platform" rows="3"></textarea>
+    </div>
+
+    <!-- Content Reuse -->
+    <div class="form-group__label">
+      <label for="redesign-content">Will you reuse your existing content or rewrite it?</label>
+      <textarea id="redesign-content" name="redesign-content" rows="3"></textarea>
+    </div>
+
+    <!-- Timeline -->
+    <div class="form-group__label">
+      <label for="redesign-timeline">Ideal timeline</label>
+      <p>Redesign Timeline: 2–4 weeks depending on pages, features, and feedback speed.</p>
+
+      <select id="redesign-timeline" name="redesign-timeline" onchange="validateProjectInput(this)">
+        <option>As soon as possible (1–2 weeks)</option>
+        <option>2–4 weeks (Standard)</option>
+        <option>Flexible (2–8 weeks)</option>
+      </select>
+
+      <small id="feedback_redesign-timeline" aria-live="polite"></small>
+    </div>
+
+    <!-- Budget -->
+    <div class="form-group__label">
+      <label for="redesign-budget">Estimated budget</label>
+      <select id="redesign-budget" name="redesign-budget" onchange="validateProjectInput(this)">
+        <option>£200–£400 (Visual Refresh)</option>
+        <option>£500+ Mid redesign</option>
+        <option>£700–£1700 Complex redesign</option>
+        <option>Not sure yet</option>
+      </select>
+      <small id="feedback_redesign-budget" aria-live="polite"></small>
+    </div>
+
+    <!-- Notes -->
+    <div class="form-group__label">
+      <label for="redesign-notes">Anything else you'd like me to know?</label>
+      <textarea id="redesign-notes" name="redesign-notes" rows="4"></textarea>
+    </div>
+  </div>
+  
+<div class="submit-btn">
+            <button type="submit" class="form-submit"><i class="bi bi-caret-down-fill"></i>Submit Project Details</button>
+      </div>
+       
+    </div>
+     
+    </form>
+    
+</div>
+<div class="success-message">
+  
+    </div>
 </section>
 
-</section>
     </main>
      <!-- Footer -->
    <footer id="contact" class="footer-box">
@@ -466,12 +602,12 @@
 
       <form onsubmit="validateFooterForm(event)">
         <div class="form-row">
-          <input type="text" id="footer_fname" name="firstname" placeholder="First Name" onchange="validateFooterInput(this)" />
-          <input type="text" id="footer_lname" name="lastname" placeholder="Last Name" onchange="validateFooterInput(this)" />
+          <input type="text" id="footer_fname" name="firstname" placeholder="First Name" onchange="validateProjectInput(this)" />
+          <input type="text" id="footer_lname" name="lastname" placeholder="Last Name" onchange="validateProjectInput(this)" />
         </div>
 
-        <input type="email" id="footer_email" name="email" placeholder="Your Email" onchange="validateFooterInput(this)" />
-        <textarea id="footer_message" name="message" rows="6" placeholder="Write your message here..." onchange="validateFooterInput(this)"></textarea>
+        <input type="email" id="footer_email" name="email" placeholder="Your Email" onchange="validateProjectInput(this)" />
+        <textarea id="footer_message" name="message" rows="6" placeholder="Write your message here..." onchange="validateProjectInput(this)"></textarea>
 
         <div class="footer-btn">
           <input class="btn-primary-footer" type="submit" value="Submit" />

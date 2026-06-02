@@ -144,6 +144,17 @@ body {
   background-color: white;
 }
 /*  */
+.project-form > * {
+  opacity: 1;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-in,
+    transform 0.8s ease-in;
+}
+.form-wrapper .visible > * {
+  opacity: 0;
+  transform: translateY(0);
+}
 /* ------------------------------
    SECTION WRAPPER
 --------------------------------*/
@@ -151,6 +162,7 @@ body {
   padding: 3rem 1.25rem;
   background: radial-gradient(circle at top, #1e1b4b 0, #020617 55%, #000 100%);
   color: #f5f5ff;
+  margin-bottom: 2rem;
 }
 
 .client-form__inner {
@@ -186,17 +198,28 @@ body {
   gap: 1.5rem;
 }
 
+fieldset {
+  padding: 1em;
+  border-radius: 3px;
+  margin: 0.3rem 0 1rem 0;
+}
+
 /* ------------------------------
    FORM GROUP
 --------------------------------*/
-.form-group {
+.tab {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: grid;
+  gap: 1rem;
 }
 
 .form-group label {
   font-size: 0.95rem;
+  margin: 1rem;
 }
 
 /* ------------------------------
@@ -209,8 +232,8 @@ body {
   padding: 0.75rem 1rem;
   border-radius: 0.9rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(15, 23, 42, 0.7);
-  color: #f5f5ff;
+  color: #444;
+  background-color: #1a1a2e;
   font-size: 0.95rem;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
   transition:
@@ -227,7 +250,11 @@ body {
 }
 
 /* Acordions */
+/* MOBILE (default) */
+
 .accordion {
+  width: 100%;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -236,6 +263,7 @@ body {
   cursor: pointer;
   padding: 18px;
   width: 100%;
+  height: 80px;
   border: none;
   text-align: left;
   outline: none;
@@ -253,12 +281,21 @@ body {
 }
 
 .panel {
-  padding: 0 18px;
-  max-height: 0;
+  display: none;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.35s ease;
+  background: #fff;
+  padding: 0 18px;
+  border-left: 2px solid #ddd;
+  border-right: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  color: #111827;
+  border-radius: 3px;
 }
 
+.panel.active {
+  max-height: 2000px;
+}
 .chips-group {
   display: flex;
   flex-wrap: wrap;
@@ -275,7 +312,7 @@ body {
   font-size: 14px;
   cursor: pointer;
   user-select: none;
-  background: #fff;
+  background: #a855f7;
   transition: all 0.15s ease;
 }
 
@@ -298,6 +335,9 @@ body {
 /* ------------------------------
    SUBMIT BUTTON
 --------------------------------*/
+.submit-btn {
+  margin-bottom: 2rem 0;
+}
 .form-submit {
   padding: 0.9rem 1.4rem;
   border-radius: 999px;
@@ -317,6 +357,47 @@ body {
   box-shadow: 0 0 28px rgba(56, 189, 248, 0.8);
 }
 
+/* FEEDBACK TEXT validation*/
+small {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  display: block;
+}
+small.invalid {
+  color: #d12f2f; /* red */
+}
+
+small.valid {
+  color: #2e8b57; /* green */
+  font-weight: 600;
+}
+
+/* .success-message {
+  background: #e6f9ed;
+  border: 1px solid #28a745;
+  color: #1b7a32;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-weight: 600;
+  animation: fadeIn 0.4s ease;
+} */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
 /* ------------------------------
    RESPONSIVE
 --------------------------------*/
@@ -324,13 +405,15 @@ body {
   .client-form-section {
     padding: 4rem 1.5rem;
   }
-}
-
-/* FEEDBACK TEXT */
-small {
-  color: #d12f2f;
-  font-size: 0.8rem;
-  margin-top: 0.2rem;
+  fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  /* .form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  } */
 }
 
 .footer-box > * {
@@ -463,8 +546,59 @@ small {
   .desktop-header {
     display: block;
   }
+  .cont {
+    margin-bottom: 2rem;
+  }
+  fieldset {
+    margin-bottom: 2rem;
+  }
   /* form-contact */
   .form-contact {
     margin-bottom: 7rem;
+  }
+  .client-form-section {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (min-width: 986px) {
+  .client-form__inner {
+    max-width: 1100px;
+  }
+
+  .cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  fieldset {
+    margin-bottom: 3rem;
+  }
+  .accordion-cont {
+    width: 100%;
+  }
+  .accordion {
+    display: flex;
+
+    gap: 10px;
+    position: sticky;
+    top: 20px;
+  }
+
+  .accordion-buttons .accordion.active {
+    background: #eaeaea;
+  }
+
+  .client-form-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 7rem;
+    border-radius: 2rem;
+  }
+  .submit-btn {
+    display: flex;
+    margin: 1rem 0 3rem 0;
   }
 }
