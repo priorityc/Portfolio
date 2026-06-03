@@ -239,7 +239,7 @@ body {
   font-size: 0.6rem;
 }
 .bi {
-  font-size: 15px;
+  font-size: var(--fs-md);
   color: #c084fc;
 }
 
@@ -259,22 +259,36 @@ body {
    HERO WRAPPER
 --------------------------------*/
 .hero {
-  padding: 4rem 1.25rem 3rem;
+  padding: 3rem 1.25rem;
   background: radial-gradient(circle at top, #1e1b4b 0, #020617 55%, #000 100%);
   color: #f5f5ff;
 }
 
 .hero__inner {
+  display: flex;
+  flex-direction: column; /* MOBILE FIRST */
+  gap: 2.5rem;
   max-width: 1100px;
   margin: 0 auto;
-  gap: 3.5rem;
+  text-align: center; /* MOBILE FIRST */
 }
 
-/* ------------------------------
-   LEFT SIDE
---------------------------------*/
+.hero-left,
+.hero-right {
+  width: 100%;
+}
+
+.hero-image {
+  max-width: 460px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  filter: drop-shadow(0 8px 25px rgba(168, 85, 247, 0.25));
+}
+
+/* TEXT */
 .hero-name {
-  font-size: var(--fs-xxl);
+  font-size: var(--fs-xl);
   font-weight: 700;
   margin-bottom: 0.3rem;
   background: linear-gradient(90deg, #a855f7, #38bdf8);
@@ -283,7 +297,7 @@ body {
 }
 
 .hero-role {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-md);
   margin-bottom: 1rem;
   color: #a5a7c7;
 }
@@ -291,97 +305,51 @@ body {
 .hero-sub {
   font-size: 1rem;
   max-width: 420px;
-  margin-bottom: 1.5rem;
   color: #c7c9e8;
 }
 
-/* ------------------------------
-   SOCIAL ICONS
---------------------------------*/
+/* ICONS */
 .hero-icons {
   display: flex;
+  justify-content: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-.hero-icons a {
-  font-size: 1.3rem;
-  color: #c7c9e8;
-  transition: color 0.2s ease;
-}
-
-.hero-icons a:hover {
-  color: #a855f7;
-}
-
-/* ------------------------------
-   STATS (rounded glowing cards)
---------------------------------*/
-.hero-stats {
+/* CTA BUTTONS */
+.button-hero {
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 2rem;
+  flex-direction: column; /* MOBILE FIRST */
+  gap: 0.75rem;
+  width: 100%;
 }
 
-.stat-card {
-  flex: 1;
-  min-width: 120px;
-  padding: 1rem;
+.cta-primary,
+.cta-secondary {
+  width: 100%; /* MOBILE FIRST */
+  padding: 1em;
   text-align: center;
-  border-radius: 1rem;
-  background: rgba(15, 23, 42, 0.7);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
-  transition: transform 0.2s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-4px);
-}
-
-.stat-card h3 {
-  font-size: 1.4rem;
-  color: #a855f7;
-  margin-bottom: 0.3rem;
-}
-
-.stat-card p {
-  font-size: 0.85rem;
-  color: #a5a7c7;
-}
-
-/* ------------------------------
-   CTA BUTTONS
---------------------------------*/
-.hero-ctas {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.cta-primary {
-  padding: 0.75rem 1.4rem;
-  border-radius: 6px;
-  border: none;
   background: linear-gradient(135deg, #38bdf8, #a855f7);
   color: #fff;
   cursor: pointer;
   box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
+  border: none;
+  border-radius: 6px;
+  font-size: var(--fs-md);
 }
 
 .cta-secondary {
-  padding: 0.75rem 1.4rem;
-  border-radius: 6px;
-  border: 1px solid rgba(148, 163, 253, 0.6);
   background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+  color: #a78bfa;
+  border-radius: 6px;
   color: #f5f5ff;
   text-decoration: none;
   transition: background 0.2s ease;
 }
 
-.cta-secondary:hover {
-  background: rgba(148, 163, 253, 0.18);
+.micro-cta {
+  margin-top: 1rem;
+  font-size: 0.9rem;
 }
 
 /*  */
@@ -1667,12 +1635,38 @@ textarea:focus {
   }
 
   .hero__inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row; /* SIDE BY SIDE */
+    text-align: left;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
+  .hero-left {
+    flex: 1;
+  }
+
+  .hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .button-hero {
+    flex-direction: row; /* HORIZONTAL BUTTONS */
+    width: auto;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    width: auto;
+  }
+
+  .hero-icons {
+    justify-content: flex-start;
+  }
   .project-descr {
     padding: 0.5em;
     margin: 1rem 0.5rem;
@@ -1855,6 +1849,10 @@ textarea:focus {
     display: flex;
     align-items: center;
     margin-bottom: 8rem;
+  }
+  .hero-name {
+    width: 100%;
+    font-size: var(--fs-xxl);
   }
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
