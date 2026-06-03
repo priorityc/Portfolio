@@ -217,6 +217,9 @@ fieldset {
   gap: 1rem;
 }
 
+.form-group__label {
+  margin-bottom: 1rem;
+}
 .form-group label {
   font-size: 0.95rem;
   margin: 1rem;
@@ -233,7 +236,7 @@ fieldset {
   border-radius: 0.9rem;
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #444;
-  background-color: #1a1a2e;
+  background-color: #5454782b;
   font-size: 0.95rem;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
   transition:
@@ -254,7 +257,7 @@ fieldset {
 
 .accordion {
   width: 100%;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -291,6 +294,7 @@ fieldset {
   border-bottom: 2px solid #ddd;
   color: #111827;
   border-radius: 3px;
+  margin-bottom: 1rem;
 }
 
 .panel.active {
@@ -336,12 +340,12 @@ fieldset {
    SUBMIT BUTTON
 --------------------------------*/
 .submit-btn {
-  margin-bottom: 2rem 0;
+  margin-bottom: 2rem;
 }
 .form-submit {
   padding: 0.9rem 1.4rem;
-  border-radius: 999px;
   border: none;
+  border-radius: 6px;
   background: linear-gradient(135deg, #38bdf8, #a855f7);
   color: #fff;
   font-size: 1rem;
@@ -396,6 +400,11 @@ small.valid {
 
 .hidden {
   display: none !important;
+}
+
+.invalid {
+  border: 2px solid rgb(197, 73, 73);
+  border-radius: 6px;
 }
 
 /* ------------------------------

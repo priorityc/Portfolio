@@ -53,16 +53,14 @@ console.log(selectedFeatures);
 // const projectForm = document.getElementById("project-form"); //select the modal
 
 function validateProjectInput(inputElement) {
-  // If element has no ID, skip it
   if (!inputElement || !inputElement.id) {
     return true;
   }
+
   const feedback = document.getElementById("feedback_" + inputElement.id);
   let pattern, message;
-  if (!pattern) {
-    return true; // do NOT block the form for fields without patterns
-  }
 
+  // TIMELINE + BUDGET FIELDS
   if (
     inputElement.id === "starter-timeline" ||
     inputElement.id === "starter-budget" ||
@@ -72,11 +70,14 @@ function validateProjectInput(inputElement) {
     inputElement.id === "redesign-budget"
   ) {
     const isValid = inputElement.value.trim() !== "";
-    feedback.innerText = isValid ? "✓ Valid" : "✗ Please select a timeline.";
-    feedback.className = isValid ? "valid" : "invalid";
+    if (feedback) {
+      feedback.innerText = isValid ? "✓ Valid" : "✗ Please select a timeline.";
+      feedback.className = isValid ? "valid" : "invalid";
+    }
     return isValid;
   }
 
+  // NAME FIELDS
   if (
     inputElement.id === "project_fname" ||
     inputElement.id === "business_text"
@@ -85,16 +86,19 @@ function validateProjectInput(inputElement) {
     message = "At least two characters required.";
   }
 
+  // EMAIL
   if (inputElement.id === "form_email") {
     pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     message = "Enter a valid email address.";
   }
 
+  // PHONE
   if (inputElement.id === "form_phone") {
     pattern = /^(07\d{9}|(\+44\s?\d{10}))$/;
     message = "Enter a valid UK phone number (07… or +44…).";
   }
 
+  // URL
   if (inputElement.id === "form_url") {
     pattern = /^(https?:\/\/)?([\w\-]+\.)+[\w\-]{2,}(\/.*)?$/;
     message = "Enter a valid website URL.";
@@ -103,19 +107,47 @@ function validateProjectInput(inputElement) {
   const value = inputElement.value.trim();
 
   if (!pattern) {
-    console.warn("No pattern matched for input:", inputElement.id);
-    return false;
+    return true; // skip fields without patterns
   }
 
   const isValid = pattern.test(value);
-  feedback.innerText = isValid ? "✓ Valid" : "✗ " + message;
-  feedback.className = isValid ? "valid" : "invalid";
+
+  if (feedback) {
+    feedback.innerText = isValid ? "✓ Valid" : "✗ " + message;
+    feedback.className = isValid ? "valid" : "invalid";
+  }
 
   return isValid;
 }
 
 function validateProjectForm(e) {
   e.preventDefault();
+
+  console.log("SUBMIT FIRED");
+
+  // define these INSIDE the function
+  const additionalPageChecked =
+    document.querySelector(
+      'input[name="starter-features[]"][value="additional-page"]:checked',
+    ) !== null;
+
+  const numberGroup = document.querySelector(".number-group");
+  const numberInput = document.getElementById("starter-quantity");
+
+  let isNumberValid = true;
+
+  if (additionalPageChecked) {
+    numberGroup.classList.remove("hidden");
+
+    if (numberInput.value.trim() === "") {
+      isNumberValid = false;
+      numberInput.classList.add("invalid");
+    } else {
+      numberInput.classList.remove("invalid");
+    }
+  } else {
+    numberGroup.classList.add("hidden");
+  }
 
   const fnameInput = document.getElementById("project_fname");
   const businessNameInput = document.getElementById("business_text");
@@ -143,12 +175,19 @@ function validateProjectForm(e) {
   const isTimelineBisValid = validateProjectInput(timelineInputBis);
   const isTimelineRBValid = validateProjectInput(timelineInputRB);
 
+  //If additional pages option are selected ask the user to provide how many (number) validate
+  // Show/hide number input
+
+  //Create html number input to ask for number of pages that user want
+  // Validate starter features
+
   const formIsValid =
     isFNameValid &&
     isBNameValid &&
     isEmailValid &&
     isPhoneValid &&
     isurlValid &&
+    isNumberValid &&
     isTimelineValid &&
     isTimelineBValid &&
     isTimelineRValid &&
@@ -160,6 +199,11 @@ function validateProjectForm(e) {
     alert("Please correct the errors before submitting.");
     return;
   }
+
+  // IMPORTANT: Only skip validation AFTER checking patterns
+  // if (!pattern) {
+  //   return true; // skip fields without patterns
+  // }
 
   const formData = new FormData(e.target);
 
@@ -184,3 +228,20 @@ function validateProjectForm(e) {
       alert("Network error. Please try again later.");
     });
 }
+
+document.querySelectorAll('input[name="starter-features[]"]').forEach((cb) => {
+  cb.addEventListener("change", () => {
+    const additionalPageChecked =
+      document.querySelector(
+        'input[name="starter-features[]"][value="additional-page"]:checked',
+      ) !== null;
+
+    const numberGroup = document.querySelector(".number-group");
+
+    if (additionalPageChecked) {
+      numberGroup.classList.remove("hidden");
+    } else {
+      numberGroup.classList.add("hidden");
+    }
+  });
+});

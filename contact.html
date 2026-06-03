@@ -77,25 +77,25 @@
       <!-- CONTACT DETAILS -->
       <div class="form-group">
         <label for="fullname">Full Name</label>
-        <input type="text" id="project_fname" name="fullname" onchange="validateProjectInput(this)">
+        <input type="text" id="project_fname" name="fullname" placeholder="Forename + Surname" onchange="validateProjectInput(this)">
         <small id="feedback_project_fname" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
         <label for="business">Business / Organisation Name</label>
-        <input type="text" id="business_text" name="business" onchange="validateProjectInput(this)">
+        <input type="text" id="business_text" name="business" placeholder="Yor organisation" onchange="validateProjectInput(this)">
         <small id="feedback_business_text" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="form_email" placeHolder="Your Email" name="email" onchange="validateProjectInput(this)">
+        <input type="email" id="form_email" placeHolder="john@mail.com" name="email" onchange="validateProjectInput(this)">
         <small id="feedback_form_email" aria-live="polite"></small>
       </div>
 
       <div class="form-group">
         <label for="phone">Enter your phone number:</label>
-        <input type="tel" id="form_phone" name="phone" onchange="validateProjectInput(this)">
+        <input type="tel" id="form_phone" name="phone" placeholder="(07… or +44…)" onchange="validateProjectInput(this)">
         <small id="feedback_form_phone" aria-live="polite"></small>
       </div>
 
@@ -122,7 +122,7 @@
       <!-- Starter Description -->
       <div class="form-group__label">
         <label for="starterdescription">Briefly describe your business or project</label>
-        <textarea id="starterdescription" name="starterdescription" rows="4" onchange="validateProjectInput(this)"></textarea>
+        <textarea id="starterdescription" name="starterdescription" rows="4" placeholder="Describe your project in few words." onchange="validateProjectInput(this)"></textarea>
       </div>
 
       <!-- Starter Goals -->
@@ -134,7 +134,7 @@
       <!-- Starter Branding -->
       <div class="form-group__label">
         <label for="starter-branding">Do you already have branding, content, domain and hosting?</label>
-        <textarea id="starter-branding" name="starter-branding" rows="3" onchange="validateProjectInput(this)"></textarea>
+        <textarea id="starter-branding" name="starter-branding" rows="3" placeholder="e.g., I have branding but not domain or hosting" onchange="validateProjectInput(this)"></textarea>
         <small id="feedback_starter-branding" aria-live="polite"></small>
       </div>
 
@@ -186,9 +186,13 @@
           </label>
 
         </div>
-
+        
       </div>
-
+      
+<div class="number-group hidden">
+  <label for="starter-quantity">Quantity of the additional pages (between 1 and 7):</label>
+  <input type="number" id="starter-quantity" name="quantity" min="1" max="5">
+</div>
       <!-- Starter Timeline -->
       <div class="form-group__label">
         <label for="starter-timeline"><strong>Ideal timeline</strong></label>
@@ -325,6 +329,11 @@
 
       </div>
     </div>
+
+    <div class="number-group hidden">
+  <label for="starter-quantity">Quantity of the additional pages (between 1 and 7):</label>
+  <input type="number" id="starter-quantity" name="quantity" min="1" max="7">
+</div>
 
     <!-- Business Timeline -->
     <div class="form-group__label">
