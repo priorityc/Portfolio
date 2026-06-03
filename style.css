@@ -87,7 +87,12 @@ body {
 .topnav {
   background: radial-gradient(circle at center, #0a0f2c, #050618);
   height: 70px;
-  padding: 1rem;
+  padding: 0.5rem;
+}
+
+.topnav > div {
+  display: flex;
+  align-items: center;
 }
 
 .nav__link {
@@ -1841,6 +1846,9 @@ textarea:focus {
 @media (min-width: 1024px) {
   body {
     font-size: 1.2rem;
+  }
+  #myLinks {
+    display: none;
   }
   .hero {
     height: 80vh;
