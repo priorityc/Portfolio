@@ -47,7 +47,19 @@ const selectedFeatures = [
   ...document.querySelectorAll('input[name="features"]:checked'),
 ].map((input) => input.value);
 
-console.log(selectedFeatures);
+// function validateCurrentStep(stepIndex) {
+//   const step = steps[stepIndex];
+//   const inputs = step.querySelectorAll("input, select, textarea");
+//   let valid = true;
+
+//   inputs.forEach((input) => {
+//     // Reuse your existing validation function
+//     const result = validateProjectInput(input);
+//     if (!result) valid = false;
+//   });
+
+//   return valid;
+// }
 
 // ===============================
 // SLIDING MULTI-STEP FORM LOGIC
@@ -55,6 +67,8 @@ console.log(selectedFeatures);
 document.addEventListener("DOMContentLoaded", () => {
   const slider = document.querySelector(".form-slider");
   const steps = document.querySelectorAll(".form-step");
+  const form = document.getElementById("starterForm");
+
   let currentStep = 0;
 
   const progressFill = document.querySelector(".progress-fill");
@@ -67,11 +81,36 @@ document.addEventListener("DOMContentLoaded", () => {
     stepLabel.textContent = `Step ${currentStep + 1} of ${totalSteps}`;
   }
 
-  // 👉 Initialize progress bar + label
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentStep * 100}%)`;
+    updateProgress();
+  }
+
   updateProgress();
 
+  // ⭐ VALIDATE ONLY THE CURRENT STEP
+  function validateCurrentStep(stepIndex) {
+    const step = steps[stepIndex];
+    const inputs = step.querySelectorAll("input, select, textarea");
+    let valid = true;
+
+    inputs.forEach((input) => {
+      const result = validateProjectInput(input);
+      console.log(result);
+      if (!result) valid = false;
+    });
+
+    return valid;
+  }
+
+  // ⭐ NEXT BUTTONS
   document.querySelectorAll(".next-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
+      if (!validateCurrentStep(currentStep)) {
+        console.log("Step", currentStep, "is invalid");
+        return;
+      }
+
       if (currentStep < steps.length - 1) {
         currentStep++;
         updateSlider();
@@ -79,6 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // ⭐ BACK BUTTONS
   document.querySelectorAll(".back-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       if (currentStep > 0) {
@@ -88,84 +128,112 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  function updateSlider() {
-    slider.style.transform = `translateX(-${currentStep * 100}%)`;
-    updateProgress(); // 👉 update bar + label on slide change
-  }
+  // ⭐ SUBMIT HANDLER
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Validate last step
+    if (!validateCurrentStep(currentStep)) {
+      console.log("Final step invalid");
+      return;
+    }
+
+    // Move to success slide
+    currentStep = steps.length - 1;
+    updateSlider();
+
+    // Send to Formspree using your existing function
+    validateProjectForm(e);
+  });
 });
 
-// Form validation
-// const projectForm = document.getElementById("project-form"); //select the modal
+//Form validation
+const projectForm = document.getElementById("starterForm"); //select the form
 
 function validateProjectInput(inputElement) {
-  if (!inputElement || !inputElement.id) {
+  if (!inputElement || (!inputElement.id && inputElement.type !== "radio")) {
     return true;
   }
 
+  // ⭐ RADIO GROUP VALIDATION
+  if (inputElement.type === "radio" && inputElement.name === "project-radio") {
+    const groupName = inputElement.name; // "project-radio"
+    const group = document.querySelectorAll(`input[name="${groupName}"]`);
+    const feedback = document.getElementById("feedback_" + groupName);
+
+    // ⭐ Only validate ONCE (on the first radio)
+    if (inputElement !== group[0]) {
+      return true;
+    }
+
+    const isChecked = [...group].some((r) => r.checked);
+
+    if (!isChecked) {
+      if (feedback) {
+        feedback.textContent = "Please select an option.";
+        feedback.className = "invalid";
+      }
+      return false;
+    }
+
+    if (feedback) {
+      feedback.textContent = "✓ Valid";
+      feedback.className = "valid";
+    }
+
+    return true;
+  }
   const feedback = document.getElementById("feedback_" + inputElement.id);
   let pattern, message;
 
-  // TIMELINE + BUDGET FIELDS
-  if (
-    inputElement.id === "starter-timeline" ||
-    inputElement.id === "starter-budget" ||
-    inputElement.id === "business-timeline" ||
-    inputElement.id === "business-budget" ||
-    inputElement.id === "redesign-timeline" ||
-    inputElement.id === "redesign-budget"
-  ) {
-    const isValid = inputElement.value.trim() !== "";
-    if (feedback) {
-      feedback.innerText = isValid ? "✓ Valid" : "✗ Please select a timeline.";
-      feedback.className = isValid ? "valid" : "invalid";
-    }
-    return isValid;
-  }
-
-  // NAME FIELDS
-  if (inputElement.id === "project_fname") {
+  if (inputElement.id === "other-type") {
     pattern = /^.{2,}$/;
     message = "At least two characters required.";
   }
 
-  if (input.value.trim() === "" && input.hasAttribute("optional")) {
-    // skip validation
+  if (inputElement.id === "project-desc") {
+    pattern = /^.{2,}$/;
+    message = "At least two characters required.";
+  }
+
+  // Optional fields: skip if empty
+  if (
+    inputElement.value.trim() === "" &&
+    inputElement.hasAttribute("optional")
+  ) {
     return true;
   }
 
+  // NAME
+  if (inputElement.id === "project-fname") {
+    pattern = /^.{2,}$/;
+    message = "At least two characters required.";
+  }
+
   // EMAIL
-  if (inputElement.id === "form_email") {
+  if (inputElement.id === "form-email") {
     pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     message = "Enter a valid email address.";
   }
 
   // PHONE
-
-  if (inputElement.id === "form_phone") {
+  if (inputElement.id === "form-phone") {
     pattern = /^(07\d{9}|(\+44\s?\d{10}))$/;
     message = "Enter a valid UK phone number (07… or +44…).";
-
-    // Only validate if user entered something
-    if (input.value.trim() !== "") {
-      if (!pattern.test(input.value.trim())) {
-        showError(input, message);
-        return false;
-      }
-    }
   }
 
   // URL
-  if (inputElement.id === "form_url") {
+  if (inputElement.id === "form-url") {
     pattern = /^(https?:\/\/)?([\w\-]+\.)+[\w\-]{2,}(\/.*)?$/;
     message = "Enter a valid website URL.";
   }
 
-  const value = inputElement.value.trim();
-
+  // If no pattern defined for this field → skip
   if (!pattern) {
-    return true; // skip fields without patterns
+    return true;
   }
 
+  const value = inputElement.value.trim();
   const isValid = pattern.test(value);
 
   if (feedback) {
@@ -181,85 +249,23 @@ function validateProjectForm(e) {
 
   console.log("SUBMIT FIRED");
 
-  // define these INSIDE the function
-  const additionalPageChecked =
-    document.querySelector(
-      'input[name="starter-features[]"][value="additional-page"]:checked',
-    ) !== null;
-
-  const numberGroup = document.querySelector(".number-group");
-  const numberInput = document.getElementById("starter-quantity");
-
-  let isNumberValid = true;
-
-  if (additionalPageChecked) {
-    numberGroup.classList.remove("hidden");
-
-    if (numberInput.value.trim() === "") {
-      isNumberValid = false;
-      numberInput.classList.add("invalid");
-    } else {
-      numberInput.classList.remove("invalid");
-    }
-  } else {
-    numberGroup.classList.add("hidden");
-  }
-
-  const fnameInput = document.getElementById("project_fname");
-  const businessNameInput = document.getElementById("business_text");
-  const emailInput = document.getElementById("form_email");
-  const phoneInput = document.getElementById("form_phone");
-  const urlInput = document.getElementById("form_url");
+  const fnameInput = document.getElementById("project-fname");
+  const emailInput = document.getElementById("form-email");
+  const phoneInput = document.getElementById("form-phone");
+  const urlInput = document.getElementById("form-url");
 
   const isFNameValid = validateProjectInput(fnameInput);
-  const isBNameValid = validateProjectInput(businessNameInput);
   const isEmailValid = validateProjectInput(emailInput);
   const isPhoneValid = validateProjectInput(phoneInput);
   const isurlValid = validateProjectInput(urlInput);
 
-  const timelineInput = document.getElementById("starter-timeline");
-  const timelineInputB = document.getElementById("business-timeline");
-  const timelineInputR = document.getElementById("redesign-timeline");
-  const timelineInputRB = document.getElementById("redesign-budget");
-  const timelineInputBud = document.getElementById("starter-budget");
-  const timelineInputBis = document.getElementById("business-budget");
-
-  const isTimelineValid = validateProjectInput(timelineInput);
-  const isTimelineBValid = validateProjectInput(timelineInputB);
-  const isTimelineRValid = validateProjectInput(timelineInputR);
-  const isTimelineBudValid = validateProjectInput(timelineInputBud);
-  const isTimelineBisValid = validateProjectInput(timelineInputBis);
-  const isTimelineRBValid = validateProjectInput(timelineInputRB);
-
-  //If additional pages option are selected ask the user to provide how many (number) validate
-  // Show/hide number input
-
-  //Create html number input to ask for number of pages that user want
-  // Validate starter features
-
   const formIsValid =
-    isFNameValid &&
-    isBNameValid &&
-    isEmailValid &&
-    isPhoneValid &&
-    isurlValid &&
-    isNumberValid &&
-    isTimelineValid &&
-    isTimelineBValid &&
-    isTimelineRValid &&
-    isTimelineBudValid &&
-    isTimelineBisValid &&
-    isTimelineRBValid;
+    isFNameValid && isEmailValid && isPhoneValid && isurlValid;
 
   if (!formIsValid) {
     alert("Please correct the errors before submitting.");
     return;
   }
-
-  // IMPORTANT: Only skip validation AFTER checking patterns
-  // if (!pattern) {
-  //   return true; // skip fields without patterns
-  // }
 
   const formData = new FormData(e.target);
 
@@ -285,19 +291,19 @@ function validateProjectForm(e) {
     });
 }
 
-document.querySelectorAll('input[name="starter-features[]"]').forEach((cb) => {
-  cb.addEventListener("change", () => {
-    const additionalPageChecked =
-      document.querySelector(
-        'input[name="starter-features[]"][value="additional-page"]:checked',
-      ) !== null;
+// document.querySelectorAll('input[name="starter-features[]"]').forEach((cb) => {
+//   cb.addEventListener("change", () => {
+//     const additionalPageChecked =
+//       document.querySelector(
+//         'input[name="starter-features[]"][value="additional-page"]:checked',
+//       ) !== null;
 
-    const numberGroup = document.querySelector(".number-group");
+//     const numberGroup = document.querySelector(".number-group");
 
-    if (additionalPageChecked) {
-      numberGroup.classList.remove("hidden");
-    } else {
-      numberGroup.classList.add("hidden");
-    }
-  });
-});
+//     if (additionalPageChecked) {
+//       numberGroup.classList.remove("hidden");
+//     } else {
+//       numberGroup.classList.add("hidden");
+//     }
+//   });
+// });

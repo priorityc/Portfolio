@@ -553,15 +553,23 @@
     <!-- ========================= -->
 <!--   MULTI‑STEP FORM WRAPPER -->
 <!-- ========================= -->
- <form id="starterForm">
-  <div class="step-label">Step 1 of 4</div>
-  <div class="progress-bar">
-  <div class="progress-fill"></div>
-</div>
-<div class="form-wrapper">
+ <!-- This forces the browser to:
 
-  <!-- Slider track (moves left/right) -->
-  <div class="form-slider">
+ignore other forms’ submit handlers
+
+ignore default submission
+
+allow JS submit handler to run normally -->
+<form id="starterForm" onsubmit="validateProjectForm(event)">
+
+  <div class="step-label">Step 1 of 5</div>
+
+  <div class="progress-bar">
+    <div class="progress-fill"></div>
+  </div>
+
+  <div class="form-wrapper">
+    <div class="form-slider">
 
     <!-- ========================= -->
     <!--   STEP 1 — BASIC INFO     -->
@@ -572,19 +580,24 @@
       <p class="paragrh">Please fill out this short form so I can understand your 
         project and prepare an accurate proposal.</p>
       </div>
-      <label for="full_name">Full Name</label>
-      <input type="text" id="full_name" name="full_name">
+      <label for="project-fname">Full Name</label>
+      <input type="text" id="project-fname" name="project-fname" placeholder="Forename + Surname" onchange="validateProjectInput(this)">
+      <small id="feedback_project-fname" aria-live="polite"></small>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email">
+      <label for="form-email">Email</label>
+      <input type="email" id="form-email" name="form-email" placeholder="john@mail.com" onchange="validateProjectInput(this)">
+      <small id="feedback_form-email" aria-live="polite"></small>
 
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone">
+      <label for="form-phone">Phone(Optional)</label>
+      <input type="tel" id="form-phone" name="form-phone" placeholder="(07… or +44…)" onchange="validateProjectInput(this)">
+      <small id="feedback_form-phone" aria-live="polite"></small>
 
-      <label for="website">Current Website (optional)</label>
-      <input type="url" id="website" name="website">
+      <label for="form-url">Current Website (optional)</label>
+      <input type="url" id="form-url" name="form-url" placeholder="https://example.com" onchange="validateProjectInput(this)">
+      <small id="feedback_form-url" aria-live="polite"></small>
+
       <div class="nav-buttons">
-      <button type="button" id="hidden-btn" class="next-btn">Next</button>
+        <button type="button" class="next-btn">Next</button>
       </div>
     </section>
       <!-- ========================= -->
@@ -595,20 +608,23 @@
 
       <p>What type of website do you need?</p>
 
-      <label><input type="radio" name="project_type" value="new"> New Website</label>
-      <label><input type="radio" name="project_type" value="store"> Online Store</label>
-      <label><input type="radio" name="project_type" value="booking"> Booking System</label>
-      <label><input type="radio" name="project_type" value="redesign"> Redesign Website</label>
+      <label><input type="radio" name="project-radio" value="new"> New Website</label>
+      <label><input type="radio" name="project-radio" value="store"> Online Store</label>
+      <label><input type="radio" name="project-radio" value="booking"> Booking System</label>
+      <label><input type="radio" name="project-radio" value="redesign"> Redesign Website</label>
+        <small id="feedback_project-radio" aria-live="polite"></small>
 
-      <label for="other_type">If you want something different list it here:</label>
-      <input type="text" id="other_type" name="other_type">
+      <label for="other-type">If you want something different list it here:</label>
+      <input type="text" id="other-type" name="other_type">
+      <small id="feedback_other-type" aria-live="polite"></small>
 
-      <label for="project_desc">Tell me more about your project</label>
-      <textarea id="project_desc" name="project_desc" placeholder="What is it for? Do you have content ready, branding, domain?"></textarea>
+      <label for="project-desc">Tell me more about your project</label>
+      <textarea id="project-desc" name="project-desc" placeholder="What is it for? Do you have content ready, branding, domain?"></textarea>
+      <small id="feedback_project-desc" aria-live="polite"></small>
 
       <div class="nav-buttons">
-        <button type="button" id="hidden-btn" class="back-btn" data-back="step1">Back</button>
-        <button type="button" class="next-btn" data-next="step3">Next</button>
+        <button type="button" class="back-btn">Back</button>
+<button type="button" class="next-btn">Next</button>
       </div>
     </section>
 
@@ -652,8 +668,8 @@
       <label><input type="checkbox" name="features" value="other"> I want to include something else</label>
 
       <div class="nav-buttons">
-        <button type="button" id="hidden-btn" class="back-btn" data-back="step2">Back</button>
-        <button type="button" id="hidden-btn" class="next-btn" data-next="step4">Next</button>
+        <button type="button" class="back-btn">Back</button>
+<button type="button" class="next-btn">Next</button>
       </div>
     </section>
 
@@ -682,13 +698,27 @@
       <textarea id="notes" name="notes"></textarea>
 
       <div class="nav-buttons">
-        <button type="button" class="back-btn" data-back="step3">Back</button>
-        <button type="submit" class="next-btn">Submit</button>
-      </div>
-    </section>
- </div>
+  <button type="button" class="back-btn">Back</button>
+<button type="submit" class="cta-primary submit-btn">Submit</button>
 </div>
-  </form>
+    </section>
+
+        <!-- ========================= -->
+    <!--   STEP 5 — SUCCESS        -->
+    <!-- ========================= -->
+    <section class="form-step" id="step5">
+      <h2>Thank you your project have been submited! </h2>
+      <p>I’ll get back to you within 24 hours with a personalised proposal.</p>
+    <i class="bi bi-check-lg"></i>
+      <button type="button" class="cta-primary" onclick="window.location.href='/'">
+        Back to Home
+      </button>
+    </section>
+
+  </div> <!-- closes .form-slider -->
+  </div>   <!-- closes .form-wrapper -->
+
+</form>
  
 
     </main>
@@ -751,11 +781,11 @@
 </footer>
 
 
-  <div class="modal-overlay hidden" id="hireModal">
+  <div class="modal-overlay hidden">
   <div class="modal-content">
     <button class="close-modal">&times;</button>
     
-    <form class="hireModal"
+    <form id="hireModal"
           onsubmit="validateModal(event)">
        <!-- <div class="abstract-shape-modal"></div> -->
         <h2>Let’s Work Together</h2>
@@ -797,8 +827,9 @@
     </form>
   </div>
 </div>
+<script src="contact.js"></script>
     <script src="app.js"></script>
-    <script src="contact.js"></script>
+    
   </body>
 </html>
 

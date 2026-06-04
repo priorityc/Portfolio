@@ -1533,14 +1533,14 @@ textarea:focus {
 }
 
 /* LABELS */
-.hireModal label {
+#hireModal label {
   font-weight: 600;
   font-size: 0.95rem;
 }
 
 /* INPUTS + TEXTAREA */
-.hireModal input,
-.hireModal textarea {
+#hireModal input,
+#hireModal textarea {
   width: 100%;
   padding: 0.8rem;
   border-radius: 8px;
@@ -1550,21 +1550,21 @@ textarea:focus {
   font-family: inherit;
 }
 
-.hireModal input:focus,
-.hireModal textarea:focus {
+#hireModal input:focus,
+#hireModal textarea:focus {
   outline: none;
   border-color: #9a00ff;
   box-shadow: 0 0 0 2px rgba(154, 0, 255, 0.2);
 }
 
 /* FEEDBACK */
-.hireModal small {
+#hireModal small {
   color: #d12f2f;
   font-size: 0.8rem;
 }
 
 /* SUBMIT BUTTON */
-.hireModal .btn-primary {
+#hireModal .btn-primary {
   background: #3a00ff;
   color: white;
   padding: 0.9rem;
@@ -1575,7 +1575,7 @@ textarea:focus {
   margin-top: 0.5rem;
 }
 
-.hireModal .btn-primary:hover {
+#hireModal .btn-primary:hover {
   background: #2a00c7;
 }
 
