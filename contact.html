@@ -63,19 +63,18 @@
     <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
      <a href="mailto:petya83dimitrova@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="git-hub-icon"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
  </header> -->
-
-  <section id="project-form" class="client-form-section project-form" >
-  <div class="client-form__inner">
+ <!-- <form id="project-form" class="client-form" onsubmit="validateProjectForm(event)">
+  <div  class="client-form-section project-wrapper" >
+  <div class="form-slider">
 
     <header class="client-form__header">
       <h2>Project Requirements Form</h2>
-      <p>Please fill out this short form so I can understand your project and prepare an accurate proposal.</p>
+      <p>This form takes 2 minutes and helps me understand your project so I can prepare an accurate quote.</p>
+      <small>Step 1 of 3</small>
     </header>
 
-    <form id="project-form" class="client-form" onsubmit="validateProjectForm(event)">
-       <h3>Personal or buissness details</h3>
-      <fieldset>
-      <!-- CONTACT DETAILS -->
+   
+      <fieldset class="form-step" id="step2">
       <div class="form-group">
         <label for="fullname">Full Name</label>
         <input type="text" id="project_fname" name="fullname" placeholder="Forename + Surname" onchange="validateProjectInput(this)">
@@ -83,8 +82,8 @@
       </div>
 
       <div class="form-group">
-        <label for="business">Business / Organisation Name</label>
-        <input type="text" id="business_text" name="business" placeholder="Yor organisation" onchange="validateProjectInput(this)">
+        <label for="business">Business / Organisation Name (Optional)</label>
+        <input type="text" id="business_text" class="optional" name="business" placeholder="Yor organisation" onchange="validateProjectInput(this)">
         <small id="feedback_business_text" aria-live="polite"></small>
       </div>
 
@@ -105,10 +104,10 @@
         <input type="url" id="form_url"name="website"  placeholder="https://example.com" onchange="validateProjectInput(this)">
         <small id="feedback_form_url" aria-live="polite"></small>
       </div>
-    </fieldset>
+    </fieldset> -->
 
       
-
+<!-- 
  <h3>Project Details</h3>
 <div class="cont">
   <div class="accordion-cont">
@@ -120,26 +119,22 @@
 
     <div id="starter" class="panel">
 
-      <!-- Starter Description -->
       <div class="form-group__label">
         <label for="starterdescription">Briefly describe your business or project</label>
         <textarea id="starterdescription" name="starterdescription" rows="4" placeholder="Describe your project in few words." onchange="validateProjectInput(this)"></textarea>
       </div>
 
-      <!-- Starter Goals -->
       <div class="form-group__label">
         <label for="startergoals">What are your website main goals?</label>
         <textarea id="startergoals" name="startergoals" rows="3" placeholder="e.g., more enquiries, modern design, better UX" onchange="validateProjectInput(this)"></textarea>
       </div>
 
-      <!-- Starter Branding -->
       <div class="form-group__label">
         <label for="starter-branding">Do you already have branding, content, domain and hosting?</label>
         <textarea id="starter-branding" name="starter-branding" rows="3" placeholder="e.g., I have branding but not domain or hosting" onchange="validateProjectInput(this)"></textarea>
         <small id="feedback_starter-branding" aria-live="polite"></small>
       </div>
 
-      <!-- Starter Features -->
       <div class="form-group__label">
         <label for="starter-features"><strong>What elements would you like included on your website?</strong></label>
         <p>Please bare in mind that Home, About and Service section are already included in the base price.</p>
@@ -194,7 +189,6 @@
   <label for="starter-quantity">Quantity of the additional pages (between 1 and 7):</label>
   <input type="number" id="starter-quantity" name="quantity" min="1" max="5">
 </div>
-      <!-- Starter Timeline -->
       <div class="form-group__label">
         <label for="starter-timeline"><strong>Ideal timeline</strong></label>
         <select id="starter-timeline" name="starter-timeline" onchange="validateProjectInput(this)">
@@ -207,7 +201,6 @@
         <small id="feedback_starter-timeline" aria-live="polite"></small>
       </div>
 
-      <!-- Starter Budget -->
       <div class="form-group__label">
         <label for="starter-budget">Estimated budget</label>
         <select id="starter-budget" name="starter-budget" onchange="validateProjectInput(this)">
@@ -219,7 +212,6 @@
         <small id="feedback_starter-budget" aria-live="polite"></small>
       </div>
 
-      <!-- Starter Notes -->
       <div class="form-group__label">
         <label for="other-notes">Anything else you'd like me to know?</label>
         <textarea id="other-notes" name="other-notes" rows="4"></textarea>
@@ -238,25 +230,21 @@
 
   <div id="business" class="panel">
 
-    <!-- Business Description -->
     <div class="form-group__label">
       <label for="business-description">Briefly describe your business or project</label>
       <textarea id="business-description" name="business-description" rows="4"></textarea>
     </div>
 
-    <!-- Business Goals -->
     <div class="form-group__label">
       <label for="business-goals">What are your website main goals?</label>
       <textarea id="business-goals" name="business-goals" rows="3" placeholder="e.g., more enquiries, modern design, better UX"></textarea>
     </div>
 
-    <!-- Business Branding -->
     <div class="form-group__label">
       <label for="business-branding">Do you already have branding, content, domain and hosting?</label>
       <textarea id="business-branding" name="business-branding" rows="3"></textarea>
     </div>
 
-    <!-- Business Features -->
     <div class="form-group__label">
       <label for="business-features"><strong>Which features do you need?</strong></label>
       <p>Home, About, Services and Contact pages are already included. Additional features will adjust the final proposal.</p>
@@ -336,7 +324,6 @@
   <input type="number" id="starter-quantity" name="quantity" min="1" max="7">
 </div>
 
-    <!-- Business Timeline -->
     <div class="form-group__label">
       <label for="business-timeline">Ideal timeline</label>
       <p>Business Website Timeline: 2–4 weeks depending on content, features, and feedback speed.</p>
@@ -351,7 +338,6 @@
       <small id="feedback_business-timeline" aria-live="polite"></small>
     </div>
 
-    <!-- Business Budget -->
     <div class="form-group__label">
       <label for="business-budget">Estimated budget</label>
       <select id="business-budget" name="business-budget" onchange="validateProjectInput(this)">
@@ -362,7 +348,6 @@
       <small id="feedback_business-budget" aria-live="polite"></small>
     </div>
 
-    <!-- Business Notes -->
     <div class="form-group__label">
       <label for="business-notes">Anything else you'd like me to know?</label>
       <textarea id="business-notes" name="business-notes" rows="4"></textarea>
@@ -379,19 +364,16 @@
 
   <div id="redesign" class="panel">
 
-    <!-- Redesign Description -->
     <div class="form-group__label">
       <label for="redesign-description">Briefly describe your business or project</label>
       <textarea id="redesign-description" name="redesign-description" rows="4"></textarea>
     </div>
 
-    <!-- Redesign Issues -->
     <div class="form-group__label">
       <label for="redesign-issues">What is not working well on your website?</label>
       <textarea id="redesign-issues" name="redesign-issues" rows="3" placeholder="e.g., low traffic, outdated design, slow speed, poor UX"></textarea>
     </div>
 
-    <!-- Redesign Features -->
     <div class="form-group__label">
       <p>Redesign of 3–5 core pages (Home, About, Services, Contact)</p>
 
@@ -399,7 +381,6 @@
 
       <div class="chips-group" id="redesign-features">
 
-        <!-- Functional Features -->
         <label class="chip">
           <input type="checkbox" name="redesign-features[]" value="booking">
           Booking system
@@ -430,7 +411,6 @@
           Membership area
         </label>
 
-        <!-- UX / UI Improvements -->
         <label class="chip">
           <input type="checkbox" name="redesign-features[]" value="navigation">
           Navigation
@@ -460,7 +440,6 @@
 
     </div>
 
-    <!-- Redesign Upgrades -->
     <div class="form-group__label">
       <label for="redesign-upgrades">
         <strong>Would you like to include any additional upgrades in your redesign?</strong>
@@ -513,25 +492,21 @@
 
     </div>
 
-    <!-- Branding Refresh -->
     <div class="form-group__label">
       <label for="redesign-branding">Do you want to keep your current branding or refresh it?</label>
       <textarea id="redesign-branding" name="redesign-branding" rows="3"></textarea>
     </div>
 
-    <!-- Platform + Backend Access -->
     <div class="form-group__label">
       <label for="redesign-platform">What platform is your current website built on? Do you have backend access?</label>
       <textarea id="redesign-platform" name="redesign-platform" rows="3"></textarea>
     </div>
 
-    <!-- Content Reuse -->
     <div class="form-group__label">
       <label for="redesign-content">Will you reuse your existing content or rewrite it?</label>
       <textarea id="redesign-content" name="redesign-content" rows="3"></textarea>
     </div>
 
-    <!-- Timeline -->
     <div class="form-group__label">
       <label for="redesign-timeline">Ideal timeline</label>
       <p>Redesign Timeline: 2–4 weeks depending on pages, features, and feedback speed.</p>
@@ -545,7 +520,6 @@
       <small id="feedback_redesign-timeline" aria-live="polite"></small>
     </div>
 
-    <!-- Budget -->
     <div class="form-group__label">
       <label for="redesign-budget">Estimated budget</label>
       <select id="redesign-budget" name="redesign-budget" onchange="validateProjectInput(this)">
@@ -557,7 +531,6 @@
       <small id="feedback_redesign-budget" aria-live="polite"></small>
     </div>
 
-    <!-- Notes -->
     <div class="form-group__label">
       <label for="redesign-notes">Anything else you'd like me to know?</label>
       <textarea id="redesign-notes" name="redesign-notes" rows="4"></textarea>
@@ -575,8 +548,148 @@
 </div>
 <div class="success-message">
   
-    </div>
-</section>
+    </div> -->
+
+    <!-- ========================= -->
+<!--   MULTI‑STEP FORM WRAPPER -->
+<!-- ========================= -->
+ <form id="starterForm">
+  <div class="step-label">Step 1 of 4</div>
+  <div class="progress-bar">
+  <div class="progress-fill"></div>
+</div>
+<div class="form-wrapper">
+
+  <!-- Slider track (moves left/right) -->
+  <div class="form-slider">
+
+    <!-- ========================= -->
+    <!--   STEP 1 — BASIC INFO     -->
+    <!-- ========================= -->
+    <section class="form-step" id="step1">
+      <div>
+      <h2>Requirements Form</h2>
+      <p class="paragrh">Please fill out this short form so I can understand your 
+        project and prepare an accurate proposal.</p>
+      </div>
+      <label for="full_name">Full Name</label>
+      <input type="text" id="full_name" name="full_name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="website">Current Website (optional)</label>
+      <input type="url" id="website" name="website">
+      <div class="nav-buttons">
+      <button type="button" id="hidden-btn" class="next-btn">Next</button>
+      </div>
+    </section>
+      <!-- ========================= -->
+    <!--   STEP 2 — PROJECT TYPE   -->
+    <!-- ========================= -->
+    <section class="form-step" id="step2">
+      <h2>Project Details</h2>
+
+      <p>What type of website do you need?</p>
+
+      <label><input type="radio" name="project_type" value="new"> New Website</label>
+      <label><input type="radio" name="project_type" value="store"> Online Store</label>
+      <label><input type="radio" name="project_type" value="booking"> Booking System</label>
+      <label><input type="radio" name="project_type" value="redesign"> Redesign Website</label>
+
+      <label for="other_type">If you want something different list it here:</label>
+      <input type="text" id="other_type" name="other_type">
+
+      <label for="project_desc">Tell me more about your project</label>
+      <textarea id="project_desc" name="project_desc" placeholder="What is it for? Do you have content ready, branding, domain?"></textarea>
+
+      <div class="nav-buttons">
+        <button type="button" id="hidden-btn" class="back-btn" data-back="step1">Back</button>
+        <button type="button" class="next-btn" data-next="step3">Next</button>
+      </div>
+    </section>
+
+    <!-- ========================= -->
+    <!--   STEP 3 — FEATURES       -->
+    <!-- ========================= -->
+    <section class="form-step" id="step3">
+      <h2>Project Details</h2>
+
+      <p>How many pages do you require in total?</p>
+      <select id="total_pages" name="total_pages">
+        <option value="">Select…</option>
+        <option value="1">1 Page</option>
+        <option value="2">2 Pages</option>
+        <option value="3">3 Pages</option>
+        <option value="4">4 Pages</option>
+        <option value="5">5 Pages</option>
+      </select>
+
+      <p>How many additional beyond 3 do you require?</p>
+      <select id="extra_pages" name="extra_pages">
+        <option value="">Select…</option>
+        <option value="0">0 Extra</option>
+        <option value="1">1 Extra</option>
+        <option value="2">2 Extra</option>
+        <option value="3">3 Extra</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="less_than_3" name="less_than_3">
+        I need less than 3 pages
+      </label>
+
+      <p>Do you want to include additional features?</p>
+
+      <label><input type="checkbox" name="features" value="contact"> Contact Form</label>
+      <label><input type="checkbox" name="features" value="gallery"> Image Gallery</label>
+      <label><input type="checkbox" name="features" value="map"> Google Map</label>
+      <label><input type="checkbox" name="features" value="testimonials"> Testimonials</label>
+      <label><input type="checkbox" name="features" value="faq"> FAQ</label>
+      <label><input type="checkbox" name="features" value="other"> I want to include something else</label>
+
+      <div class="nav-buttons">
+        <button type="button" id="hidden-btn" class="back-btn" data-back="step2">Back</button>
+        <button type="button" id="hidden-btn" class="next-btn" data-next="step4">Next</button>
+      </div>
+    </section>
+
+     <!-- ========================= -->
+    <!--   STEP 4 — TIMELINE       -->
+    <!-- ========================= -->
+    <section class="form-step" id="step4">
+      <h2>Project Details</h2>
+
+      <p>What is your timeline?</p>
+      <label><input type="radio" name="timeline" value="asap"> ASAP</label>
+      <label><input type="radio" name="timeline" value="1-2"> 1–2 Weeks</label>
+      <label><input type="radio" name="timeline" value="2-4"> 2–4 Weeks</label>
+      <label><input type="radio" name="timeline" value="flexible"> Flexible</label>
+
+      <label for="budget">What is your budget?</label>
+      <select id="budget" name="budget">
+        <option value="">Select…</option>
+        <option value="300">Under £300</option>
+        <option value="300-600">£300–£600</option>
+        <option value="600-1000">£600–£1,000</option>
+        <option value="1000+">£1,000+</option>
+      </select>
+
+      <label for="notes">Anything else you want to add?</label>
+      <textarea id="notes" name="notes"></textarea>
+
+      <div class="nav-buttons">
+        <button type="button" class="back-btn" data-back="step3">Back</button>
+        <button type="submit" class="next-btn">Submit</button>
+      </div>
+    </section>
+ </div>
+</div>
+  </form>
+ 
 
     </main>
      <!-- Footer -->

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const formWrapper = document.getElementById("project-form");
+  const formWrapper = document.getElementById("starterForm");
 
   // Slide down the whole form
   setTimeout(() => {
@@ -49,6 +49,51 @@ const selectedFeatures = [
 
 console.log(selectedFeatures);
 
+// ===============================
+// SLIDING MULTI-STEP FORM LOGIC
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector(".form-slider");
+  const steps = document.querySelectorAll(".form-step");
+  let currentStep = 0;
+
+  const progressFill = document.querySelector(".progress-fill");
+  const stepLabel = document.querySelector(".step-label");
+
+  function updateProgress() {
+    const totalSteps = steps.length;
+    const percent = ((currentStep + 1) / totalSteps) * 100;
+    progressFill.style.width = `${percent}%`;
+    stepLabel.textContent = `Step ${currentStep + 1} of ${totalSteps}`;
+  }
+
+  // 👉 Initialize progress bar + label
+  updateProgress();
+
+  document.querySelectorAll(".next-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (currentStep < steps.length - 1) {
+        currentStep++;
+        updateSlider();
+      }
+    });
+  });
+
+  document.querySelectorAll(".back-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (currentStep > 0) {
+        currentStep--;
+        updateSlider();
+      }
+    });
+  });
+
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentStep * 100}%)`;
+    updateProgress(); // 👉 update bar + label on slide change
+  }
+});
+
 // Form validation
 // const projectForm = document.getElementById("project-form"); //select the modal
 
@@ -78,12 +123,14 @@ function validateProjectInput(inputElement) {
   }
 
   // NAME FIELDS
-  if (
-    inputElement.id === "project_fname" ||
-    inputElement.id === "business_text"
-  ) {
+  if (inputElement.id === "project_fname") {
     pattern = /^.{2,}$/;
     message = "At least two characters required.";
+  }
+
+  if (input.value.trim() === "" && input.hasAttribute("optional")) {
+    // skip validation
+    return true;
   }
 
   // EMAIL
@@ -93,9 +140,18 @@ function validateProjectInput(inputElement) {
   }
 
   // PHONE
+
   if (inputElement.id === "form_phone") {
     pattern = /^(07\d{9}|(\+44\s?\d{10}))$/;
     message = "Enter a valid UK phone number (07… or +44…).";
+
+    // Only validate if user entered something
+    if (input.value.trim() !== "") {
+      if (!pattern.test(input.value.trim())) {
+        showError(input, message);
+        return false;
+      }
+    }
   }
 
   // URL
