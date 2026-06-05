@@ -132,11 +132,20 @@ body {
 /* ------------------------------
    INPUTS
 --------------------------------*/
+.radio-btn-con {
+  display: flex;
+  flex-direction: row;
+}
 label {
   display: inline-block;
-  margin-bottom: 6px;
   font-size: 0.95rem;
   font-weight: 500;
+  margin-bottom: 1rem;
+}
+.radio-btn-con label {
+  border: 1px solid powderblue;
+  border-radius: 6px;
+  padding: 1em;
 }
 
 #starterForm input,
@@ -149,6 +158,7 @@ textarea {
   border-radius: 8px;
   font-size: 1rem;
   background: #fafafa;
+  color: #444;
   box-sizing: border-box;
 }
 
@@ -257,9 +267,11 @@ label input[type="checkbox"] {
   color: #fff;
   cursor: pointer;
   transition: 0.3s ease;
-  padding: 1rem 2.5rem;
   border-radius: 6px;
   cursor: pointer;
+  padding: 1em;
+  width: 100px;
+  height: 70px;
 }
 /* SUCCESS screen */
 #step5 {
@@ -276,13 +288,19 @@ label input[type="checkbox"] {
   margin-bottom: 2rem;
 }
 
+.confirmation-cont-btn {
+  display: flex;
+  flex-direction: column;
+}
+
 #step5 .cta-primary {
+  width: 50%;
   padding: 1rem 1.5rem;
   background: linear-gradient(90deg, #4f46e5, #9333ea);
   color: #fff;
   border: none;
   border-radius: 8px;
-  width: 100%;
+  width: 50%;
   font-size: 1rem;
 }
 
@@ -440,57 +458,52 @@ small.valid {
   .cont {
     margin-bottom: 2rem;
   }
-  fieldset {
-    margin-bottom: 2rem;
-  }
+
   /* form-contact */
   .form-contact {
     margin-bottom: 7rem;
   }
-  .client-form-section {
-    margin-bottom: 3rem;
-  }
 }
 
 @media (min-width: 986px) {
-  .cont {
+  .client-form-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-bottom: 3rem;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 7rem;
+    border-radius: 2rem;
   }
 
   .form-step {
-    min-width: 50%;
+    border: 1px solid powderblue;
+    padding: 10rem 20rem;
+    border-radius: 1rem;
   }
 
+  .submit-btn {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem 0 3rem;
+  }
+
+  .step-label {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .progress-bar {
+    height: 8px;
+    margin-bottom: 2rem;
+  }
+
+  .cont {
+    gap: 2rem;
+  }
   .hidden-btn {
     display: none;
   }
-  fieldset {
-    margin-bottom: 3rem;
-  }
-  .accordion-cont {
-    width: 100%;
-  }
-  .accordion {
-    display: flex;
 
-    gap: 10px;
-    position: sticky;
-    top: 20px;
-  }
-
-  .accordion-buttons .accordion.active {
-    background: #eaeaea;
-  }
-
-  .client-form-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 7rem;
-    border-radius: 2rem;
-  }
   .submit-btn {
     display: flex;
     margin: 1rem 0 3rem 0;

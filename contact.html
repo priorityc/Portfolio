@@ -574,6 +574,7 @@ allow JS submit handler to run normally -->
     <!-- ========================= -->
     <!--   STEP 1 — BASIC INFO     -->
     <!-- ========================= -->
+    
     <section class="form-step" id="step1">
       <div>
       <h2>Requirements Form</h2>
@@ -593,30 +594,31 @@ allow JS submit handler to run normally -->
       <small id="feedback_form-phone" aria-live="polite"></small>
 
       <label for="form-url">Current Website (optional)</label>
-      <input type="url" id="form-url" name="form-url" placeholder="https://example.com" onchange="validateProjectInput(this)">
-      <small id="feedback_form-url" aria-live="polite"></small>
+      <input type="url" id="form-url" name="form-url" placeholder="https://example.com" optional>
 
       <div class="nav-buttons">
         <button type="button" class="next-btn">Next</button>
       </div>
+      
     </section>
+    
       <!-- ========================= -->
     <!--   STEP 2 — PROJECT TYPE   -->
     <!-- ========================= -->
     <section class="form-step" id="step2">
       <h2>Project Details</h2>
 
-      <p>What type of website do you need?</p>
-
+      <p>* What type of website do you need? </p>
+      <div class="radio-btn-cont">
       <label><input type="radio" name="project-radio" value="new"> New Website</label>
       <label><input type="radio" name="project-radio" value="store"> Online Store</label>
       <label><input type="radio" name="project-radio" value="booking"> Booking System</label>
       <label><input type="radio" name="project-radio" value="redesign"> Redesign Website</label>
+      </div>
         <small id="feedback_project-radio" aria-live="polite"></small>
 
-      <label for="other-type">If you want something different list it here:</label>
-      <input type="text" id="other-type" name="other_type">
-      <small id="feedback_other-type" aria-live="polite"></small>
+      <label for="other-type">If you want something different list it here (Optional):</label>
+      <input type="text" id="other-type" name="other_type" optional>
 
       <label for="project-desc">Tell me more about your project</label>
       <textarea id="project-desc" name="project-desc" placeholder="What is it for? Do you have content ready, branding, domain?"></textarea>
@@ -635,7 +637,7 @@ allow JS submit handler to run normally -->
       <h2>Project Details</h2>
 
       <p>How many pages do you require in total?</p>
-      <select id="total_pages" name="total_pages">
+      <select id="total-pages" name="total-pages" onchange="validateProjectInput(this)">
         <option value="">Select…</option>
         <option value="1">1 Page</option>
         <option value="2">2 Pages</option>
@@ -643,9 +645,10 @@ allow JS submit handler to run normally -->
         <option value="4">4 Pages</option>
         <option value="5">5 Pages</option>
       </select>
+       <small id="feedback_total-pages" aria-live="polite"></small>
 
-      <p>How many additional beyond 3 do you require?</p>
-      <select id="extra_pages" name="extra_pages">
+      <p>How many additional beyond 3 do you require?(Optional)</p>
+      <select id="extra-pages" name="extra-pages" optional>
         <option value="">Select…</option>
         <option value="0">0 Extra</option>
         <option value="1">1 Extra</option>
@@ -653,19 +656,19 @@ allow JS submit handler to run normally -->
         <option value="3">3 Extra</option>
       </select>
 
-      <label>
-        <input type="checkbox" id="less_than_3" name="less_than_3">
-        I need less than 3 pages
-      </label>
+      
 
-      <p>Do you want to include additional features?</p>
+      <p>Do you want to include additional features?(Optional).</p>
 
       <label><input type="checkbox" name="features" value="contact"> Contact Form</label>
       <label><input type="checkbox" name="features" value="gallery"> Image Gallery</label>
       <label><input type="checkbox" name="features" value="map"> Google Map</label>
       <label><input type="checkbox" name="features" value="testimonials"> Testimonials</label>
       <label><input type="checkbox" name="features" value="faq"> FAQ</label>
-      <label><input type="checkbox" name="features" value="other"> I want to include something else</label>
+      <label><input type="checkbox" name="features" value="other">None</label>
+
+      <label for="diferent-feature">If you want something different from the listed feature specify(Optional)</label>
+      <input type="text" id="diferent-feature" name="diferent-feature" placeholder="Provide your feature..." optional>
 
       <div class="nav-buttons">
         <button type="button" class="back-btn">Back</button>
@@ -684,18 +687,21 @@ allow JS submit handler to run normally -->
       <label><input type="radio" name="timeline" value="1-2"> 1–2 Weeks</label>
       <label><input type="radio" name="timeline" value="2-4"> 2–4 Weeks</label>
       <label><input type="radio" name="timeline" value="flexible"> Flexible</label>
+      <small id="feedback_timeline" aria-live="polite"></small>
+
 
       <label for="budget">What is your budget?</label>
-      <select id="budget" name="budget">
+      <select id="budget" name="budget"  onchange="validateProjectInput(this)">
         <option value="">Select…</option>
         <option value="300">Under £300</option>
         <option value="300-600">£300–£600</option>
         <option value="600-1000">£600–£1,000</option>
         <option value="1000+">£1,000+</option>
       </select>
+    <small id="feedback_budget" aria-live="polite"></small>
 
       <label for="notes">Anything else you want to add?</label>
-      <textarea id="notes" name="notes"></textarea>
+      <textarea id="notes" name="notes" optional></textarea>
 
       <div class="nav-buttons">
   <button type="button" class="back-btn">Back</button>
@@ -709,10 +715,12 @@ allow JS submit handler to run normally -->
     <section class="form-step" id="step5">
       <h2>Thank you your project have been submited! </h2>
       <p>I’ll get back to you within 24 hours with a personalised proposal.</p>
-    <i class="bi bi-check-lg"></i>
-      <button type="button" class="cta-primary" onclick="window.location.href='/'">
+      <div class="confirmation-cont-btn">
+      <i class="bi bi-check-lg"></i>
+      <button type="button" class="cta-primary" onclick="window.location.href='/home'">
         Back to Home
       </button>
+      </div>
     </section>
 
   </div> <!-- closes .form-slider -->

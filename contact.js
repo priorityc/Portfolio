@@ -90,14 +90,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ⭐ VALIDATE ONLY THE CURRENT STEP
   function validateCurrentStep(stepIndex) {
-    const step = steps[stepIndex];
-    const inputs = step.querySelectorAll("input, select, textarea");
-    let valid = true;
+    const step = steps[stepIndex]; //all the steps with their index as array
+    const inputs = step.querySelectorAll("input, select, textarea"); //all elements
+    let valid = true; //valid state
 
     inputs.forEach((input) => {
-      const result = validateProjectInput(input);
+      //for all elements
+      const result = validateProjectInput(input); //validate the current input of the below function
       console.log(result);
-      if (!result) valid = false;
+      if (!result) valid = false; //if result is false-> valid
     });
 
     return valid;
@@ -150,41 +151,69 @@ document.addEventListener("DOMContentLoaded", () => {
 //Form validation
 const projectForm = document.getElementById("starterForm"); //select the form
 
+function updateFeedback(feedback, isValid, message) {
+  if (!feedback) return;
+
+  feedback.innerText = isValid ? "✓ Valid" : "✗ " + message;
+  feedback.className = isValid ? "valid" : "invalid";
+}
+
 function validateProjectInput(inputElement) {
+  const feedback = document.getElementById("feedback_" + inputElement.id);
+  let pattern, message;
+
   if (!inputElement || (!inputElement.id && inputElement.type !== "radio")) {
     return true;
   }
 
   // ⭐ RADIO GROUP VALIDATION
   if (inputElement.type === "radio" && inputElement.name === "project-radio") {
-    const groupName = inputElement.name; // "project-radio"
+    const groupName = inputElement.name;
     const group = document.querySelectorAll(`input[name="${groupName}"]`);
     const feedback = document.getElementById("feedback_" + groupName);
 
-    // ⭐ Only validate ONCE (on the first radio)
-    if (inputElement !== group[0]) {
-      return true;
-    }
+    if (inputElement !== group[0]) return true;
 
-    const isChecked = [...group].some((r) => r.checked);
+    const isValid = [...group].some((r) => r.checked);
+    message = "Please select an option.";
 
-    if (!isChecked) {
-      if (feedback) {
-        feedback.textContent = "Please select an option.";
-        feedback.className = "invalid";
-      }
-      return false;
-    }
-
-    if (feedback) {
-      feedback.textContent = "✓ Valid";
-      feedback.className = "valid";
-    }
-
-    return true;
+    updateFeedback(feedback, isValid, message);
+    return isValid;
   }
-  const feedback = document.getElementById("feedback_" + inputElement.id);
-  let pattern, message;
+  // ⭐ SELECT VALIDATION
+  if (inputElement.id === "total-pages") {
+    const isValid = inputElement.value !== "";
+    const message = "Please select a page number.";
+
+    updateFeedback(feedback, isValid, message);
+    return isValid;
+  }
+
+  // ⭐ RADIO GROUP VALIDATION
+  if (inputElement.type === "radio" && inputElement.name === "timeline") {
+    const groupNameR = inputElement.name;
+    const group = document.querySelectorAll(`input[name="${groupNameR}"]`);
+    const feedback = document.getElementById("feedback_" + groupNameR);
+
+    if (inputElement !== group[0]) return true;
+
+    const isValid = [...group].some((r) => r.checked);
+    message = "Please select an option.";
+
+    updateFeedback(feedback, isValid, message);
+    return isValid;
+  }
+
+  // ⭐ SELECT VALIDATION
+  if (inputElement.id === "budget") {
+    const isValid = inputElement.value !== "";
+    const message = "Please select a page number.";
+
+    updateFeedback(feedback, isValid, message);
+    return isValid;
+  }
+  // CHECKBOXES
+  //1/Find all checkboxes that belong to this group.starter-features[]
 
   if (inputElement.id === "other-type") {
     pattern = /^.{2,}$/;
@@ -236,11 +265,7 @@ function validateProjectInput(inputElement) {
   const value = inputElement.value.trim();
   const isValid = pattern.test(value);
 
-  if (feedback) {
-    feedback.innerText = isValid ? "✓ Valid" : "✗ " + message;
-    feedback.className = isValid ? "valid" : "invalid";
-  }
-
+  updateFeedback(feedback, isValid, message);
   return isValid;
 }
 
@@ -276,10 +301,6 @@ function validateProjectForm(e) {
   })
     .then((response) => {
       if (response.ok) {
-        const successMessage = document.querySelector(".success-message");
-        successMessage.innerText =
-          "Thank you! Your request has been submitted successfully.";
-
         e.target.reset();
       } else {
         alert("Formspree error. Please try again.");
