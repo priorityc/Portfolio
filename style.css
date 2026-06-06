@@ -280,7 +280,7 @@ body {
 }
 
 .hero-image {
-  max-width: 260px;
+  max-width: 300px;
   margin: 0 auto;
   border-radius: 10px;
   filter: drop-shadow(0 8px 25px rgba(168, 85, 247, 0.25));
@@ -367,6 +367,9 @@ body {
 .exp-title {
   font-size: var(--fs-xl);
   margin-bottom: 1rem;
+  background: linear-gradient(90deg, #a855f7, #38bdf8);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .about-title span,
@@ -413,7 +416,6 @@ body {
 }
 
 .experience-card h4 {
-  color: #c084fc;
   margin-bottom: 0.3rem;
   font-size: var(--fs-md);
 }
@@ -603,6 +605,9 @@ body {
 .skills-title {
   font-size: var(--fs-xl);
   margin-bottom: 2rem;
+  background: linear-gradient(90deg, #a855f7, #38bdf8);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .skills-grid {
@@ -630,9 +635,9 @@ body {
 }
 
 .skill-card h4 {
-  color: #c084fc;
+  /* color: #c084fc; */
   margin-bottom: 1rem;
-  font-size: var(--fs-md);
+  font-size: var(--fs-lg);
 }
 
 .skill-icons {
@@ -778,9 +783,9 @@ body {
 
 .project-thumb {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 14 / 8;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 6px 6px 0 0;
 }
 .project-title {
   font-size: var(--fs-lg);
@@ -805,8 +810,9 @@ body {
 
 .project-buttons {
   display: flex;
-  gap: 0.8rem;
-  margin-top: auto;
+  align-items: flex-end;
+  gap: 0.5rem;
+  margin: 1rem 0;
 }
 .btn-primary,
 .btn-secondary,
@@ -1063,7 +1069,7 @@ body {
 } */
 /* Services */
 .toolkit-heading {
-  margin: 8rem 0 2rem 0;
+  margin: 1rem;
 }
 .services-wrapper {
   padding: 3rem 1.5rem;
@@ -1456,8 +1462,8 @@ textarea:focus {
 }
 .footer-links li {
   list-style: none;
-  font-size: 0.7rem;
-  color: #c0c0c5;
+  font-size: var(--fs-xs);
+  color: #454546;
 }
 
 .footer-links li:nth-child(2) a {
@@ -1850,6 +1856,10 @@ textarea:focus {
     align-items: center;
     margin-bottom: 8rem;
   }
+
+  .hero__inner {
+    max-width: 80vw;
+  }
   .hero-name {
     width: 100%;
     font-size: var(--fs-xxl);
@@ -1969,9 +1979,5 @@ textarea:focus {
   /* .footer-content */
   .form-heading {
     text-align: center;
-  }
-
-  .footer-abstract-shape {
-    right: 15%;
   }
 }
