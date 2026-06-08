@@ -10,6 +10,26 @@ body {
   /* background: rgba(236, 200, 236, 0.184); */
   font-size: 1rem;
 }
+:root {
+  /* Mobile-first base sizes */
+  --fs-xs: clamp(0.75rem, 1vw + 0.5rem, 0.9rem);
+  --fs-sm: clamp(0.9rem, 1vw + 0.6rem, 1rem);
+  --fs-md: clamp(1rem, 1vw + 0.8rem, 1.25rem);
+  --fs-lg: clamp(1.4rem, 2vw + 1rem, 2rem);
+  --fs-xl: clamp(1.8rem, 3vw + 1rem, 2.8rem);
+  --fs-xxl: clamp(2.2rem, 4vw + 1rem, 4.5rem);
+}
+
+body {
+  line-height: 1.7;
+  font-size: var(--fs-sm);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #444;
+  font-weight: 400;
+  line-height: 1.8;
+  font-size: 1rem;
+  background-color: rgb(249, 249, 249);
+}
 
 /* Portfolio */
 /* Add padding BETWEEN each column (if you want) */
@@ -63,6 +83,24 @@ body {
   color: white;
 }
 
+.contact-header {
+  background-color: #e3c9fd;
+  color: #666565;
+  padding: 2em;
+  text-align: center;
+}
+.contact-header h1 {
+  font-size: var(--fs-xxl);
+  font-weight: 500;
+}
+
+.projects-title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin: 1rem;
+}
+.cont
 /* Progress bar container */
 .progress-bar {
   width: 100%;
@@ -490,6 +528,13 @@ small.valid {
     max-width: 670px;
   }
 
+  .contact-header {
+    padding: 5em;
+  }
+
+  .projects-title {
+    margin: 2rem;
+  }
   .progress-bar {
     height: 8px;
     margin-bottom: 1.5rem;
@@ -522,6 +567,10 @@ small.valid {
     max-width: 1200px;
     margin: 0 auto 7rem;
     border-radius: 2rem;
+  }
+
+  .projects-title {
+    margin: 5rem;
   }
 
   .form-step {
