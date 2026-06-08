@@ -363,6 +363,9 @@ body {
 }
 
 /*  */
+.skills-title {
+  text-transform: uppercase;
+}
 
 .about {
   display: flex;
@@ -618,6 +621,7 @@ body {
   background: linear-gradient(90deg, #a855f7, #38bdf8);
   -webkit-background-clip: text;
   color: transparent;
+  text-align: center;
 }
 
 .skills-grid {
@@ -629,7 +633,7 @@ body {
 
 /* Skill Card */
 .skill-card {
-  background: rgba(255, 255, 255, 0.03);
+  background: #38bff819;
   border: 1px solid rgba(167, 139, 250, 0.3);
   border-radius: 16px;
   padding: 1.5rem;
@@ -647,7 +651,7 @@ body {
 .skill-card h4 {
   /* color: #c084fc; */
   margin-bottom: 1rem;
-  font-size: var(--fs-lg);
+  font-size: var(--fs-md);
 }
 
 .skill-icons {
@@ -703,20 +707,6 @@ body {
   color: #d1d5db;
   padding: 3rem 1.5rem;
   overflow-x: hidden;
-}
-
-.projects-title {
-  font-size: var(--fs-xl);
-  text-align: center;
-  margin-bottom: 40px;
-  background: linear-gradient(90deg, #a855f7, #38bdf8);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.projects-title span {
-  color: #c084fc;
-  font-size: 1.5rem;
 }
 
 .projects-grid {

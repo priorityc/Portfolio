@@ -1028,7 +1028,6 @@ background: #ffffff;
   }
   .hero {
     /* padding: 2em; */
-    height: 100vh;
     text-align: left;
 
     justify-content: space-between;
@@ -1049,7 +1048,7 @@ background: #ffffff;
     justify-content: left;
   }
   .hero-name {
-    font-size: 5rem;
+    font-size: var(--fs-xxl);
   }
   /* LEFT SIDE (TEXT) */
   .hero-content > div:first-child {
