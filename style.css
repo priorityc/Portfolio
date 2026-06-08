@@ -36,12 +36,17 @@ body {
   font-size: 1rem;
   background-color: rgb(249, 249, 249);
 }
-
 .mobile-header {
   display: block;
 }
 .desktop-header {
   display: none;
+}
+
+.logo-cont {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
 }
 
 .logo {
@@ -261,7 +266,13 @@ body {
 .hero {
   padding: 3rem 1.25rem;
   /* background: radial-gradient(circle at top, #1e1b4b 0, #020617 55%, #000 100%); */
-  background: linear-gradient(135deg, #01131b, #2a024f);
+  /* background: linear-gradient(135deg, #01131b, #2a024f); */
+  background: #778ae6;
+  background: radial-gradient(
+    circle,
+    rgb(27, 32, 61) 0%,
+    rgba(28, 5, 11, 1) 100%
+  );
   color: #f5f5ff;
 }
 
@@ -288,8 +299,9 @@ body {
 
 /* TEXT */
 .hero-name {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-xxl);
   font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 0.3rem;
   background: linear-gradient(90deg, #a855f7, #38bdf8);
   -webkit-background-clip: text;
@@ -304,7 +316,6 @@ body {
 
 .hero-sub {
   font-size: 1rem;
-  max-width: 420px;
   color: #c7c9e8;
 }
 
@@ -319,7 +330,6 @@ body {
 /* CTA BUTTONS */
 .button-hero {
   display: flex;
-  flex-direction: column; /* MOBILE FIRST */
   gap: 0.75rem;
   width: 100%;
 }
@@ -1639,29 +1649,10 @@ textarea:focus {
     display: block;
   }
 
-  .hero__inner {
-    flex-direction: row; /* SIDE BY SIDE */
-    text-align: left;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .hero-left {
-    flex: 1;
-  }
-
-  .hero-right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-
   .button-hero {
     flex-direction: row; /* HORIZONTAL BUTTONS */
-    width: auto;
+    align-items: center;
+    justify-content: center;
   }
 
   .cta-primary,
@@ -1669,9 +1660,6 @@ textarea:focus {
     width: auto;
   }
 
-  .hero-icons {
-    justify-content: flex-start;
-  }
   .project-descr {
     padding: 0.5em;
     margin: 1rem 0.5rem;
@@ -1850,9 +1838,9 @@ textarea:focus {
     display: none;
   }
   .hero {
-    height: 80vh;
-    display: flex;
-    align-items: center;
+    height: 100vh;
+    text-align: left;
+
     margin-bottom: 8rem;
   }
 
