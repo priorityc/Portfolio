@@ -720,7 +720,6 @@ body {
   border: 1px solid #2e2e4e;
   border-radius: 14px;
   overflow: hidden;
-  padding: 0.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
