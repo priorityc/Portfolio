@@ -108,6 +108,23 @@ navLinks.forEach((link) => {
   }
 });
 
+// Reveal more section
+const revealBtns = document.querySelectorAll(".reveal-more");
+
+revealBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.dataset.target;
+    const section = document.getElementById(targetId);
+
+    if (!section) {
+      console.log("Section not found:", targetId);
+      return;
+    }
+
+    section.classList.toggle("hidden");
+  });
+});
+
 // const sections = document.querySelector(".sidenav");
 // const navLinks = document.querySelectorAll(".nav__link");
 

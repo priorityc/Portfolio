@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Portfolio</title>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -177,88 +178,54 @@
 
 
 </section>
-    <!-- Projects -->
-     <section id="projects" class="projects-section fade-in-section">
-  <h2 class="skills-title">My Projects</h2>
+<!-- New Project section -->
+<section>
+    <h2 class="skills-title">My Projects</h2>
 
-  <div class="projects-grid">
+   <div class="project-container">
+      <div class="item project-card" style="grid-area: box-1">
+        <img src="./media/projectCC.png" alt="Cosmic Care preview" class="project-thumb">
+        <div class="project-descr">
+          <h3 class="project-title">Cosmic Care</h3>
+                  <p class="project-tech"><i class="bi icon bi-arrow-right-square-fill"></i>React.js Express.js Supabase</p>
 
-    <div class="project-card">
-      <div>
-      <img src="./media/projectCC.png" alt="Cosmic Care preview" class="project-thumb">
-    </div>
-    <div class="project-descr">
-      <h3 class="project-title">Cosmic Care</h3>
-      <p class="project-tech"><i class="bi icon bi-arrow-right-square-fill"></i>React.js Express.js Supabase</p>
-
-      <p class="project-desc">Wellness e‑commerce experience focused on calm, intuitive shopping and clear product discovery.</p>
-      <ul class="calc-strenghts">
-        <li>Facilitate shopping experience.</li>
-        <li>Fully functional website.</li>
-        <li>Increase shopping brand visibility.</li>
-      </ul>
-
+          <p class="project-desc">Wellness e‑commerce experience focused on calm, intuitive shopping and clear product discovery.</p>
 
       <div class="project-buttons">
         <a href="https://cosmiccare.netlify.app/?demo=true" class="btn-primary">Demo</a>
         <a href="https://github.com/priorityc/cosmic-care-site" class="btn-secondary">GitHub</a>
-        <a href="./portfolio.html#cosmic-care" class="btn-text">Case Study</a>
-      </div>
+      <a href="./portfolio.html#cosmic-care" class="btn-text">Case Study</a>
+
       </div>
     </div>
 
-    <div class="project-card">
-      <div>
-      <img src="./media/projectLP.png" alt="Black Hole Event preview" class="project-thumb">
+    <div id="projectOne" class="project-one hidden">
+      
+
+  
       </div>
-      <div class="project-descr">
+
+      
+      
+</div>
+      <div class="item project-card" style="grid-area: box-2">
+        <img src="./media/projectLP.png" alt="Black Hole Event preview" class="project-thumb">
+         <div class="project-descr">
       <h3 class="project-title">Black Hole Event</h3>
             <p class="project-tech"><i class="bi chat bi-arrow-right-square-fill"></i>HTML CSS JavaScript</p>
 
       <p class="project-desc">Immersive, space‑themed landing page with smooth scrolling and interactive visuals.</p>
-  <ul class="calc-strenghts">
-        <li>Attract Event subscriptions.</li>
-        <li>Event Landing page.</li>
-        <li>Increase event visibility.</li>
-      </ul>
-
       <div class="project-buttons">
         <a href="https://priorityc.github.io/stargazing-landing-page/" class="btn-primary">Demo</a>
         <a href="https://github.com/priorityc/stargazing-landing-page" class="btn-secondary">GitHub</a>
         <a href="./portfolio.html#black-hole" class="btn-text">Case Study</a>
       </div>
       </div>
-    </div>
+</div>
 
-    <div class="project-card">
-      <div>
-      <img src="./media/FoodApp.PNG" alt="Food App preview" class="project-thumb">
-      </div>
-      <div class="project-descr">
-      <h3 class="project-title">Food App</h3>
-      <p class="project-tech"><i class="bi adapt bi-arrow-right-square-fill"></i>React Vite GitHub</p>
-
-      <p class="project-desc">Mobile‑first food discovery app with clean navigation and responsive layout.</p>
-        <ul class="calc-strenghts">
-        <li>Attract users to helthier life.</li>
-        <li>Web Application.</li>
-        <li>Increase healthy food awareness.</li>
-      </ul>
-
-      <div class="project-buttons">
-        <a href="https://priorityc.github.io/FoodApp/" class="btn-primary">Demo</a>
-        <a href="https://github.com/priorityc/FoodApp.git" class="btn-secondary">GitHub</a>
-        <a href="./portfolio.html#food-app" class="btn-text">Case Study</a>
-      </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div id="scapp-cont">
-      <img src="./media/serviceCalc.png" alt="Service calculator preview" class="project-thumb-app">
-      <!-- <img src="./media/sc-screenOne.png" alt="Service calculator screen one preview" class="project-thumb-app"> -->
-      </div>
-      <div class="project-descr">
+<div class="item project-card" style="grid-area: box-3">It
+              <img src="./media/serviceCalc.png" alt="Service calculator preview" class="project-thumb-app">
+              <div class="project-descr">
       <h4 class="project-title">Service Calculator</h4>
       <p class="project-tech">Storyboards PowerPoint Figma</p>
 
@@ -270,14 +237,32 @@
         <a href="./portfolio.html#service-calculator" class="btn-text">Case Study</a>
       </div>
       </div>
-    </div>
 
-  </div>
-  <div class="all-proj-btn-cont">
+      </div>
+<!-- Third project -->
+      <div class="item project-card" style="grid-area: box-4">
+              <img src="./media/FoodApp.PNG" alt="Food App preview" class="project-thumb">
+        <div class="project-descr">
+      <h3 class="project-title">Food App</h3>
+      <p class="project-tech"><i class="bi adapt bi-arrow-right-square-fill"></i>React Vite GitHub</p>
+
+      <p class="project-desc">Mobile‑first food discovery app with clean navigation and responsive layout.</p>
+
+      <div class="project-buttons">
+        <a href="https://priorityc.github.io/FoodApp/" class="btn-primary">Demo</a>
+        <a href="https://github.com/priorityc/FoodApp.git" class="btn-secondary">GitHub</a>
+        <a href="./portfolio.html#food-app" class="btn-text">Case Study</a>
+      </div>
+      </div>
+      </div>
+<!-- Forth project -->
+      
+    </div>
+     <div class="all-proj-btn-cont">
   <button class="view-all-proj-btn"><a href="portfolio.html" >View All Projects</a><i class="bi bi-arrow-right-short"></i></button>
   </div>
 </section>
-
+    
      <!--  -->
 
   <section class="about fade-in-section">

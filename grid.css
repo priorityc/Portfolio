@@ -1,0 +1,37 @@
+.container {
+  display: grid;
+  /* For fixed size items */
+  /* grid-template-columns: 200px 200px 200px; */
+  /* If we want each colums to take equal parts of the whole screen we apply fr */
+  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-rows: 200px 200px 200px;
+  /* But if we instead use fr to rows it will not take all the screen space  */
+  /* It is becouse fractions behave relative to the grid container */
+  /* The row will extend only if have height specifyed */
+  height: 800px;
+  /* grid-template-rows: 1fr 1fr 1fr; */
+
+  gap: 1em;
+  /* Alignment */
+  /* justify-items: center;
+  align-items: center; */
+  /* Set the alignment of the whole grid container to the center */
+  /* justify-content: center;
+  align-items: center; */
+  /* Automatic overflow items */
+  /* grid-auto-rows: 300px;
+  grid-auto-columns: 300px; */
+  grid-template-areas:
+    "box-1 box-1 box-2"
+    "box-3 box-4 box-4";
+}
+.item {
+  padding: 2em;
+  background-color: rgb(7, 49, 49);
+  color: light;
+  text-align: center;
+  border-radius: 5px;
+  /* For alignment  now items have different size of their box*/
+  /* width: 100px;
+  height: 100px; */
+}
