@@ -36,11 +36,12 @@ body {
   line-height: 1.7;
   font-size: var(--fs-md);
   font-family: "Plus Jakarta Sans", sans-serif;
-  color: #444;
-  font-weight: 400;
-  line-height: 1.8;
-  font-size: 1rem;
-  background-color: rgb(249, 249, 249);
+  /* color: #444; */
+  color: #01025c;
+  font-weight: 300;
+  line-height: 1.6;
+  /* background-color: rgb(249, 249, 249); */
+  /* #a8a8ff */
 }
 .mobile-header {
   display: block;
@@ -53,6 +54,7 @@ body {
   display: flex;
   align-items: center;
   text-transform: uppercase;
+  font-size: var(--fs-sm);
 }
 
 .logo {
@@ -77,11 +79,7 @@ body {
   cursor: pointer;
   margin: 6px;
 }
-.features-icon {
-  stroke: var(--charcoal);
-  width: 40px;
-  height: 40px;
-}
+
 .bar1,
 .bar2,
 .bar3 {
@@ -227,7 +225,7 @@ body {
   transition-delay: 0.7s;
 }
 
-.experience-box {
+/* .experience-box {
   margin-top: 2rem;
   display: flex;
   justify-content: center;
@@ -248,13 +246,13 @@ body {
 
 .exp-cont p {
   font-size: 0.6rem;
-}
-.bi {
+} */
+/* .bi {
   font-size: var(--fs-md);
   color: #c084fc;
-}
+} */
 
-.hero-content i {
+.bi {
   font-size: 1.4rem;
   margin: 0 0.7rem;
   color: #c084fc;
@@ -280,14 +278,13 @@ body {
     rgba(28, 5, 11, 1) 100%
   );
   color: #f5f5ff;
+  margin-bottom: 1rem;
 }
 
 .hero__inner {
   display: flex;
   flex-direction: column; /* MOBILE FIRST */
-  gap: 2.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  gap: 1rem;
   text-align: center; /* MOBILE FIRST */
 }
 
@@ -346,27 +343,34 @@ body {
   width: 100%; /* MOBILE FIRST */
   padding: 1em;
   text-align: center;
-  background: linear-gradient(135deg, #38bdf8, #a855f7);
   color: #fff;
   cursor: pointer;
-  box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
   border: none;
   border-radius: 6px;
-  font-size: var(--fs-md);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.8;
+}
+.cta-primary {
+  background: linear-gradient(135deg, #38bdf8, #a855f7);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
+}
+
+.cta-primary :hover {
+  background: linear-gradient(135deg, #38bff87a, #a955f76d);
 }
 
 .cta-secondary {
-  background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
-  color: #a78bfa;
+  /* background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%); */
+  background-color: #01025c;
   border-radius: 6px;
-  color: #f5f5ff;
   text-decoration: none;
   transition: background 0.2s ease;
 }
 
-.micro-cta {
-  margin-top: 1rem;
-  font-size: 0.9rem;
+.cta-primary :hover {
+  background: #121485;
 }
 
 /*  */
@@ -379,6 +383,7 @@ body {
   display: grid;
   gap: 1.5rem;
   padding: 2rem 1.5rem;
+  margin-bottom: 1rem;
 
   grid-template-areas:
     "box-1"
@@ -438,93 +443,13 @@ body {
   opacity: 0.55;
 }
 
-/* .about-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  margin: 1rem auto;
-  box-shadow: 0 0 25px rgba(167, 139, 250, 0.4);
-} */
-
-/* .about {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  padding: 3rem 1.5rem;
-  color: #0f0f1a;
-}
-
-.about-title,
-.exp-title {
-  font-size: var(--fs-xl);
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, #a855f7, #38bdf8);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.about-title span,
-.skills-title span,
-.exp-title span {
-  color: #a78bfa;
-}
-
-.exp-title {
-  text-align: center;
-}
-.about-left {
-  text-align: center;
-}
-
-
-
-.about-intro {
-  max-width: 500px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-.experience-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-.experience-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(167, 139, 250, 0.3);
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 0 20px rgba(167, 139, 250, 0.1);
-}
-
-.experience-card h4 {
-  margin-bottom: 0.3rem;
-  font-size: var(--fs-md);
-}
-
-.experience-card h5 {
-  color: #a78bfa;
-  margin-bottom: 0.8rem;
-}
-
-.experience-card ul {
-  padding-left: 1rem;
-  line-height: 1.5;
-} */
-
-/*  */
-
 /* Why hire me styling */
 /* Base styling */
+
 .why-hire-me {
-  background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
-  color: #d1d5db;
+  margin-bottom: 1rem;
   text-align: center;
   padding: 3rem 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
-  font-family: "Poppins", sans-serif;
 }
 
 /* Headline */
@@ -578,15 +503,11 @@ body {
   margin: 0 auto 5rem 5rem;
 }
 /* Traits list */
-.subheading {
-  font-size: 1.1rem;
-  color: #facc15;
-  margin-bottom: 1rem;
-}
 .traits {
   list-style: none;
   padding: 0;
   margin: 0 auto 2rem;
+  text-align: center;
 }
 .traits li {
   margin: 0.5rem 0;
@@ -683,6 +604,7 @@ body {
   padding: 3rem 1.5rem;
   text-align: center;
   font-size: var(--fs-lg);
+  margin-bottom: 1rem;
 }
 
 .skills-title {
@@ -701,11 +623,12 @@ body {
 
 /* Skill Card */
 .skill-card {
-  background: #38bff819;
-  border: 1px solid rgba(167, 139, 250, 0.3);
+  /* background-color: #ebebfd; */
+  border-right: 1px solid rgba(167, 139, 250, 0.3);
+  border-top: 1px solid rgba(167, 139, 250, 0.3);
   border-radius: 16px;
   padding: 1.5rem;
-  box-shadow: 0 0 20px rgba(167, 139, 250, 0.1);
+  /* box-shadow: 0 0 20px rgba(167, 139, 250, 0.1); */
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
@@ -772,6 +695,7 @@ body {
 .project-section {
   background-color: #1a1a2e;
   padding: 4em 0;
+  margin-bottom: 1rem;
 }
 
 .project-container {
@@ -904,11 +828,9 @@ body {
 
 .btn-secondary {
   /* border: 1px solid rgba(167, 139, 250, 0.3); */
-  background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
   color: #a78bfa;
   border-radius: 6px;
   border: 1px solid rgba(148, 163, 253, 0.6);
-  color: #f5f5ff;
   text-decoration: none;
   transition: background 0.2s ease;
 }
@@ -979,7 +901,6 @@ body {
 .tech-strip {
   gap: 3rem;
   animation: scroll 15s linear infinite;
-  padding: 3rem 1.5rem;
   color: #838399;
 }
 .tech-strip span {
@@ -1023,6 +944,7 @@ body {
 }
 .services-wrapper {
   padding: 3rem 1.5rem;
+  margin-bottom: 1rem;
   background: #0f0f1a;
   color: #d1d5db;
   text-align: center;
@@ -1173,6 +1095,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .testiminial-header {
@@ -1839,14 +1762,16 @@ textarea:focus {
     display: none;
   }
   .hero {
-    height: 100vh;
+    height: 90vh;
     text-align: left;
 
     margin-bottom: 8rem;
   }
 
   .hero__inner {
-    max-width: 80vw;
+    max-width: 60vw;
+    margin: 3rem auto;
+    text-align: center;
   }
   .hero-name {
     width: 100%;
@@ -1875,12 +1800,6 @@ textarea:focus {
   .project-section {
     margin-bottom: 7rem;
   }
-  /* .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 1300px;
-    margin: 5rem auto;
-    gap: 8rem;
-  } */
 
   .project-thumb {
     width: 100%;
