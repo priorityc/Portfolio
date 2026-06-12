@@ -113,67 +113,53 @@
 
   
     <main>
-    <!-- Skills -->
- <section class="skills-section fade-in-section">
-  <h2 class="skills-title">My Skills</h2>
+      <section id="skills" class="skills light-theme">
+  <div class="skills__inner">
+    <h2 class="skills-title">Skills</h2>
+    <p class="skills__subtitle">
+      Front‑end focused, with strong foundations in modern JavaScript and UI implementation.
+    </p>
 
-  <div class="skills-grid">
-
-    <div class="skill-card">
-      <h4>Frontend Development</h4>
-      <div class="skill-icons">
-        <i class="devicon-javascript-plain"></i>
-        <i class="devicon-react-original"></i>
-        <i class="devicon-css3-plain"></i>
+    <div class="skills__groups">
+      <div class="skills__group">
+        <h3 class="skills__group-title">Frontend</h3>
+        <ul class="skills__list">
+          <li class="skills__item">HTML5</li>
+          <li class="skills__item">CSS3 / Bootstrap</li>
+          <li class="skills__item">JavaScript (ES6+)</li>
+          <li class="skills__item">React/React Native</li>
+          <li class="skills__item">Responsive Design</li>
+          <li class="skills__item">Accessibility (WCAG)</li>
+        </ul>
       </div>
-      <!-- <ul>
-        <li>React, Svelte, modern CSS</li>
-        <li>Responsive UI engineering</li>
-      </ul> -->
-    </div>
 
-    <div class="skill-card">
-      <h4>Backend Development</h4>
-      <div class="skill-icons">
-        <i class="devicon-nodejs-plain"></i>
-        <i class="devicon-express-original"></i>
-        <i class="devicon-postgresql-plain"></i>
+      <div class="skills__group">
+        <h3 class="skills__group-title">Tools & Workflow</h3>
+        <ul class="skills__list">
+          <li class="skills__item">Git & GitHub</li>
+          <li class="skills__item">VS Code</li>
+          <li class="skills__item">Figma (handoff)</li>
+          <li class="skills__item">npm / yarn</li>
+          <li class="skills__item">Chrome DevTools</li>
+        </ul>
       </div>
-      <ul>
-        <li>Node.js, Express.js</li>
-        <li>SQL & PostgreSQL fundamentals</li>
-      </ul>
-    </div>
 
-    <div class="skill-card">
-      <h4>Software Engineering</h4>
-      <div class="skill-icons">
-        <i class="devicon-java-plain"></i>
-        <i class="devicon-npm-original-wordmark"></i>
+      <div class="skills__group">
+        <h3 class="skills__group-title">Other</h3>
+        <ul class="skills__list">
+          <li class="skills__item">Java</li>
+          <li class="skills__item">REST APIs</li>
+          <li class="skills__item">Basic Node.js</li>
+          <li class="skills__item">Responsive UI Systems</li>
+          <li class="skills__item">Agile / Scrum basics</li>
+        </ul>
       </div>
-      <ul>
-        <li>Java (OOP), domain modelling</li>
-        <li>Architecture & documentation</li>
-      </ul>
     </div>
-
-    <div class="skill-card">
-      <h4>Cloud Architecture</h4>
-      <div class="skill-icons">
-        <i class="devicon-amazonwebservices-plain"></i>
-        <i class="devicon-cloudflare-plain"></i>
-      </div>
-      <ul>
-        <li>AWS, cloud design</li>
-        <li>Hybrid architecture diagrams</li>
-      </ul>
-    </div>
-
   </div>
-
-
-
 </section>
+
+    <!-- Skills -->
+ 
 <!-- New Project section -->
 <section class="project-section fade-in-section">
     <h2 class="skills-title project-title">My Projects</h2>
@@ -486,7 +472,7 @@ Thsi service transforms your existing website into a modern, user friendly, visu
       <div>
         <img src="./media/logoPetya.png" alt="Petya Dimitrova logo" class="footer-logo" />
       </div>
-      <div>
+      <div class="footer-details">
       <h2>Petya Dimitrova</h2>
       <p>📱+44 7448172379</p>
       <a href="mailto:petya83dimitrova@gmail.com" class="footer-email">
