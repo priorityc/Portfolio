@@ -706,9 +706,10 @@ body {
 /* .......... */
 /* New Project section */
 .project-section {
-  background-color: #1a1a2e;
+  /* background-color: #1a1a2e; */
   padding: 4em 0;
   margin-bottom: 1rem;
+  background-color: #a8a8ff42;
 }
 
 .project-container {
@@ -808,9 +809,7 @@ body {
 }
 .project-title {
   font-size: var(--fs-lg);
-  background: linear-gradient(90deg, #a855f7, #38bdf8);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: var(--accent-purple);
 }
 
 .project-desc {
@@ -1641,7 +1640,7 @@ textarea:focus {
 
   /*  */
   /* NEW PROJECT SECTION */
-  .about-container {
+  /* .about-container {
     grid-template-columns: 300px 1fr;
     gap: 1.5rem;
     grid-template-areas:
@@ -1649,6 +1648,16 @@ textarea:focus {
       "box-1 box-3";
     padding: 3rem 2rem;
     gap: 2rem;
+  } */
+
+  .about-container {
+    max-width: 1100px;
+    margin: 0 auto 7rem auto;
+    grid-template-columns: 320px 1fr;
+    grid-template-areas:
+      "box-1 box-2"
+      "box-1 box-3";
+    gap: 2.5rem;
   }
 
   .about-item {
@@ -1689,26 +1698,20 @@ textarea:focus {
     margin-top: 3rem;
   }
 
-  .about-item h2,
-  .about-item h3 {
-    font-size: 1.6rem;
-  }
-
-  .about-item p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-  }
-
   .experience-card {
     border-radius: 16px;
   }
 
-  .item {
-    background: #1f1f3a;
-    padding: 2rem;
-    border-radius: 16px;
-    min-width: 0; /* prevents overflow */
+  .project-container {
+    grid-template-columns: 360px 1fr;
+    grid-template-areas:
+      "box-1 box-1 box-2"
+      "box-3 box-4 box-4";
+    gap: 1rem;
   }
+  /* .item {
+    max-width: 660px;
+  } */
 
   .item img {
     width: 100%;
@@ -1794,11 +1797,6 @@ textarea:focus {
       "box-3 box-4 box-4 ";
     justify-content: center;
     border-radius: 16px;
-  }
-  .item {
-    /* padding: 2em; */
-    /* background-color: rgb(7, 49, 49); */
-    min-width: 0; /* allows content to shrink */
   }
 
   .project-section {
@@ -1923,7 +1921,14 @@ textarea:focus {
   .skill-icons {
     justify-content: left;
   }
-
+  .item {
+    background: #1f1f3a;
+    padding: 2rem;
+    border-radius: 16px;
+    min-width: 0; /* prevents overflow */
+    max-width: 800px;
+    margin: 0 auto;
+  }
   .services-wrapper {
     flex-direction: row;
     justify-content: space-between;
