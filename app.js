@@ -4,6 +4,85 @@ const nav = document.querySelector(".sidenav");
 const header = document.querySelector(".hero");
 const dotContainer = document.querySelector(".dots");
 
+// Project Modal DATA
+const projects = {
+  ecom: {
+    title: "React E‑Commerce Store",
+    overview:
+      "A full e‑commerce store with Stripe checkout and product filtering.",
+    role: "Front‑end development, UI design, responsive layout, booking flow.",
+    features: [
+      "Stripe checkout",
+      "Product filtering",
+      "Cart system",
+      "Responsive layout",
+    ],
+    tech: ["React", "Node.js", "Express", "Stripe API"],
+    challenges: [
+      "Cart state syncing → Implemented global state",
+      "Stripe errors → Added server‑side validation",
+    ],
+    images: ["./media/projectCC.png", "./media/mobileCC.png"],
+    demo: "https://your-demo-link.com",
+    github: "https://github.com/your-repo",
+  },
+
+  lanp: {
+    title: "Black Hole Event-Landing page",
+    overview:
+      "Immersive, space‑themed landing page with smooth scrolling and interactive visuals.",
+    role: "Front‑end development.",
+    features: ["CSS Animations", "Interactive form"],
+    tech: ["HTML", "JavaScript", "CSS"],
+    challenges: ["Form validation"],
+    images: ["./media/projectLP.png"],
+    demo: "#",
+    github: "#",
+  },
+
+  serviceq: {
+    title: "Service Quote Calculator",
+    overview:
+      "A tool for automating construction service quotes to save time and reduce errors.",
+    role: "Front‑end development, UX workflow design.",
+    features: [
+      "Instant quote calculation",
+      "Clean UI for non‑technical users",
+      "Input validation",
+      "Responsive layout",
+    ],
+    tech: ["JavaScript", "HTML", "CSS", "Responsive UI"],
+    challenges: [
+      "Complex pricing logic → Simplified into reusable functions",
+      "Users entering invalid data → Added validation + error messages",
+    ],
+    images: ["images/quote-desktop.png"],
+    demo: "#",
+    github: "#",
+  },
+
+  foodapp: {
+    title: "React E‑Commerce Store",
+    overview:
+      "A full e‑commerce store with Stripe checkout and product filtering.",
+    role: "Front‑end development, API integration.",
+    features: [
+      "Stripe checkout",
+      "Product filtering",
+      "Cart system",
+      "Responsive layout",
+    ],
+    tech: ["React", "Node.js", "Express", "Stripe API"],
+    challenges: [
+      "Cart state syncing → Implemented global state",
+      "Stripe errors → Added server‑side validation",
+    ],
+    images: ["./media/projectCC.png"],
+    demo: "#",
+    github: "#",
+  },
+};
+
 // Accessibility
 function handleKey(event) {
   if (event.key === "Enter" || event.key === " ") {
@@ -375,6 +454,61 @@ function validateModal(e) {
       alert("Network error. Please try again later.");
     });
 }
+
+const modalPr = document.getElementById("projectModal");
+const closeBtnPr = modal.querySelector(".modal__close");
+
+document.querySelectorAll(".open-modal").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const projectKey = btn.dataset.project;
+    const data = projects[projectKey];
+
+    // Fill modal content
+    modalPr.querySelector(".modal__title").textContent = data.title;
+    modalPr.querySelector(".modal__overview").textContent = data.overview;
+    modalPr.querySelector(".modal__role").textContent = data.role;
+
+    modalPr.querySelector(".modal__features").innerHTML = data.features
+      .map((f) => `<li>${f}</li>`)
+      .join("");
+
+    modalPr.querySelector(".modal__tags").innerHTML = data.tech
+      .map((t) => `<span class="tag">${t}</span>`)
+      .join("");
+
+    modalPr.querySelector(".modal__challenges").innerHTML = data.challenges
+      .map((c) => `<li>${c}</li>`)
+      .join("");
+
+    modalPr.querySelector(".modal__images").innerHTML = data.images
+      .map((img, index) => {
+        const frameClass =
+          index === 0 ? "device-frame desktop" : "device-frame mobile";
+        return `
+          <div class="${frameClass}">
+            <img src="${img}" alt="Project screenshot">
+          </div>
+        `;
+      })
+      .join("");
+
+    // These MUST be inside the click handler
+    modalPr.querySelector(".modal__demo").href = data.demo;
+    modalPr.querySelector(".modal__github").href = data.github;
+
+    modalPr.classList.add("active");
+  });
+});
+
+// Close modal
+closeBtnPr.addEventListener("click", () => {
+  modalPr.classList.remove("active");
+});
+
+// Close on background click
+modalPr.addEventListener("click", (e) => {
+  if (e.target === modalPr) modalPr.classList.remove("active");
+});
 
 // Fading sections
 

@@ -172,7 +172,7 @@
       <!-- Skills -->
 
       <!-- New Project section -->
-      <section class="project-section fade-in-section">
+      <section class="project-section">
         <h2 class="skills-title project-title">My Projects</h2>
 
         <div class="project-container">
@@ -183,15 +183,15 @@
               class="project-thumb"
             />
             <div class="project-descr">
-              <h3 class="project-title">Cosmic Care</h3>
+              <h3 class="project-title">Cosmic Care e-comerce website</h3>
               <p class="project-tech">
                 <i class="bi icon bi-arrow-right-square-fill"></i>
-                React.js Express.js Supabase
+                React.js Express.js Supabase Stripe Netlify Suparbase Render
               </p>
 
               <p class="project-desc">
-                Wellness e‑commerce experience focused on calm, intuitive
-                shopping and clear product discovery.
+                Design the brand styling and built a full checkout experience
+                with real payment integration.
               </p>
 
               <div class="project-buttons">
@@ -207,9 +207,10 @@
                 >
                   GitHub
                 </a>
-                <a href="./portfolio.html#cosmic-care" class="btn-text">
-                  Case Study
-                </a>
+
+                <button class="open-modal details-btn" data-project="ecom">
+                  View Details
+                </button>
               </div>
             </div>
 
@@ -222,7 +223,7 @@
               class="project-thumb"
             />
             <div class="project-descr">
-              <h3 class="project-title">Black Hole Event</h3>
+              <h3 class="project-title">Black Hole Event-Landing page</h3>
               <p class="project-tech">
                 <i class="bi chat bi-arrow-right-square-fill"></i>
                 HTML CSS JavaScript
@@ -245,9 +246,9 @@
                 >
                   GitHub
                 </a>
-                <a href="./portfolio.html#black-hole" class="btn-text">
-                  Case Study
-                </a>
+                <button class="open-modal details-btn" data-project="lanp">
+                  Details
+                </button>
               </div>
             </div>
           </div>
@@ -259,13 +260,21 @@
               class="project-thumb-app"
             />
             <div class="project-descr">
-              <h4 class="project-title">Service Calculator</h4>
-              <p class="project-tech">Storyboards PowerPoint Figma</p>
+              <h4 class="project-title">
+                Service Quote Calculator-Mid-fidelity Prototype
+              </h4>
+              <p class="project-tech">
+                <i class="bi rocket bi-arrow-right-square-fill"></i>
+                Storyboards PowerPoint Figma
+              </p>
 
               <p class="project-desc">
-                <i class="bi rocket bi-arrow-right-square-fill"></i>
-                Prototype for a construction quote calculator to speed up client
-                estimates.
+                Prototype for a construction quote calculator to automated the
+                quoting process, improving speed and consistency.
+              </p>
+              <p class="project-desc">
+                Problem: Owner was losing time manually calculating quotes for
+                clients.
               </p>
 
               <div class="project-buttons">
@@ -276,9 +285,9 @@
                 >
                   Demo
                 </a>
-                <a href="./portfolio.html#service-calculator" class="btn-text">
-                  Case Study
-                </a>
+                <button class="open-modal details-btn" data-project="serviceq">
+                  Details
+                </button>
               </div>
             </div>
           </div>
@@ -290,16 +299,17 @@
               class="project-thumb"
             />
             <div class="project-descr">
-              <h3 class="project-title">Food App</h3>
+              <h3 class="project-title">Food App-Wep Aplication API</h3>
               <p class="project-tech">
                 <i class="bi adapt bi-arrow-right-square-fill"></i>
                 React Vite GitHub
               </p>
 
               <p class="project-desc">
-                Mobile‑first food discovery app with clean navigation and
-                responsive layout.
+                Mobile‑first food discovery, dietary filter app with clean
+                navigation and responsive layout.
               </p>
+              <p class="project-desc">Integrated API from Spoonacular</p>
 
               <div class="project-buttons">
                 <a
@@ -314,9 +324,9 @@
                 >
                   GitHub
                 </a>
-                <a href="./portfolio.html#food-app" class="btn-text">
-                  Case Study
-                </a>
+                <button class="open-modal details-btn" data-project="foodapp">
+                  Details
+                </button>
               </div>
             </div>
           </div>
@@ -802,6 +812,45 @@
         </form>
       </div>
     </div>
+
+    <div class="modal" id="projectModal">
+      <div class="modal__content">
+        <button class="modal__close">&times;</button>
+
+        <h2 class="modal__title"></h2>
+        <p class="modal__overview"></p>
+        <p class="modal__role"></p>
+        <div class="features_cont">
+          <div class="modal__section">
+            <h3>Key Features</h3>
+            <ul class="modal__features"></ul>
+          </div>
+
+          <div class="modal__section">
+            <h3>Tech Stack</h3>
+            <div class="modal__tags"></div>
+          </div>
+        </div>
+        <div class="modal__section">
+          <h3>Challenges & Solutions</h3>
+          <ul class="modal__challenges"></ul>
+        </div>
+
+        <div class="modal__section">
+          <h3>Screenshots</h3>
+
+          <div class="modal__images"></div>
+        </div>
+
+        <div class="modal__buttons">
+          <a href="#" class="btn modal__demo" target="_blank">Live Demo</a>
+          <a href="#" class="btn btn--outline modal__github" target="_blank">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
     <script src="app.js"></script>
   </body>
 </html>
