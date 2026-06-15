@@ -122,7 +122,7 @@ const projects = {
     ],
     images: ["./media/FoodApp-Tablet.png", "./media/FoodApp-mobile.png"],
     demo: "https://priorityc.github.io/FoodApp/",
-    github: "https://github.com/priorityc/FoodApp.git",
+    github: "#",
   },
 };
 

@@ -354,10 +354,17 @@ body {
 }
 
 .cta-secondary {
-  background-color: #01025c;
+  /* background-color: #01025c; */
+  background-color: #6a1bbe;
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.2s ease;
+}
+.hero-small {
+  background-color: #2a00c7;
+  border-radius: 16px;
+  margin: 0.5rem;
+  border-radius: 999;
 }
 
 /* (Note: this selector was originally `.cta-primary :hover` with a space; kept original intent above) */
@@ -918,6 +925,7 @@ body {
 
 .project-title {
   font-size: var(--fs-lg);
+  font-weight: 600;
   color: var(--accent-purple);
 }
 
@@ -926,6 +934,11 @@ body {
   line-height: 1.5;
   margin-bottom: 1rem;
   font-size: var(--fs-sm);
+}
+.project-tech {
+  border-radius: 16px;
+  height: 50px;
+  color: var(--accent-purple);
 }
 
 /* Project buttons */
@@ -951,8 +964,22 @@ body {
 }
 
 .details-btn {
-  background: var(--card-purple);
-  border: none;
+  display: inline-flex;
+  align-items: center;
+  background: #6a1bbe;
+  color: white;
+  padding: 8px 14px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.details-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(106, 27, 190, 0.25);
+  background-color: #7e30d2;
 }
 .btn-primary {
   background: var(--btn-gradient);
@@ -963,10 +990,25 @@ body {
 
 .details-btn:hover {
   cursor: pointer;
-  background: var(--skills-pill-bg);
 }
 .btn-primary:hover {
   background-color: #c084fc;
+}
+
+.details-btn {
+  animation: pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 rgba(167, 139, 250, 0);
+  }
+  50% {
+    box-shadow: 0 0 12px rgba(167, 139, 250, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(167, 139, 250, 0);
+  }
 }
 
 .btn-secondary {
@@ -1755,7 +1797,34 @@ textarea:focus {
   border: 2px solid #6a1bbe;
   color: #6a1bbe;
 }
+/* COntact floating button */
+.floating-contact-btn {
+  position: fixed;
+  /* bottom: 2rem; */
+  right: 2rem;
+  background: #6a1bbe;
+  color: white;
+  padding: 0.9rem 1.4rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(106, 27, 190, 0.35);
+  z-index: 9999;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
 
+.floating-contact-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(106, 27, 190, 0.45);
+}
+
+.floating-contact-btn {
+  animation: bounce 1s infinite;
+  opacity: 0.7;
+}
 .scroll-indicator {
   width: 100%;
   display: flex;
@@ -2048,7 +2117,6 @@ textarea:focus {
 
   .item img {
     width: 100%;
-    border-radius: 12px;
     display: block;
   }
 
@@ -2109,7 +2177,7 @@ textarea:focus {
   }
 
   .hero {
-    height: 90vh;
+    height: 100vh;
     text-align: left;
     margin-bottom: 7rem;
   }
@@ -2390,7 +2458,6 @@ textarea:focus {
 
   .item {
     background: #1f1f3a;
-    padding: 2rem;
     border-radius: 16px;
     min-width: 0;
     max-width: 800px;
