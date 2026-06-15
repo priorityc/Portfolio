@@ -1464,7 +1464,7 @@ textarea:focus {
 }
 
 .modal-content {
-  background: #ffffff;
+  background-color: var(--bg-purple);
   width: 100%;
   max-width: 420px;
   padding: 2rem 1.5rem;
@@ -1589,19 +1589,18 @@ textarea:focus {
 }
 
 .modal__content {
-  background: #f6f7fb;
+  background-color: var(--bg-purple);
   border-radius: 1rem;
   padding: 2rem;
   max-width: 700px;
   width: 100%;
-  color: #2e2e3a;
   box-shadow: 0 0 25px rgba(106, 27, 190, 0.15);
   position: relative;
   overflow-y: auto;
   max-height: 90vh;
 }
 
-.modal__close {
+.project-close-modal {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -1613,7 +1612,7 @@ textarea:focus {
 }
 
 .modal__title {
-  font-size: 1.6rem;
+  font-size: var(--fs-xl);
   color: #6a1bbe;
   margin-bottom: 1rem;
 }
@@ -1626,6 +1625,8 @@ textarea:focus {
 
 .modal__section {
   margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 .modal__section h3 {
@@ -1633,9 +1634,25 @@ textarea:focus {
   margin-bottom: 0.5rem;
 }
 
-.modal__list {
-  padding-left: 1.2rem;
+.modal__lists li,
+.modal__challenges li {
+  list-style: none;
+  padding: 0.4rem 0 0.4rem 1.2rem;
+  position: relative;
+  margin-bottom: 0.6rem;
   color: #2e2e3a;
+}
+
+.modal__lists li::before,
+.modal__challenges li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-purple);
+  border-radius: 50%;
 }
 
 .modal__tags {
@@ -1654,14 +1671,18 @@ textarea:focus {
 
 .modal__images {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
+  gap: 2rem;
+  grid-template-columns: 1fr; /* mobile = 1 column */
+  background-color: #1f1f3a;
+  padding: 1rem;
 }
 
 .modal__images img {
   width: 100%;
-  border-radius: 0.5rem;
-  border: 1px solid #c9c4ff;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
 .modal__buttons {
@@ -1683,6 +1704,61 @@ textarea:focus {
   background: transparent;
   border: 2px solid #6a1bbe;
   color: #6a1bbe;
+}
+
+.scroll-indicator {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.scroll-indicator span {
+  width: 18px;
+  height: 18px;
+  border-bottom: 4px solid var(--accent-purple);
+  border-right: 4px solid var(--accent-purple);
+  transform: rotate(45deg);
+  animation: bounce 1.4s infinite;
+  opacity: 0.7;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0) rotate(45deg);
+  }
+  50% {
+    transform: translateY(6px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+}
+
+/* Point up */
+.scroll-top-indicator {
+  position: absolute;
+  right: 1rem;
+  width: 34px;
+  height: 34px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-top-indicator span {
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid var(--accent-purple);
+  border-left: 2px solid var(--accent-purple);
+  transform: rotate(45deg); /* arrow pointing up */
 }
 
 /* =========================
@@ -1847,7 +1923,7 @@ textarea:focus {
   }
 
   .project-thumb-app {
-    max-width: 30%;
+    max-width: 60%;
   }
 
   #myProgress {
@@ -1933,6 +2009,10 @@ textarea:focus {
 
   .service-card {
     flex-direction: row;
+  }
+  /* MODAL Projects */
+  .modal__images {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .testimonial-card {
@@ -2054,9 +2134,8 @@ textarea:focus {
   }
 
   .modal__content {
-    background: #f6f7fb;
     border-radius: 1rem;
-    padding: 2rem;
+    padding: 5rem;
     max-width: 1200px;
     width: 100%;
     color: #2e2e3a;
@@ -2064,17 +2143,6 @@ textarea:focus {
     position: relative;
     overflow-y: auto;
     max-height: 90vh;
-  }
-
-  .modal__close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: transparent;
-    border: none;
-    font-size: 2rem;
-    color: #6a1bbe;
-    cursor: pointer;
   }
 
   .modal__title {
@@ -2086,47 +2154,44 @@ textarea:focus {
   .features_cont {
     display: flex;
     justify-content: space-between;
+    gap: 5em;
+    padding: 1em;
   }
-  /* ========= */
-  /* Device frame */
-  /* ======== */
 
-  /* First image (desktop) */
+  .modal__images {
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    padding: 5rem 3rem; /* optional */
+    border-radius: 16px; /* optional */
+  }
 
-  .device-frame {
-    position: relative;
+  .modal__images img {
     width: 100%;
-    max-width: 350px; /* mobile default */
-    padding: 18px;
-    border: 7px solid #000;
-    border-radius: 30px;
-    background: #111;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-    margin: 0 auto;
+    object-fit: cover;
+    border-radius: inherit;
+    border-radius: 16px;
   }
 
-  .device-frame img {
-    width: 100%;
-    display: block;
-    border-radius: 26px;
-  }
-
-  .device-frame.desktop {
-    max-width: 700px;
+  /* Desktop */
+  /* .device-frame.desktop {
+    max-width: 900px;
     border-radius: 12px;
+    aspect-ratio: 16 / 9;
   }
 
-  /* Other images (mobile) */
   .device-frame.mobile {
-    max-width: 350px;
-    border-radius: 30px;
+    max-width: 300px;
+    grid-area: mobile;
   }
+  .device-frame.tablet {
+    grid-area: tablet;
+  } */
+
   /* ======= */
 
   .modal__overview,
   .modal__role {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: #4b4b5f;
   }
 
@@ -2153,31 +2218,13 @@ textarea:focus {
   .tag {
     background: #e8e6ff;
     border: 1px solid #c9c4ff;
-    padding: 0.35rem 0.7rem;
-    border-radius: 999px;
+    /* padding: 0.35rem 0.7rem; */
+    border-radius: 16px;
     font-size: 0.85rem;
   }
 
-  .modal__images {
-    display: grid;
-    grid-template-columns: 1fr 300px;
-    gap: 0.75rem;
-  }
-
-  .modal__images img {
-    width: 100%;
-    border-radius: 0.5rem;
-    border: 1px solid #c9c4ff;
-  }
-
-  .modal__buttons {
-    margin-top: 2rem;
-    display: flex;
-    gap: 1rem;
-  }
-
   .btn {
-    background: #6a1bbe;
+    background: #220443;
     color: white;
     padding: 0.7rem 1.2rem;
     border-radius: 0.5rem;

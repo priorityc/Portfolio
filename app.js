@@ -10,76 +10,119 @@ const projects = {
     title: "React E‑Commerce Store",
     overview:
       "A full e‑commerce store with Stripe checkout and product filtering.",
-    role: "Front‑end development, UI design, responsive layout, booking flow.",
+    descr:
+      "CosmicCare is a fully‑functional React e‑commerce store built with a mobile‑first UI, dynamic product loading, and a complete cart + checkout flow. The project runs in two modes — a real mode with live product data from Supabase, and a demo mode for safe portfolio browsing. It includes a simulated backend using Express.js, automatic product syncing, global cart state, and a responsive, modern UI. The store is deployed on Netlify with environment‑based configuration for switching between demo and live data.",
     features: [
       "Stripe checkout",
       "Product filtering",
       "Cart system",
       "Responsive layout",
     ],
-    tech: ["React", "Node.js", "Express", "Stripe API"],
+    tech: [
+      "State management (global state for the cart)",
+      "API integration (Stripe, Supabase)",
+      "Build tools (Vite, npm)",
+      "Version control (Git/GitHub)",
+      "Hosting (Netlify)",
+      "Database (Supabase)",
+      "Security / validation (server‑side validation)",
+      "Routing (React Router)",
+      "Environment variables (Stripe keys, Supabase keys)",
+    ],
     challenges: [
       "Cart state syncing → Implemented global state",
       "Stripe errors → Added server‑side validation",
     ],
-    images: ["./media/projectCC.png", "./media/mobileCC.png"],
-    demo: "https://your-demo-link.com",
-    github: "https://github.com/your-repo",
+    images: [
+      "./media/homeCosmic.png",
+      "./media/mobileCC.png",
+      "./media/tabletCC.png",
+      "./media/mobileCosmic.png",
+      "./media/basketCare.png",
+      "./media/basketCosmic.png",
+    ],
+    live: "https://cosmiccare.netlify.app/?demo=false",
+    demo: "https://cosmiccare.netlify.app/?demo=true",
+    github: "https://github.com/priorityc/cosmic-care-site",
   },
 
   lanp: {
     title: "Black Hole Event-Landing page",
     overview:
       "Immersive, space‑themed landing page with smooth scrolling and interactive visuals.",
-    role: "Front‑end development.",
-    features: ["CSS Animations", "Interactive form"],
+    descr:
+      "A modern, space‑themed landing page designed to showcase a fictional stargazing experience. Built with a strong focus on visual storytelling, smooth animations, and responsive layout. The page features a hero section with atmospheric gradients, animated stars, interactive hover effects, and a clean content structure that guides the user through the experience. Designed and developed from scratch using HTML, CSS, and JavaScript with an emphasis on layout, typography, and immersive UI design.",
+    features: [
+      "Hero Section With Atmospheric Visuals",
+      "Fully Responsive Layout",
+      "Feature Highlights Section",
+      "Call‑to‑Action Buttons",
+    ],
     tech: ["HTML", "JavaScript", "CSS"],
     challenges: ["Form validation"],
-    images: ["./media/projectLP.png"],
-    demo: "#",
-    github: "#",
+    images: [
+      "./media/projectLP.png",
+      "./media/BHform.png",
+      "./media/dualModeBh.png",
+      "./media/mobileBh.png",
+    ],
+    demo: "https://priorityc.github.io/stargazing-landing-page/",
+    github: "https://github.com/priorityc/stargazing-landing-page",
   },
 
   serviceq: {
     title: "Service Quote Calculator",
     overview:
       "A tool for automating construction service quotes to save time and reduce errors.",
-    role: "Front‑end development, UX workflow design.",
+    descr:
+      "A mobile‑first service quote calculator prototype designed for a newly established construction business entering the market quickly. The design problem focuses on the inaccuracy of manual quoting, delays in providing estimates, and the lack of transparency in the current workflow. These issues risk wasted materials, reduced customer trust, and losing clients to competitors. The prototype replaces manual calculations with a guided, automated tool that enables the company to deliver fast, consistent, and reliable service quotes in demanding on‑site environments.",
     features: [
+      "Step by step interactions",
       "Instant quote calculation",
-      "Clean UI for non‑technical users",
-      "Input validation",
-      "Responsive layout",
+      "Clean UI for industry non‑technical users",
+      "Supports one-hand use",
+      "Clear visual feedback for noisy environments",
+      "reduced cognitive load",
     ],
-    tech: ["JavaScript", "HTML", "CSS", "Responsive UI"],
+    tech: [
+      "Investigating design context(user-activity-environment)",
+      "Storyboards",
+      "Interviews with the company owner",
+      "Paper Interfaces",
+      "PowerPoint interactive presentation ",
+      "Evaluation",
+      "User-centered design",
+      "Iteration process",
+      "PowerPoint",
+      "Figma",
+    ],
     challenges: [
-      "Complex pricing logic → Simplified into reusable functions",
-      "Users entering invalid data → Added validation + error messages",
+      "Selecting the right question for the interview → Different interview questions used structured and semi-structured",
+      "Understanding what users want  → Field study observation with initial conversations",
     ],
-    images: ["images/quote-desktop.png"],
-    demo: "#",
+    images: ["./media/screen123.png", "./media/screen45.png"],
+    demo: "https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/ServicePaintingCalculator?node-id=1025-2&t=GROR9anNnS82szvj-1&starting-point-node-id=1025%3A2",
     github: "#",
   },
 
   foodapp: {
-    title: "React E‑Commerce Store",
-    overview:
-      "A full e‑commerce store with Stripe checkout and product filtering.",
-    role: "Front‑end development, API integration.",
+    title: "Food App-Wep Aplication API",
+    overview: "Food App-Wep Aplication API-Sponacular for recipe discovery.",
+    role: "FoodApp is a mobile‑first recipe discovery application that allows users to search for meals, explore ingredients, and view cooking instructions in a clean, intuitive interface. The app fetches real recipe data from an external API, displays dynamic results, and provides a smooth browsing experience with responsive layouts and interactive UI elements. Built using HTML, CSS, and JavaScript, the project demonstrates API integration, async data handling, and modern front‑end design principles.",
     features: [
-      "Stripe checkout",
-      "Product filtering",
-      "Cart system",
+      "Live Recipe Search (API Integration)",
+      "Dynamic Meal Cards",
+      "Detailed Recipe View",
       "Responsive layout",
     ],
-    tech: ["React", "Node.js", "Express", "Stripe API"],
+    tech: ["React", "JavaScript", "GitHub", "API"],
     challenges: [
-      "Cart state syncing → Implemented global state",
-      "Stripe errors → Added server‑side validation",
+      "Rendering Dynamic Content Efficiently → Validate input",
+      "API Rate Limits → Avoided sending too many requests",
     ],
-    images: ["./media/projectCC.png"],
-    demo: "#",
-    github: "#",
+    images: ["./media/FoodApp-Tablet.png", "./media/FoodApp-mobile.png"],
+    demo: "https://priorityc.github.io/FoodApp/",
+    github: "https://github.com/priorityc/FoodApp.git",
   },
 };
 
@@ -456,7 +499,8 @@ function validateModal(e) {
 }
 
 const modalPr = document.getElementById("projectModal");
-const closeBtnPr = modal.querySelector(".modal__close");
+const closeBtnPr = modalPr.querySelector(".project-close-modal");
+console.log(closeBtnPr);
 
 document.querySelectorAll(".open-modal").forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -466,9 +510,9 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
     // Fill modal content
     modalPr.querySelector(".modal__title").textContent = data.title;
     modalPr.querySelector(".modal__overview").textContent = data.overview;
-    modalPr.querySelector(".modal__role").textContent = data.role;
+    modalPr.querySelector(".modal__role").textContent = data.descr;
 
-    modalPr.querySelector(".modal__features").innerHTML = data.features
+    modalPr.querySelector(".modal__lists").innerHTML = data.features
       .map((f) => `<li>${f}</li>`)
       .join("");
 
@@ -481,19 +525,18 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
       .join("");
 
     modalPr.querySelector(".modal__images").innerHTML = data.images
-      .map((img, index) => {
-        const frameClass =
-          index === 0 ? "device-frame desktop" : "device-frame mobile";
+      .map((img) => {
         return `
-          <div class="${frameClass}">
-            <img src="${img}" alt="Project screenshot">
-          </div>
-        `;
+      <div class="modal__img-wrapper">
+        <img src="${img}" alt="Project screenshot">
+      </div>
+    `;
       })
       .join("");
 
     // These MUST be inside the click handler
     modalPr.querySelector(".modal__demo").href = data.demo;
+    modalPr.querySelector(".modal__live").href = data.live;
     modalPr.querySelector(".modal__github").href = data.github;
 
     modalPr.classList.add("active");
@@ -508,6 +551,35 @@ closeBtnPr.addEventListener("click", () => {
 // Close on background click
 modalPr.addEventListener("click", (e) => {
   if (e.target === modalPr) modalPr.classList.remove("active");
+});
+
+// AUTO hide the indicater after users scroll
+const modalContent = document.querySelector(".modal__content");
+const scrollIndicator = document.querySelector(".scroll-indicator");
+
+modalContent.addEventListener("scroll", () => {
+  if (modalContent.scrollTop > 20) {
+    scrollIndicator.style.opacity = "0";
+  } else {
+    scrollIndicator.style.opacity = "1";
+  }
+});
+
+// Show the up arrow when user scrow down
+const scrollTopIndicator = document.querySelector(".scroll-top-indicator");
+
+modalContent.addEventListener("scroll", () => {
+  if (modalContent.scrollTop > 200) {
+    scrollTopIndicator.style.opacity = "1";
+    scrollTopIndicator.style.pointerEvents = "auto";
+  } else {
+    scrollTopIndicator.style.opacity = "0";
+    scrollTopIndicator.style.pointerEvents = "none";
+  }
+});
+
+scrollTopIndicator.addEventListener("click", () => {
+  modalContent.scrollTo(0, 0);
 });
 
 // Fading sections

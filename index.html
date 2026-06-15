@@ -45,7 +45,6 @@
     <div class="topnav" id="myLinks">
       <div>
         <a class="nav__link active" href="index.html">Home</a>
-        <a class="nav__link" href="portfolio.html">Portfolio</a>
         <a class="nav__link" href="services.html">Services</a>
         <a class="nav__link" href="contact.html">Contact</a>
       </div>
@@ -68,7 +67,6 @@
         <!-- Second container menus -->
         <div class="arrange-manu">
           <a class="nav__link" href="index.html">Home</a>
-          <a class="nav__link" href="portfolio.html">Portfolio</a>
           <a class="nav__link" href="services.html">Services</a>
           <a class="nav__link" href="contact.html">Contact</a>
         </div>
@@ -196,7 +194,7 @@
 
               <div class="project-buttons">
                 <a
-                  href="https://cosmiccare.netlify.app/?demo=true"
+                  href="https://cosmiccare.netlify.app/?demo=false"
                   class="btn-primary"
                 >
                   Demo
@@ -255,7 +253,7 @@
 
           <div class="item project-card" style="grid-area: box-3">
             <img
-              src="./media/serviceCalc.png"
+              src="./media/serviceCalkscreen1.png"
               alt="Service calculator preview"
               class="project-thumb-app"
             />
@@ -331,10 +329,6 @@
             </div>
           </div>
           <!-- Forth project -->
-        </div>
-        <div class="all-proj-btn-cont">
-          <a href="portfolio.html">View All Projects</a>
-          <i class="bi bi-arrow-right-short"></i>
         </div>
       </section>
 
@@ -815,18 +809,22 @@
 
     <div class="modal" id="projectModal">
       <div class="modal__content">
-        <button class="modal__close">&times;</button>
-
-        <h2 class="modal__title"></h2>
-        <p class="modal__overview"></p>
-        <p class="modal__role"></p>
-        <div class="features_cont">
-          <div class="modal__section">
-            <h3>Key Features</h3>
-            <ul class="modal__features"></ul>
+        <button class="project-close-modal">&times;</button>
+        <header>
+          <h2 class="modal__title"></h2>
+          <p class="modal__overview"></p>
+          <p class="modal__role"></p>
+          <div class="scroll-indicator">
+            <span></span>
           </div>
+        </header>
 
-          <div class="modal__section">
+        <div class="features_cont">
+          <div class="modal-features">
+            <h3>Key Features</h3>
+            <ul class="modal__lists"></ul>
+          </div>
+          <div>
             <h3>Tech Stack</h3>
             <div class="modal__tags"></div>
           </div>
@@ -843,7 +841,11 @@
         </div>
 
         <div class="modal__buttons">
+          <div class="scroll-top-indicator">
+            <span></span>
+          </div>
           <a href="#" class="btn modal__demo" target="_blank">Live Demo</a>
+          <a href="#" class="btn modal__live" target="_blank">Testing Demo</a>
           <a href="#" class="btn btn--outline modal__github" target="_blank">
             GitHub
           </a>
