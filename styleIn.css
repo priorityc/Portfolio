@@ -52,6 +52,7 @@ body {
   font-weight: 300;
   line-height: 1.6;
   color: var(--skills-text);
+  background-color: var(--skills-bg);
 }
 
 /* =========================
@@ -369,6 +370,7 @@ body {
   padding: 3rem 1.5rem;
   background: var(--skills-bg);
   color: var(--skills-text);
+  margin-bottom: 1rem;
 }
 
 .skills__inner {
@@ -1796,6 +1798,9 @@ textarea:focus {
     display: block;
   }
 
+  .hero {
+    margin-bottom: 3rem;
+  }
   .button-hero {
     flex-direction: row;
     align-items: center;
@@ -1843,6 +1848,9 @@ textarea:focus {
     gap: 1.5rem;
   }
 
+  .skills.light-theme {
+    margin-bottom: 3rem;
+  }
   .skills__group:last-child {
     grid-column: span 2;
   }
@@ -2116,6 +2124,10 @@ textarea:focus {
     display: flex;
     align-items: center;
     gap: 2rem;
+  }
+
+  .skills.light-theme {
+    margin-bottom: 7rem;
   }
   /* ============= */
   .modal {
