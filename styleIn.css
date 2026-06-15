@@ -52,7 +52,7 @@ body {
   font-weight: 300;
   line-height: 1.6;
   color: var(--skills-text);
-  background-color: var(--skills-bg);
+  background-color: rgb(254, 254, 254);
 }
 
 /* =========================
@@ -379,9 +379,9 @@ body {
 }
 
 .skills__subtitle {
-  font-size: 0.95rem;
   color: var(--skills-muted);
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 /* Groups */
@@ -492,16 +492,64 @@ body {
   opacity: 0.55;
 }
 
+.latest-roles {
+  background: #f6f7fb;
+  border: 1px solid #c9c4ff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(106, 27, 190, 0.08);
+}
+
+.latest-roles .about-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #6a1bbe;
+  margin-bottom: 1rem;
+}
+
+.experience-card {
+  background: #edebff;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  margin-bottom: 1rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.experience-card:last-child {
+  margin-bottom: 0;
+}
+
+.experience-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(106, 27, 190, 0.15);
+}
+
+.experience-card h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2e2e3a;
+  margin-bottom: 0.25rem;
+}
+
+.experience-card h5 {
+  font-size: 0.9rem;
+  color: #6b6b8a;
+  font-weight: 500;
+}
+
 /* =========================
    Why Hire Me
 ========================= */
 
 .why-hire-me {
-  padding: 3rem 1.5rem;
+  padding: 3rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 1rem;
+  border-radius: 16px;
 }
 
 .why-title {
@@ -788,7 +836,7 @@ body {
 }
 
 .email {
-  color: var(--bg-purple);
+  color: #6b6b8a;
 }
 
 /* Projects grid */
@@ -2173,7 +2221,6 @@ textarea:focus {
   .modal__images {
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
-    padding: 5rem 3rem; /* optional */
     border-radius: 16px; /* optional */
   }
 
@@ -2184,20 +2231,9 @@ textarea:focus {
     border-radius: 16px;
   }
 
-  /* Desktop */
-  /* .device-frame.desktop {
-    max-width: 900px;
-    border-radius: 12px;
-    aspect-ratio: 16 / 9;
+  .modal-features {
+    max-width: 50%;
   }
-
-  .device-frame.mobile {
-    max-width: 300px;
-    grid-area: mobile;
-  }
-  .device-frame.tablet {
-    grid-area: tablet;
-  } */
 
   /* ======= */
 
@@ -2209,6 +2245,7 @@ textarea:focus {
 
   .modal__section {
     margin-top: 1.5rem;
+    padding: 1rem;
   }
 
   .modal__section h3 {

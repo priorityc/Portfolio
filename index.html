@@ -131,7 +131,10 @@
 
           <div class="skills__groups">
             <div class="skills__group">
-              <h3 class="skills__group-title">Frontend</h3>
+              <h3 class="skills__group-title">
+                <i class="bi bi-window-stack"></i>
+                Frontend
+              </h3>
               <ul class="skills__list">
                 <li class="skills__item">HTML5</li>
                 <li class="skills__item">CSS3 / Bootstrap</li>
@@ -143,7 +146,10 @@
             </div>
 
             <div class="skills__group">
-              <h3 class="skills__group-title">Tools & Workflow</h3>
+              <h3 class="skills__group-title">
+                <i class="bi bi-gear"></i>
+                Tools & Workflow
+              </h3>
               <ul class="skills__list">
                 <li class="skills__item">Git & GitHub</li>
                 <li class="skills__item">VS Code</li>
@@ -154,7 +160,10 @@
             </div>
 
             <div class="skills__group">
-              <h3 class="skills__group-title">Other</h3>
+              <h3 class="skills__group-title">
+                <i class="bi bi-code-square"></i>
+                Other
+              </h3>
               <ul class="skills__list">
                 <li class="skills__item">Java</li>
                 <li class="skills__item">REST APIs</li>
@@ -367,7 +376,13 @@
                 <i class="bi connect bi-github"></i>
               </a>
             </div>
-            <a href="#projects" class="btn-secondary">Download CV</a>
+            <a
+              href="./media/cv_PDJD.docx"
+              download="Petya-Dimitrova-CV.docx"
+              class="btn-secondary"
+            >
+              Download CV
+            </a>
           </div>
           <div class="about-item" style="grid-area: box-2">
             <h3 class="about-title">About</h3>
@@ -807,7 +822,7 @@
       </div>
     </div>
 
-    <div class="modal" id="projectModal">
+    <div class="modal fade-in-section" id="projectModal">
       <div class="modal__content">
         <button class="project-close-modal">&times;</button>
         <header>
@@ -818,7 +833,11 @@
             <span></span>
           </div>
         </header>
+        <div class="modal__section">
+          <h3>Screenshots</h3>
 
+          <div class="modal__images"></div>
+        </div>
         <div class="features_cont">
           <div class="modal-features">
             <h3>Key Features</h3>
@@ -832,12 +851,6 @@
         <div class="modal__section">
           <h3>Challenges & Solutions</h3>
           <ul class="modal__challenges"></ul>
-        </div>
-
-        <div class="modal__section">
-          <h3>Screenshots</h3>
-
-          <div class="modal__images"></div>
         </div>
 
         <div class="modal__buttons">
