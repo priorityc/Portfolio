@@ -149,6 +149,32 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //Form validation
+// Auto flag fill
+const countries = [
+  { name: "United Kingdom", code: "+44", flag: "🇬🇧" },
+  { name: "United States", code: "+1", flag: "🇺🇸" },
+  { name: "Bulgaria", code: "+359", flag: "🇧🇬" },
+  { name: "Germany", code: "+49", flag: "🇩🇪" },
+  { name: "France", code: "+33", flag: "🇫🇷" },
+  { name: "Spain", code: "+34", flag: "🇪🇸" },
+  { name: "Italy", code: "+39", flag: "🇮🇹" },
+  { name: "Australia", code: "+61", flag: "🇦🇺" },
+  { name: "Canada", code: "+1", flag: "🇨🇦" },
+  { name: "India", code: "+91", flag: "🇮🇳" },
+  // You can add more if you want
+];
+
+const select = document.getElementById("country-code");
+const phoneInput = document.getElementById("form_phone");
+
+function validatePhone() {
+  const code = countrySelect.value;
+  const rule = phoneRules[code];
+  const fullNumber = code + phoneInput.value.trim();
+
+  return rule.test(fullNumber);
+}
+
 const projectForm = document.getElementById("starterForm"); //select the form
 
 function updateFeedback(feedback, isValid, message) {
@@ -247,8 +273,14 @@ function validateProjectInput(inputElement) {
 
   // PHONE
   if (inputElement.id === "form-phone") {
-    pattern = /^(07\d{9}|(\+44\s?\d{10}))$/;
-    message = "Enter a valid UK phone number (07… or +44…).";
+    // pattern = /^(07\d{9}|(\+44\s?\d{10}))$/;
+    // message = "Enter a valid UK phone number (07… or +44…).";
+    const isValid = validatePhone();
+
+    if (!isValid) {
+      message = "Enter a valid phone number for the selected country.";
+      return false;
+    }
   }
 
   // URL
@@ -312,19 +344,9 @@ function validateProjectForm(e) {
     });
 }
 
-// document.querySelectorAll('input[name="starter-features[]"]').forEach((cb) => {
-//   cb.addEventListener("change", () => {
-//     const additionalPageChecked =
-//       document.querySelector(
-//         'input[name="starter-features[]"][value="additional-page"]:checked',
-//       ) !== null;
-
-//     const numberGroup = document.querySelector(".number-group");
-
-//     if (additionalPageChecked) {
-//       numberGroup.classList.remove("hidden");
-//     } else {
-//       numberGroup.classList.add("hidden");
-//     }
-//   });
-// });
+countries.forEach((c) => {
+  const option = document.createElement("option");
+  option.value = c.code;
+  option.textContent = `${c.flag} ${c.code}`;
+  select.appendChild(option);
+});

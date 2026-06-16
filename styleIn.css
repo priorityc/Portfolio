@@ -120,14 +120,13 @@ body {
 
 .topnav {
   display: none;
-  background: radial-gradient(circle at center, #0a0f2c, #050618);
-  height: 70px;
-  padding: 0.5rem;
-}
-
-.topnav > div {
   display: flex;
   align-items: center;
+  justify-content: center;
+  background: var(--accent-purple);
+  height: 70px;
+  color: var(--bg-purple);
+  padding: 0.5rem;
 }
 
 .nav__link {
@@ -139,14 +138,14 @@ body {
   color: #fff;
 }
 
-.topnav .active {
+/* .topnav .active {
   background: rgba(138, 43, 226, 0.25);
   padding: 8px 16px;
   border-radius: 999px;
   backdrop-filter: blur(6px);
   box-shadow: 0 0 12px rgba(138, 43, 226, 0.4);
   transition: all 0.3s ease;
-}
+} */
 
 .nav__link:hover {
   color: #fefcfcd4;

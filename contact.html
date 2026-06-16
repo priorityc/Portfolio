@@ -55,10 +55,59 @@
 
 <main>
 <div>
-  <header class="contact-header">
-  <h1>Let`s Build your Next technical solution together!</h1>
-  <p>Whether you need a brand‑new site, a redesign, or help fixing what’s not working — I’m here to make the process simple, fast, and stress‑free.</p>
-  </header>
+   <header class="hero">
+      <div class="hero__inner">
+        <h1 class="hero-name">Petya Digital Care</h1>
+        <span class="hero-small">
+          React
+          <i class="bi bi-javascript"></i>
+          JavaScript
+          <i class="bi bi-filetype-css"></i>
+          CSS
+        </span>
+        <span class="hero-small"></span>
+        <h2 class="hero-role">
+          Front‑End Developer who builds clean, responsive, user-focused
+          interfaces.
+        </h2>
+        <p class="hero-sub">
+          I design and build fast, accessible interfaces with a focus on
+          clarity, usability, and real‑world business needs using modern tools.
+        </p>
+        <div class="hero-icons">
+          <a href="https://github.com/priorityc?tab=repositories">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="mailto:petya83dimitrova@gmail.com">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+          <a href="./media/PetyaDimitrova.docx" download="cv_PD.docx">
+            <i class="bi bi-arrow-down-square-fill"></i>
+          </a>
+        </div>
+        <div class="button-hero">
+          <button id="openM" class="cta-primary">Contact</button>
+          <a href="#projects" class="cta-secondary">View Projects</a>
+        </div>
+      </div>
+
+      <div class="tech-strip">
+        <div class="tech-strip-wrapper">
+          <div class="stack">
+            <span>React</span>
+            <span>Vite</span>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Bootstrap</span>
+            <span>Figma</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </header>
   <h2 class="projects-title">CMS(Content management system) Portfolio</h2>
   </div>
 <!-- <div id="myBtnContainer">
@@ -684,6 +733,8 @@ allow JS submit handler to run normally -->
       <small id="feedback_form-email" aria-live="polite"></small>
 
       <label for="form-phone">Phone(Optional)</label>
+      <select id="country-code"></select>
+
       <input type="tel" id="form-phone" name="form-phone" placeholder="(07… or +44…)" onchange="validateProjectInput(this)">
       <small id="feedback_form-phone" aria-live="polite"></small>
 
@@ -811,9 +862,9 @@ allow JS submit handler to run normally -->
       <p>I’ll get back to you within 24 hours with a personalised proposal.</p>
       <div class="confirmation-cont-btn">
       <i class="bi bi-check-lg"></i>
-      <button type="button" class="cta-primary" onclick="window.location.href='/home'">
+      <a class="cta-primary" href="index.html">
         Back to Home
-      </button>
+      </a>
       </div>
     </section>
 

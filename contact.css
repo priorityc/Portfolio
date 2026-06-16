@@ -18,6 +18,28 @@ body {
   --fs-lg: clamp(1.4rem, 2vw + 1rem, 2rem);
   --fs-xl: clamp(1.8rem, 3vw + 1rem, 2.8rem);
   --fs-xxl: clamp(2.2rem, 4vw + 1rem, 4.5rem);
+
+  /* Colors */
+  --main-gradient: #1a1a2e;
+  --bg-purple: #c9b3f2;
+  --card-purple: #f4eeff;
+  --accent-purple: #7a3ef0;
+  --text-dark: #1a1a1a;
+  --text-light: #6a6969;
+
+  /* Skills palette */
+  --skills-bg: #f6f7fb;
+  --skills-card-bg: #edebff;
+  --skills-border: #c9c4ff;
+  --skills-text: #2e2e3a;
+  --skills-muted: #6b6b8a;
+  --skills-accent: #6a1bbe;
+  --skills-pill-bg: #e8e6ff;
+
+  /* Shared tokens */
+  --border-purple: 1px solid rgba(167, 139, 250, 0.3);
+  --glow-purple: 0 0 22px rgba(167, 139, 250, 0.35);
+  --btn-gradient: linear-gradient(135deg, #38bdf8, #a855f7);
 }
 
 body {
@@ -153,6 +175,7 @@ body {
   flex-shrink: 0;
   padding: 2rem 10px;
   margin: 1rem 0;
+  background-color: var(--card-purple);
 }
 
 /* ------------------------------
@@ -318,7 +341,7 @@ label input[type="checkbox"] {
 /* Back + Next side by side */
 .nav-buttons {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   gap: 10px;
   margin: 1rem 0;
 }
