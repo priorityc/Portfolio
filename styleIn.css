@@ -1370,7 +1370,6 @@ body {
 
 .footer-box {
   background: radial-gradient(circle at center, #0a0f2c, #050618);
-  color: #fff;
   padding: 3rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -1424,6 +1423,7 @@ body {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
+  color: var(--card-purple);
   padding: 1.5rem;
   backdrop-filter: blur(8px);
 }
@@ -1534,6 +1534,52 @@ textarea:focus {
 
 .footer-links a:hover {
   text-decoration: underline;
+}
+
+/* FLOATING NAVS */
+.floating-nav {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 0.6rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(106, 27, 190, 0.15);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.floating-nav.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-item {
+  background: #6a1bbe;
+  color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.nav-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(106, 27, 190, 0.35);
 }
 
 /* =========================
@@ -1896,6 +1942,21 @@ textarea:focus {
 .fade-in-section.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Validation style  */
+small {
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  display: block;
+}
+small.invalid {
+  color: #d12f2f; /* red */
+}
+
+small.valid {
+  color: #2e8b57; /* green */
+  font-weight: 600;
 }
 
 /* =========================

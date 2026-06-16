@@ -648,7 +648,28 @@
           </div>
         </div>
       </section>
-      <button id="openM" class="floating-contact-btn">✉️ Contact</button>
+      <!-- Floating NAV`s -->
+      <div class="floating-nav">
+        <a href="#contact" class="nav-item">✉️</a>
+        <button class="nav-item scroll-top">⬆️</button>
+        <a href="https://github.com/priorityc" target="_blank" class="nav-item">
+          <i class="bi bi-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"
+          target="_blank"
+          class="nav-item"
+        >
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a
+          href="https://www.facebook.com/petyasdigitalcare"
+          target="_blank"
+          class="nav-item"
+        >
+          <i class="bi bi-facebook"></i>
+        </a>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -715,38 +736,44 @@
             instincts, I’d love to hear from you.
           </p>
 
-          <form onsubmit="validateFooterForm(event)">
+          <form id="contact-form" onsubmit="validateFooterForm(event)">
             <div class="form-row">
               <input
                 type="text"
                 id="footer_fname"
-                name="firstname"
+                name="footer_fname"
                 placeholder="First Name"
                 onchange="validateFooterInput(this)"
               />
+              <small id="feedback_footer_fname" aria-live="polite"></small>
+
               <input
                 type="text"
                 id="footer_lname"
-                name="lastname"
+                name="footer_lname"
                 placeholder="Last Name"
                 onchange="validateFooterInput(this)"
               />
+              <small id="feedback_footer_lname" aria-live="polite"></small>
             </div>
 
             <input
               type="email"
               id="footer_email"
-              name="email"
+              name="footer_email"
               placeholder="Your Email"
               onchange="validateFooterInput(this)"
             />
+            <small id="feedback_footer_email" aria-live="polite"></small>
+
             <textarea
               id="footer_message"
-              name="message"
+              name="footer_message"
               rows="6"
               placeholder="Write your message here..."
               onchange="validateFooterInput(this)"
             ></textarea>
+            <small id="feedback_footer_message" aria-live="polite"></small>
 
             <div class="footer-btn">
               <input class="btn-primary-footer" type="submit" value="Submit" />
@@ -778,7 +805,7 @@
       <div class="modal-content">
         <button class="close-modal">&times;</button>
 
-        <form class="hireModal" onsubmit="validateModal(event)">
+        <form class="hireModalFooter" onsubmit="validateModal(event)">
           <!-- <div class="abstract-shape-modal"></div> -->
           <h2>Let’s Work Together</h2>
           <label for="modal_name">Name</label>
@@ -799,7 +826,7 @@
             placeholder="Your email"
             onchange="validateModalInput(this)"
           />
-          <small id="feedback_modal_email" aria-live="polite"></small>
+          <small id="feedback_modal_name" aria-live="polite"></small>
 
           <label for="modal_message">Message</label>
           <textarea
@@ -810,8 +837,8 @@
             onchange="validateModalInput(this)"
           ></textarea>
           <small id="feedback_modal_message" aria-live="polite"></small>
-
           <input type="submit" value="Send Request" class="btn-primary" />
+
           <div class="form-heading">
             <a href="https://github.com/priorityc?tab=repositories">
               <i

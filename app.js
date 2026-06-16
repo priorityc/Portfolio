@@ -75,7 +75,7 @@ const projects = {
     overview:
       "A tool for automating construction service quotes to save time and reduce errors.",
     descr:
-      "A mobile‑first service quote calculator prototype designed for a newly established construction business entering the market quickly. The design problem focuses on the inaccuracy of manual quoting, delays in providing estimates, and the lack of transparency in the current workflow. These issues risk wasted materials, reduced customer trust, and losing clients to competitors. The prototype replaces manual calculations with a guided, automated tool that enables the company to deliver fast, consistent, and reliable service quotes in demanding on‑site environments.",
+      "A mobile‑first service quote calculator prototype designed for a newly established construction business entering the market quickly.",
     features: [
       "Step by step interactions",
       "Instant quote calculation",
@@ -772,11 +772,27 @@ tabs.forEach((tab) => {
 //   }
 // })
 
+// Floating NAV`s
+const floatingNav = document.querySelector(".floating-nav");
+const scrollTopBtn = document.querySelector(".scroll-top");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    floatingNav.classList.add("visible");
+  } else {
+    floatingNav.classList.remove("visible");
+  }
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
 // Footer form validation
 //1
 // Footer validation
 
-const contactForm = document.getElementById("contact"); //select the modal
+const contactForm = document.getElementById("contact-form"); //select the modal
 
 function validateFooterInput(inputElement) {
   const feedback = document.getElementById("feedback_" + inputElement.id);
@@ -814,8 +830,8 @@ function validateFooterInput(inputElement) {
   return isValid;
 }
 
-function validateFooterForm(e) {
-  e.preventDefault();
+function validateFooterForm(event) {
+  event.preventDefault();
 
   const fnameInput = document.getElementById("footer_fname");
   const lnameInput = document.getElementById("footer_lname");
