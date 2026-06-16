@@ -336,7 +336,7 @@ body {
   color: #fff;
   cursor: pointer;
   border: none;
-  border-radius: 6px;
+  border-radius: 16px;
   font-size: var(--fs-sm);
   font-weight: 500;
   text-transform: uppercase;
@@ -355,7 +355,7 @@ body {
 .cta-secondary {
   /* background-color: #01025c; */
   background-color: #6a1bbe;
-  border-radius: 6px;
+  border-radius: 16px;
   text-decoration: none;
   transition: background 0.2s ease;
 }
@@ -717,11 +717,11 @@ body {
   text-align: center;
 }
 
-.icon {
+/* .icon {
   width: 50px;
   stroke: orange;
   margin-right: 1rem;
-}
+} */
 
 .aproach-cont {
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
@@ -876,6 +876,25 @@ body {
   transform: translateY(-5px);
 }
 
+.tags__list {
+  display: flex;
+
+  padding: 0;
+  list-style: none;
+  border-radius: 1.2rem;
+}
+
+.tag {
+  /* background: rgba(255, 255, 255, 0.15); */
+  padding: 0.35rem 0.75rem;
+  backdrop-filter: blur(4px);
+}
+
+.tag i {
+  font-size: 1.5rem;
+  color: #c9b6ff;
+}
+
 .project-descr {
   padding: 1em;
 }
@@ -906,13 +925,12 @@ body {
 
 .project-thumb-app {
   width: 100%;
-  max-width: 50%;
-  margin: 0 auto;
-  height: auto;
-  border-radius: 10px;
+  max-width: 60%;
+  margin: 2.5rem auto 0 auto;
+  border-radius: 16px;
   display: block;
   box-sizing: border-box;
-  border: 10px solid #d1d5db;
+  border: 16px solid #d1d5db;
 }
 
 .project-thumb {
@@ -935,9 +953,10 @@ body {
   font-size: var(--fs-sm);
 }
 .project-tech {
-  border-radius: 16px;
+  display: flex;
   height: 50px;
   color: var(--accent-purple);
+  margin-bottom: 1rem;
 }
 
 /* Project buttons */
@@ -953,10 +972,9 @@ body {
 .btn-secondary,
 .btn-text,
 .details-btn {
-  padding: 8px 14px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  border-radius: 16px;
   text-decoration: none;
-  font-size: 0.9rem;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
@@ -967,9 +985,9 @@ body {
   align-items: center;
   background: #6a1bbe;
   color: white;
-  padding: 8px 14px;
   letter-spacing: 1px;
   text-decoration: none;
+  border: none;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
@@ -1012,7 +1030,7 @@ body {
 
 .btn-secondary {
   color: #a78bfa;
-  border-radius: 6px;
+  border-radius: 16px;
   border: 1px solid rgba(148, 163, 253, 0.6);
   text-decoration: none;
   transition: background 0.2s ease;
@@ -1799,10 +1817,9 @@ textarea:focus {
 }
 
 .tag {
-  background: #e8e6ff;
-  border: 1px solid #c9c4ff;
+  /* border: 1px solid #c9c4ff; */
   padding: 0.35rem 0.7rem;
-  border-radius: 999px;
+  border-radius: 16px;
   font-size: 0.85rem;
 }
 
@@ -2392,13 +2409,12 @@ small.valid {
     gap: 0.5rem;
   }
 
-  .tag {
+  /* .tag {
     background: #e8e6ff;
     border: 1px solid #c9c4ff;
-    /* padding: 0.35rem 0.7rem; */
     border-radius: 16px;
     font-size: 0.85rem;
-  }
+  } */
 
   .btn {
     background: #220443;
