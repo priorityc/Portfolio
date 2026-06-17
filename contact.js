@@ -164,11 +164,23 @@ const countries = [
   // You can add more if you want
 ];
 
+const phoneRules = {
+  "+44": /^(\+44\d{10}|07\d{9})$/, // UK
+  "+1": /^\+1\d{10}$/, // USA & Canada
+  "+359": /^\+359\d{9}$/, // Bulgaria
+  "+49": /^\+49\d{10,11}$/, // Germany
+  "+33": /^\+33\d{9}$/, // France
+  "+34": /^\+34\d{9}$/, // Spain
+  "+39": /^\+39\d{9,10}$/, // Italy
+  "+61": /^\+61\d{9}$/, // Australia
+  "+91": /^\+91\d{10}$/, // India
+};
+
 const select = document.getElementById("country-code");
-const phoneInput = document.getElementById("form_phone");
+const phoneInput = document.getElementById("form-phone");
 
 function validatePhone() {
-  const code = countrySelect.value;
+  const code = select.value;
   const rule = phoneRules[code];
   const fullNumber = code + phoneInput.value.trim();
 
@@ -271,16 +283,12 @@ function validateProjectInput(inputElement) {
     message = "Enter a valid email address.";
   }
 
-  // PHONE
   if (inputElement.id === "form-phone") {
-    // pattern = /^(07\d{9}|(\+44\s?\d{10}))$/;
-    // message = "Enter a valid UK phone number (07… or +44…).";
     const isValid = validatePhone();
+    message = "Enter a valid phone number for the selected country.";
 
-    if (!isValid) {
-      message = "Enter a valid phone number for the selected country.";
-      return false;
-    }
+    updateFeedback(feedback, isValid, message);
+    return isValid;
   }
 
   // URL

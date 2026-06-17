@@ -719,7 +719,7 @@ allow JS submit handler to run normally -->
     <!-- ========================= -->
     
     <section class="form-step" id="step1">
-      <div>
+      <div class="form-header">
       <h2>Requirements Form</h2>
       <p class="paragrh">Please fill out this short form so I can understand your 
         project and prepare an accurate proposal.</p>
@@ -735,7 +735,7 @@ allow JS submit handler to run normally -->
       <label for="form-phone">Phone(Optional)</label>
       <select id="country-code"></select>
 
-      <input type="tel" id="form-phone" name="form-phone" placeholder="(07… or +44…)" onchange="validateProjectInput(this)">
+      <input type="tel" id="form-phone" name="form-phone" placeholder="(07… or other for the country)" onchange="validateProjectInput(this)">
       <small id="feedback_form-phone" aria-live="polite"></small>
 
       <label for="form-url">Current Website (optional)</label>
@@ -751,21 +751,22 @@ allow JS submit handler to run normally -->
     <!--   STEP 2 — PROJECT TYPE   -->
     <!-- ========================= -->
     <section class="form-step" id="step2">
+      <div class="form-header">
       <h2>Project Details</h2>
-
+      </div>
       <p>* What type of website do you need? </p>
       <div class="radio-btn-cont">
-      <label><input type="radio" name="project-radio" value="new"> New Website</label>
-      <label><input type="radio" name="project-radio" value="store"> Online Store</label>
-      <label><input type="radio" name="project-radio" value="booking"> Booking System</label>
-      <label><input type="radio" name="project-radio" value="redesign"> Redesign Website</label>
+      <label class="radio-btn"><input type="radio" name="project-radio" value="new"> New Website</label>
+      <label class="radio-btn"><input type="radio" name="project-radio" value="store"> Online Store</label>
+      <label class="radio-btn"><input type="radio" name="project-radio" value="booking"> Booking System</label>
+      <label class="radio-btn"><input type="radio" name="project-radio" value="redesign"> Redesign Website</label>
       </div>
         <small id="feedback_project-radio" aria-live="polite"></small>
 
-      <label for="other-type">If you want something different list it here (Optional):</label>
+      <label for="other-type">If you want something different list it here:</label>
       <input type="text" id="other-type" name="other_type" optional>
 
-      <label for="project-desc">Tell me more about your project</label>
+      <label for="project-desc">* Tell me more about your project</label>
       <textarea id="project-desc" name="project-desc" placeholder="What is it for? Do you have content ready, branding, domain?"></textarea>
       <small id="feedback_project-desc" aria-live="polite"></small>
 
@@ -779,9 +780,10 @@ allow JS submit handler to run normally -->
     <!--   STEP 3 — FEATURES       -->
     <!-- ========================= -->
     <section class="form-step" id="step3">
+      <div class="form-header">
       <h2>Project Details</h2>
-
-      <p>How many pages do you require in total?</p>
+</div>
+      <p>* How many pages do you require in total?</p>
       <select id="total-pages" name="total-pages" onchange="validateProjectInput(this)">
         <option value="">Select…</option>
         <option value="1">1 Page</option>
@@ -789,6 +791,9 @@ allow JS submit handler to run normally -->
         <option value="3">3 Pages</option>
         <option value="4">4 Pages</option>
         <option value="5">5 Pages</option>
+        <option value="6">6 Pages</option>
+        <option value="7">7 Pages</option>
+        <option value="8">8 Pages</option>
       </select>
        <small id="feedback_total-pages" aria-live="polite"></small>
 
@@ -805,12 +810,12 @@ allow JS submit handler to run normally -->
 
       <p>Do you want to include additional features?(Optional).</p>
 
-      <label><input type="checkbox" name="features" value="contact"> Contact Form</label>
-      <label><input type="checkbox" name="features" value="gallery"> Image Gallery</label>
-      <label><input type="checkbox" name="features" value="map"> Google Map</label>
-      <label><input type="checkbox" name="features" value="testimonials"> Testimonials</label>
-      <label><input type="checkbox" name="features" value="faq"> FAQ</label>
-      <label><input type="checkbox" name="features" value="other">None</label>
+      <label class="radio-btn"><input type="checkbox" name="features" value="contact"> Contact Form</label>
+      <label class="radio-btn"><input type="checkbox" name="features" value="gallery"> Image Gallery</label>
+      <label class="radio-btn"><input type="checkbox" name="features" value="map"> Google Map</label>
+      <label class="radio-btn"><input type="checkbox" name="features" value="testimonials"> Testimonials</label>
+      <label class="radio-btn"><input type="checkbox" name="features" value="faq"> FAQ</label>
+      <label class="radio-btn"><input type="checkbox" name="features" value="other">None</label>
 
       <label for="diferent-feature">If you want something different from the listed feature specify(Optional)</label>
       <input type="text" id="diferent-feature" name="diferent-feature" placeholder="Provide your feature..." optional>
@@ -825,17 +830,18 @@ allow JS submit handler to run normally -->
     <!--   STEP 4 — TIMELINE       -->
     <!-- ========================= -->
     <section class="form-step" id="step4">
+      <div class="form-header">
       <h2>Project Details</h2>
-
-      <p>What is your timeline?</p>
-      <label><input type="radio" name="timeline" value="asap"> ASAP</label>
-      <label><input type="radio" name="timeline" value="1-2"> 1–2 Weeks</label>
-      <label><input type="radio" name="timeline" value="2-4"> 2–4 Weeks</label>
-      <label><input type="radio" name="timeline" value="flexible"> Flexible</label>
+      </div>
+      <p>* What is your timeline?</p>
+      <label class="radio-btn"><input type="radio" name="timeline" value="asap"> ASAP</label>
+      <label class="radio-btn"><input type="radio" name="timeline" value="1-2"> 1–2 Weeks</label>
+      <label class="radio-btn"><input type="radio" name="timeline" value="2-4"> 2–4 Weeks</label>
+      <label class="radio-btn"><input type="radio" name="timeline" value="flexible"> Flexible</label>
       <small id="feedback_timeline" aria-live="polite"></small>
 
 
-      <label for="budget">What is your budget?</label>
+      <label for="budget">* What is your budget?</label>
       <select id="budget" name="budget"  onchange="validateProjectInput(this)">
         <option value="">Select…</option>
         <option value="300">Under £300</option>
@@ -862,7 +868,7 @@ allow JS submit handler to run normally -->
       <p>I’ll get back to you within 24 hours with a personalised proposal.</p>
       <div class="confirmation-cont-btn">
       <i class="bi bi-check-lg"></i>
-      <a class="cta-primary" href="index.html">
+      <a class="cta-primary" href="contact.html">
         Back to Home
       </a>
       </div>

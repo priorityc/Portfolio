@@ -153,6 +153,9 @@ body {
   margin: 0 auto;
 }
 
+.form-header {
+  margin-bottom: 2rem;
+}
 /* ------------------------------
    SECTION WRAPPER
 --------------------------------*/
@@ -236,9 +239,11 @@ body {
 /* ------------------------------
    INPUTS
 --------------------------------*/
-.radio-btn-con {
+.radio-btn-cont {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 label {
   display: inline-block;
@@ -246,10 +251,18 @@ label {
   font-weight: 500;
   margin-bottom: 1rem;
 }
+
+.radio-btn {
+  /* border: 1px solid var(--accent-purple); */
+  border-radius: 16px;
+  padding: 0.3em;
+  text-align: center;
+  background-color: var(--bg-purple);
+}
 .radio-btn-con label {
   border: 1px solid powderblue;
   border-radius: 6px;
-  padding: 1em;
+  padding: 0.2em;
 }
 
 #starterForm input,
@@ -341,23 +354,28 @@ label input[type="checkbox"] {
 /* Back + Next side by side */
 .nav-buttons {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   gap: 10px;
-  margin: 1rem 0;
+  margin-top: 5rem;
 }
 
-.next-btn {
-  padding: 1rem 2.5rem;
+.next-btn,
+.back-btn {
   border: none;
-  border-radius: 6px;
-  background: linear-gradient(135deg, #38bdf8, #a855f7);
-  color: #fff;
-  font-size: 1rem;
-  cursor: pointer;
-  box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
+  height: 70px;
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  border-radius: 16px;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 .next-btn:hover {
@@ -365,18 +383,16 @@ label input[type="checkbox"] {
   box-shadow: 0 0 28px rgba(56, 189, 248, 0.8);
 }
 
+.next-btn {
+  background: linear-gradient(135deg, #38bdf8, #a855f7);
+
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
+}
+
 .back-btn {
   background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
-  border: 1px solid rgba(167, 139, 250, 0.3);
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s ease;
-  border-radius: 6px;
-  cursor: pointer;
-  padding: 1em;
-  width: 100px;
-  height: 70px;
 }
+
 /* SUCCESS screen */
 #step5 {
   text-align: center;
@@ -395,6 +411,11 @@ label input[type="checkbox"] {
 .confirmation-cont-btn {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+.confirmation-cont-btn a {
+  text-decoration: none;
 }
 
 #step5 .cta-primary {
@@ -597,9 +618,9 @@ small.valid {
   }
 
   .form-step {
-    border: 1px solid powderblue;
     padding: 10rem 20rem;
     border-radius: 1rem;
+    max-width: 800px;
   }
 
   .submit-btn {
