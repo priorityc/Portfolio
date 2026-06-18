@@ -27,7 +27,8 @@ body {
   --main-gradient: #1a1a2e;
   --bg-purple: #c9b3f2;
   --card-purple: #f4eeff;
-  --accent-purple: #b886ee;
+  /* --accent-purple: #b886ee; */
+  --accent-purple: #7c8cff;
   --text-dark: #1a1a1a;
   --text-light: #6a6969;
 
@@ -270,7 +271,7 @@ body {
   transition: 0.3s ease;
 }
 .bi {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin: 0 0.7rem;
   color: #c9b6ff;
   transition: color 0.3s ease;
@@ -338,6 +339,7 @@ body {
   margin-bottom: 1rem;
   display: block;
   margin-bottom: 0.8rem;
+  text-align: center;
   opacity: 0.85;
 }
 
@@ -469,15 +471,15 @@ body {
   background: var(--skills-card-bg);
   border: 1px solid var(--skills-border);
   border-radius: 0.75rem;
-  padding: 1.25rem 1rem;
+  padding: 1.5rem 1.2rem;
   box-shadow: 0 4px 12px rgba(106, 27, 190, 0.08);
+  font-size: var(--fs-lg);
 }
 
 .skills__group-title {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
-  color: var(--skills-accent);
 }
 
 /* Skill pills */
@@ -542,10 +544,10 @@ body {
   opacity: 0.8;
 }
 
-.about-item h2,
+/* .about-item h2,
 .about-item h3 {
   margin-bottom: 0.5rem;
-}
+} */
 
 .about-details {
   margin-bottom: 1rem;
@@ -574,7 +576,7 @@ body {
 }
 
 .latest-roles .about-title {
-  font-size: 1.2rem;
+  font-size: var(--fs-lg);
   font-weight: 700;
   color: #6a1bbe;
   margin-bottom: 1rem;
@@ -811,11 +813,11 @@ body {
 
 .skills-title {
   font-size: var(--fs-lg);
+  font-weight: 900;
   color: var(--main-gradient);
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
 }
 
 .skills-grid {
@@ -897,7 +899,7 @@ body {
     "box-2"
     "box-3"
     "box-4";
-  gap: 1em;
+  gap: 1rem;
 }
 
 .item {
@@ -958,11 +960,17 @@ body {
 }
 
 .tag i {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #c9b6ff;
 }
 
 .project-descr {
+  padding: 1em;
+  font-size: var(--fs-md);
+}
+
+.project-header {
+  text-align: center;
   padding: 1em;
 }
 
@@ -1009,14 +1017,15 @@ body {
 
 .project-title {
   font-size: var(--fs-lg);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--accent-purple);
+  margin: 1rem 0;
 }
 .project-desc {
   color: #d1d5db;
   line-height: 1.5;
-  margin-bottom: 1rem;
-  font-size: var(--fs-sm);
+  margin-bottom: 1.5rem;
+  font-size: var(--fs-md);
 }
 .project-tech {
   display: flex;
@@ -1887,7 +1896,6 @@ textarea:focus {
   /* border: 1px solid #c9c4ff; */
   padding: 0.35rem 0.7rem;
   border-radius: 16px;
-  font-size: 0.85rem;
 }
 
 .modal__images {
@@ -2256,7 +2264,6 @@ small.valid {
     grid-template-areas:
       "box-1 box-1 box-2"
       "box-3 box-4 box-4";
-    gap: 1rem;
   }
 
   .item img {
@@ -2355,7 +2362,6 @@ small.valid {
     margin: 0 auto;
     grid-template-columns: repeat(3, 2fr);
     padding: 5rem 0;
-    gap: 3em;
     grid-template-areas:
       "box-1 box-1 box-2"
       "box-3 box-4 box-4";
