@@ -260,7 +260,14 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-icons a {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  transition: 0.3s ease;
 }
 .bi {
   font-size: 1.4rem;
@@ -269,9 +276,14 @@ body {
   transition: color 0.3s ease;
 }
 
-.hero-content i:hover {
-  color: #c084fc;
+.hero-icons a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
 }
+
+/* .hero-content i:hover {
+  color: #c084fc;
+} */
 
 /* Hero layout */
 
@@ -324,13 +336,18 @@ body {
   color: var(--accent-purple);
   font-weight: 600;
   margin-bottom: 1rem;
+  display: block;
+  margin-bottom: 0.8rem;
+  opacity: 0.85;
 }
 
 .h1-innertext {
   text-transform: none;
   font-size: var(--fs-xl);
   font-weight: 800;
-  line-height: -0.5px;
+  display: block;
+  margin-top: 0.5rem;
+  line-height: 1.38;
 }
 
 .user-focused {
@@ -340,17 +357,33 @@ body {
 .hero-sub {
   color: #c7c9e8;
   font-size: var(--fs-md);
+  max-width: 55ch;
+  margin: 0 auto 2.5rem;
+  font-size: var(--fs-lg);
+  opacity: 0.85;
 }
 
 /* Hero CTAs */
 
 .button-hero {
   display: flex;
-  gap: 0.75rem;
   width: 100%;
   margin-bottom: 2rem;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
-
+.cta-primary {
+  padding: 0.9rem 1.8rem;
+  background: var(--btn-gradient);
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  transition: 0.3s ease;
+  border: none;
+  background: var(--btn-gradient);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
+}
 .cta-primary,
 .cta-secondary {
   width: 100%;
@@ -366,23 +399,32 @@ body {
   letter-spacing: 1.8;
 }
 
-.cta-primary {
-  background: var(--btn-gradient);
-  box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
-}
-
 .cta-primary:hover {
   background: linear-gradient(135deg, #38bff87a, #a955f76d);
+  filter: brightness(1.2);
 }
 
-.cta-secondary {
-  /* background-color: #01025c; */
-  /* background-color: #6a1bbe; */
-  background-color: transparent;
+/* .cta-secondary { */
+/* background-color: #01025c; */
+/* background-color: #6a1bbe; */
+/* background-color: transparent;
   border: var(--border-purple);
   border-radius: 16px;
   text-decoration: none;
   transition: background 0.2s ease;
+} */
+
+.cta-secondary {
+  padding: 0.9rem 1.8rem;
+  border: 1.8px solid var(--card-purple);
+  border-radius: 16px;
+  color: var(--accent);
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
 }
 .hero-small {
   background-color: #2a00c7;

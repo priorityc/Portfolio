@@ -347,24 +347,24 @@ const headerObserver = new IntersectionObserver(stickyNav, {
 headerObserver.observe(header);
 
 // On load show the skill bar
-// document.addEventListener("DOMContentLoaded", () => {
-//   document.querySelectorAll(".skill-bar").forEach((bar) => {
-//     //Every HTML element can have custom attributes that start with data-
-//     // The browser automatically collects all types of data-*
-//     // attributes into a special JavaScript object called dataset.
-//     // level becomes property on the dataset object defined as property inside data-level in the HTML
-//     const level = bar.dataset.level;
-//     //--level is CSS property that will be used in the CSS like width: var(--level);
-//     // - Takes the value from HTML ("90")
-//     // - Adds a % → "90%"
-//     // - Stores it in the CSS variable --level
-//     // - CSS uses that value to animate the bar width
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".skill-bar").forEach((bar) => {
+    //Every HTML element can have custom attributes that start with data-
+    // The browser automatically collects all types of data-*
+    // attributes into a special JavaScript object called dataset.
+    // level becomes property on the dataset object defined as property inside data-level in the HTML
+    const level = bar.dataset.level;
+    //--level is CSS property that will be used in the CSS like width: var(--level);
+    // - Takes the value from HTML ("90")
+    // - Adds a % → "90%"
+    // - Stores it in the CSS variable --level
+    // - CSS uses that value to animate the bar width
 
-//     bar.style.setProperty("--level", level + "%");
-//     bar.querySelector("span").textContent += ` — ${level}%`;
-//     // bar.classList.add("animate");
-//   });
-// });
+    bar.style.setProperty("--level", level + "%");
+    bar.querySelector("span").textContent += ` — ${level}%`;
+    // bar.classList.add("animate");
+  });
+});
 
 //Colapsable sidebar
 // Take all projects
