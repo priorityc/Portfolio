@@ -503,7 +503,6 @@ small.valid {
 }
 
 .btn-primary {
-  background: #3a00ff;
   color: white;
 }
 
@@ -556,6 +555,9 @@ small.valid {
   display: none;
 } */
 /*  */
+.project-descr li {
+  color: var(--btn-gradient);
+}
 
 @media (min-width: 768px) {
   .topnav {

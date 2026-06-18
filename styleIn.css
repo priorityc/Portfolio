@@ -27,7 +27,7 @@ body {
   --main-gradient: #1a1a2e;
   --bg-purple: #c9b3f2;
   --card-purple: #f4eeff;
-  --accent-purple: #7a3ef0;
+  --accent-purple: #b886ee;
   --text-dark: #1a1a1a;
   --text-light: #6a6969;
 
@@ -541,7 +541,7 @@ body {
 
 .experience-card h5 {
   font-size: 0.9rem;
-  color: #6b6b8a;
+  color: #54546b;
   font-weight: 500;
 }
 
@@ -945,7 +945,6 @@ body {
   font-weight: 600;
   color: var(--accent-purple);
 }
-
 .project-desc {
   color: #d1d5db;
   line-height: 1.5;
@@ -983,7 +982,7 @@ body {
 .details-btn {
   display: inline-flex;
   align-items: center;
-  background: #6a1bbe;
+  background: #8f3fe4;
   color: white;
   letter-spacing: 1px;
   text-decoration: none;
@@ -1471,6 +1470,7 @@ textarea {
   background-color: #1a1a2e;
   color: #fff;
   font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 input:focus,

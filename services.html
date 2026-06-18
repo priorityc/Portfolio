@@ -68,10 +68,10 @@
       </p>
 
       <div class="hero-icons">
-        <a href="https://github.com/priorityc?tab=repositories"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"><i class="bi bi-linkedin"></i></a>
-        <a href="mailto:petya83dimitrova@gmail.com"><i class="bi bi-envelope-fill"></i></a>
-        <a href="./media/PetyaDimitrova.docx" download="cv_PD.docx"><i class="bi bi-arrow-down-square-fill"></i></a>
+        <a href="https://github.com/priorityc?tab=repositories" aria-label="GitHub page"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/" aria-label="Linkedin profiel"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:petya83dimitrova@gmail.com" aria-label="Contact page"><i class="bi bi-envelope-fill"></i></a>
+        <a href="./media/PetyaDimitrova.docx" download="cv_PD.docx" aria-label="DOwnload CV in Word format"><i class="bi bi-arrow-down-square-fill"></i></a>
       </div>
       <div class="button-hero">
           <button id="openM" class="cta-primary">Contact</button>
@@ -312,11 +312,15 @@
 
       <form onsubmit="validateFooterForm(event)">
         <div class="form-row">
-          <input type="text" id="footer_fname" name="firstname" placeholder="First Name" onchange="validateFooterInput(this)" />
+        <label for="footer_fname"></label>
+         <input type="text" id="footer_fname" name="firstname" placeholder="First Name" onchange="validateFooterInput(this)" />
+        <label for="footer_lname"></label>
           <input type="text" id="footer_lname" name="lastname" placeholder="Last Name" onchange="validateFooterInput(this)" />
         </div>
+        <label for="footer_email"></label>
 
         <input type="email" id="footer_email" name="email" placeholder="Your Email" onchange="validateFooterInput(this)" />
+        <label for="footer_message"></label>
         <textarea id="footer_message" name="message" rows="6" placeholder="Write your message here..." onchange="validateFooterInput(this)"></textarea>
 
         <div class="footer-btn">
