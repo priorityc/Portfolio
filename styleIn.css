@@ -48,8 +48,8 @@ body {
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  font-size: var(--fs-sm);
-  font-weight: 300;
+  font-size: var(--fs-md);
+  font-weight: 400;
   line-height: 1.6;
   color: var(--skills-text);
   background-color: rgb(254, 254, 254);
@@ -64,6 +64,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  background-color: var(--bg-purple);
+  color: var(--card-purple);
   padding: 6px 12px;
 }
 
@@ -163,7 +165,7 @@ body {
   justify-content: space-between;
   padding-left: 48px;
   padding-right: 48px;
-  background-color: var(--cream);
+  background-color: var(--bg-purple);
   color: #444;
   line-height: 1.4;
   height: 120px;
@@ -252,11 +254,18 @@ body {
 }
 
 /* Icons */
-
+.hero-icons {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
 .bi {
   font-size: 1.4rem;
   margin: 0 0.7rem;
-  color: #c084fc;
+  color: #c9b6ff;
   transition: color 0.3s ease;
 }
 
@@ -300,19 +309,32 @@ body {
 
 .hero-name {
   font-size: var(--fs-xxl);
-  font-weight: 600;
-  letter-spacing: 1.5px;
+  font-weight: 800;
+  letter-spacing: 1.1px;
   text-transform: uppercase;
   margin-bottom: 0.3rem;
-  background: var(--btn-gradient);
+  background-color: #fff;
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .hero-role {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  font-weight: 600;
   margin-bottom: 1rem;
-  color: #a5a7c7;
+}
+
+.h1-innertext {
+  text-transform: none;
+  font-size: var(--fs-xl);
+  font-weight: 800;
+  line-height: -0.5px;
+}
+
+.user-focused {
+  color: var(--accent-purple);
 }
 
 .hero-sub {
@@ -326,6 +348,7 @@ body {
   display: flex;
   gap: 0.75rem;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .cta-primary,
@@ -354,7 +377,9 @@ body {
 
 .cta-secondary {
   /* background-color: #01025c; */
-  background-color: #6a1bbe;
+  /* background-color: #6a1bbe; */
+  background-color: transparent;
+  border: var(--border-purple);
   border-radius: 16px;
   text-decoration: none;
   transition: background 0.2s ease;
@@ -2003,7 +2028,7 @@ small.valid {
 
   .cta-primary,
   .cta-secondary {
-    width: auto;
+    max-width: 200px;
   }
 
   .project-descr {
@@ -2254,9 +2279,13 @@ small.valid {
   }
 
   .hero {
-    height: 100vh;
+    height: 135vh;
     text-align: left;
     margin-bottom: 7rem;
+  }
+
+  .hero-icons {
+    gap: 1rem;
   }
 
   .hero__inner {
