@@ -391,6 +391,7 @@ projectItems.forEach((item) => {
 // SLIDER
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
+console.log(slides);
 
 function showSlide(index) {
   slides.forEach((slide, i) => {
@@ -399,7 +400,7 @@ function showSlide(index) {
 }
 
 setInterval(() => {
-  currentSlide = (currentSlide + 1) % slides.length;
+  currentSlide = (currentSlide + 1) % slides.length; //0+1%4=1%4
   showSlide(currentSlide);
 }, 12000);
 // MODAL
