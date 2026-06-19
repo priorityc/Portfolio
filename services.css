@@ -80,10 +80,10 @@ body {
   margin-bottom: 2.5rem;
 }
 
-.why-me__header h2 {
+/* .why-me__header h2 {
   font-size: var(--fs-lg);
   margin-bottom: 0.5rem;
-}
+} */
 
 .why-me__header p {
   font-size: 0.95rem;
@@ -163,8 +163,8 @@ body {
 --------------------------------*/
 .pricing-compare {
   padding: 3rem 1.25rem;
-  background: radial-gradient(circle at top, #1e1b4b 0, #020617 55%, #000 100%);
-  color: var(--clr-text-main);
+  background: var(--skills-border);
+  /* color: var(--clr-text-main); */
 }
 
 .pricing-compare__inner {
@@ -178,18 +178,6 @@ body {
 .pricing-compare__header {
   text-align: center;
   margin-bottom: 2.5rem;
-}
-
-.pricing-compare__header h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.pricing-compare__header p {
-  color: var(--clr-text-muted);
-  font-size: 0.95rem;
-  max-width: 420px;
-  margin: 0.5rem auto 0;
 }
 
 /* ------------------------------
@@ -265,6 +253,7 @@ body {
   background: rgba(148, 163, 253, 0.12);
   border: 1px solid rgba(148, 163, 253, 0.4);
   margin-bottom: 1rem;
+  color: var(--skills-border);
 }
 
 .pricing-card__badge--highlight {
@@ -276,8 +265,8 @@ body {
    TITLES & PRICE
 --------------------------------*/
 .pricing-card__title {
-  font-size: 1.1rem;
   margin-bottom: 0.25rem;
+  color: var(--skills-border);
 }
 
 .pricing-card__price {
@@ -369,7 +358,11 @@ body {
 --------------------------------*/
 .process {
   padding: 3rem 1.25rem;
-  background: radial-gradient(circle at top, #1e1b4b 0, #020617 55%, #000 100%);
+  background: radial-gradient(
+    circle,
+    rgb(27, 32, 61) 0%,
+    rgba(28, 5, 11, 1) 100%
+  );
   color: #f5f5ff;
 }
 
@@ -409,12 +402,45 @@ body {
 /* ------------------------------
    STEP CARDS
 --------------------------------*/
+.process-diagram {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
 .process-step {
-  background: linear-gradient(
-    145deg,
-    rgba(15, 23, 42, 0.96),
-    rgba(15, 23, 42, 0.85)
-  );
+  padding: 1rem 1.5rem;
+  background: radial-gradient(circle, rgb(27, 32, 61), rgba(28, 5, 11, 1));
+  border: 1px solid rgba(63, 17, 200, 0.4);
+  border-radius: 40px;
+  color: var(--bg-purple);
+  font-weight: 600;
+  max-width: 300px;
+  box-shadow: 0 0 12px rgba(63, 17, 200, 0.4);
+}
+
+.process-step.final {
+  background: linear-gradient(135deg, #6a00ff, #b300ff);
+  color: white;
+  border-color: transparent;
+}
+
+.arrow {
+  font-size: 2rem;
+  color: var(--bg-purple);
+  font-weight: bold;
+}
+
+/*  */
+.process-step {
+  background: var(--skills-border);
+  color: #444;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.25rem;
   padding: 1.75rem 1.5rem;
@@ -465,7 +491,6 @@ body {
 }
 
 .process-step__text {
-  color: #a5a7c7;
   font-size: 0.9rem;
   line-height: 1.5;
 }
@@ -492,6 +517,10 @@ a {
   .why-me__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .why-me {
+    margin-bottom: 3rem;
+  }
+
   .pricing-compare__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -501,6 +530,10 @@ a {
   }
   .process__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .process-diagram {
+    flex-direction: row;
+    margin-bottom: 3rem;
   }
 }
 
@@ -521,5 +554,8 @@ a {
   }
   .process__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .workprocess-cont {
+    margin-bottom: 7rem;
   }
 }

@@ -1404,7 +1404,7 @@ body {
 .service-btn {
   display: inline-block;
   padding: 0.7rem 1.4rem;
-  border-radius: 8px;
+  border-radius: 16px;
   background: linear-gradient(135deg, rgb(56, 189, 248), rgb(168, 85, 247));
   color: #fff;
   text-decoration: none;
@@ -1638,7 +1638,7 @@ body {
 textarea {
   width: 100%;
   padding: 0.8rem;
-  border-radius: 6px;
+  border-radius: 16px;
   border: 1px solid #2e2e4e;
   background-color: #1a1a2e;
   color: #fff;
@@ -1674,7 +1674,7 @@ textarea:focus {
   cursor: pointer;
   transition: 0.3s ease;
   padding: 0.8rem 1.2rem;
-  border-radius: 6px;
+  border-radius: 16px;
 }
 
 .btn-primary-footer:hover {
@@ -2669,6 +2669,10 @@ small.valid {
     margin-bottom: 7rem;
     max-width: 1100px;
     padding: 5em;
+  }
+
+  .slide {
+    padding: 2rem;
   }
 
   .traits {

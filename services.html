@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styleIn.css">
  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -55,62 +55,76 @@
       </div>
     </nav>
 
-<header class="hero">
-  <div class="hero__inner">
+ <header class="hero">
+      <div class="hero__inner">
+        <div class="hero-title">
+          <span class="hero-role">Front-End Developer</span>
+          <span class="hero-small">
+            <i class="fa-brands fa-react"></i>
 
-    <!-- LEFT -->
-    <div class="hero-left">
-      <h1 class="hero-name">Petya Digital Care</h1>
-      <h2 class="hero-role">Front‑End Developer creating clean, responsive web experiences.</h2>
+            <i class="bi bi-javascript"></i>
+            <i class="fa-brands fa-html5"></i>
 
-      <p class="hero-sub">
-       I design and build fast, accessible interfaces with a focus on clarity, usability, and real‑world business needs.
-      </p>
+            <i class="bi bi-filetype-css"></i>
+            <i class="fa-brands fa-figma"></i>
+          </span>
 
-      <div class="hero-icons">
-        <a href="https://github.com/priorityc?tab=repositories" aria-label="GitHub page"><i class="bi bi-github"></i></a>
-        <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/" aria-label="Linkedin profiel"><i class="bi bi-linkedin"></i></a>
-        <a href="mailto:petya83dimitrova@gmail.com" aria-label="Contact page"><i class="bi bi-envelope-fill"></i></a>
-        <a href="./media/PetyaDimitrova.docx" download="cv_PD.docx" aria-label="DOwnload CV in Word format"><i class="bi bi-arrow-down-square-fill"></i></a>
-      </div>
-      <div class="button-hero">
-          <button id="openM" class="cta-primary">Contact</button>
-          <a href="#projects" class="cta-secondary">View Projects</a>
+          <h1 class="hero-name">
+            Petya Digital Care-
+            <span class="h1-innertext">
+              I build clean, responsive
+              <span class="user-focused">user-focused</span>
+              interfaces.
+            </span>
+          </h1>
         </div>
 
-        <div class="toolkit-heading">
-  <span>Tech:</span>
-  </div>
-  <div class="tech-strip">
+        <span class="hero-small"></span>
+        <p class="hero-sub">
+          I build fast, modern websites for small businesses using modern tools.
+        </p>
 
- <div class="tech-strip-wrapper">
-  <div class="stack">
-  <span>React</span>
-  <span>Vite</span>
-  <span>HTML</span>
-  <span>CSS</span>
-  <span>Bootstrap</span>
-  <span>Figma</span>
+        <div class="button-hero">
+          <button id="openM" class="cta-primary">Contact</button>
+          <a href="#projects" class="cta-secondary">Projects</a>
+        </div>
+        <div class="hero-icons">
+          <a
+            href="https://github.com/priorityc?tab=repositories"
+            aria-label="GitHub page"
+          >
+            <i class="bi bi-github" aria-label="GitHub page"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"
+            aria-label="Linkedin profile"
+          >
+            <i class="bi bi-linkedin" aria-label="Linkedin profile"></i>
+          </a>
+          <a href="mailto:petya83dimitrova@gmail.com" aria-label="Contact page">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+          <a
+            href="./media/PetyaDimitrova.docx"
+            download="cv_PD.docx"
+            aria-label="Download CV Word document"
+          >
+            <i class="bi bi-arrow-down-square-fill"></i>
+          </a>
+        </div>
+      </div>
 
-   <span>JavaScript</span>
+      <div class="tech-strip">
+        <div class="tech-strip-wrapper">
+          <div class="stack">
+            <span>3+ projects</span>
+            <span>BSc Computing&IT</span>
+            <span>UK based</span>
+          </div>
+        </div>
+      </div>
+    </header>
 
-  </div>
-</div>
-</div>
-  </div> 
-    
-
-<!-- 
-<p class="micro-cta">
-  <a href="./media/PetyaDimitrova.docx" download="cv_PD.docx">Download CV</a>
-</p> -->
-
-    </div>
-
-  
-
-  </div>
-</header>
 
 <main> 
 
@@ -119,7 +133,8 @@
   <div class="why-me__inner">
 
     <header class="why-me__header">
-      <h2>Why Work With Me</h2>
+      <span class="hero-role">What I care about</span>
+      <h2 class="skills-title">Why Work With Me</h2>
       <p>I combine clarity, creativity, and technical expertise to help your business grow.</p>
     </header>
 
@@ -144,8 +159,14 @@
       </article>
 
       <article class="why-card">
+        <div class="why-card__icon">👤</div>
+        <h3 class="why-card__title">User Problem‑Analyser</h3>
+        <p class="why-card__text">I help you make understand your users and their needs and convert them into excelent user interaction and experiance.</p>
+      </article>
+
+      <article class="why-card">
         <div class="why-card__icon">🧩</div>
-        <h3 class="why-card__title">Technical Problem‑Solver</h3>
+        <h3 class="why-card__title">Technical Problem‑Adviser</h3>
         <p class="why-card__text">I help you make smart technical decisions and solve tricky challenges.</p>
       </article>
 
@@ -158,11 +179,48 @@
     </div>
   </div>
 </section>
+
+<!-- Process -->
+ <section class="workprocess-cont">
+ <header>
+    <span class="hero-role">Work process</span>
+
+      <h2 class="skills-title">My Process</h2>
+      </header>
+  <div class="process-diagram">
+    
+  <div class="process-step"><h3>🔍Discovering Requirements</h3>
+     <p class="process-step__text">We discuss your goals, audience, and vision to understand what you truly need.</p>
+
+  </div>
+
+  <div class="arrow">→</div>
+
+  <div class="process-step"><h3>🎨Designing</h3>
+    <p>AlternativesI create a clear plan, sitemap, and structure so we know exactly what we’re building.</p></div>
+  <div class="arrow">→</div>
+
+  <div class="process-step"><h3>💻Prototyping</h3>
+     <p>I build your website or prototype with clean, responsive, user‑focused code.</p></div>
+  <div class="arrow">→</div>
+
+  <div class="process-step"><h3>🧾Evaluating</h3>
+    <p>We test performance, accessibility, and usability to ensure everything works beautifully.</p>
+  </div>
+  <div class="arrow">→</div>
+
+  <div class="process-step final"><h3>🚀Final Product</h3>
+     <p>Your project goes live — with support, guidance, and optional ongoing care.</p></div>
+
+ </section>
+ 
 <!--  -->
     <section class="pricing-compare" id="pricing">
   <div class="pricing-compare__inner">
     <header class="pricing-compare__header">
-      <h2>Compare Website Packages</h2>
+          <span class="hero-role">Plans</span>
+
+      <h2 class="skills-title">Compare Website Packages</h2>
       <p>Choose the level of support that fits your business right now.</p>
     </header>
 
@@ -226,56 +284,7 @@
   </div>
 </section>
 <!--  -->
-<!-- Process -->
- <section class="process" id="process">
-  <div class="process__inner">
 
-    <header class="process__header">
-      <h2>My Process</h2>
-      <p>A clear, collaborative workflow that keeps your project moving smoothly.</p>
-    </header>
-
-    <div class="process__grid">
-
-      <article class="process-step">
-        <div class="process-step__icon">🔍</div>
-        <h3 class="process-step__title">Discovery</h3>
-        <p class="process-step__text">We discuss your goals, audience, and vision to understand what you truly need.</p>
-      </article>
-
-      <article class="process-step">
-        <div class="process-step__icon">🧭</div>
-        <h3 class="process-step__title">Planning</h3>
-        <p class="process-step__text">I create a clear plan, sitemap, and structure so we know exactly what we’re building.</p>
-      </article>
-
-      <article class="process-step">
-        <div class="process-step__icon">🎨</div>
-        <h3 class="process-step__title">Design</h3>
-        <p class="process-step__text">Wireframes and UI designs bring your ideas to life with a modern, accessible look.</p>
-      </article>
-
-      <article class="process-step">
-        <div class="process-step__icon">💻</div>
-        <h3 class="process-step__title">Development</h3>
-        <p class="process-step__text">I build your website or prototype with clean, responsive, user‑focused code.</p>
-      </article>
-
-      <article class="process-step">
-        <div class="process-step__icon">🧪</div>
-        <h3 class="process-step__title">Testing</h3>
-        <p class="process-step__text">We test performance, accessibility, and usability to ensure everything works beautifully.</p>
-      </article>
-
-      <article class="process-step">
-        <div class="process-step__icon">🚀</div>
-        <h3 class="process-step__title">Launch</h3>
-        <p class="process-step__text">Your project goes live — with support, guidance, and optional ongoing care.</p>
-      </article>
-
-    </div>
-  </div>
-</section>
 
 </main>  
  <!--  -->
