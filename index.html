@@ -6,7 +6,7 @@
 
     <title>Portfolio</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700:800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styleIn.css" />
@@ -95,6 +95,11 @@
         <p class="hero-sub">
           I build fast, modern websites for small businesses using modern tools.
         </p>
+
+        <div class="button-hero">
+          <button id="openM" class="cta-primary">Contact</button>
+          <a href="#projects" class="cta-secondary">Projects</a>
+        </div>
         <div class="hero-icons">
           <a
             href="https://github.com/priorityc?tab=repositories"
@@ -118,10 +123,6 @@
           >
             <i class="bi bi-arrow-down-square-fill"></i>
           </a>
-        </div>
-        <div class="button-hero">
-          <button id="openM" class="cta-primary">Contact</button>
-          <a href="#projects" class="cta-secondary">View Projects</a>
         </div>
       </div>
 
@@ -460,12 +461,12 @@
               <i class="bi bi-check-circle"></i>
               Open to work
             </small>
-            <p class="about-intro">
+            <blockquote class="about-intro">
               I transitioned into tech driven by curiosity and a passion for
               building meaningful digital experiences. Today, I combine frontend
               engineering with UX thinking to create clean, intuitive
               interfaces.
-            </p>
+            </blockquote>
           </div>
           <div class="about-item" style="grid-area: box-3">
             <h3 class="about-title">Latest roles</h3>
@@ -483,59 +484,59 @@
       </section>
 
       <!--  -->
-
-      <!-- Why hire me section -->
+      <!-- WHY HIRE ME -->
       <section class="why-hire-me fade-in-section">
         <div class="why-title">
           <h2 class="skills-title">Why Hire Me</h2>
         </div>
-        <div class="why-hire-descr-cont">
-          <img
-            src="./media/whyhiremeimage.avif"
-            class="why-hire-me-img"
-            alt="Decorative design image"
-          />
 
-          <ul class="traits">
-            <li>
-              <i class="bi bi-lightning-charge-fill"></i>
-              Learns new technologies fast
-            </li>
-            <li>
-              <i class="bi chat bi-chat-fill"></i>
-              Communicates clearly
-            </li>
-            <li>
-              <i class="bi adapt bi-laptop-fill"></i>
-              Adapts to any codebase
-            </li>
-            <li>
-              <i class="bi consistency bi-check-square-fill"></i>
-              Delivers consistently
-            </li>
-            <li>
-              <i class="bi rocket bi-rocket-takeoff-fill"></i>
-              Improves with every project
-            </li>
-          </ul>
-          <!-- <p class="closing">
-    Ready for a developer who brings <span>energy, creativity, and reliability</span> to your team? <strong>I'm ready.</strong>
-  </p> -->
+        <div class="why-slider">
+          <!-- Slide 1 -->
+
+          <div class="slide active">
+            <i class="bi bi-lightning-charge-fill"></i>
+            <h3>Learns new technologies fast</h3>
+            <blockquote>
+              My academic programme required me to learn new technologies very
+              quickly. I picked up React Native in three months and Java in four
+              months, demonstrating my ability to adapt fast and learn
+              efficiently.
+            </blockquote>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="slide">
+            <i class="bi bi-chat-fill"></i>
+            <h3>Communicates clearly</h3>
+            <blockquote>
+              I’m able to communicate clearly and explain complex concepts in a
+              way that non‑technical audiences can easily understand or
+              translate user requirements into technical needs.
+            </blockquote>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="slide">
+            <i class="bi bi-check-square-fill"></i>
+            <h3>Delivers consistently</h3>
+            <blockquote>
+              Consistency is the key for learning and I know how important it is
+              in real‑world projects.
+            </blockquote>
+          </div>
+
+          <!-- Slide 4 -->
+          <div class="slide">
+            <i class="bi bi-rocket-takeoff-fill"></i>
+            <h3>Improves with every project</h3>
+            <blockquote>
+              I constantly improve my skills — I recently learned Figma for one
+              of my current academic projects.
+            </blockquote>
+          </div>
         </div>
-
-        <!-- <div class="work-together"> 
-    <h3 >Let`s work together!</h3>
-  <div class="lets-connect-i-cont">
-    <a href="https://www.facebook.com/petyasdigitalcare" title="Facebook page"><i class="bi connect bi-facebook"></i></a>
-    <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/" title="Linkedin profile"><i class="bi connect bi-linkedin"></i></a>
-    <a href="https://github.com/priorityc?tab=repositories" title="View repositories"><i class="bi connect bi-github"></i></a>
-    <a href="mailto:petya83dimitrova@gmail.com" title="Send Email"><i class="bi connect bi-envelope"></i></a>
-  </div> -->
-
-        <!-- <div>
-  <button class="view-all-proj-btn" id="openML">Contact Me</i></button>
-  </div> -->
       </section>
+
       <!--  -->
 
       <section class="services-wrapper">
@@ -565,6 +566,8 @@
               <div class="service-card">
                 <div>
                   <h3>Starter Website</h3>
+                  <div class="pricing-card__badge">Starter</div>
+
                   <p class="service-desc">
                     The Starter Website package includes 1–3 professionally
                     designed pages with a clean layout, mobile responsive
@@ -599,6 +602,8 @@
               <div class="service-card">
                 <div>
                   <h3>Business Website</h3>
+                  <div class="pricing-card__badge">Business</div>
+
                   <p class="service-desc">
                     The Business Website package includes 4 essential pages —
                     Home, About, Services, and Contact. Clients can add up to 6
@@ -633,6 +638,8 @@
               <div class="service-card">
                 <div>
                   <h3>Design and Redesign</h3>
+                  <div class="pricing-card__badge">Resign</div>
+
                   <p class="service-desc">
                     This service transforms your existing website into a modern,
                     user‑friendly, visually consistent experience. Every

@@ -387,6 +387,21 @@ projectItems.forEach((item) => {
     }
   });
 });
+
+// SLIDER
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
+}
+
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}, 12000);
 // MODAL
 const openBtn = document.getElementById("openModal");
 const openM = document.getElementById("openM");
