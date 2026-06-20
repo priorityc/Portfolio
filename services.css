@@ -107,7 +107,7 @@ body {
    CARDS
 --------------------------------*/
 .why-card {
-  background-color: var(--skills-border);
+  background-color: var(--card-purple);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.25rem;
   padding: 1.75rem 1.5rem;
@@ -361,39 +361,77 @@ body {
 /* ------------------------------
    SECTION WRAPPER (MOBILE FIRST)
 --------------------------------*/
-.process {
-  padding: 3rem 1.25rem;
-  background: radial-gradient(
-    circle,
-    rgb(27, 32, 61) 0%,
-    rgba(28, 5, 11, 1) 100%
-  );
-  color: #f5f5ff;
+.workprocess-cont {
+  padding: 1rem;
 }
-
-.process__inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-/* ------------------------------
-   HEADER
---------------------------------*/
-.process__header {
+.process-header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
-.process__header h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.process__header p {
-  color: #a5a7c7;
-  font-size: 0.95rem;
-  max-width: 420px;
+.process-subtitle {
+  opacity: 0.8;
+  max-width: 50ch;
   margin: 0.5rem auto 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.process-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.process-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.process-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.8rem;
+  color: white;
+}
+
+/* Icon color themes */
+.icon-pink {
+  background: rgb(231, 74, 255);
+}
+.icon-purple {
+  background: #8b5cf6;
+}
+.icon-blue {
+  background: #3b82f6;
+}
+.icon-green {
+  background: #22c55e;
+}
+.icon-gold {
+  background: #eab308;
+}
+
+.process-card h3 {
+  margin-bottom: 0.8rem;
+}
+
+.process-card p {
+  opacity: 0.85;
+  line-height: 1.5;
 }
 
 /* ------------------------------
@@ -407,83 +445,6 @@ body {
 /* ------------------------------
    STEP CARDS
 --------------------------------*/
-.process-diagram {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 900px;
-  margin: 3rem auto;
-  text-align: center;
-}
-
-.process-step {
-  padding: 1rem 1.5rem;
-  background: radial-gradient(circle, rgb(27, 32, 61), rgba(28, 5, 11, 1));
-  border: 1px solid rgba(63, 17, 200, 0.4);
-  border-radius: 40px;
-  color: var(--bg-purple);
-  font-weight: 600;
-  max-width: 300px;
-  box-shadow: 0 0 12px rgba(63, 17, 200, 0.4);
-}
-
-.process-step.final {
-  background-color: var(--accent-purple);
-  color: white;
-  border-color: transparent;
-}
-
-.arrow {
-  font-size: 2rem;
-  color: var(--bg-purple);
-  font-weight: bold;
-}
-
-/*  */
-.process-step {
-  background: radial-gradient(
-    circle at right top,
-    rgba(160, 107, 255, 0.15),
-    transparent 60%
-  );
-  color: var(--accent-purple);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 1.25rem;
-  padding: 1.75rem 1.5rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition:
-    transform 180ms ease-out,
-    box-shadow 180ms ease-out;
-}
-
-/* Cosmic glow */
-.process-step::before {
-  content: "";
-  position: absolute;
-  inset: -40%;
-  opacity: 0;
-  background: radial-gradient(
-    circle at top,
-    rgba(168, 85, 247, 0.18),
-    transparent 60%
-  );
-  transition: opacity 180ms ease-out;
-  pointer-events: none;
-}
-
-.process-step:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.75);
-}
-
-.process-step:hover::before {
-  opacity: 1;
-}
 
 /* ------------------------------
    ICONS & TEXT
@@ -515,6 +476,10 @@ a {
 /* Add spacing between targets */
 .button-group button {
   margin: 4px;
+}
+
+.process-icon {
+  color: white;
 }
 /* ------------------------------
    RESPONSIVE BREAKPOINTS
