@@ -440,7 +440,8 @@ body {
 
 .cta-secondary {
   padding: 0.9rem 1.8rem;
-  border: 1.8px solid var(--card-purple);
+  /* border: 1.8px solid var(--card-purple); */
+  border: 1px solid white;
   background-color: transparent;
   text-decoration: none;
   border-radius: 16px;
@@ -892,11 +893,11 @@ body {
 }
 
 .skills-title {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
   font-weight: 700;
   color: var(--main-gradient);
   text-align: center;
-  letter-spacing: 1px;
+  /* letter-spacing: 0.7px; */
   margin-bottom: 1rem;
 }
 

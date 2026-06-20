@@ -14,20 +14,24 @@
    COSMIC VARIABLES
 --------------------------------*/
 :root {
-  --clr-bg-deep: #050816;
-  --clr-bg-card: #0b1020;
-  --clr-border-soft: rgba(255, 255, 255, 0.08);
-  --clr-text-main: #f5f5ff;
-  --clr-text-muted: #a5a7c7;
+  /* Typography scale (mobile-first) */
+  --fs-xs: clamp(0.75rem, 1vw + 0.5rem, 0.9rem);
+  --fs-sm: clamp(0.9rem, 1vw + 0.6rem, 1rem);
+  --fs-md: clamp(1rem, 1vw + 0.8rem, 1.25rem);
+  --fs-lg: clamp(1.4rem, 2vw + 1rem, 2rem);
+  --fs-xl: clamp(1.8rem, 3vw + 1rem, 2.8rem);
+  --fs-xxl: clamp(2.2rem, 4vw + 1rem, 4.5rem);
 
-  --clr-accent-purple: #a855f7;
-  --clr-accent-blue: #38bdf8;
-  --clr-accent-orange: #fb923c;
+  /* Colors */
+  --main-gradient: #1a1a2e;
+  --bg-purple: #c9b3f2;
+  --card-purple: #f4eeff;
+  /* --accent-purple: #b886ee; */
+  --accent-purple: #7c8cff;
+  --text-dark: #1a1a1a;
+  --text-light: #6a6969;
 
-  --radius-lg: 1.25rem;
-  --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.55);
-  --transition-fast: 180ms ease-out;
-
+  /* Skills palette */
   --skills-bg: #f6f7fb;
   --skills-card-bg: #edebff;
   --skills-border: #c9c4ff;
@@ -35,29 +39,28 @@
   --skills-muted: #6b6b8a;
   --skills-accent: #6a1bbe;
   --skills-pill-bg: #e8e6ff;
-}
 
-:root {
-  /* Mobile-first base sizes */
-  --fs-xs: clamp(0.75rem, 1vw + 0.5rem, 0.9rem);
-  --fs-sm: clamp(0.9rem, 1vw + 0.6rem, 1rem);
-  --fs-md: clamp(1rem, 1vw + 0.8rem, 1.25rem);
-  --fs-lg: clamp(1.4rem, 2vw + 1rem, 2rem);
-  --fs-xl: clamp(1.8rem, 3vw + 1rem, 2.8rem);
-  --fs-xxl: clamp(2.2rem, 4vw + 1rem, 4.5rem);
+  /* Shared tokens */
+  --border-purple: 1px solid rgba(167, 139, 250, 0.3);
+  --glow-purple: 0 0 22px rgba(167, 139, 250, 0.35);
+  --btn-gradient: linear-gradient(135deg, #38bdf8, #a855f7);
 }
 
 body {
-  line-height: 1.7;
-  font-size: var(--fs-sm);
   font-family: "Plus Jakarta Sans", sans-serif;
-  color: #444;
-  font-weight: 400;
-  line-height: 1.8;
-  font-size: 1rem;
-  background-color: rgb(249, 249, 249);
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  color: var(--skills-text);
+  /* background-color: rgb(254, 254, 254); */
 }
 
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  color: var(--skills-text);
+  /* background-color: rgb(254, 254, 254); */
+}
 /* Why work with me  */
 /* ------------------------------
    SECTION WRAPPER (MOBILE FIRST)
@@ -65,6 +68,7 @@ body {
 .why-me {
   padding: 3rem 1.25rem;
   margin-bottom: 1rem;
+  background-color: var(--skills-bg);
 }
 
 .why-me__inner {
@@ -185,7 +189,7 @@ body {
 --------------------------------*/
 .pricing-compare__grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 /* ------------------------------
@@ -193,13 +197,14 @@ body {
 --------------------------------*/
 .pricing-card {
   position: relative;
-  padding: 1.75rem 1.5rem;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(
-    145deg,
-    rgba(15, 23, 42, 0.96),
-    rgba(15, 23, 42, 0.85)
+  padding: 2.5rem 1.5rem;
+  border-radius: 16px;
+  background: radial-gradient(
+    circle,
+    rgb(27, 32, 61) 0%,
+    rgba(28, 5, 11, 1) 100%
   );
+  color: white;
   border: 1px solid var(--clr-border-soft);
   box-shadow: var(--shadow-soft);
   transition:
@@ -265,8 +270,9 @@ body {
    TITLES & PRICE
 --------------------------------*/
 .pricing-card__title {
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
   color: var(--skills-border);
+  font-size: var(--fs-lg);
 }
 
 .pricing-card__price {
@@ -302,7 +308,7 @@ body {
 }
 
 .pricing-card__features li {
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.55rem;
   display: flex;
   gap: 0.4rem;
 }
@@ -327,8 +333,10 @@ body {
 .pricing-card__cta {
   width: 100%;
   padding: 0.65rem 1rem;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 253, 0.6);
+  margin-top: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid white;
+  font-size: var(--fs-md);
   background: transparent;
   color: var(--clr-text-main);
   cursor: pointer;
@@ -343,11 +351,8 @@ body {
 }
 
 .pricing-card__cta--primary {
-  background: linear-gradient(
-    135deg,
-    var(--clr-accent-blue),
-    var(--clr-accent-purple)
-  );
+  background: var(--btn-gradient);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
   border: none;
   box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
 }
@@ -426,7 +431,7 @@ body {
 }
 
 .process-step.final {
-  background: linear-gradient(135deg, #6a00ff, #b300ff);
+  background-color: var(--accent-purple);
   color: white;
   border-color: transparent;
 }
@@ -439,12 +444,15 @@ body {
 
 /*  */
 .process-step {
-  background: var(--skills-border);
-  color: #444;
+  background: radial-gradient(
+    circle at right top,
+    rgba(160, 107, 255, 0.15),
+    transparent 60%
+  );
+  color: var(--accent-purple);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.25rem;
   padding: 1.75rem 1.5rem;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.55);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -522,7 +530,14 @@ a {
   }
 
   .pricing-compare__grid {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .pricing-compare__grid .pricing-card:last-child {
+    grid-column: span 2;
+    justify-self: center;
   }
 
   .pricing-card--highlight {
@@ -547,6 +562,16 @@ a {
   }
   .pricing-compare__grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .pricing-compare__grid .pricing-card:last-child {
+    grid-column: span 1;
+  }
+
+  .pricing-compare__header {
+    margin-bottom: 3.5rem;
+  }
+  .pricing-card {
+    padding: 2.6em;
   }
 
   .pricing-card--highlight {
