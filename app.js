@@ -134,26 +134,9 @@ function handleKey(event) {
   }
 }
 
-// the hamburger icon show
-// function myFunction() {
-//   var x = document.getElementById("myLinks");
-//   if (x.style.display === "flex") {
-//     x.style.display = "none";
-//     x.classList.toggle("change");
-//   } else {
-//     x.style.display = "flex";
-//   }
-// }
-
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const menu = document.getElementById("myLinks");
-
-  // function toggleMenu() {
-  //   const isOpen = menu.style.display === "block"; //the menu links
-  //   menu.classList.toggle("open");
-  //   hamburger.classList.toggle("change", !isOpen);
-  // }
 
   function toggleMenu() {
     const isOpen = menu.style.display === "block";

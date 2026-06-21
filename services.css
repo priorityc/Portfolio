@@ -81,7 +81,7 @@ body {
 --------------------------------*/
 .why-me__header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 /* .why-me__header h2 {
@@ -181,7 +181,7 @@ body {
 --------------------------------*/
 .pricing-compare__header {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 /* ------------------------------
@@ -189,7 +189,7 @@ body {
 --------------------------------*/
 .pricing-compare__grid {
   display: grid;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 /* ------------------------------
@@ -197,7 +197,7 @@ body {
 --------------------------------*/
 .pricing-card {
   position: relative;
-  padding: 2.5rem 1.5rem;
+  padding: 3rem 2.5rem;
   border-radius: 16px;
   background: radial-gradient(
     circle,
@@ -270,7 +270,7 @@ body {
    TITLES & PRICE
 --------------------------------*/
 .pricing-card__title {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: var(--skills-border);
   font-size: var(--fs-lg);
 }
@@ -377,7 +377,7 @@ body {
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 2rem;
   padding: 1rem 0;
 }
@@ -403,7 +403,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1rem auto;
   font-size: 1.8rem;
   color: white;
 }
@@ -470,7 +470,6 @@ button,
 a {
   min-height: 44px;
   min-width: 44px;
-  padding: 12px 16px;
 }
 
 /* Add spacing between targets */
@@ -497,7 +496,7 @@ a {
   .pricing-compare__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    gap: 5rem;
   }
 
   .pricing-compare__grid .pricing-card:last-child {
@@ -522,6 +521,10 @@ a {
   .why-me {
     margin-bottom: 7rem;
   }
+
+  .why-me__header {
+    margin-bottom: 5rem;
+  }
   .why-me__grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -533,7 +536,11 @@ a {
   }
 
   .pricing-compare__header {
-    margin-bottom: 3.5rem;
+    margin-bottom: 5rem;
+  }
+
+  .pricing-compare {
+    padding: 7rem;
   }
   .pricing-card {
     padding: 2.6em;
@@ -541,6 +548,10 @@ a {
 
   .pricing-card--highlight {
     order: 0;
+  }
+
+  .process-header {
+    margin-bottom: 5rem;
   }
   .process__grid {
     grid-template-columns: repeat(3, 1fr);

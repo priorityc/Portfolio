@@ -211,7 +211,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 999;
-  background-color: #fff;
+  background-color: var(--bg-purple);
 }
 
 /* =========================
@@ -898,7 +898,7 @@ body {
   color: var(--main-gradient);
   text-align: center;
   /* letter-spacing: 0.7px; */
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .skills-grid {
@@ -974,7 +974,8 @@ body {
 .project-container {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  padding: 3rem 0;
+  background-color: #050618;
+
   grid-template-areas:
     "box-1"
     "box-2"
@@ -1057,6 +1058,7 @@ body {
 .project-header {
   text-align: center;
   padding: 1em;
+  margin-bottom: 2rem;
 }
 
 /* Special app container */
@@ -1145,12 +1147,12 @@ body {
   align-items: center;
   background: #8f3fe4;
   color: white;
-  letter-spacing: 1px;
   text-decoration: none;
   border: none;
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
+  font-size: var(--fs-md);
 }
 
 .details-btn:hover {
@@ -1170,22 +1172,6 @@ body {
 }
 .btn-primary:hover {
   background-color: #c084fc;
-}
-
-.details-btn {
-  animation: pulse 2.5s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 rgba(167, 139, 250, 0);
-  }
-  50% {
-    box-shadow: 0 0 12px rgba(167, 139, 250, 0.4);
-  }
-  100% {
-    box-shadow: 0 0 0 rgba(167, 139, 250, 0);
-  }
 }
 
 .btn-secondary {
@@ -1285,7 +1271,7 @@ body {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
@@ -2193,6 +2179,12 @@ small.valid {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .skills__subtitle,
+  .project-header,
+  .services-subtitle {
+    margin-bottom: 3rem;
+  }
+
   .experience-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -2442,7 +2434,13 @@ small.valid {
   .hero-name {
     width: 100%;
     font-size: var(--fs-xxl);
-    margin: 5rem auto;
+    margin-bottom: 5rem;
+  }
+
+  .skills__subtitle,
+  .project-header,
+  .services-subtitle {
+    margin-bottom: 5rem;
   }
 
   .skills__groups {
@@ -2458,7 +2456,7 @@ small.valid {
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: repeat(3, 2fr);
-    padding: 5rem 0;
+    padding: 2rem;
     grid-template-areas:
       "box-1 box-1 box-2"
       "box-3 box-4 box-4";
