@@ -2733,6 +2733,7 @@ small.valid {
 
   .footer-box {
     display: flex;
+    padding: 7rem 3rem;
   }
 
   .form-heading {

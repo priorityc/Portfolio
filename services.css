@@ -273,6 +273,7 @@ body {
   margin-bottom: 2rem;
   color: var(--skills-border);
   font-size: var(--fs-lg);
+  letter-spacing: 1.5px;
 }
 
 .pricing-card__price {
@@ -343,6 +344,8 @@ body {
   transition:
     background var(--transition-fast),
     box-shadow var(--transition-fast);
+  text-decoration: none;
+  color: white;
 }
 
 .pricing-card__cta:hover {
@@ -375,9 +378,9 @@ body {
   margin: 0.5rem auto 0;
 }
 
-.process-grid {
+/* .process-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
   padding: 1rem 0;
 }
@@ -391,12 +394,51 @@ body {
   transition: 0.3s ease;
 }
 
+.process-card::after {
+  content: "➜"; 
+} */
+
+.process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  position: relative;
+}
+
+/* BASE CARD */
+.process-card {
+  position: relative;
+  padding: 2rem;
+  background: var(--card-bg, #fff);
+  border-radius: 1rem;
+  text-align: center;
+}
+
+/* Arrow after each card */
+.process-card::after {
+  content: "↓";
+  position: absolute;
+  bottom: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: var(--accent, #ccc);
+  pointer-events: none;
+  aria-hidden: true;
+}
+
+.process-card:last-child::after {
+  content: "";
+}
+
 .process-card:hover {
   transform: translateY(-6px);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
 .process-icon {
+  display: flex;
+  justify-content: flex-start;
   width: 60px;
   height: 60px;
   border-radius: 12px;
@@ -434,6 +476,37 @@ body {
   line-height: 1.5;
 }
 
+.process-btn {
+  margin: 0.5rem;
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: var(--accent-color, #8a2be2);
+  color: #fff;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.process-btn:hover {
+  opacity: 0.85;
+}
+
+.action-btns {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  color: var(--bg-purple);
+}
+
+.action-btns-cont {
+  margin-bottom: 1rem;
+}
 /* ------------------------------
    GRID (MOBILE FIRST)
 --------------------------------*/
@@ -496,7 +569,6 @@ a {
   .pricing-compare__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
   }
 
   .pricing-compare__grid .pricing-card:last-child {
@@ -507,12 +579,24 @@ a {
   .pricing-card--highlight {
     order: -1;
   }
-  .process__grid {
-    grid-template-columns: repeat(2, 1fr);
+
+  .process-grid {
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem;
+    padding: 3rem;
+  }
+
+  .process-card::after {
+    content: "  → ";
+    bottom: 8rem;
+    left: 100%;
   }
   .process-diagram {
     flex-direction: row;
     margin-bottom: 3rem;
+  }
+  .action-btns {
+    padding: 5rem;
   }
 }
 
@@ -528,6 +612,27 @@ a {
   .why-me__grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .process-card::after {
+    content: "→";
+    position: absolute;
+    right: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: var(--accent, #ccc);
+    pointer-events: none;
+    aria-hidden: true;
+  }
+
+  /* Remove arrow from last card */
+  .process-card:last-child::after {
+    content: "";
+  }
   .pricing-compare__grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -540,10 +645,7 @@ a {
   }
 
   .pricing-compare {
-    padding: 7rem;
-  }
-  .pricing-card {
-    padding: 2.6em;
+    padding: 7rem 0;
   }
 
   .pricing-card--highlight {
@@ -558,5 +660,8 @@ a {
   }
   .workprocess-cont {
     margin-bottom: 7rem;
+  }
+  .action-btns {
+    padding: 7rem;
   }
 }
