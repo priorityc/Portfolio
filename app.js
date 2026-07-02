@@ -72,10 +72,9 @@ const projects = {
 
   serviceq: {
     title: "Service Quote Calculator",
-    overview:
-      "A tool for automating construction service quotes to save time and reduce errors.",
+    overview: "A tool for automating construction service quotes.",
     descr:
-      "A mobile‑first service quote calculator prototype designed for a newly established construction business entering the market quickly.",
+      "A mobile‑first service quote calculator prototype designed for a newly established construction business willing to enter the market quickly.",
     features: [
       "Step by step interactions",
       "Instant quote calculation",
@@ -100,7 +99,12 @@ const projects = {
       "Selecting the right question for the interview → Different interview questions used structured and semi-structured",
       "Understanding what users want  → Field study observation with initial conversations",
     ],
-    images: ["./media/screen123.png", "./media/screen45.png"],
+    images: [
+      "./media/screen2sq.png",
+      "./media/screen3sq.png",
+      "./media/screen123.png",
+      "./media/screen45.png",
+    ],
     demo: "https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/ServicePaintingCalculator?node-id=1025-2&t=GROR9anNnS82szvj-1&starting-point-node-id=1025%3A2",
     github: "#",
   },
