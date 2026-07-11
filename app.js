@@ -17,14 +17,6 @@ const projects = {
     ],
     tech: [
       "I designed and built CosmicCare as a full end‑to‑end e‑commerce system: dynamic product loading, global cart state, checkout flow, backend simulation, and responsive UI. I implemented both real and demo modes so users and recruiters can explore the store safely while still experiencing a realistic shopping flow.",
-      // "API integration (Stripe, Supabase)",
-      // "Build tools (Vite, npm)",
-      // "Version control (Git/GitHub)",
-      // "Hosting (Netlify)",
-      // "Database (Supabase)",
-      // "Security / validation (server‑side validation)",
-      // "Routing (React Router)",
-      // "Environment variables (Stripe keys, Supabase keys)",
     ],
     features: [
       "Dynamic product loading from Supabase",
@@ -47,24 +39,27 @@ const projects = {
     demo: "https://cosmiccare.netlify.app/?demo=true",
     github: "https://github.com/priorityc/cosmic-care-site",
   },
-
+  // Landing page
   lanp: {
     title: "Black Hole Event-Landing page",
-    overview:
-      "Immersive, space‑themed landing page with smooth scrolling and interactive visuals.",
-    problem:
-      "A modern, space‑themed landing page designed to showcase a fictional stargazing experience. Built with a strong focus on visual storytelling, smooth animations, and responsive layout. The page features a hero section with atmospheric gradients, animated stars, interactive hover effects, and a clean content structure that guides the user through the experience. Designed and developed from scratch using HTML, CSS, and JavaScript with an emphasis on layout, typography, and immersive UI design.",
-
-    tech: ["HTML", "JavaScript", "CSS"],
-
-    features: [
-      "Hero Section With Atmospheric Visuals",
-      "Fully Responsive Layout",
-      "Feature Highlights Section",
-      "Call‑to‑Action Buttons",
+    overview: "An immersive stargasing Landing page",
+    // descr:
+    //   "CosmicCare is a fully‑functional React e‑commerce store built with a mobile‑first UI, dynamic product loading, and a complete cart + checkout flow. The project runs in two modes — a real mode with live product data from Supabase, and a demo mode for safe portfolio browsing. It includes a simulated backend using Express.js, automatic product syncing, global cart state, and a responsive, modern UI. The store is deployed on Netlify with environment‑based configuration for switching between demo and live data.",
+    problem: [
+      "Museum websites struggle to attract subscriptions because they are often designed for logistical planning rather than digital engagement. Sites act as digital brochures rather than conversion hubs, hiding event and membership pages behind confusing naming conventions and fragmented booking flows, while failing to clearly articulate the value of subscribing.",
     ],
-    techstack: ["React", "JavaScript", "Supababase", "GitHub"],
-    tools: ["Netlify", "Render", "Supabase", "Express.js"],
+    tech: [
+      "I designed and built an Immersive Black hole event-Landing page as a full visual experience: real black hole experience inside the hero with clear CTA section, event form subscription that simulate event horizont, clear section event information, workshop gallery, dark and navy UI mode switch. The Landing page quickly graps user attention and guides to subscription and save a seet actions with closer cosmic visual experiene.",
+    ],
+    features: [
+      "Hero-Black hole simulation animation and clear CTA ",
+      "Fade in sections for smooth scroll.",
+      "Event subscription form that drives more subscriptions.",
+      "Dark and navy background",
+      "Interactive experience",
+    ],
+    techstack: ["HTML", "CSS", "JavaScript"],
+    tools: ["GitHub"],
 
     images: [
       "./media/projectLP.png",
@@ -519,7 +514,7 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
     // Fill modal content
     modalPr.querySelector(".modal__title").textContent = data.title;
     modalPr.querySelector(".modal__overview").textContent = data.overview;
-    modalPr.querySelector(".modal__role").textContent = data.descr;
+    // modalPr.querySelector(".modal__role").textContent = data.descr;
 
     modalPr.querySelector(".modal__lists").innerHTML = data.problem
       .map(
@@ -547,8 +542,11 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
           <li class="skills__item">${c}</li><li><i class="bi bi-arrow-right"></i></li>`,
       )
       .join("");
-
-    modalPr.querySelector(".modal__techstack").innerHTML = `
+    // Icons rendering
+    // if the object is projects.lanp
+    console.log(projects.ecom);
+    if (projects.ecom) {
+      modalPr.querySelector(".modal__techstack").innerHTML = `
   <li>
     <i class="fa-brands fa-react tech-icons"></i></li>
     <li><i class="fa-brands fa-square-js tech-icons"></i></li>
@@ -556,7 +554,16 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
     <li><i class="fa-brands fa-github tech-icons"></i>
   </li>
 `;
-
+    } else {
+      modalPr.querySelector(".modal__techstack").innerHTML = `
+  <li>
+    <li><i class="fa-brands fa-html5"></i></li>
+    <li><i class="fa-brands fa-css"></i></li>
+    <li><i class="fa-brands fa-square-js"></i></li>
+    
+  </li>
+`;
+    }
     modalPr.querySelector(".modal__tools").innerHTML = data.tools
       .map((c) => `<li class="skills__item">${c}</li>`)
       .join("");
