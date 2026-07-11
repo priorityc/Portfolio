@@ -10,29 +10,31 @@ const projects = {
     title: "React E‑Commerce Store",
     overview:
       "A full e‑commerce store with Stripe checkout and product filtering.",
-    descr:
-      "CosmicCare is a fully‑functional React e‑commerce store built with a mobile‑first UI, dynamic product loading, and a complete cart + checkout flow. The project runs in two modes — a real mode with live product data from Supabase, and a demo mode for safe portfolio browsing. It includes a simulated backend using Express.js, automatic product syncing, global cart state, and a responsive, modern UI. The store is deployed on Netlify with environment‑based configuration for switching between demo and live data.",
-    features: [
-      "Stripe checkout",
-      "Product filtering",
-      "Cart system",
-      "Responsive layout",
+    // descr:
+    //   "CosmicCare is a fully‑functional React e‑commerce store built with a mobile‑first UI, dynamic product loading, and a complete cart + checkout flow. The project runs in two modes — a real mode with live product data from Supabase, and a demo mode for safe portfolio browsing. It includes a simulated backend using Express.js, automatic product syncing, global cart state, and a responsive, modern UI. The store is deployed on Netlify with environment‑based configuration for switching between demo and live data.",
+    problem: [
+      "I wanted to challenge myself to build a complete, production‑ready product — not just a small demo or isolated feature. My goal was to create an e‑commerce experience that feels real, includes essential functionality, and follows a clean, intuitive user flow that anyone can understand.",
     ],
     tech: [
-      "State management (global state for the cart)",
-      "API integration (Stripe, Supabase)",
-      "Build tools (Vite, npm)",
-      "Version control (Git/GitHub)",
-      "Hosting (Netlify)",
-      "Database (Supabase)",
-      "Security / validation (server‑side validation)",
-      "Routing (React Router)",
-      "Environment variables (Stripe keys, Supabase keys)",
+      "I designed and built CosmicCare as a full end‑to‑end e‑commerce system: dynamic product loading, global cart state, checkout flow, backend simulation, and responsive UI. I implemented both real and demo modes so users and recruiters can explore the store safely while still experiencing a realistic shopping flow.",
+      // "API integration (Stripe, Supabase)",
+      // "Build tools (Vite, npm)",
+      // "Version control (Git/GitHub)",
+      // "Hosting (Netlify)",
+      // "Database (Supabase)",
+      // "Security / validation (server‑side validation)",
+      // "Routing (React Router)",
+      // "Environment variables (Stripe keys, Supabase keys)",
     ],
-    challenges: [
-      "Cart state syncing → Implemented global state",
-      "Stripe errors → Added server‑side validation",
+    features: [
+      "Dynamic product loading from Supabase",
+      "Stripe Payment Integration",
+      "Email subscription form with database‑driven storage",
+      "demo and real live integration",
+      "Customer service inquery form",
     ],
+    techstack: ["React", "JavaScript", "Supababase", "GitHub"],
+    tools: ["Netlify", "Render", "Supabase", "Express.js"],
     images: [
       "./media/homeCosmic.png",
       "./media/mobileCC.png",
@@ -50,16 +52,20 @@ const projects = {
     title: "Black Hole Event-Landing page",
     overview:
       "Immersive, space‑themed landing page with smooth scrolling and interactive visuals.",
-    descr:
+    problem:
       "A modern, space‑themed landing page designed to showcase a fictional stargazing experience. Built with a strong focus on visual storytelling, smooth animations, and responsive layout. The page features a hero section with atmospheric gradients, animated stars, interactive hover effects, and a clean content structure that guides the user through the experience. Designed and developed from scratch using HTML, CSS, and JavaScript with an emphasis on layout, typography, and immersive UI design.",
+
+    tech: ["HTML", "JavaScript", "CSS"],
+
     features: [
       "Hero Section With Atmospheric Visuals",
       "Fully Responsive Layout",
       "Feature Highlights Section",
       "Call‑to‑Action Buttons",
     ],
-    tech: ["HTML", "JavaScript", "CSS"],
-    challenges: ["Form validation"],
+    techstack: ["React", "JavaScript", "Supababase", "GitHub"],
+    tools: ["Netlify", "Render", "Supabase", "Express.js"],
+
     images: [
       "./media/projectLP.png",
       "./media/BHform.png",
@@ -83,7 +89,7 @@ const projects = {
       "Clear visual feedback for noisy environments",
       "reduced cognitive load",
     ],
-    tech: [
+    techstack: [
       "Investigating design context(user-activity-environment)",
       "Storyboards",
       "Interviews with the company owner",
@@ -515,23 +521,51 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
     modalPr.querySelector(".modal__overview").textContent = data.overview;
     modalPr.querySelector(".modal__role").textContent = data.descr;
 
-    modalPr.querySelector(".modal__lists").innerHTML = data.features
-      .map((f) => `<li>${f}</li>`)
+    modalPr.querySelector(".modal__lists").innerHTML = data.problem
+      .map(
+        (f) => ` <li class="modal-problem-item">
+      <i class="bi bi-exclamation-circle"></i></li>
+      <li><h3 class="card-title">Problem</h3></li>
+      <li><p>${f}</p></li>`,
+      )
       .join("");
 
     modalPr.querySelector(".modal__tags").innerHTML = data.tech
-      .map((t) => `<span class="tag">${t}</span>`)
+      .map(
+        (t) => ` <li class="modal-problem-item">
+      <i class="bi bi-bricks"></i></li>
+      <li><h3 class="card-title">Solution</h3></li>
+      <li><i class="fa-brands fa-node-js"></i></li>
+      <li><p>${t}</p></li>`,
+      )
       .join("");
 
-    modalPr.querySelector(".modal__challenges").innerHTML = data.challenges
-      .map((c) => `<li>${c}</li>`)
+    modalPr.querySelector(".modal__challenges").innerHTML = data.features
+      .map(
+        (c) =>
+          `
+          <li class="skills__item">${c}</li><li><i class="bi bi-arrow-right"></i></li>`,
+      )
+      .join("");
+
+    modalPr.querySelector(".modal__techstack").innerHTML = `
+  <li>
+    <i class="fa-brands fa-react tech-icons"></i></li>
+    <li><i class="fa-brands fa-square-js tech-icons"></i></li>
+    <li><i class="fa-solid fa-database tech-icons"></i></li>
+    <li><i class="fa-brands fa-github tech-icons"></i>
+  </li>
+`;
+
+    modalPr.querySelector(".modal__tools").innerHTML = data.tools
+      .map((c) => `<li class="skills__item">${c}</li>`)
       .join("");
 
     modalPr.querySelector(".modal__images").innerHTML = data.images
-      .map((img) => {
+      .map((img, index) => {
         return `
-      <div class="modal__img-wrapper">
-        <img src="${img}" alt="Project screenshot">
+      <div>
+        <img src="${img}" data-index="${index}" alt="Project screenshot">
       </div>
     `;
       })
