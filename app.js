@@ -58,15 +58,14 @@ const projects = {
       "Dark and navy background",
       "Interactive experience",
     ],
-    techstack: ["HTML", "CSS", "JavaScript"],
+    techstack: ["HTML", "JavaScript", "GitHub"],
     tools: ["GitHub"],
-
     images: [
-      "./media/projectLP.png",
       "./media/BHform.png",
       "./media/dualModeBh.png",
       "./media/mobileBh.png",
     ],
+
     demo: "https://priorityc.github.io/stargazing-landing-page/",
     github: "https://github.com/priorityc/stargazing-landing-page",
   },
@@ -74,8 +73,12 @@ const projects = {
   serviceq: {
     title: "Service Quote Calculator",
     overview: "A tool for automating construction service quotes.",
-    descr:
+    problem: [
       "A mobile‑first service quote calculator prototype designed for a newly established construction business willing to enter the market quickly.",
+    ],
+    tech: [
+      "I created mobile interface prototype that calculates services for plastering, painting and flooring. The process I followed was user-centered with 3 fiteration, analysing the user charachteristics, environment and activities, than progressed to interview and gathering data with requirements engeenering.",
+    ],
     features: [
       "Step by step interactions",
       "Instant quote calculation",
@@ -84,28 +87,31 @@ const projects = {
       "Clear visual feedback for noisy environments",
       "reduced cognitive load",
     ],
-    techstack: [
-      "Investigating design context(user-activity-environment)",
-      "Storyboards",
-      "Interviews with the company owner",
-      "Paper Interfaces",
-      "PowerPoint interactive presentation ",
-      "Evaluation",
-      "User-centered design",
-      "Iteration process",
-      "PowerPoint",
-      "Figma",
-    ],
-    challenges: [
-      "Selecting the right question for the interview → Different interview questions used structured and semi-structured",
-      "Understanding what users want  → Field study observation with initial conversations",
-    ],
+    // features: [
+    //   "Investigating design context(user-activity-environment)",
+    //   "Storyboards",
+    //   "Interviews with the company owner",
+    //   "Paper Interfaces",
+    //   "PowerPoint interactive presentation ",
+    //   "Evaluation",
+    //   "User-centered design",
+    //   "Iteration process",
+    //   "PowerPoint",
+    //   "Figma",
+    // ],
+    // challenges: [
+    //   "Selecting the right question for the interview → Different interview questions used structured and semi-structured",
+    //   "Understanding what users want  → Field study observation with initial conversations",
+    // ],
+    techstack: ["Figma"],
+    tools: ["PowerPoint"],
     images: [
       "./media/screen2sq.png",
       "./media/screen3sq.png",
       "./media/screen123.png",
       "./media/screen45.png",
     ],
+
     demo: "https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/ServicePaintingCalculator?node-id=1025-2&t=GROR9anNnS82szvj-1&starting-point-node-id=1025%3A2",
     github: "#",
   },
@@ -113,7 +119,10 @@ const projects = {
   foodapp: {
     title: "Food App-Wep Aplication API",
     overview: "Food App-Wep Aplication API-Sponacular for recipe discovery.",
-    role: "FoodApp is a mobile‑first recipe discovery application that allows users to search for meals, explore ingredients, and view cooking instructions in a clean, intuitive interface. The app fetches real recipe data from an external API, displays dynamic results, and provides a smooth browsing experience with responsive layouts and interactive UI elements. Built using HTML, CSS, and JavaScript, the project demonstrates API integration, async data handling, and modern front‑end design principles.",
+    problem: [
+      "A mobile‑first service quote calculator prototype designed for a newly established construction business willing to enter the market quickly.",
+    ],
+    // role: "FoodApp is a mobile‑first recipe discovery application that allows users to search for meals, explore ingredients, and view cooking instructions in a clean, intuitive interface. The app fetches real recipe data from an external API, displays dynamic results, and provides a smooth browsing experience with responsive layouts and interactive UI elements. Built using HTML, CSS, and JavaScript, the project demonstrates API integration, async data handling, and modern front‑end design principles.",
     features: [
       "Live Recipe Search (API Integration)",
       "Dynamic Meal Cards",
@@ -515,7 +524,7 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
     modalPr.querySelector(".modal__title").textContent = data.title;
     modalPr.querySelector(".modal__overview").textContent = data.overview;
     // modalPr.querySelector(".modal__role").textContent = data.descr;
-
+    // modalPr.querySelector("modal__inons").textContent = data.icons;
     modalPr.querySelector(".modal__lists").innerHTML = data.problem
       .map(
         (f) => ` <li class="modal-problem-item">
@@ -544,9 +553,8 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
       .join("");
     // Icons rendering
     // if the object is projects.lanp
-    console.log(projects.ecom);
-    if (projects.ecom) {
-      modalPr.querySelector(".modal__techstack").innerHTML = `
+
+    modalPr.querySelector(".modal__techstack").innerHTML = `
   <li>
     <i class="fa-brands fa-react tech-icons"></i></li>
     <li><i class="fa-brands fa-square-js tech-icons"></i></li>
@@ -554,16 +562,11 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
     <li><i class="fa-brands fa-github tech-icons"></i>
   </li>
 `;
-    } else {
-      modalPr.querySelector(".modal__techstack").innerHTML = `
-  <li>
-    <li><i class="fa-brands fa-html5"></i></li>
-    <li><i class="fa-brands fa-css"></i></li>
-    <li><i class="fa-brands fa-square-js"></i></li>
-    
-  </li>
-`;
-    }
+
+    // modal.querySelector(".modal__icons").innerHTML = data.techstack
+    //   .map((icon) => `<i class="${icon}"></i>`)
+    //   .join("");
+
     modalPr.querySelector(".modal__tools").innerHTML = data.tools
       .map((c) => `<li class="skills__item">${c}</li>`)
       .join("");
@@ -693,6 +696,59 @@ tabs.forEach((tab) => {
   });
 });
 
+// THE TAB FILTER
+// Remove .active from all tab buttons
+
+// Add .active to the clicked button
+
+// Show the matching tab content
+const tabsProjects = document.querySelectorAll(".tablinks");
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Hide all tabcontent
+  const tabcontent = document.getElementsByClassName("tabcontent");
+  for (let i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Show only London tab
+  document.getElementById("London").style.display = "grid";
+
+  // Make the first tab active
+  const firstTab = document.querySelector(".tablinks");
+  firstTab.classList.add("active");
+});
+
+tabsProjects.forEach((tab) => {
+  tab.addEventListener("click", function (evt) {
+    const cityName = this.dataset.city;
+    openCity(evt, cityName);
+  });
+});
+
+// Hide all other tab contents
+function openCity(evt, cityName) {
+  // Hide all tab content
+  const tabcontent = document.getElementsByClassName("tabcontent");
+  for (let i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove active class from all buttons
+  const tablinks = document.getElementsByClassName("tablinks");
+  for (let i = 0; i < tablinks.length; i++) {
+    tablinks[i].classList.remove("active");
+  }
+
+  // Show ONLY the selected tab content
+  const selectedTab = document.getElementById(cityName);
+  selectedTab.style.display = "grid";
+
+  // Add active class to clicked button
+  evt.currentTarget.classList.add("active");
+}
+
+//
 // The slideshow
 // const loadImg = function (entries, observer) {
 //   const [entry] = entries;

@@ -187,21 +187,20 @@
         </div>
       </section>
 
-      <!-- Skills -->
+     
+       <!-- TABS FILTER  -->
+        <header class="tabs-header">
+        <h2>Featured Projects</h2>
+<p>Click on the buttons to reveal Front-end, CMS or UX projects :</p>
+</header>
+<div class="tab">
+  <button class="tablinks active" data-city="London">Front-end</button>
+  <button class="tablinks" data-city="Paris">CMS</button>
+  <button class="tablinks" data-city="Tokyo">UX/UI </button>
+</div>
 
-      <!-- New Project section -->
-      <section id="projects" class="project-section fade-in-section">
-        <div class="project-header">
-          <span class="hero-role">Featured Projects</span>
-          <h2 class="skills-title">My Projects</h2>
-          <p>
-            A few things I've designed and built — from full e-commerce flows to
-            API-driven apps.
-          </p>
-        </div>
-
-        <div class="project-container">
-          <article class="item project-card" style="grid-area: box-1">
+<div id="London" class="tabcontent fade-in-section">
+  <article class="item project-card">
             <img
               src="./media/projectCC.png"
               alt="Cosmic Care preview"
@@ -209,8 +208,9 @@
             />
             <div class="project-descr">
               <h3 class="project-title">Cosmic Care e-comerce website</h3>
+              <h4>React website with simulated Backend</h4>
               <div class="project-tech">
-                <i class="bi icon bi-arrow-right-square-fill"></i>
+               
                 <ul class="tags__list">
                   <li class="tag">
                     <i class="fa-brands fa-react"></i>
@@ -227,13 +227,9 @@
                   </li>
                 </ul>
               </div>
+             
               <p class="project-desc">
-                Designed the brand, colour, logo styling website content, T&C
-                Newsletter.
-              </p>
-              <p class="project-desc">
-                Built a full checkout experience in two modes-real payment
-                integration and demo mode, Simulated backend, SQL database.
+               CosmicCare is a fully functional React e‑commerce prototype built as a complete digital brand experience. It includes a custom brand identity, mobile‑first UI, dynamic product loading, a real checkout flow powered by Stripe,
               </p>
 
               <div class="project-buttons">
@@ -243,32 +239,33 @@
                 >
                   Demo
                 </a>
-                <a
+               
+
+                <button class="open-modal details-btn" data-project="ecom">
+                  Details
+                </button>
+                 <a
                   href="https://github.com/priorityc/cosmic-care-site"
                   class="btn-secondary"
                 >
                   GitHub
                 </a>
-
-                <button class="open-modal details-btn" data-project="ecom">
-                  Details
-                </button>
               </div>
             </div>
 
             <div id="projectOne" class="project-one hidden"></div>
           </article>
 
-          <article class="item project-card" style="grid-area: box-2">
+           <article class="item project-card">
             <img
               src="./media/projectLP.png"
               alt="Black Hole Event preview"
               class="project-thumb"
             />
             <div class="project-descr">
-              <h3 class="project-title">Black Hole Event-Landing page</h3>
+              <h3 class="project-title">Black Hole Event</h3>
+              <h4>Landing page</h4>
               <div class="project-tech">
-                <i class="bi chat bi-arrow-right-square-fill"></i>
                 <ul class="tags__list">
                   <li class="tag">
                     <i class="fa-brands fa-html5"></i>
@@ -282,12 +279,8 @@
                 </ul>
               </div>
               <p class="project-desc">
-                Designed to increase conversions and awarenes about the event
-                with interactive visual elements.
-              </p>
-              <p class="project-desc">
                 Immersive, space‑themed landing page with smooth scrolling and
-                interactive visuals.
+                interactive visuals and animations.
               </p>
               <div class="project-buttons">
                 <a
@@ -296,29 +289,129 @@
                 >
                   Demo
                 </a>
+                
+                <button class="open-modal details-btn" data-project="lanp">
+                  Details
+                </button>
                 <a
                   href="https://github.com/priorityc/stargazing-landing-page"
                   class="btn-secondary"
                 >
                   GitHub
                 </a>
-                <button class="open-modal details-btn" data-project="lanp">
-                  Details
-                </button>
               </div>
             </div>
           </article>
 
-          <article class="item project-card" style="grid-area: box-3">
+          <!-- Third project -->
+          <article class="item project-card last-item" >
+            <img
+              src="./media/FoodApp.PNG"
+              alt="Food App preview"
+              class="project-thumb"
+            />
+            <div class="project-descr">
+              <h3 class="project-title">Food App</h3>
+              <h4>Wep Aplication API</h4>
+              <div class="project-tech">
+                <ul class="tags__list">
+                  <li class="tag">
+                    <i class="fa-brands fa-react"></i>
+                  </li>
+
+                  <li class="tag">
+                    <i class="fa-brands fa-github"></i>
+                  </li>
+                </ul>
+              </div>
+
+              <p class="project-desc">
+                FoodApp is a mobile‑first recipe discovery tool that lets users search for meals and instantly view real recipes using live API data. 
+              </p>
+              <p class="project-desc">Integrated API from Spoonacular</p>
+
+              <div class="project-buttons">
+                <a
+                  href="https://priorityc.github.io/FoodApp/"
+                  class="btn-primary"
+                >
+                  Demo
+                </a>
+                
+                <button class="open-modal details-btn" data-project="foodapp">
+                  Details
+                </button>
+                <a
+                  href="https://github.com/priorityc/FoodApp.git"
+                  class="btn-secondary"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+
+</div>
+
+<div id="Paris" class="tabcontent fade-in-section">
+  <article class="project-card">
+      <div>
+      <img src="./media/construction.png" alt="Glow beauty studio preview" class="project-thumb">
+    </div>
+    <div class="project-descr">
+      <h3 class="project-title">G&D Home improvement</h3>
+      <h4>WordPress website</h4>
+      <p class="project-tech"><i class="bi icon bi-arrow-right-square-fill"></i>CMS-WordPress/Elementor</p>
+
+      <p class="project-desc">Design and brand for G&D Home improvement -construction start up which goal was to build quick and memorable online presence.</p>
+     
+
+
+      <div class="project-buttons">
+        <a href="https://magnificent-writer.localsite.io/" class="btn-primary">Demo</a>
+        <!-- <a href="./portfolio.html#cosmic-care" class="btn-text">Case Study</a> -->
+      </div>
+      </div>
+    </article> 
+    <article class="project-card">
+      <div>
+      <img src="./media/glowh.png" alt="Glow beauty studio preview" class="project-thumb">
+    </div>
+    <div class="project-descr">
+      <h3 class="project-title">Glow Beauty Studio</h3>
+      <h4>Wix Website</h4>
+      <p class="project-tech"><i class="bi icon bi-arrow-right-square-fill"></i>CMS-WIX</p>
+
+      <p class="project-desc">A modern beauty studio website built in Wix Studio with full booking system, service pages, and mobile‑responsive design.</p>
+     
+
+
+      <div class="project-buttons">
+        <a href="https://petya83dimitrova.wixstudio.com/glowstudio" class="btn-primary">Demo</a>
+        <!-- <a href="./portfolio.html#cosmic-care" class="btn-text">Case Study</a> -->
+      </div>
+      </div>
+    </article> 
+</div>
+
+<div id="Tokyo" class="tabcontent fade-in-section">
+  
+          <article class="item project-card">
+            <div class="phone-frame">
+            <div class="phone-inner">
             <img
               src="./media/servicequote.png"
               alt="Service calculator preview"
               class="project-thumb-app"
             />
+              </div>
+            </div>
             <div class="project-descr">
               <h4 class="project-title">
-                Service Quote Calculator-Mid-fidelity Prototype
+                Service Quote Calculator for G&D Home Improvement
               </h4>
+              <h5>UX prototype for Mobile Application</h5>
               <div class="project-tech">
                 <i class="bi rocket bi-arrow-right-square-fill"></i>
                 <ul class="tags__list">
@@ -332,10 +425,7 @@
                 Prototype for a construction quote calculator to automated the
                 quoting process, improving speed and consistency.
               </p>
-              <p class="project-desc">
-                Problem: Owner was losing time manually calculating quotes for
-                clients.
-              </p>
+            
 
               <div class="project-buttons">
                 <a
@@ -351,58 +441,9 @@
               </div>
             </div>
           </article>
-          <!-- Third project -->
-          <article class="item project-card" style="grid-area: box-4">
-            <img
-              src="./media/FoodApp.PNG"
-              alt="Food App preview"
-              class="project-thumb"
-            />
-            <div class="project-descr">
-              <h3 class="project-title">Food App-Wep Aplication API</h3>
-              <div class="project-tech">
-                <i class="bi adapt bi-arrow-right-square-fill"></i>
-                <ul class="tags__list">
-                  <li class="tag">
-                    <i class="fa-brands fa-react"></i>
-                  </li>
+</div>
 
-                  <li class="tag">
-                    <i class="fa-brands fa-github"></i>
-                  </li>
-                </ul>
-              </div>
-
-              <p class="project-desc">
-                Mobile‑first food discovery, dietary filter app with clean
-                navigation and responsive layout.
-              </p>
-              <p class="project-desc">Integrated API from Spoonacular</p>
-
-              <div class="project-buttons">
-                <a
-                  href="https://priorityc.github.io/FoodApp/"
-                  class="btn-primary"
-                >
-                  Demo
-                </a>
-                <a
-                  href="https://github.com/priorityc/FoodApp.git"
-                  class="btn-secondary"
-                >
-                  GitHub
-                </a>
-                <button class="open-modal details-btn" data-project="foodapp">
-                  Details
-                </button>
-              </div>
-            </div>
-          </article>
-          <!-- Forth project -->
-        </div>
-      </section>
-
-      <!--  -->
+       <!--  -->
       <!-- New ABOUT section -->
 
       <section class="fade-in-section">

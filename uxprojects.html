@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./uxprojects.css" />
+    <link rel="stylesheet" href="./styleIn.css" />
+    <title>UX Projects</title>
+  </head>
+  <body>
+    <nav class="mobile-header">
+      <div
+        class="hamburger"
+        role="button"
+        tabindex="0"
+        aria-label="Open navigation menu"
+        onkeydown="handleKey(event)"
+      >
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </nav>
+
+    <div class="topnav" id="myLinks">
+      <div>
+        <a class="nav__link active" href="index.html">Home</a>
+        <a class="nav__link" href="services.html">Services</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </div>
+    </div>
+
+    <!-- Desktop navigation -->
+    <!-- Desktop navigation on larger screens -->
+    <nav class="desktop-header">
+      <div class="sidenav">
+        <!-- first container -->
+        <div class="logo-cont">
+          <img id="logo" class="logo" src="./media/logoPetya.png" alt="logo" />
+          <p>Petya Digital</p>
+        </div>
+        <!-- Second container menus -->
+        <div class="arrange-manu">
+          <a class="nav__link" href="index.html">Home</a>
+          <a class="nav__link" href="services.html">Services</a>
+          <a class="nav__link" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero__inner">
+        <div class="hero-title">
+          <span class="hero-role">IT Specialist & Software Developer</span>
+
+          <h1 class="hero-name">
+            <h1>UX & Design Case Studies</h1>
+            <span class="h1-innertext">
+              I build clean, responsive
+              <span class="user-focused">user-focused</span>
+              interfaces.
+            </span>
+          </h1>
+        </div>
+
+        <span class="hero-small"></span>
+        <p class="hero-sub">
+          I redesign real-world interfaces to improve clarity, usability, and
+          storytelling.
+        </p>
+
+        <div class="button-hero">
+          <button id="openM" class="cta-primary">Contact</button>
+          <a href="#projects" class="cta-secondary">Projects</a>
+        </div>
+        <div class="hero-icons">
+          <a
+            href="https://github.com/priorityc?tab=repositories"
+            aria-label="GitHub page"
+          >
+            <i class="bi bi-github" aria-label="GitHub page"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"
+            aria-label="Linkedin profile"
+          >
+            <i class="bi bi-linkedin" aria-label="Linkedin profile"></i>
+          </a>
+          <a href="mailto:petya83dimitrova@gmail.com" aria-label="Contact page">
+            <i class="bi bi-envelope-fill"></i>
+          </a>
+          <a
+            href="./media/PetyaDimitrova.docx"
+            download="cv_PD.docx"
+            aria-label="Download CV Word document"
+          >
+            <i class="bi bi-arrow-down-square-fill"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="tech-strip">
+        <div class="tech-strip-wrapper">
+          <div class="stack">
+            <span>Persistent</span>
+            <span>Reliable</span>
+            <span>Detail‑oriented</span>
+            <span>User‑focused mindset</span>
+            <span>Proactive</span>
+            <span>Brand Awareness</span>
+            <span>Interactive Experiences</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="ux-page">
+        <div class="ux-grid">
+          <article class="ux-card">
+            <h2>Southend Pier Website Redesign</h2>
+            <p>
+              UX audit and homepage redesign focused on clarity, navigation, and
+              mobile experience.
+            </p>
+            <span class="ux-tag">UX Audit · Redesign</span>
+            <button class="ux-button">View Case Study</button>
+          </article>
+
+          <article class="ux-card">
+            <h2>Black Hole Landing Page</h2>
+            <p>
+              Immersive, story-driven landing page exploring motion, atmosphere,
+              and interaction.
+            </p>
+            <span class="ux-tag">Interaction Design · Storytelling</span>
+            <button onclick="openModal('southendModal')" class="ux-button">
+              View Case Study
+            </button>
+          </article>
+
+          <article class="ux-card">
+            <h2>Local Business Homepage Redesign</h2>
+            <p>
+              Improved hierarchy, CTAs, and mobile layout for a small business
+              website.
+            </p>
+            <span class="ux-tag">UI Design · UX Flow</span>
+            <button class="ux-button">View Case Study</button>
+          </article>
+        </div>
+      </section>
+    </main>
+    <!-- UX Modal -->
+    <div id="southendModal" class="modal">
+      <div class="modal-content-ux">
+        <span class="close" onclick="closeModal('southendModal')">&times;</span>
+        <div class="grid-ux-cont">
+          <header class="ux-header">
+            <h2>Southend Pier Website — UX Redesign Case Study</h2>
+
+            <section class="case-section">
+              <h3>Overview</h3>
+              <p>
+                The Southend Pier website is a high‑traffic tourist site with
+                outdated structure, unclear navigation, and inconsistent visual
+                hierarchy. This redesign focuses on clarity, mobile usability,
+                and a modern, task‑based layout.
+              </p>
+            </section>
+          </header>
+
+          <section class="case-section">
+            <h3>Problem</h3>
+            <p>
+              Visitors struggle to find essential information such as ticket
+              prices, opening times, and directions. The homepage lacks a clear
+              hero message and the navigation is overloaded, making the site
+              difficult to use on both desktop and mobile.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h3>My Role</h3>
+            <p>
+              I performed a full UX audit, identified usability issues, and
+              created a redesigned homepage concept focusing on hierarchy,
+              accessibility, and mobile-first layout.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h3>UX Audit Findings</h3>
+            <ul>
+              <li>Overloaded navigation with unclear grouping</li>
+              <li>No primary call‑to‑action on the homepage</li>
+              <li>Inconsistent spacing and typography</li>
+              <li>Poor mobile responsiveness</li>
+              <li>Low contrast text and missing accessibility features</li>
+            </ul>
+          </section>
+
+          <section class="case-section">
+            <h3>Redesign Goals</h3>
+            <ul>
+              <li>Create a clear hero section with a single CTA</li>
+              <li>Simplify navigation into task‑based categories</li>
+              <li>Improve mobile layout and readability</li>
+              <li>Introduce consistent spacing and typography</li>
+              <li>Enhance accessibility and contrast</li>
+            </ul>
+          </section>
+
+          <section class="case-section">
+            <h3>Redesign Concept</h3>
+            <p>
+              The redesigned homepage features a bold hero banner, a simplified
+              navigation structure, and clear pathways for key user tasks such
+              as buying tickets, planning a visit, and viewing events. The
+              layout uses a modern grid system with improved spacing and visual
+              hierarchy.
+            </p>
+          </section>
+
+          <section class="case-section">
+            <h3>What I Learned</h3>
+            <p>
+              This project strengthened my ability to evaluate real‑world
+              websites, identify UX issues, and propose practical redesign
+              solutions. It also improved my understanding of accessibility,
+              mobile-first design, and task‑based navigation.
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <script src="./uxproj.js"></script>
+  </body>
+</html>
