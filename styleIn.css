@@ -25,7 +25,7 @@ body {
 
   /* Colors */
   --skills-bg: #0f172a0e;
-
+  --blue-accent: #1800ad;
   --skills-card-bg: #edebff;
   --skills-border: #c9c4ff;
   --skills-text: #2e2e3a;
@@ -178,11 +178,12 @@ body {
 }
 
 .sidenav .active {
-  background: rgba(138, 43, 226, 0.25);
+  /* background: rgba(138, 43, 226, 0.25); */
+  background-color: var(--blue-accent);
   padding: 10px 26px;
   border-radius: 999px;
   backdrop-filter: blur(6px);
-  box-shadow: 0 0 12px rgba(138, 43, 226, 0.4);
+  /* box-shadow: 0 0 12px rgba(138, 43, 226, 0.4); */
   transition: all 0.3s ease;
 }
 
@@ -937,6 +938,17 @@ body {
     box-shadow 0.3s ease;
 }
 
+.project-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
 .project-card:hover {
   transform: translateY(-5px);
 }
@@ -1048,7 +1060,8 @@ body {
 .details-btn {
   padding: 14px 16px;
   align-items: center;
-  background: #8f3fe4;
+  /* background: #8f3fe4; */
+  background-color: var(--blue-accent);
   color: white;
   text-decoration: none;
   border: none;
@@ -2111,9 +2124,9 @@ small.valid {
 /* Style the buttons inside the tab */
 .tab button.active {
   background: linear-gradient(135deg, #38bdf8, #a855f7);
+  border-bottom: 3px solid #3b82f6;
   color: #fff;
   border-radius: 999px;
-  border: none;
   outline: none;
   cursor: pointer;
   padding: 10px 19px;
@@ -2481,7 +2494,7 @@ small.valid {
   .hero {
     height: 135vh;
     text-align: left;
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
   }
 
   .hero-icons {
@@ -2497,7 +2510,7 @@ small.valid {
   .hero-name {
     width: 100%;
     font-size: var(--fs-xxl);
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
   }
 
   .skills__subtitle,
@@ -2526,7 +2539,7 @@ small.valid {
     max-width: 1200px;
 
     grid-template-columns: 1fr 1fr;
-    margin: 2rem auto 7rem auto;
+    margin: 2rem auto 8rem auto;
   }
 
   .project-thumb {
@@ -2537,7 +2550,7 @@ small.valid {
   }
 
   .all-proj-btn-cont {
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
   }
 
   .experience-box {
@@ -2553,7 +2566,7 @@ small.valid {
   }
 
   .skills.light-theme {
-    margin-bottom: 7rem;
+    margin-bottom: 8rem;
   }
   /* ============= */
   .modal {

@@ -122,6 +122,7 @@ const projects = {
     problem: [
       "A mobile‑first service quote calculator prototype designed for a newly established construction business willing to enter the market quickly.",
     ],
+    tech: "I builded Web app for filtering receipes",
     // role: "FoodApp is a mobile‑first recipe discovery application that allows users to search for meals, explore ingredients, and view cooking instructions in a clean, intuitive interface. The app fetches real recipe data from an external API, displays dynamic results, and provides a smooth browsing experience with responsive layouts and interactive UI elements. Built using HTML, CSS, and JavaScript, the project demonstrates API integration, async data handling, and modern front‑end design principles.",
     features: [
       "Live Recipe Search (API Integration)",
@@ -129,11 +130,8 @@ const projects = {
       "Detailed Recipe View",
       "Responsive layout",
     ],
-    tech: ["React", "JavaScript", "GitHub", "API"],
-    challenges: [
-      "Rendering Dynamic Content Efficiently → Validate input",
-      "API Rate Limits → Avoided sending too many requests",
-    ],
+
+    techstack: ["React", "JavaScript", "GitHub", "API"],
     images: ["./media/FoodApp-Tablet.png", "./media/FoodApp-mobile.png"],
     demo: "https://priorityc.github.io/FoodApp/",
     github: "#",
