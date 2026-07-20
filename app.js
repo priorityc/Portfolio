@@ -10,8 +10,6 @@ const projects = {
     title: "React E‑Commerce Store",
     overview:
       "A full e‑commerce store with Stripe checkout and product filtering.",
-    // descr:
-    //   "CosmicCare is a fully‑functional React e‑commerce store built with a mobile‑first UI, dynamic product loading, and a complete cart + checkout flow. The project runs in two modes — a real mode with live product data from Supabase, and a demo mode for safe portfolio browsing. It includes a simulated backend using Express.js, automatic product syncing, global cart state, and a responsive, modern UI. The store is deployed on Netlify with environment‑based configuration for switching between demo and live data.",
     problem: [
       "I wanted to challenge myself to build a complete, production‑ready product — not just a small demo or isolated feature. My goal was to create an e‑commerce experience that feels real, includes essential functionality, and follows a clean, intuitive user flow that anyone can understand.",
     ],
@@ -39,12 +37,10 @@ const projects = {
     demo: "https://cosmiccare.netlify.app/?demo=true",
     github: "https://github.com/priorityc/cosmic-care-site",
   },
-  // Landing page
+
   lanp: {
     title: "Black Hole Event-Landing page",
     overview: "An immersive stargasing Landing page",
-    // descr:
-    //   "CosmicCare is a fully‑functional React e‑commerce store built with a mobile‑first UI, dynamic product loading, and a complete cart + checkout flow. The project runs in two modes — a real mode with live product data from Supabase, and a demo mode for safe portfolio browsing. It includes a simulated backend using Express.js, automatic product syncing, global cart state, and a responsive, modern UI. The store is deployed on Netlify with environment‑based configuration for switching between demo and live data.",
     problem: [
       "Museum websites struggle to attract subscriptions because they are often designed for logistical planning rather than digital engagement. Sites act as digital brochures rather than conversion hubs, hiding event and membership pages behind confusing naming conventions and fragmented booking flows, while failing to clearly articulate the value of subscribing.",
     ],
@@ -87,22 +83,6 @@ const projects = {
       "Clear visual feedback for noisy environments",
       "reduced cognitive load",
     ],
-    // features: [
-    //   "Investigating design context(user-activity-environment)",
-    //   "Storyboards",
-    //   "Interviews with the company owner",
-    //   "Paper Interfaces",
-    //   "PowerPoint interactive presentation ",
-    //   "Evaluation",
-    //   "User-centered design",
-    //   "Iteration process",
-    //   "PowerPoint",
-    //   "Figma",
-    // ],
-    // challenges: [
-    //   "Selecting the right question for the interview → Different interview questions used structured and semi-structured",
-    //   "Understanding what users want  → Field study observation with initial conversations",
-    // ],
     techstack: ["Figma"],
     tools: ["PowerPoint"],
     images: [
@@ -123,7 +103,6 @@ const projects = {
       "A mobile‑first service quote calculator prototype designed for a newly established construction business willing to enter the market quickly.",
     ],
     tech: "I builded Web app for filtering receipes",
-    // role: "FoodApp is a mobile‑first recipe discovery application that allows users to search for meals, explore ingredients, and view cooking instructions in a clean, intuitive interface. The app fetches real recipe data from an external API, displays dynamic results, and provides a smooth browsing experience with responsive layouts and interactive UI elements. Built using HTML, CSS, and JavaScript, the project demonstrates API integration, async data handling, and modern front‑end design principles.",
     features: [
       "Live Recipe Search (API Integration)",
       "Dynamic Meal Cards",
@@ -146,6 +125,7 @@ function handleKey(event) {
   }
 }
 
+// The hamburger menu
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   const menu = document.getElementById("myLinks");
@@ -155,7 +135,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     menu.style.display = isOpen ? "none" : "block";
 
-    // This toggles the hamburger animation correctly
     hamburger.classList.toggle("change", !isOpen);
   }
 
@@ -511,7 +490,6 @@ function validateModal(e) {
 
 const modalPr = document.getElementById("projectModal");
 const closeBtnPr = modalPr.querySelector(".project-close-modal");
-console.log(closeBtnPr);
 
 document.querySelectorAll(".open-modal").forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -560,10 +538,6 @@ document.querySelectorAll(".open-modal").forEach((btn) => {
     <li><i class="fa-brands fa-github tech-icons"></i>
   </li>
 `;
-
-    // modal.querySelector(".modal__icons").innerHTML = data.techstack
-    //   .map((icon) => `<i class="${icon}"></i>`)
-    //   .join("");
 
     modalPr.querySelector(".modal__tools").innerHTML = data.tools
       .map((c) => `<li class="skills__item">${c}</li>`)
@@ -675,7 +649,9 @@ function closeModal() {
 }
 
 const tabs = document.querySelectorAll(".service-tab");
+console.log(tabs);
 const panels = document.querySelectorAll(".service-panel");
+console.log(panels);
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -694,7 +670,7 @@ tabs.forEach((tab) => {
   });
 });
 
-// THE TAB FILTER
+// THE TAB FILTER for projects
 // Remove .active from all tab buttons
 
 // Add .active to the clicked button

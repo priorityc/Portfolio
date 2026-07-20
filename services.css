@@ -31,6 +31,11 @@
   --text-dark: #1a1a1a;
   --text-light: #6a6969;
 
+  --primary-color: #2b2b2b;
+  --accent-color: #0078d7;
+  --bg-light: #f9f9f9;
+  --text-dark: #333;
+
   /* Skills palette */
   --skills-bg: #f6f7fb;
   --skills-card-bg: #edebff;
@@ -165,15 +170,30 @@ body {
 /* ------------------------------
    SECTION WRAPPER (MOBILE FIRST)
 --------------------------------*/
+.pricing-card--starter {
+  background-color: #c640db;
+}
+
+.pricing-card--redesign {
+  background-color: #6a1bbe;
+}
+
+.pricing-card--development {
+  background-color: #0078d7;
+}
 .pricing-compare {
-  padding: 3rem 1.25rem;
-  background: var(--skills-border);
+  padding: 1rem;
+  /* background: var(--skills-border); */
+  background-color: #fff;
   /* color: var(--clr-text-main); */
 }
 
 .pricing-compare__inner {
-  max-width: 1100px;
-  margin: 0 auto;
+  max-width: 1300px;
+  background-image: url(./media/background.avif);
+  margin: 0 auto 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
 }
 
 /* ------------------------------
@@ -189,21 +209,27 @@ body {
 --------------------------------*/
 .pricing-compare__grid {
   display: grid;
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  align-items: stretch; /* IMPORTANT */
 }
 
 /* ------------------------------
    PRICING CARDS
 --------------------------------*/
 .pricing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   position: relative;
-  padding: 3rem 2.5rem;
+  padding: 1rem 2rem;
   border-radius: 16px;
-  background: radial-gradient(
+  /* background: radial-gradient(
     circle,
     rgb(27, 32, 61) 0%,
     rgba(28, 5, 11, 1) 100%
-  );
+  ); */
   color: white;
   border: 1px solid var(--clr-border-soft);
   box-shadow: var(--shadow-soft);
@@ -270,10 +296,9 @@ body {
    TITLES & PRICE
 --------------------------------*/
 .pricing-card__title {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: var(--skills-border);
   font-size: var(--fs-lg);
-  letter-spacing: 1.5px;
 }
 
 .pricing-card__price {
@@ -331,6 +356,7 @@ body {
 /* ------------------------------
    CTA BUTTONS
 --------------------------------*/
+
 .pricing-card__cta {
   width: 100%;
   padding: 0.65rem 1rem;
@@ -346,6 +372,8 @@ body {
     box-shadow var(--transition-fast);
   text-decoration: none;
   color: white;
+  margin-top: auto; /* pushes button down */
+  text-align: center;
 }
 
 .pricing-card__cta:hover {
@@ -557,8 +585,148 @@ a {
    RESPONSIVE BREAKPOINTS
 --------------------------------*/
 
+/* New Design  */
+
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn.primary {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+.btn.secondary {
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+/* SERVICES OVERVIEW */
+.services-overview {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.service-card-service {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.service-img {
+  width: 100%;
+  height: 260px; /* choose any height you like */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.service-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* MAGIC FIX */
+  display: block;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.process {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 3rem 0;
+  flex-wrap: wrap; /* allows mobile stacking */
+}
+
+.process-step {
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+  color: white;
+  border-radius: 999px;
+  position: relative;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  font-family: inherit;
+}
+
+/* Arrow shape */
+.process-step::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent;
+  border-left: 20px solid #2a2a2a;
+}
+
+.process-step:last-child::after {
+  display: none; /* remove arrow on last step */
+}
+
+.process-icon {
+  font-size: 1.8rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.step {
+  background: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA */
+.cta {
+  background: var(--accent-color);
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.cta-buttons .btn.secondary {
+  border-color: #fff;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+
 /* Tablet: 2 columns */
 @media (min-width: 640px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .package-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .timeline {
+    flex-wrap: nowrap;
+  }
+
   .why-me__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -571,14 +739,14 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .pricing-compare__grid .pricing-card:last-child {
+  /* .pricing-compare__grid .pricing-card:last-child {
     grid-column: span 2;
     justify-self: center;
-  }
+  } */
 
-  .pricing-card--highlight {
+  /* .pricing-card--highlight {
     order: -1;
-  }
+  } */
 
   .process-grid {
     grid-template-columns: 1fr 1fr;
@@ -601,7 +769,11 @@ a {
 }
 
 /* Desktop: 3 columns */
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    margin: 2rem 0 7rem 0;
+  }
   .why-me {
     margin-bottom: 7rem;
   }
@@ -634,10 +806,7 @@ a {
     content: "";
   }
   .pricing-compare__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .pricing-compare__grid .pricing-card:last-child {
-    grid-column: span 1;
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .pricing-compare__header {
@@ -645,11 +814,7 @@ a {
   }
 
   .pricing-compare {
-    padding: 7rem 0;
-  }
-
-  .pricing-card--highlight {
-    order: 0;
+    padding: 2rem 0;
   }
 
   .process-header {
