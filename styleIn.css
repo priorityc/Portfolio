@@ -411,15 +411,21 @@ body {
   gap: 1rem;
   margin-bottom: 2rem;
 }
-.cta-primary {
+
+.cta {
   padding: 1.3rem 1.8rem;
   border-radius: 16px;
-  color: white;
   font-weight: 600;
-  font-size: var(--fs-md);
-  transition: 0.3s ease;
   letter-spacing: 1px;
   border: none;
+  border-radius: 16px;
+  transition: 0.3s ease;
+}
+.cta-primary {
+  color: white;
+
+  font-size: var(--fs-md);
+
   background: var(--btn-gradient);
   box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
 }
@@ -430,20 +436,15 @@ body {
 }
 
 .cta-secondary {
-  padding: 0.9rem 1.8rem;
+  /* padding: 0.9rem 1.8rem; */
   /* border: 1.8px solid var(--card-purple); */
   /* border: 1px solid white; */
   border: 1px solid var(--accent-purple);
   background-color: transparent;
   text-decoration: none;
-  border-radius: 16px;
+
   /* color: white; */
   color: var(--accent-purple);
-  font-weight: 600;
-  font-size: 1.3rem;
-  letter-spacing: 1px;
-
-  transition: 0.3s ease;
 }
 
 .cta-secondary:hover {
@@ -1302,7 +1303,6 @@ body {
 }
 .service-card img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 
@@ -1419,14 +1419,6 @@ body {
   pointer-events: none;
 }
 
-.intro {
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  opacity: 0.9;
-  font-size: var(--fs-md);
-  text-align: center;
-}
-
 /* Card */
 
 .testimonial-card {
@@ -1491,6 +1483,7 @@ body {
 
 .footer-box {
   background: radial-gradient(circle at center, #0a0f2c, #050618);
+  color: #d8d6d6;
   padding: 3rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -2487,13 +2480,14 @@ small.valid {
   .modal__images {
     column-count: 3;
   }
-  .testimonial-card {
-    flex-direction: row;
-    text-align: left;
+
+  .testimonial-cont {
+    display: flex;
+    align-items: flex-start;
   }
 
-  .testimonial-text {
-    flex: 1;
+  .testimonial-card {
+    flex-direction: row;
   }
 
   .footer-content {
@@ -2823,8 +2817,8 @@ small.valid {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    /* margin: 0 auto 8rem auto; */
     padding: 5rem 4rem;
+    margin-bottom: 7rem;
   }
 
   .lets-connect-cont {

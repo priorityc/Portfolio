@@ -121,6 +121,16 @@ body {
   font-weight: 300;
   margin: 1rem;
 }
+header p {
+  text-align: center;
+  color: var(--accent-purple);
+}
+
+.projects-title-h2 {
+  text-align: center;
+  font-weight: 300;
+  margin: 1rem;
+}
 .cont
 /* Progress bar container */
 .progress-bar {
