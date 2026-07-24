@@ -1307,8 +1307,9 @@ body {
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 35px rgba(167, 139, 250, 0.35);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  transition: 0.25s ease;
 }
 
 .service-card h3 {
