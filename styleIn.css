@@ -88,6 +88,11 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
+.Logoheader {
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
 /* Hamburger */
 
 .hamburger {
