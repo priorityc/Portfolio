@@ -38,7 +38,7 @@ const projects = {
     github: "https://github.com/priorityc/cosmic-care-site",
   },
 
-  lanp: {
+  lamp: {
     title: "Black Hole Event-Landing page",
     overview: "An immersive stargasing Landing page",
     problem: [
@@ -102,15 +102,15 @@ const projects = {
     problem: [
       "A mobile‑first service quote calculator prototype designed for a newly established construction business willing to enter the market quickly.",
     ],
-    tech: "I builded Web app for filtering receipes",
+    tech: ["I builded Web app for filtering receipes"],
     features: [
       "Live Recipe Search (API Integration)",
       "Dynamic Meal Cards",
       "Detailed Recipe View",
       "Responsive layout",
     ],
-
     techstack: ["React", "JavaScript", "GitHub", "API"],
+    tools: ["npm"],
     images: ["./media/FoodApp-Tablet.png", "./media/FoodApp-mobile.png"],
     demo: "https://priorityc.github.io/FoodApp/",
     github: "#",
@@ -490,86 +490,101 @@ function validateModal(e) {
 
 const modalPr = document.getElementById("projectModal");
 const closeBtnPr = modalPr.querySelector(".project-close-modal");
+const projectCards = document.querySelectorAll(".project-card");
 
-document.querySelectorAll(".open-modal").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const projectKey = btn.dataset.project;
-    const data = projects[projectKey];
+// Prevent modal opening when clicking buttons inside the card
+function isButton(element) {
+  return element.tagName === "BUTTON" || element.tagName === "A";
+}
 
-    // Fill modal content
+// OPEN MODAL WHEN CLICKING THE CARD
+projectCards.forEach((card) => {
+  card.addEventListener("click", (e) => {
+    if (isButton(e.target)) return; // ignore button clicks
+
+    const projectKey = card.dataset.project; // GET PROJECT KEY
+    const data = projects[projectKey]; // GET PROJECT DATA
+
+    if (!data) {
+      console.error("No project data found for:", projectKey);
+      return;
+    }
+
+    // Populate modal content
     modalPr.querySelector(".modal__title").textContent = data.title;
     modalPr.querySelector(".modal__overview").textContent = data.overview;
-    // modalPr.querySelector(".modal__role").textContent = data.descr;
-    // modalPr.querySelector("modal__inons").textContent = data.icons;
+
     modalPr.querySelector(".modal__lists").innerHTML = data.problem
       .map(
-        (f) => ` <li class="modal-problem-item">
-      <i class="bi bi-exclamation-circle"></i></li>
-      <li><h3 class="card-title">Problem</h3></li>
-      <li><p>${f}</p></li>`,
+        (f) => `
+        <li class="modal-problem-item"><i class="bi bi-exclamation-circle"></i></li>
+        <li><h3 class="card-title">Problem</h3></li>
+        <li><p>${f}</p></li>
+      `,
       )
       .join("");
 
     modalPr.querySelector(".modal__tags").innerHTML = data.tech
       .map(
-        (t) => ` <li class="modal-problem-item">
-      <i class="bi bi-bricks"></i></li>
-      <li><h3 class="card-title">Solution</h3></li>
-      <li><i class="fa-brands fa-node-js"></i></li>
-      <li><p>${t}</p></li>`,
+        (t) => `
+        <li class="modal-problem-item"><i class="bi bi-bricks"></i></li>
+        <li><h3 class="card-title">Solution</h3></li>
+        <li><p>${t}</p></li>
+      `,
       )
       .join("");
 
     modalPr.querySelector(".modal__challenges").innerHTML = data.features
       .map(
         (c) =>
-          `
-          <li class="skills__item">${c}</li><li><i class="bi bi-arrow-right"></i></li>`,
+          `<li class="skills__item">${c}</li><li><i class="bi bi-arrow-right"></i></li>`,
       )
       .join("");
-    // Icons rendering
-    // if the object is projects.lanp
 
     modalPr.querySelector(".modal__techstack").innerHTML = `
-  <li>
-    <i class="fa-brands fa-react tech-icons"></i></li>
-    <li><i class="fa-brands fa-square-js tech-icons"></i></li>
-    <li><i class="fa-solid fa-database tech-icons"></i></li>
-    <li><i class="fa-brands fa-github tech-icons"></i>
-  </li>
-`;
+      <li><i class="fa-brands fa-react tech-icons"></i></li>
+      <li><i class="fa-brands fa-square-js tech-icons"></i></li>
+      <li><i class="fa-solid fa-database tech-icons"></i></li>
+      <li><i class="fa-brands fa-github tech-icons"></i></li>
+    `;
 
     modalPr.querySelector(".modal__tools").innerHTML = data.tools
       .map((c) => `<li class="skills__item">${c}</li>`)
       .join("");
 
     modalPr.querySelector(".modal__images").innerHTML = data.images
-      .map((img, index) => {
-        return `
-      <div>
-        <img src="${img}" data-index="${index}" alt="Project screenshot">
-      </div>
-    `;
-      })
+      .map(
+        (img, index) => `
+        <div>
+          <img src="${img}" data-index="${index}" alt="Project screenshot">
+        </div>
+      `,
+      )
       .join("");
 
-    // These MUST be inside the click handler
+    // Links
     modalPr.querySelector(".modal__demo").href = data.demo;
     modalPr.querySelector(".modal__live").href = data.live;
     modalPr.querySelector(".modal__github").href = data.github;
 
+    // Show modal
     modalPr.classList.add("active");
+    document.body.classList.add("no-scroll");
   });
 });
 
-// Close modal
+// CLOSE MODAL BUTTON
 closeBtnPr.addEventListener("click", () => {
   modalPr.classList.remove("active");
+  document.body.classList.remove("no-scroll");
 });
 
-// Close on background click
+// CLOSE MODAL WHEN CLICKING BACKDROP
 modalPr.addEventListener("click", (e) => {
-  if (e.target === modalPr) modalPr.classList.remove("active");
+  if (e.target === modalPr) {
+    modalPr.classList.remove("active");
+    document.body.classList.remove("no-scroll");
+  }
 });
 
 // AUTO hide the indicater after users scroll
@@ -721,6 +736,8 @@ function openCity(evt, cityName) {
   // Add active class to clicked button
   evt.currentTarget.classList.add("active");
 }
+
+// Onclicking the cards show the modal
 
 //
 // The slideshow
