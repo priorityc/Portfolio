@@ -22,28 +22,13 @@
   --fs-xl: clamp(1.8rem, 3vw + 1rem, 2.8rem);
   --fs-xxl: clamp(2.2rem, 4vw + 1rem, 4.5rem);
 
-  /* Colors */
-  --main-gradient: #1a1a2e;
-  --bg-purple: #c9b3f2;
-  --card-purple: #f4eeff;
-  /* --accent-purple: #b886ee; */
-  --accent-purple: #7c8cff;
-  --text-dark: #1a1a1a;
-  --text-light: #6a6969;
-
-  --primary-color: #2b2b2b;
-  --accent-color: #0078d7;
+  --primary-color: #222238ff;
+  --secondary-color: #7c8cffff;
+  --accent-colorpurple: #6a1bbeff;
+  --accent-colourpink: #d701fcff;
+  --light-background: #fbdcedff;
   --bg-light: #f9f9f9;
   --text-dark: #333;
-
-  /* Skills palette */
-  --skills-bg: #f6f7fb;
-  --skills-card-bg: #edebff;
-  --skills-border: #c9c4ff;
-  --skills-text: #2e2e3a;
-  --skills-muted: #6b6b8a;
-  --skills-accent: #6a1bbe;
-  --skills-pill-bg: #e8e6ff;
 
   /* Shared tokens */
   --border-purple: 1px solid rgba(167, 139, 250, 0.3);
@@ -52,11 +37,10 @@
 }
 
 body {
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: var(--fs-md);
   line-height: 1.6;
-  /* color: var(--skills-text); */
-  /* background-color: rgb(254, 254, 254); */
+  color: var(--text-dark);
 }
 
 /* ===== HERO SECTION ===== */
@@ -78,25 +62,6 @@ body {
   opacity: 0;
 }
 
-/* BANNER */
-/* .hero-banner {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  margin-top: 1rem;
-  padding: 0.8rem 0;
-  background: #1a1a1d;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #6f9bff;
-  letter-spacing: 1px;
-}
-
-.hero-banner span {
-  display: inline-block;
-  animation: scrollBanner 12s linear infinite;
-} */
-
 /* Why work with me  */
 /* ------------------------------
    SECTION WRAPPER (MOBILE FIRST)
@@ -104,7 +69,7 @@ body {
 .why-me {
   padding: 3rem 1.25rem;
   margin-bottom: 1rem;
-  background-color: var(--skills-bg);
+  background-color: rgb(255, 229, 229);
 }
 
 .why-me__inner {
@@ -115,21 +80,6 @@ body {
 /* ------------------------------
    HEADER
 --------------------------------*/
-.why-me__header {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-/* .why-me__header h2 {
-  font-size: var(--fs-lg);
-  margin-bottom: 0.5rem;
-} */
-
-.why-me__header p {
-  font-size: 0.95rem;
-  max-width: 420px;
-  margin: 0.5rem auto 0;
-}
 
 /* ------------------------------
    GRID (MOBILE FIRST)
@@ -202,7 +152,8 @@ body {
    SECTION WRAPPER (MOBILE FIRST)
 --------------------------------*/
 .pricing-card--starter {
-  background-color: #fa2d9e;
+  /* background-color: #fa2d9e; */
+  background-color: var(--accent-colourpink);
   color: black;
 }
 
@@ -211,7 +162,7 @@ body {
 }
 
 .pricing-card--development {
-  background-color: var(--accent-purple);
+  background-color: var(--secondary-color);
 }
 .pricing-compare {
   padding: 1rem;
@@ -294,7 +245,7 @@ body {
     rgba(15, 23, 42, 0.98),
     rgba(12, 30, 87, 0.9)
   ); */
-  background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+  background: var(--primary-color);
   color: #fff;
 }
 
