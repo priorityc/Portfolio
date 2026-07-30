@@ -517,7 +517,6 @@ projectCards.forEach((card) => {
     modalPr.querySelector(".modal__lists").innerHTML = data.problem
       .map(
         (f) => `
-        <li class="modal-problem-item"><i class="bi bi-exclamation-circle"></i></li>
         <li><h3 class="card-title">Problem</h3></li>
         <li><p>${f}</p></li>
       `,
@@ -527,7 +526,6 @@ projectCards.forEach((card) => {
     modalPr.querySelector(".modal__tags").innerHTML = data.tech
       .map(
         (t) => `
-        <li class="modal-problem-item"><i class="bi bi-bricks"></i></li>
         <li><h3 class="card-title">Solution</h3></li>
         <li><p>${t}</p></li>
       `,
