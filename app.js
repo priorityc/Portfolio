@@ -513,7 +513,7 @@ projectCards.forEach((card) => {
     }
 
     // TITLE + OVERVIEW
-    console.log(data.title);
+
     modalPr.querySelector(".modal-title").textContent = data.title;
     modalPr.querySelector(".modal-overview").textContent = data.overview;
 
@@ -581,33 +581,30 @@ modalPr.addEventListener("click", (e) => {
   }
 });
 
-// AUTO hide the indicater after users scroll
-const modalContent = document.querySelector(".modal-content");
-const scrollIndicator = document.querySelector(".scroll-indicator");
+// SCROLL INDICATORS INSIDE MODAL
+const modalContent = modalPr.querySelector(".modal-content");
+const scrollIndicator = modalPr.querySelector(".scroll-indicator");
+const scrollTopIndicator = modalPr.querySelector(".scroll-top-indicator");
 
+// Hide scroll-down indicator after user scrolls
 modalContent.addEventListener("scroll", () => {
-  if (modalContent.scrollTop > 20) {
-    scrollIndicator.style.opacity = "0";
-  } else {
-    scrollIndicator.style.opacity = "1";
-  }
+  scrollIndicator.style.opacity = modalContent.scrollTop > 20 ? "0" : "1";
 });
 
-// Show the up arrow when user scrow down
-const scrollTopIndicator = document.querySelector(".scroll-top-indicator");
-
+// Show scroll-to-top indicator when user scrolls down
 modalContent.addEventListener("scroll", () => {
-  if (modalContent.scrollTop > 200) {
-    scrollTopIndicator.style.opacity = "1";
-    scrollTopIndicator.style.pointerEvents = "auto";
-  } else {
+  if (modalContent.scrollTop === 0) {
     scrollTopIndicator.style.opacity = "0";
     scrollTopIndicator.style.pointerEvents = "none";
+  } else {
+    scrollTopIndicator.style.opacity = "1";
+    scrollTopIndicator.style.pointerEvents = "auto";
   }
 });
 
+// Scroll back to top when clicking the ↑ arrow
 scrollTopIndicator.addEventListener("click", () => {
-  modalContent.scrollTo(0, 0);
+  modalContent.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // Fading sections

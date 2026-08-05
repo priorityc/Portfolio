@@ -176,7 +176,7 @@ body {
 
 .sidenav .active {
   /* background: rgba(138, 43, 226, 0.25); */
-  background-color: var(--accent-colorpurple);
+  background-color: #a855f7;
   color: #fff;
   padding: 10px 26px;
   border-radius: 999px;
@@ -272,8 +272,12 @@ body {
   font-size: var(--fs-lg);
   margin: 0 0.7rem;
   /* color: rgb(231, 74, 255); */
-  color: var(--light-background);
+  color: #2a00c7;
   transition: color 0.3s ease;
+}
+
+.bi-hero {
+  color: #a855f7;
 }
 
 .hero-icons a:hover {
@@ -382,7 +386,7 @@ body {
 }
 
 .user-focused {
-  color: var(--accent-colorpurple);
+  color: #a855f7;
 }
 
 .hero-sub {
@@ -407,7 +411,7 @@ body {
 
 .cta {
   padding: 1.3rem 1.8rem;
-  border-radius: 16px;
+  border-radius: 8px;
   font-weight: 600;
   letter-spacing: 1px;
   border: none;
@@ -617,9 +621,137 @@ body {
   font-weight: 500;
 }
 
-/* =========================
-   About Section
-========================= */
+/* NEW ABOUT */
+/* SECTION WRAPPER */
+.about-section {
+  padding: 4rem 1rem;
+  background: #0f1f1c; /* dark green vibe */
+  color: #fff;
+  margin-bottom: 3rem;
+}
+
+/* GRID CONTAINER */
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* IMAGE AREA */
+.about-image-wrapper {
+  position: relative;
+  width: 260px;
+  height: 260px;
+}
+
+.about-image-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f4c542; /* yellow accent */
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.about-img {
+  /* position: relative;
+  width: 50%;
+  height: 50%;
+  border-radius: 999px;
+
+  object-fit: cover;
+  z-index: 2; */
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+  margin: 1rem auto 1rem;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* TAGS AROUND IMAGE */
+.about-tags {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem;
+  padding-top: 180px;
+  margin: 1rem 0;
+}
+
+.tag {
+  background: #1f3d36;
+  color: #a855f7;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/* TEXT CONTENT */
+.about-content {
+  text-align: center;
+  max-width: 500px;
+}
+
+.about-heading {
+  font-size: 1.8rem;
+  margin: 2rem 0 1rem 0;
+}
+
+.about-subheading {
+  font-size: 1.2rem;
+  color: #a855f7;
+  margin-bottom: 1rem;
+}
+
+.about-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* STATS */
+.about-stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat h3 {
+  font-size: 1.6rem;
+  color: var(--accent-colourpink);
+}
+
+.stat p {
+  font-size: 0.9rem;
+}
+
+/* CTA BUTTON */
+.about-btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background: var(--btn-gradient);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+}
+
+/* SIGNATURE */
+.about-signature {
+  font-family: "Pacifico", cursive;
+  font-size: 1.4rem;
+  opacity: 0.8;
+}
+
+/* 
 
 .about-container {
   background: radial-gradient(
@@ -631,7 +763,7 @@ body {
   border-radius: 16px;
 
   display: grid;
-  gap: 1.5rem;
+  gap: 2.5rem;
   padding: 2rem 1.5rem;
   margin-bottom: 1rem;
   grid-template-areas:
@@ -674,7 +806,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 1rem 0;
-}
+} */
 
 .about-blob {
   position: absolute;
@@ -690,7 +822,7 @@ body {
   opacity: 0.55;
 }
 
-.latest-roles {
+/* .latest-roles {
   background: #f6f7fb;
   border: 1px solid #c9c4ff;
   padding: 1.5rem;
@@ -708,7 +840,6 @@ body {
 .experience-card {
   padding: 1rem 0;
   border-radius: 0.75rem;
-  /* margin-bottom: 1rem; */
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
@@ -733,7 +864,7 @@ body {
   font-size: 0.9rem;
   color: #54546b;
   font-weight: 500;
-}
+} */
 /* Education */
 .education {
   padding: 1rem;
@@ -844,7 +975,7 @@ body {
     opacity 0.6s ease,
     transform 0.6s ease;
   overflow: hidden;
-  color: var(--accent-colourpink);
+  color: #a855f7;
   margin-bottom: 3rem;
 }
 
@@ -1465,7 +1596,7 @@ body {
 ========================= */
 
 .services-wrapper {
-  margin-top: -5rem; /* overlap */
+  margin-top: -10rem; /* overlap */
   padding: 2rem 1.5rem;
   background: #fff; /* pure white to avoid grey blending */
   padding: 3rem 1rem;
@@ -1541,7 +1672,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  background-color: #a8a8ff74;
+  /* background-color: #a8a8ff74; */
+  background: #fdecec;
   border: 0.2px solid rgba(63, 17, 200, 0.25);
   border-radius: 16px;
   padding: 1.5rem;
@@ -1757,17 +1889,22 @@ body {
   gap: 2rem;
 }
 
-.footer-info h2 {
-  background: var(--accent-purple);
-  -webkit-background-clip: text;
-  color: transparent;
-  font-size: var(--fs-lg);
-  text-align: left;
-  margin-bottom: 0.5rem;
+.footer-header-h2 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.arrange-manu-footer {
+  margin-bottom: 2rem;
+}
+
+.nav__link-footer {
+  color: #fff;
 }
 
 .footer-info p {
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
+  margin-bottom: 2rem;
 }
 
 .footer-email {
@@ -1776,7 +1913,7 @@ body {
   gap: 0.5rem;
   color: var(--bg-purple);
   text-decoration: none;
-  font-size: var(--fs-xs);
+  font-size: var(--fs-sm);
 }
 
 .social-links {
@@ -2167,7 +2304,7 @@ textarea:focus {
     transparent 60%
   );
   border-radius: 16px;
-  padding: 1rem;
+  padding: 2em;
 }
 
 .modal-features li {
@@ -2190,7 +2327,7 @@ textarea:focus {
   gap: 0.5rem;
   background-color: var(--bg-light);
   padding: 1em;
-  border-radius: 5px;
+  border-radius: 16px;
 }
 
 .modal-tools li {
@@ -2286,15 +2423,6 @@ textarea:focus {
   margin-bottom: 2rem;
 }
 
-/* .modal__buttons {
-  margin-top: 2rem;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-} */
-
 .btn {
   background: #6a1bbe;
   color: white;
@@ -2359,61 +2487,47 @@ textarea:focus {
   animation: bounce 1s infinite;
   opacity: 0.7;
 }
-.scroll-indicator {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  color: #0a0f2c;
-}
-
-.scroll-indicator span {
-  width: 18px;
-  height: 18px;
-  border-bottom: 4px solid var(--accent-purple);
-  border-right: 4px solid var(--accent-purple);
-  transform: rotate(45deg);
-  animation: bounce 1.4s infinite;
-  opacity: 0.7;
-  color: var(--primary-color);
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0) rotate(45deg);
-  }
-  50% {
-    transform: translateY(6px) rotate(45deg);
-  }
-  100% {
-    transform: translateY(0) rotate(45deg);
-  }
-}
-
-/* Point up */
+.scroll-indicator,
 .scroll-top-indicator {
   position: absolute;
-  right: 1rem;
-  width: 34px;
-  height: 34px;
-  /* background: rgba(255, 255, 255, 0.85); */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  opacity: 0;
-  pointer-events: none;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
   transition: opacity 0.3s ease;
+  font-size: 1.2rem;
+  color: var(--accent-purple);
+  font-weight: 600;
 }
 
-.scroll-top-indicator span {
-  width: 10px;
-  height: 10px;
-  border-top: 2px solid var(--accent-purple);
-  border-left: 2px solid var(--accent-purple);
-  transform: rotate(45deg); /* arrow pointing up */
+.scroll-indicator {
+  bottom: 10px;
+}
+
+.scroll-top-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: var(--accent-purple);
+  cursor: pointer;
+  opacity: 0; /* JS will show it */
+  transition: opacity 0.3s ease;
+
+  /* Floating animation */
+  animation: floatUpDown 1.6s ease-in-out infinite;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-8px);
+  }
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 /* =========================
@@ -2494,11 +2608,10 @@ small.valid {
 .tabcontent {
   border: 1px solid #ccc;
   border-top: none;
-  margin-bottom: 3rem;
   background: #fdecec;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  padding: 1rem;
+  padding: 4rem 0;
 }
 
 /* The Mobile frame */
@@ -2567,7 +2680,6 @@ small.valid {
   .hero,
   .skills,
   .skills.light-theme,
-  .tabcontent.active,
   .about-container,
   .education,
   .slide,
@@ -2638,9 +2750,9 @@ small.valid {
   .tabcontent {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 3rem;
+    padding: 4rem 0;
     margin-top: -20px;
-    border: 16px 16px 0 0;
+    border-radius: 16px 16px 0 0;
   }
   .last-item {
     grid-column: span 2;
@@ -2649,6 +2761,22 @@ small.valid {
 
   .skills.light-theme {
     margin-bottom: 3rem;
+  }
+  /* NEW ABOUT */
+  .about-container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+
+  .about-content {
+    text-align: left;
+    max-width: 450px;
+  }
+
+  .about-tags {
+    padding-top: 300px;
   }
 
   .about {
@@ -2756,12 +2884,10 @@ small.valid {
     justify-content: space-between;
   }
 
-  .about-img {
+  /* .about-img {
     width: 190px;
     height: 190px;
     /* margin-bottom: 7rem; */
-  }
-
   .about-blob {
     width: 220px;
     height: 200px;
@@ -2917,8 +3043,8 @@ small.valid {
   }
   .tabcontent {
     grid-template-columns: 1fr 1fr;
-    margin: 0 auto 7px auto;
-    border: 16px 16px 0 0;
+    border-radius: 16px 16px 0 0;
+    padding-bottom: 7rem;
   }
 
   .project-thumb {
@@ -2932,6 +3058,9 @@ small.valid {
     margin-bottom: 8rem;
   }
 
+  .about-section {
+    padding: 7rem 0;
+  }
   .experience-box {
     justify-content: flex-start;
     margin-top: 2rem;
@@ -3114,8 +3243,6 @@ small.valid {
   }
   .projects-section {
     max-width: 100%;
-    margin: 0 auto 8rem auto;
-    padding: 1rem;
   }
 
   .experience-card {
@@ -3172,6 +3299,7 @@ small.valid {
   }
 
   .services-wrapper {
+    margin-top: -15rem;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;

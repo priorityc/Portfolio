@@ -94,23 +94,23 @@
             href="https://github.com/priorityc?tab=repositories"
             aria-label="GitHub page"
           >
-            <i class="bi bi-github" aria-label="GitHub page"></i>
+            <i class="bi bi-github bi-hero" aria-label="GitHub page"></i>
           </a>
           <a
             href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"
             aria-label="Linkedin profile"
           >
-            <i class="bi bi-linkedin" aria-label="Linkedin profile"></i>
+            <i class="bi bi-linkedin bi-hero" aria-label="Linkedin profile"></i>
           </a>
           <a href="mailto:petya83dimitrova@gmail.com" aria-label="Contact page">
-            <i class="bi bi-envelope-fill"></i>
+            <i class="bi bi-envelope-fill bi-hero"></i>
           </a>
           <a
             href="./media/PetyaDimitrova.docx"
             download="cv_PD.docx"
             aria-label="Download CV Word document"
           >
-            <i class="bi bi-arrow-down-square-fill"></i>
+            <i class="bi bi-arrow-down-square-fill bi-hero"></i>
           </a>
         </div>
       </div>
@@ -328,9 +328,66 @@
 
 
        <!--  -->
-      <!-- New ABOUT section -->
+<!-- NEW ABOUT -->
+ <section class="about-section">
+  <div class="about-container">
 
-      <section class="fade-in-section">
+    <!-- IMAGE + TAGS -->
+    <div class="about-image-wrapper">
+            <div class="about-blob"></div>
+      <img src="./media/profilePetya.jpg" alt="Petya Dimitrova" class="about-img">
+
+      <div class="about-tags">
+        <span class="tag">UI/UX Design</span>
+        <span class="tag">Website Design</span>
+        <span class="tag">Prototype</span>
+        <span class="tag">Wireframe Design</span>
+        <span class="tag">Design System</span>
+        <span class="tag">Mobile App Design</span>
+      </div>
+    </div>
+
+    <!-- TEXT CONTENT -->
+    <div class="about-content">
+      <h2 class="about-heading">About Me</h2>
+      <h3 class="about-subheading">Who is Petya Dimitrova?</h3>
+
+      <p class="about-description">
+        I craft immersive digital experiences through modern UI/UX design,
+        responsive web development, and story‑driven interfaces that connect
+        users with brands.
+      </p>
+
+      <!-- STATS -->
+      <div class="about-stats">
+        <div class="stat">
+          <h3>30+</h3>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat">
+          <h3>10+</h3>
+          <p>Industries Covered</p>
+        </div>
+        <div class="stat">
+          <h3>4+</h3>
+          <p>Years Experience</p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <a href="./documents/PetyaDimitrova.doc" class="about-btn" 
+              download="Petya-Dimitrova-CV.docx">Download CV</a>
+
+      <!-- SIGNATURE -->
+      <p class="about-signature">Petya Dimitrova</p>
+    </div>
+
+  </div>
+</section>
+
+      <!-- ABOUT section -->
+
+      <!-- <section class="fade-in-section">
         <div class="about-container">
           <div class="about-item" style="grid-area: box-1">
             <div class="about-blob"></div>
@@ -407,7 +464,7 @@
 
 
         </div>
-      </section>
+      </section> -->
             <section class="education fade-in-section">
   <h2 class="skills-header-h2">Education & Achievements</h2>
 
@@ -552,8 +609,7 @@
                     <li>Logo Design </li>
                     <li>Colour Palette </li>
                     <li>Typography Selection </li>
-                    <li>Basic Brand Style Sheet </li>
-                    <li>Basic Brand Style Sheet </li>
+                    <li>Basic Brand Style Sheet</li>
                     <li>Social Media Profile Graphics</li>
                   </ul>
                   <a href="contact.html" class="service-btn">
@@ -697,7 +753,7 @@
           class="nav-item"
           aria-label="GitHub page"
         >
-          <i class="bi bi-github"></i>
+          <i class="bi bi-github bi-hero"></i>
         </a>
         <a
           href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"
@@ -705,7 +761,7 @@
           class="nav-item"
           aria-label="Linkedin profile"
         >
-          <i class="bi bi-linkedin"></i>
+          <i class="bi bi-linkedin bi-hero"></i>
         </a>
         <a
           href="https://www.facebook.com/petyasdigitalcare"
@@ -713,7 +769,7 @@
           class="nav-item"
           aria-label="Facebook page"
         >
-          <i class="bi bi-facebook"></i>
+          <i class="bi bi-facebook bi-hero"></i>
         </a>
       </section>
     </main>
@@ -730,13 +786,18 @@
             />
           </div>
           <div class="business-descr">
-            <h2 class="skills-header-h2">About Petya Digital Care</h2>
+            <h2 class="footer-header-h2">About Petya Digital Care</h2>
             <p>Petya Digital Care is a digital branding and web development studio helping small businesses and startups build a strong, cohesive brand identity and online presence. The business offers a complete end to end service: brand identity, digital assets, website design, and full website development.</p>
           </div>
+          <h3>Quick links</h3>
+            <div class="arrange-manu-footer">
+          <a class="nav__link-footer" href="services.html">Services</a>
+          <a class="nav__link-footer" href="contact.html">Contact</a>
+        </div>
           <div class="footer-details">
-            <h2>Petya Dimitrova</h2>
+            <h3 class="footer-header-h2">Contact us:</h3>
             <address>
-              <p>📱+44 7448172379</p>
+              <p><i class="bi bi-telephone bi-hero"></i>+44 7448172379</p>
               <a href="mailto:petya83dimitrova@gmail.com" class="footer-email">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -747,6 +808,7 @@
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
+                  class="bi-hero"
                 >
                   <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
                   <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -759,22 +821,22 @@
                 href="https://www.facebook.com/petyasdigitalcare"
                 title="Facebook"
               >
-                <i class="bi bi-facebook"></i>
+                <i class="bi bi-facebook bi-hero"></i>
               </a>
               <a
                 href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"
                 title="LinkedIn"
               >
-                <i class="bi bi-linkedin"></i>
+                <i class="bi bi-linkedin bi-hero"></i>
               </a>
               <a
                 href="https://github.com/priorityc?tab=repositories"
                 title="GitHub"
               >
-                <i class="bi bi-github"></i>
+                <i class="bi bi-github bi-hero"></i>
               </a>
               <a href="mailto:petya83dimitrova@gmail.com" title="Email">
-                <i class="bi bi-envelope"></i>
+                <i class="bi bi-envelope bi-hero"></i>
               </a>
             </div>
           </div>
@@ -783,8 +845,7 @@
         <div class="footer-form">
           <h3>Let’s work together.</h3>
           <p>
-            If you’re looking for a junior front-end developer with strong UI/UX
-            instincts, I’d love to hear from you.
+            If you’re looking to upgrade your business developing strong web presence I’d love to hear from you.
           </p>
 
           <form id="contact-form" onsubmit="validateFooterForm(event)">
@@ -923,7 +984,8 @@
 
     <h2 class="modal-title"></h2>
     <p class="modal-overview"></p>
-<div class="scroll-top-indicator">-></div>
+<div class="scroll-indicator">↓ Scroll</div>
+<div class="scroll-top-indicator">⮝</div>
     <h3>Features</h3>
     <ul class="modal-features"></ul>
 <div class="problem-solution-cont">
