@@ -9,61 +9,55 @@ const projects = {
   ecom: {
     title: "React E‑Commerce Store",
     overview:
-      "A full e‑commerce store with Stripe checkout and product filtering.",
-    problem: [
-      "I wanted to challenge myself to build a complete, production‑ready product — not just a small demo or isolated feature. My goal was to create an e‑commerce experience that feels real, includes essential functionality, and follows a clean, intuitive user flow that anyone can understand.",
-    ],
-    tech: [
-      "I designed and built CosmicCare as a full end‑to‑end e‑commerce system: dynamic product loading, global cart state, checkout flow, backend simulation, and responsive UI. I implemented both real and demo modes so users and recruiters can explore the store safely while still experiencing a realistic shopping flow.",
-    ],
+      "CosmicCare is a modern, mobile‑first e‑commerce concept brand built from scratch — including logo, branding, UI/UX, product system, cart, and checkout. It demonstrates my ability to design and develop a complete digital brand experience",
     features: [
-      "Dynamic product loading from Supabase",
-      "Stripe Payment Integration",
-      "Email subscription form with database‑driven storage",
-      "demo and real live integration",
-      "Customer service inquery form",
+      "Brand identity with logo, colours, and typography",
+      "Responsive e‑commerce UI built in React",
+      "Dynamic product loading via Supabase",
+      "Cart + checkout flow using Stripe",
+      "Demo mode for safe portfolio browsing",
     ],
+    problem: [
+      "Many new brands struggle with:unclear identity, inconsistent visuals, confusing navigation,poor mobile experience, lack of trust signals. CosmicCare was created to solve these problems by showing how a clean, modern, mobile‑first e‑commerce experience can be built from scratch with strong branding and essential functionality.",
+    ],
+    solution: [
+      "I approached CosmicCare as a real brand, not just a coding project.The solution included a minimalist logo inspired by cosmic shapes and wellness symbolism, a soft colour palette to communicate calm and trust.",
+    ],
+
     techstack: ["React", "JavaScript", "Supababase", "GitHub"],
     tools: ["Netlify", "Render", "Supabase", "Express.js"],
-    images: [
-      "./media/homeCosmic.png",
-      "./media/mobileCC.png",
-      "./media/tabletCC.png",
-      "./media/mobileCosmic.png",
-      "./media/basketCare.png",
-      "./media/basketCosmic.png",
-    ],
+    images: ["./media/ccprojecthome.png"],
     live: "https://cosmiccare.netlify.app/?demo=false",
     demo: "https://cosmiccare.netlify.app/?demo=true",
     github: "https://github.com/priorityc/cosmic-care-site",
+    learnmore: "https://priorityc.github.io/Portfolio/blog",
+    cta: "Let’s build it together.",
   },
 
   lamp: {
-    title: "Black Hole Event-Landing page",
-    overview: "An immersive stargasing Landing page",
-    problem: [
-      "Museum websites struggle to attract subscriptions because they are often designed for logistical planning rather than digital engagement. Sites act as digital brochures rather than conversion hubs, hiding event and membership pages behind confusing naming conventions and fragmented booking flows, while failing to clearly articulate the value of subscribing.",
-    ],
-    tech: [
-      "I designed and built an Immersive Black hole event-Landing page as a full visual experience: real black hole experience inside the hero with clear CTA section, event form subscription that simulate event horizont, clear section event information, workshop gallery, dark and navy UI mode switch. The Landing page quickly graps user attention and guides to subscription and save a seet actions with closer cosmic visual experiene.",
-    ],
+    title: "Black Hole",
+    overview:
+      "The Black Hole landing page is an immersive, story‑driven web experience designed to simulate being pulled into a cosmic event. The goal was to create a dramatic, atmospheric interface that blends motion, contrast, and interaction to captivate users from the first second.",
     features: [
-      "Hero-Black hole simulation animation and clear CTA ",
-      "Fade in sections for smooth scroll.",
-      "Event subscription form that drives more subscriptions.",
-      "Dark and navy background",
-      "Interactive experience",
+      "Hero animation with gravitational visual effects",
+      "Scroll‑based transitions that deepen the “descent” experience",
+      "Interactive CTA that visually disappears into the black hole",
+      "Responsive layout optimised for all screen sizes",
     ],
-    techstack: ["HTML", "JavaScript", "GitHub"],
+    problem: [
+      "Traditional landing pages often feel flat, predictable, and uninspiring. I wanted to challenge that by exploring how a website could feel like a cinematic experience, not just a layout.",
+    ],
+    solution: [
+      "I designed a single‑page experience where the user scrolls deeper into the “black hole,” supported by interactive and engaging ElementInternals.",
+    ],
+
+    techstack: ["HTML", "CSS", "JavaScript"],
     tools: ["GitHub"],
-    images: [
-      "./media/BHform.png",
-      "./media/dualModeBh.png",
-      "./media/mobileBh.png",
-    ],
+    images: ["./media/BHform.png", "./media/dualModeBh.png"],
 
     demo: "https://priorityc.github.io/stargazing-landing-page/",
     github: "https://github.com/priorityc/stargazing-landing-page",
+    cta: "Let’s build it together.",
   },
 
   serviceq: {
@@ -94,26 +88,33 @@ const projects = {
 
     demo: "https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/ServicePaintingCalculator?node-id=1025-2&t=GROR9anNnS82szvj-1&starting-point-node-id=1025%3A2",
     github: "#",
+    cta: "Let’s build it together.",
   },
 
   foodapp: {
-    title: "Food App-Wep Aplication API",
-    overview: "Food App-Wep Aplication API-Sponacular for recipe discovery.",
-    problem: [
-      "A mobile‑first service quote calculator prototype designed for a newly established construction business willing to enter the market quickly.",
-    ],
-    tech: ["I builded Web app for filtering receipes"],
+    title: "Food Application",
+    overview:
+      "FoodApp is a mobile‑first recipe discovery tool that lets users search for meals and instantly view real recipes using live API data. It focuses on simplicity, speed, and clean UI design.",
     features: [
-      "Live Recipe Search (API Integration)",
-      "Dynamic Meal Cards",
-      "Detailed Recipe View",
-      "Responsive layout",
+      "Live recipe search powered by Spoonacular API",
+      "Dynamic recipe cards rendered with JavaScript",
+      "Ingredients and instructions modal for detailed viewing",
+      "Filtering ingredients function",
+      "Responsive layout optimised for mobile first",
     ],
-    techstack: ["React", "JavaScript", "GitHub", "API"],
-    tools: ["npm"],
+    problem: [
+      "Most recipe websites are cluttered, slow, and overwhelming for users who just want quick inspiration. I wanted to create a simple, fast, mobile‑friendly app.",
+    ],
+    solution: [
+      "I designed FoodApp as a minimal, intuitive recipe browser. The result is a lightweight, fast, and user‑friendly recipe discovery tool.",
+    ],
+
+    techstack: ["React", "JavaScript", "API"],
+    tools: ["GitHub", "vite", "Spoonacular API"],
     images: ["./media/FoodApp-Tablet.png", "./media/FoodApp-mobile.png"],
     demo: "https://priorityc.github.io/FoodApp/",
-    github: "#",
+    github: "https://github.com/priorityc/FoodApp.git",
+    cta: "Let’s build it together.",
   },
 };
 
@@ -377,6 +378,7 @@ setInterval(() => {
   currentSlide = (currentSlide + 1) % slides.length; //0+1%4=1%4
   showSlide(currentSlide);
 }, 12000);
+
 // MODAL
 const openBtn = document.getElementById("openModal");
 const openM = document.getElementById("openM");
@@ -502,70 +504,64 @@ projectCards.forEach((card) => {
   card.addEventListener("click", (e) => {
     if (isButton(e.target)) return; // ignore button clicks
 
-    const projectKey = card.dataset.project; // GET PROJECT KEY
-    const data = projects[projectKey]; // GET PROJECT DATA
+    const projectKey = card.dataset.project;
+    const data = projects[projectKey];
 
     if (!data) {
       console.error("No project data found for:", projectKey);
       return;
     }
 
-    // Populate modal content
-    modalPr.querySelector(".modal__title").textContent = data.title;
-    modalPr.querySelector(".modal__overview").textContent = data.overview;
+    // TITLE + OVERVIEW
+    console.log(data.title);
+    modalPr.querySelector(".modal-title").textContent = data.title;
+    modalPr.querySelector(".modal-overview").textContent = data.overview;
 
-    modalPr.querySelector(".modal__lists").innerHTML = data.problem
-      .map(
-        (f) => `
-        <li><h3 class="card-title">Problem</h3></li>
-        <li><p>${f}</p></li>
-      `,
-      )
+    // FEATURES
+    modalPr.querySelector(".modal-features").innerHTML = data.features
+      .map((item) => `<li>${item}</li>`)
       .join("");
 
-    modalPr.querySelector(".modal__tags").innerHTML = data.tech
-      .map(
-        (t) => `
-        <li><h3 class="card-title">Solution</h3></li>
-        <li><p>${t}</p></li>
-      `,
-      )
+    // PROBLEM
+    modalPr.querySelector(".modal-problem").innerHTML = data.problem
+      .map((item) => `<p>${item}</p>`)
       .join("");
 
-    modalPr.querySelector(".modal__challenges").innerHTML = data.features
-      .map(
-        (c) =>
-          `<li class="skills__item">${c}</li><li><i class="bi bi-arrow-right"></i></li>`,
-      )
+    // SOLUTION
+    modalPr.querySelector(".modal-solution").innerHTML = data.solution
+      .map((item) => `<p>${item}</p>`)
       .join("");
 
-    modalPr.querySelector(".modal__techstack").innerHTML = `
-      <li><i class="fa-brands fa-react tech-icons"></i></li>
-      <li><i class="fa-brands fa-square-js tech-icons"></i></li>
-      <li><i class="fa-solid fa-database tech-icons"></i></li>
-      <li><i class="fa-brands fa-github tech-icons"></i></li>
-    `;
-
-    modalPr.querySelector(".modal__tools").innerHTML = data.tools
-      .map((c) => `<li class="skills__item">${c}</li>`)
+    // TECH STACK
+    modalPr.querySelector(".modal-techstack").innerHTML = data.techstack
+      .map((tech) => `<li>${tech}</li>`)
       .join("");
 
-    modalPr.querySelector(".modal__images").innerHTML = data.images
+    // TOOLS
+    modalPr.querySelector(".modal-tools").innerHTML = data.tools
+      .map((tool) => `<li>${tool}</li>`)
+      .join("");
+
+    // IMAGES
+    modalPr.querySelector(".modal-images").innerHTML = data.images
       .map(
         (img, index) => `
-        <div>
+        <div class="modal-img-wrapper">
           <img src="${img}" data-index="${index}" alt="Project screenshot">
         </div>
       `,
       )
       .join("");
 
-    // Links
-    modalPr.querySelector(".modal__demo").href = data.demo;
-    modalPr.querySelector(".modal__live").href = data.live;
-    modalPr.querySelector(".modal__github").href = data.github;
+    // LINKS
+    modalPr.querySelector(".modal-demo").href = data.demo;
+    modalPr.querySelector(".modal-live").href = data.live;
+    modalPr.querySelector(".modal-github").href = data.github;
 
-    // Show modal
+    // CTA
+    modalPr.querySelector(".modal__cta-text").textContent = data.cta;
+
+    // SHOW MODAL
     modalPr.classList.add("active");
     document.body.classList.add("no-scroll");
   });
@@ -586,7 +582,7 @@ modalPr.addEventListener("click", (e) => {
 });
 
 // AUTO hide the indicater after users scroll
-const modalContent = document.querySelector(".modal__content");
+const modalContent = document.querySelector(".modal-content");
 const scrollIndicator = document.querySelector(".scroll-indicator");
 
 modalContent.addEventListener("scroll", () => {
@@ -662,9 +658,8 @@ function closeModal() {
 }
 
 const tabs = document.querySelectorAll(".service-tab");
-console.log(tabs);
+
 const panels = document.querySelectorAll(".service-panel");
-console.log(panels);
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
