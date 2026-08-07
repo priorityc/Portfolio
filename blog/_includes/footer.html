@@ -1,0 +1,239 @@
+<footer class="footer-box">
+  <div class="footer-content">
+    <!-- Logo + About -->
+    <div class="footer-info">
+      <div>
+        <img
+          src="./assets/lightlogo.svg"
+          alt="Petya Dimitrova logo"
+          class="footer-logo"
+        />
+      </div>
+
+      <div class="business-descr">
+        <h2 class="footer-header-h2">About Petya Digital Care</h2>
+        <p>
+          Petya Digital Care is a digital branding and web development studio
+          helping small businesses and startups build a strong, cohesive brand
+          identity and online presence. I offer complete end‑to‑end services:
+          brand identity, digital assets, website design, and full website
+          development.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <h3>Quick links</h3>
+      <div class="arrange-menu-footer">
+        <a class="nav__link-footer" href="/services.html">Services</a>
+        <a class="nav__link-footer" href="/contact.html">Contact</a>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-details">
+        <h3 class="footer-header-h2">Contact</h3>
+        <address>
+          <p>
+            <i class="bi bi-telephone bi-hero"></i>
+            +44 7448172379
+          </p>
+          <a href="mailto:petya83dimitrova@gmail.com" class="footer-email">
+            <i class="bi bi-envelope bi-hero"></i>
+            petya83dimitrova@gmail.com
+          </a>
+        </address>
+
+        <!-- Social Icons -->
+        <div class="social-links">
+          <a href="https://www.facebook.com/petyasdigitalcare" title="Facebook">
+            <i class="bi bi-facebook bi-hero"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/"
+            title="LinkedIn"
+          >
+            <i class="bi bi-linkedin bi-hero"></i>
+          </a>
+          <a
+            href="https://github.com/priorityc?tab=repositories"
+            title="GitHub"
+          >
+            <i class="bi bi-github bi-hero"></i>
+          </a>
+          <a href="mailto:petya83dimitrova@gmail.com" title="Email">
+            <i class="bi bi-envelope bi-hero"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form (optional) -->
+    <div class="footer-form">
+      <h3>Let’s work together.</h3>
+      <p>
+        If you’re looking to upgrade your business with a strong web presence,
+        I’d love to hear from you.
+      </p>
+
+      <form id="contact-form">
+        <div class="form-row">
+          <input
+            type="text"
+            id="footer_fname"
+            name="footer_fname"
+            placeholder="First Name"
+          />
+          <input
+            type="text"
+            id="footer_lname"
+            name="footer_lname"
+            placeholder="Last Name"
+          />
+        </div>
+
+        <input
+          type="email"
+          id="footer_email"
+          name="footer_email"
+          placeholder="Your Email"
+        />
+        <textarea
+          id="footer_message"
+          name="footer_message"
+          rows="6"
+          placeholder="Write your message here..."
+        ></textarea>
+
+        <div class="footer-btn">
+          <input class="btn-primary-footer" type="submit" value="Submit" />
+          <input class="btn-secondary-footer" type="reset" value="Clear" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <ul class="footer-links">
+      <li>
+        <a href="mailto:petya83dimitrova@gmail.com">
+          petya83dimitrova@gmail.com
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/priorityc/Portfolio">
+          View code of this portfolio
+        </a>
+      </li>
+      <li>Built with: HTML, CSS, JavaScript</li>
+      <li>&copy; 2026 Petya Dimitrova. All rights reserved.</li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+  /* Cosmic Footer Styling */
+  .footer-box {
+    background: #0f172a;
+    color: #cbd5e1;
+    padding: 60px 20px;
+    margin-top: 80px;
+    border-top: 1px solid #334155;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-info {
+    flex: 1 1 400px;
+  }
+
+  .footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+
+  .footer-header-h2 {
+    color: #a855f7;
+    margin-bottom: 10px;
+  }
+
+  .nav__link-footer {
+    display: inline-block;
+    margin-right: 15px;
+    color: #a855f7;
+    text-decoration: none;
+  }
+
+  .nav__link-footer:hover {
+    color: #ec4899;
+  }
+
+  .footer-details address p,
+  .footer-details a {
+    color: #cbd5e1;
+  }
+
+  .social-links a {
+    margin-right: 12px;
+    color: #a855f7;
+  }
+
+  .social-links a:hover {
+    color: #ec4899;
+  }
+
+  .footer-form {
+    flex: 1 1 400px;
+  }
+
+  .footer-form input,
+  .footer-form textarea {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background: #1e293b;
+    color: #f8fafc;
+  }
+
+  .btn-primary-footer {
+    background: #a855f7;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+  }
+
+  .btn-secondary-footer {
+    background: #334155;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    border: none;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .footer-links li {
+    list-style: none;
+    margin: 6px 0;
+  }
+
+  .footer-links a {
+    color: #a855f7;
+    text-decoration: none;
+  }
+
+  .footer-links a:hover {
+    color: #ec4899;
+  }
+</style>

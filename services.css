@@ -69,7 +69,6 @@ body {
 .why-me {
   padding: 3rem 1.25rem;
   margin-bottom: 1rem;
-  background-color: rgb(255, 229, 229);
 }
 
 .why-me__inner {
@@ -93,7 +92,11 @@ body {
    CARDS
 --------------------------------*/
 .why-card {
-  background-color: var(--card-purple);
+  background: radial-gradient(
+    circle at right top,
+    rgba(160, 107, 255, 0.15),
+    transparent 60%
+  );
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 1.25rem;
   padding: 1.75rem 1.5rem;
@@ -165,9 +168,9 @@ body {
   background-color: var(--secondary-color);
 }
 .pricing-compare {
-  padding: 1rem;
+  padding: 3rem 0;
   /* background: var(--skills-border); */
-  background-color: #fff;
+  background-color: rgba(249, 248, 248, 0.847);
   /* color: var(--clr-text-main); */
 }
 
@@ -680,21 +683,9 @@ body {
 
 .faq {
   /* padding: 3rem 1.5rem; */
-  padding: 32px;
+  padding: 3rem 1rem;
   background: #ffffff;
 }
-
-/* Header */
-.faq-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* .faq-header h2 {
-  font-size: 1.8rem;
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-} */
 
 .faq-header p {
   color: #555;
@@ -755,7 +746,7 @@ body {
   margin-top: 0.8rem;
   color: #555;
   line-height: 1.6;
-  font-size: 0.95rem;
+  font-size: var(--fs-sm);
 }
 
 /* Hide items until category is opened */
@@ -797,9 +788,11 @@ body {
 }
 
 .secondary {
-  background-color: #1a1a2e;
-  border: 1px solid #1a1a2e;
-  color: #fff;
+  /* background-color: #1a1a2e;
+  border: 1px solid #1a1a2e; */
+  border: 1px solid var(--primary-color);
+  background-color: transparent;
+  color: var(--primary-color);
 }
 
 /* CTA */
@@ -833,6 +826,8 @@ body {
   grid-template-columns: 1fr;
   margin: 1rem;
   gap: 2rem;
+  background: #fdecec;
+  padding: 1.5em;
 }
 
 .img-assets {
@@ -977,7 +972,7 @@ body {
     padding: 4rem 0;
   }
   .why-me {
-    margin-bottom: 7rem;
+    padding: 7rem 0;
   }
 
   .why-me__header {
@@ -1013,7 +1008,7 @@ body {
   }
 
   .pricing-compare {
-    padding: 2rem 0;
+    padding: 5rem 0;
   }
 
   .process-header {
@@ -1029,7 +1024,7 @@ body {
     padding: 7rem;
   }
   .gallery-grid {
-    margin: 0 auto;
+    margin: 0 5rem 7rem 5rem;
   }
 
   .gallery-grid-assets {
@@ -1040,5 +1035,13 @@ body {
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
+  }
+
+  .cta-section {
+    padding: 7rem 0;
+  }
+
+  .testimonial-card {
+    margin: 7rem 0 0 0;
   }
 }

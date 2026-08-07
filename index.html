@@ -43,6 +43,7 @@
       <div>
         <a class="nav__link active" href="index.html">Home</a>
         <a class="nav__link" href="services.html">Services</a>
+        <a href="blog/">Blog</a>
         <a class="nav__link" href="contact.html">Contact</a>
       </div>
     </div>
@@ -60,6 +61,7 @@
         <div class="arrange-manu">
           <a class="nav__link" href="index.html">Home</a>
           <a class="nav__link" href="services.html">Services</a>
+          <a href="blog/">Blog</a>
           <a class="nav__link" href="contact.html">Contact</a>
         </div>
       </div>
@@ -105,12 +107,10 @@
           <a href="mailto:petya83dimitrova@gmail.com" aria-label="Contact page">
             <i class="bi bi-envelope-fill bi-hero"></i>
           </a>
-          <a
-            href="./media/PetyaDimitrova.docx"
-            download="cv_PD.docx"
-            aria-label="Download CV Word document"
-          >
-            <i class="bi bi-arrow-down-square-fill bi-hero"></i>
+          <a href="./documents/PetyaDimitrova.doc"  
+              download="Petya-Dimitrova-CV.docx" aria-label="Download CV Word document"><i class="bi bi-arrow-down-square-fill bi-hero"></i></a>
+
+            
           </a>
         </div>
       </div>
@@ -213,13 +213,14 @@
   <header class="tabs-header">
     <span class="hero-role">Project work</span>
     <h2 class="skills-header-h2">Featured Projects</h2>
-    <p>Click on the buttons to reveal a catalogue of Front‑end, CMS or UX projects:</p>
+    <p>Click on the buttons to reveal a catalogue of recent projects:</p>
   </header>
 
   <!-- Tabs -->
   <div class="tab">
     <button class="tablinks active" data-city="London">Front‑end</button>
     <button class="tablinks" data-city="Paris">CMS</button>
+    <button class="tablinks" data-city="Sofia">Social Assets</button>
     <button class="tablinks" data-city="Tokyo">UX/UI</button>
   </div>
 
@@ -302,6 +303,37 @@
     </article>
   </div>
 
+  <!-- CMS PROJECTS -->
+  <div id="Sofia" class="tabcontent fade-in-section">
+    <article class="project-card" data-project="serviceq">
+      <img src="./media/DesignProjects/New Project (3).png" class="project-thumb" alt="sunglases brand instagram visual"/>
+      <div class="project-descr">
+        <h3 class="project-title">Instagram Promotional Visual</h3>
+        <h4 class="project-subtitle">Designed with Photoshot</h4>
+        <p class="project-desc">
+          Design an Instagram visual assets for premium brand aiming to deliver simple promotional message.
+        </p>
+        <!-- <div class="project-buttons">
+          <a href="https://magnificent-writer.localsite.io/" class="btn-primary">Demo</a>
+        </div> -->
+      </div>
+    </article>
+
+    <article class="project-card">
+      <img src="./media/DesignProjects/salon.png" alt="Salon instagram visual" class="project-thumb" />
+      <div class="project-descr">
+        <h3 class="project-title">Instagram Brand Visual</h3>
+        <h4 class="project-subtitle">Designed with Photoshot</h4>
+        <p class="project-desc">
+          A modern salon studio visual for Instagram built to showcase brand awareness.
+        </p>
+        <!-- <div class="project-buttons">
+          <a href="https://petya83dimitrova.wixstudio.com/glowstudio" class="btn-primary">Demo</a>
+        </div> -->
+      </div>
+    </article>
+  </div>
+
   <!-- UX/UI PROJECTS -->
   <div id="Tokyo" class="tabcontent fade-in-section">
     <article class="project-card">
@@ -376,7 +408,7 @@
 
       <!-- CTA -->
       <a href="./documents/PetyaDimitrova.doc" class="about-btn" 
-              download="Petya-Dimitrova-CV.docx">Download CV</a>
+              download="Petya-Dimitrova-CV.docx" aria-label="Download CV Word document">Download CV</a>
 
       <!-- SIGNATURE -->
       <p class="about-signature">Petya Dimitrova</p>
@@ -517,8 +549,8 @@
       <!--  -->
       <!-- WHY HIRE ME -->
       <section class="why-hire-me">
-        <header class="why-title">
-          <h2 class="skills-header-h2">Why Hire Me</h2>
+        <header class="tab-header">
+          <h2 class="skills-header-h2">Why hire me</h2>
         </header>
 
         <div class="why-slider">
@@ -572,13 +604,13 @@
 
       <section class="services-wrapper fade-in-section">
         <!-- LEFT: Text + Tabs + Card -->
-        <div class="services-left">
+        <header class="tab-header">
           <h2 class="skills-header-h2">My Services</h2>
           <p class="services-subtitle">
             I offer tailored solutions to help you build, refine, and elevate
             your digital presence.
           </p>
-
+          </header>
           <div class="services-tabs">
              <button class="service-tab web-DevBtn active" data-tab="brandid">
               Brand Identity
@@ -726,7 +758,7 @@
               — Founder & Managing Director at G&D Home Improvement
             </p>
             <p class="quote">
-              Petya created a tool that quickly became essential to my business.
+              Petya created my digital presence- brand, logo website and a tool that quickly became essential to my business.
               It saves me time, increases client bookings, and helped me keep up
               with the competition. We’re continuing our collaboration because
               her work truly makes a difference.
@@ -953,19 +985,20 @@
           <input type="submit" value="Send Request" class="btn-primary" />
 
           <div class="form-heading">
-            <a href="https://github.com/priorityc?tab=repositories">
+            <a href="https://github.com/priorityc?tab=repositories" aria-label="GitHub page">
               <i
                 class="fa fa-github-square"
                 style="font-size: 48px; color: #e8c7c7"
               ></i>
             </a>
-            <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/">
+            <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/" aria-label="Linkedin profile">
               <i
                 class="fa fa-linkedin-square"
                 style="font-size: 48px; color: #9aafee"
               ></i>
             </a>
-            <i
+            <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/" aria-label="Linkedin profile">
+<i
               class="fa fa-facebook-square"
               style="font-size: 48px; color: #12286a"
             ></i>

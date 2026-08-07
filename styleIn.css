@@ -625,7 +625,8 @@ body {
 /* SECTION WRAPPER */
 .about-section {
   padding: 4rem 1rem;
-  background: #0f1f1c; /* dark green vibe */
+  /* background: #0f1f1c;  */
+  background: var(--primary-color);
   color: #fff;
   margin-bottom: 3rem;
 }
@@ -1896,6 +1897,9 @@ body {
 
 .arrange-manu-footer {
   margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
 .nav__link-footer {
@@ -1962,9 +1966,11 @@ textarea {
   width: 100%;
   padding: 0.8rem;
   border-radius: 16px;
-  border: 1px solid #2e2e4e;
-  background-color: #1a1a2e;
-  color: #fff;
+  border: 1px solid var(--light-background);
+  background-color: transparent;
+  text-decoration: none;
+  /* color: white; */
+  color: var(--light-background);
   font-size: 1rem;
   margin-bottom: 1rem;
 }

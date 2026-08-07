@@ -1,0 +1,104 @@
+---
+layout: default
+---
+
+<div class="category-header">
+  <h1>{{ page.title }}</h1>
+  <p>
+    Posts filed under
+    <strong>{{ page.category }}</strong>
+  </p>
+</div>
+
+<div class="posts-grid">
+  {% assign cat = page.category %} {% for post in site.posts %} {% if
+  post.categories contains cat %}
+  <article class="post-card">
+    <a href="{{ post.url | relative_url }}">
+      <div class="post-card-content">
+        <h2>{{ post.title }}</h2>
+        <p class="post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+        <p class="excerpt">{{ post.excerpt | strip_html | truncate: 150 }}</p>
+      </div>
+    </a>
+  </article>
+  {% endif %} {% endfor %}
+</div>
+
+<style>
+  :root {
+    --purple: #a855f7;
+    --blue: #38bdf8;
+    --indigo: #0f172a;
+    --pink: #ec4899;
+    --light: #f8fafc;
+    --grey: #cbd5e1;
+  }
+
+  /* Header */
+  .category-header {
+    text-align: center;
+    margin: 60px auto 40px;
+    max-width: 700px;
+  }
+
+  .category-header h1 {
+    font-size: 2.8rem;
+    color: var(--purple);
+  }
+
+  .category-header p {
+    color: var(--grey);
+    font-size: 1.2rem;
+  }
+
+  .category-links a {
+    color: var(--blue);
+  }
+
+  /* Grid */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+  }
+
+  /* Cards */
+  .post-card {
+    background: var(--indigo);
+    border-radius: 14px;
+    border: 1px solid var(--grey);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.25s ease;
+  }
+
+  .post-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    border-color: var(--purple);
+  }
+
+  .post-card a {
+    text-decoration: none;
+    color: var(--indigo);
+    display: block;
+    padding: 25px;
+  }
+
+  .post-card-content h2 {
+    font-size: 1.5rem;
+    color: var(--blue);
+  }
+
+  .post-date {
+    font-size: 0.9rem;
+    color: var(--grey);
+  }
+
+  .excerpt {
+    color: var(--light);
+  }
+</style>
