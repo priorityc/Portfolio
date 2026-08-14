@@ -9,6 +9,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -59,66 +63,73 @@
     </header>
 
     <section>
-      <!-- PROJECT ROW -->
-      <h2 class="subheading">Digital Assets</h2>
-      <p class="sub">
-        A range of digital assets designed with different concept aligned with
-        brand identity for socia media
-      </p>
-      <div class="hero-projects">
-        <img
-          src="./media/DesignProjects/NewProject.png"
-          alt="project"
-          class="hero-asset"
-        />
-        <img
-          src="./media/DesignProjects/New Project (2).png"
-          alt="project"
-          class="hero-asset"
-        />
-        <img
-          src="./media/DesignProjects/New Project (3).png"
-          alt="project"
-          class="hero-asset"
-        />
-      </div>
-    </section>
+  <header class="assets-header">
+    <h2 class="subheading">Digital Assets</h2>
+    <p class="sub">
+      A range of digital assets designed with different concept aligned with
+      brand identity for social media
+    </p>
+  </header>
+
+    <div class="assets-projects">
+      <div>
+        <img src="./media/DesignProjects/New Project (3).png" alt="project" />
+         <p>Social media Promotional Visual</p></div>
+        <div>
+          <img src="./media/DesignProjects/bookcover.jpg" alt="project" />
+          <p>Book cover for mystery novel</p></div>
+        <div>
+          <img src="./media/DesignProjects/ytubcover.png" alt="project" />
+          <p>Travel Vlogger YouTube cover</p></div>
+    </div>
+</section>
+
 
     <!-- SERVICES OVERVIEW -->
     <section class="services">
       <div class="container container-services">
+        <header class="assets-header">
         <h2 class="subheading">What I Can Build for You?</h2>
-        <ul class="service-list">
-          <li>
-            <i class="bi bi-columns"></i>
-            Custom WordPress websites
-          </li>
-          <li>
-            <i class="bi bi-aspect-ratio"></i>
-            Fully responsive layouts
-          </li>
-          <li>Modern UI design</li>
-          <li>
-            <i class="bi bi-border-all"></i>
-            UX‑focused structure
-          </li>
-          <li>
-            <i class="bi bi-speedometer2"></i>
-            Fast loading performance
-          </li>
-          <li>
-            <i class="bi bi-search"></i>
-            SEO‑ready pages
-          </li>
-          <li>
-            <i class="bi bi-signpost-split"></i>
-            Easy content management
-          </li>
-          <li>
+        <p class="sub">
+      A range of digital assets designed with different concept aligned with
+      brand identity for social media
+    </p>
+    </header>
+        <div class="services-cont-icons">
+          <div class="service">
+            <i class="bi bi-columns icon"></i>
+            <h3>Custom WordPress websites</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+         <div class="service">
+            <i class="bi bi-aspect-ratio icon"></i>
+           <h3>Fully responsive layouts</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="service">
+            <i class="bi bi-border-all icon"></i>
+            <h3>UX‑focused structure</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+         </div>
+         <div class="service">
+            <i class="bi bi-speedometer2 icon"></i>
+            <h3>Fast loading performance</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="service">
+            <i class="bi bi-search icon"></i>
+             <h3>SEO‑ready pages</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+          </div>
+          <div class="service">
+            <i class="bi bi-signpost-split icon"></i>
+            <h3> Easy content management</h3>
+          </div>
+          <!-- <div class="service">
             <i class="bi bi-chat-heart"></i>
-            Optional branding & social media assets
-          </li>
-        </ul>
+            <h3>Optional branding & social media assets</h3>
+         </div> -->
+      </div>
       </div>
     </section>
 
@@ -195,7 +206,7 @@
     <!-- QUOTE FORM -->
 
     <section class="quote" id="quote-form">
-      <div class="container">
+      <div class="container-form">
         <h2 class="subheading">Get a Free Website Quote</h2>
         <p>
           Tell me what you need and I’ll send you a personalised quote within 24
@@ -207,15 +218,20 @@
           method="POST"
           class="quote-form"
         >
+        <div class="inputs-cont">
+        <div>
           <label>Full Name</label>
           <input type="text" name="name" required />
-
+        </div>
+        <div>
           <label>Email Address</label>
           <input type="email" name="email" required />
-
+        </div>
+        <div>
           <label>Business Name (optional)</label>
           <input type="text" name="business" />
-
+        </div>
+        <div>
           <label>Which service do you need?</label>
           <select name="service" required>
             <option value="Web Design">Web Design</option>
@@ -225,7 +241,8 @@
             <option value="Print Design">Print Design</option>
             <option value="Multiple">Multiple Services</option>
           </select>
-
+        </div>
+        </div>
           <label>Project Details</label>
           <textarea name="details" rows="5" required></textarea>
 
@@ -244,9 +261,25 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <div class="container">
-        <p>© 2026 Petya Dimitrova — Web Design & Development</p>
+      <div class="container-footer">
+         
+
+    <div class="social">
+            <a href="https://github.com/priorityc?tab=repositories" aria-label="GitHub page">
+             <i class="bi bi-facebook icon"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/" aria-label="Linkedin profile">
+              <i class="bi bi-linkedin icon"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/petya-dimitrova-7b7b56234/" aria-label="Linkedin profile">
+            <i class="bi bi-instagram icon"></i>
+          
+    </div>
+    <div class="copyright">
+        <p>Built with: HTML, CSS, JavaScript</p>
+          <p>&copy; Petya Dimitrova. All rights reserved.</p>
       </div>
+        </div>
     </footer>
   </body>
 </html>
