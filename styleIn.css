@@ -17,6 +17,7 @@ body {
 :root {
   /* Typography scale (mobile-first) */
   /* Responsive Typography Scale (Mobile-first) */
+  --font-heading: "Inter Tight", sans-serif;
 
   --fs-xs: clamp(0.75rem, 0.6vw + 0.5rem, 0.85rem); /* 12px → 13.6px */
   --fs-sm: clamp(0.875rem, 0.7vw + 0.55rem, 1rem); /* 14px → 16px */
@@ -183,9 +184,9 @@ A spacing scale gives your layout consistency and rhythm. */
 
 body {
   /* font-family: "Plus Jakarta Sans", sans-serif; */
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-heading);
   font-size: var(--fs-md);
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text-dark);
   /* background: var(--skills-bg); */
 }
@@ -481,14 +482,15 @@ body {
 .hero-name {
   position: relative;
   font-size: var(--fs-4xl);
+  font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--accent-purple);
   text-transform: uppercase;
   margin-bottom: 0.3rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  letter-spacing: 3px;
+  /* font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; */
+  letter-spacing: 1.8px;
 }
 
 .hero-name span {
@@ -1341,9 +1343,11 @@ body {
 
 .skills-header-h2 {
   font-size: var(--fs-2xl);
-  font-weight: 800;
+  font-weight: 700;
   color: #141423;
   margin-bottom: 0.5rem;
+  letter-spacing: 1.7px;
+  font-family: var(--font-heading);
 }
 
 .tabs-header p {
@@ -1462,6 +1466,7 @@ body {
   font-weight: 550;
   letter-spacing: 0.3px;
   margin-bottom: 0.4rem;
+  font-family: Space Grotesk;
 }
 
 .project-card:hover h3 {
