@@ -129,7 +129,9 @@ function handleKey(event) {
 // The hamburger menu
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
+  console.log(hamburger);
   const menu = document.getElementById("myLinks");
+  console.log(menu);
 
   function toggleMenu() {
     const isOpen = menu.style.display === "block";

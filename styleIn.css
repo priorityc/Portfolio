@@ -320,7 +320,7 @@ body {
 
 .sidenav .active {
   /* background: rgba(138, 43, 226, 0.25); */
-  background: var(--accent-colorpurple);
+  background: var(--gradient-purple);
   color: #fff;
   padding: 10px 26px;
   border-radius: 999px;
@@ -788,7 +788,7 @@ body {
   width: 100px;
   font-size: var(--fs-sm);
   width: 100%;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #7c8bff3e;
   box-shadow: 0 4px 12px rgba(106, 27, 190, 0.08);
   font-weight: 500;
@@ -1268,6 +1268,7 @@ body {
 .skill-card {
   display: flex;
   flex-wrap: wrap;
+  gap: 1rem;
   border-right: var(--border-purple);
   border-top: var(--border-purple);
   /* background: radial-gradient(
@@ -1404,13 +1405,13 @@ body {
 /* ===== PROJECT GRID ===== */
 .tabcontent {
   grid-template-columns: 1fr;
-  gap: 1.5rem;
+  gap: 1rem;
   padding: 0 1rem;
   /* background: var(--light-background); */
-  background-color: var(--primary-color);
+  /* background-color: var(--primary-color); */
 }
 
-.project-section {
+.projects-section {
   padding: var(--fs-xl);
 }
 .project-card {
@@ -1851,7 +1852,7 @@ body {
 
 .service-tab.active,
 .service-tab:hover {
-  background: var(--accent-colorpurple);
+  background: var(--gradient-purple);
   color: #fff;
 }
 
@@ -1871,8 +1872,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  /* background-color: #a8a8ff74; */
-  background: #fdecec;
+  background: var(--color-bg-soft);
   border: 0.2px solid rgba(63, 17, 200, 0.25);
   border-radius: 16px;
   padding: 1.5rem;
@@ -2165,13 +2165,15 @@ body {
 textarea {
   width: 100%;
   padding: 0.8rem;
-  border-radius: 16px;
   background-color: transparent;
   text-decoration: none;
-  /* color: white; */
   color: var(--light-background);
   font-size: 1rem;
   margin-bottom: 1rem;
+  /* Inputs */
+  background: var(--primary-color);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
 }
 
 input:focus,
@@ -2784,7 +2786,8 @@ small.valid {
 
 /* Style the buttons inside the tab */
 .tab button.active {
-  background: var(--accent-colorpurple);
+  /* background: var(--accent-colorpurple); */
+  background: var(--gradient-purple);
   color: #fff;
   border-radius: 999px;
   outline: none;

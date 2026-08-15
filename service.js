@@ -1,16 +1,16 @@
-const tabs = document.querySelectorAll(".service-tab");
-const panels = document.querySelectorAll(".service-panel");
+const tabsServices = document.querySelectorAll(".service-tab");
+const panelsServices = document.querySelectorAll(".service-panel");
 
 const faqbtn = document.querySelectorAll(".faq-category__title");
 const faqpanels = document.querySelectorAll(".faq-brand");
 
-tabs.forEach((tab) => {
+tabsServices.forEach((tab) => {
   tab.addEventListener("click", () => {
     // 1. Remove active from all tabs
-    tabs.forEach((t) => t.classList.remove("active"));
+    tabsServices.forEach((t) => t.classList.remove("active"));
 
     // 2. Remove active from all panels
-    panels.forEach((p) => p.classList.remove("active"));
+    panelsServices.forEach((p) => p.classList.remove("active"));
 
     // 3. Activate clicked tab
     tab.classList.add("active");
