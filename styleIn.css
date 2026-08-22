@@ -217,9 +217,8 @@ body {
 }
 
 .logo {
-  width: 120px;
+  width: 220px;
   height: auto;
-  border-radius: 12px;
   display: block;
   margin: 10px auto;
   transition: transform 0.3s ease-in-out;
@@ -2230,7 +2229,7 @@ textarea:focus {
 }
 
 .footer-logo {
-  width: 80px;
+  width: 160px;
   margin-bottom: 1rem;
 }
 
