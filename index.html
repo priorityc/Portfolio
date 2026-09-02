@@ -164,7 +164,7 @@
   <div class="skills__inner">
     <header class="tab-header">
         <span class="hero-role ">Skills Category</span>
-        <h2 class="skills-header-h2 skills-heder-align-center">Skills & Expertise</h2>
+        <h2 class="skills-header-h2">Skills & Expertise</h2>
         <p class="skills__subtitle">
             A range of skills and expertise I developed to help small businesses elevate their online presence.
         </p>
@@ -173,10 +173,14 @@
   <div class="skills-grid">
     <article class="skill-card">
     <div class="flex-skills">
+      <header class="icon-heading-skills">
       <i class="bi bi-badge-tm"></i>
-      <h3 class="skill-title">Brand Identity</h3>
+      <h3 class="skill-title">Brand Identity</h3></header>
       <img src="./media/stationary-flat.png" alt="Brand identity service image" class="skills-img">
-
+        <ul class="skills__list">
+          <li class="skills__item">Affinity Design</li>
+          <li class="skills__item">Photopea</li>
+        </ul>
       </div>
       <!-- <div class="skill-content">
         <p>I design cohesive visual identities: logos, colour palettes, typography and brand systems that feel premium and consistent.</p>
@@ -195,28 +199,33 @@
     <!-- Graphic Design -->
     <article class="skill-card">
       <div class="flex-skills">
-<i class="bi bi-pentagon"></i>      
-<h3 class="skill-title">Graphic Design</h3>
-        <img src="./media/DesignProjects/ytubcover.png" alt="Brand identity service image" class="skills-img">
-
-      </div>
-      <!-- <div class="skill-content">
-        <p>Social media assets, posters, flyers and digital graphics tailored to your brand, ready for web and print.</p>
+        <header class="icon-heading-skills">
+          <i class="bi bi-pentagon"></i>      
+          <h3 class="skill-title">Graphic Design</h3></header>
+          <img src="./media/DesignProjects/ytubcover.png" alt="Brand identity service image" class="skills-img">
          <ul class="skills__list">
           <li class="skills__item">PhotoShop</li>
           <li class="skills__item">Adobe Ilustrator</li>
           <li class="skills__item">Figma</li>
         </ul>
-      </div> -->
+        </div>
+      <div class="skill-content">
+       
+      </div>
     </article>
 
     <!-- Web Design -->
     <article class="skill-card">
       <div class="flex-skills">
-<i class="bi bi-window-fullscreen"></i>
-      <h3 class="skill-title">Web Design</h3>
-      <img src="./media/interaction.avif" alt="Brand identity service image" class="skills-img">
-
+        <header class="icon-heading-skills">
+          <i class="bi bi-window-fullscreen"></i>
+          <h3 class="skill-title">Web Design</h3></header>
+          <img src="./media/interaction.avif" alt="Brand identity service image" class="skills-img">
+           <ul class="skills__list">
+          <li class="skills__item">Wareframes</li>
+          <li class="skills__item">Pencil</li>
+          <li class="skills__item">Figma</li>
+        </ul>
       </div>
       <!-- <div class="skill-content">
         <p>Modern, user‑focused layouts with clear hierarchy, responsive structure and visuals aligned to your brand identity.</p>
@@ -229,14 +238,19 @@
 
     <!-- Web Development -->
     <article class="skill-card last-card">
+      <header class="icon-heading-skills">
       <i class="bi bi-code-slash"></i>
-      <h3 class="skill-title">Web Development</h3>
+      <h3 class="skill-title">Web Development</h3></header>
       <img src="./media/digitalStudio.avif" alt="Brand identity service image" class="skills-img">
-      <div class="skills__development">
-      <div class="skills__list-development last-skill">
-        <!-- <p class="skills__item">HTML5 CSS3 JavaScript React React Native TypeScript Responsive Design Accessibility (WCAG) Git & GitHub Figma/Canva</p>  -->
+      <ul class="skills__list">
+          <li class="skills__item">HTML</li>
+          <li class="skills__item">CSS</li>
+          <li class="skills__item">JavaScript/Typescript</li>
+          <li class="skills__item">React</li>
+        </ul>
+     
       </div>
-              </div>
+            
     </article>
   </div>
 </section>
@@ -545,7 +559,7 @@ After choosing to change careers a few years ago, I finally found the work that 
         </div>
       </section> -->
             <section class="education fade-in-section">
-  <h2 class="skills-header-h2">Education & Achievements</h2>
+  <h2 class="skills-header-h2 skills-heder-align-center">Education & Achievements</h2>
 
   <ul class="edu-list">
     <li class="edu-item">
@@ -646,6 +660,7 @@ After choosing to change careers a few years ago, I finally found the work that 
 
       <section class="services-wrapper fade-in-section">
         <!-- LEFT: Text + Tabs + Card -->
+        <div class="first-card">
         <header class="tab-header">
           <h2 class="skills-header-h2 skills-heder-align-center">My Services</h2>
           <p class="services-subtitle">
@@ -653,6 +668,7 @@ After choosing to change careers a few years ago, I finally found the work that 
             your digital presence.
           </p>
           </header>
+
           <div class="services-tabs">
              <button class="service-tab web-DevBtn active" data-tab="brandid">
               Brand Identity
@@ -667,7 +683,7 @@ After choosing to change careers a few years ago, I finally found the work that 
               Design or Redesign
             </button>
           </div>
-
+        </div>
           <div class="services-content">
             <!-- PANEL 1 -->
             <div class="service-panel active" id="brandid">
