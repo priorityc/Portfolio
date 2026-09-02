@@ -7,9 +7,9 @@
   margin: 0;
   padding: 0;
 }
-* {
-  outline: 1px solid red;
-  background-attachment: scroll;
+html,
+body {
+  overflow-x: hidden;
 }
 
 :root {
@@ -981,9 +981,8 @@ body {
 }
 
 .skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1rem;
 }
 /* 
@@ -1000,9 +999,9 @@ body {
 
 .skill-card,
 .last-card {
-  max-height: 520px;
-  width: 100%;
-  max-width: 290px;
+  max-height: 420px;
+  max-width: 100%;
+  width: 290px;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
