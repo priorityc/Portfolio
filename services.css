@@ -1,22 +1,20 @@
-.project-card-purple {
-  background-color: blueviolet;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.project-card-blue {
-  background-color: rgb(28, 147, 186);
+html,
+body {
+  max-width: 100%;
 }
 
-.project-card-orange {
-  background-color: rgb(171, 136, 71);
-}
-
-/* ------------------------------
-   COSMIC VARIABLES
---------------------------------*/
 :root {
   /* Typography scale (mobile-first) */
   /* Responsive Typography Scale (Mobile-first) */
-  --font-heading: "Inter Tight", sans-serif;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-subheading: "Poppins", sans-serif;
 
   --fs-xs: clamp(0.75rem, 0.6vw + 0.5rem, 0.85rem); /* 12px → 13.6px */
   --fs-sm: clamp(0.875rem, 0.7vw + 0.55rem, 1rem); /* 14px → 16px */
@@ -25,7 +23,7 @@
   --fs-xl: clamp(1.5rem, 1.8vw + 1rem, 2rem); /* 24px → 32px */
   --fs-2xl: clamp(2rem, 2.5vw + 1.2rem, 2.5rem); /* 32px → 40px */
   --fs-3xl: clamp(2.5rem, 3vw + 1.5rem, 3rem); /* 40px → 48px */
-  --fs-4xl: clamp(3rem, 4vw + 1.8rem, 3.5rem); /* 48px → 56px */
+  --fs-4xl: clamp(3.5rem, 4vw + 2.8rem, 6.5rem); /* 48px → 56px */
 
   --primary-color: #222238ff;
   --secondary-color: #7c8cffff;
@@ -46,7 +44,7 @@
   /* Brand Colors */
   --color-primary: #222238; /* Deep tech navy */
   --color-secondary: #7c8cff; /* Cool functional blue */
-  --color-accent-purple: #6a1bbe; /* Creative identity */
+  --color-accent-purple: #785eb1; /* Creative identity */
   --color-accent-pink: #d701fc; /* Micro accents */
 
   /* Neutral System */
@@ -58,7 +56,7 @@
   --color-surface-light: #ffffff;
 
   --color-text-primary: #ffffff;
-  --color-text-secondary: #d1d1e0;
+  --color-text-secondary: #59595a;
   --color-text-dark: #333333;
 
   /* Semantic */
@@ -90,7 +88,7 @@ A spacing scale gives your layout consistency and rhythm. */
   --space-xl: 32px;
   --space-2xl: 48px;
   --space-3xl: 64px;
-  --space-4xl: 96px;
+  --space-4xl: 0 96px 96px 96px;
 
   /* ### How to use it  
 - Hero padding: `var(--space-4xl)`  
@@ -182,9 +180,9 @@ A spacing scale gives your layout consistency and rhythm. */
 }
 
 body {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: var(--fs-md);
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text-dark);
 }
 
@@ -212,8 +210,8 @@ body {
    SECTION WRAPPER (MOBILE FIRST)
 --------------------------------*/
 .why-me {
-  padding: var(--space-xl);
-  margin-bottom: 1rem;
+  padding: var(--space-lg);
+  margin-bottom: 3rem;
 }
 
 .why-me__inner {
@@ -313,8 +311,8 @@ body {
   background-color: var(--secondary-color);
 }
 .pricing-compare {
-  padding: var(--space-xl);
-  /* background: var(--skills-border); */
+  padding: var(--space-lg);
+  margin-bottom: 3rem;
   background-color: rgba(249, 248, 248, 0.847);
   /* color: var(--clr-text-main); */
 }
@@ -828,8 +826,8 @@ body {
    ============================ */
 
 .faq {
-  /* padding: 3rem 1.5rem; */
-  padding: var(--space-xl);
+  padding: var(--space-lg);
+  margin-bottom: 3rem;
   background: #ffffff;
 }
 
@@ -942,11 +940,6 @@ body {
 }
 
 /* CTA */
-.cta {
-  color: #fff;
-  text-align: center;
-  padding: 2rem 1rem;
-}
 
 .cta-buttons .btn.secondary {
   border-color: #fff;
@@ -963,7 +956,8 @@ body {
   display: -ms-flexbox; /* IE10 */
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  padding: var(--space-xl);
+  padding: var(--space-lg);
+  margin-bottom: 3rem;
 }
 
 .gallery-grid,
@@ -983,7 +977,8 @@ body {
 
 .cta-section {
   background: #fdecec;
-  padding: var(--space-xl);
+  padding: var(--space-lg);
+  margin-bottom: 3rem;
   text-align: center;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -1033,11 +1028,16 @@ body {
     flex-wrap: nowrap;
   }
 
+  .hero_role {
+    text-align: center;
+  }
+
   .why-me__grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .why-me {
-    margin-bottom: 3rem;
+    padding: var(--space-4xl);
+    margin-bottom: 7rem;
   }
 
   .pricing-compare__grid {
@@ -1062,14 +1062,14 @@ body {
 
   .gallery-grid {
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 7rem;
   }
 
   .gallery-grid-assets {
     grid-template-columns: 1fr 1fr;
-    margin-bottom: 7rem;
   }
-  .faq {
+  .faq,
+  .cta-section {
+    padding: var(--space-3xl);
     margin-bottom: 7rem;
   }
   .faq-header h2 {
@@ -1135,6 +1135,11 @@ body {
     content: "";
   }
 
+  .pricing-compare,
+  .row {
+    padding: var(--space-4xl);
+    margin-bottom: 7rem;
+  }
   .pricing-compare__header {
     margin-bottom: 5rem;
   }
@@ -1152,13 +1157,8 @@ body {
     margin-bottom: 7rem;
   }
 
-  .gallery-grid {
-    margin: 0 5rem 7rem 5rem;
-  }
-
   .gallery-grid-assets {
     grid-template-columns: repeat(3, 1fr);
-    margin: 0 5rem 7rem 5rem;
   }
   .column {
     -ms-flex: 100%;
