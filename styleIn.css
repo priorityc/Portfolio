@@ -635,7 +635,7 @@ body {
 .skill-title {
   font-size: var(--fs-lg);
   /* color: #141423; */
-  color: var(--color-accent-purple);
+  color: var(--secondary-color);
   margin-bottom: 0.6rem;
 }
 
@@ -650,7 +650,7 @@ body {
 
 .skills__inner {
   margin: 0 auto;
-  border-bottom: 1px solid #ccc;
+
   padding: 1em;
 }
 
@@ -660,7 +660,9 @@ body {
   text-align: center;
 }
 
-/* Skill pills when needed */
+.bi {
+  font-size: var(--fs-lg);
+}
 
 /* NEW ABOUT */
 /* SECTION WRAPPER */
@@ -946,15 +948,6 @@ body {
   margin-bottom: 1rem;
 }
 
-.skills-title {
-  font-size: var(--fs-xl);
-  font-weight: 700;
-  color: var(--main-gradient);
-  text-align: center;
-  /* letter-spacing: 0.7px; */
-  margin-bottom: 2rem;
-}
-
 .skills-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -968,9 +961,9 @@ body {
   gap: 1rem;
 } */
 
-.bi-body {
+/* .bi-body {
   color: var(--secondary-color);
-}
+} */
 
 .skill-card,
 .last-card {
@@ -981,12 +974,9 @@ body {
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
-
-  background: var(--bg-light);
   border: 1px solid var(--border--card-border);
   border-radius: var(--card-radius);
   padding: var(--space-lg);
-  box-shadow: var(--shadow-sm);
 }
 
 .skill-card:hover {
@@ -1004,9 +994,10 @@ body {
 .skills__item {
   padding: 0.5rem 1.2rem;
   border-radius: 12px;
-  background: rgba(106, 27, 190, 0.18);
-  box-shadow: 0 0 12px rgba(167, 139, 250, 0.25);
-
+  /* background-color: rgba(125, 4, 255, 0.18); */
+  /* box-shadow: 0 0 12px rgba(167, 139, 250, 0.25); */
+  background-color: rgba(147, 147, 248, 0.29);
+  color: rgb(28, 4, 48);
   font-size: var(--fs-sm);
 }
 
@@ -2266,7 +2257,6 @@ small.valid {
 .tab {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
   padding: 1rem;
   gap: 1rem;
   overflow: hidden;
@@ -2278,7 +2268,7 @@ small.valid {
   /* background: var(--accent-colorpurple); */
   background: var(--gradient-brand);
   color: var(--btn-text);
-  border-radius: 999px;
+  border-radius: 16px;
   outline: none;
   cursor: pointer;
   padding: 10px 19px;
@@ -2286,10 +2276,10 @@ small.valid {
 }
 
 .tab button {
-  background-color: var(--primary-color);
-  color: #fff;
-  border-radius: 999px;
-  border: none;
+  background-color: transparent;
+  color: var(--text-dark);
+  border-radius: 16px;
+  border: 1px solid var(--primary-color);
   outline: none;
   cursor: pointer;
   padding: 10px 19px;
@@ -2406,6 +2396,9 @@ small.valid {
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: var(--space-lg);
   }
 
   /* .last-skill {
