@@ -228,7 +228,8 @@ body {
 }
 
 .logo {
-  width: 180px;
+  max-width: 120px;
+  width: 100%;
   height: auto;
   display: block;
   margin: 10px auto;
@@ -558,7 +559,7 @@ body {
   background: var(--btn-bg);
   color: var(--btn-text);
   box-shadow: var(--shadow-sm);
-  border-radius: 16px;
+  border-radius: var(--btn-radius);
 }
 
 .cta-primary:hover {
@@ -661,7 +662,7 @@ body {
 }
 
 .bi {
-  font-size: var(--fs-lg);
+  font-size: var(--fs-xl);
 }
 
 /* NEW ABOUT */
@@ -1128,8 +1129,6 @@ body {
   padding: var(--space-lg);
 }
 .project-card {
-  /* padding: var(--card-padding); */
-  /* background-color: #1f1f3a; */
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--card-radius);
@@ -1138,7 +1137,7 @@ body {
   flex-direction: column;
   gap: var(--space-lg);
   transition: 0.3s ease;
-  box-shadow: var(--card-hover-shadow);
+  /* box-shadow: var(--card-hover-shadow); */
 }
 .first-card {
   background-color: #fff;
@@ -1209,9 +1208,12 @@ body {
 }
 
 .btn-secondary {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: rgba(255, 255, 255, 0.9);
+  background-color: transparent;
+  color: var(--btn-text);
+  border-radius: var(--btn-radius);
+  border: 1px solid var(--btn-text);
+  outline: none;
+  cursor: pointer;
 }
 
 .btn-secondary:hover {
@@ -1274,7 +1276,7 @@ body {
    Services Section
 ========================= */
 
-.services-wrapper {
+rvices-wrapper {
   padding: var(--fs-xl);
   background: #fff; /* pure white to avoid grey blending */
   padding: 3rem 1rem;
@@ -1304,12 +1306,14 @@ body {
 
 .service-tab {
   padding: 0.7rem 1.4rem;
-  border-radius: 16px;
-  font-size: var(--fs-sm);
+  background-color: transparent;
+  color: var(--text-dark);
+  border-radius: var(--btn-radius);
+  border: 1px solid var(--primary-color);
+  outline: none;
+  cursor: pointer;
   font-weight: 500;
-  background: linear-gradient(180deg, #1a1a2e 0%, #26263d 100%);
-  border: var(--border-purple);
-  color: #fff;
+  color: var(--primary-color);
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -1330,7 +1334,7 @@ body {
 
 .service-tab.active,
 .service-tab:hover {
-  background: var(--color-secondary);
+  background: var(--btn-gradient);
   color: #fff;
 }
 
@@ -1421,8 +1425,246 @@ body {
 
 .services-img {
   width: 100%;
-  max-width: 900px;
+  max-width: 200px;
   border-radius: 16px;
+}
+/* New Service section */
+/* =========================
+   SERVICES SECTION
+========================= */
+
+/* ------------------------------
+   SECTION WRAPPER (MOBILE FIRST)
+--------------------------------*/
+.pricing-card--starter {
+  /* background-color: #fa2d9e; */
+  background: #f0e2ff;
+  color: var(--accent-colourpink);
+  font-size: var(--fs-lg);
+}
+
+.pricing-card--redesign {
+  background-color: #cdc1b96a;
+  color: var(--gold-accent);
+}
+
+.pricing-card--development {
+  background-color: #e0c3ff6c;
+  color: #a555fa;
+}
+.pricing-compare {
+  padding: var(--space-lg);
+  margin-bottom: 3rem;
+  /* color: var(--clr-text-main); */
+}
+
+.pricing-compare__inner {
+  max-width: 1300px;
+  margin: 0 auto 2rem auto;
+  border-radius: 16px;
+}
+
+/* ------------------------------
+   HEADER
+--------------------------------*/
+.pricing-compare__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* ------------------------------
+   GRID (MOBILE FIRST: 1 COLUMN)
+--------------------------------*/
+.pricing-compare__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch; /* IMPORTANT */
+}
+
+/* ------------------------------
+   PRICING CARDS
+--------------------------------*/
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  padding: var(--space-lg);
+  text-align: center;
+
+  box-shadow: var(--shadow-soft);
+  /* transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast); */
+}
+
+/* Cosmic glow */
+.pricing-card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  opacity: 0;
+  background: radial-gradient(
+    circle at top,
+    rgba(168, 85, 247, 0.18),
+    transparent 60%
+  );
+  transition: opacity var(--transition-fast);
+  pointer-events: none;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.75);
+}
+
+.pricing-card:hover::before {
+  opacity: 1;
+}
+
+/* Highlighted card */
+.pricing-card--highlight {
+  border-color: rgba(56, 189, 248, 0.7);
+  background: #dbeafe;
+  color: var(--accent-colorpurple);
+}
+
+/* ------------------------------
+   BADGES
+--------------------------------*/
+.pricing-card__badge {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  background: rgba(148, 163, 253, 0.12);
+  border: 1px solid rgba(148, 163, 253, 0.4);
+  margin-bottom: 1rem;
+  color: var(--skills-border);
+}
+
+.pricing-card__badge--highlight {
+  background: rgba(56, 189, 248, 0.18);
+  border-color: rgba(56, 189, 248, 0.7);
+}
+
+/* ------------------------------
+   TITLES & PRICE
+--------------------------------*/
+.pricing-card__title {
+  margin-bottom: 1rem;
+  font-size: var(--fs-2xl);
+  line-height: 0.9;
+  font-weight: 800;
+}
+
+.pricing-card__price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--clr-accent-purple);
+}
+
+.pricing-card--business .pricing-card__price {
+  color: var(--clr-accent-blue);
+}
+
+.pricing-card--redesign .pricing-card__price {
+  color: var(--clr-accent-orange);
+}
+
+.pricing-card__tagline {
+  color: var(--clr-text-muted);
+  margin-bottom: 0.1rem;
+}
+
+/* ------------------------------
+   FEATURES
+--------------------------------*/
+.pricing-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  color: var(--clr-text-muted);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card__features li {
+  margin-bottom: 0.2rem;
+  display: flex;
+  font-size: var(--fs-sm);
+
+  gap: 0.2rem;
+}
+
+.pricing-card__features li::before {
+  content: "✦";
+}
+
+.pricing-card--business .pricing-card__features li::before {
+  color: var(--clr-accent-blue);
+}
+
+.pricing-card--redesign .pricing-card__features li::before {
+  color: var(--clr-accent-orange);
+}
+
+/* ------------------------------
+   CTA BUTTONS
+--------------------------------*/
+
+.pricing-card__cta {
+  width: 50%;
+  padding: 0.65rem 1rem;
+  margin-top: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid black;
+  font-size: var(--fs-md);
+  background: transparent;
+  color: var(--clr-text-main);
+  cursor: pointer;
+  transition:
+    background var(--transition-fast),
+    box-shadow var(--transition-fast);
+  text-decoration: none;
+  color: black;
+  margin-top: auto; /* pushes button down */
+  text-align: center;
+}
+
+.pricing-card__cta:hover {
+  background: rgba(148, 163, 253, 0.18);
+  box-shadow: 0 0 18px rgba(129, 140, 248, 0.45);
+}
+
+.pricing-card__cta--primary {
+  background: var(--btn-gradient);
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
+  border: none;
+  box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
+}
+
+/* Process */
+/* ------------------------------
+   SECTION WRAPPER (MOBILE FIRST)
+--------------------------------*/
+.workprocess-cont {
+  padding: var(--space-xl);
+}
+.process-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.process-subtitle {
+  opacity: 0.8;
+  max-width: 50ch;
+  margin: 0.5rem auto 0;
 }
 
 /* =========================
@@ -1461,7 +1703,7 @@ body {
 
 .testimonial-text {
   position: relative;
-  padding: 2.5rem;
+  padding: var(--space-2xl);
   border-radius: 18px;
 }
 
@@ -2268,7 +2510,7 @@ small.valid {
   /* background: var(--accent-colorpurple); */
   background: var(--gradient-brand);
   color: var(--btn-text);
-  border-radius: 16px;
+  border-radius: var(--btn-radius);
   outline: none;
   cursor: pointer;
   padding: 10px 19px;
@@ -2278,18 +2520,16 @@ small.valid {
 .tab button {
   background-color: transparent;
   color: var(--text-dark);
-  border-radius: 16px;
+  border-radius: var(--btn-radius);
   border: 1px solid var(--primary-color);
   outline: none;
   cursor: pointer;
   padding: 10px 19px;
   transition: 0.3s;
-  font-size: 17px;
 }
 
 /* Style the tab content */
 .tabcontent {
-  border: 1px solid #ccc;
   border-top: none;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
@@ -2355,6 +2595,9 @@ small.valid {
     display: none;
   }
 
+  .logo {
+    max-width: 180px;
+  }
   .desktop-header {
     display: block;
   }
@@ -2401,22 +2644,9 @@ small.valid {
     padding: var(--space-lg);
   }
 
-  /* .last-skill {
-    grid-column: span 3;
-  } */
-
-  /* .skills__list-development {
-    display: flex;
-    gap: 0.5rem;
+  .pricing-compare {
+    padding: var(--space-2xl);
   }
-
-  .skills__group {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  .skills__list {
-    max-width: 900px;
-  } */
 
   .experience-grid {
     grid-template-columns: 1fr 1fr;
@@ -2449,8 +2679,9 @@ small.valid {
     display: flex;
   }
 
-  .skills.light-theme {
-    margin-bottom: 3rem;
+  .pricing-compare__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .first-card {
@@ -2636,8 +2867,8 @@ small.valid {
     font-size: 1.15rem;
   }
 
-  .service-card {
-    flex-direction: row;
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   /* MODAL Projects */
   .modal-content {
@@ -2941,12 +3172,6 @@ small.valid {
     flex: 1;
   }
 
-  .edu-list {
-    max-width: 1200px;
-    margin: 0 auto;
-    margin-bottom: 20rem;
-  }
-
   .experience-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -2973,10 +3198,8 @@ small.valid {
     font-size: 1rem;
   }
 
-  .why-slider {
-    margin-bottom: 7rem;
-    max-width: 1100px;
-    padding: 5em;
+  .pricing-card {
+    padding: var(--space-2xl);
   }
 
   .slide {
@@ -2992,9 +3215,10 @@ small.valid {
     font-size: 1.6rem;
   }
 
-  .service-card {
-    padding: 5rem;
+  .pricing-compare {
+    padding: var(--space-3xl);
   }
+
   .qualities {
     max-width: 1200px;
     margin: 0 auto 3rem;
