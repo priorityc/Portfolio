@@ -1276,7 +1276,7 @@ body {
    Services Section
 ========================= */
 
-rvices-wrapper {
+.services-wrapper {
   padding: var(--fs-xl);
   background: #fff; /* pure white to avoid grey blending */
   padding: 3rem 1rem;
@@ -1351,13 +1351,10 @@ rvices-wrapper {
 /* Card */
 
 .service-card {
+  padding: var(--space-xl);
+  gap: var(--space-lg);
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  background: var(--color-bg-soft);
-  border: 0.2px solid rgba(63, 17, 200, 0.25);
-  border-radius: 16px;
-  padding: 1.5rem;
   text-align: left;
   max-width: 1200px;
   margin: 0 auto;
@@ -1438,24 +1435,24 @@ rvices-wrapper {
 --------------------------------*/
 .pricing-card--starter {
   /* background-color: #fa2d9e; */
-  background: #f0e2ff;
-  color: var(--accent-colourpink);
+  /* background: #f0e2ff; */
+  background-color: var(--accent-colourpink);
+  color: var(--color-text-dark);
   font-size: var(--fs-lg);
 }
 
 .pricing-card--redesign {
-  background-color: #cdc1b96a;
+  background-color: var(--primary-color);
   color: var(--gold-accent);
 }
 
 .pricing-card--development {
-  background-color: #e0c3ff6c;
-  color: #a555fa;
+  background-color: var(--accent-colorpurple);
+  color: var(--primary-color);
 }
 .pricing-compare {
   padding: var(--space-lg);
   margin-bottom: 3rem;
-  /* color: var(--clr-text-main); */
 }
 
 .pricing-compare__inner {
@@ -1526,8 +1523,6 @@ rvices-wrapper {
 
 /* Highlighted card */
 .pricing-card--highlight {
-  border-color: rgba(56, 189, 248, 0.7);
-  background: #dbeafe;
   color: var(--accent-colorpurple);
 }
 
@@ -1619,35 +1614,31 @@ rvices-wrapper {
 --------------------------------*/
 
 .pricing-card__cta {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border-radius: var(--btn-radius);
+  box-shadow: var(--shadow-sm);
   width: 50%;
   padding: 0.65rem 1rem;
   margin-top: 1.5rem;
   border-radius: 16px;
-  border: 1px solid black;
   font-size: var(--fs-md);
-  background: transparent;
-  color: var(--clr-text-main);
   cursor: pointer;
-  transition:
-    background var(--transition-fast),
-    box-shadow var(--transition-fast);
   text-decoration: none;
-  color: black;
   margin-top: auto; /* pushes button down */
   text-align: center;
 }
 
-.pricing-card__cta:hover {
-  background: rgba(148, 163, 253, 0.18);
-  box-shadow: 0 0 18px rgba(129, 140, 248, 0.45);
+.service-btn:hover {
+  box-shadow: var(--btn-hover-shadow);
 }
 
-.pricing-card__cta--primary {
+/* .pricing-card__cta--primary {
   background: var(--btn-gradient);
   box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
   border: none;
   box-shadow: 0 0 22px rgba(56, 189, 248, 0.55);
-}
+} */
 
 /* Process */
 /* ------------------------------
