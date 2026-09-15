@@ -185,7 +185,7 @@ header p {
   min-width: 100%;
   max-width: 60%;
   flex-shrink: 0;
-  padding: 2rem 10px;
+  padding: var(--space-xl);
   margin: 0 auto;
   background-color: var(--card-purple);
   box-shadow:
@@ -373,6 +373,8 @@ label input[type="checkbox"] {
 
 .next-btn,
 .back-btn {
+  max-width: 280px;
+  margin: 0 auto;
   border: none;
   height: 70px;
   transition:
@@ -384,9 +386,9 @@ label input[type="checkbox"] {
   color: #fff;
   cursor: pointer;
   border: none;
+  font-size: var(--fs-lg);
   border-radius: 16px;
-  font-size: var(--fs-sm);
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
