@@ -292,8 +292,7 @@ A spacing scale gives your layout consistency and rhythm. */
 
 .service-item__examples li {
   padding: var(--space-md);
-  /* display: flex;
-  flex-direction: column; */
+  max-width: 600px;
   text-align: center;
   align-items: center;
 }
@@ -863,7 +862,9 @@ A spacing scale gives your layout consistency and rhythm. */
 
   .service-item {
     flex-direction: row;
+    justify-content: center;
     align-items: flex-start;
+    flex-wrap: wrap;
     padding: var(--fs-3xl);
   }
 
@@ -883,10 +884,18 @@ A spacing scale gives your layout consistency and rhythm. */
     padding-left: 1.5rem;
   }
 
-  .service-item__examples {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .service-showcase__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
+  .last-item {
+    grid-column: span 2;
+  }
+
+  .service-item-right {
+    text-align: left;
+  }
   /* pallete grid */
   .brand-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1019,11 +1028,10 @@ A spacing scale gives your layout consistency and rhythm. */
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .service-item__examples {
-    grid-template-columns: repeat(3, 1fr);
-  }
   .service-showcase__inner {
     font-variant: var(--space-4xl);
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .service-item__left {
