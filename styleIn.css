@@ -1786,7 +1786,7 @@ body {
 }
 
 .footer-box {
-  background: linear-gradient(180deg, #1a1a2e 0%, #26263d 100%);
+  background: var(--primary-color);
   color: #d8d6d6;
   padding: 3rem 1.5rem;
   display: flex;
@@ -1801,9 +1801,10 @@ body {
 }
 
 .footer-header-h2 {
-  color: #fff;
+  color: var(--secondary-color);
   margin-bottom: 1rem;
   font-size: var(--fs-lg);
+  font-family: var(--font-heading);
 }
 
 .arrange-manu-footer {
@@ -1814,13 +1815,13 @@ body {
 }
 
 .nav__link-footer {
-  color: #fff;
+  color: var(--accent-colourpink);
 }
 
-.footer-info p {
+/* .footer-info p {
   font-size: var(--fs-sm);
   margin-bottom: 0.5rem;
-}
+} */
 
 .footer-email {
   display: flex;
@@ -1835,6 +1836,7 @@ body {
   display: flex;
   margin-top: 1rem;
   justify-content: center;
+  gap: 1rem;
 }
 
 .social-links a {
@@ -1857,8 +1859,10 @@ body {
 }
 
 .footer-form h2 {
-  color: var(--bg-purple);
+  color: var(--secondary-color);
+  font-size: var(--fs-2xl);
   margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
 }
 
 .footer-form p {
