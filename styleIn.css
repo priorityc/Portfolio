@@ -1131,7 +1131,6 @@ body {
 .project-card {
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
-  border-radius: var(--card-radius);
   overflow: hidden;
   display: flex;
   flex-direction: column;
