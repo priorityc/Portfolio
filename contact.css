@@ -474,7 +474,6 @@ small.valid {
 }
 
 .invalid {
-  border: 2px solid rgb(197, 73, 73);
   border-radius: 6px;
 }
 
