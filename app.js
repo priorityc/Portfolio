@@ -4,120 +4,6 @@ const nav = document.querySelector(".sidenav");
 const header = document.querySelector(".hero");
 const dotContainer = document.querySelector(".dots");
 
-// Project Modal DATA
-const projects = {
-  ecom: {
-    title: "React E‑Commerce Store",
-    overview:
-      "CosmicCare is a modern, mobile‑first e‑commerce concept brand built from scratch — including logo, branding, UI/UX, product system, cart, and checkout. It demonstrates my ability to design and develop a complete digital brand experience",
-    features: [
-      "Brand identity with logo, colours, and typography",
-      "Responsive e‑commerce UI built in React",
-      "Dynamic product loading via Supabase",
-      "Cart + checkout flow using Stripe",
-      "Demo mode for safe portfolio browsing",
-    ],
-    problem: [
-      "Many new brands struggle with:unclear identity, inconsistent visuals, confusing navigation,poor mobile experience, lack of trust signals. CosmicCare was created to solve these problems by showing how a clean, modern, mobile‑first e‑commerce experience can be built from scratch with strong branding and essential functionality.",
-    ],
-    solution: [
-      "I approached CosmicCare as a real brand, not just a coding project.The solution included a minimalist logo inspired by cosmic shapes and wellness symbolism, a soft colour palette to communicate calm and trust.",
-    ],
-
-    techstack: ["React", "JavaScript", "Supababase", "GitHub"],
-    tools: ["Netlify", "Render", "Supabase", "Express.js"],
-    images: ["./media/ccprojecthome.png"],
-    live: "https://cosmiccare.netlify.app/?demo=false",
-    demo: "https://cosmiccare.netlify.app/?demo=true",
-    github: "https://github.com/priorityc/cosmic-care-site",
-    learnmore: "https://priorityc.github.io/Portfolio/blog",
-    cta: "Let’s build it together.",
-  },
-
-  lamp: {
-    title: "Black Hole",
-    overview:
-      "The Black Hole landing page is an immersive, story‑driven web experience designed to simulate being pulled into a cosmic event. The goal was to create a dramatic, atmospheric interface that blends motion, contrast, and interaction to captivate users from the first second.",
-    features: [
-      "Hero animation with gravitational visual effects",
-      "Scroll‑based transitions that deepen the “descent” experience",
-      "Interactive CTA that visually disappears into the black hole",
-      "Responsive layout optimised for all screen sizes",
-    ],
-    problem: [
-      "Traditional landing pages often feel flat, predictable, and uninspiring. I wanted to challenge that by exploring how a website could feel like a cinematic experience, not just a layout.",
-    ],
-    solution: [
-      "I designed a single‑page experience where the user scrolls deeper into the “black hole,” supported by interactive and engaging ElementInternals.",
-    ],
-
-    techstack: ["HTML", "CSS", "JavaScript"],
-    tools: ["GitHub"],
-    images: ["./media/BHform.png", "./media/dualModeBh.png"],
-
-    demo: "https://priorityc.github.io/stargazing-landing-page/",
-    github: "https://github.com/priorityc/stargazing-landing-page",
-    cta: "Let’s build it together.",
-  },
-
-  serviceq: {
-    title: "Service Quote Calculator",
-    overview: "A tool for automating construction service quotes.",
-    problem: [
-      "A mobile‑first service quote calculator prototype designed for a newly established construction business willing to enter the market quickly.",
-    ],
-    tech: [
-      "I created mobile interface prototype that calculates services for plastering, painting and flooring. The process I followed was user-centered with 3 fiteration, analysing the user charachteristics, environment and activities, than progressed to interview and gathering data with requirements engeenering.",
-    ],
-    features: [
-      "Step by step interactions",
-      "Instant quote calculation",
-      "Clean UI for industry non‑technical users",
-      "Supports one-hand use",
-      "Clear visual feedback for noisy environments",
-      "reduced cognitive load",
-    ],
-    techstack: ["Figma"],
-    tools: ["PowerPoint"],
-    images: [
-      "./media/screen2sq.png",
-      "./media/screen3sq.png",
-      "./media/screen123.png",
-      "./media/screen45.png",
-    ],
-
-    demo: "https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/ServicePaintingCalculator?node-id=1025-2&t=GROR9anNnS82szvj-1&starting-point-node-id=1025%3A2",
-    github: "#",
-    cta: "Let’s build it together.",
-  },
-
-  foodapp: {
-    title: "Food Application",
-    overview:
-      "FoodApp is a mobile‑first recipe discovery tool that lets users search for meals and instantly view real recipes using live API data. It focuses on simplicity, speed, and clean UI design.",
-    features: [
-      "Live recipe search powered by Spoonacular API",
-      "Dynamic recipe cards rendered with JavaScript",
-      "Ingredients and instructions modal for detailed viewing",
-      "Filtering ingredients function",
-      "Responsive layout optimised for mobile first",
-    ],
-    problem: [
-      "Most recipe websites are cluttered, slow, and overwhelming for users who just want quick inspiration. I wanted to create a simple, fast, mobile‑friendly app.",
-    ],
-    solution: [
-      "I designed FoodApp as a minimal, intuitive recipe browser. The result is a lightweight, fast, and user‑friendly recipe discovery tool.",
-    ],
-
-    techstack: ["React", "JavaScript", "API"],
-    tools: ["GitHub", "vite", "Spoonacular API"],
-    images: ["./media/FoodApp-Tablet.png", "./media/FoodApp-mobile.png"],
-    demo: "https://priorityc.github.io/FoodApp/",
-    github: "https://github.com/priorityc/FoodApp.git",
-    cta: "Let’s build it together.",
-  },
-};
-
 // Accessibility
 function handleKey(event) {
   if (event.key === "Enter" || event.key === " ") {
@@ -382,33 +268,33 @@ setInterval(() => {
 }, 12000);
 
 // MODAL
-const openBtn = document.getElementById("openModal");
-const openM = document.getElementById("openM");
-const modal = document.getElementById("hireModal");
-const closeBtn = modal.querySelector(".close-modal");
+// const openBtn = document.getElementById("openModal");
+// const openM = document.getElementById("openM");
+// const modal = document.getElementById("hireModal");
+// const closeBtn = modal.querySelector(".close-modal");
 
-if (openBtn) {
-  openBtn.addEventListener("click", () => {
-    modal.classList.remove("hidden");
-  });
-}
+// if (openBtn) {
+//   openBtn.addEventListener("click", () => {
+//     modal.classList.remove("hidden");
+//   });
+// }
 
-if (openM) {
-  openM.addEventListener("click", () => {
-    modal.classList.remove("hidden");
-  });
-}
+// if (openM) {
+//   openM.addEventListener("click", () => {
+//     modal.classList.remove("hidden");
+//   });
+// }
 
-closeBtn.addEventListener("click", () => {
-  modal.classList.add("hidden");
-});
+// closeBtn.addEventListener("click", () => {
+//   modal.classList.add("hidden");
+// });
 
-// Close when clicking outside modal content
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.classList.add("hidden");
-  }
-});
+// // Close when clicking outside modal content
+// modal.addEventListener("click", (e) => {
+//   if (e.target === modal) {
+//     modal.classList.add("hidden");
+//   }
+// });
 
 // MODAL form validation
 // Modal validation
@@ -501,112 +387,11 @@ function isButton(element) {
   return element.tagName === "BUTTON" || element.tagName === "A";
 }
 
-// OPEN MODAL WHEN CLICKING THE CARD
-projectCards.forEach((card) => {
-  card.addEventListener("click", (e) => {
-    if (isButton(e.target)) return; // ignore button clicks
-
-    const projectKey = card.dataset.project;
-    const data = projects[projectKey];
-
-    if (!data) {
-      console.error("No project data found for:", projectKey);
-      return;
-    }
-
-    // TITLE + OVERVIEW
-
-    modalPr.querySelector(".modal-title").textContent = data.title;
-    modalPr.querySelector(".modal-overview").textContent = data.overview;
-
-    // FEATURES
-    modalPr.querySelector(".modal-features").innerHTML = data.features
-      .map((item) => `<li>${item}</li>`)
-      .join("");
-
-    // PROBLEM
-    modalPr.querySelector(".modal-problem").innerHTML = data.problem
-      .map((item) => `<p>${item}</p>`)
-      .join("");
-
-    // SOLUTION
-    modalPr.querySelector(".modal-solution").innerHTML = data.solution
-      .map((item) => `<p>${item}</p>`)
-      .join("");
-
-    // TECH STACK
-    modalPr.querySelector(".modal-techstack").innerHTML = data.techstack
-      .map((tech) => `<li>${tech}</li>`)
-      .join("");
-
-    // TOOLS
-    modalPr.querySelector(".modal-tools").innerHTML = data.tools
-      .map((tool) => `<li>${tool}</li>`)
-      .join("");
-
-    // IMAGES
-    modalPr.querySelector(".modal-images").innerHTML = data.images
-      .map(
-        (img, index) => `
-        <div class="modal-img-wrapper">
-          <img src="${img}" data-index="${index}" alt="Project screenshot">
-        </div>
-      `,
-      )
-      .join("");
-
-    // LINKS
-    modalPr.querySelector(".modal-demo").href = data.demo;
-    modalPr.querySelector(".modal-live").href = data.live;
-    modalPr.querySelector(".modal-github").href = data.github;
-
-    // CTA
-    modalPr.querySelector(".modal__cta-text").textContent = data.cta;
-
-    // SHOW MODAL
-    modalPr.classList.add("active");
-    document.body.classList.add("no-scroll");
+document.querySelectorAll(".project-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    const projectId = card.dataset.project;
+    window.location.href = `projects.html?project=${projectId}`;
   });
-});
-
-// CLOSE MODAL BUTTON
-closeBtnPr.addEventListener("click", () => {
-  modalPr.classList.remove("active");
-  document.body.classList.remove("no-scroll");
-});
-
-// CLOSE MODAL WHEN CLICKING BACKDROP
-modalPr.addEventListener("click", (e) => {
-  if (e.target === modalPr) {
-    modalPr.classList.remove("active");
-    document.body.classList.remove("no-scroll");
-  }
-});
-
-// SCROLL INDICATORS INSIDE MODAL
-const modalContent = modalPr.querySelector(".modal-content");
-const scrollIndicator = modalPr.querySelector(".scroll-indicator");
-const scrollTopIndicator = modalPr.querySelector(".scroll-top-indicator");
-
-// Hide scroll-down indicator after user scrolls
-modalContent.addEventListener("scroll", () => {
-  scrollIndicator.style.opacity = modalContent.scrollTop > 20 ? "0" : "1";
-});
-
-// Show scroll-to-top indicator when user scrolls down
-modalContent.addEventListener("scroll", () => {
-  if (modalContent.scrollTop === 0) {
-    scrollTopIndicator.style.opacity = "0";
-    scrollTopIndicator.style.pointerEvents = "none";
-  } else {
-    scrollTopIndicator.style.opacity = "1";
-    scrollTopIndicator.style.pointerEvents = "auto";
-  }
-});
-
-// Scroll back to top when clicking the ↑ arrow
-scrollTopIndicator.addEventListener("click", () => {
-  modalContent.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 // Fading sections
