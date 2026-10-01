@@ -3,7 +3,7 @@ const projects = {
   ecom: {
     title: "Cosmic Care",
     overview:
-      "A modern e‑commerce prototype built to explore product browsing, cart interactions, and checkout flow clarity.",
+      "This project is a fully functional e‑commerce prototype designed to study how users browse products, interact with carts, and move through a checkout flow.",
     goal: "The goal was to create a fast, intuitive shopping experience with a clean UI and reusable React components.",
     role: "Front-end Developer/UI Designer",
 
@@ -16,7 +16,8 @@ const projects = {
       "Demo mode for safe portfolio browsing",
     ],
     problem: {
-      title: "Most small e‑commerce sites struggle with",
+      title:
+        "Many beautifully designed e‑commerce websites fail to convert because the design does not match how users actually behave. Businesses often assume their layout is intuitive, but users struggle with:",
       problemlist: [
         "cluttered product cards",
         "slow or confusing cart interactions",
@@ -24,7 +25,7 @@ const projects = {
         "poor mobile experience",
       ],
       challange:
-        "The challenge was to design a simple, fast, and visually clean shopping experience that could scale into a full product.",
+        "The challenge was to build a prototype that focuses on real UX, not just aesthetics — a system that reveals how users move, click, hesitate, and decide.",
     },
     solution: [
       "I designed and developed CosmicCare as a fully functional, mobile‑first prototype that blends branding, UX design, and real technical behaviour. Created a cosmic‑inspired brand identity with a modern colour palette.",
@@ -53,6 +54,13 @@ const projects = {
           "Clean spacing, predictable layouts, and minimal distractions help users browse faster and make confident decisions.",
       },
     ],
+    designgoals: [
+      "Create a minimal, frictionless shopping flow",
+      "Build reusable UI components",
+      "Ensure fast performance and clean state management",
+      "Deliver a responsive layout across devices",
+      "Keep the interface visually modern and brand‑consistent",
+    ],
 
     architecture: [
       {
@@ -70,6 +78,10 @@ const projects = {
       "./media/CCpresent.jpg",
       "./media/checkoutflow.jpg",
     ],
+
+    finallook: [
+      "The final interface deliversclean product cards, consistent spacing, modern color palette, intuitive cart interactions, responsive layout across breakpoints. The UI is intentionally minimal to reduce cognitive load and highlight product information.",
+    ],
     live: "https://cosmiccare.netlify.app/?demo=false",
     demo: "https://cosmiccare.netlify.app/?demo=true",
     github: "https://github.com/priorityc/cosmic-care-site",
@@ -80,25 +92,75 @@ const projects = {
   lamp: {
     title: "Black Hole",
     overview:
-      "The Black Hole landing page is an immersive, story‑driven web experience designed to simulate being pulled into a cosmic event. The goal was to create a dramatic, atmospheric interface that blends motion, contrast, and interaction to captivate users from the first second.",
+      "An immersive, space‑themed landing page designed to simulate being pulled into a black hole.",
+    goal: "The goal was to create a cinematic, story‑driven experience using motion, gradients, and scroll‑based transitions to engage visitors beyond a static layout.",
+    role: "Designer & Front‑end Developer",
+    timeline: "1 month",
+
     features: [
       "Hero animation with gravitational visual effects",
       "Scroll‑based transitions that deepen the “descent” experience",
       "Interactive CTA that visually disappears into the black hole",
       "Responsive layout optimised for all screen sizes",
     ],
-    problem: [
-      "Traditional landing pages often feel flat, predictable, and uninspiring. I wanted to challenge that by exploring how a website could feel like a cinematic experience, not just a layout., Created a cosmic‑inspired brand identity with a modern colour palette.Designed a clean, wellness‑tech UI using React components",
-      "Designed a simple, intuitive product browsing experience.",
-    ],
-    solution: [
-      "Created a minimal, frictionless shopping flow with reusable UI components ensuring fast performance and clean state management",
 
-      "Deliver a responsive layout that works across devices and keep the interface visually modern and brand‑consistent.Designed a simple, intuitive product browsing experience. Created a demo mode so stakeholders can safely explore the UX flow without processing real payments.",
+    problem: {
+      title: "Traditional landing pages for events get lost on the website",
+      problemlist: [
+        "Low Engagement-Static pages don’t capture imagination",
+        "Poor Storytelling - No sense of immersion",
+        "Weak Visual Hierarchy - Overloaded with text",
+        "No Interactive Elements - Nothing encourages exploration",
+      ],
+      challange:
+        "The challenge was to design a page that felt alive — where every scroll deepens the narrative and reinforces the concept of gravitational pull.",
+    },
+    solution: [
+      "Designed visualy immersive hero section that sparks curiosity and use motion and depth to simulate gravitational attraction whilist eep the narrative clear and intuitive.",
+    ],
+
+    researchandinsights: [
+      {
+        title: "Motions as narative.",
+        insight: "Subtle animations can guide emotional tone.",
+      },
+      {
+        title: "Scroll‑based storytelling",
+        insight:
+          "Users engage longer when motion reinforces story progression.",
+      },
+      {
+        title: "CTA Placement and Structure",
+        insight: "dark‑to‑light transitions evoke depth and descent.",
+      },
+      {
+        title: "Reducing cognitive load during browsing",
+        insight:
+          "The placement and structure of the CTA dramatically affect how users behave.",
+      },
+    ],
+
+    designgoals: [
+      "Create a cinematic, atmospheric landing experience",
+      "Use scroll‑based transitions to simulate descent into a black hole",
+      "Maintain performance and responsiveness across devices",
+      "Build a clear narrative flow from curiosity → immersion → action",
+      "Integrate a CTA that feels part of the story, not separate from it",
+    ],
+
+    architecture: [
+      {
+        image: "./media/heroCTA.png",
+        component:
+          "The HTML is organized into semantic sections that mirror the narrative flow of the experience: Hero Section — the black hole visual, title, and entry CTA than follows by scroll Sections where more imformation reveal at the final is CTA.",
+      },
     ],
 
     techstack: ["HTML", "CSS", "JavaScript"],
     tools: ["GitHub"],
+    finallook: [
+      "The final landing page delivers: a dramatic hero section with a central black hole, scroll‑based transitions that simulate descent, a CTA section that feels integrated into the narrative, a responsive layout across devices.The experience is intentionally minimal, focusing on motion and storytelling rather than heavy content.",
+    ],
     images: [
       "./media/BHhero.jpg",
       "./media/BHform.jpg",
@@ -146,7 +208,11 @@ const projects = {
   foodapp: {
     title: "Food Application",
     overview:
-      "FoodApp is a mobile‑first recipe discovery tool that lets users search for meals and instantly view real recipes using live API data. It focuses on simplicity, speed, and clean UI design.",
+      "FoodApp is a mobile‑first recipe discovery tool that allows users to search for meals, explore ingredients, and view cooking instructions using live API data.",
+    gioal:
+      "FoodApp is a mobile‑first recipe discovery tool that allows users to search for meals, explore ingredients, and view cooking instructions using live API data.",
+    role: "Front-end Developer/UI Designer",
+    timeline: "1 week",
     features: [
       "Live recipe search powered by Spoonacular API",
       "Dynamic recipe cards rendered with JavaScript",
@@ -154,16 +220,58 @@ const projects = {
       "Filtering ingredients function",
       "Responsive layout optimised for mobile first",
     ],
-    problem: [
-      "Most recipe websites are cluttered, slow, and overwhelming for users who just want quick inspiration. I wanted to create a simple, fast, mobile‑friendly app.",
-    ],
+    problem: {
+      title:
+        "Most recipe websites are cluttered, slow, and overwhelming for users who simply want to find a meal quickly. Common issues include:",
+      problemlist: [
+        "heavy layouts with too much text",
+        "slow loading times due to large images",
+        "confusing ingredient lists",
+        "poor mobile experience",
+        "lack of clear hierarchy",
+      ],
+      challange:
+        "The challenge was to design a simple, fast, mobile‑first recipe search experience that gives users exactly what they need — no friction, no clutter.",
+    },
+
     solution: [
       "I designed FoodApp as a minimal, intuitive recipe browser. The result is a lightweight, fast, and user‑friendly recipe discovery tool.",
+    ],
+
+    researchandinsights: [
+      {
+        title: "Users prefer quick scanning",
+        insight: "image → title → ingredients → instructions",
+      },
+      {
+        title: "Ingredient lists",
+        insight:
+          "Ingredient lists must be clean and readable, not buried in long text blocks",
+      },
+      {
+        title: "results and minimal scrolling",
+        insight: "Mobile users expect instant results and minimal scrolling",
+      },
+      {
+        title: "Reducing cognitive load during browsing",
+        insight: "Clear visual hierarchy reduces cognitive load",
+      },
+    ],
+
+    designgoals: [
+      "Build a mobile‑first interface",
+      "Keep the layout clean and minimal",
+      "Display recipes in a card‑based format for quick scanning",
+      "Fetch real data using an external APIs",
+      "Ensure fast performance and smooth interactions",
     ],
 
     techstack: ["React", "JavaScript", "API"],
     tools: ["GitHub", "vite", "Spoonacular API"],
     images: ["./media/FoodApp-Tablet.png", "./media/FoodApp-mobile.png"],
+    finallook: [
+      "The final interface delivers a clean search experience, dynamic recipe cards with images, clear ingredient lists, step‑by‑step cooking instructions, responsive layout across devices, smooth transitions and intuitive interactions.",
+    ],
     demo: "https://priorityc.github.io/FoodApp/",
     github: "https://github.com/priorityc/FoodApp.git",
     cta: "Let’s build it together.",
@@ -253,6 +361,13 @@ insightsCont.innerHTML = (data.researchandinsights || [])
   )
   .join("");
 
+// DESIGN GOALS
+
+const designGoalsCont = document.querySelector(".designgoals-container");
+designGoalsCont.innerHTML = (data.designgoals || [])
+  .map((item) => `<li>${item}</li>`)
+  .join("");
+// ARCHITECTURE
 const architectureCont = document.querySelector(".architecture-container");
 architectureCont.innerHTML = (data.architecture || []).map(
   (item) => `
@@ -293,6 +408,9 @@ document.querySelector(".tools-list").innerHTML = (data.tools || [])
   .join("");
 
 // Display the last image in the array
+const galleryPar = document.querySelector(".gallery-desc");
+galleryPar.innerHTML = data.finallook || [];
+
 const checkoutDiv = document.querySelector(".checkout-flow");
 const lastImage = data.images[data.images.length - 1]; // gets the last image
 checkoutDiv.innerHTML = `<img src="${lastImage}" alt="Checkout Flow" style="width:100%;">`;

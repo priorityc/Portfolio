@@ -316,6 +316,10 @@ body {
   margin-bottom: var(--space-lg);
 }
 
+.design-goals {
+  background: var(--bg-light);
+}
+
 /* Features section */
 .features-list li {
   font-size: var(--fs-sm);
