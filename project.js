@@ -3,8 +3,10 @@ const projects = {
   ecom: {
     title: "Cosmic Care",
     overview:
-      "CosmicCare is a fully functional React e‑commerce prototype built as a complete digital brand experience. It includes a custom brand identity, mobile‑first UI, dynamic product loading, a real Stripe checkout flow, and a demo mode for safe portfolio browsing. The system uses Supabase for product data, Express.js for simulated backend logic, and Netlify for deployment with environment‑based configuration.",
-    role: "Front-end Developer",
+      "A modern e‑commerce prototype built to explore product browsing, cart interactions, and checkout flow clarity.",
+    goal: "The goal was to create a fast, intuitive shopping experience with a clean UI and reusable React components.",
+    role: "Front-end Developer/UI Designer",
+
     timeline: "3 Months",
     features: [
       "Brand identity with logo, colours, and typography",
@@ -13,13 +15,51 @@ const projects = {
       "Cart + checkout flow using Stripe",
       "Demo mode for safe portfolio browsing",
     ],
-    problem: [
-      "New wellness businesses like CosmicCare often face two major challenges at the same time. They need a strong, modern identity, but they are unsure how this identity will translate into a real digital product.",
-      "They want to test how customers browse products, add items to a cart, and complete a checkout flow. At the same time, the development team needed to investigate how Stripe could be integrated into a real web‑based payment system.",
-    ],
+    problem: {
+      title: "Most small e‑commerce sites struggle with",
+      problemlist: [
+        "cluttered product cards",
+        "slow or confusing cart interactions",
+        "inconsistent UI patterns",
+        "poor mobile experience",
+      ],
+      challange:
+        "The challenge was to design a simple, fast, and visually clean shopping experience that could scale into a full product.",
+    },
     solution: [
       "I designed and developed CosmicCare as a fully functional, mobile‑first prototype that blends branding, UX design, and real technical behaviour. Created a cosmic‑inspired brand identity with a modern colour palette.",
       "Designed a simple, intuitive product browsing experience. Created a demo mode so stakeholders can safely explore the UX flow without processing real payments.",
+    ],
+
+    researchandinsights: [
+      {
+        title: "Common e‑commerce patterns",
+        insight:
+          "By analyzing online shops, I identified several consistent UX patterns: predictable layouts, minimal cognitive load, and strong micro‑interactions.",
+      },
+      {
+        title: "User expectations for product cards",
+        insight:
+          "Users scan product cards in a predictable order: image → title → price → CTA. They expect consistency and immediate clarity.",
+      },
+      {
+        title: "Clarity of pricing and CTA placement",
+        insight:
+          "Pricing and CTAs must be visually dominant and consistently placed to reduce hesitation and improve conversions.",
+      },
+      {
+        title: "Reducing cognitive load during browsing",
+        insight:
+          "Clean spacing, predictable layouts, and minimal distractions help users browse faster and make confident decisions.",
+      },
+    ],
+
+    architecture: [
+      {
+        image: "./media/ComponentArchitecture.png",
+        component:
+          "I structured the UI using a modular component architecture.ProductCard handles product display and interactions, ProductGrid manages layout and responsiveness, Cart controls global cart state and item management, and Header provides navigation and dynamic cart visibility.This separation of concerns makes the application scalable, maintainable, and easy to extend with new features.",
+      },
     ],
 
     techstack: ["React", "JavaScript", "GitHub"],
@@ -52,8 +92,9 @@ const projects = {
       "Designed a simple, intuitive product browsing experience.",
     ],
     solution: [
-      "I designed and developed CosmicCare as a fully functional, mobile‑first prototype that blends branding, UX design, and real technical behaviour. Created a cosmic‑inspired brand identity with a modern colour palette.",
-      "Designed a simple, intuitive product browsing experience. Created a demo mode so stakeholders can safely explore the UX flow without processing real payments.",
+      "Created a minimal, frictionless shopping flow with reusable UI components ensuring fast performance and clean state management",
+
+      "Deliver a responsive layout that works across devices and keep the interface visually modern and brand‑consistent.Designed a simple, intuitive product browsing experience. Created a demo mode so stakeholders can safely explore the UX flow without processing real payments.",
     ],
 
     techstack: ["HTML", "CSS", "JavaScript"],
@@ -161,6 +202,7 @@ if (!data) {
 document.querySelector(".project-title").textContent = data.title;
 document.querySelector(".project-overview-description").textContent =
   data.overview;
+document.querySelector(".project-goal").textContent = data.goal;
 
 const heroImg = document.querySelector(".hero-img");
 if (data.images && data.images.length > 0) {
@@ -177,17 +219,49 @@ document.querySelector(".features-list").innerHTML = (data.features || [])
   .join("");
 
 // PROBLEM
-document.querySelector(".project-problem").innerHTML = (data.problem || [])
+document.querySelector(".problem-desc").innerHTML = data.problem.title;
+document.querySelector(".project-problem").innerHTML = (
+  data.problem.problemlist || []
+)
   .map(
-    (item) => `<i class="bi bi-patch-question"></i></i>
-<p>${item}</p>`,
+    (item) => `<li class="problem-li">
+    <i class="bi bi-patch-question"></i>
+<p>${item}</p></li>`,
   )
   .join("");
 
+document.querySelector(".project-challange").innerHTML = data.problem.challange;
+
 // SOLUTION
 document.querySelector(".project-solution").innerHTML = (data.solution || [])
-  .map((item) => `<i class="bi bi-check-circle"></i><p>${item}</p>`)
+  .map(
+    (item) =>
+      `<div class="solution-item"><i class="bi bi-check-circle"></i><p>${item}</p></div>`,
+  )
   .join("");
+
+// RESEARCH AND INSIGHTS
+const insightsCont = document.querySelector(".insights-container");
+insightsCont.innerHTML = (data.researchandinsights || [])
+  .map(
+    (item) => `
+      <div class="insight-item">
+        <h3 class="project-sub-title">${item.title}</h3>
+        <p class="insight-text">${item.insight}</p>
+      </div>
+    `,
+  )
+  .join("");
+
+const architectureCont = document.querySelector(".architecture-container");
+architectureCont.innerHTML = (data.architecture || []).map(
+  (item) => `
+      <div class="architecture-item">
+        <p class="insight-text">${item.component}</p>
+        <img src="${item.image}" alt="Component Architecture Diagram" class="architecture-img" />
+      </div>
+    `,
+);
 
 const techIcons = {
   React: `<i class="devicon-react-original colored"></i>`,

@@ -35,8 +35,8 @@ body {
   /* Neutrals */
   --light-background: #f3f4f8;
   --bg-light: #e8eaf3;
-  --text-dark: #2b2b2b;
-  --text-muted: #6b7280;
+  --text-dark: #4a4b4c;
+  --text-muted: #6c7380;
 
   /* Gradients */
   --gradient-purple: linear-gradient(180deg, #6a1bbe, #d701fc);
@@ -190,16 +190,21 @@ body {
   font-weight: 700;
   margin-bottom: var(--space-sm);
   font-family: var(--font-heading);
-  font-size: var(--fs-3xl);
+  font-size: var(--fs-4xl);
 }
 
 .project-subtitle {
-  font-size: var(--fs-xl);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+}
+
+.project-sub-title {
+  font-size: var(--fs-lg);
   font-weight: 500;
   margin-bottom: var(--space-sx);
   color: var(--secondary-color);
 }
-
 .project-overview-description {
   font-size: 1rem;
   line-height: 1.6;
@@ -234,12 +239,14 @@ body {
 
 /* TWO COLUMN (DESKTOP) */
 .two-col {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--space-lg);
   margin-bottom: var(--space-xl);
-  padding: var(--space-xl) var(--space-lg);
-  background: #f4e8de75;
+}
+
+.problem-challange-solution {
+  background: #f1f3e876;
 }
 
 .project-problem,
@@ -247,14 +254,73 @@ body {
   margin: var(--space-md) 0;
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+}
+
+.problem-li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 2px solid var(--border-purple);
+}
+
+.problem-li i {
+  font-size: 1.2rem;
+  color: var(--accent-colourpink);
+  flex-shrink: 0;
+}
+
+.section {
+  padding: var(--space-xl) var(--space-lg);
+  gap: var(--space-lg);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.project-overview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-xl);
+}
+
+.reseach-insights {
+  background: var(--backgroung-light-purple);
+}
+
+.architecture {
+  background: #f4e8de75;
+  gap: var(--space-lg);
+}
+.architecture-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: var(--space-lg);
+}
+
+.architecture-item {
+  max-width: 800px;
+}
+
+.architecture-img {
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.insight-text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: var(--space-lg);
 }
 
 /* Features section */
 .features-list li {
   font-size: var(--fs-sm);
   margin-bottom: var(--space-sx);
-  margin-left: var(--space-xl);
+  margin-left: var(--space-lg);
 }
 
 .bi {
@@ -275,7 +341,6 @@ body {
 
 .gallery-cont {
   margin-bottom: var(--space-xl);
-  padding: var(--space-xl) var(--space-lg);
 }
 
 .project-gallery-title {
@@ -300,21 +365,10 @@ body {
   list-style-type: none;
 }
 
-/* .supabase-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-  vertical-align: middle;
-} */
-
 i {
   font-size: var(--fs-2xl);
 }
 
-/* .tech-left {
-  display: flex;
-  flex-direction: column;
-} */
 /* GALLERY */
 .gallery {
   display: grid;
@@ -385,19 +439,11 @@ i {
 }
 
 /* HEADER LAYOUT */
-.project-overview {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xl);
-  margin-bottom: var(--space-xl);
-  padding: var(--space-xl) var(--space-lg);
-}
 
 .section-features {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--space-xl) var(--space-lg);
   gap: var(--space-xl);
   margin-bottom: var(--space-xl);
   background: #e5e5e7;
@@ -413,6 +459,9 @@ i {
 
 /* Desktop layout */
 @media (min-width: 768px) {
+  .section {
+    padding: var(--space-3xl);
+  }
   .project-overview,
   .section-features {
     flex-direction: row;
@@ -439,19 +488,27 @@ i {
   .role-timeline > div {
     flex: 1;
   }
-  .two-col {
-    flex-direction: row;
-    gap: var(--space-lg);
-  }
-  .col {
-    flex: 1;
-  }
 
   .project-overview,
-  .section-features,
-  .two-col {
+  .section-features {
     flex-direction: row;
-    padding: var(--space-2xl);
+
+    gap: var(--space-lg);
+  }
+
+  .two-col {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+
+  .col-three {
+    grid-column: span 2;
+  }
+
+  .insights-container,
+  .project-solution {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--space-lg);
   }
 
@@ -474,9 +531,16 @@ i {
   }
 
   .section-features {
-    flex-direction: row;
     align-items: center;
     justify-content: center;
+  }
+
+  .architecture-item {
+    display: flex;
+    gap: var(--space-lg);
+  }
+  .architecture-img {
+    max-width: 50%;
   }
 }
 
