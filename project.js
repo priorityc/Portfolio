@@ -174,43 +174,11 @@ const projects = {
     cta: "Let’s build it together.",
   },
 
-  serviceq: {
-    title: "Service Quote Calculator",
-    overview: "A tool for automating construction service quotes.",
-    problem: [
-      "A mobile‑first service quote calculator prototype designed for a newly established construction business willing to enter the market quickly.",
-    ],
-    tech: [
-      "I created mobile interface prototype that calculates services for plastering, painting and flooring. The process I followed was user-centered with 3 fiteration, analysing the user charachteristics, environment and activities, than progressed to interview and gathering data with requirements engeenering.",
-    ],
-    features: [
-      "Step by step interactions",
-      "Instant quote calculation",
-      "Clean UI for industry non‑technical users",
-      "Supports one-hand use",
-      "Clear visual feedback for noisy environments",
-      "reduced cognitive load",
-    ],
-    techstack: ["Figma"],
-    tools: ["PowerPoint"],
-    images: [
-      "./media/screen2sq.png",
-      "./media/screen3sq.png",
-      "./media/screen123.png",
-      "./media/screen45.png",
-    ],
-
-    demo: "https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/ServicePaintingCalculator?node-id=1025-2&t=GROR9anNnS82szvj-1&starting-point-node-id=1025%3A2",
-    github: "#",
-    cta: "Let’s build it together.",
-  },
-
   foodapp: {
     title: "Food Application",
     overview:
       "FoodApp is a mobile‑first recipe discovery tool that allows users to search for meals, explore ingredients, and view cooking instructions using live API data.",
-    gioal:
-      "FoodApp is a mobile‑first recipe discovery tool that allows users to search for meals, explore ingredients, and view cooking instructions using live API data.",
+    goal: "FoodApp is a mobile‑first recipe discovery tool that allows users to search for meals, explore ingredients, and view cooking instructions using live API data.",
     role: "Front-end Developer/UI Designer",
     timeline: "1 week",
     features: [
@@ -274,6 +242,83 @@ const projects = {
     ],
     demo: "https://priorityc.github.io/FoodApp/",
     github: "https://github.com/priorityc/FoodApp.git",
+    cta: "Let’s build it together.",
+  },
+
+  serviceq: {
+    title: "Service Quote Calculator",
+    overview:
+      "This project is intended for small construction company that require interactive tool to calculate services quickly, efficiently and accurately whilst managing other tasks and responsibilities that might arise during the construction workflow.",
+    goal: "To provide transparent estimates for labour and material costs, reduce manual quoting, improving the customer enquiry experience. Allow  company owner to multitask whilist using the application.",
+    role: "UX Designer/Developer",
+    timeline: "3 months",
+    features: [
+      "Step by step interactions",
+      "Instant quote calculation",
+      "Clean UI for industry non‑technical users",
+      "Supports one-hand use",
+      "Clear visual feedback for noisy environments",
+      "Reduce cognitive load",
+    ],
+    problem: {
+      title:
+        "A small construction company needs a fast, reliable solution to calculate service costs. As a newly established business, the owner face a busy schedule and struggle with many issues:",
+      problemlist: [
+        "to provide accurate, transparent quotes to potential clients",
+        "with a limited budget, and time calculating service manually is often not feasible",
+        "the owner need a solution that will help him calculate services while managing the business",
+        "improve client trust, reduce administrative overhead, and help the business meet customer expectations reliably and rapidly.",
+      ],
+      challange:
+        "To design technical solution that he can use whilst his travels, reflecting the on-the-go nature of construction work including multitasking. It would enable quick, transparent cost estimates and provide an update while managing the business. ",
+    },
+    solution: [
+      "A mobile‑first service quote calculator prototype designed for the newly established construction business willing to enter the market quickly.",
+    ],
+    researchandinsights: [
+      {
+        title: "Balance multiple responsibilities",
+        insight:
+          "At present, the owner struggles to balance multiple responsibilities—including customer quotes, construction work, administration, and bookkeeping—while frequently traveling to client homes.",
+      },
+      {
+        title: "Tasks switching",
+        insight:
+          "Workers and owners must constantly move between measuring, lifting, client interaction, and decision making. This demands interfaces that support quick task switching without unnecessary distractions.",
+      },
+      {
+        title: "Screen touch sensitivity",
+        insight:
+          "Touch sensitivity is reduced when workers wear gloves, which limits precision and tactile feedback. This directly affects how they interact with tools, buttons, or touchscreens.",
+      },
+      {
+        title: "Reducing cognitive load",
+        insight:
+          "Attention is a limited resource, especially in noisy, dynamic environments like construction sites. Workers must filter relevant signals (e.g., machine noise, client questions) from irrelevant distractions. ",
+      },
+    ],
+    designgoals: [
+      "The user must be able to support one handed, interruption friendly interaction ",
+      "The tool could automate calculations and minimise manual data entry.",
+      "Reduce unnecessary complexity, and support focused task execution",
+      "Accommodate and reduced dexterity",
+      "Prioritize clarity, reduce decision fatigue, and integrate task relevant cues",
+      "The interface must be high contrast, readable in low light, and usable in confined spaces.",
+    ],
+    techstack: ["Figma", "React", "JavaScript", "API"],
+    tools: ["GitHub", "vite"],
+    images: [
+      "./media/screen2sq.png",
+      "./media/serviceQfinal.png",
+      "./media/serviceQ.png",
+      "./media/serviceCalkscreen2.png",
+    ],
+    finallook: [
+      "The final interface delivers a clean interactive experience, msnual and automated service quote calculation, clear interfaces, step‑by‑step process, usable in offline environemnt, smooth transitions and intuitive interactions.",
+    ],
+    demo: "https://priorityc.github.io/FoodApp/",
+    github:
+      "https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/ServicePaintingCalculator?node-id=1025-2&t=GROR9anNnS82szvj-1&starting-point-node-id=1025%3A2",
     cta: "Let’s build it together.",
   },
 };
@@ -413,11 +458,11 @@ galleryPar.innerHTML = data.finallook || [];
 
 const checkoutDiv = document.querySelector(".checkout-flow");
 const lastImage = data.images[data.images.length - 1]; // gets the last image
-checkoutDiv.innerHTML = `<img src="${lastImage}" alt="Checkout Flow" style="width:100%;">`;
+checkoutDiv.innerHTML = `<img src="${lastImage}" alt="Checkout Flow" style="width: 50%">`;
 // GALLERY
 const gallery = document.querySelector(".gallery");
 const galleryImage = data.images[data.images.length - 2]; //get the image before
-gallery.innerHTML = `<img src="${galleryImage}" alt="Galery UI" style="width:100%;">`;
+gallery.innerHTML = `<img src="${galleryImage}" alt="Galery UI" style="width: 50%">`;
 
 // LINKS
 if (data.live) document.querySelector(".live").href = data.live;

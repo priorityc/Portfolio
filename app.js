@@ -400,7 +400,8 @@ document.querySelectorAll(".project-card").forEach((card) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".fade-in-section");
-  const hero = document.querySelector(".hero-content");
+  const hero = document.querySelector(".hero__inner");
+
   //This observer watches each section and tells you when it becomes visible.
   const observer = new IntersectionObserver(
     (entries, observer) => {
@@ -462,57 +463,55 @@ tabs.forEach((tab) => {
   });
 });
 
-// THE TAB FILTER for projects
-// Remove .active from all tab buttons
-
-// Add .active to the clicked button
-
-// Show the matching tab content
-const tabsProjects = document.querySelectorAll(".tablinks");
-
+// Всичко се изпълнява след като HTML-ът е напълно зареден
 document.addEventListener("DOMContentLoaded", function () {
-  // Hide all tabcontent
   const tabcontent = document.getElementsByClassName("tabcontent");
+  console.log(tabcontent);
+  const tabButtons = document.querySelectorAll(".tablinks");
+  console.log(tabButtons);
+  // 1. Hide all projects at first
   for (let i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
-  // Show only London tab
-  document.getElementById("London").style.display = "grid";
+  // 2. Show only  London (Front-end) by default
+  const defaultTab = document.getElementById("London");
+  console.log(defaultTab);
+  if (defaultTab) {
+    defaultTab.style.display = "grid";
+  }
 
-  // Make the first tab active
-  const firstTab = document.querySelector(".tablinks");
-  firstTab.classList.add("active");
-});
+  // 3. Закачаме клик събитието за ВСЕКИ бутон
+  tabButtons.forEach((button) => {
+    button.addEventListener("click", function (event) {
+      const cityName = this.dataset.city; // Взима "London", "Paris", "Sofia" или "Tokyo"
+      console.log(cityName);
+      // Проверка за сигурност дали атрибутът съществува
+      if (!cityName) return;
 
-tabsProjects.forEach((tab) => {
-  tab.addEventListener("click", function (evt) {
-    const cityName = this.dataset.city;
-    openCity(evt, cityName);
+      const targetTab = document.getElementById(cityName);
+      console.log(targetTab);
+      // Ако табът съществува в HTML, тогава превключваме
+      if (targetTab) {
+        // Скриваме всички табове
+        document.querySelectorAll(".tabcontent").forEach((tab) => {
+          tab.style.display = "none";
+        });
+
+        // Премахваме active класа от всички бутони
+        tabButtons.forEach((btn) => {
+          btn.classList.remove("active");
+          btn.setAttribute("aria-selected", "false"); // Добра практика за достъпност
+        });
+
+        // Показваме кликнатия таб и активираме бутона му
+        targetTab.style.display = "grid";
+        this.classList.add("active");
+        this.setAttribute("aria-selected", "true");
+      }
+    });
   });
 });
-
-// Hide all other tab contents
-function openCity(evt, cityName) {
-  // Hide all tab content
-  const tabcontent = document.getElementsByClassName("tabcontent");
-  for (let i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Remove active class from all buttons
-  const tablinks = document.getElementsByClassName("tablinks");
-  for (let i = 0; i < tablinks.length; i++) {
-    tablinks[i].classList.remove("active");
-  }
-
-  // Show ONLY the selected tab content
-  const selectedTab = document.getElementById(cityName);
-  selectedTab.style.display = "grid";
-
-  // Add active class to clicked button
-  evt.currentTarget.classList.add("active");
-}
 
 // Onclicking the cards show the modal
 

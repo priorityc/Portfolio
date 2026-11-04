@@ -44,7 +44,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Koh+Santepheap:wght@100;300;400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
-  </head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JNS5L7B70D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JNS5L7B70D');
+</script>
+  
+</head>
   <body>
     <!-- <script>
   window.location.href = "landing.html";
@@ -55,7 +67,7 @@
 
     <nav class="mobile-header">
       <div class="logo-cont">
-          <img id="logo" class="logo" src="./media/logo/logoh.svg" alt="logo" />
+          <img id="logo" class="logo-img" src="./media/logo/logoh.svg" alt="logo" />
         </div>
       <div
         class="hamburger"
@@ -64,20 +76,21 @@
         aria-label="Open navigation menu"
         onkeydown="handleKey(event)"
       >
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+        <div class="bar1" aria-hidden="true"></div>
+        <div class="bar2" aria-hidden="true"></div>
+        <div class="bar3" aria-hidden="true"></div>
       </div>
     </nav>
 
-    <div class="topnav" id="myLinks">
-      <div>
-        <a class="nav__link active" href="index.html">Home</a>
-        <!-- <a class="nav__link" href="services.html">Services</a> -->
-        <a href="blog/">Blog</a>
-        <a class="nav__link" href="contact.html">Contact</a>
-      </div>
-    </div>
+    <nav class="topnav" id="myLinks">
+  <ul class="dropdown">
+    <li><a class="nav__link active" href="index.html">Home</a></li>
+    <li><a href="blog/">Blog</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a class="nav__link" href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
 
     <!-- Desktop navigation -->
     <!-- Desktop navigation on larger screens -->
@@ -88,20 +101,21 @@
           <img id="logo" class="logo" src="./media/logo/logoh.svg" alt="logo" />
         </div>
         <!-- Second container menus -->
-        <div class="arrange-manu">
-          <a class="nav__link" href="index.html">Home</a>
-          <!-- <a class="nav__link" href="services.html">Services</a> -->
-          <a class="nav__link" href="blog/">Blog</a>
-          <a class="nav__link" href="contact.html">Contact</a>
-        </div>
+        <ul class="arrange-manu">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="services.html">Services</a></li>
+          <li><a class="nav__link" href="blog/">Blog</a></li>
+          <li><a class="nav__link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </nav>
 
     <header class="hero">
       <div class="hero__inner">
         <div class="hero-title">
+          <figure class="hero-image">
           <img src="./media/myself/me.jpg" alt="Petya Dimitrova" class="about-img">
-          <!-- <span class="hero-role">IT Specialist & Developer/Designer</span> -->
+          </figure>
           <h1 class="hero-name">
             Petya <span class="header-span">Digital Care</span>      
           </h1>
@@ -145,28 +159,28 @@
         </div>
       </div>
 
-      <div class="tech-strip">
+      <section class="tech-strip">
         <div class="tech-strip-wrapper">
-          <div class="stack">
-            <span>Persistent</span>
-            <span>Reliable</span>
-            <span>Detail‑oriented</span>
-            <span>User‑focused mindset</span>
-            <span>Proactive</span>
-            <span>Brand Awareness</span>
-            <span>Interactive Experiences</span>
-          </div>
+          <ul class="stack">
+            <li>Logo Design</li>
+            <li>Brand Identity</li>
+            <li>Business card Design</li>
+            <li>Social Assets Design</li>
+            <li>Leaflet Design</li>
+            <li>Web Design</li>
+            <li>UX research</li>
+            <li>Web Development</li>
+            <li>App Development</li>
+          </ul>
         </div>
-      </div>
+      </section>
     </header>
 
     <main>
-      <!-- FAQ section -->
-
+<!-- SKILLS -->
 <section class="skills">
   <div class="skills__inner">
     <header class="tab-header">
-        <!-- <span class="hero-role">Skills Category</span> -->
         <h2 class="skills-header-h2">Skills & Expertise</h2>
         <p class="skills__subtitle">
             A range of skills and expertise I developed to help small businesses elevate their online presence.
@@ -177,10 +191,11 @@
     <article class="skill-card">
     
       <header class="icon-heading-skills">
-      <i class="bi bi-badge-tm"></i>
+      <i class="bi bi-badge-tm" aria-hidden="true"></i>
       <h3 class="skill-title">Brand Identity</h3>
+      </header> 
       <p>I craft brand identities that feel alive — with their own character, tone, and visual language. Every identity I design is built to express the brand’s personality clearly and confidently.</p>
-      </header>  
+       
       <div>
       <ul class="skills__list">
           <li class="skills__item">Affinity Design</li>
@@ -194,10 +209,11 @@
     <article class="skill-card">
      
         <header class="icon-heading-skills">
-          <i class="bi bi-pentagon"></i>      
+          <i class="bi bi-pentagon" aria-hidden="true"></i>      
           <h3 class="skill-title">Graphic Design</h3>
+          </header>
           <p>My graphic design skills focus on creating visuals that feel aligned with the brand’s story. I design clean layouts, thoughtful compositions, and digital assets that help small businesses express their individuality with confidence.</p>
-         </header>
+         
          <div>
           <ul class="skills__list">
           <li class="skills__item">PhotoShop</li>
@@ -212,10 +228,11 @@
     <article class="skill-card">
     
         <header class="icon-heading-skills">
-          <i class="bi bi-window-fullscreen"></i>
+          <i class="bi bi-window-fullscreen" aria-hidden="true"></i>
           <h3 class="skill-title">Web Design</h3>
+           </header>
           <p>My UX skillset includes user research, information architecture, journey mapping, wireframing, prototyping, and usability testing. I focus on  visual clarity, and creating interfaces that feel consistent, and aligned with the brand’s identity.</p>
-          </header>
+         
           <div> 
           <ul class="skills__list">
           <li class="skills__item">Wareframes</li>
@@ -229,13 +246,14 @@
     <!-- Web Development -->
     <article class="skill-card last-card">
       <header class="icon-heading-skills">
-      <i class="bi bi-code-slash"></i>
+      <i class="bi bi-code-slash" role="img" aria-label="Web development icon"></i>
       <h3 class="skill-title">Web Development</h3>
-      I turn visual identities into fully functional digital experiences. Through modern front‑end development, responsive design, and clean code, I build digital solutions that feel smooth, intuitive, and solve problems.
       </header>
+      <p>I turn visual identities into fully functional digital experiences. Through modern front‑end development, responsive design, and clean code, I build digital solutions that feel smooth, intuitive, and solve problems.</p>
+      
       <div>
       <ul class="skills__list">
-          <li class="skills__item">HTML</li>
+          <li class="skills__item"><i class="fa-brands fa-html5 icon"></i>HTML</li>
           <li class="skills__item">CSS</li>
           <li class="skills__item">JavaScript/Typescript</li>
           <li class="skills__item">React</li>
@@ -248,280 +266,267 @@
 </section>
 
 
-     <section class="projects-section">
-  <!-- Header -->
- 
+<!-- PROJECTS -->
+<!-- PROJECTS -->
+<header class="projects-header">
+  <h2 class="skills-header-h2">Featured Projects</h2>
 
-  <!-- Tabs -->
-  
- <article class=" first-card" data-project="ecom">
-     <header class="tabs-header">
-    <!-- <span class="hero-role projects-hero-role">Project work</span> -->
-    <h2 class="skills-header-h2 projects-skills-header-h2">Featured Projects</h2>
-  </header>
-  <div class="tab">
-    <button class="tablinks active" data-city="London">Front‑end</button>
-    <button class="tablinks" data-city="Paris">CMS</button>
-    <button class="tablinks" data-city="Sofia">Social Assets</button>
-    <button class="tablinks" data-city="Tokyo">UX/UI</button>
-  </div>
-  </article>
-  <!-- FRONT‑END PROJECTS -->
-  <div id="London" class="tabcontent active">
-    <article class="project-card" data-project="ecom">
+  <nav class="projects-tabs" aria-label="Project categories">
+    <ul class="projects-tabs-layout">
+      <li><button role="tab" aria-selected="true" class="tablinks active" aria-controls="London" data-city="London">Front‑end</button></li>
+      <li><button role="tab" aria-selected="false" class="tablinks" data-city="Paris">CMS</button></li>
+      <li><button role="tab" aria-selected="false" class="tablinks" data-city="Sofia">Social Assets</button></li>
+      <li><button role="tab" aria-selected="false" class="tablinks" data-city="Tokyo">UX/UI</button></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- FRONT‑END PROJECTS -->
+<!-- ПОПРАВЕНО: Сменено от section на div за консистенция -->
+<div id="London" class="tabcontent active" role="tabpanel">
+  <article class="project-card" data-project="ecom">
+    <figure>
       <img src="./media/Cosmic.jpg" alt="Cosmic Care preview" class="project-thumb" />
-      <div class="project-card__badge">React Prototype</div>
-      <div class="project-descr">
-        <h3 class="project-title">E‑commerce Prototype</h3>
-        <p class="cta-text">
-          CosmicCare a fully functional React e‑commerce prototype.
-        </p>
-        <div class="project-buttons">
-          <a href="https://cosmiccare.netlify.app/?demo=false" class="btn-primary">Demo</a>
-          <!-- <button class="open-modal details-btn" data-project="ecom">Details</button> -->
-          <a href="https://github.com/priorityc/cosmic-care-site" class="btn-secondary">GitHub</a>
-        </div>
+    </figure>
+    <span class="project-card__badge">React Prototype</span>
+    <div class="project-descr">
+      <h3 class="project-title">E‑commerce Prototype</h3>
+      <p class="cta-text">CosmicCare a fully functional React e‑commerce prototype.</p>
+      <div class="project-buttons">
+        <a href="https://cosmiccare.netlify.app/?demo=false" class="btn-primary" target="_blank" rel="noopener">Demo</a>
+        <a href="https://github.com/priorityc/cosmic-care-site" class="btn-secondary" target="_blank" rel="noopener">GitHub</a>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <article class="project-card" data-project="lamp">
-      <img src="./media/BlackHole.jpg" alt="Black Hole Event preview" class="project-thumb" />
-      <div class="project-card__badge">HTML CSS JavaScript Landing page</div>
-      <div class="project-descr">
-        <h3 class="project-title">Black Hole Event</h3>
-        <p class="cta-text">
-          Space‑themed landing page with interactive visuals and animations.
-        </p>
-        <div class="project-buttons">
-          <a href="https://priorityc.github.io/stargazing-landing-page/" class="btn-primary">Demo</a>
-          <!-- <button class="open-modal details-btn" data-project="lanp">Details</button> -->
-          <a href="https://github.com/priorityc/stargazing-landing-page" class="btn-secondary">GitHub</a>
-        </div>
+  <article class="project-card" data-project="lamp">
+    <figure>
+      <img src="./media/BlackHole.jpg" alt="Preview of Black Hole interactive landing page" class="project-thumb" />
+    </figure>
+    <span class="project-card__badge">HTML/CSS Landing Page</span>
+    <div class="project-descr">
+      <h3 class="project-title">Black Hole Event</h3>
+      <p class="cta-text">Space‑themed landing page with interactive visuals and animations.</p>
+      <div class="project-buttons">
+        <a href="https://priorityc.github.io/stargazing-landing-page/" class="btn-primary" target="_blank" rel="noopener">Demo</a>
+        <a href="https://github.com/priorityc/stargazing-landing-page" class="btn-secondary" target="_blank" rel="noopener">GitHub</a>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <article class="project-card foodapp" data-project="foodapp">
+  <article class="project-card foodapp" data-project="foodapp">
+    <figure>
       <img src="./media/FoodApp.jpg" alt="Food App preview" class="project-thumb" />
-      <div class="project-card__badge">React API Application</div>
-      <div class="project-descr">
-        <h3 class="project-title">Food App</h3>
-        <p class="cta-text">
-          Recipe discovery tool that lets users search for meals.
-        </p>
-        <div class="project-buttons">
-          <a href="https://priorityc.github.io/FoodApp/" class="btn-primary">Demo</a>
-          <!-- <button class="open-modal details-btn" data-project="foodapp">Details</button> -->
-          <a href="https://github.com/priorityc/FoodApp.git" class="btn-secondary">GitHub</a>
-        </div>
+    </figure>
+    <span class="project-card__badge">React API Application</span>
+    <div class="project-descr">
+      <h3 class="project-title">Food App</h3>
+      <p class="cta-text">Recipe discovery tool that lets users search for meals.</p>
+      <div class="project-buttons">
+        <a href="https://priorityc.github.io/FoodApp/" class="btn-primary" target="_blank" rel="noopener">Demo</a>
+        <a href="https://github.com/priorityc/FoodApp.git" class="btn-secondary" target="_blank" rel="noopener">GitHub</a>
       </div>
-    </article>
-  </div>
+    </div>
+  </article>
+</div> <!-- ПОПРАВЕНО: Сега затваря правилно <div id="London"> -->
 
-  <!-- CMS PROJECTS -->
-  <div id="Paris" class="tabcontent fade-in-section">
-    <article class="project-card" data-project="serviceq">
+<!-- CMS PROJECTS -->
+<div id="Paris" class="tabcontent fade-in-section" role="tabpanel">
+  <article class="project-card" data-project="serviceq">
+    <figure>
       <img src="./media/construction.png" alt="G&D Home Improvement preview" class="project-thumb" />
-      <div class="project-descr">
-        <h3 class="project-title">G&D Home Improvement</h3>
-        <h4 class="project-subtitle">WordPress Website</h4>
-        <p class="cta-text">
-          Design and brand for G&D Home Improvement — a construction start‑up aiming to build a quick and memorable online presence.
-        </p>
-        <div class="project-buttons">
-          <a href="https://magnificent-writer.localsite.io/" class="btn-primary">Demo</a>
-        </div>
+    </figure>
+    <div class="project-descr">
+      <h3 class="project-title">G&D Home Improvement</h3>
+      <h4 class="project-subtitle">WordPress Website</h4>
+      <p class="cta-text">Design and brand for G&D Home Improvement — a construction start‑up aiming to build a quick and memorable online presence.</p>
+      <div class="project-buttons">
+        <a href="https://magnificent-writer.localsite.io/" class="btn-primary" target="_blank" rel="noopener">Demo</a>
       </div>
-    </article>
+    </div>
+  </article>
 
-    <article class="project-card">
+  <article class="project-card">
+    <figure>
       <img src="./media/glowh.png" alt="Glow Beauty Studio preview" class="project-thumb" />
-      <div class="project-descr">
-        <h3 class="project-title">Glow Beauty Studio</h3>
-        <h4 class="project-subtitle">Wix Website</h4>
-        <p class="cta-text">
-          A modern beauty studio website built in Wix Studio with full booking system, service pages, and mobile‑responsive design.
-        </p>
-        <div class="project-buttons">
-          <a href="https://petya83dimitrova.wixstudio.com/glowstudio" class="btn-primary">Demo</a>
-        </div>
+    </figure>
+    <div class="project-descr">
+      <h3 class="project-title">Glow Beauty Studio</h3>
+      <h4 class="project-subtitle">Wix Website</h4>
+      <p class="cta-text">A modern beauty studio website built in Wix Studio with full booking system, service pages, and mobile‑responsive design.</p>
+      <div class="project-buttons">
+        <a href="https://petya83dimitrova.wixstudio.com/glowstudio" class="btn-primary" target="_blank" rel="noopener">Demo</a>
       </div>
-    </article>
-  </div>
+    </div>
+  </article>
+</div>
 
-  <!-- CMS PROJECTS -->
-  <div id="Sofia" class="tabcontent fade-in-section">
-    <article class="project-card" data-project="serviceq">
-      <img src="./media/DesignProjects/New Project (3).png" class="project-thumb" alt="sunglases brand instagram visual"/>
-      <div class="project-descr">
-        <h3 class="project-title">Instagram Promotional Visual</h3>
-        <h4 class="project-subtitle">Designed with Photoshot</h4>
-        <p class="cta-text">
-          Design an Instagram visual assets for premium brand aiming to deliver simple promotional message.
-        </p>
-        <!-- <div class="project-buttons">
-          <a href="https://magnificent-writer.localsite.io/" class="btn-primary">Demo</a>
-        </div> -->
-      </div>
-    </article>
+<!-- SOCIAL ASSETS PROJECTS -->
+<div id="Sofia" class="tabcontent fade-in-section" role="tabpanel">
+  <article class="project-card" data-project="serviceq">
+    <figure>
+      <img src="./media/serviceQ.png" class="project-thumb" alt="sunglases brand instagram visual"/>
+    </figure>
+    <div class="project-descr">
+      <h3 class="project-title">Instagram Promotional Visual</h3>
+      <h4 class="project-subtitle">Designed with Photoshop</h4>
+      <p class="cta-text">Design an Instagram visual assets for premium brand aiming to deliver simple promotional message.</p>
+    </div>
+  </article>
 
-    <article class="project-card">
+  <article class="project-card">
+    <figure>
       <img src="./media/DesignProjects/salon.png" alt="Salon instagram visual" class="project-thumb" />
-      <div class="project-descr">
-        <h3 class="project-title">Instagram Brand Visual</h3>
-        <h4 class="project-subtitle">Designed with Photoshot</h4>
-        <p class="cta-text">
-          A modern salon studio visual for Instagram built to showcase brand awareness.
-        </p>
-        <!-- <div class="project-buttons">
-          <a href="https://petya83dimitrova.wixstudio.com/glowstudio" class="btn-primary">Demo</a>
-        </div> -->
-      </div>
-    </article>
-  </div>
+    </figure>
+    <div class="project-descr">
+      <h3 class="project-title">Instagram Brand Visual</h3>
+      <h4 class="project-subtitle">Designed with Photoshop</h4>
+      <p class="cta-text">A modern salon studio visual for Instagram built to showcase brand awareness.</p>
+    </div>
+  </article>
+</div>
 
-  <!-- UX/UI PROJECTS -->
-  <div id="Tokyo" class="tabcontent fade-in-section">
-    <article class="project-card">
-      <div class="phone-frame">
-        <div class="phone-inner">
-          <img src="./media/servicequote.png" alt="Service Quote Calculator preview" class="project-thumb-app" />
-        </div>
+<!-- UX/UI PROJECTS -->
+<div id="Tokyo" class="tabcontent fade-in-section" role="tabpanel">
+  <article class="project-card" data-project="serviceq">
+    <figure class="phone-frame">
+      <div class="phone-inner">
+        <img src="./media/servicequote.png" alt="Service Quote Calculator mobile preview" class="project-thumb-app" />
       </div>
-      <div class="project-descr">
-        <h3 class="project-title">Service Quote Calculator</h3>
-        <h4 class="project-subtitle">UX Prototype for Mobile Application</h4>
-        <p class="cta-text">
-          Prototype for a construction quote calculator to automate the quoting process, improving speed and consistency.
-        </p>
-        <div class="project-buttons">
-          <a href="https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/ServicePaintingCalculator?node-id=1025-2&t=GROR9anNnS82szvj-1&starting-point-node-id=1025%3A2"
-             class="btn-primary" target="_blank">Demo</a>
-          <!-- <button class="open-modal details-btn" data-project="serviceq">Details</button> -->
-        </div>
+      <figcaption class="visually-hidden">Mobile preview of the Service Quote Calculator prototype</figcaption>
+    </figure>
+    <div class="project-descr">
+      <h3 class="project-title">Service Quote Calculator</h3>
+      <h4 class="project-subtitle">UX Prototype for Mobile Application</h4>
+      <p class="cta-text">Prototype for a construction quote calculator to automate the quoting process, improving speed and consistency.</p>
+      <div class="project-buttons">
+        <a href="https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/ServicePaintingCalculator?node-id=1025-2&t=GROR9anNnS82szvj-1&starting-point-node-id=1025%3A2" class="btn-primary" target="_blank" rel="noopener">Demo</a>
       </div>
-    </article>
-  </div>
-</section>
+    </div>
+  </article>
+</div> <!-- ПОПРАВЕНО: Премахнат е счупеният </section> таг -->
+
 
 
        <!--  -->
 <!-- NEW ABOUT -->
  <section class="about-section">
+  <section>
   <header class="tab-header">
     <h2 class="skills-header-h2 about-align">About Me</h2>
   </header>
   <div class="about-container">
-    <div class="about-header">
-      <div class="about-image-wrapper">
+    <header class="about-header">
+      <figure class="about-image-wrapper">
         <img src="./media/myself/me.jpg" alt="Petya Dimitrova" class="about-img">
-      </div>
+      </figure>
  <!-- SIGNATURE -->
-      <p class="about-signature">Petya Dimitrova</p>
+      <figcaption class="about-signature">Petya Dimitrova</figcaption>
 
-    <div>
-        <strong>BSc (Honours)Software & Web Development</strong>
+    <header>
+        <div class="about-education">
+        <h3 class="degree-title">BSc (Honours) Software & Web Development</h3>
         <p class="cta-text">Expected graduation: 2026</p>
     </div>
+    </div>
      
-      <div class="about-stats">
-        <div class="stat">
-          <h3>30+</h3>
-          <p class="cta-text">Projects Completed</p>
-        </div>
-        <div class="stat">
-          <h3>10+</h3>
-          <p class="cta-text">Industries Covered</p>
-        </div>
-        <div class="stat">
-          <h3>4+</h3>
-          <p class="cta-text">Years Experience</p>
-        </div>
-      </div>
+     <ul class="about-stats">
+  <li class="stat">
+    <strong class="stat-number">30+</strong>
+    <span class="stat-label">Projects Completed</span>
+  </li>
+  <li class="stat">
+    <strong class="stat-number">10+</strong>
+    <span class="stat-label">Industries Covered</span>
+  </li>
+  <li class="stat">
+    <strong class="stat-number">4+</strong>
+    <span class="stat-label">Years Experience</span>
+  </li>
+</ul>
 
       <!-- CTA -->
       <a href="./documents/PetyaDimitrova.doc" class="about-btn" 
-              download="Petya-Dimitrova-CV.docx" aria-label="Download CV Word document">Download CV</a>
-
-    
-  
-      
-
+       download="Petya-Dimitrova-CV.docx" aria-label="Download CV Word document" rel="noopener">Download CV</a>
     </div>
-     <!-- <img src="./media/logo/iconpng.png" alt="Petya Digital Care Logo"> -->
-      
+</section>      
        
 
     <!-- TEXT CONTENT -->
-    <div class="about-content">
-      
-
+    <section class="about-content">
       <p class="about-description">
-        I’m Petya - a Computing & IT graduate who spent the last four years building real projects across web, app, and cloud development. Along the way, I discovered how much I love blending technical problem‑solving with creative design.
+      I’m Petya — a Computing & IT graduate who spent the last four years building real projects across web, app, and cloud development. Along the way, I discovered how much I love blending technical problem‑solving with creative design.
+    </p>
 
-After choosing to change career a few years ago, I finally found the work that excites me: creating digital experiences that look great, work flawlessly, and genuinely help businesses to be recognisable and grow. Today, I combine IT expertise with graphic design to deliver complete, thoughtful solutions.
-      </p>
-      <h3 class="project-title">What is Petya Digital Care?</h3>
-      <p class="about-description">
-       Petya Digital Care comes from my own journey as a small business owner. I’ve been through the struggle of trying to build a brand with limited time, limited budget, and endless uncertainty. I know how frustrating it is when your business has potential, but your identity doesn’t show it.
+    <p class="about-description">
+      After choosing to change career a few years ago, I finally found the work that excites me: creating digital experiences that look great, work flawlessly, and genuinely help businesses grow. Today, I combine IT expertise with graphic design to deliver complete, thoughtful solutions.
+    </p>
 
-That’s why individuality is at the heart of my studio. I design visual identities and digital tools that help small businesses express who they truly are with clearly, confidently, and creatively. 
-      </p>
-  </div>
+    <h3 class="project-title">What is Petya Digital Care?</h3>
+
+    <p class="about-description">
+      Petya Digital Care comes from my own journey as a small business owner. I’ve been through the struggle of trying to build a brand with limited time, limited budget, and endless uncertainty.
+    </p>
+
+    <p class="about-description">
+      That’s why individuality is at the heart of my studio. I design visual identities and digital tools that help small businesses express who they truly are clearly, confidently, and creatively.
+    </p>
+    </section>
 
   
    
 </section>
 
+<section class="timeline-section">
+  <h2 class="timeline-heading">Education & Achievements</h2>
 
-       <section class="education fade-in-section">
-  <h2 class="skills-header-h2 skills-heder-align-center">Education & Achievements</h2>
-
-  <ul class="edu-list">
-    <li class="edu-item">
-    <i class="bi bi-mortarboard"></i>
-      <div>
-        <strong>BSc (Honours) Open Degree — Software & Web Development</strong>
-        <p class="edu-sub">Expected graduation: 2026</p>
+  <ul class="timeline">
+    <li class="timeline-item">
+      <div class="timeline-icon" aria-hidden="true">
+        <i class="bi bi-mortarboard"></i>
       </div>
+      <h3 class="timeline-title">BSc (Honours) Software & Web Development</h3>
+      <p class="timeline-sub">Expected graduation: 2026</p>
     </li>
 
-    <li class="edu-item">
-      <i class="bi bi-laptop"></i>
-      <div>
-        <strong>Front-End Development — Purple Beard Bootcamp</strong>
+    <li class="timeline-item">
+      <div class="timeline-icon" aria-hidden="true">
+        <i class="bi bi-laptop"></i>
       </div>
+      <h3 class="timeline-title">Front-End Development — Purple Beard Bootcamp</h3>
     </li>
 
-    <li class="edu-item">
-      <i class="bi bi-gear"></i>
-      <div>
-        <strong>Full Stack Web Development — Udemy</strong>
-        <p class="edu-sub">In progress</p>
+    <li class="timeline-item">
+      <div class="timeline-icon" aria-hidden="true">
+        <i class="bi bi-gear"></i>
       </div>
+      <h3 class="timeline-title">Full Stack Web Development — Udemy</h3>
+      <p class="timeline-sub">In progress</p>
     </li>
 
-    <li class="edu-item">
-      <i class="bi bi-filetype-js"></i>
-      <div>
-        <strong>JavaScript Course — Udemy</strong>
+    <li class="timeline-item">
+      <div class="timeline-icon" aria-hidden="true">
+        <i class="bi bi-filetype-js"></i>
       </div>
+      <h3 class="timeline-title">JavaScript Course — Udemy</h3>
     </li>
 
-    <li class="edu-item">
-      <i class="bi bi-code"></i>
-      <div>
-        <strong>Python & Web Development — Raspberry Pi Foundation</strong>
+    <li class="timeline-item">
+      <div class="timeline-icon" aria-hidden="true">
+        <i class="bi bi-code"></i>
       </div>
+      <h3 class="timeline-title">Python & Web Development — Raspberry Pi Foundation</h3>
     </li>
 
-    <li class="edu-item">
-      <i class="bi bi-align-start"></i>
-      <div>
-        <strong>IAO Level 2 Certificate in IT User Skills (ITQ)</strong>
+    <li class="timeline-item">
+      <div class="timeline-icon" aria-hidden="true">
+        <i class="bi bi-align-start"></i>
       </div>
+      <h3 class="timeline-title">IAO Level 2 Certificate in IT User Skills (ITQ)</h3>
     </li>
   </ul>
 </section>
+
       <!--  -->
 <!-- New service  -->
 
@@ -931,5 +936,6 @@ That’s why individuality is at the heart of my studio. I design visual identit
 
 
     <script src="app.js"></script>
-  </body>
+    <script src="project.js"></script>
+    </body>
 </html>
