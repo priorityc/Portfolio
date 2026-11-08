@@ -2709,6 +2709,15 @@ small.valid {
     margin: 1rem 0.5rem;
   }
 
+  .project-presentation {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .app-card {
+    width: 100%;
+  }
+
   .img-cont {
     margin-bottom: 3rem;
   }

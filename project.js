@@ -4,7 +4,7 @@ const projects = {
     title: "Cosmic Care",
     overview:
       "This project is a fully functional e‑commerce prototype designed to study how users browse products, interact with carts, and move through a checkout flow.",
-    goal: "The goal was to create a fast, intuitive shopping experience with a clean UI and reusable React components.",
+    goal: "The goal was to create a fast, intuitive shopping experience with a clean UI and reusable React components environment for business who willing to test their products before investing in development and technologies. ",
     role: "Front-end Developer/UI Designer",
 
     timeline: "3 Months",
@@ -17,7 +17,7 @@ const projects = {
     ],
     problem: {
       title:
-        "Many beautifully designed e‑commerce websites fail to convert because the design does not match how users actually behave. Businesses often assume their layout is intuitive, but users struggle with:",
+        "Business lack of environment for testing thair products or services before development.Many beautifully designed e‑commerce websites fail to convert because the design does not match how users actually behave. Businesses often assume their layout is intuitive, but users struggle with:",
       problemlist: [
         "cluttered product cards",
         "slow or confusing cart interactions",
@@ -28,8 +28,8 @@ const projects = {
         "The challenge was to build a prototype that focuses on real UX, not just aesthetics — a system that reveals how users move, click, hesitate, and decide.",
     },
     solution: [
-      "I designed and developed CosmicCare as a fully functional, mobile‑first prototype that blends branding, UX design, and real technical behaviour. Created a cosmic‑inspired brand identity with a modern colour palette.",
-      "Designed a simple, intuitive product browsing experience. Created a demo mode so stakeholders can safely explore the UX flow without processing real payments.",
+      "I designed and developed CosmicCare as a fully functional, mobile‑first prototype that blends branding, UX design, and real technical behaviour. Created a cosmic‑inspired brand identity with a modern colour palette to simulate real business.",
+      "Designed a simple, intuitive product browsing experience for testing user experience, technologies. Created a demo mode so stakeholders can safely explore the UX flow without processing real payments.",
     ],
 
     researchandinsights: [
@@ -80,7 +80,7 @@ const projects = {
     ],
 
     finallook: [
-      "The final interface deliversclean product cards, consistent spacing, modern color palette, intuitive cart interactions, responsive layout across breakpoints. The UI is intentionally minimal to reduce cognitive load and highlight product information.",
+      "The final interface delivers clean product cards, consistent spacing, modern color palette, intuitive cart interactions, responsive layout across breakpoints. The UI is intentionally minimal to reduce cognitive load and highlight product information, but completely mimic how a real business operate. The prototype can be adjusted for any e-commerce or product that business willing to test experience and decide on development path.",
     ],
     live: "https://cosmiccare.netlify.app/?demo=false",
     demo: "https://cosmiccare.netlify.app/?demo=true",
@@ -248,9 +248,9 @@ const projects = {
   serviceq: {
     title: "Service Quote Calculator",
     overview:
-      "This project is intended for small construction company that require interactive tool to calculate services quickly, efficiently and accurately whilst managing other tasks and responsibilities that might arise during the construction workflow.",
+      "Service Quote Calculator is a React Native application designed to help small construction businesses generate accurate service quotations quickly while managing day-to-day operations. The application reduces reliance on manual calculations, improves quotation consistency, and supports mobile-first usage in dynamic construction environments.",
     goal: "To provide transparent estimates for labour and material costs, reduce manual quoting, improving the customer enquiry experience. Allow  company owner to multitask whilist using the application.",
-    role: "UX Designer/Developer",
+    role: "UX Researcher, UX Designer & Developer",
     timeline: "3 months",
     features: [
       "Step by step interactions",
@@ -262,15 +262,16 @@ const projects = {
     ],
     problem: {
       title:
-        "A small construction company needs a fast, reliable solution to calculate service costs. As a newly established business, the owner face a busy schedule and struggle with many issues:",
+        "A newly established construction company needed a reliable way to generate transparent service quotations while balancing customer enquiries, administrative work, and on-site responsibilities. Manual calculations required valuable time, increased the risk of pricing inconsistencies, and made it difficult to respond quickly to potential customers. The challenge was to design a mobile solution that could:",
       problemlist: [
-        "to provide accurate, transparent quotes to potential clients",
-        "with a limited budget, and time calculating service manually is often not feasible",
-        "the owner need a solution that will help him calculate services while managing the business",
-        "improve client trust, reduce administrative overhead, and help the business meet customer expectations reliably and rapidly.",
+        "Generate accurate quotations quickly",
+        "Reduce administrative overhead",
+        "Support mobile, on-the-go usage",
+        "Be usable in noisy and distracting environments",
+        "Require minimal technical knowledge",
       ],
       challange:
-        "To design technical solution that he can use whilst his travels, reflecting the on-the-go nature of construction work including multitasking. It would enable quick, transparent cost estimates and provide an update while managing the business. ",
+        "To design technical solution that he can use whilst his travels, reflecting the on-the-go nature of construction work including multitasking. It would enable quick, transparent cost estimates and provide an update while managing the business.",
     },
     solution: [
       "A mobile‑first service quote calculator prototype designed for the newly established construction business willing to enter the market quickly.",
@@ -298,23 +299,19 @@ const projects = {
       },
     ],
     designgoals: [
-      "The user must be able to support one handed, interruption friendly interaction ",
-      "The tool could automate calculations and minimise manual data entry.",
-      "Reduce unnecessary complexity, and support focused task execution",
-      "Accommodate and reduced dexterity",
-      "Prioritize clarity, reduce decision fatigue, and integrate task relevant cues",
-      "The interface must be high contrast, readable in low light, and usable in confined spaces.",
+      "Support one-handed interaction",
+      "Minimise manual data entry.",
+      "Reduce cognitive load through progressive disclosure",
+      "Design for interruptions and task switching",
+      "Improve accessibility through high-contrast visual design",
+      "Ensure usability in low-light and outdoor environments",
+      "Provide instant, transparent cost calculations",
     ],
     techstack: ["Figma", "React", "JavaScript", "API"],
     tools: ["GitHub", "vite"],
-    images: [
-      "./media/screen2sq.png",
-      "./media/serviceQfinal.png",
-      "./media/serviceQ.png",
-      "./media/serviceCalkscreen2.png",
-    ],
+    images: ["./media/step1.png"],
     finallook: [
-      "The final interface delivers a clean interactive experience, msnual and automated service quote calculation, clear interfaces, step‑by‑step process, usable in offline environemnt, smooth transitions and intuitive interactions.",
+      "A mobile-first service quotation system built with React Native that enables construction professionals to generate labour and material cost estimates in real time. The application guides users through a structured workflow, automates calculations, and presents transparent cost breakdowns that can be shared with potential customers.",
     ],
     demo: "https://priorityc.github.io/FoodApp/",
     github:
