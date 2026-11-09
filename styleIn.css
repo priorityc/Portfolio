@@ -2156,8 +2156,7 @@ textarea:focus {
   font-size: 0.95rem;
 }
 
-#hireModal input,
-#hireModal textarea {
+#hireModal input {
   width: 100%;
   padding: 0.8rem;
   border-radius: 8px;
@@ -2175,7 +2174,6 @@ textarea:focus {
 }
 
 #hireModal small {
-  color: #d12f2f;
   font-size: 0.8rem;
 }
 

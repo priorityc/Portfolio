@@ -38,6 +38,9 @@
     <!-- Section MOBILE MENU -->
 
    <nav class="mobile-header">
+      <div class="logo-cont">
+          <img class="logo-img" src="./media/logo/logoh.svg" alt="logo" />
+        </div>
       <div
         class="hamburger"
         role="button"
@@ -45,64 +48,46 @@
         aria-label="Open navigation menu"
         onkeydown="handleKey(event)"
       >
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
+        <div class="bar1" aria-hidden="true"></div>
+        <div class="bar2" aria-hidden="true"></div>
+        <div class="bar3" aria-hidden="true"></div>
       </div>
     </nav>
 
-    <div class="topnav" id="myLinks">
-      <div>
-        <a class="nav__link active" href="index.html">Home</a>
-        <a class="nav__link" href="services.html">Services</a>
-        <a href="blog/">Blog</a>
-        <a class="nav__link" href="contact.html">Contact</a>
-      </div>
-    </div>
+    <nav class="topnav" id="myLinks">
+  <ul class="dropdown">
+    <li><a class="nav__link active" href="index.html">Home</a></li>
+    <li><a href="blog/">Blog</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a class="nav__link" href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
-    <!-- Desktop navigation -->
-    <!-- Desktop navigation on larger screens -->
-    <nav class="desktop-header">
-      <div class="sidenav">
-        <!-- first container -->
-        <div class="logo-cont">
-          <img id="logo" class="logo" src="./media/logo/logoh.svg" alt="logo" />
-        </div>
-        <!-- Second container menus -->
-        <div class="arrange-manu">
-          <a class="nav__link" href="index.html">Home</a>
-          <a class="nav__link" href="services.html">Services</a>
-          <a href="blog/">Blog</a>
-          <a class="nav__link" href="contact.html">Contact</a>
-        </div>
-      </div>
-    </nav>
-
-     <header class="hero">
+      <header class="hero">
       <div class="hero__inner">
         <div class="hero-title">
+          <figure class="hero-image">
           <img src="./media/myself/me.jpg" alt="Petya Dimitrova" class="about-img">
-          <span class="hero-role">IT Specialist & Developer/Designer</span>
+          </figure>
           <h1 class="hero-name">
-            From<span class="header-span"> Vision to Live</span>      
+            Petya <span class="header-span">Digital Care</span>      
           </h1>
 
            <h2><span class="h2-innertext">
-              I build digital products
-              <span class="user-focused">that solve real user problems</span>
-               through technology.
+              Designing clear,   
+              <span class="user-focused">high-quality</span>
+              digital products.
             </span></h2>
         </div>
 
         <span class="hero-small"></span>
         <p class="hero-sub">
-          From brand to digital everything aligned to make you feel unique.</p>
-        
-
+         Focused on UI and User experience, brand identity, systems, and real product impact.</p>
         <div class="button-hero">
           <button id="openM" class="cta cta-primary">Contact</button>
           <a href="contact.html" class="cta cta-secondary">Start Project</a>
         </div>
+        
         <div class="hero-icons">
           <a
             href="https://github.com/priorityc?tab=repositories"
@@ -127,23 +112,22 @@
         </div>
       </div>
 
-      <div class="tech-strip">
+      <section class="tech-strip">
         <div class="tech-strip-wrapper">
-          <div class="stack">
-            <span>Persistent</span>
-            <span>Reliable</span>
-            <span>Detail‑oriented</span>
-            <span>User‑focused mindset</span>
-            <span>Proactive</span>
-            <span>Brand Awareness</span>
-            <span>Interactive Experiences</span>
-          </div>
+          <ul class="stack">
+            <li>Logo Design</li>
+            <li>Brand Identity</li>
+            <li>Business card Design</li>
+            <li>Social Assets Design</li>
+            <li>Leaflet Design</li>
+            <li>Web Design</li>
+            <li>UX research</li>
+            <li>Web Development</li>
+            <li>App Development</li>
+          </ul>
         </div>
-      </div>
+      </section>
     </header>
-
-
-    
 
 
 <main> 
@@ -807,8 +791,8 @@
     </form>
   </div>
 </div>
-<script src="./service.js"></script>
     <script src="app.js"></script>
+<script src="./service.js"></script>
   </body>
 </html>
 

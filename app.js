@@ -11,12 +11,12 @@ function handleKey(event) {
     toggleMenu();
   }
 }
-
+const menu = document.getElementById("myLinks");
 // The hamburger menu
 document.addEventListener("DOMContentLoaded", function () {
   const hamburger = document.querySelector(".hamburger");
   console.log(hamburger);
-  const menu = document.getElementById("myLinks");
+
   console.log(menu);
 
   function toggleMenu() {
@@ -267,34 +267,34 @@ setInterval(() => {
   showSlide(currentSlide);
 }, 12000);
 
-// MODAL
-// const openBtn = document.getElementById("openModal");
-// const openM = document.getElementById("openM");
-// const modal = document.getElementById("hireModal");
-// const closeBtn = modal.querySelector(".close-modal");
+//MODAL;
+const openBtn = document.getElementById("openModal");
+const openM = document.getElementById("openM");
+const modal = document.getElementById("hireModal");
+const closeBtn = modal.querySelector(".close-modal");
 
-// if (openBtn) {
-//   openBtn.addEventListener("click", () => {
-//     modal.classList.remove("hidden");
-//   });
-// }
+if (openBtn) {
+  openBtn.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+}
 
-// if (openM) {
-//   openM.addEventListener("click", () => {
-//     modal.classList.remove("hidden");
-//   });
-// }
+if (openM) {
+  openM.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+}
 
-// closeBtn.addEventListener("click", () => {
-//   modal.classList.add("hidden");
-// });
+closeBtn.addEventListener("click", () => {
+  modal.classList.add("hidden");
+});
 
-// // Close when clicking outside modal content
-// modal.addEventListener("click", (e) => {
-//   if (e.target === modal) {
-//     modal.classList.add("hidden");
-//   }
-// });
+// Close when clicking outside modal content
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.classList.add("hidden");
+  }
+});
 
 // MODAL form validation
 // Modal validation
