@@ -186,63 +186,8 @@
             A range of skills and expertise I developed to help small businesses elevate their online presence.
         </p>
     </header>
-
-  <div class="skills-grid">
-    <article class="skill-card">
     
-      <header class="icon-heading-skills">
-      <i class="bi bi-badge-tm" aria-hidden="true"></i>
-      <h3 class="skill-title">Brand Identity</h3>
-      </header> 
-      <p>I craft brand identities that feel alive — with their own character, tone, and visual language. Every identity I design is built to express the brand’s personality clearly and confidently.</p>
-       
-      <div>
-      <ul class="skills__list">
-          <li class="skills__item">Affinity Design</li>
-          <li class="skills__item">Photopea</li>
-        </ul>
-        </div>
-     
-    </article>
-
-    <!-- Graphic Design -->
-    <article class="skill-card">
-     
-        <header class="icon-heading-skills">
-          <i class="bi bi-pentagon" aria-hidden="true"></i>      
-          <h3 class="skill-title">Graphic Design</h3>
-          </header>
-          <p>My graphic design skills focus on creating visuals that feel aligned with the brand’s story. I design clean layouts, thoughtful compositions, and digital assets that help small businesses express their individuality with confidence.</p>
-         
-         <div>
-          <ul class="skills__list">
-          <li class="skills__item">PhotoShop</li>
-          <li class="skills__item">Adobe Ilustrator</li>
-          <li class="skills__item">Figma</li>
-        </ul>
-        </div>
-     
-    </article>
-
-    <!-- Web Design -->
-    <article class="skill-card">
-    
-        <header class="icon-heading-skills">
-          <i class="bi bi-window-fullscreen" aria-hidden="true"></i>
-          <h3 class="skill-title">Web Design</h3>
-           </header>
-          <p>My UX skillset includes user research, information architecture, journey mapping, wireframing, prototyping, and usability testing. I focus on  visual clarity, and creating interfaces that feel consistent, and aligned with the brand’s identity.</p>
-         
-          <div> 
-          <ul class="skills__list">
-          <li class="skills__item">Wareframes</li>
-          <li class="skills__item">Pencil</li>
-          <li class="skills__item">Figma</li>
-        </ul>
-      </div>
-
-    </article>
-
+    <div class="skills-grid">
     <!-- Web Development -->
     <article class="skill-card last-card">
       <header class="icon-heading-skills">
@@ -262,6 +207,61 @@
       </div>
             
     </article>
+     <article class="skill-card last-card">
+      <header class="icon-heading-skills">
+      <i class="bi bi-code-slash" role="img" aria-label="Web development icon"></i>
+      <h3 class="skill-title">Mobile App Development</h3>
+      </header>
+      <p>I identify and anlyse business problems to build fully functional mobile applications. Through modern front‑end frameworks, I create scalable solutions that are intuitive, build trust and elevatete experience whilist solve problems.</p>
+      
+      <div>
+      <ul class="skills__list">
+          <li class="skills__item"><i class="fa-brands fa-html5 icon"></i>HTML</li>
+          <li class="skills__item">React/Svelte</li>
+          <li class="skills__item">JavaScript/Typescript</li>
+          <li class="skills__item">Tailwind</li>
+          <li class="skills__item">React Native</li>
+        </ul>
+     
+      </div>
+            
+    </article>
+     <article class="skill-card">
+    
+        <header class="icon-heading-skills">
+          <i class="bi bi-window-fullscreen" aria-hidden="true"></i>
+          <h3 class="skill-title">Web Design</h3>
+           </header>
+          <p>My UX skillset includes user research, information architecture, journey mapping, wireframing, prototyping, and usability testing. I focus on  visual clarity, and creating interfaces that feel consistent, and aligned with the brand’s identity.</p>
+         
+          <div> 
+          <ul class="skills__list">
+          <li class="skills__item">Wareframes</li>
+          <li class="skills__item">Pencil</li>
+          <li class="skills__item">Figma</li>
+        </ul>
+      </div>
+
+    </article>
+    <article class="skill-card">
+     
+        <header class="icon-heading-skills">
+          <i class="bi bi-pentagon" aria-hidden="true"></i>      
+          <h3 class="skill-title">Graphic Design</h3>
+          </header>
+          <p>My graphic design skills focus on creating visuals that feel aligned with the brand’s story. I design clean layouts, thoughtful compositions, and digital assets that help small businesses express their individuality with confidence.</p>
+         
+         <div>
+          <ul class="skills__list">
+          <li class="skills__item">PhotoShop</li>
+          <li class="skills__item">Adobe Ilustrator</li>
+          <li class="skills__item">Figma</li>
+        </ul>
+        </div>
+     
+    </article>
+    </div>
+   
   </div>
 </section>
 
@@ -314,6 +314,18 @@
     </div>
   </article>
 
+  <article class="project-card foodapp" data-project="foodapp">
+    <figure>
+      <img src="./media/ServiceQC.jpg" alt="Food App preview" class="project-thumb" />
+    </figure>
+    <span class="project-card__badge">React Native Applicaiton</span>
+    <div class="project-descr">
+      <h3 class="project-title">Service Quote Calculator</h3>
+      <p class="cta-text">Prototype for a construction quote calculator to automate the quoting process, improving speed and consistency.</p>
+      <div class="project-buttons">
+      </div>
+    </div>
+  </article>
   <article class="project-card foodapp" data-project="foodapp">
     <figure>
       <img src="./media/FoodApp.jpg" alt="Food App preview" class="project-thumb" />
@@ -539,17 +551,16 @@
 <!-- New service  -->
 
   <!-- Compare -->
-     <section class="pricing-compare" id="pricing">
+     <!-- <section class="pricing-compare" id="pricing">
       <header class="tab-header">
-          <!-- <span class="hero-role">Plans</span> -->
+          
           <h2 class="skills-header-h2">Compare Packages</h2>
           <p class="skills__subtitle">
             Choose the level of support that fits your business right now. I offer free consultation and website audit.
           </p>
           </header>
 
-    <div class="pricing-compare__grid">
-      <!-- Starter -->
+    <
       <article class="pricing-card pricing-card--starter">
         <div class="pricing-card__badge">Starter</div>
         <h3 class="pricing-card__title">Brand Identity plus Logo design</h3>
@@ -565,7 +576,7 @@
         <a href="/Portfolio/contact.html" class="pricing-card__cta">Get Started</a>
       </article>
 
-      <!-- Business (Most Popular) -->
+   
       <article class="pricing-card pricing-card--business pricing-card--highlight">
         <div class="pricing-card__badge pricing-card__badge--highlight">Most Popular</div>
         <h3 class="pricing-card__title">Social Media Assets</h3>
@@ -582,7 +593,7 @@
         <a href="https://calendly.com/nutrition-construction/15min" class="pricing-card__cta pricing-card__cta--primary">Book 15-min Call</a>
       </article>
 
-      <!-- Redesign -->
+    
       <article class="pricing-card pricing-card--redesign">
         <div class="pricing-card__badge">Web Design</div>
         <h3 class="pricing-card__title">Web Design</h3>
@@ -598,7 +609,7 @@
          <a href="/Portfolio/contact.html" class="pricing-card__cta">Get Started</a>
       </article>
 
-       <!-- Redesign -->
+       
       <article class="pricing-card pricing-card--development">
         <div class="pricing-card__badge">Web Development</div>
         <h3 class="pricing-card__title">Web Development</h3>
@@ -617,7 +628,7 @@
       </article>
     </div>
   </div>
-</section>
+</section> -->
 
       <!-- Testimonial -->
       <section class="testimonial-cont fade-in-section">

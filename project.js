@@ -309,7 +309,7 @@ const projects = {
     ],
     techstack: ["Figma", "React", "JavaScript", "API"],
     tools: ["GitHub", "vite"],
-    images: ["./media/step1.png"],
+    images: ["./media/step1.png", "./media/step2-room.png"],
     finallook: [
       "A mobile-first service quotation system built with React Native that enables construction professionals to generate labour and material cost estimates in real time. The application guides users through a structured workflow, automates calculations, and presents transparent cost breakdowns that can be shared with potential customers.",
     ],

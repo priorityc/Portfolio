@@ -2667,6 +2667,9 @@ small.valid {
   .mobile-header {
     display: none;
   }
+  .desktop-header {
+    display: block;
+  }
 
   .arrange-manu {
     display: flex;
