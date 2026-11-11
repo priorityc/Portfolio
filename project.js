@@ -173,6 +173,83 @@ const projects = {
     github: "https://github.com/priorityc/stargazing-landing-page",
     cta: "Let’s build it together.",
   },
+  serviceq: {
+    title: "Service Quote Calculator",
+    overview:
+      "Service Quote Calculator is a React Native application designed to help small construction businesses generate accurate service quotations quickly while managing day-to-day operations. The application reduces reliance on manual calculations, improves quotation consistency, and supports mobile-first usage in dynamic construction environments.",
+    goal: "To provide transparent estimates for labour and material costs, reduce manual quoting, improving the customer enquiry experience. Allow  company owner to multitask whilist using the application.",
+    role: "UX Researcher, UX Designer & Developer",
+    timeline: "3 months",
+    features: [
+      "Step by step interactions",
+      "Instant quote calculation",
+      "Clean UI for industry non‑technical users",
+      "Supports one-hand use",
+      "Clear visual feedback for noisy environments",
+      "Reduce cognitive load",
+    ],
+    problem: {
+      title:
+        "A newly established construction company needed a reliable way to generate transparent service quotations while balancing customer enquiries, administrative work, and on-site responsibilities. Manual calculations required valuable time, increased the risk of pricing inconsistencies, and made it difficult to respond quickly to potential customers. The challenge was to design a mobile solution that could:",
+      problemlist: [
+        "Generate accurate quotations quickly",
+        "Reduce administrative overhead",
+        "Support mobile, on-the-go usage",
+        "Be usable in noisy and distracting environments",
+        "Require minimal technical knowledge",
+      ],
+      challange:
+        "To design technical solution that he can use whilst his travels, reflecting the on-the-go nature of construction work including multitasking. It would enable quick, transparent cost estimates and provide an update while managing the business.",
+    },
+    solution: [
+      "A mobile‑first service quote calculator prototype designed for the newly established construction business willing to enter the market quickly.",
+    ],
+    researchandinsights: [
+      {
+        title: "Balance multiple responsibilities",
+        insight:
+          "At present, the owner struggles to balance multiple responsibilities—including customer quotes, construction work, administration, and bookkeeping—while frequently traveling to client homes.",
+      },
+      {
+        title: "Tasks switching",
+        insight:
+          "Workers and owners must constantly move between measuring, lifting, client interaction, and decision making. This demands interfaces that support quick task switching without unnecessary distractions.",
+      },
+      {
+        title: "Screen touch sensitivity",
+        insight:
+          "Touch sensitivity is reduced when workers wear gloves, which limits precision and tactile feedback. This directly affects how they interact with tools, buttons, or touchscreens.",
+      },
+      {
+        title: "Reducing cognitive load",
+        insight:
+          "Attention is a limited resource, especially in noisy, dynamic environments like construction sites. Workers must filter relevant signals (e.g., machine noise, client questions) from irrelevant distractions. ",
+      },
+    ],
+    designgoals: [
+      "Support one-handed interaction",
+      "Minimise manual data entry.",
+      "Reduce cognitive load through progressive disclosure",
+      "Design for interruptions and task switching",
+      "Improve accessibility through high-contrast visual design",
+      "Ensure usability in low-light and outdoor environments",
+      "Provide instant, transparent cost calculations",
+    ],
+    techstack: ["Figma", "React", "JavaScript", "API"],
+    tools: ["GitHub", "vite"],
+    images: [
+      "./media/service-screen.jpg",
+      "./media/step1.png",
+      "./media/step2-room.png",
+    ],
+    finallook: [
+      "A mobile-first service quotation system built with React Native that enables construction professionals to generate labour and material cost estimates in real time. The application guides users through a structured workflow, automates calculations, and presents transparent cost breakdowns that can be shared with potential customers.",
+    ],
+    demo: "https://priorityc.github.io/FoodApp/",
+    github:
+      "https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/ServicePaintingCalculator?node-id=1025-2&t=GROR9anNnS82szvj-1&starting-point-node-id=1025%3A2",
+    cta: "Let’s build it together.",
+  },
 
   foodapp: {
     title: "Food Application",
@@ -242,80 +319,6 @@ const projects = {
     ],
     demo: "https://priorityc.github.io/FoodApp/",
     github: "https://github.com/priorityc/FoodApp.git",
-    cta: "Let’s build it together.",
-  },
-
-  serviceq: {
-    title: "Service Quote Calculator",
-    overview:
-      "Service Quote Calculator is a React Native application designed to help small construction businesses generate accurate service quotations quickly while managing day-to-day operations. The application reduces reliance on manual calculations, improves quotation consistency, and supports mobile-first usage in dynamic construction environments.",
-    goal: "To provide transparent estimates for labour and material costs, reduce manual quoting, improving the customer enquiry experience. Allow  company owner to multitask whilist using the application.",
-    role: "UX Researcher, UX Designer & Developer",
-    timeline: "3 months",
-    features: [
-      "Step by step interactions",
-      "Instant quote calculation",
-      "Clean UI for industry non‑technical users",
-      "Supports one-hand use",
-      "Clear visual feedback for noisy environments",
-      "Reduce cognitive load",
-    ],
-    problem: {
-      title:
-        "A newly established construction company needed a reliable way to generate transparent service quotations while balancing customer enquiries, administrative work, and on-site responsibilities. Manual calculations required valuable time, increased the risk of pricing inconsistencies, and made it difficult to respond quickly to potential customers. The challenge was to design a mobile solution that could:",
-      problemlist: [
-        "Generate accurate quotations quickly",
-        "Reduce administrative overhead",
-        "Support mobile, on-the-go usage",
-        "Be usable in noisy and distracting environments",
-        "Require minimal technical knowledge",
-      ],
-      challange:
-        "To design technical solution that he can use whilst his travels, reflecting the on-the-go nature of construction work including multitasking. It would enable quick, transparent cost estimates and provide an update while managing the business.",
-    },
-    solution: [
-      "A mobile‑first service quote calculator prototype designed for the newly established construction business willing to enter the market quickly.",
-    ],
-    researchandinsights: [
-      {
-        title: "Balance multiple responsibilities",
-        insight:
-          "At present, the owner struggles to balance multiple responsibilities—including customer quotes, construction work, administration, and bookkeeping—while frequently traveling to client homes.",
-      },
-      {
-        title: "Tasks switching",
-        insight:
-          "Workers and owners must constantly move between measuring, lifting, client interaction, and decision making. This demands interfaces that support quick task switching without unnecessary distractions.",
-      },
-      {
-        title: "Screen touch sensitivity",
-        insight:
-          "Touch sensitivity is reduced when workers wear gloves, which limits precision and tactile feedback. This directly affects how they interact with tools, buttons, or touchscreens.",
-      },
-      {
-        title: "Reducing cognitive load",
-        insight:
-          "Attention is a limited resource, especially in noisy, dynamic environments like construction sites. Workers must filter relevant signals (e.g., machine noise, client questions) from irrelevant distractions. ",
-      },
-    ],
-    designgoals: [
-      "Support one-handed interaction",
-      "Minimise manual data entry.",
-      "Reduce cognitive load through progressive disclosure",
-      "Design for interruptions and task switching",
-      "Improve accessibility through high-contrast visual design",
-      "Ensure usability in low-light and outdoor environments",
-      "Provide instant, transparent cost calculations",
-    ],
-    techstack: ["Figma", "React", "JavaScript", "API"],
-    tools: ["GitHub", "vite"],
-    images: ["./media/step1.png", "./media/step2-room.png"],
-    finallook: [
-      "A mobile-first service quotation system built with React Native that enables construction professionals to generate labour and material cost estimates in real time. The application guides users through a structured workflow, automates calculations, and presents transparent cost breakdowns that can be shared with potential customers.",
-    ],
-    demo: "https://priorityc.github.io/FoodApp/",
-    github:
-      "https://www.figma.com/proto/SgRRZDyqNeDNhb5lmZo3aX/ServicePaintingCalculator?node-id=1025-2&t=GROR9anNnS82szvj-1&starting-point-node-id=1025%3A2",
     cta: "Let’s build it together.",
   },
 };
