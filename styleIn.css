@@ -460,6 +460,10 @@ body {
   color: var(--color-text-primary);
 }
 
+.hero-expertise {
+  text-align: center;
+}
+
 /* =========================
    HERO ICONS
 ========================= */
@@ -2659,6 +2663,11 @@ small.valid {
   border-radius: 16px;
 }
 
+.footer-connect {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 /* =========================
    Media Queries
 ========================= */
