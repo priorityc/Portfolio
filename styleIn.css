@@ -792,13 +792,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.8rem 1.6rem;
+  padding: var(--space-sm) var(--space-lg);
   background: var(--gradient-purple);
   color: var(--btn-text);
   font-weight: 600;
   border-radius: var(--btn-radius);
   text-decoration: none;
-  margin: var(--space-lg);
+  margin-bottom: 1rem;
 }
 
 /* SIGNATURE */
@@ -1353,6 +1353,9 @@ body {
 /* =========================
    Services Section
 ========================= */
+.about-intro {
+  padding: var(--space-lg);
+}
 
 .services-wrapper {
   padding: var(--fs-xl);
@@ -2809,18 +2812,12 @@ small.valid {
   /* NEW ABOUT */
 
   .about-section {
-    display: flex;
-    padding: var(--space-3xl);
+    padding: var(--space-4xl);
   }
   .about-container {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-  }
-
-  .about-content {
-    text-align: left;
-    max-width: 650px;
   }
 
   .about-tags {
@@ -2838,8 +2835,11 @@ small.valid {
   }
 
   .about-content {
-    text-align: left;
-    max-width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: var(--space-4xl);
+    gap: var(--space-lg);
+    background: var(--bg-light);
   }
 
   .about-grid {

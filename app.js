@@ -296,6 +296,14 @@ modal.addEventListener("click", (e) => {
   }
 });
 
+// Onclick demo button open blanc link page
+document.querySelectorAll(".btn-primary").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.open(btn.href, "_blank");
+  });
+});
+
 // MODAL form validation
 // Modal validation
 function validateModalInput(inputElement) {
