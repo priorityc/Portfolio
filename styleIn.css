@@ -567,6 +567,11 @@ body {
   transform: translateY(-4px);
 }
 
+.preview {
+  padding: var(--space-3xl);
+  background: var(--bg-light);
+}
+
 /* =========================
    Skills Inner
 ========================= */
@@ -660,6 +665,30 @@ body {
 
 .html-icon {
   color: black;
+}
+
+.phone-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-xl);
+}
+
+.phone-frame {
+  width: 290px;
+  height: 620px;
+  border-radius: 36px;
+  padding: 12px;
+  background: rgb(46, 46, 46);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  margin: 2rem auto;
+  position: relative;
+}
+
+.phone-frame video {
+  width: 260px;
+  height: 600px;
+  display: block;
+  border-radius: 24px;
 }
 
 /* =========================
@@ -2624,52 +2653,6 @@ small.valid {
   gap: 1.5rem;
 }
 
-/* The Mobile frame */
-.phone-frame {
-  width: 220px; /* mobile width */
-  height: 440px; /* mobile height */
-  border-radius: 36px;
-  padding: 12px;
-  background: rgb(46, 46, 46); /* phone body color */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
-  margin: 2rem auto;
-  position: relative;
-}
-
-/* Optional top notch / speaker */
-.phone-frame::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 6px;
-  border-radius: 999px;
-  background: #0f172a;
-}
-
-/* Screen area */
-.phone-inner {
-  width: 100%;
-  height: 100%;
-  border-radius: 28px;
-  overflow: hidden;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Your app image */
-.project-thumb-app {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
 .footer-connect {
   width: 100%;
   display: flex;
@@ -2716,6 +2699,12 @@ small.valid {
     flex-direction: row;
 
     margin-top: 1rem;
+  }
+  .preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xl);
   }
 
   .services-wrapper {
@@ -3078,6 +3067,12 @@ small.valid {
   .services-wrapper {
     margin-right: 5rem;
     margin-left: 5rem;
+  }
+  .preview {
+    padding: var(--space-2xl) var(--space-4xl);
+    max-width: 900px;
+    margin: var(--space-md) auto;
+    gap: var(--space-4xl);
   }
 
   .skills__inner {
