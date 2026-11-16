@@ -1213,6 +1213,10 @@ body {
   gap: var(--space-md);
   padding: var(--space-md);
 }
+
+.about-align {
+  padding: var(--space-md);
+}
 .first-card {
   background-color: #fff;
 }
@@ -3147,7 +3151,7 @@ small.valid {
   /* GRID FOR PROJECTS */
   .tabcontent {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
     gap: var(--space-xl);
   }
 
