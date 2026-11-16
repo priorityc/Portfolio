@@ -304,6 +304,13 @@ document.querySelectorAll(".btn-primary").forEach((btn) => {
   });
 });
 
+document.querySelectorAll(".btn-secondary").forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.open(btn.href, "_blank");
+  });
+});
+
 // MODAL form validation
 // Modal validation
 function validateModalInput(inputElement) {

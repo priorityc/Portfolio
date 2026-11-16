@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Service Quote Calculator — Interactive Video Demo | Petya Dimitrova
+    </title>
+    <link rel="stylesheet" href="styleIn.css" />
+    <link rel="stylesheet" href="demo.css" />
+    <!-- * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        line-height: 1.6;
+        padding: 2rem 1rem;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .back-link {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
+      .badge {
+        background: rgba(56, 189, 248, 0.15);
+        color: var(--accent);
+        padding: 0.35rem 0.85rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 2.5rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      header p {
+        color: var(--text-muted);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      /* Рамка на смартфон */
+      .phone-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3.5rem;
+      }
+
+      .phone-frame {
+        width: 100%;
+        max-width: 340px;
+        background: #000;
+        border: 12px solid #27272a;
+        border-radius: 36px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .phone-frame video {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Стъпки под видеото */
+      .steps-section h2 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .step-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 1.5rem;
+      }
+
+      .step-number {
+        display: inline-block;
+        background: var(--accent);
+        color: #0f172a;
+        font-weight: 700;
+        width: 28px;
+        height: 28px;
+        text-align: center;
+        line-height: 28px;
+        border-radius: 50%;
+        margin-bottom: 0.75rem;
+        font-size: 0.9rem;
+      }
+
+      .step-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .step-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+      }
+    </style> -->
+  </head>
+  <body>
+    <div class="container">
+      <nav class="top-nav">
+        <a href="index.html" class="back-link">&larr; Back to Portfolio</a>
+        <span class="badge">
+          React Native bull; TypeScript; In Active Development
+        </span>
+      </nav>
+
+      <header>
+        <h1 class="skills-header-h2">Service Quote Calculator</h1>
+        <p>
+          Interactive mobile application walkthrough demonstrating automated
+          pricing, dynamic input validation, and instant quote generation for
+          construction services.
+        </p>
+      </header>
+
+      <div class="phone-wrapper">
+        <div class="phone-frame">
+          <!-- Уверете се, че пътят до видеото съвпада с вашата папка -->
+          <video
+            src="./media/video/calculator-demo.mp4"
+            controls
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <section class="steps-section">
+        <h2 class="skills-header-h2">Application Walkthrough</h2>
+        <div class="steps-grid">
+          <div class="step-card">
+            <span class="step-number">1</span>
+            <h3 class="skill-title">Service Category Selection</h3>
+            <p>
+              Users select from predefined construction and home improvement
+              services, dynamically loading the relevant pricing parameters.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">2</span>
+            <h3 class="skill-title">Dynamic Measurement &amp; Input</h3>
+            <p>
+              Real-time form validation ensures accurate area measurements,
+              material tiers, and labour rates before running calculations.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">3</span>
+            <h3 class="skill-title">Automated Cost Breakdown</h3>
+            <p>
+              Custom TypeScript pricing logic instantly computes material costs,
+              labour hours, and optional add-ons without manual spreadsheets.
+            </p>
+          </div>
+
+          <div class="step-card">
+            <span class="step-number">4</span>
+            <h3 class="skill-title">Instant Quote Summary</h3>
+            <p>
+              Generates a clean, itemized estimate ready to be reviewed on-site
+              with clients, reducing quoting time and human error.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
